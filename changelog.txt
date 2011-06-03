@@ -9,6 +9,9 @@ iFeature Changelog\
 \
 ****************************\
 \
+Version 1.1.3 a\
+-Milk \
+\
 Version 1.1.3 (5-25-11)\
 -Made SEO tags in header dependent on theme options settings.\
 -Optimized style.css, removed outdated styles.\
