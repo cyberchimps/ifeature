@@ -9,6 +9,9 @@ iFeature Changelog\
 \
 ****************************\
 \
+Version 1.1.3 b\
+-Cheese\
+\
 Version 1.1.3 a\
 -Milk \
 \
