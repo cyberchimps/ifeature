@@ -9,6 +9,10 @@ iFeature Changelog\
 \
 ****************************\
 \
+Version 1.1.5 (6-6-11)\
+-Fixed broken menu item background for links beyond first row of navigation\
+\
+\
 Version 1.1.4 (6-5-11)\
 -Fixed post container bug related to custom backgrounds in search.php\
 \
