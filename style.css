@@ -35,6 +35,14 @@ a:hover { color: #555; }
 
 a img {border: none; }
 
+.featured-image {
+	margin-top: 14px; 
+	margin-right: 12px; 
+	margin-bottom: 10px; 
+	float: left;
+
+}
+
 ul, ol { margin: 0 0 10px 0; }
 
 .entry { }
