@@ -1,94 +1,87 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf350
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 ArialMT;}
-{\colortbl;\red255\green255\blue255;}
-\margl1440\margr1440\vieww15620\viewh11820\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+iFeature Changelog
 
-\f0\fs24 \cf0 ****************************\
-iFeature Changelog\
-\
-****************************\
-\
-Version 1.1.6 (6-13-11)\
--jQuery noconflict patch to fix third-party plugin compatibility issues.\
-\
-Version 1.1.5 (6-6-11)\
--Fixed broken menu item background for links beyond first row of navigation.\
--Featured images now link to corresponding post, fixed featured image alignment.\
-\
-\
-Version 1.1.4 (6-5-11)\
--Fixed post container bug related to custom backgrounds in search.php.\
-\
-Version 1.1.3 (5-25-11)\
--Made SEO tags in header dependent on theme options settings.\
--Optimized style.css, removed outdated styles.\
--Removed legacy custom field options for iFeature slider options.\
--Removed title / alt tags from credit link.\
--Fixed issue where bullets and numbers on lists weren't displaying properly.\
--Updated doctype to HTML5.\
--Updated .ico support, including a default .ico.\
-\
-\
-Version 1.1.2 (5-11-11)\
--Fixed menu CSS to eliminate dropdown blowout when loading certain pages.\
--Added WordPress background color / image support.\
--Revised CSS for posts and pages to have a post container with a white background.\
--Searchbar CSS fixes for IE.\
--Implemented PIE for rounded corners in IE7-8.\
--Removed alpha filter for social icons for IE7-8 due to rendering issue (hover no longer supported for IE7-8, IE9 and modern browsers are fine). \
-\
-Version 1.1.1 (5-4-11)\
--CSS fixes (iMenu).\
-\
-Version 1.1 (5-2-11)\
--CSS fixes (footer, comments).\
--Credit.php text revised.\
--Now using 
-\f1 Meta-options instead of custom fields.\
+****************************
 
-\f0 \
-\
-Version 1.0.7\
--Fixed menu blowout issue, extra menu items now display below main navigation.\
--Set max image and caption width for post content to avoid blowout.\
--Removed hard-coded superfish script from header, now hooked from functions file.\
--moved wp_footer in footer.php above closing HTML body tag.\
--Removed function_exists() conditionals from register_sidebar calls.\
--Searchbar in nav.php now called from get_search_form().\
--post_class() added to all page templates.\
-\
-Version 1.0.6\
--Removed "Tangerine" font choice\
--Fixed secondary footer menu blowout issue\
--Removed WordPress Background option\
--Updated sf.js to fix jQuery issue.\
--Updated docs on credit.php.\
-\
-Version 1.0.5 (4-24-2011)\
--Fixed search page pushdown issue, removed extra instance of pagination \
--"Search" text in search field removes when user clicks within the search box\
--Reset button in theme settings properly redirects back to theme settings page\
--Replaced depreciated WordPress function in header.php with current version\
--Added more detailed theme description in style.css\
-\
-Version 1.0.4 (4-22-2011)\
--Removed a default widget.\
-\
-Version 1.0.3 (4-21-2011)\
--Separated theme options code from general functions file, now called options.php\
--Modified theme options page to remove unidentified index errors and modified the UI\
--Fixed sidebar pushdown issue on comment-enabled pages\
--Fixed all HTML related errors, now Valid XHTML 1.0 Transitional \
--general bug fixes\
-\
-Version 1.0.2 (4-9-2011)\
--Fixed parse errors related to older PHP builds\
--updated depreciated WordPress calls\
--general bug fixes\
-\
-Version 1.0.1 (4-6-2011)\
--Updated Theme URI in style.css \
-\
-Version 1.0 (4-5-2011)\
+Version 1.1.7 (7-01-11)
+-Security fix in comments.php removing $_SERVER variable statement.
+-Cleaned up options.php, removed unnecessary functions.
+-Now enqueueing WordPress jQuery library instead of Google's for offline functionality. 
+
+Version 1.1.6 (6-13-11)
+-jQuery noconflict patch to fix third-party plugin compatibility issues.
+
+Version 1.1.5 (6-6-11)
+-Fixed broken menu item background for links beyond first row of navigation.
+-Featured images now link to corresponding post, fixed featured image alignment.
+
+Version 1.1.4 (6-5-11)
+-Fixed post container bug related to custom backgrounds in search.php.
+
+Version 1.1.3 (5-25-11)
+-Made SEO tags in header dependent on theme options settings.
+-Optimized style.css, removed outdated styles.
+-Removed legacy custom field options for iFeature slider options.
+-Removed title / alt tags from credit link.
+-Fixed issue where bullets and numbers on lists weren't displaying properly.
+-Updated doctype to HTML5.
+-Updated .ico support, including a default .ico.
+
+Version 1.1.2 (5-11-11)
+-Fixed menu CSS to eliminate dropdown blowout when loading certain pages.
+-Added WordPress background color / image support.
+-Revised CSS for posts and pages to have a post container with a white background.
+-Searchbar CSS fixes for IE.
+-Implemented PIE for rounded corners in IE7-8.
+-Removed alpha filter for social icons for IE7-8 due to rendering issue (hover no longer supported for IE7-8, IE9 and modern browsers are fine). 
+
+Version 1.1.1 (5-4-11)
+-CSS fixes (iMenu).
+
+Version 1.1 (5-2-11)
+-CSS fixes (footer, comments).
+-Credit.php text revised.
+-Now using Meta-options instead of custom fields.
+
+Version 1.0.7
+-Fixed menu blowout issue, extra menu items now display below main navigation.
+-Set max image and caption width for post content to avoid blowout.
+-Removed hard-coded superfish script from header, now hooked from functions file.
+-moved wp_footer in footer.php above closing HTML body tag.
+-Removed function_exists() conditionals from register_sidebar calls.
+-Searchbar in nav.php now called from get_search_form().
+-post_class() added to all page templates.
+
+Version 1.0.6
+-Removed "Tangerine" font choice
+-Fixed secondary footer menu blowout issue
+-Removed WordPress Background option
+-Updated sf.js to fix jQuery issue.
+-Updated docs on credit.php.
+
+Version 1.0.5 (4-24-2011)
+-Fixed search page pushdown issue, removed extra instance of pagination 
+-"Search" text in search field removes when user clicks within the search box
+-Reset button in theme settings properly redirects back to theme settings page
+-Replaced depreciated WordPress function in header.php with current version
+-Added more detailed theme description in style.css
+
+Version 1.0.4 (4-22-2011)
+-Removed a default widget.
+
+Version 1.0.3 (4-21-2011)
+-Separated theme options code from general functions file, now called options.php
+-Modified theme options page to remove unidentified index errors and modified the UI
+-Fixed sidebar pushdown issue on comment-enabled pages
+-Fixed all HTML related errors, now Valid XHTML 1.0 Transitional 
+-general bug fixes
+
+Version 1.0.2 (4-9-2011)
+-Fixed parse errors related to older PHP builds
+-updated depreciated WordPress calls
+-general bug fixes
+
+Version 1.0.1 (4-6-2011)
+-Updated Theme URI in style.css 
+
+Version 1.0 (4-5-2011)
 -Initial release}

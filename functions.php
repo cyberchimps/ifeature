@@ -22,7 +22,6 @@ add_custom_background();
 add_editor_style();
 
 
-
 /**
 * Attach CSS3PIE behavior to elements
 * Add elements here that need PIE applied
@@ -40,8 +39,6 @@ add_action('wp_head', 'ifeature_render_ie_pie', 8);
 	
 // Load jQuery
 	if ( !is_admin() ) {
-	   wp_deregister_script('jquery');
-	   wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"), false, '1.4.4');
 	   wp_enqueue_script('jquery');
 	}
 
