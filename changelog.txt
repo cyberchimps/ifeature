@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 1.1.8 (7-06-11)
+-Adjusted theme option CSS to eliminate WordPress 3.2 footer styling conflict causing footer to appear in middle of theme opions.
+
 Version 1.1.7 (7-01-11)
 -Security fix in comments.php removing $_SERVER variable statement.
 -Cleaned up options.php, removed unnecessary functions.
