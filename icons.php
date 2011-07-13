@@ -8,6 +8,7 @@
 	$options = get_option('ifeature') ;  
 	$facebook		= $options['if_facebook'];
 	$twitter		= $options['if_twitter'] ;
+	$gplus			= $options['if_gplus'] ;
 	$linkedin		= $options['if_linkedin'] ;
 	$youtube		= $options['if_youtube'];
 	$googlemaps		= $options['if_googlemaps'];
@@ -30,6 +31,13 @@
 	<?php if ($twitter != 'hide' AND $twitter == '' ):?>
 		<a href="http://twitter.com"><img src="<?php echo get_template_directory_uri(); ?>/images/social/twitter.png" alt="Twitter" /></a>
 	<?php endif;?>
+	<?php if ($gplus != 'hide' AND $gplus != '' ):?>
+		<a href="<?php echo $gplus ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/social/gplus.png" alt="Google Plus" /></a>
+	<?php endif;?>
+	<?php if ($gplus != 'hide' AND $gplus == '' ):?>
+		<a href="http://plus.google.com"><img src="<?php echo get_template_directory_uri(); ?>/images/social/gplus.png" alt="Google Plus" /></a>
+	<?php endif;?>
+
 	<?php if ($linkedin != 'hide' AND $linkedin != '' ):?>
 		<a href="<?php echo $linkedin ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/social/linkedin.png" alt="LinkedIn" /></a>
 	<?php endif;?>

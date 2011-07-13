@@ -132,6 +132,12 @@ array( "name" => "Twitter URL",
     "type" => "text",  
     "std" => ""),
     
+array( "name" => "Google + URL",  
+    "desc" => "Enter your Google + URL to display the Google + social icon (to hide enter the word: hide).",  
+    "id" => $shortname."_gplus",  
+    "type" => "text",  
+    "std" => ""),
+    
 array( "name" => "LinkedIn URL",  
     "desc" => "Enter your LinkedIn URL to display the LinkedIn social icon (to hide enter the word: hide).",  
     "id" => $shortname."_linkedin",  
