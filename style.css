@@ -203,6 +203,7 @@ input[type=text] {
 	-moz-border-radius: 3px;
 	margin-bottom: 10px;
 	padding: 0px 5px 5px 5px;
+
 }
 
 .post_container ul {
@@ -245,6 +246,7 @@ ol {
 .entry {
 	padding-top: 5px;
 	overflow:hidden;
+
 }
 
 .meta { 

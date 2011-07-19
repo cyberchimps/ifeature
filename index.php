@@ -45,6 +45,7 @@ $options = get_option('ifeature') ;
 
 							<div class="entry">
 								<?php the_content(); ?>
+								<br style="clear:both" />
 							</div><!--end entry-->
 						<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
 						
@@ -60,12 +61,14 @@ $options = get_option('ifeature') ;
 						
 							<div class="tags">
 								<?php the_tags('Tags: ', ', ', '<br />'); ?>
+								<br style="clear:both" />
 							</div><!--end tags-->
 
 							<div class="postmetadata">
 										<?php get_template_part('share', 'index' ); ?>
 								<div class="comments">
 									<?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
+									
 								</div><!--end comments-->	
 							</div><!--end postmetadata-->
 							

@@ -45,7 +45,7 @@ global $themename, $shortname, $options;
 
 
 $select_font = array(
-	'0' => array('value' =>'Cantarell','label' => __('Cantarell')),'1' => array('value' =>'Arial','label' => __('Arial')),'2' => array('value' =>'Courier New','label' => __('Courier New')),'3' => array('value' =>'Georgia','label' => __('Georgia')),'4' => array('value' =>'Lucida Grande','label' => __('Lucida Grande')),'5' => array('value' =>'Tahoma','label' => __('Tahoma')),'6' => array('value' =>'Times New Roman','label' => __('Times New Roman')),'7' => array('value' =>'Ubuntu','label' => __('Ubuntu')),
+	'0' => array('value' =>'Cantarell','label' => __('Cantarell')),'1' => array('value' =>'Allan','label' => __('Allan')),'2' => array('value' =>'Arial','label' => __('Arial')),'3' => array('value' =>'Courier New','label' => __('Courier New')),'4' => array('value' =>'Georgia','label' => __('Georgia')),'5' => array('value' =>'Lucida Grande','label' => __('Lucida Grande')),'6' => array('value' =>'Tahoma','label' => __('Tahoma')),'7' => array('value' =>'Times New Roman','label' => __('Times New Roman')),'8' => array('value' =>'Ubuntu','label' => __('Ubuntu')),
 
 );
 
