@@ -2,12 +2,17 @@
 
 /*
 	Header
-	
-	Creates the iFeature header. 
-	
+	Authors: Tyler Cunningham, Trent Lapinski
+	Creates the theme header. 
 	Copyright (C) 2011 CyberChimps
+	Version 2.0
 */
-$options = get_option('ifeature') ; 
+
+	$options = get_option('ifeature') ; 
+	$logo = $options['file'] ;
+	$favicon = $options['file2'];
+	$tdurl = get_template_directory_uri();
+
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes('xhtml'); ?>>
@@ -52,16 +57,16 @@ $options = get_option('ifeature') ;
 		         echo ' - page '. $paged; }
 		   ?>
 	</title>	
-	<?php  
-	$tdurl = get_template_directory_uri();
-	$favicon = $options['if_favicon']; ?>
+
+
 	
-	<?php if ($options['if_favicon'] == ""): ?>
+	
+	<?php if ($favicon == ""): ?>
 			
 		<link rel="shortcut icon" href="<?php echo "$tdurl/images/favicon.ico" ; ?>" type="image/x-icon" />
 		<?php endif;?>
-		<?php if ($options['if_favicon'] != ""): ?>
-			<link rel="shortcut icon" href="<?php echo stripslashes($favicon); ?>" type="image/x-icon" />
+		<?php if ($favicon != ""): ?>
+			<link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
 	<?php endif;?>
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
 	
@@ -113,18 +118,12 @@ $options = get_option('ifeature') ;
 							</div><!-- end social -->
 					</div><!-- end header_right -->
 					<!-- Inserts Site Logo -->
-					<?php  $logo = $options['if_logo'] ; ?>
-						<?php if ($logo != 'hide'  and $logo != ''):?>
+					<?php if ($logo != ''):?>
 							<div id="logo">
-								<a href="<?php echo home_url(); ?>/"><img src="<?php echo stripslashes($logo); ?>" alt="logo"></a>
+								<a href="<?php echo home_url(); ?>/"><img src="<?php echo stripslashes($logo['url']); ?>" alt="logo"></a>
 							</div>
 						<?php endif;?>
 						<?php if ($logo == '' ):?>
-							<div id="logo">
-								<a href="<?php echo home_url(); ?>/"><img src="<?php echo get_template_directory_uri(); ?>/images/ifeaturelogo.png " alt="iFeature" /></a>
-							</div>
-						<?php endif;?>
-						<?php if ($logo == 'hide' ):?>
 							<div id="logo">
 								<h1 class="sitename"><a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?> </a></h1>
 							</div>
