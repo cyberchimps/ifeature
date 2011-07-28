@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 1.2.1 (7-27-11)
+-Added CyberChimps Themes page in preparation for iFeature Pro 2.0. 
+
 Version 1.2 (7-19-11)
 -Added search query to title on search results page.
 -Fixed featured images not clearing with short posts.

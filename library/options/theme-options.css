@@ -11,6 +11,31 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* 7/6/11 Corrects WordPress 3.2 styling bug related to Dashboard footer */
 #footer {position: relative;}
 
+
+.menu ul{
+    margin: 0; padding: 0;
+    float: left;}
+ 
+.menu ul li{
+    display: inline;margin-right: 5px;}
+ 
+.menu ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    padding: 2px 6px 2px 6px;
+    background-color: #777;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #777;
+  	}
+ 
+.menu ul li a:hover, .menu ul li .current{
+    color: #fff;
+    background-color:#444;
+    border: 1px solid #777; }
+
+
 input.button-primary {font-size:15px !important;}
 
 /* Layout helpers

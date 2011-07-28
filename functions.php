@@ -125,5 +125,6 @@ add_action( 'wp_head', 'ifeature_add_scripts',0);
 	//iFeature theme options file
 	
 require_once ( get_template_directory() . '/library/options/options.php' );
+require_once ( get_template_directory() . '/library/options/options-themes.php' );
 require_once ( get_template_directory() . '/library/options/meta-box.php' );
 ?>
