@@ -36,10 +36,9 @@ a:hover { color: #555; }
 a img {border: none; }
 
 .featured-image {
-	margin-top: 14px; 
+	margin-top: 10px; 
 	margin-right: 12px; 
 	margin-bottom: 10px; 
-	float: left;
 
 }
 
@@ -245,7 +244,7 @@ ol {
 
 .entry {
 	padding-top: 5px;
-	overflow:hidden;
+
 
 }
 

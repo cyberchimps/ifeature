@@ -8,12 +8,74 @@
 	Copyright (C) 2011 CyberChimps
 */
 
-add_theme_support('automatic-feed-links');
-	if ( ! isset( $content_width ) )
-	$content_width = 600;
+$options = get_option('ifeature');
+
+/* Begin custom excerpt functions. */	
+
+function ifeature_new_excerpt_more($more) {
+
+	global $options;
+    
+    	if ($options['if_excerpt_link_text'] == '') {
+    		$linktext = '(Read More...)';
+   		}
+    
+    	else {
+    		$linktext = $options['if_excerpt_link_text'];
+   		}
+    
+    global $post;
+	return '<a href="'. get_permalink($post->ID) . '"> <br /><br /> '.$linktext.'</a>';
+}
+add_filter('excerpt_more', 'ifeature_new_excerpt_more');
+
+function ifeature_new_excerpt_length($length) {
+
+	global $options;
 	
-add_theme_support( 'post-thumbnails' ); 
-set_post_thumbnail_size( 100, 100, true );
+		if ($options['if_excerpt_length'] == '') {
+    		$length = '55';
+    	}
+    
+    	else {
+    		$length = $options['if_excerpt_length'];
+    	}
+
+	return $length;
+}
+add_filter('excerpt_length', 'ifeature_new_excerpt_length');
+
+/* End excerpt functions. */
+
+/* Add auto-feed links support. */	
+	add_theme_support('automatic-feed-links');
+	
+/* Add post-thumb support. */
+
+	
+if ( function_exists( 'add_theme_support' ) ) {
+
+	global $options;
+	
+		if($options['if_featured_image_height'] == "") {
+			$featureheight = '100';
+	}		
+	
+	else {
+		$featureheight = $options['if_featured_image_height']; 
+		
+	}
+	
+		if ($options['if_featured_image_width'] == "") {
+			$featurewidth = '100';
+	}		
+	
+	else {
+		$featurewidth = $options['if_featured_image_width']; 
+	}
+	add_theme_support( 'post-thumbnails' ); 
+	set_post_thumbnail_size( $featureheight, $featurewidth, true );
+}	
 
 // This theme allows users to set a custom background
 add_custom_background();
@@ -36,6 +98,22 @@ function ifeature_render_ie_pie() { ?>
 }
 
 add_action('wp_head', 'ifeature_render_ie_pie', 8);
+
+// + 1 Button 
+
+function ifeature_plusone(){
+	
+	$path =  get_template_directory_uri() ."/library/js/";
+
+	$script = "
+		
+		<script type=\"text/javascript\" src=\"".$path."/plusone.js\"></script>
+		";
+	
+	echo $script;
+}
+add_action('wp_head', 'ifeature_plusone');
+
 	
 // Load jQuery
 	if ( !is_admin() ) {

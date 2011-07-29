@@ -10,8 +10,26 @@
 
     	$tmp_query = $wp_query; 
 		$options = get_option('ifeature') ;  
-    	query_posts('category_name='.$options['if_slider_category'].'&showposts=50');
-    	
+		$category = $options['if_slider_category'];
+		
+		
+/* Define blog category */
+
+	if ($category != 'All') {
+		$blogcategory = $category;
+	}
+	
+	else {
+		$blogcategory = "";
+	}
+	
+/* End blog category */
+		
+    query_posts('category_name='.$blogcategory.'&showposts=50');
+  
+  
+
+  	
     	
 	    if (have_posts()) :
 	    	$out = "<div id='coin-slider'>"; 

@@ -23,6 +23,7 @@ function theme_options_init() {
   wp_register_script('ifjquerycookie', get_template_directory_uri(). '/library/js/jquery-cookie.js');
   wp_register_script('ifcookie', get_template_directory_uri(). '/library/js/cookie.js');
   wp_register_style('ifcss', get_template_directory_uri(). '/library/options/theme-options.css');
+  wp_register_script('ifcolor', get_template_directory_uri(). '/library/js/jscolor/jscolor.js');
 }
 
 
@@ -42,6 +43,12 @@ global $themename, $shortname, $options;
   add_action('admin_print_styles-' . $page, 'if_styles');  
  
 }
+
+/* Include options functions */
+
+	require_once ( get_template_directory() . '/library/options/options-functions.php' );
+
+/* End options functions */
 
 
 $select_font = array(
@@ -117,7 +124,19 @@ array( "name" => "Choose a font:",
     "id" => $shortname."_font",  
     "type" => "select1",  
     "std" => ""),
+    
+array( "name" => "Link Color",  
+    "desc" => "Use the color picker to select the site link color",  
+    "id" => $shortname."_link_color",  
+      "type" => "color2",  
+    "std" => "false"),
  
+array( "name" => "Custom CSS",  
+    "desc" => "Override default CSS here.",  
+    "id" => $shortname."_css_options",  
+    "type" => "textarea",  
+    "std" => ""),  
+
 array( "type" => "close"),
 
 array( "type" => "close-tab"),
@@ -407,6 +426,42 @@ case "close-tab":
 </div>
  
 <?php break; 
+
+case 'color2':  
+?>  
+  
+<tr>
+
+    <td width="15%" rowspan="2" valign="middle"><label for="<?php echo $value['id']; ?>"><strong><?php echo $value['name']; ?></strong><br /><small><?php echo $value['desc']; ?></small></label>  </td>
+    <td width="85%">
+    
+<?php
+
+	if (isset($options['if_link_color']) == "") {
+		$picker = '717171';
+	}
+			
+	else {
+		$picker = $options['if_link_color']; 
+	}
+?>
+
+<input type="text" class="color{required:false}" id="ifeature[if_link_color]" name="ifeature[if_link_color]"  value="<?php echo $picker ;?>" style="width: 300px;" maxlength="6">   
+
+<br /><br />
+    
+    </td>
+
+  </tr>
+ 
+<tr>
+
+</tr><tr><td colspan="2" style="margin-bottom:5px;border-bottom:1px dotted #ddd;">&nbsp;</td></tr><tr><td colspan="2">&nbsp;</td></tr>
+
+
+<?php
+break; 
+
 
 case 'select6':
 ?>
@@ -1163,6 +1218,7 @@ function register_my_menu() {
         wp_enqueue_script('ifjqueryui');
         wp_enqueue_script('ifjquerycookie');
         wp_enqueue_script('ifcookie');
+        wp_enqueue_script('ifcolor');
    }
     
  function if_styles() {
