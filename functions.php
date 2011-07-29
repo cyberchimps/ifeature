@@ -199,6 +199,8 @@ add_action( 'wp_head', 'ifeature_add_scripts',0);
 		'before_title' => '<h3 class="footer-widget-title">',
 		'after_title' => '</h3>',
 	));
+	
+if ( ! isset( $content_width ) ) $content_width = 640;
   
 	//iFeature theme options file
 	
