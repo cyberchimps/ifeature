@@ -130,6 +130,12 @@ array( "name" => "Link Color",
     "id" => $shortname."_link_color",  
       "type" => "color2",  
     "std" => "false"),
+    
+array( "name" => "Enable widget title background",  
+    "desc" => "Check this box to hide enable the classic widget title backgrounds.",  
+    "id" => $shortname."_widget_title_bg",  
+      "type" => "checkbox",  
+    "std" => "false"),
  
 array( "name" => "Custom CSS",  
     "desc" => "Override default CSS here.",  
@@ -1153,6 +1159,10 @@ function theme_options_validate( $input ) {
 	  if ( ! isset( $input['if_slider_navigation'] ) )
 		$input['if_slider_navigation'] = null;
 	$input['if_slider_navigation'] = ( $input['if_slider_navigation'] == 1 ? 1 : 0 ); 
+		  
+	if ( ! isset( $input['if_widget_title_bg'] ) )
+		$input['if_widget_title_bg'] = null;
+	$input['if_widget_title_bg'] = ( $input['if_widget_title_bg'] == 1 ? 1 : 0 ); 
   
 
   	// Strip HTML from certain options

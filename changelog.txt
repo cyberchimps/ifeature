@@ -2,6 +2,18 @@ iFeature Changelog
 
 ****************************
 
+Version 2.0 (8-01-11)
+-Added "Design", "Social", "Blog" theme options tabs, removed "Header" and "SEO".
+-Added image uploader for logo and favicon, removed text input for URL.
+-Added color picker for link color.
+-Added Custom CSS option to override iFeature stylesheet. 
+-Changed sidebar widget title background style, added option to revert to "classic" mode.
+-Added checkboxes to hide social icons.
+-Added support for post excerpts, featured images, and hiding various post meta elements.
+-Added Google +1 button option.
+-Added drop down menu option for picking blog post category for feature slider. 
+-Restyled theme options page.  
+
 Version 1.2.1 (7-27-11)
 -Added CyberChimps Themes page in preparation for iFeature Pro 2.0. 
 

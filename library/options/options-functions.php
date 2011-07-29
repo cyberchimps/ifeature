@@ -8,6 +8,26 @@
 	
 */
 
+/* Widget title background */
+ 
+function ifeature_widget_title_bg() {
+
+	global $options;
+	$root = get_template_directory_uri();
+	
+	if ($options['if_widget_title_bg'] == "1") {
+		
+		echo '<style type="text/css">';
+		echo ".box-widget-title {background: url($root/images/wtitlebg.png) no-repeat center top; margin: -6px -5px 5px -5px;}";
+		echo ".sidebar-widget-title {background: url($root/images/wtitlebg.png) no-repeat center top; margin: -6px -5px 5px -5px;}";
+		echo '</style>';
+
+	}
+}
+add_action( 'wp_head', 'ifeature_widget_title_bg');
+
+
+
 /* Plus 1 Allignment */
 
 function ifeature_plusone_alignment() {

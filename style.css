@@ -4,7 +4,7 @@ Theme URI: http://cyberchimps.com/ifeature-free/
 Description: iFeature: A Free WordPress Theme designed by CyberChimps.com in Long Beach, California. iFeature offers customizable theme options, an aesthetically pleasing design, the iFeature slider, dynamic header for custom logo, social icons, social sharing, contact section, widgetized sidebar and footer, typography including Google Fonts, and multiple template choices. Twitter @cyberchimps. (<a href="http://cyberchimps.com/ifeaturepro" alt="Upgrade to iFeature Pro">Upgrade to iFeature Pro</a>)
 Author: CyberChimps
 Author URI: http://cyberchimps.com
-Version: 1.2.1
+Version: 2.0
 Tags: white, light, silver, two-columns, fixed-width, custom-header, custom-menu, threaded-comments, sticky-post, custom-background, theme-options
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -369,10 +369,8 @@ float: right;width: 316px;
 }
 
 .sidebar-widget-title {
-	color: #5a5a5a;
-	background: url(./images/wtitlebg.png) no-repeat center top;
+	color: #444;
 	height: 25px;
-	margin: -6px -5px 5px -5px;
 	padding: 0 5px 0 5px;
 	font-size: 16px;
 	font-weight: bold;
@@ -404,8 +402,8 @@ li {padding-left: 5px;}
 
 #footer { 
 	min-height: 200px;
-	background-color: #111111;
-	background: url(./images/footerbg.png) repeat-x left top;
+	background: #222 url(./images/footerbg.png) repeat-x center top;
+
 }
 
 #footer_wrap {
