@@ -80,6 +80,12 @@ array( "id" => $shortname."-tab1",
 
 array( "type" => "open"),
 
+array( "name" => "Help",  
+    "desc" => "",  
+    "id" => $shortname."_general_faq",  
+    "type" => "general_faq",  
+    "std" => ""),
+
 array( "name" => "Logo URL",  
     "desc" => "Use the image uploader or enter your own URL into the input field to use an image as your logo. To display the site title as text, leave blank.",  
     "id" => $shortname."_logo",  
@@ -108,7 +114,7 @@ array( "name" => "Footer Copyright",
 array( "name" => "Google Analytics Code",  
     "desc" => "You can paste your Google Analytics or other tracking code in this box. This will be automatically be added to the footer.",  
     "id" => $shortname."_ga_code",  
-    "type" => "textarea",  
+    "type" => "textarea2",  
     "std" => ""),  
 
 array( "type" => "close"),
@@ -124,6 +130,11 @@ array( "id" => $shortname."-tab2",
  
 array( "type" => "open"),
 
+array( "name" => "Help",  
+    "desc" => "",  
+    "id" => $shortname."_general_faq",  
+    "type" => "design_faq",  
+    "std" => ""),
 
 array( "name" => "Choose a font:",  
     "desc" => "(Default is Cantarell)",  
@@ -143,74 +154,29 @@ array( "name" => "Enable widget title background",
       "type" => "checkbox",  
     "std" => "false"),
 
+array( "name" => "Want more options?",  
+    "desc" => "",  
+    "id" => $shortname."_designl_ad",  
+    "type" => "design_ad",  
+    "std" => ""),
+
 array( "type" => "close"),
 
 array( "type" => "close-tab"),
 
-// Social
+
+// Blog
 
 array( "id" => $shortname."-tab3",
 	"type" => "open-tab"),
  
 array( "type" => "open"),
 
-array( "name" => "Facebook URL",  
-    "desc" => "Enter your Facebook page URL for the Facebook social icon.",  
-    "id" => $shortname."_facebook",  
-    "type" => "facebook",  
-    "std" => "http://facebook.com"),
-
-array( "name" => "Twitter URL",  
-    "desc" => "Enter your Twitter URL for Twitter social icon.",  
-    "id" => $shortname."_twitter",  
-    "type" => "twitter",  
-    "std" => "http://twitter.com"),
-    
-array( "name" => "Google Plus URL",  
-    "desc" => "Enter your Google Plus url (we recommend using the http://gplus.to/ shortener).",  
-    "id" => $shortname."_gplus",  
-    "type" => "gplus",  
-    "std" => "https://plus.google.com"),
-    
-array( "name" => "LinkedIn URL",  
-    "desc" => "Enter your LinkedIn URL for the LinkedIn social icon.",  
-    "id" => $shortname."_linkedin",  
-    "type" => "linkedin",  
-    "std" => "http://linkedin.com"),  
-    
-array( "name" => "YouTube URL",  
-    "desc" => "Enter your YouTube URL for the YouTube social icon.",  
-    "id" => $shortname."_youtube",  
-    "type" => "youtube",  
-    "std" => "http://youtube.com"),  
-    
-array( "name" => "Google Maps URL",  
-    "desc" => "Enter your Google Maps URL for the Google Maps social icon.",  
-    "id" => $shortname."_googlemaps",  
-    "type" => "googlemaps",  
-    "std" => "http://google.com/maps"),  
-
-array( "name" => "Email",  
-    "desc" => "Enter your contact email address for email social icon.",  
-    "id" => $shortname."_email",  
-    "type" => "email",  
-    "std" => "no@way.com"),
-    
-array( "name" => "Custom RSS Link",  
-    "desc" => "Enter Feedburner URL, or leave blank for default RSS feed.",  
-    "id" => $shortname."_rsslink",  
-    "type" => "rss",  
-    "std" => ""),   
-
-array( "type" => "close"),
-array( "type" => "close-tab"),
-
-// Blog
-
-array( "id" => $shortname."-tab4",
-	"type" => "open-tab"),
- 
-array( "type" => "open"),
+array( "name" => "Help",  
+    "desc" => "",  
+    "id" => $shortname."_blog_faq",  
+    "type" => "blog_faq",  
+    "std" => ""),
 
 array( "name" => "Post Excerpts",  
     "desc" => "Use the following options to control excerpts.",  
@@ -266,10 +232,16 @@ array( "type" => "close-tab"),
 
 // iFeature Slider
 
-array( "id" => $shortname."-tab5",
+array( "id" => $shortname."-tab4",
 	"type" => "open-tab"),
 
 array( "type" => "open"),
+
+array( "name" => "Help",  
+    "desc" => "",  
+    "id" => $shortname."_slider_faq",  
+    "type" => "slider_faq",  
+    "std" => ""),
 
 array( "name" => "Hide iFeature Slider",  
     "desc" => "Check this box to hide the Feature Slider on the homepage.",  
@@ -305,6 +277,70 @@ array( "name" => "Hide the navigation:",
 
 array( "type" => "close"),   
 
+array( "type" => "close-tab"),
+
+// Social
+
+array( "id" => $shortname."-tab5",
+	"type" => "open-tab"),
+ 
+array( "type" => "open"),
+
+array( "name" => "Help",  
+    "desc" => "",  
+    "id" => $shortname."_social_faq",  
+    "type" => "social_faq",  
+    "std" => ""),
+
+array( "name" => "Facebook URL",  
+    "desc" => "Enter your Facebook page URL for the Facebook social icon.",  
+    "id" => $shortname."_facebook",  
+    "type" => "facebook",  
+    "std" => "http://facebook.com"),
+
+array( "name" => "Twitter URL",  
+    "desc" => "Enter your Twitter URL for Twitter social icon.",  
+    "id" => $shortname."_twitter",  
+    "type" => "twitter",  
+    "std" => "http://twitter.com"),
+    
+array( "name" => "Google Plus URL",  
+    "desc" => "Enter your Google Plus url (we recommend using the http://gplus.to/ shortener).",  
+    "id" => $shortname."_gplus",  
+    "type" => "gplus",  
+    "std" => "https://plus.google.com"),
+    
+array( "name" => "LinkedIn URL",  
+    "desc" => "Enter your LinkedIn URL for the LinkedIn social icon.",  
+    "id" => $shortname."_linkedin",  
+    "type" => "linkedin",  
+    "std" => "http://linkedin.com"),  
+    
+array( "name" => "YouTube URL",  
+    "desc" => "Enter your YouTube URL for the YouTube social icon.",  
+    "id" => $shortname."_youtube",  
+    "type" => "youtube",  
+    "std" => "http://youtube.com"),  
+    
+array( "name" => "Google Maps URL",  
+    "desc" => "Enter your Google Maps URL for the Google Maps social icon.",  
+    "id" => $shortname."_googlemaps",  
+    "type" => "googlemaps",  
+    "std" => "http://google.com/maps"),  
+
+array( "name" => "Email",  
+    "desc" => "Enter your contact email address for email social icon.",  
+    "id" => $shortname."_email",  
+    "type" => "email",  
+    "std" => "no@way.com"),
+    
+array( "name" => "Custom RSS Link",  
+    "desc" => "Enter Feedburner URL, or leave blank for default RSS feed.",  
+    "id" => $shortname."_rsslink",  
+    "type" => "rss",  
+    "std" => ""),   
+
+array( "type" => "close"),
 array( "type" => "close-tab"),
 
 
@@ -368,9 +404,9 @@ function theme_options_do_page() {
     <ul class="tabNavigation">
         <li><a href="#if-tab1"><span>General</span></a></li>
         <li><a href="#if-tab2"><span>Design</span></a></li>
-        <li><a href="#if-tab3"><span>Social</span></a></li>
-        <li><a href="#if-tab4"><span>Blog</span></a></li>
-        <li><a href="#if-tab5"><span>iFeature Slider</span></a></li>        
+        <li><a href="#if-tab3"><span>Blog</span></a></li>
+        <li><a href="#if-tab4"><span>iFeature Slider</span></a></li>
+        <li><a href="#if-tab5"><span>Social</span></a></li>        
       
     
     </ul>
@@ -413,10 +449,124 @@ case "open-tab":
 case "close-tab":
 ?>
 
-
 </div>
  
 <?php break; 
+
+case 'general_faq':  
+?>  
+  
+<tr>
+
+    <td width="15%" rowspan="2" valign="middle"><label for="<?php echo $value['id']; ?>"><strong><?php echo $value['name']; ?></strong><br /><small><?php echo $value['desc']; ?></small></label>  </td>
+    <td width="85%">Read the <a href="http://cyberchimps.com/question/general-settings-tab/" target="_blank">General Options Tab FAQ</a></td>
+
+  </tr>
+ 
+<tr>
+
+</tr><tr><td colspan="2" style="margin-bottom:5px;border-bottom:1px dotted #ddd;">&nbsp;</td></tr><tr><td colspan="2">&nbsp;</td></tr>
+
+
+<?php
+break;
+
+case 'design_faq':  
+?>  
+  
+<tr>
+
+    <td width="15%" rowspan="2" valign="middle"><label for="<?php echo $value['id']; ?>"><strong><?php echo $value['name']; ?></strong><br /><small><?php echo $value['desc']; ?></small></label>  </td>
+    <td width="85%">Read the <a href="http://cyberchimps.com/question/design-settings-tab/" target="_blank">Design Options Tab FAQ</a></td>
+
+  </tr>
+ 
+<tr>
+
+</tr><tr><td colspan="2" style="margin-bottom:5px;border-bottom:1px dotted #ddd;">&nbsp;</td></tr><tr><td colspan="2">&nbsp;</td></tr>
+
+
+
+<?php
+break;
+
+case 'social_faq':  
+?>  
+  
+<tr>
+
+    <td width="15%" rowspan="2" valign="middle"><label for="<?php echo $value['id']; ?>"><strong><?php echo $value['name']; ?></strong><br /><small><?php echo $value['desc']; ?></small></label>  </td>
+    <td width="85%">Read the <a href="http://cyberchimps.com/question/social-settings-tab/" target="_blank">Social Options Tab FAQ</a></td>
+
+  </tr>
+ 
+<tr>
+
+</tr><tr><td colspan="2" style="margin-bottom:5px;border-bottom:1px dotted #ddd;">&nbsp;</td></tr><tr><td colspan="2">&nbsp;</td></tr>
+
+
+
+<?php
+break;
+
+case 'blog_faq':  
+?>  
+  
+<tr>
+
+    <td width="15%" rowspan="2" valign="middle"><label for="<?php echo $value['id']; ?>"><strong><?php echo $value['name']; ?></strong><br /><small><?php echo $value['desc']; ?></small></label>  </td>
+    <td width="85%">Read the <a href="http://cyberchimps.com/question/blog-settings-tab/" target="_blank">Blog Options Tab FAQ</a></td>
+
+  </tr>
+ 
+<tr>
+
+</tr><tr><td colspan="2" style="margin-bottom:5px;border-bottom:1px dotted #ddd;">&nbsp;</td></tr><tr><td colspan="2">&nbsp;</td></tr>
+
+
+
+<?php
+break;
+
+case 'slider_faq':  
+?>  
+  
+<tr>
+
+    <td width="15%" rowspan="2" valign="middle"><label for="<?php echo $value['id']; ?>"><strong><?php echo $value['name']; ?></strong><br /><small><?php echo $value['desc']; ?></small></label>  </td>
+    <td width="85%">Read the <a href="http://cyberchimps.com/question/ifeature-slider-settings-tab/" target="_blank">Slider Options Tab FAQ</a></td>
+
+  </tr>
+ 
+<tr>
+
+</tr><tr><td colspan="2" style="margin-bottom:5px;border-bottom:1px dotted #ddd;">&nbsp;</td></tr><tr><td colspan="2">&nbsp;</td></tr>
+
+
+
+<?php
+break;
+
+
+case 'design_ad':  
+?>  
+  
+<tr>
+
+    <td width="1%" rowspan="2" valign="middle">  </td>
+    <td width="99%"></a>
+</td>
+
+  </tr>
+ 
+<tr>
+
+</tr><tr><td colspan="2" ><a href="http://cyberchimps.com/ifeaturepro/" target="_blank"><img src="<?php echo get_template_directory_uri() ;?>/images/options/upgradedesign.jpg" height="275" width="550" /></td></tr><tr><td colspan="2">&nbsp;</td></tr>
+
+
+<?php
+break;
+
 
 case 'color2':  
 ?>  
@@ -945,13 +1095,28 @@ case 'textarea':
 <tr>
 
     <td width="15%" rowspan="2" valign="middle"><label for="<?php echo $value['id']; ?>"><strong><?php echo $value['name']; ?></strong></label> <br /><small><?php echo $value['desc']; ?></small> </td> 
-    <td width="85%"><textarea id="<?php echo 'ifeature['.$value['id'].']'; ?>" name="<?php echo 'ifeature['.$value['id'].']'; ?>" style="width:400px; height:200px;" type="<?php echo $value['type']; ?>" cols="" rows=""><?php echo stripslashes( $options[$value['id']] ); ?></textarea></td>  
+    <td width="85%"><textarea id="<?php echo 'ifeature['.$value['id'].']'; ?>" name="<?php echo 'ifeature['.$value['id'].']'; ?>" style="width:400px; height:200px;" type="<?php echo $value['type']; ?>" cols="" rows=""><?php echo stripslashes( $options[$value['id']] ); ?></textarea><br /></td>  
  
   
  </tr>
  <tr>
 </tr><tr><td colspan="2" style="margin-bottom:5px;border-bottom:1px dotted #ddd;">&nbsp;</td></tr>
 <?php break; 
+
+case 'textarea2':
+?>
+ 
+<tr>
+
+    <td width="15%" rowspan="2" valign="middle"><label for="<?php echo $value['id']; ?>"><strong><?php echo $value['name']; ?></strong></label> <br /><small><?php echo $value['desc']; ?></small> </td> 
+    <td width="85%"><br /><textarea id="<?php echo 'ifeature['.$value['id'].']'; ?>" name="<?php echo 'ifeature['.$value['id'].']'; ?>" style="width:400px; height:200px;" type="<?php echo $value['type']; ?>" cols="" rows=""><?php echo stripslashes( $options[$value['id']] ); ?></textarea><br /></td>  
+ 
+  
+ </tr>
+ <tr>
+</tr><tr><td colspan="2" style="margin-bottom:5px;border-bottom:1px dotted #ddd;">&nbsp;</td></tr>
+<?php break; 
+
 
 case 'text':  
 ?>  

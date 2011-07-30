@@ -7,7 +7,6 @@ Version 2.0 (8-01-11)
 -Added image uploader for logo and favicon, removed text input for URL.
 -Added color picker for link color.
 -Replaced Coinslider with NivoSlider.
--Added timthumb resizing for slider images. 
 -Changed sidebar widget title background style, added option to revert to "classic" mode.
 -Added checkboxes to hide social icons.
 -Added support for post excerpts, featured images, and hiding various post meta elements.

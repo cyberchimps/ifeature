@@ -47,12 +47,11 @@
 	    		$text 		= get_post_meta($post->ID, 'slider_text' , true);
 	    		$permalink 	= get_permalink();
 	    		$thetitle	= get_the_title(); 
-	    		$customsized = "$root/library/tt/timthumb.php?src=$postimage&a=c&h=330&w=640"; /* Gets custom image from page/post meta option, applies timthumb code  */
 	    		
 	    	/* Controls slide image and thumbnails */
 
 	    	if ($postimage != '' ){
-	    		$image = $customsized;
+	    		$image = $postimage;
 	    	}
 	    	
 	    	else {
