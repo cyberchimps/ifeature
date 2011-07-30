@@ -14,26 +14,10 @@
 	
 /* End header. */	
 
-	$title = get_post_meta($post->ID, 'seo_title' , true);
-	$pagedescription = get_post_meta($post->ID, 'seo_description' , true);
-	$keywords = get_post_meta($post->ID, 'seo_keywords' , true);
+
 	$hidetitle = get_post_meta($post->ID, 'hide_title' , true);
 
 ?>
-
-<!-- iFeature Page SEO options -->
-	<?php if ($title != ''): ?>
-		<meta name="title" content="<?php echo $title ?>" />
-	<?php endif; ?> 
-	
-	<?php if ($pagedescription != ''): ?>
-		<meta name="description" content="<?php echo $pagedescription ?>" />
-	<?php endif; ?>	
-	
-	<?php if ($keywords != ''): ?>
-		<meta name="keywords" content="<?php echo $keywords ?>" />
-	<?php endif; ?>
-<!-- /iFeature Page SEO options -->
 
 <div id="content_wrap">
 

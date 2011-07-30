@@ -3,14 +3,16 @@ iFeature Changelog
 ****************************
 
 Version 2.0 (8-01-11)
--Added "Design", "Social", "Blog" theme options tabs, removed "Header" and "SEO".
+-Added "Design", "Social", "Blog" theme options tabs, removed "Header", "Footer" and "SEO", moved footer copyright option to "General".
 -Added image uploader for logo and favicon, removed text input for URL.
 -Added color picker for link color.
--Added Custom CSS option to override iFeature stylesheet. 
+-Replaced Coinslider with NivoSlider.
+-Added timthumb resizing for slider images. 
 -Changed sidebar widget title background style, added option to revert to "classic" mode.
 -Added checkboxes to hide social icons.
 -Added support for post excerpts, featured images, and hiding various post meta elements.
 -Added Google +1 button option.
+-Added link to Author archives in post meta content.
 -Added drop down menu option for picking blog post category for feature slider. 
 -Restyled theme options page.  
 

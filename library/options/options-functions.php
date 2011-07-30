@@ -101,26 +101,3 @@ function ifeature_add_link_color() {
 		
 }
 add_action( 'wp_head', 'ifeature_add_link_color');
-
-
-/* Custom CSS */
-
-function ifeature_custom_css() {
-
-	global $options;
-	
-	$custom = $options['if_css_options'];
-	echo '<style type="text/css">' . "\n";
-	echo ifeature_custom_css_filter ( $custom ) . "\n";
-	echo '</style>' . "\n";
-}
-
-function ifeature_custom_css_filter($_content) {
-	$_return = preg_replace ( '/@import.+;( |)|((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/))/i', '', $_content );
-	$_return = htmlspecialchars ( strip_tags($_return), ENT_NOQUOTES, 'UTF-8' );
-	return $_return;
-}
-		
-add_action ( 'wp_head', 'ifeature_custom_css' );
-
-?>

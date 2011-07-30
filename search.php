@@ -18,7 +18,7 @@ get_header(); ?>
 
 	<?php if (have_posts()) : ?>
 
-		<h2><?php printf( __( 'Search Results For: %s' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
+		<h2><font size="5"><?php printf( __( 'Search Results For: %s' ), '<span>' . get_search_query() . '</span>' ); ?></font></h2><br />
 
 
 		<?php while (have_posts()) : the_post(); ?>
