@@ -98,6 +98,12 @@ array( "name" => "Custom Favicon",
     "id" => $shortname."_favicon",  
     "type" => "upload2",  
     "std" => ""), 
+    
+array( "name" => "Footer Copyright",  
+    "desc" => "Enter Copyright text used on the right side of the footer. It can be HTML",  
+    "id" => $shortname."_footer_text",  
+    "type" => "textarea",  
+    "std" => ""),
 
 array( "name" => "Google Analytics Code",  
     "desc" => "You can paste your Google Analytics or other tracking code in this box. This will be automatically be added to the footer.",  
@@ -132,16 +138,10 @@ array( "name" => "Link Color",
     "std" => "false"),
     
 array( "name" => "Enable widget title background",  
-    "desc" => "Check this box to hide enable the classic widget title backgrounds.",  
+    "desc" => "Check this box to enable the classic widget title backgrounds.",  
     "id" => $shortname."_widget_title_bg",  
       "type" => "checkbox",  
     "std" => "false"),
- 
-array( "name" => "Custom CSS",  
-    "desc" => "Override default CSS here.",  
-    "id" => $shortname."_css_options",  
-    "type" => "textarea",  
-    "std" => ""),  
 
 array( "type" => "close"),
 
@@ -308,24 +308,6 @@ array( "type" => "close"),
 array( "type" => "close-tab"),
 
 
-// Footer
-
-array( "id" => $shortname."-tab6",
-	"type" => "open-tab"),
-
-array( "type" => "open"),
-  
-array( "name" => "Footer Copyright",  
-    "desc" => "Enter Copyright text used on the right side of the footer. It can be HTML",  
-    "id" => $shortname."_footer_text",  
-    "type" => "textarea",  
-    "std" => ""),
-    
-array( "type" => "close"),
-
-array( "type" => "close-tab"),
-
-
 );  
 
 /**
@@ -389,7 +371,7 @@ function theme_options_do_page() {
         <li><a href="#if-tab3"><span>Social</span></a></li>
         <li><a href="#if-tab4"><span>Blog</span></a></li>
         <li><a href="#if-tab5"><span>iFeature Slider</span></a></li>        
-        <li><a href="#if-tab6"><span>Footer</span></a></li>
+      
     
     </ul>
     
@@ -587,7 +569,7 @@ case 'post':
    <input type="checkbox" id="ifeature[if_hide_comments]" name="ifeature[if_hide_comments]" value="1" <?php checked( '1', $options['if_hide_comments'] ); ?>> - Comments
 <br /><br />
 
-   <input type="checkbox" id="ifeature[if_hide_share]" name="ifeature[if_hide_share]" value="1" <?php checked( '1', $options['if_hide_share'] ); ?>> - Share
+   <input type="checkbox" id="ifeature[if_hide_share]" name="ifeature[if_hide_share]" value="1" <?php checked( '1', $options['if_hide_share'] ); ?>> - Shareing
 <br /><br />
 
    <input type="checkbox" id="ifeature[if_hide_tags]" name="ifeature[if_hide_tags]" value="1" <?php checked( '1', $options['if_hide_tags'] ); ?>> - Tags
@@ -674,7 +656,7 @@ case 'upload':
 
 <tr>
 
-<td width="15%" rowspan="2" valign="middle"><strong>Custom logo</strong>
+<td width="15%" rowspan="2" valign="middle"><strong>Custom Logo</strong>
 
 
  
@@ -722,7 +704,7 @@ case 'upload2':
 
 <tr>
 
-<td width="15%" rowspan="2" valign="middle"><strong>Custom favicon</strong>
+<td width="15%" rowspan="2" valign="middle"><strong>Custom Favicon</strong>
 
 
  
@@ -1215,15 +1197,6 @@ if ($_FILES['if_favfilename']['name'] != '') {
 ?>
 <?php
   
-/* Custom Menu */   
-  
-add_action( 'init', 'register_my_menu' );
-
-function register_my_menu() {
-	register_nav_menu( 'primary-menu', __( 'Primary Menu' ) );
-}
-
-
 // Add scripts and stylesheet
 
   function if_scripts() {

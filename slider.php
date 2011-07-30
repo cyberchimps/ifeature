@@ -11,7 +11,7 @@
     	$tmp_query = $wp_query; 
 		$options = get_option('ifeature') ;  
 		$category = $options['if_slider_category'];
-		
+		$root = get_template_directory_uri();
 		
 /* Define blog category */
 
@@ -32,7 +32,7 @@
   	
     	
 	    if (have_posts()) :
-	    	$out = "<div id='coin-slider'>"; 
+	    	$out = "<div id='slider' class='nivoSlider'>"; 
 	    	$i = 0;
 	    	
 	    	if ($options['if_slider_posts_number'] == '')
@@ -43,31 +43,35 @@
 	    	
 	    		the_post(); 
 	    		
-	    		$image 		= get_post_meta($post->ID, 'slider_post_image' , true);
+	    		$postimage 		= get_post_meta($post->ID, 'slider_post_image' , true);
 	    		$text 		= get_post_meta($post->ID, 'slider_text' , true);
-
 	    		$permalink 	= get_permalink();
 	    		$thetitle	= get_the_title(); 
-	    		if ($image != ''){ 
-	    			$out .= "<a href='$permalink'>	
-	    						<img src='$image' alt='iFeaturePro' />
-	    						<span>
-	    							<strong>$thetitle</strong><br />
-	    							$text
-	    						</span>
-	    					</a>
+	    		$customsized = "$root/library/tt/timthumb.php?src=$postimage&a=c&h=330&w=640"; /* Gets custom image from page/post meta option, applies timthumb code  */
+	    		
+	    	/* Controls slide image and thumbnails */
+
+	    	if ($postimage != '' ){
+	    		$image = $customsized;
+	    	}
+	    	
+	    	else {
+	    		$image = "$root/images/ifeaturefree.jpg";
+	    	}
+
+	    		
+	    	/* Markup for slides */
+
+	    	$out .= "<a href='$permalink'>	
+	    				<img src='$image' title='#caption$i' />
+	    					<div id='caption$i' class='nivo-html-caption'>
+                				<font size='4'>$thetitle </font> <br />
+                				$text 
+                			</div>
+	    				</a>
 	    			";
-	       } 
-	       		else {
-	       		$out .= "<a href='$permalink'>	
-	    						<img src='./wp-content/themes/ifeature/images/ifeaturefree.jpg' alt='iFeaturePro' />
-	    						<span>
-	    							<strong>$thetitle</strong><br />
-	    							$text
-	    						</span>
-	    					</a>
-	    			";
-	       } 
+
+	    	/* End slide markup */	
 	    	 
 	      	$i++;
 	      	endwhile;
@@ -76,38 +80,68 @@
 	    
 	    $wp_query = $tmp_query;
 
-	    	$csEffect = 'random';
-	  
-	    
-	    $csSpw		= get_option('cs-spw') ? get_option('cs-spw') : 7;
-	    $csSph		= get_option('cs-sph') ? get_option('cs-sph') : 5;	    
-	    
-	   
+	    	   
 	    if ($options['if_slider_delay'] == '')
-	    	$csDelay = '3500';
-	    else $csDelay = $options['if_slider_delay'];
+	    	$delay = '3500';
+	    else $delay = $options['if_slider_delay'];
 	  
-	    if ($options['if_slider_navigation'] != '1')
-	    	$csNavigation = 'true';
-	    else $csNavigation = 'false';
+	    if ($options['if_slider_navigation'] != '1') {
+	    	$navigation = 'true';
+	    }
+	    else {
+	    
+	     $navigation = 'false'; 
+	    	echo '<style type="text/css">';
+			echo '.nivo-controlNav {display: none;}';
+			echo '#slider {margin-bottom: 5px;}';
+			echo '</style>';
+	    
+	    }
 	    
 	    wp_reset_query();
+/* Begin NivoSlider javascript */ 
+    
     $out .= <<<OUT
-<script type="text/javascript">
-var $ = jQuery.noConflict();
-	$("#coin-slider").coinslider({
-		width  		: 640,
-		height 		: 330,
-		spw			: $csSpw,
-		sph			: $csSph,
-		delay		: $csDelay,
-		navigation	: $csNavigation,
-		effect		: '$csEffect'
-	
-	}); 
+	<script type="text/javascript">
+		var $ = jQuery.noConflict();
+
+	$(window).load(function() {
+    $('#slider').nivoSlider({
+        effect:'random', // Specify sets like: 'fold,fade,sliceDown'
+        slices:15, // For slice animations
+        boxCols: 8, // For box animations
+        boxRows: 4, // For box animations
+        animSpeed:500, // Slide transition speed
+        pauseTime:'$delay', // How long each slide will show
+        startSlide:0, // Set starting Slide (0 index)
+        directionNav:$navigation, // Next & Prev navigation
+        directionNavHide:true, // Only show on hover
+        controlNavThumbs:false, // Use thumbnails for Control Nav
+        controlNavThumbsFromRel:true, // Use image rel for thumbs
+        controlNavThumbsSearch: '.jpg', // Replace this with...
+        controlNavThumbsReplace: '_thumb.jpg', // ...this in thumb Image src
+        keyboardNav:true, // Use left & right arrows
+        pauseOnHover:true, // Stop animation while hovering
+        manualAdvance:false, // Force manual transitions
+        captionOpacity:0.7, // Universal caption opacity
+        prevText: 'Prev', // Prev directionNav text
+        nextText: 'Next', // Next directionNav text
+        beforeChange: function(){}, // Triggers before a slide transition
+        afterChange: function(){}, // Triggers after a slide transition
+        slideshowEnd: function(){}, // Triggers after all slides have been shown
+        lastSlide: function(){}, // Triggers when last slide is shown
+        afterLoad: function(){} // Triggers when slider has loaded
+    });
+	$('#slider').each(function(){
+    var \$this = $(this), \$control = $(".nivo-controlNav", this);
+    \$control.css({left: (\$this.width() - \$control.width()) / 2}); 
+});
+});
 
 </script>
 
 OUT;
+
+/* End NivoSlider javascript */ 
 
 echo $out;

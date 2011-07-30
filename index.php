@@ -17,6 +17,7 @@ $options = get_option('ifeature') ;
 	
 <?php $hideslider = $options['if_hide_slider'] ?>
 		<?php if ($hideslider != '1' ):?>
+		
 			<?php get_template_part('slider', 'index' ); ?>
 		<?php endif;?>
 	

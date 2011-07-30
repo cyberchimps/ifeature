@@ -117,24 +117,25 @@ add_action('wp_head', 'ifeature_plusone');
 	
 // Load jQuery
 	if ( !is_admin() ) {
+	   wp_deregister_script('jquery');
+	   wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"), false);
 	   wp_enqueue_script('jquery');
 	}
 
-	// Coin Slider 
+// Nivo Slider 
 
-function ifeaure_cs_head(){
+function ifeature_add_nivoslider(){
 	 
-	$path =  get_template_directory_uri() ."/library/cs/";
+	$path =  get_template_directory_uri() ."/library/ns/";
 
 	$script = "
 		
-		<script type=\"text/javascript\" src=\"".$path."scripts/coin-slider.min.js\"></script>
+		<script type=\"text/javascript\" src=\"".$path."/jquery.nivo.slider.js\"></script>
 		";
 	
 	echo $script;
 }
-
-add_action('wp_head', 'ifeaure_cs_head');
+add_action('wp_head', 'ifeature_add_nivoslider');
 
 
 	// Register superfish scripts
@@ -164,7 +165,7 @@ add_action( 'wp_head', 'ifeature_add_scripts',0);
 	
 	function ifeature_register_menus() {
 	register_nav_menus(
-	array( 'header-menu' => __( 'Header Menu' ), 'extra-menu' => __( 'Extra Menu' ))
+	array( 'header-menu' => __( 'Header Menu' ), 'footer-menu' => __( 'Footer Menu' ))
   );
 }
 	add_action( 'init', 'ifeature_register_menus' );
