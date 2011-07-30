@@ -62,7 +62,7 @@
 	    	/* Markup for slides */
 
 	    	$out .= "<a href='$permalink'>	
-	    				<img src='$image' title='#caption$i' />
+	    				<img src='$image' height='330' width='640' title='#caption$i' />
 	    					<div id='caption$i' class='nivo-html-caption'>
                 				<font size='4'>$thetitle </font> <br />
                 				$text 
