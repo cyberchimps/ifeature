@@ -38,7 +38,7 @@ a img {border: none; }
 .featured-image {
 	margin-top: 10px; 
 	margin-right: 12px; 
-	margin-bottom: 10px; 
+	margin-bottom: 5px; 
 
 }
 
@@ -73,6 +73,7 @@ code, tt { }
 	bottom: 10px;
 	padding-top: 4px;
 	z-index: 1;
+	width: 600px;
 }
 
 #description {
@@ -862,7 +863,7 @@ li.sfHover > a > .sf-sub-indicator {
 
 .nivo-controlNav {
 	position:absolute;
-	bottom:-40px; /* Put the nav below the slider */
+	bottom:-45px; /* Put the nav below the slider */
 	margin-bottom: 10px;
 
 	
@@ -900,7 +901,7 @@ li.sfHover > a > .sf-sub-indicator {
 	background:url(images/slider/loading.gif) no-repeat 50% 50%;
 	width: 640px;
     height: 330px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
 }
 
 #slider img {

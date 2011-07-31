@@ -30,7 +30,7 @@
   					echo '</div>';
 				}
 			?>	
-				<div class="entry">
+				<div class="entry" <?php if ( has_post_thumbnail()) { echo 'style="min-height: 115px;" '; }?>>
 					<?php 
 						if ($excerpts == '1' ) {
 						the_excerpt();
