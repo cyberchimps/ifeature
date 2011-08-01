@@ -90,7 +90,7 @@
 		          bloginfo('name'); echo ' - '; wp_title(''); echo ' Archive '; }
 		      elseif (is_search()) {
 		         bloginfo('name'); echo ' - '; echo 'Search for &quot;'.esc_html($s).'&quot;  '; }
-		      elseif ($title == '' AND !(is_404()) && (is_single()) || (is_page())) {
+		      elseif ($title == '' AND !(is_404()) && (is_single()) || (is_page()))  {
 		          bloginfo('name'); echo ' - '; wp_title('');  }
 		      elseif (is_404()) {
 		          bloginfo('name'); echo ' - '; echo 'Not Found '; }
@@ -150,7 +150,11 @@
 								Enter Contact Information Here
 							</div>
 							<?php endif;?>
-							<?php if ($headercontact != 'hide' ):?>
+							<?php if ($headercontact != 'hide' && $logo != '' ):?>
+							<div id="header_contact">
+								<?php echo stripslashes ($headercontact); ?></div> 
+							<?php endif;?>
+							<?php if ($headercontact != 'hide' && $logo == ''):?>
 							<div id="header_contact1">
 								<?php echo stripslashes ($headercontact); ?></div> 
 							<?php endif;?>
@@ -169,7 +173,7 @@
 							</div>
 						<?php endif;?>
 						<?php if ($logo == '' ):?>
-							<div id="logo">
+							<div id="sitename">
 								<h1 class="sitename"><a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?> </a></h1>
 							</div>
 						<?php endif;?>

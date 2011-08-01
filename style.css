@@ -70,10 +70,17 @@ code, tt { }
 	height: 60px;
 	max-height: 60px;	
 	margin-left: 5px;	
-	bottom: 10px;
-	padding-top: 4px;
+	margin-bottom: 3px;
+	padding-top: 12px;
 	z-index: 1;
 	width: 600px;
+}
+
+#sitename {
+	margin-bottom: 36px;
+	margin-top: 10px;
+	width: 600px;
+
 }
 
 #description {
@@ -97,7 +104,7 @@ code, tt { }
 
 #header_contact1 {
 	float:right;
-	padding-top: 10px;
+	margin-top: 5px;
 	height: 20px;
 	text-align: right;
 	max-width: 300px;
@@ -162,13 +169,12 @@ input[type=text] {
 	
 #morefoot .searchform{ float:left; }
 
-.searchform .s{
+.searchform .s{	
 	margin:0;
 	border: none;
-	padding: 1px 2px 3px 4px;
-	margin: 4px 2px 3px 28px;
+	margin: 3px 2px 3px 30px;
 	margin: 2px 2px 3px 28px\9;
-	height: 10px;
+	height: 14px;
 	width:140px;
 	color: #333;
 	overflow: hidden;
@@ -376,6 +382,11 @@ float: right;width: 316px;
 	margin-top: 0px;
 	margin-bottom: 10px;
 	padding: 2px;
+}
+
+.textwidget {
+	margin-left: 4px;
+	margin-right: 4px;
 }
 
 .sidebar-widget-title {
