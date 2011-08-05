@@ -13,7 +13,7 @@
 	$favicon = $options['file2'];
 	$tdurl = get_template_directory_uri();
 	
-	if (is_search()){
+	if (!is_page()){
 		$title = '';
 	}
 	
@@ -21,21 +21,21 @@
 		$title = get_post_meta($post->ID, 'seo_title' , true);
 	}
 	
-	if (is_search()){
+	if (!is_page()){
 		$pagedescription = '';
 	}
 	
 	else {
 		$pagedescription = get_post_meta($post->ID, 'seo_description' , true);
 	}
-	if (is_search()){
+	if (!is_page()){
 		$keywords = '';
 	}
 	else {
 		$keywords = get_post_meta($post->ID, 'seo_keywords' , true);
 	}
 	
-	$hometitle = $options['if_home_title'];
+	$blogtitle = $options['if_home_title'];
 	$homekeywords = $options['if_home_keywords'];
 	$homedescription = $options['if_home_description'];
 	
@@ -48,8 +48,8 @@
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	
 <!-- iFeature Blog Page SEO options -->
-	<?php if ($hometitle != '' AND is_front_page()): ?>
-		<meta name="title" content="<?php echo $hometitle ?>" />
+	<?php if ($blogtitle != '' AND is_front_page()): ?>
+		<meta name="title" content="<?php echo $blogtitle ?>" />
 	<?php endif; ?> 
 	
 	<?php if ($homedescription != '' AND is_front_page()): ?>
@@ -84,22 +84,46 @@
 <!-- Page title -->
 <title>
 		   <?php
+		   
+		   	  /*Title for tags */
 		      if (function_exists('is_tag') && is_tag()) {
 		         bloginfo('name'); echo ' - '; single_tag_title("Tag Archive for &quot;"); echo '&quot;  '; }
+		      /*Title for archives */   
 		      elseif (is_archive()) {
 		          bloginfo('name'); echo ' - '; wp_title(''); echo ' Archive '; }
+		      /*Title for search */     
 		      elseif (is_search()) {
 		         bloginfo('name'); echo ' - '; echo 'Search for &quot;'.esc_html($s).'&quot;  '; }
-		      elseif ($title == '' AND !(is_404()) && (is_single()) || (is_page()))  {
-		          bloginfo('name'); echo ' - '; wp_title('');  }
+		      /*Title for 404 */    
 		      elseif (is_404()) {
 		          bloginfo('name'); echo ' - '; echo 'Not Found '; }
-		      if (is_front_page() AND $hometitle == '') {
+		      /*Title if front page is latest posts and no custom title */
+		      elseif (is_front_page() AND !is_page() AND $blogtitle == '') {
 		         bloginfo('name'); echo ' - '; bloginfo('description'); }
-		      elseif (!is_front_page() AND $title != '') {
+		      /*Title if front page is latest posts with custom title */
+		      elseif (is_front_page() AND !is_page() AND $blogtitle != '') {
+		         bloginfo('name'); echo ' - '; echo $blogtitle ; }
+		      /*Title if front page is static page and no custom title */
+		      elseif (is_front_page() AND is_page() AND $title == '') {
+		         bloginfo('name'); echo ' - '; bloginfo('description'); }
+		      /*Title if front page is static page with custom title */
+		      elseif (is_front_page() AND is_page() AND $title != '') {
 		         bloginfo('name'); echo ' - '; echo $title ; }
-		      elseif (is_front_page() AND $hometitle != '') {
-		         bloginfo('name'); echo ' - '; echo $hometitle ; }
+		     /*Title if static page is static page with no custom title */
+		      elseif (is_page() AND $title == '') {
+		         bloginfo('name'); echo ' - '; wp_title(''); }
+		      /*Title if static page is static page with custom title */
+		      elseif (is_page() AND $title != '') {
+		         bloginfo('name'); echo ' - '; echo $title ; }
+		      /*Title if blog page with no custom title */
+		      elseif (is_page() AND is_front_page() AND $blogtitle == '') {
+		         bloginfo('name'); echo ' - '; wp_title(''); }
+		  	  /*Title if blog page with custom title */ 
+		  	  elseif ($blogtitle != '') {
+		         bloginfo('name'); echo ' - '; echo $blogtitle ; }
+		  	   /*Title if blog page without custom title */
+		      else  {
+		         bloginfo('name'); echo ' - '; wp_title(''); }
 		    
 		      if ($paged>1 ) {
 		         echo ' - page '. $paged; }

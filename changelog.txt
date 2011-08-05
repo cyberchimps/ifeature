@@ -2,6 +2,11 @@ iFeature Changelog
 
 ****************************
 
+Version 2.0.1 (8-05-11)
+-Fixed bugs with Google Plus, Email and RSS social icons.
+-Changed all social icon/ credit links to open in new window. 
+-Updated some theme options copy. 
+
 Version 2.0 (8-01-11)
 -Added "Design", "Social", "Blog" theme options tabs, removed "Header", "Footer" and "SEO", moved footer copyright option to "General".
 -Added image uploader for logo and favicon, removed text input for URL.

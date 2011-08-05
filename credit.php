@@ -10,5 +10,5 @@
 ?>
 
 <div class="credit">
-<a href="http://cyberchimps.com"><img src="<?php echo get_template_directory_uri(); ?>/images/achimps.png" /></a>
+<a href="http://cyberchimps.com" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/achimps.png" /></a>
 </div>
