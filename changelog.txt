@@ -6,6 +6,9 @@ Version 2.0.1 (8-05-11)
 -Fixed bugs with Google Plus, Email and RSS social icons.
 -Changed all social icon/ credit links to open in new window. 
 -Updated some theme options copy. 
+-Fixed title conditionals in header.php.
+-Removed wp_specialchars(), replaced with esc_html().
+-Updated 404 page, added custom image. 
 
 Version 2.0 (8-01-11)
 -Added "Design", "Social", "Blog" theme options tabs, removed "Header", "Footer" and "SEO", moved footer copyright option to "General".
