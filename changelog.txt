@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 2.0.3 (8-17-11)
+-Fixed issue related to Google Analytics appearing in the footer. 
+
 Version 2.0.2 (8-16-11)
 -Replaced Cantarell with web-safe Lucida Grande as default font for better browser readability.
 -Replaced stripslashes() with esc_textarea() (Thanks to Chip for pointing that one out). 

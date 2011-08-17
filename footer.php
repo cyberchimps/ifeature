@@ -57,7 +57,7 @@ $options = get_option('ifeature') ;
 
 		<!--Inserts Google Analytics Code-->
 		<?php  $analytics = $options['if_ga_code']; ?>
-		<?php echo esc_textarea($analytics); ?>
+		<?php echo stripslashes($analytics); ?>
 			   
 		
 	</div><!--end footer_wrap-->
