@@ -2,6 +2,13 @@ iFeature Changelog
 
 ****************************
 
+Version 2.0.2 (8-16-11)
+-Replaced Cantarell with web-safe Lucida Grande as default font for better browser readability.
+-Replaced stripslashes() with esc_textarea() (Thanks to Chip for pointing that one out). 
+-Removed function_exists() conditional wrapper for add_theme_support() in functions.php.
+-Removed instances of localization calls. Localization support will be added in 2.1.
+-Adjusted site name and description margins in header. 
+
 Version 2.0.1 (8-05-11)
 -Fixed bugs with Google Plus, Email and RSS social icons.
 -Changed all social icon/ credit links to open in new window. 

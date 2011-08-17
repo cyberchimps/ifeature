@@ -52,12 +52,9 @@ add_filter('excerpt_length', 'ifeature_new_excerpt_length');
 	
 /* Add post-thumb support. */
 
-	
-if ( function_exists( 'add_theme_support' ) ) {
-
 	global $options;
 	
-		if($options['if_featured_image_height'] == "") {
+	if($options['if_featured_image_height'] == "") {
 			$featureheight = '100';
 	}		
 	
@@ -75,7 +72,6 @@ if ( function_exists( 'add_theme_support' ) ) {
 	}
 	add_theme_support( 'post-thumbnails' ); 
 	set_post_thumbnail_size( $featureheight, $featurewidth, true );
-}	
 
 // This theme allows users to set a custom background
 add_custom_background();
@@ -165,7 +161,7 @@ add_action( 'wp_head', 'ifeature_add_scripts',0);
 	
 	function ifeature_register_menus() {
 	register_nav_menus(
-	array( 'header-menu' => __( 'Header Menu' ), 'footer-menu' => __( 'Footer Menu' ))
+	array( 'header-menu' =>  'Header Menu' , 'footer-menu' =>  'Footer Menu' )
   );
 }
 	add_action( 'init', 'ifeature_register_menus' );

@@ -135,7 +135,7 @@
 		<link rel="shortcut icon" href="<?php echo "$tdurl/images/favicon.ico" ; ?>" type="image/x-icon" />
 		<?php endif;?>
 		<?php if ($favicon != ""): ?>
-			<link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
+			<link rel="shortcut icon" href="<?php echo esc_textarea($favicon['url']); ?>" type="image/x-icon" />
 	<?php endif;?>
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
 	
@@ -143,7 +143,7 @@
 	
 		<?php  
 		if ($options['if_font'] == "")
-			$font = 'Cantarell';
+			$font = 'Lucida Grande';
 		else
 			$font = $options[('if_font')]; ?>
 	
@@ -176,11 +176,11 @@
 							<?php endif;?>
 							<?php if ($headercontact != 'hide' && $logo != '' ):?>
 							<div id="header_contact">
-								<?php echo stripslashes ($headercontact); ?></div> 
+								<?php echo esc_textarea ($headercontact); ?></div> 
 							<?php endif;?>
 							<?php if ($headercontact != 'hide' && $logo == ''):?>
 							<div id="header_contact1">
-								<?php echo stripslashes ($headercontact); ?></div> 
+								<?php echo esc_textarea ($headercontact); ?></div> 
 							<?php endif;?>
 							<?php if ($headercontact == 'hide' ):?>
 								<div style ="height: 10%;">&nbsp;</div> 
@@ -193,7 +193,7 @@
 					<!-- Inserts Site Logo -->
 					<?php if ($logo != ''):?>
 							<div id="logo">
-								<a href="<?php echo home_url(); ?>/"><img src="<?php echo stripslashes($logo['url']); ?>" alt="logo"></a>
+								<a href="<?php echo home_url(); ?>/"><img src="<?php echo esc_textarea($logo['url']); ?>" alt="logo"></a>
 							</div>
 						<?php endif;?>
 						<?php if ($logo == '' ):?>

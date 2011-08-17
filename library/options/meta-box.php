@@ -17,11 +17,11 @@ function rw_delete_file() {
 	if (!isset($_POST['data'])) return;
 	list($post_id, $key, $attach_id, $src, $nonce) = explode('!', $_POST['data']);
 	if (!wp_verify_nonce($nonce, 'rw_ajax_delete_file')) {
-		_e('You don\'t have permission to delete this file.');
+		('You don\'t have permission to delete this file.');
 	}
 	wp_delete_attachment($attach_id);
 	delete_post_meta($post_id, $key, $src);
-	_e('File has been successfully deleted.');
+	('File has been successfully deleted.');
 	die();
 }
 
