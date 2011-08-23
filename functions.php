@@ -113,8 +113,6 @@ add_action('wp_head', 'ifeature_plusone');
 	
 // Load jQuery
 	if ( !is_admin() ) {
-	   wp_deregister_script('jquery');
-	   wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"), false);
 	   wp_enqueue_script('jquery');
 	}
 
@@ -178,7 +176,6 @@ add_action( 'wp_head', 'ifeature_add_scripts',0);
 
 	//Register Widgetized Sidebar and Footer
     
-    
     register_sidebar(array(
     	'name' => 'Sidebar Widgets',
     	'id'   => 'sidebar-widgets',
@@ -198,8 +195,19 @@ add_action( 'wp_head', 'ifeature_add_scripts',0);
 	));
 	
 if ( ! isset( $content_width ) ) $content_width = 640;
+
+//Add link to theme settings in Admin bar
+
+function ifeature_admin_link() {
+
+	global $wp_admin_bar;
+
+	$wp_admin_bar->add_menu( array( 'id' => 'iFeature', 'title' => __('iFeature Settings'), 'href' => admin_url('themes.php?page=theme_options')  ) ); 
   
-	//iFeature theme options file
+}
+add_action( 'admin_bar_menu', 'ifeature_admin_link', 113 );
+	
+//iFeature theme options file
 	
 require_once ( get_template_directory() . '/library/options/options.php' );
 require_once ( get_template_directory() . '/library/options/options-themes.php' );

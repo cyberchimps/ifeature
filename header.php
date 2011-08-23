@@ -157,7 +157,7 @@
 	
 </head>
 
-<body style="font-family:'<?php echo $font ?>'" <?php body_class(); ?> >
+<body style="font-family:'<?php echo $font ?>', Arial, serif" <?php body_class(); ?> >
 	
 	<div id="page-wrap">
 		

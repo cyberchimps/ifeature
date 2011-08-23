@@ -2,8 +2,12 @@ iFeature Changelog
 
 ****************************
 
-Version 2.0.3 (8-17-11)
--Fixed issue related to Google Analytics appearing in the footer. 
+Version 2.0.3 (8-23-11)
+-Fixed issue related to Google Analytics code appearing in the footer. 
+-Added link to iFeature theme options settings in the Admin bar. 
+-Added Arial and serif secondary fonts to body font family. 
+-Updated NivoSlider script to 2.6.
+-Now enqueueing WP jQuery library again in light of NivoSlider update. 
 
 Version 2.0.2 (8-16-11)
 -Replaced Cantarell with web-safe Lucida Grande as default font for better browser readability.
