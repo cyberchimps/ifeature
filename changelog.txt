@@ -2,6 +2,17 @@ iFeature Changelog
 
 ****************************
 
+Version 2.0.4 (8-31-11)
+-Fixed HTML code showing up in header contact area.
+-Added trailing slashes to default social icon URLs.
+-Added height and width element to social icons.
+-Fixed floats not clearing on images. 
+-Fixed paddings on site title/description. 
+-Lightened link hover color in footer. 
+-Adjusted padding, margins and font size of footer widget titles. 
+-Adjusted margins/padding on post title, meta, and entry classes. 
+-Added link hover on secondary footer menu. 
+
 Version 2.0.3 (8-23-11)
 -Fixed issue related to Google Analytics code appearing in the footer. 
 -Added link to iFeature theme options settings in the Admin bar. 

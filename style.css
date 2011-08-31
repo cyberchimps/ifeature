@@ -4,7 +4,7 @@ Theme URI: http://cyberchimps.com/ifeature-free/
 Description: iFeature: A Free WordPress Theme designed by CyberChimps.com in Long Beach, California. iFeature offers customizable theme options, an aesthetically pleasing design, the iFeature slider, dynamic header for custom logo, social icons, social sharing, contact section, widgetized sidebar and footer, typography including Google Fonts, and multiple template choices. Twitter @cyberchimps. (<a href="http://cyberchimps.com/ifeaturepro" alt="Upgrade to iFeature Pro">Upgrade to iFeature Pro</a>)
 Author: CyberChimps
 Author URI: http://cyberchimps.com
-Version: 2.0.3
+Version: 2.0.4
 Tags: white, light, silver, two-columns, fixed-width, custom-header, custom-menu, threaded-comments, sticky-post, custom-background, theme-options
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -25,7 +25,7 @@ body { font-size: 14px;	}
 h1, h2, h3 { font-weight: bold; margin: 0px; }
 h1 { font-size: 18px }
 h2 { font-size: 16px;}
-h3 { font-size: 14px}
+h3 { font-size: 18px}
 
 .error { font-size: 28px; text-align: center;}
 
@@ -70,7 +70,7 @@ code, tt { }
 	height: 60px;
 	max-height: 60px;	
 	margin-left: 5px;	
-	margin-bottom: 3px;
+	margin-bottom: 9px;
 	padding-top: 12px;
 	z-index: 1;
 	width: 600px;
@@ -86,6 +86,7 @@ code, tt { }
 
 #description {
 	height: 16px;
+	margin-top: -5px;
 }
 
 .description {
@@ -247,6 +248,7 @@ ol {
 .posts_title {
 	font-size: 24px;
 	font-weight: bold;
+	margin-bottom: 2px;
 }
 
 .post { 
@@ -255,13 +257,15 @@ ol {
 
 .entry {
 	padding-top: 5px;
-
+	margin-left: 1px;
 
 }
 
 .meta { 
 	color: #ababab;
 	font-size: 12px;
+	margin-left: 1px;
+	margin-bottom: 1px;
 }
 
 .postmetadata { 
@@ -284,24 +288,31 @@ ol {
 	font-size: 10px;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
+	margin-left: 1px;
 }
 
-img.alignright {float:right; margin:0 0 1em 1em}
-img.alignleft {float:left; margin:0 1em 1em 0}
-img.aligncenter {display: block; margin-left: auto; margin-right: auto}
-a img.alignright {float:right; margin:0 0 1em 1em}
-a img.alignleft {float:left; margin:0 1em 1em 0}
-a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
-
-.aligncenter, div.aligncenter {
+.alignleft,
+img.alignleft {
+	display: inline;
+	float: left;
+  margin-right: 1.5em;
+}
+.alignright,
+img.alignright {
+	display: inline;
+	float: right;
+  margin-left: 1.5em;
+}
+.aligncenter,
+img.aligncenter {
+	clear: both;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
-
-.alignleft { float: left; }
-
-.alignright { float: right; }
+p {
+     clear: both;
+}
 
 .wp-caption {
 	background-color: #f3f3f3;
@@ -454,13 +465,15 @@ li {padding-left: 5px;}
 }
 
 .footer-widgets a:hover {
-	color: #111;
+	color: #CCC;
 }
 
 .footer-widget-title{
 	color: #888;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: bold;
+	margin-bottom: 10px;
+	margin-left: 3px;
 }
 
 .footer-item ul {
@@ -496,6 +509,10 @@ li {padding-left: 5px;}
 
 #afterfootermenu a {
 	color: #F5F5F5;
+}
+
+#afterfootermenu a:hover {
+	color: #CCC;
 }
 
 #afterfootermenu ul {

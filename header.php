@@ -176,11 +176,11 @@
 							<?php endif;?>
 							<?php if ($headercontact != 'hide' && $logo != '' ):?>
 							<div id="header_contact">
-								<?php echo esc_textarea ($headercontact); ?></div> 
+								<?php echo stripslashes($headercontact); ?></div> 
 							<?php endif;?>
 							<?php if ($headercontact != 'hide' && $logo == ''):?>
 							<div id="header_contact1">
-								<?php echo esc_textarea ($headercontact); ?></div> 
+								<?php echo stripslashes($headercontact); ?></div> 
 							<?php endif;?>
 							<?php if ($headercontact == 'hide' ):?>
 								<div style ="height: 10%;">&nbsp;</div> 

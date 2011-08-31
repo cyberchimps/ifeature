@@ -22,29 +22,29 @@ $options = get_option('ifeature') ;
     	
     	<?php if (dynamic_sidebar("Footer")) : else : ?>
 		
-		<div class="footer-widgets">
-			<h3>Recent Posts</h3>
+<div class="footer-widgets">
+			<div class="footer-widget-title">Recent Posts</div>
 			<ul>
 				<?php wp_get_archives('type=postbypost&limit=4'); ?>
 			</ul>
 		</div>
 		
 		<div class="footer-widgets">
-			<h3>Archives</h3>
+			<div class="footer-widget-title">Archives</div>
 			<ul>
 				<?php wp_get_archives('type=monthly&limit=16'); ?>
 			</ul>
 		</div>
 
 		<div class="footer-widgets">
-			<h3>Links</h3>
+			<div class="footer-widget-title">Links</div>
 			<ul>
 				<?php wp_list_bookmarks('categorize=0&title_li='); ?>
 			</ul>
 		</div>
 
 		<div class="footer-widgets">
-			<h3>WordPress</h3>
+			<div class="footer-widget-title">WordPress</div>
 			<ul>
     		<?php wp_register(); ?>
     		<li><?php wp_loginout(); ?></li>
@@ -52,6 +52,7 @@ $options = get_option('ifeature') ;
     		<?php wp_meta(); ?>
     		</ul>
 		</div>
+
 			<?php endif; ?>
 		<div class="clear"></div>
 
