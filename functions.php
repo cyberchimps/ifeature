@@ -202,7 +202,7 @@ function ifeature_admin_link() {
 
 	global $wp_admin_bar;
 
-	$wp_admin_bar->add_menu( array( 'id' => 'iFeature', 'title' => __('iFeature Settings'), 'href' => admin_url('themes.php?page=theme_options')  ) ); 
+	$wp_admin_bar->add_menu( array( 'id' => 'iFeature', 'title' => 'iFeature Settings', 'href' => admin_url('themes.php?page=theme_options')  ) ); 
   
 }
 add_action( 'admin_bar_menu', 'ifeature_admin_link', 113 );

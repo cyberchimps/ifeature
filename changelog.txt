@@ -12,6 +12,7 @@ Version 2.0.4 (8-31-11)
 -Adjusted padding, margins and font size of footer widget titles. 
 -Adjusted margins/padding on post title, meta, and entry classes. 
 -Added link hover on secondary footer menu. 
+-Removed unnecessary text domain property from link to theme settings in admin menu. 
 
 Version 2.0.3 (8-23-11)
 -Fixed issue related to Google Analytics code appearing in the footer. 
