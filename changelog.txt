@@ -2,6 +2,12 @@ iFeature Changelog
 
 ****************************
 
+Version 2.0.5 (09-08-11)
+-Stripping HTML from Google + and Google Maps social icon URL option.
+-Stripping HTML from logo and favicon URL option.
+-Updated font choices.
+-Updated readme.txt
+
 Version 2.0.4 (8-31-11)
 -Fixed HTML code showing up in header contact area.
 -Added trailing slashes to default social icon URLs.

@@ -11,4 +11,4 @@ To upgrade to iFeature Pro please visit: http://cyberchimps.com/ifeaturepro/
 
 For the support forum please visit: http://cyberchimps.com/forum/
 
-e-mail: cyberchimpspro@gmail.com
+For all other questions please visit: http://cyberchimps.com/support/

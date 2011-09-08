@@ -49,6 +49,7 @@ function cyberchimps_store_page_init() {
 			<li><a href="http://cyberchimps.com/forum/" target="_blank">Forum</a></li>
 			<li><a href="http://twitter.com/#!/cyberchimps" target="_blank">Twitter</a></li>
 			<li><a href="http://cyberchimps.com/store/" target="_blank">CyberChimps Store</a></li>
+			<li><a href="http://cyberchimpspro.com/" target="_blank">CyberChimps Pro</a></li>
 		</ul>
 	</div>
 	<div style="clear: both;"></div>
@@ -60,27 +61,38 @@ function cyberchimps_store_page_init() {
 		<a href="http://cyberchimps.com/businesspro/" target="_blank"><img src="<?php echo $root ;?>/images/themes/bizpro.png" /></a>
 	</div>
 	<div class="theme_desciptions">
+		<div class="theme_titles"><a href="http://cyberchimps.com/ifeaturepro/" target="_blank">iFeature Pro</a></div>
+		<br />
+		iFeature Pro turns WordPress into a beautifully designed feature rich Content Management System (CMS). We thought differently when developing iFeature Pro, and took CyberChimps years of experience developing websites for clients and built user friendly settings for the most requested features from the ground up.
+		<br /><br />
+		iFeature Pro is an advanced WordPress theme released under the GNU GPL v2. iFeature Pro works great in Chrome, Safari, FireFox, and Internet Explorer 7, 8, and 9 (we do not support Internet Explorer 6). <br /><br />
+		<div class="buy"><a href="http://cyberchimps.com/ifeaturepro/" target="_blank">Buy iFeature Pro</a></div>
+	</div>
+	
+		<div class="theme_images">
+		<a href="http://cyberchimps.com/droidpresspro/" target="_blank"><img src="<?php echo $root ;?>/images/themes/droidpresspro.png" /></a>
+	</div>
+	<div class="theme_desciptions">
+		<div class="theme_titles"><a href="http://cyberchimps.com/droidpresspro/" target="_blank">DroidPress Pro</a></div>
+		<br />
+		A premium WordPress theme designed by CyberChimps.com inspired by the popular Android mobile phone operating system by Google. DroidPress features customizable theme options on a per-page basis, a feature posts section, post format support, feature slider, callout section, dynamic header for custom logo, social icons, widgetized sidebar and footer, and typography support including Typekit and Google Fonts.
+		<br /><br />
+		DroidPress Pro is an advanced WordPress theme released under the GNU GPL v2. iFeature Pro works great in Chrome, Safari, FireFox, and Internet Explorer 7, 8, and 9 (we do not support Internet Explorer 6). <br /><br />
+		<div class="buy"><a href="http://cyberchimps.com/ifeaturepro/" target="_blank">Buy DroidPress Pro</a></div>
+	</div><br />
+	
+	<div class="theme_images">
+		<a href="http://cyberchimps.com/businesspro/" target="_blank"><img src="<?php echo $root ;?>/images/themes/bizpro.png" /></a>
+	</div>
+	<div class="theme_desciptions">
 		<div class="theme_titles"><a href="http://cyberchimps.com/businesspro/" target="_blank">Business Pro</a></div>
 		<br />
 		Business Pro is a Professional WordPress Theme. Business Pro gives your company the tools to turn WordPress into a modern feature rich Content Management System (CMS).
 		<br /><br />
 		Business Pro offers intuitive options enabling any business to use WordPress as their content management system. Business Pro offers designers and developers Custom CSS, Import / Export options, and support for CSS3, and HTML5. Even if you are not a designer, Business Pro is built to be business friendly.
 		<br /><br />
-		<a href="http://cyberchimps.com/businesspro" target="_blank"><img src="<?php echo $root ;?>/images/themes/buybizpro.png" height="40" width="120" /></a>
+		<div class="buy"><a href="http://cyberchimps.com/businesspro" target="_blank">Buy Business Pro</a></div>
 	</div>
-	
-	<div class="theme_images">
-		<a href="http://cyberchimps.com/ifeaturepro/" target="_blank"><img src="<?php echo $root ;?>/images/themes/ifeaturepro2.png" /></a>
-	</div>
-	<div class="theme_desciptions">
-		<div class="theme_titles"><a href="http://cyberchimps.com/ifeaturepro/" target="_blank">iFeature Pro</a></div>
-		<br />
-		iFeature Pro turns WordPress into a beautifully designed feature rich Content Management System (CMS). We thought differently when developing iFeature Pro, and took CyberChimps years of experience developing websites for clients and built user friendly settings for the most requested features from the ground up.
-		<br /><br />
-		iFeature Pro is an advanced WordPress theme released under the GNU GPL v2. iFeature Pro works great in Chrome, Safari, FireFox, and Internet Explorer 7, 8, and 9 (we do not support Internet Explorer 6). <br /><br />
-		<a href="http://cyberchimps.com/ifeaturepro/" target="_blank"><img src="<?php echo $root ;?>/images/themes/buyifeaturepro.png" height="40" width="120" /></a>
-	</div>
-		
 		
 	<div class="theme_images">
 		<a href="http://cyberchimps.com/neuropro/" target="_blank"><img src="<?php echo $root ;?>/images/themes/neuropro.png" /></a>
@@ -92,7 +104,7 @@ function cyberchimps_store_page_init() {
 		<br /><br />
 		Neuro Pro is a next generation WordPress theme released under the GNU GPL v2. Neuro Pro works great in Chrome, Safari, FireFox, and Internet Explorer 7, 8, and 9 (we do not support Internet Explorer 6).
 		<br /> <br />
-		<a href="http://cyberchimps.com/neuropro/" target="_blank"><img src="<?php echo $root ;?>/images/themes/buyneuropro.png" height="40" width="120" /></a>
+		<div class="buy"><a href="http://cyberchimps.com/neuropro/" target="_blank">Buy Neuro Pro</a></div>
 	</div>
 
 	</div>

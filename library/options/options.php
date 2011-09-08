@@ -52,7 +52,7 @@ global $themename, $shortname, $options;
 
 
 $select_font = array(
-	'0' => array('value' =>'Lucida Grande','label' => 'Lucida Grande (default)'),'1' => array('value' =>'Allan','label' => 'Allan'),'2' => array('value' =>'Arial','label' => 'Arial'),'3' => array('value' =>'Cantarell','label' => 'Cantarell'),'4' => array('value' =>'Courier New','label' => 'Courier New'),'5' => array('value' =>'Georgia','label' => 'Georgia'),'6' => array('value' =>'Tahoma','label' => 'Tahoma'),'7' => array('value' =>'Times New Roman','label' => 'Times New Roman'),'8' => array('value' =>'Ubuntu','label' => 'Ubuntu'),
+	'0' => array('value' =>'Lucida Grande','label' => 'Lucida Grande (default)'),'1' => array('value' =>'Allan','label' => 'Allan'),'2' => array('value' =>'Alice','label' => 'Alice'),'3' => array('value' =>'Arial','label' => 'Arial'),'4' => array('value' =>'Cantarell','label' => 'Cantarell'),'5' => array('value' =>'Courier New','label' => 'Courier New'),'6' => array('value' =>'Georgia','label' => 'Georgia'),'7' => array('value' =>'Tahoma','label' => 'Tahoma'),'8' => array('value' =>'Times New Roman','label' => 'Times New Roman'),'9' => array('value' =>'Ubuntu','label' => 'Ubuntu'),
 
 );
 
@@ -395,6 +395,7 @@ function theme_options_do_page() {
 		<li><a href="http://twitter.com/#!/cyberchimps" target="_blank">Twitter</a></li>
 		<li><a href="http://www.facebook.com/CyberChimps" target="_blank">Facebook</a></li>
 		<li><a href="http://cyberchimps.com/store/" target="_blank">CyberChimps Store</a></li>
+		<li><a href="http://cyberchimpspro.com/" target="_blank">CyberChimps Pro</a></li>
 		
 	</ul>
 	</div>
@@ -1317,11 +1318,17 @@ function theme_options_validate( $input ) {
 
   	// Strip HTML from certain options
   	
-   $input['if_logo'] = wp_filter_nohtml_kses( $input['if_logo'] );
+   $input['if_filename_text'] = wp_filter_nohtml_kses( $input['if_filename_text'] );
+   
+    $input['if_favfilename_text'] = wp_filter_nohtml_kses( $input['if_favfilename_text'] );
   
    $input['if_facebook'] = wp_filter_nohtml_kses( $input['if_facebook'] ); 
     
    $input['if_twitter'] = wp_filter_nohtml_kses( $input['if_twitter'] ); 
+   
+   $input['if_gplus'] = wp_filter_nohtml_kses( $input['if_gplus'] ); 
+   
+   $input['if_googlemaps'] = wp_filter_nohtml_kses( $input['if_googlemaps'] ); 
   
    $input['if_linkedin'] = wp_filter_nohtml_kses( $input['if_linkedin'] );   
   
