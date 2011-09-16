@@ -18,7 +18,7 @@ get_header(); ?>
 
 	<?php if (have_posts()) : ?>
 
-		<h2><font size="5"> Search Results For: <?php echo get_search_query() ?></font></h2><br />
+		<h2><font size="5"> Search Results For: <?php echo get_search_query(); ?></font></h2><br />
 
 
 		<?php while (have_posts()) : the_post(); ?>

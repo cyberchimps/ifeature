@@ -175,7 +175,8 @@ add_action( 'wp_head', 'ifeature_add_scripts',0);
 }
 
 	//Register Widgetized Sidebar and Footer
-    
+
+function ifeature_sidebars() {    
     register_sidebar(array(
     	'name' => 'Sidebar Widgets',
     	'id'   => 'sidebar-widgets',
@@ -188,11 +189,15 @@ add_action( 'wp_head', 'ifeature_add_scripts',0);
 	
 	register_sidebar(array(
 		'name' => 'Footer',
+		'id'   => 'footer-widgets',
+		'description'   => 'These are widgets for the footer.',
 		'before_widget' => '<div class="footer-widgets">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="footer-widget-title">',
 		'after_title' => '</h3>',
 	));
+}
+add_action( 'widgets_init', 'ifeature_sidebars' );
 	
 if ( ! isset( $content_width ) ) $content_width = 640;
 

@@ -2,6 +2,10 @@ iFeature Changelog
 
 ****************************
 
+Version 2.0.6 (9-15-11)
+-Register sidebars placed in a function that hooks into widgets_init. 
+-Added ID and description to the footer widgetized area. 
+
 Version 2.0.5 (09-08-11)
 -Stripping HTML from Google + and Google Maps social icon URL option.
 -Stripping HTML from logo and favicon URL option.
