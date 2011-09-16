@@ -36,7 +36,7 @@ a:hover { color: #555; }
 a img {border: none; }
 
 .featured-image {
-	margin-top: 10px; 
+	margin-top: 8px; 
 	margin-right: 12px; 
 	margin-bottom: 5px; 
 
@@ -259,6 +259,10 @@ ol {
 	padding-top: 5px;
 	margin-left: 1px;
 
+}
+
+.entry p {
+	clear: none;
 }
 
 .meta { 
