@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 2.0.7 (9-23-11)
+-Added height:auto element to img.size-full class.
+
 Version 2.0.6 (9-15-11)
 -Register sidebars now placed in a function that hooks into widgets_init. 
 -Added ID and description to the footer widgetized area. 
