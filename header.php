@@ -152,9 +152,7 @@
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	    
 	<?php wp_head(); ?>
-	
-	
-	
+
 </head>
 
 <body style="font-family:'<?php echo $font ?>', Arial, serif" <?php body_class(); ?> >
@@ -205,7 +203,6 @@
 						<h1 class="description"><?php bloginfo('description'); ?></h1>
 					</div>
 				</div><!-- end headerwrap -->
-				
 				
 				<?php get_template_part('nav', 'header' ); ?>
 				

@@ -79,7 +79,6 @@ add_custom_background();
 // This theme styles the visual editor with editor-style.css to match the theme style.
 add_editor_style();
 
-
 /**
 * Attach CSS3PIE behavior to elements
 * Add elements here that need PIE applied
@@ -176,7 +175,7 @@ add_action( 'wp_head', 'ifeature_add_scripts',0);
 
 	//Register Widgetized Sidebar and Footer
 
-function ifeature_sidebars() {    
+function ifeature_widgets_init() {    
     register_sidebar(array(
     	'name' => 'Sidebar Widgets',
     	'id'   => 'sidebar-widgets',
@@ -197,7 +196,7 @@ function ifeature_sidebars() {
 		'after_title' => '</h3>',
 	));
 }
-add_action( 'widgets_init', 'ifeature_sidebars' );
+add_action( 'widgets_init', 'ifeature_widgets_init' );
 	
 if ( ! isset( $content_width ) ) $content_width = 640;
 

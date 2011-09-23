@@ -11,8 +11,6 @@
 */
 $options = get_option('ifeature') ;  
 ?>
-	
-	
 	</div><!--end main-->
 </div><!--end page_wrap-->			
 	
@@ -59,7 +57,6 @@ $options = get_option('ifeature') ;
 		<!--Inserts Google Analytics Code-->
 		<?php  $analytics = $options['if_ga_code']; ?>
 		<?php echo stripslashes($analytics); ?>
-			   
 		
 	</div><!--end footer_wrap-->
 </div><!--end footer-->
@@ -85,7 +82,6 @@ $options = get_option('ifeature') ;
 	    	)); ?>
 
 			</div>
-			
 					<div id="credit">
 						<?php get_template_part('credit', 'footer' ); ?>
 					</div>
