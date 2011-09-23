@@ -103,7 +103,7 @@ function ifeature_plusone(){
 
 	$script = "
 		
-		<script type=\"text/javascript\" src=\"".$path."/plusone.js\"></script>
+		<script type=\"text/javascript\" src=\"".$path."plusone.js\"></script>
 		";
 	
 	echo $script;
@@ -124,7 +124,7 @@ function ifeature_add_nivoslider(){
 
 	$script = "
 		
-		<script type=\"text/javascript\" src=\"".$path."/jquery.nivo.slider.js\"></script>
+		<script type=\"text/javascript\" src=\"".$path."jquery.nivo.slider.js\"></script>
 		";
 	
 	echo $script;
