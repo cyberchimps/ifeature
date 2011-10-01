@@ -21,7 +21,10 @@
 
 <div id="content_wrap">
 
+
 	<div id="content_left">
+	
+	<?php if (function_exists('ifeature_breadcrumbs')) ifeature_breadcrumbs(); ?>
 		
 		<div class="content_padding">
 		

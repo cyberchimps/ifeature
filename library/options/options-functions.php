@@ -8,6 +8,24 @@
 	
 */
 
+/* Disable breadcrumbs*/
+ 
+function ifeature_disable_breadcrumbs() {
+
+	global $options;
+	$root = get_template_directory_uri();
+	
+	if ($options['if_disable_breadcrumbs'] == "1") {
+		
+		echo '<style type="text/css">';
+		echo "#crumbs {display: none;}";
+		echo '</style>';
+
+	}
+}
+add_action( 'wp_head', 'ifeature_disable_breadcrumbs');
+
+
 /* Widget title background */
  
 function ifeature_widget_title_bg() {

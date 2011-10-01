@@ -11,6 +11,8 @@ Copyright (C) 2011 CyberChimps
 
 	<div id="content_fullwidth">
 	
+	<?php if (function_exists('ifeature_breadcrumbs')) ifeature_breadcrumbs(); ?>
+	
 		<div class="content_padding">
 		
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

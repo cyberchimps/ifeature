@@ -20,7 +20,7 @@ get_header(); ?>
 			
 				<div class="post_container">
 				
-					<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
+				<?php if (function_exists('ifeature_breadcrumbs')) ifeature_breadcrumbs(); ?>
 
 					<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			
@@ -31,6 +31,8 @@ get_header(); ?>
 							<div class="entry">
 								<?php the_content(); ?>
 							</div><!--end entry-->
+							<div style=clear:both;></div>
+							<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
 						<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
 						
 							<?php 

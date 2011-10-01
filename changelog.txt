@@ -2,6 +2,12 @@ iFeature Changelog
 
 ****************************
 
+Version 2.0.8 (10-1-11)
+-Added breadcrumb links for single post, page, archive and search templates. 
+-Added definition list title and text styles. 
+-Added Flickr social icon. 
+-Adjusted h tag styles. 
+
 Version 2.0.7 (9-23-11)
 -Added height:auto element to img.size-full class.
 -Removed unnecessary trailing slash in JS script file paths in functions.php.

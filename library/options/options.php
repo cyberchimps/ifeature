@@ -105,6 +105,12 @@ array( "name" => "Custom Favicon",
     "type" => "upload2",  
     "std" => ""), 
     
+array( "name" => "Disable Breadcrumbs",  
+    "desc" => "Check this box to disable breadcrumb links.",  
+    "id" => $shortname."_disable_breadcrumbs",  
+      "type" => "checkbox",  
+    "std" => "false"),
+    
 array( "name" => "Footer Copyright",  
     "desc" => "Enter Copyright text used on the right side of the footer. It can be HTML",  
     "id" => $shortname."_footer_text",  
@@ -309,6 +315,12 @@ array( "name" => "Google Plus URL",
     "id" => $shortname."_gplus",  
     "type" => "gplus",  
     "std" => "https://plus.google.com"),
+    
+array( "name" => "Flickr URL",  
+    "desc" => "Enter your Flickr URL for the Flickr social icon.",  
+    "id" => $shortname."_flickr",  
+    "type" => "flickr",  
+    "std" => "http://flickr.com/"),
     
 array( "name" => "LinkedIn URL",  
     "desc" => "Enter your LinkedIn URL for the LinkedIn social icon.",  
@@ -970,6 +982,31 @@ case 'gplus':
 <?php
 break;
 
+case 'flickr':  
+?>  
+  
+<tr>
+
+    <td width="15%" rowspan="2" valign="middle"><label for="<?php echo $value['id']; ?>"><strong><?php echo $value['name']; ?></strong><br /><small><?php echo $value['desc']; ?></small></label>  </td>
+    <td width="85%"><input style="width:300px;" name="<?php echo 'ifeature['.$value['id'].']'; ?>" id="<?php echo 'if['.$value['id'].']'; ?>" type="<?php echo $value['type']; ?>" value="<?php if (  $options[$value['id']]  != "") { echo esc_attr($options[$value['id']]) ; } else { echo esc_attr($value['std']) ; } ?>" />
+    
+    <br /><br />
+    <input type="checkbox" id="ifeature[if_hide_flickr]" name="ifeature[if_hide_flickr]" value="1" <?php checked( '1', $options['if_hide_flickr'] ); ?>> - Check this box to hide the Flickr icon. 
+    
+    </td>
+
+  </tr>
+ 
+<tr>
+
+</tr><tr><td colspan="2" style="margin-bottom:5px;border-bottom:1px dotted #ddd;">&nbsp;</td></tr><tr><td colspan="2">&nbsp;</td></tr>
+
+
+
+<?php
+break;
+
+
 
 case 'linkedin':  
 ?>  
@@ -1261,9 +1298,13 @@ function theme_options_validate( $input ) {
 		$input['if_hide_twitter'] = null;
 	$input['if_hide_twitter'] = ( $input['if_hide_twitter'] == 1 ? 1 : 0 ); 
 	
-		if ( ! isset( $input['if_hide_gplus'] ) )
+	if ( ! isset( $input['if_hide_gplus'] ) )
 		$input['if_hide_gplus'] = null;
 	$input['if_hide_gplus'] = ( $input['if_hide_gplus'] == 1 ? 1 : 0 ); 
+	
+	if ( ! isset( $input['if_hide_flickr'] ) )
+		$input['if_hide_flickr'] = null;
+	$input['if_hide_flickr'] = ( $input['if_hide_flickr'] == 1 ? 1 : 0 ); 
 	
 	if ( ! isset( $input['if_hide_linkedin'] ) )
 		$input['if_hide_linkedin'] = null;
@@ -1315,6 +1356,9 @@ function theme_options_validate( $input ) {
 		$input['if_widget_title_bg'] = null;
 	$input['if_widget_title_bg'] = ( $input['if_widget_title_bg'] == 1 ? 1 : 0 ); 
   
+  	if ( ! isset( $input['if_disable_breadcrumbs'] ) )
+		$input['if_disable_breadcrumbs'] = null;
+	$input['if_disable_breadcrumbs'] = ( $input['if_disable_breadcrumbs'] == 1 ? 1 : 0 ); 
 
   	// Strip HTML from certain options
   	
@@ -1327,6 +1371,8 @@ function theme_options_validate( $input ) {
    $input['if_twitter'] = wp_filter_nohtml_kses( $input['if_twitter'] ); 
    
    $input['if_gplus'] = wp_filter_nohtml_kses( $input['if_gplus'] ); 
+   
+   $input['if_flickr'] = wp_filter_nohtml_kses( $input['if_flickr'] ); 
    
    $input['if_googlemaps'] = wp_filter_nohtml_kses( $input['if_googlemaps'] ); 
   
