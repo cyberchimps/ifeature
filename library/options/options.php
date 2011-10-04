@@ -1255,134 +1255,63 @@ function theme_options_validate( $input ) {
 	global  $select_font, $select_featured_images;
 
 	// Assign checkbox value
+	$names = array(
+  	'if_show_excerpts',
+  	'if_show_gplus',
+  	'if_hide_author',
+  	'if_hide_categories',
+  	'if_hide_date',
+  	'if_hide_comments',
+  	'if_hide_share',
+  	'if_hide_tags',
+  	'if_hide_facebook',
+  	'if_hide_twitter',
+  	'if_hide_gplus',
+  	'if_hide_flickr',
+  	'if_hide_linkedin',
+  	'if_hide_youtube',
+  	'if_hide_googlemaps',
+  	'if_hide_email',
+  	'if_hide_rss',
+  	'if_hide_callout',
+  	'if_show_fb_like',
+  	'if_hide_slider',
+  	'if_hide_boxes',
+  	'if_hide_link',
+  	'if_slider_navigation',
+  	'if_widget_title_bg',
+  	'if_disable_breadcrumbs',
+	);
 	
-	if ( ! isset( $input['if_show_excerpts'] ) )
-		$input['if_show_excerpts'] = null;
-	$input['if_show_excerpts'] = ( $input['if_show_excerpts'] == 1 ? 1 : 0 );
-	
-	if ( ! isset( $input['if_show_gplus'] ) )
-		$input['if_show_gplus'] = null;
-	$input['if_show_gplus'] = ( $input['if_show_gplus'] == 1 ? 1 : 0 ); 
- 
-	
-	if ( ! isset( $input['if_hide_author'] ) )
-		$input['if_hide_author'] = null;
-	$input['if_hide_author'] = ( $input['if_hide_author'] == 1 ? 1 : 0 ); 
-	
-	if ( ! isset( $input['if_hide_categories'] ) )
-		$input['if_hide_categories'] = null;
-	$input['if_hide_categories'] = ( $input['if_hide_categories'] == 1 ? 1 : 0 ); 
-	
-	if ( ! isset( $input['if_hide_date'] ) )
-		$input['if_hide_date'] = null;
-	$input['if_hide_date'] = ( $input['if_hide_date'] == 1 ? 1 : 0 ); 
-	
-	if ( ! isset( $input['if_hide_comments'] ) )
-		$input['if_hide_comments'] = null;
-	$input['if_hide_comments'] = ( $input['if_hide_comments'] == 1 ? 1 : 0 ); 
-	
-	if ( ! isset( $input['if_hide_share'] ) )
-		$input['if_hide_share'] = null;
-	$input['if_hide_share'] = ( $input['if_hide_share'] == 1 ? 1 : 0 ); 
-	
-	if ( ! isset( $input['if_hide_tags'] ) )
-		$input['if_hide_tags'] = null;
-	$input['if_hide_tags'] = ( $input['if_hide_tags'] == 1 ? 1 : 0 ); 
+	foreach($names as $name)
+	{
+  	if ( ! isset( $input[$name] ) )
+  		$input[$name] = null;
+  	$input[$name] = ( $input[$name] == 1 ? 1 : 0 );
+	}
 
+	// Strip HTML from certain options
+  $names = array(
+    'if_filename_text',
+    'if_favfilename_text',
+    'if_facebook',
+    'if_twitter',
+    'if_gplus',
+    'if_flickr',
+    'if_googlemaps',
+    'if_linkedin',
+    'if_youtube',
+    'if_rsslink',
+    'if_email',
+  );
   
-  if ( ! isset( $input['if_hide_facebook'] ) )
-		$input['if_hide_facebook'] = null;
-	$input['if_hide_facebook'] = ( $input['if_hide_facebook'] == 1 ? 1 : 0 ); 
-	
-	if ( ! isset( $input['if_hide_twitter'] ) )
-		$input['if_hide_twitter'] = null;
-	$input['if_hide_twitter'] = ( $input['if_hide_twitter'] == 1 ? 1 : 0 ); 
-	
-	if ( ! isset( $input['if_hide_gplus'] ) )
-		$input['if_hide_gplus'] = null;
-	$input['if_hide_gplus'] = ( $input['if_hide_gplus'] == 1 ? 1 : 0 ); 
-	
-	if ( ! isset( $input['if_hide_flickr'] ) )
-		$input['if_hide_flickr'] = null;
-	$input['if_hide_flickr'] = ( $input['if_hide_flickr'] == 1 ? 1 : 0 ); 
-	
-	if ( ! isset( $input['if_hide_linkedin'] ) )
-		$input['if_hide_linkedin'] = null;
-	$input['if_hide_linkedin'] = ( $input['if_hide_linkedin'] == 1 ? 1 : 0 ); 
-	
-	if ( ! isset( $input['if_hide_youtube'] ) )
-		$input['if_hide_youtube'] = null;
-	$input['if_hide_youtube'] = ( $input['if_hide_youtube'] == 1 ? 1 : 0 ); 
-	
-	if ( ! isset( $input['if_hide_googlemaps'] ) )
-		$input['if_hide_googlemaps'] = null;
-	$input['if_hide_googlemaps'] = ( $input['if_hide_googlemaps'] == 1 ? 1 : 0 ); 
-	
-	if ( ! isset( $input['if_hide_email'] ) )
-		$input['if_hide_email'] = null;
-	$input['if_hide_email'] = ( $input['if_hide_email'] == 1 ? 1 : 0 ); 
-	
-	if ( ! isset( $input['if_hide_rss'] ) )
-		$input['if_hide_rss'] = null;
-	$input['if_hide_rss'] = ( $input['if_hide_rss'] == 1 ? 1 : 0 ); 
-  
-  if ( ! isset( $input['if_hide_callout'] ) )
-		$input['if_hide_callout'] = null;
-	$input['if_hide_callout'] = ( $input['if_hide_callout'] == 1 ? 1 : 0 ); 
-	
-	  if ( ! isset( $input['if_show_fb_like'] ) )
-		$input['if_show_fb_like'] = null;
-	$input['if_show_fb_like'] = ( $input['if_show_fb_like'] == 1 ? 1 : 0 ); 
-  
-  
-     if ( ! isset( $input['if_hide_slider'] ) )
-		$input['if_hide_slider'] = null;
-	$input['if_hide_slider'] = ( $input['if_hide_slider'] == 1 ? 1 : 0 ); 
-  
-  
-    if ( ! isset( $input['if_hide_boxes'] ) )
-		$input['if_hide_boxes'] = null;
-	$input['if_hide_boxes'] = ( $input['if_hide_boxes'] == 1 ? 1 : 0 ); 
-  
-     if ( ! isset( $input['if_hide_link'] ) )
-		$input['if_hide_link'] = null;
-	$input['if_hide_link'] = ( $input['if_hide_link'] == 1 ? 1 : 0 ); 
-	
-	  if ( ! isset( $input['if_slider_navigation'] ) )
-		$input['if_slider_navigation'] = null;
-	$input['if_slider_navigation'] = ( $input['if_slider_navigation'] == 1 ? 1 : 0 ); 
-		  
-	if ( ! isset( $input['if_widget_title_bg'] ) )
-		$input['if_widget_title_bg'] = null;
-	$input['if_widget_title_bg'] = ( $input['if_widget_title_bg'] == 1 ? 1 : 0 ); 
-  
-  	if ( ! isset( $input['if_disable_breadcrumbs'] ) )
-		$input['if_disable_breadcrumbs'] = null;
-	$input['if_disable_breadcrumbs'] = ( $input['if_disable_breadcrumbs'] == 1 ? 1 : 0 ); 
-
-  	// Strip HTML from certain options
+  foreach($names as $name)
+  {
+    if(!isset($input[$name])) $input[$name]='';
+    $input[$name] = wp_filter_nohtml_kses( $input[$name] );
+  }
   	
-   $input['if_filename_text'] = wp_filter_nohtml_kses( $input['if_filename_text'] );
-   
-    $input['if_favfilename_text'] = wp_filter_nohtml_kses( $input['if_favfilename_text'] );
-  
-   $input['if_facebook'] = wp_filter_nohtml_kses( $input['if_facebook'] ); 
-    
-   $input['if_twitter'] = wp_filter_nohtml_kses( $input['if_twitter'] ); 
-   
-   $input['if_gplus'] = wp_filter_nohtml_kses( $input['if_gplus'] ); 
-   
-   $input['if_flickr'] = wp_filter_nohtml_kses( $input['if_flickr'] ); 
-   
-   $input['if_googlemaps'] = wp_filter_nohtml_kses( $input['if_googlemaps'] ); 
-  
-   $input['if_linkedin'] = wp_filter_nohtml_kses( $input['if_linkedin'] );   
-  
-   $input['if_youtube'] = wp_filter_nohtml_kses( $input['if_youtube'] );  
-  
-   $input['if_rsslink'] = wp_filter_nohtml_kses( $input['if_rsslink'] );  
-  
-   $input['if_email'] = wp_filter_nohtml_kses( $input['if_email'] );   
+
   
 
 	$options = get_option('ifeature');
