@@ -2,9 +2,11 @@ iFeature Changelog
 
 ****************************
 
-Version 2.0.9 (10-10-11)
+Version 2.0.9 (10-11-11)
 -jQuery call now placed within a function that hooks into wp_enqueue_scripts. 
 -E_STRICT fix in options.php, theme options validation now within a function.  
+-Modified disable breadcrumb option. 
+-Added missing image alt tags. 
 
 Version 2.0.8 (10-1-11)
 -Added breadcrumb links for single post, page, archive and search templates. 

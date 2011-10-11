@@ -14,7 +14,7 @@ get_header(); ?>
 
 	<div id="content_left">
 	
-	<?php if (function_exists('ifeature_breadcrumbs')) ifeature_breadcrumbs(); ?>
+	<?php if (function_exists('ifeature_breadcrumbs') && $options['if_disable_breadcrumbs'] != "1") ifeature_breadcrumbs(); ?>
 		
 		<div class="content_padding">
 

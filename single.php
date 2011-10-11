@@ -8,6 +8,8 @@
 	Copyright (C) 2011 CyberChimps
 */
 
+	$showfblike		= $options['if_show_fb_like'];
+
 get_header(); ?>
 
 <div id="content_wrap">
@@ -20,7 +22,7 @@ get_header(); ?>
 			
 				<div class="post_container">
 				
-				<?php if (function_exists('ifeature_breadcrumbs')) ifeature_breadcrumbs(); ?>
+				<?php if (function_exists('ifeature_breadcrumbs') && $options['if_disable_breadcrumbs'] != "1") ifeature_breadcrumbs(); ?>
 
 					<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			
@@ -35,9 +37,6 @@ get_header(); ?>
 							<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
 						<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
 						
-							<?php 
-								$showfblike		= $options['if_show_fb_like'];
-							?>
 							<?php if ($showfblike == "1" ):?>
 							<div class="fb" >
 								<iframe src="http://www.facebook.com/plugins/like.php?href=<?php the_permalink() ?>&layout=standard&show_faces=true&width=450&action=like&colorscheme=light" scrolling="no" frameborder="0"  allowTransparency="true" style="border:none; overflow:hidden; width:530px; height:28px"></iframe>
