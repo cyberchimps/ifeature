@@ -125,6 +125,7 @@ msgstr "Ingrese información de contacto aquí"
 
 #: icons.php:33
 #: icons.php:36
+#: library/options/options.php:408
 #@ ifeature
 msgid "Facebook"
 msgstr "Facebook"
@@ -136,6 +137,8 @@ msgstr "http://facebook.com"
 
 #: icons.php:39
 #: icons.php:42
+#: library/options/options-themes.php:50
+#: library/options/options.php:407
 #@ ifeature
 #@ default
 msgid "Twitter"
@@ -486,133 +489,133 @@ msgstr "Custom RSS Link:"
 msgid "Enter Feedburner URL, or leave blank for default RSS feed."
 msgstr "Introduzca Feedburner URL, o dejar en blanco por incumplimiento feed RSS."
 
-#: library/options/options.php:677
+#: library/options/options.php:676
 #@ ifeature
 msgid "Show Excerpts"
 msgstr "Extractos mostrar"
 
-#: library/options/options.php:688
+#: library/options/options.php:687
 #@ ifeature
 msgid "Excerpt Link Text"
 msgstr "Extracto Link Text"
 
-#: library/options/options.php:699
+#: library/options/options.php:698
 #@ ifeature
 msgid "Excerpt Character Length"
 msgstr "Extracto de caracteres de longitud"
 
-#: library/options/options.php:723
+#: library/options/options.php:722
 #@ ifeature
 msgid "Author"
 msgstr "autor"
 
-#: library/options/options.php:726
+#: library/options/options.php:725
 #: sidebar.php:49
 #@ ifeature
 msgid "Categories"
 msgstr "categorías"
 
-#: library/options/options.php:729
+#: library/options/options.php:728
 #@ ifeature
 msgid "Date"
 msgstr "fecha"
 
-#: library/options/options.php:732
+#: library/options/options.php:731
 #@ ifeature
 msgid "Comments"
 msgstr "comentarios"
 
-#: library/options/options.php:735
+#: library/options/options.php:734
 #@ ifeature
 msgid "Sharing"
 msgstr "compartir"
 
-#: library/options/options.php:738
+#: library/options/options.php:737
 #@ default
 msgid "Tagsifeature"
 msgstr ""
 
-#: library/options/options.php:774
+#: library/options/options.php:773
 #@ ifeature
 msgid "Define a custom Featured Image size below (default is 100 by 100):"
 msgstr "Definir un tamaño de destacados imagen (por defecto es 100 por 100):"
 
-#: library/options/options.php:798
+#: library/options/options.php:797
 #@ ifeature
 msgid "Height"
 msgstr "altura"
 
-#: library/options/options.php:802
+#: library/options/options.php:801
 #@ ifeature
 msgid "Width"
 msgstr "ancho"
 
-#: library/options/options.php:822
+#: library/options/options.php:821
 #@ ifeature
 msgid " Custom Logo"
 msgstr "Logotipo personalizado"
 
-#: library/options/options.php:845
+#: library/options/options.php:844
 #@ ifeature
 msgid "Upload a logo image to use"
 msgstr "Subir una imagen del logotipo de usar"
 
-#: library/options/options.php:870
+#: library/options/options.php:869
 #@ ifeature
 msgid "Custom Favicon"
 msgstr "Favicon personalizado"
 
-#: library/options/options.php:893
+#: library/options/options.php:892
 #@ ifeature
 msgid "Upload a favicon image to use"
 msgstr "Subir una imagen favicon para el uso"
 
-#: library/options/options.php:921
+#: library/options/options.php:920
 #@ ifeature
 msgid "Check this box to hide the Facebook icon."
 msgstr "Marque esta casilla para ocultar el icono de Facebook."
 
-#: library/options/options.php:946
+#: library/options/options.php:945
 #@ ifeature
 msgid "Check this box to hide the Twitter icon."
 msgstr "Marque esta casilla para ocultar el icono de Twitter."
 
-#: library/options/options.php:971
+#: library/options/options.php:970
 #@ ifeature
 msgid "Check this box to hide the Google + icon."
 msgstr "Marque esta casilla para ocultar el icono de Google +."
 
-#: library/options/options.php:995
+#: library/options/options.php:994
 #@ ifeature
 msgid "Check this box to hide the Flickr icon."
 msgstr "Marque esta casilla para ocultar el icono de Flickr."
 
-#: library/options/options.php:1021
+#: library/options/options.php:1020
 #@ ifeature
 msgid "Check this box to hide the LinkedIn icon."
 msgstr "Marque esta casilla para ocultar el icono de LinkedIn."
 
-#: library/options/options.php:1045
+#: library/options/options.php:1044
 #@ ifeature
 msgid "Check this box to hide the YouTube icon."
 msgstr "Marque esta casilla para ocultar el icono de YouTube."
 
-#: library/options/options.php:1069
+#: library/options/options.php:1068
 #@ ifeature
 msgid "Check this box to hide the Google Maps icon. "
 msgstr "Marque esta casilla para ocultar el icono de Google Maps."
 
-#: library/options/options.php:1093
+#: library/options/options.php:1092
 #@ ifeature
 msgid "Check this box to hide the Email icon. "
 msgstr "Marque esta casilla para ocultar el icono de correo electrónico."
 
-#: library/options/options.php:1116
+#: library/options/options.php:1115
 #@ ifeature
 msgid "Check this box to hide the RSS icon."
 msgstr "Marque esta casilla para ocultar el icono de RSS."
 
-#: library/options/options.php:1245
+#: library/options/options.php:1244
 #@ ifeature
 msgid "WARNING THIS RESTORES ALL DEFAULTS"
 msgstr "ADVERTENCIA Esto restaura todos los valores predeterminados"
@@ -740,4 +743,179 @@ msgstr "Escriba su descripción de la página"
 #@ ifeature
 msgid "SEO Keywords"
 msgstr "Palabras clave SEO"
+
+#: library/options/options-themes.php:43
+#@ ifeature
+msgid "Professional WordPress Themes"
+msgstr "Profesional Temas de WordPress"
+
+#: library/options/options-themes.php:47
+#: library/options/options.php:404
+#@ ifeature
+msgid "Support"
+msgstr "apoyo"
+
+#: library/options/options-themes.php:48
+#: library/options/options.php:405
+#@ ifeature
+msgid "Documentation"
+msgstr "documentación"
+
+#: library/options/options-themes.php:49
+#: library/options/options.php:406
+#@ ifeature
+msgid "Forum"
+msgstr "foro"
+
+#: library/options/options-themes.php:51
+#: library/options/options.php:409
+#@ ifeature
+msgid "CyberChimps Store"
+msgstr "CyberChimps tienda"
+
+#: library/options/options-themes.php:52
+#: library/options/options.php:410
+#@ ifeature
+msgid "CyberChimps Pro"
+msgstr "CyberChimps Pro"
+
+#: library/options/options-themes.php:64
+#@ ifeature
+msgid "iFeature Pro"
+msgstr "iFeature Pro"
+
+#: library/options/options-themes.php:66
+#@ ifeature
+msgid "iFeature Pro turns WordPress into a beautifully designed feature rich Content Management System (CMS). We thought differently when developing iFeature Pro, and took CyberChimps years of experience developing websites for clients and built user friendly settings for the most requested features from the ground up."
+msgstr "iFeature Pro convierte WordPress en un elemento atractivo diseño rico Sistema de Gestión de Contenidos (CMS). Nosotros pensamos de manera diferente en el desarrollo de iFeature Pro, y tomó años CyberChimps de sitios web de experiencia en el desarrollo de clientes y la configuración fácil de usar para construir las características más solicitadas desde el principio."
+
+#: library/options/options-themes.php:68
+#@ ifeature
+msgid "iFeature Pro is an advanced WordPress theme released under the GNU GPL v2. iFeature Pro works great in Chrome, Safari, FireFox, and Internet Explorer 7, 8, and 9 (we do not support Internet Explorer 6)."
+msgstr "iFeature Pro es un avanzado tema para WordPress publicado bajo la licencia GNU GPL v2. iFeature Pro funciona muy bien en Chrome, Safari, Firefox e Internet Explorer 7, 8 y 9 (que no son compatibles con Internet Explorer 6)."
+
+#: library/options/options-themes.php:69
+#@ ifeature
+msgid "Buy iFeature Pro"
+msgstr "Comprar iFeature Pro"
+
+#: library/options/options-themes.php:76
+#@ ifeature
+msgid "DroidPress Pro"
+msgstr "DroidPress Pro"
+
+#: library/options/options-themes.php:78
+#@ ifeature
+msgid "A premium WordPress theme designed by CyberChimps.com inspired by the popular Android mobile phone operating system by Google. DroidPress features customizable theme options on a per-page basis, a feature posts section, post format support, feature slider, callout section, dynamic header for custom logo, social icons, widgetized sidebar and footer, and typography support including Typekit and Google Fonts."
+msgstr "Una prima WordPress tema diseñado por CyberChimps.com inspirado en el popular sistema operativo para teléfonos móviles Android de Google. DroidPress características opciones de personalización en un tema por página, una sección especial mensajes, soporte de formato de mensaje, slider característica, llamada sección de encabezado dinámico para el logotipo, iconos sociales, barra lateral Widgetized y pie de página, la tipografía y el apoyo entre TypeKit y Fuentes de Google.\n"
+
+#: library/options/options-themes.php:80
+#@ ifeature
+msgid "DroidPress Pro is an advanced WordPress theme released under the GNU GPL v2. iFeature Pro works great in Chrome, Safari, FireFox, and Internet Explorer 7, 8, and 9 (we do not support Internet Explorer 6)."
+msgstr "DroidPress Pro es un avanzado tema para WordPress publicado bajo la licencia GNU GPL v2. iFeature Pro funciona muy bien en Chrome, Safari, Firefox e Internet Explorer 7, 8 y 9 (que no son compatibles con Internet Explorer 6)."
+
+#: library/options/options-themes.php:81
+#@ ifeature
+msgid "Buy DroidPress Pro"
+msgstr "Comprar DroidPress Pro"
+
+#: library/options/options-themes.php:88
+#@ ifeature
+msgid "Business Pro"
+msgstr "Business Pro"
+
+#: library/options/options-themes.php:90
+#@ ifeature
+msgid "Business Pro is a Professional WordPress Theme. Business Pro gives your company the tools to turn WordPress into a modern feature rich Content Management System (CMS)."
+msgstr "Business Pro es un profesional de Tema WordPress. Business Pro le da a su empresa las herramientas para convertir WordPress en una característica moderna ricos Sistema de Gestión de Contenidos (CMS)."
+
+#: library/options/options-themes.php:92
+#@ ifeature
+msgid " Business Pro offers intuitive options enabling any business to use WordPress as their content management system. Business Pro offers designers and developers Custom CSS, Import / Export options, and support for CSS3, and HTML5. Even if you are not a designer, Business Pro is built to be business friendly."
+msgstr "Business Pro ofrece opciones intuitivas que permite a cualquier negocio a utilizar WordPress como sistema de gestión de contenidos. Business Pro ofrece a los diseñadores y desarrolladores de CSS personalizado, opciones de importación / exportación, y el soporte para CSS3 y HTML5. Incluso si usted no es un diseñador, Business Pro ha sido diseñado para los negocios.\n"
+
+#: library/options/options-themes.php:94
+#@ ifeature
+msgid "Buy Business Pro"
+msgstr "Comprar Business Pro"
+
+#: library/options/options-themes.php:101
+#@ ifeature
+msgid "Neuro Pro"
+msgstr "Neuro Pro"
+
+#: library/options/options-themes.php:103
+#@ ifeature
+msgid "Neuro Pro features intuitive design options allowing anyone the ability to easily customize the look and feel of WordPress. We also included several popular color scheme to choose from, as well as beautiful modern background images. Neuro Pro also offers designers and developers Custom CSS, Import / Export options, and support for CSS3 and HTML5."
+msgstr "Neuro Pro cuenta con opciones intuitivas de diseño permite a cualquier persona la posibilidad de personalizar fácilmente el aspecto y la sensación de WordPress. También hemos incluido varias esquema de color popular para elegir, así como hermosas imágenes de fondo moderno. Neuro Pro también ofrece los diseñadores y desarrolladores de CSS personalizado, opciones de importación / exportación, y el soporte para CSS3 y HTML5."
+
+#: library/options/options-themes.php:105
+#@ ifeature
+msgid "Neuro Pro is a next generation WordPress theme released under the GNU GPL v2. Neuro Pro works great in Chrome, Safari, FireFox, and Internet Explorer 7, 8, and 9 (we do not support Internet Explorer 6)."
+msgstr "Neuro Pro es la nueva generación tema para WordPress publicado bajo la licencia GNU GPL v2. Pro Neuro funciona muy bien en Chrome, Safari, Firefox e Internet Explorer 7, 8 y 9 (que no son compatibles con Internet Explorer 6)."
+
+#: library/options/options-themes.php:107
+#@ ifeature
+msgid "Buy Neuro Pro"
+msgstr "Comprar Neuro Pro"
+
+#: library/options/options.php:418
+#@ ifeature
+msgid "General"
+msgstr "General"
+
+#: library/options/options.php:419
+#@ ifeature
+msgid "Design"
+msgstr "Diseño"
+
+#: library/options/options.php:420
+#@ ifeature
+msgid "Blog"
+msgstr "Blog"
+
+#: library/options/options.php:421
+#@ default
+msgid "iFeature Slider"
+msgstr ""
+
+#: library/options/options.php:422
+#@ default
+msgid "Social"
+msgstr ""
+
+#: library/options/options.php:475
+#: library/options/options.php:493
+#: library/options/options.php:511
+#: library/options/options.php:530
+#: library/options/options.php:549
+#@ ifeature
+#@ ifeture
+msgid "Read the"
+msgstr "Lea el"
+
+#: library/options/options.php:475
+#@ ifeature
+msgid "General Options Tab FAQ"
+msgstr "Opciones Ficha General FAQ"
+
+#: library/options/options.php:493
+#@ ifeature
+msgid "Design Options Tab FAQ"
+msgstr "Opciones de la ficha Diseño FAQ"
+
+#: library/options/options.php:511
+#@ ifeature
+msgid "Social Options Tab FAQ"
+msgstr "Opciones de la ficha social FAQ"
+
+#: library/options/options.php:530
+#@ ifeature
+msgid "Blog Options Tab FAQ"
+msgstr "Opciones de la ficha de blog FAQ"
+
+#: library/options/options.php:549
+#@ ifeature
+msgid "Slider Options Tab FAQ"
+msgstr "Opciones de control deslizante Tab FAQ"
 
