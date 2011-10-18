@@ -508,7 +508,7 @@ case 'social_faq':
 <tr>
 
     <td width="15%" rowspan="2" valign="middle"><label for="<?php echo $value['id']; ?>"><strong><?php echo $value['name']; ?></strong><br /><small><?php echo $value['desc']; ?></small></label>  </td>
-    <td width="85%"><?php printf( __( 'Read the', 'ifeture' )); ?> <a href="<?php esc_url( 'http://cyberchimps.com/question/social-settings-tab/', 'ifeature' ); ?>" target="_blank"><?php printf( __( 'Social Options Tab FAQ', 'ifeature' )); ?></a></td>
+    <td width="85%"><?php printf( __( 'Read the', 'ifeature' )); ?> <a href="<?php esc_url( 'http://cyberchimps.com/question/social-settings-tab/', 'ifeature' ); ?>" target="_blank"><?php printf( __( 'Social Options Tab FAQ', 'ifeature' )); ?></a></td>
 
   </tr>
  

@@ -888,7 +888,6 @@ msgstr ""
 #: library/options/options.php:530
 #: library/options/options.php:549
 #@ ifeature
-#@ ifeture
 msgid "Read the"
 msgstr ""
 
