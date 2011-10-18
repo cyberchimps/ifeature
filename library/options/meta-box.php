@@ -544,14 +544,14 @@ $meta_boxes = array();
 
 $meta_boxes[] = array(
 	'id' => 'feature',
-	'title' => 'iFeature Slider Options',
+	'title' => __( 'iFeature Slider Options', 'ifeature' ),
 	'pages' => array('post'),
 
 	'fields' => array(
 	
 	array(
-			'name' => 'iFeature Slider Image',
-			'desc' => 'Upload your image here:',
+			'name' => __( 'iFeature Slider Image', 'ifeature' ),
+			'desc' => __( 'Upload your image here:', 'ifeature' ),
 			'id' => $prefix . 'post_image',
 			'type' => 'image',
 			'std' => ''
@@ -576,29 +576,29 @@ $meta_boxes[] = array(
 	'fields' => array(
 	
 	array(
-			'name' => 'Hide page title',
-			'desc' => 'Check this box to hide your page title',
+			'name' => __( 'Hide page title', 'ifeature' ),
+			'desc' => __( 'Check this box to hide your page title', 'ifeature' ),
 			'id' =>  'hide_title',
 			'type' => 'checkbox',
 			'std' => ''
 		),
 			array(
-						'name' => 'SEO Title',
-						'desc' => 'Enter your page title',
+						'name' => __( 'SEO Title', 'ifeature' ),
+						'desc' => __( 'Enter your page title', 'ifeature' ),
 						'id' => 'seo_title',
 						'type' => 'text',
 						'std' => ''
 					),
 					array(
-						'name' => 'SEO Description',
-						'desc' => 'Enter your page description',
+						'name' => __( 'SEO Description', 'ifeature' ),
+						'desc' => __( 'Enter your page description', 'ifeature' ),
 						'id' => 'seo_description',
 						'type' => 'textarea',
 						'std' => ''
 					),
 
 					array(
-						'name' => 'SEO Keywords',
+						'name' => __( 'SEO Keywords', 'ifeature' ),
 						'desc' => 'Enter your page keywords',
 						'id' => 'seo_keywords',
 						'type' => 'text',

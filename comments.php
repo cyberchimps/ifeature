@@ -17,7 +17,7 @@
 
 <?php if ( have_comments() ) : ?>
 	<br />
-	<h2 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?></h2>
+	<h2 id="comments"><?php comments_number( __('No Responses', 'ifeature' ), __( 'One Response', 'ifeature' ), __('% Responses', 'ifeature' ));?></h2>
 
 	<div class="navigation">
 		<div class="next-posts"><?php previous_comments_link() ?></div>

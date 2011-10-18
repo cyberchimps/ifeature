@@ -87,38 +87,38 @@ array( "name" => "Help",
     "std" => ""),
 
 array( "name" => "Logo URL",  
-    "desc" => "Use the image uploader or enter your own URL into the input field to use an image as your logo. To display the site title as text, leave blank.",  
+    "desc" => __( 'Use the image uploader or enter your own URL into the input field to use an image as your logo. To display the site title as text, leave blank.', 'ifeature' ),  
     "id" => $shortname."_logo",  
     "type" => "upload",  
     "std" => ""),  
  
     
 array( "name" => "Header Contact Area",  
-    "desc" => "Enter contact info such as phone number for the top right corner of the header. It can be HTML (to hide enter the word: hide).",  
+    "desc" => __( 'Enter contact info such as phone number for the top right corner of the header. It can be HTML (to hide enter the word: hide).', 'ifeature' ),  
     "id" => $shortname."_header_contact",  
     "type" => "textarea",
     "std" => ""),
     
 array( "name" => "Custom Favicon",  
-    "desc" => "A favicon is a 16x16 pixel icon that represents your site; paste the URL to a .ico image that you want to use as the image",  
+    "desc" => __( 'A favicon is a 16x16 pixel icon that represents your site; paste the URL to a .ico image that you want to use as the image.', 'ifeature' ),  
     "id" => $shortname."_favicon",  
     "type" => "upload2",  
     "std" => ""), 
     
 array( "name" => "Disable Breadcrumbs",  
-    "desc" => "Check this box to disable breadcrumb links.",  
+    "desc" => __( 'Check this box to disable breadcrumb links.', 'ifeature' ),  
     "id" => $shortname."_disable_breadcrumbs",  
       "type" => "checkbox",  
     "std" => "false"),
     
 array( "name" => "Footer Copyright",  
-    "desc" => "Enter Copyright text used on the right side of the footer. It can be HTML",  
+    "desc" => __( 'Enter Copyright text used on the right side of the footer. It can be HTML.', 'ifeature' ),  
     "id" => $shortname."_footer_text",  
     "type" => "textarea",  
     "std" => ""),
 
 array( "name" => "Google Analytics Code",  
-    "desc" => "You can paste your Google Analytics or other tracking code in this box. This will be automatically be added to the footer.",  
+    "desc" => __( 'You can paste your Google Analytics or other tracking code in this box. This will be automatically be added to the footer.', 'ifeature' ),  
     "id" => $shortname."_ga_code",  
     "type" => "textarea2",  
     "std" => ""),  
@@ -142,20 +142,20 @@ array( "name" => "Help",
     "type" => "design_faq",  
     "std" => ""),
 
-array( "name" => "Choose a font:",  
-    "desc" => "(Default is Cantarell)",  
+array( "name" => __( 'Choose a font:', 'ifeature' ),  
+    "desc" => __( '(Default is Arial)', 'ifeature' ),  
     "id" => $shortname."_font",  
     "type" => "select1",  
     "std" => ""),
     
-array( "name" => "Link Color",  
-    "desc" => "Use the color picker to select the site link color",  
+array( "name" => __( 'Link Color:', 'ifeature' ),  
+    "desc" => __( 'Use the color picker to select the site link color', 'ifeature' ),  
     "id" => $shortname."_link_color",  
       "type" => "color2",  
     "std" => "false"),
     
-array( "name" => "Enable Widget Title Background",  
-    "desc" => "Check this box to enable the classic widget title backgrounds.",  
+array( "name" => __( 'Enable Widget Title Background:', 'ifeature' ),  
+    "desc" => __( 'Check this box to enable the classic widget title backgrounds.', 'ifeature' ),  
     "id" => $shortname."_widget_title_bg",  
       "type" => "checkbox",  
     "std" => "false"),
@@ -184,50 +184,50 @@ array( "name" => "Help",
     "type" => "blog_faq",  
     "std" => ""),
 
-array( "name" => "Post Excerpts",  
-    "desc" => "Use the following options to control excerpts.",  
+array( "name" => __( 'Post Excerpts:', 'ifeature' ),  
+    "desc" => __( 'Use the following options to control excerpts.', 'ifeature' ),  
     "id" => $shortname."_excerpts",  
       "type" => "excerpts",  
     "std" => "false"),
 
-array( "name" => "Featured Images",  
-    "desc" => "Use the following options to control featured image alignment and size.",  
+array( "name" => __('Featured Images:' , 'ifeature' ),  
+    "desc" => __( 'Use the following options to control featured image alignment and size.', 'ifeature' ),  
     "id" => $shortname."_featured_images",  
       "type" => "featured",  
     "std" => "false"),
 
-array( "name" => "Hide Post Elements",  
-    "desc" => "Use the following checkboxes to hide various post elements.",  
+array( "name" => __( 'Hide Post Elements:', 'ifeature' ),  
+    "desc" => __( 'Use the following checkboxes to hide various post elements.' , 'ifeature' ),  
     "id" => $shortname."_hide_post_elements",  
     "type" => "post",  
     "std" => "false"),
 
-array(  "name" => "Show Facebook Like Button",
-	"desc" => "Check this box to show the Facebook Like Button on blog posts",
+array(  "name" => __( 'Show Facebook Like Button:', 'ifeature' ),
+	"desc" => __( 'Check this box to show the Facebook Like Button on blog posts.', 'ifeature' ),
 	"id" => $shortname."_show_fb_like",
 	"type" => "checkbox",
 	"std" => "false"),  
 	
-array(  "name" => "Show Google +1 button",
-	"desc" => "Check this box to show the Google +1 Button on blog posts",
+array(  "name" => __( 'Show Google +1 button:', 'ifeature' ),
+	"desc" => __( 'Check this box to show the Google +1 Button on blog posts.', 'ifeature' ),
 	"id" => $shortname."_show_gplus",
 	"type" => "checkbox",
 	"std" => "false"),   
 
-array( "name" => "Home Description",  
-    "desc" => "Enter the META description of your homepage here.",  
+array( "name" => __( 'Home Description:', 'ifeature' ),  
+    "desc" => __( 'Enter the META description of your homepage here.', 'ifeature' ),  
     "id" => $shortname."_home_description",  
     "type" => "textarea",  
     "std" => ""),
     
-array( "name" => "Home Keywords",  
-    "desc" => "Enter the META keywords of your homepage here (separated by commas).",  
+array( "name" => __( 'Home Keywords:', 'ifeature' ),  
+    "desc" => __( 'Enter the META keywords of your homepage here (separated by commas).', 'ifeature' ),  
     "id" => $shortname."_home_keywords",  
     "type" => "textarea",  
     "std" => ""),
     
-array( "name" => "Optional Home Title",  
-    "desc" => "Enter an alternative title of your homepage here (default is site tagline).",  
+array( "name" => __(' Optional Home Title:', 'ifeature' ),  
+    "desc" => __( 'Enter an alternative title of your homepage here (default is site tagline).', 'ifeature' ),  
     "id" => "if_home_title",  
     "type" => "text",  
     "std" => ""),
@@ -249,26 +249,26 @@ array( "name" => "Help",
     "type" => "slider_faq",  
     "std" => ""),
 
-array( "name" => "Hide iFeature Slider",  
-    "desc" => "Check this box to hide the Feature Slider on the homepage.",  
+array( "name" => __( 'Hide iFeature Slider:', 'ifeature' ),  
+    "desc" => __( 'Check this box to hide the Feature Slider on the homepage.', 'ifeature' ),  
     "id" => $shortname."_hide_slider",  
     "type" => "checkbox",  
     "std" => "false"),
     
-array( "name" => "Show Posts From Blog Category:",  
-    "desc" => "(Default is all)",  
+array( "name" => __( 'Show Posts From Blog Category:', 'ifeature' ),  
+    "desc" => __('(Default is all)', 'ifeature'),  
     "id" => $shortname."_slider_category",  
     "type" => "select6",  
     "std" => ""),
 
-array( "name" => "Number of Featured Posts:",  
-    "desc" => "(Default is 5)",  
+array( "name" => __( 'Number of Featured Posts:', 'ifeature' ),   
+    "desc" => __( '(Default is 5', 'ifeature' ),  
     "id" => $shortname."_slider_posts_number",  
     "type" => "text",  
     "std" => ""),  
 
-array( "name" => "Slider Delay Time (in milliseconds):",  
-    "desc" => "(Default is 3500)",  
+array( "name" => __( 'Slider Delay Time (in milliseconds):', 'ifeature' ),  
+    "desc" => __( '(Default is 3500)', 'ifeature' ),  
     "id" => $shortname."_slider_delay",  
     "type" => "text",  
     "std" => ""),
@@ -298,56 +298,56 @@ array( "name" => "Help",
     "type" => "social_faq",  
     "std" => ""),
 
-array( "name" => "Facebook URL",  
-    "desc" => "Enter your Facebook page URL for the Facebook social icon.",  
+array( "name" => __( 'Facebook URL:', 'ifeature' ),  
+    "desc" => __( 'Enter your Facebook page URL for the Facebook social icon.', 'ifeature' ),  
     "id" => $shortname."_facebook",  
     "type" => "facebook",  
     "std" => "http://facebook.com"),
 
-array( "name" => "Twitter URL",  
-    "desc" => "Enter your Twitter URL for Twitter social icon.",  
+array( "name" => __( 'Twitter URL:', 'ifeature' ),  
+    "desc" => __( 'Enter your Twitter URL for Twitter social icon.', 'ifeature' ),  
     "id" => $shortname."_twitter",  
     "type" => "twitter",  
     "std" => "http://twitter.com"),
     
-array( "name" => "Google Plus URL",  
-    "desc" => "Enter your Google Plus url (we recommend using the http://gplus.to/ shortener).",  
+array( "name" => __( 'Google Plus URL:', 'ifeature' ),  
+    "desc" => __( 'Enter your Google Plus url (we recommend using the http://gplus.to/ shortener).', 'ifeature' ),  
     "id" => $shortname."_gplus",  
     "type" => "gplus",  
     "std" => "https://plus.google.com"),
     
-array( "name" => "Flickr URL",  
-    "desc" => "Enter your Flickr URL for the Flickr social icon.",  
+array( "name" => __( 'Flickr URL:', 'ifeature' ),  
+    "desc" => __( 'Enter your Flickr URL for the Flickr social icon.', 'ifeature' ),
     "id" => $shortname."_flickr",  
     "type" => "flickr",  
     "std" => "http://flickr.com/"),
     
-array( "name" => "LinkedIn URL",  
-    "desc" => "Enter your LinkedIn URL for the LinkedIn social icon.",  
+array( "name" => __( 'LinkedIn URL:', 'ifeature' ),  
+    "desc" => __( 'Enter your LinkedIn URL for the LinkedIn social icon.', 'ifeature' ),  
     "id" => $shortname."_linkedin",  
     "type" => "linkedin",  
     "std" => "http://linkedin.com"),  
     
-array( "name" => "YouTube URL",  
-    "desc" => "Enter your YouTube URL for the YouTube social icon.",  
+array( "name" => __( 'YouTube URL:', 'ifeature' ),  
+    "desc" => __(' Enter your YouTube URL for the YouTube social icon.', 'ifeature' ),  
     "id" => $shortname."_youtube",  
     "type" => "youtube",  
     "std" => "http://youtube.com"),  
     
-array( "name" => "Google Maps URL",  
-    "desc" => "Enter your Google Maps URL for the Google Maps social icon.",  
+array( "name" => __( 'Google Maps URL:', 'ifeature' ) ,  
+    "desc" => __( 'Enter your Google Maps URL for the Google Maps social icon.', 'ifeature' ),  
     "id" => $shortname."_googlemaps",  
     "type" => "googlemaps",  
     "std" => "http://google.com/maps"),  
 
-array( "name" => "Email",  
-    "desc" => "Enter your contact email address for email social icon.",  
+array( "name" => __( 'Email:', 'ifeature' ),  
+    "desc" => __( 'Enter your contact email address for email social icon.', 'ifeature' ),  
     "id" => $shortname."_email",  
     "type" => "email",  
     "std" => "no@way.com"),
     
-array( "name" => "Custom RSS Link",  
-    "desc" => "Enter Feedburner URL, or leave blank for default RSS feed.",  
+array( "name" => __( 'Custom RSS Link:', 'ifeature' ),  
+    "desc" => __( 'Enter Feedburner URL, or leave blank for default RSS feed.', 'ifeature' ),  
     "id" => $shortname."_rsslink",  
     "type" => "rss",  
     "std" => ""),   
@@ -401,13 +401,13 @@ function theme_options_do_page() {
 	
 	<div class="menu">
 	<ul>
-		<li><a href="http://cyberchimps.com/support" target="_blank">Support</a></li>
-		<li><a href="http://cyberchimps.com/ifeature-free/docs/">Documentation</a></li>
-		<li><a href="http://cyberchimps.com/forum/" target="_blank">Forum</a></li>
-		<li><a href="http://twitter.com/#!/cyberchimps" target="_blank">Twitter</a></li>
-		<li><a href="http://www.facebook.com/CyberChimps" target="_blank">Facebook</a></li>
-		<li><a href="http://cyberchimps.com/store/" target="_blank">CyberChimps Store</a></li>
-		<li><a href="http://cyberchimpspro.com/" target="_blank">CyberChimps Pro</a></li>
+		<li><a href="<?php esc_url( 'http://cyberchimps.com/support' ); ?>" target="_blank"><?php printf( __( 'Support', 'ifeature' )); ?></a></li>
+		<li><a href="<?php esc_url( 'http://cyberchimps.com/ifeature-free/docs/' ); ?>"><?php printf( __( 'Documentation', 'ifeature' )); ?></a></li>
+		<li><a href="<?php esc_url( 'http://cyberchimps.com/forum/' ); ?>" target="_blank"><?php printf( __( 'Forum', 'ifeature' )); ?></a></li>
+		<li><a href="<?php esc_url( 'http://twitter.com/#!/cyberchimps' ); ?>" target="_blank"><?php printf( __( 'Twitter', 'ifeature' ));?></a></li>
+		<li><a href="<?php esc_url( 'http://facebook.com/cyberchimps/' ); ?>" target="_blank"><?php printf( __( 'Facebook', 'ifeature' ));?></a></li>
+		<li><a href="<?php esc_url( 'http://cyberchimps.com/store/' ); ?>" target="_blank"><?php printf( __( 'CyberChimps Store', 'ifeature' )); ?></a></li>
+		<li><a href="<?php esc_url( 'http://cyberchimpspro.com/' ); ?>" target="_blank"><?php printf( __( 'CyberChimps Pro', 'ifeature' )); ?></a></li>
 		
 	</ul>
 	</div>
@@ -415,11 +415,11 @@ function theme_options_do_page() {
       
     <div id="tabs" style="clear:both;">   
     <ul class="tabNavigation">
-        <li><a href="#if-tab1"><span>General</span></a></li>
-        <li><a href="#if-tab2"><span>Design</span></a></li>
-        <li><a href="#if-tab3"><span>Blog</span></a></li>
-        <li><a href="#if-tab4"><span>iFeature Slider</span></a></li>
-        <li><a href="#if-tab5"><span>Social</span></a></li>        
+        <li><a href="#if-tab1"><span><?php printf( __( 'General', 'ifeature' )); ?></span></a></li>
+        <li><a href="#if-tab2"><span><?php printf( __( 'Design' ,'ifeature' )); ?></span></a></li>
+        <li><a href="#if-tab3"><span><?php printf( __( 'Blog', 'ifeature' )); ?></span></a></li>
+        <li><a href="#if-tab4"><span><?php printf( __( 'iFeature Slider' )); ?></span></a></li>
+        <li><a href="#if-tab5"><span><?php printf( __( 'Social' )); ?></span></a></li>        
       
     
     </ul>
@@ -472,7 +472,7 @@ case 'general_faq':
 <tr>
 
     <td width="15%" rowspan="2" valign="middle"><label for="<?php echo $value['id']; ?>"><strong><?php echo $value['name']; ?></strong><br /><small><?php echo $value['desc']; ?></small></label>  </td>
-    <td width="85%">Read the <a href="http://cyberchimps.com/question/general-settings-tab/" target="_blank">General Options Tab FAQ</a></td>
+    <td width="85%"><?php printf( __( 'Read the', 'ifeature' )); ?> <a href="<?php esc_url( 'http://cyberchimps.com/question/general-settings-tab/' ); ?>" target="_blank"><?php printf( __( 'General Options Tab FAQ', 'ifeature' )); ?></a></td>
 
   </tr>
  
@@ -490,7 +490,7 @@ case 'design_faq':
 <tr>
 
     <td width="15%" rowspan="2" valign="middle"><label for="<?php echo $value['id']; ?>"><strong><?php echo $value['name']; ?></strong><br /><small><?php echo $value['desc']; ?></small></label>  </td>
-    <td width="85%">Read the <a href="http://cyberchimps.com/question/design-settings-tab/" target="_blank">Design Options Tab FAQ</a></td>
+    <td width="85%"><?php printf( __( 'Read the', 'ifeature' )); ?> <a href="http://cyberchimps.com/question/design-settings-tab/" target="_blank">Design Options Tab FAQ</a></td>
 
   </tr>
  
@@ -674,7 +674,7 @@ case 'excerpts':
     <td width="15%" rowspan="2" valign="middle"><label for="<?php echo $value['id']; ?>"><strong><?php echo $value['name']; ?></strong><br /><small><?php echo $value['desc']; ?></small></label>  </td>
     <td width="85%">
     <br />
-    <input type="checkbox" id="ifeature[if_show_excerpts]" name="ifeature[if_show_excerpts]" value="1" <?php checked( '1', $options['if_show_excerpts'] ); ?>> - Show Excerpts
+    <input type="checkbox" id="ifeature[if_show_excerpts]" name="ifeature[if_show_excerpts]" value="1" <?php checked( '1', $options['if_show_excerpts'] ); ?>> - <?php printf( __( 'Show Excerpts', 'ifeature' )); ?>
 <br /><br />
 
 	<?php
@@ -685,7 +685,7 @@ case 'excerpts':
 			$textlink = $options['if_excerpt_link_text']; 
 	?>
 	
-   <input type="text" id="ifeature[if_excerpt_link_text]" name="ifeature[if_excerpt_link_text]" value="<?php echo $textlink ;?>"> - Excerpt Link Text
+   <input type="text" id="ifeature[if_excerpt_link_text]" name="ifeature[if_excerpt_link_text]" value="<?php echo $textlink ;?>"> - <?php printf( __( 'Excerpt Link Text', 'ifeature' )); ?>
 <br /><br />
 
 	<?php
@@ -696,7 +696,7 @@ case 'excerpts':
 			$length = $options['if_excerpt_length']; 
 	?>
 
-     <input type="text" id="ifeature[if_excerpt_length]" name="ifeature[if_excerpt_length]" value="<?php echo $length ;?>" > - Excerpt Character Length
+     <input type="text" id="ifeature[if_excerpt_length]" name="ifeature[if_excerpt_length]" value="<?php echo $length ;?>" > - <?php printf( __( 'Excerpt Character Length', 'ifeature' )); ?>
 <br /><br />
 
 </td>
@@ -720,22 +720,22 @@ case 'post':
     <td width="15%" rowspan="2" valign="middle"><label for="<?php echo $value['id']; ?>"><strong><?php echo $value['name']; ?></strong><br /><small><?php echo $value['desc']; ?></small></label>  </td>
     <td width="85%">
     <br />
-    <input type="checkbox" id="ifeature[if_hide_author]" name="ifeature[if_hide_author]" value="1" <?php checked( '1', $options['if_hide_author'] ); ?>> - Author
+    <input type="checkbox" id="ifeature[if_hide_author]" name="ifeature[if_hide_author]" value="1" <?php checked( '1', $options['if_hide_author'] ); ?>> - <?php printf( __('Author', 'ifeature' )); ?>
 <br /><br />
 
-   <input type="checkbox" id="ifeature[if_hide_categories]" name="ifeature[if_hide_categories]" value="1" <?php checked( '1', $options['if_hide_categories'] ); ?>> - Categories
+   <input type="checkbox" id="ifeature[if_hide_categories]" name="ifeature[if_hide_categories]" value="1" <?php checked( '1', $options['if_hide_categories'] ); ?>> - <?php printf( __('Categories', 'ifeature' )); ?>
 <br /><br />
 
-   <input type="checkbox" id="ifeature[if_hide_date]" name="ifeature[if_hide_date]" value="1" <?php checked( '1', $options['if_hide_date'] ); ?>> - Date
+   <input type="checkbox" id="ifeature[if_hide_date]" name="ifeature[if_hide_date]" value="1" <?php checked( '1', $options['if_hide_date'] ); ?>> - <?php printf( __( 'Date', 'ifeature' )); ?>
 <br /><br />
 
-   <input type="checkbox" id="ifeature[if_hide_comments]" name="ifeature[if_hide_comments]" value="1" <?php checked( '1', $options['if_hide_comments'] ); ?>> - Comments
+   <input type="checkbox" id="ifeature[if_hide_comments]" name="ifeature[if_hide_comments]" value="1" <?php checked( '1', $options['if_hide_comments'] ); ?>> - <?php printf( __( 'Comments', 'ifeature' )); ?>
 <br /><br />
 
-   <input type="checkbox" id="ifeature[if_hide_share]" name="ifeature[if_hide_share]" value="1" <?php checked( '1', $options['if_hide_share'] ); ?>> - Sharing
+   <input type="checkbox" id="ifeature[if_hide_share]" name="ifeature[if_hide_share]" value="1" <?php checked( '1', $options['if_hide_share'] ); ?>> - <?php printf( __( 'Sharing', 'ifeature' )); ?>
 <br /><br />
 
-   <input type="checkbox" id="ifeature[if_hide_tags]" name="ifeature[if_hide_tags]" value="1" <?php checked( '1', $options['if_hide_tags'] ); ?>> - Tags
+   <input type="checkbox" id="ifeature[if_hide_tags]" name="ifeature[if_hide_tags]" value="1" <?php checked( '1', $options['if_hide_tags'] ); ?>> - <?php printf( __( 'Tags'. 'ifeature' )); ?>
 <br /><br />
 
 </td>
@@ -771,7 +771,7 @@ case 'featured':
 
 </select><br /></br>
 
-Define a custom Featured Image size below (default is 100 by 100):
+<?php printf( __( 'Define a custom Featured Image size below (default is 100 by 100):' , 'ifeature' )); ?>
 
 <br /><br />
 
@@ -795,11 +795,11 @@ Define a custom Featured Image size below (default is 100 by 100):
 	
 ?>
 
-<input type="text" id="ifeature[if_featured_image_height]" name="ifeature[if_featured_image_height]"  value="<?php echo $featureheight ;?>" style="width: 300px;"> - Height
+<input type="text" id="ifeature[if_featured_image_height]" name="ifeature[if_featured_image_height]"  value="<?php echo $featureheight ;?>" style="width: 300px;"> - <?php printf( __( 'Height', 'ifeature' )); ?>
 
 <br /><br />
 
-<input type="text" id="ifeature[if_featured_image_width]" name="ifeature[if_featured_image_width]"  value="<?php echo $featurewidth ;?>" style="width: 300px;"> - Width
+<input type="text" id="ifeature[if_featured_image_width]" name="ifeature[if_featured_image_width]"  value="<?php echo $featurewidth ;?>" style="width: 300px;"> - <?php printf( __( 'Width', 'ifeature' )); ?>
 
 </td>
 </tr> 
@@ -819,7 +819,7 @@ case 'upload':
 
 <tr>
 
-<td width="15%" rowspan="2" valign="middle"><strong>Custom Logo</strong>
+<td width="15%" rowspan="2" valign="middle"><strong><?php printf( __(' Custom Logo' , 'ifeature' )); ?></strong>
 
 
  
@@ -842,7 +842,7 @@ case 'upload':
 
     
     <br />
-    <small>Upload a logo image to use</small>
+    <small><?php printf( __( 'Upload a logo image to use', 'ifeature' )); ?></small>
 
 
 <?php
@@ -867,7 +867,7 @@ case 'upload2':
 
 <tr>
 
-<td width="15%" rowspan="2" valign="middle"><strong>Custom Favicon</strong>
+<td width="15%" rowspan="2" valign="middle"><strong><?php printf( __( 'Custom Favicon', 'ifeature' )); ?></strong>
 
 
  
@@ -890,7 +890,7 @@ case 'upload2':
 
     
     <br />
-    <small>Upload a favicon image to use</small>
+    <small><?php printf( __( 'Upload a favicon image to use', 'ifeature' )); ?></small>
 
 
 <?php
@@ -918,7 +918,7 @@ case 'facebook':
     <td width="85%"><input style="width:300px;" name="<?php echo 'ifeature['.$value['id'].']'; ?>" id="<?php echo 'if['.$value['id'].']'; ?>" type="<?php echo $value['type']; ?>" value="<?php if (  $options[$value['id']]  != "") { echo esc_attr($options[$value['id']]) ; } else { echo esc_attr($value['std']) ; } ?>" />
     
     <br /><br />
-    <input type="checkbox" id="ifeature[if_hide_facebook]" name="ifeature[if_hide_facebook]" value="1" <?php checked( '1', $options['if_hide_facebook'] ); ?>> - Check this box to hide the Facebook icon. 
+    <input type="checkbox" id="ifeature[if_hide_facebook]" name="ifeature[if_hide_facebook]" value="1" <?php checked( '1', $options['if_hide_facebook'] ); ?>> - <?php printf( __( 'Check this box to hide the Facebook icon.', 'ifeature' )); ?>
     
     </td>
 
@@ -943,7 +943,8 @@ case 'twitter':
     <td width="85%"><input style="width:300px;" name="<?php echo 'ifeature['.$value['id'].']'; ?>" id="<?php echo 'if['.$value['id'].']'; ?>" type="<?php echo $value['type']; ?>" value="<?php if (  $options[$value['id']]  != "") { echo esc_attr($options[$value['id']]) ; } else { echo esc_attr($value['std']) ; } ?>" />
     
     <br /><br />
-    <input type="checkbox" id="ifeature[if_hide_twitter]" name="ifeature[if_hide_twitter]" value="1" <?php checked( '1', $options['if_hide_twitter'] ); ?>> - Check this box to hide the Twitter icon. 
+    <input type="checkbox" id="ifeature[if_hide_twitter]" name="ifeature[if_hide_twitter]" value="1" <?php checked( '1', $options['if_hide_twitter'] ); ?>> - <?php printf( __( 'Check this box to hide the Twitter icon.', 'ifeature' )); ?>
+
     
     </td>
 
@@ -967,7 +968,7 @@ case 'gplus':
     <td width="85%"><input style="width:300px;" name="<?php echo 'ifeature['.$value['id'].']'; ?>" id="<?php echo 'if['.$value['id'].']'; ?>" type="<?php echo $value['type']; ?>" value="<?php if (  $options[$value['id']]  != "") { echo esc_attr($options[$value['id']]) ; } else { echo esc_attr($value['std']) ; } ?>" />
     
     <br /><br />
-    <input type="checkbox" id="ifeature[if_hide_gplus]" name="ifeature[if_hide_gplus]" value="1" <?php checked( '1', $options['if_hide_gplus'] ); ?>> - Check this box to hide the Google + icon. 
+    <input type="checkbox" id="ifeature[if_hide_gplus]" name="ifeature[if_hide_gplus]" value="1" <?php checked( '1', $options['if_hide_gplus'] ); ?>> - <?php printf( __( 'Check this box to hide the Google + icon.', 'ifeature' )); ?> 
     
     </td>
 
@@ -991,7 +992,7 @@ case 'flickr':
     <td width="85%"><input style="width:300px;" name="<?php echo 'ifeature['.$value['id'].']'; ?>" id="<?php echo 'if['.$value['id'].']'; ?>" type="<?php echo $value['type']; ?>" value="<?php if (  $options[$value['id']]  != "") { echo esc_attr($options[$value['id']]) ; } else { echo esc_attr($value['std']) ; } ?>" />
     
     <br /><br />
-    <input type="checkbox" id="ifeature[if_hide_flickr]" name="ifeature[if_hide_flickr]" value="1" <?php checked( '1', $options['if_hide_flickr'] ); ?>> - Check this box to hide the Flickr icon. 
+    <input type="checkbox" id="ifeature[if_hide_flickr]" name="ifeature[if_hide_flickr]" value="1" <?php checked( '1', $options['if_hide_flickr'] ); ?>> - <?php printf( __( 'Check this box to hide the Flickr icon.', 'ifeature' )); ?> 
     
     </td>
 
@@ -1017,7 +1018,7 @@ case 'linkedin':
     <td width="85%"><input style="width:300px;" name="<?php echo 'ifeature['.$value['id'].']'; ?>" id="<?php echo 'if['.$value['id'].']'; ?>" type="<?php echo $value['type']; ?>" value="<?php if (  $options[$value['id']]  != "") { echo esc_attr($options[$value['id']]) ; } else { echo esc_attr($value['std']) ; } ?>" />
     
     <br /><br />
-    <input type="checkbox" id="ifeature[if_hide_linkedin]" name="ifeature[if_hide_linkedin]" value="1" <?php checked( '1', $options['if_hide_linkedin'] ); ?>> - Check this box to hide the LinkedIn icon. 
+    <input type="checkbox" id="ifeature[if_hide_linkedin]" name="ifeature[if_hide_linkedin]" value="1" <?php checked( '1', $options['if_hide_linkedin'] ); ?>> - <?php printf( __( 'Check this box to hide the LinkedIn icon.', 'ifeature' )); ?> 
     
     </td>
 
@@ -1041,7 +1042,7 @@ case 'youtube':
     <td width="85%"><input style="width:300px;" name="<?php echo 'ifeature['.$value['id'].']'; ?>" id="<?php echo 'if['.$value['id'].']'; ?>" type="<?php echo $value['type']; ?>" value="<?php if (  $options[$value['id']]  != "") { echo esc_attr($options[$value['id']]) ; } else { echo esc_attr($value['std']) ; } ?>" />
     
     <br /><br />
-    <input type="checkbox" id="ifeature[if_hide_youtube]" name="ifeature[if_hide_youtube]" value="1" <?php checked( '1', $options['if_hide_youtube'] ); ?>> - Check this box to hide the YouTube icon. 
+    <input type="checkbox" id="ifeature[if_hide_youtube]" name="ifeature[if_hide_youtube]" value="1" <?php checked( '1', $options['if_hide_youtube'] ); ?>> - <?php printf( __( 'Check this box to hide the YouTube icon.', 'ifeature' )); ?>  
     
     </td>
 
@@ -1065,7 +1066,7 @@ case 'googlemaps':
     <td width="85%"><input style="width:300px;" name="<?php echo 'ifeature['.$value['id'].']'; ?>" id="<?php echo 'if['.$value['id'].']'; ?>" type="<?php echo $value['type']; ?>" value="<?php if (  $options[$value['id']]  != "") { echo esc_attr($options[$value['id']]) ; } else { echo esc_attr($value['std']) ; } ?>" />
     
     <br /><br />
-    <input type="checkbox" id="ifeature[if_hide_googlemaps]" name="ifeature[if_hide_googlemaps]" value="1" <?php checked( '1', $options['if_hide_googlemaps'] ); ?>> - Check this box to hide the Google Maps icon. 
+    <input type="checkbox" id="ifeature[if_hide_googlemaps]" name="ifeature[if_hide_googlemaps]" value="1" <?php checked( '1', $options['if_hide_googlemaps'] ); ?>> - <?php printf( __( 'Check this box to hide the Google Maps icon. ', 'ifeature' )); ?> 
     
     </td>
 
@@ -1089,7 +1090,7 @@ case 'email':
     <td width="85%"><input style="width:300px;" name="<?php echo 'ifeature['.$value['id'].']'; ?>" id="<?php echo 'if['.$value['id'].']'; ?>" type="<?php echo $value['type']; ?>" value="<?php if (  $options[$value['id']]  != "") { echo esc_attr($options[$value['id']]) ; } else { echo esc_attr($value['std']) ; } ?>" />
     
     <br /><br />
-    <input type="checkbox" id="ifeature[if_hide_email]" name="ifeature[if_hide_email]" value="1" <?php checked( '1', $options['if_hide_email'] ); ?>> - Check this box to hide the Email icon. 
+    <input type="checkbox" id="ifeature[if_hide_email]" name="ifeature[if_hide_email]" value="1" <?php checked( '1', $options['if_hide_email'] ); ?>> -  <?php printf( __( 'Check this box to hide the Email icon. ', 'ifeature' )); ?>
     
     </td>
 
@@ -1112,7 +1113,7 @@ case 'rss':
     <td width="85%"><input style="width:300px;" name="<?php echo 'ifeature['.$value['id'].']'; ?>" id="<?php echo 'if['.$value['id'].']'; ?>" type="<?php echo $value['type']; ?>" value="<?php if (  $options[$value['id']]  != "") { echo esc_attr($options[$value['id']]) ; } else { echo esc_attr($value['std']) ; } ?>" />
     
     <br /><br />
-    <input type="checkbox" id="ifeature[if_hide_rss]" name="ifeature[if_hide_rss]" value="1" <?php checked( '1', $options['if_hide_rss'] ); ?>> - Check this box to hide the RSS icon. 
+    <input type="checkbox" id="ifeature[if_hide_rss]" name="ifeature[if_hide_rss]" value="1" <?php checked( '1', $options['if_hide_rss'] ); ?>> - <?php printf( __( 'Check this box to hide the RSS icon.', 'ifeature' )); ?>
     
     </td>
 
@@ -1241,7 +1242,7 @@ case "checkbox":
 <p class="submit">
 <input name="reset" type="submit" value="Reset" />
 <input type="hidden" name="action" value="reset" />
-&nbsp;&nbsp;&nbsp;<small>WARNING THIS RESTORES ALL DEFAULTS</small>
+&nbsp;&nbsp;&nbsp;<small><?php printf( __( 'WARNING THIS RESTORES ALL DEFAULTS', 'ifeature' )); ?></small>
 </p>
 </form>
 	</div>

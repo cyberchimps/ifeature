@@ -71,7 +71,7 @@
 
 				<div class="comments">
 					<?php if ($comments != '1'):?>
-						<?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
+						<?php comments_popup_link( __('No Comments &#187;', 'ifeature' ), __('1 Comment &#187;', 'ifeature' ), __('% Comments &#187;' , 'ifeature' )); ?>
 					<?php endif;?>
 				</div><!--end comments-->	
 				</div><!--end postmetadata-->

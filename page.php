@@ -54,7 +54,7 @@
 
 					</div><!--end entry-->
 
-				<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
+				<?php edit_post_link ( __( 'Edit this entry.' , 'ifeature' ) , '<p>', '</p>'); ?>
 
 				</div><!--end post-->
 				

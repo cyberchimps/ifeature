@@ -12,6 +12,15 @@ $options = get_option('ifeature');
 
 /* Begin custom excerpt functions. */	
 
+/* Localization */
+	    
+	load_theme_textdomain( 'ifeature', TEMPLATEPATH . '/languages' );
+
+	    $locale = get_locale();
+	    $locale_file = TEMPLATEPATH . "/languages/$locale.php";
+	    if ( is_readable( $locale_file ) )
+		    require_once( $locale_file );
+
 /* Begin breadcrumb function. */	
 
 function ifeature_breadcrumbs() {

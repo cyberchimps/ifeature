@@ -21,32 +21,32 @@ $options = get_option('ifeature') ;
     	<?php if (dynamic_sidebar("Footer")) : else : ?>
 		
 <div class="footer-widgets">
-			<div class="footer-widget-title">Recent Posts</div>
+			<div class="footer-widget-title"><?php printf( __( 'Recent Posts', 'ifeature' )); ?></div>
 			<ul>
 				<?php wp_get_archives('type=postbypost&limit=4'); ?>
 			</ul>
 		</div>
 		
 		<div class="footer-widgets">
-			<div class="footer-widget-title">Archives</div>
+			<div class="footer-widget-title"><?php printf( __( 'Archives', 'ifeature' )); ?></div>
 			<ul>
 				<?php wp_get_archives('type=monthly&limit=16'); ?>
 			</ul>
 		</div>
 
 		<div class="footer-widgets">
-			<div class="footer-widget-title">Links</div>
+			<div class="footer-widget-title"><?php printf( __( 'Links', 'ifeature' )); ?></div>
 			<ul>
 				<?php wp_list_bookmarks('categorize=0&title_li='); ?>
 			</ul>
 		</div>
 
 		<div class="footer-widgets">
-			<div class="footer-widget-title">WordPress</div>
+			<div class="footer-widget-title"><?php printf( __( 'WordPress', 'ifeature' )); ?></div>
 			<ul>
     		<?php wp_register(); ?>
     		<li><?php wp_loginout(); ?></li>
-    		<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress</a></li>
+    		<li><a href="<?php echo esc_url( __('http://wordpress.org/', 'ifeature' )); ?>" title="<?php esc_attr_e('Powered by WordPress, state-of-the-art semantic personal publishing platform.', 'ifeature'); ?>"> <?php printf( __('WordPress', 'ifeature' )); ?></a></li>
     		<?php wp_meta(); ?>
     		</ul>
 		</div>

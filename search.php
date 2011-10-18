@@ -20,7 +20,7 @@ get_header(); ?>
 
 	<?php if (have_posts()) : ?>
 
-		<h2><font size="5"> Search Results For: <?php echo get_search_query(); ?></font></h2><br />
+		<h2><font size="5"> <?php printf( __(' Search Results For:', 'ifeature' )); ?> <?php echo get_search_query(); ?></font></h2><br />
 
 
 		<?php while (have_posts()) : the_post(); ?>
@@ -47,7 +47,7 @@ get_header(); ?>
 
 	<?php else : ?>
 
-		<h2>No posts found.</h2>
+		<h2><?php printf( __( 'No posts found.' 'ifeature' )) ; ?></h2>
 
 	<?php endif; ?>
 		</div><!--end content_padding-->
