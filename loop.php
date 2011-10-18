@@ -41,8 +41,9 @@
 					 ?>
 				</div><!--end entry-->
 				
-			<?php edit_post_link('Edit', '<p>', '</p>'); ?>	
 			<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>		
+			<?php edit_post_link ( __( 'Edit this entry.' , 'ifeature' ) , '<p>', '</p>'); ?>
+			
 			<?php if ($showgplus == "1"):?>
 				<div class="gplusone" >	
 					<g:plusone size="standard" count="true"></g:plusone>
