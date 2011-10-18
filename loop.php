@@ -41,7 +41,7 @@
 					 ?>
 				</div><!--end entry-->
 				
-			<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>		
+			<?php wp_link_pages(array('before' => __('Pages:', 'ifeature' ), 'next_or_number' => 'number')); ?>		
 			<?php edit_post_link ( __( 'Edit this entry.' , 'ifeature' ) , '<p>', '</p>'); ?>
 			
 			<?php if ($showgplus == "1"):?>
@@ -61,7 +61,7 @@
 			<!--end fb-->
 				<div class="tags">
 					<?php if ($tags != '1'):?>
-						<?php the_tags('Tags: ', ', ', '<br />'); ?>
+						<?php the_tags( __( 'Tags:', 'ifeature' ), ', ', '<br />'); ?>
 					<?php endif;?>
 				</div><!--end tags-->	
 

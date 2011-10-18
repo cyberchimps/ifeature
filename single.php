@@ -34,7 +34,7 @@ get_header(); ?>
 								<?php the_content(); ?>
 							</div><!--end entry-->
 							<div style=clear:both;></div>
-							<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
+							<?php wp_link_pages(array('before' => __('Pages:', 'ifeature' ), 'next_or_number' => 'number')); ?>	
 						<?php edit_post_link ( __( 'Edit this entry.' , 'ifeature' ) , '<p>', '</p>'); ?>
 						
 							<?php if ($showfblike == "1" ):?>
@@ -45,7 +45,7 @@ get_header(); ?>
 							<!--end fb-->
 						
 							<div class="tags">
-								<?php the_tags('Tags: ', ', ', '<br />'); ?>
+								<?php the_tags( __( 'Tags:', 'ifeature' ), ', ', '<br />'); ?>
 							</div><!--end tags-->
 
 							<div class="postmetadata">
