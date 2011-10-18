@@ -401,13 +401,14 @@ function theme_options_do_page() {
 	
 	<div class="menu">
 	<ul>
-		<li><a href="<?php esc_url( 'http://cyberchimps.com/support' ); ?>" target="_blank"><?php printf( __( 'Support', 'ifeature' )); ?></a></li>
-		<li><a href="<?php esc_url( 'http://cyberchimps.com/ifeature-free/docs/' ); ?>"><?php printf( __( 'Documentation', 'ifeature' )); ?></a></li>
-		<li><a href="<?php esc_url( 'http://cyberchimps.com/forum/' ); ?>" target="_blank"><?php printf( __( 'Forum', 'ifeature' )); ?></a></li>
-		<li><a href="<?php esc_url( 'http://twitter.com/#!/cyberchimps' ); ?>" target="_blank"><?php printf( __( 'Twitter', 'ifeature' ));?></a></li>
-		<li><a href="<?php esc_url( 'http://facebook.com/cyberchimps/' ); ?>" target="_blank"><?php printf( __( 'Facebook', 'ifeature' ));?></a></li>
-		<li><a href="<?php esc_url( 'http://cyberchimps.com/store/' ); ?>" target="_blank"><?php printf( __( 'CyberChimps Store', 'ifeature' )); ?></a></li>
-		<li><a href="<?php esc_url( 'http://cyberchimpspro.com/' ); ?>" target="_blank"><?php printf( __( 'CyberChimps Pro', 'ifeature' )); ?></a></li>
+		<li><a href="http://cyberchimps.com/support" target="_blank"><?php printf( __( 'Support', 'ifeature' )); ?></a></li>
+		<li><a href="http://cyberchimps.com/ifeature-free/docs" target="_blank"> <?php printf( __( 'Documentation', 'ifeature' )); ?></a></li>
+		<li><a href="http://cyberchimps.com/forum/" target="_blank"><?php printf( __( 'Forum', 'ifeature' )); ?></a></li>
+		<li><a href="http://twitter.com/#!/cyberchimps" target="_blank"><?php printf( __( 'Twitter', 'ifeature' ));?></a></li>
+		<li><a href="http://facebook.com/cyberchimps/" target="_blank"><?php printf( __( 'Facebook', 'ifeature' ));?></a></li>
+		<li><a href="http://cyberchimps.com/store/" target="_blank"><?php printf( __( 'CyberChimps Store', 'ifeature' )); ?></a></li>
+		<li><a href="http://cyberchimpspro.com/" target="_blank"><?php printf( __( 'CyberChimps Pro', 'ifeature' )); ?></a></li>
+		
 		
 	</ul>
 	</div>
@@ -472,7 +473,7 @@ case 'general_faq':
 <tr>
 
     <td width="15%" rowspan="2" valign="middle"><label for="<?php echo $value['id']; ?>"><strong><?php echo $value['name']; ?></strong><br /><small><?php echo $value['desc']; ?></small></label>  </td>
-    <td width="85%"><?php printf( __( 'Read the', 'ifeature' )); ?> <a href="<?php esc_url( 'http://cyberchimps.com/question/general-settings-tab/' ); ?>" target="_blank"><?php printf( __( 'General Options Tab FAQ', 'ifeature' )); ?></a></td>
+    <td width="85%"><?php printf( __( 'Read the', 'ifeature' )); ?> <a href="http://cyberchimps.com/question/general-settings-tab/" target="_blank"><?php printf( __( 'General Options Tab FAQ', 'ifeature' )); ?></a></td>
 
   </tr>
  
@@ -490,7 +491,7 @@ case 'design_faq':
 <tr>
 
     <td width="15%" rowspan="2" valign="middle"><label for="<?php echo $value['id']; ?>"><strong><?php echo $value['name']; ?></strong><br /><small><?php echo $value['desc']; ?></small></label>  </td>
-    <td width="85%"><?php printf( __( 'Read the', 'ifeature' )); ?> <a href="<?php esc_url( 'http://cyberchimps.com/question/design-settings-tab/', 'ifeature' ); ?>" target="_blank"><?php printf( __( 'Design Options Tab FAQ', 'ifeature' )); ?></a></td>
+    <td width="85%"><?php printf( __( 'Read the', 'ifeature' )); ?> <a href="http://cyberchimps.com/question/design-settings-tab/" target="_blank"><?php printf( __( 'Design Options Tab FAQ', 'ifeature' )); ?></a></td>
 
   </tr>
  
@@ -508,7 +509,7 @@ case 'social_faq':
 <tr>
 
     <td width="15%" rowspan="2" valign="middle"><label for="<?php echo $value['id']; ?>"><strong><?php echo $value['name']; ?></strong><br /><small><?php echo $value['desc']; ?></small></label>  </td>
-    <td width="85%"><?php printf( __( 'Read the', 'ifeature' )); ?> <a href="<?php esc_url( 'http://cyberchimps.com/question/social-settings-tab/', 'ifeature' ); ?>" target="_blank"><?php printf( __( 'Social Options Tab FAQ', 'ifeature' )); ?></a></td>
+    <td width="85%"><?php printf( __( 'Read the', 'ifeature' )); ?> <a href="http://cyberchimps.com/question/social-settings-tab/" target="_blank"><?php printf( __( 'Social Options Tab FAQ', 'ifeature' )); ?></a></td>
 
   </tr>
  
@@ -527,7 +528,7 @@ case 'blog_faq':
 <tr>
 
     <td width="15%" rowspan="2" valign="middle"><label for="<?php echo $value['id']; ?>"><strong><?php echo $value['name']; ?></strong><br /><small><?php echo $value['desc']; ?></small></label>  </td>
-    <td width="85%"><?php printf( __( 'Read the', 'ifeature' )); ?> <a href="<?php esc_url( 'http://cyberchimps.com/question/blog-settings-tab/' ); ?>" target="_blank"><?php printf( __( 'Blog Options Tab FAQ', 'ifeature' )); ?></a></td>
+    <td width="85%"><?php printf( __( 'Read the', 'ifeature' )); ?> <a href="http://cyberchimps.com/question/blog-settings-tab/" target="_blank"><?php printf( __( 'Blog Options Tab FAQ', 'ifeature' )); ?></a></td>
 
   </tr>
  
@@ -546,7 +547,7 @@ case 'slider_faq':
 <tr>
 
     <td width="15%" rowspan="2" valign="middle"><label for="<?php echo $value['id']; ?>"><strong><?php echo $value['name']; ?></strong><br /><small><?php echo $value['desc']; ?></small></label>  </td>
-    <td width="85%"><?php printf( __( 'Read the', 'ifeature' )); ?>  <a href="<?php esc_url( 'http://cyberchimps.com/question/ifeature-slider-settings-tab/' ); ?>" target="_blank"><?php printf( __( 'Slider Options Tab FAQ', 'ifeature' )); ?></a></td>
+    <td width="85%"><?php printf( __( 'Read the', 'ifeature' )); ?>  <a href="http://cyberchimps.com/question/ifeature-slider-settings-tab/" target="_blank"><?php printf( __( 'Slider Options Tab FAQ', 'ifeature' )); ?></a></td>
 
   </tr>
  
@@ -573,7 +574,7 @@ case 'design_ad':
  
 <tr>
 
-</tr><tr><td colspan="2" ><a href="<?php esc_url( 'http://cyberchimps.com/ifeaturepro/' ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() ;?>/images/options/upgradedesign.jpg" height="275" width="550" /></td></tr><tr><td colspan="2">&nbsp;</td></tr>
+</tr><tr><td colspan="2" ><a href="http://cyberchimps.com/ifeaturepro/" target="_blank"><img src="<?php echo get_template_directory_uri() ;?>/images/options/upgradedesign.jpg" height="275" width="550" /></td></tr><tr><td colspan="2">&nbsp;</td></tr>
 
 
 <?php
