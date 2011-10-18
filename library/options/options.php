@@ -418,8 +418,8 @@ function theme_options_do_page() {
         <li><a href="#if-tab1"><span><?php printf( __( 'General', 'ifeature' )); ?></span></a></li>
         <li><a href="#if-tab2"><span><?php printf( __( 'Design' ,'ifeature' )); ?></span></a></li>
         <li><a href="#if-tab3"><span><?php printf( __( 'Blog', 'ifeature' )); ?></span></a></li>
-        <li><a href="#if-tab4"><span><?php printf( __( 'iFeature Slider' )); ?></span></a></li>
-        <li><a href="#if-tab5"><span><?php printf( __( 'Social' )); ?></span></a></li>        
+        <li><a href="#if-tab4"><span><?php printf( __( 'iFeature Slider', 'ifeature' )); ?></span></a></li>
+        <li><a href="#if-tab5"><span><?php printf( __( 'Social', 'ifeature' )); ?></span></a></li>        
       
     
     </ul>

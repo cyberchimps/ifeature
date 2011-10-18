@@ -42,7 +42,7 @@ msgstr "Posts Tagged &#39;"
 #: archive.php:29
 #@ ifeature
 msgid "&#8217;:"
-msgstr ""
+msgstr "&#8217;:"
 
 #: archive.php:32
 #: archive.php:35
