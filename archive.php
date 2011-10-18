@@ -65,7 +65,7 @@ get_header(); ?>
 							<div class="postmetadata">
 										<?php get_template_part('share', 'index' ); ?>
 								<div class="comments">
-									<?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
+									<?php comments_popup_link( __('No Comments &#187;', 'ifeature' ), __('1 Comment &#187;', 'ifeature' ), __('% Comments &#187;' , 'ifeature' )); ?>
 								</div><!--end comments-->	
 							</div><!--end postmetadata-->
 							
@@ -78,7 +78,7 @@ get_header(); ?>
 			
 	<?php else : ?>
 
-		<h2>Nothing found</h2>
+		<h2><?php printf( __( 'Not Found', 'ifeature' )); ?></h2>
 
 	<?php endif; ?>
 		</div><!--end content_padding-->
