@@ -4,6 +4,7 @@ iFeature Changelog
 
 Version 2.1 (10-18-11)
 -Added localization support, includes ifeature.pot as well as Spanish and French .po/.mo files. 
+-Changed default font family to Arial, Helvetica, serif. 
 -URLs now sanitized using esc_url when necessary. 
 -Removed outdated get_bloginfo('url') call from breadcrumb function. 
 -Fixed several broken links in theme options page. 

@@ -489,150 +489,154 @@ msgstr "Custom RSS Link:"
 msgid "Enter Feedburner URL, or leave blank for default RSS feed."
 msgstr "Introduzca Feedburner URL, o dejar en blanco por incumplimiento feed RSS."
 
-#: library/options/options.php:676
+#: library/options/options.php:677
 #@ ifeature
 msgid "Show Excerpts"
 msgstr "Extractos mostrar"
 
-#: library/options/options.php:687
+#: library/options/options.php:688
 #@ ifeature
 msgid "Excerpt Link Text"
 msgstr "Extracto Link Text"
 
-#: library/options/options.php:698
+#: library/options/options.php:699
 #@ ifeature
 msgid "Excerpt Character Length"
 msgstr "Extracto de caracteres de longitud"
 
-#: library/options/options.php:722
+#: library/options/options.php:723
 #@ ifeature
 msgid "Author"
 msgstr "autor"
 
-#: library/options/options.php:725
+#: library/options/options.php:726
 #: sidebar.php:49
 #@ ifeature
 msgid "Categories"
 msgstr "categorías"
 
-#: library/options/options.php:728
+#: library/options/options.php:729
 #@ ifeature
 msgid "Date"
 msgstr "fecha"
 
-#: library/options/options.php:731
+#: library/options/options.php:732
 #@ ifeature
 msgid "Comments"
 msgstr "comentarios"
 
-#: library/options/options.php:734
+#: library/options/options.php:735
 #@ ifeature
 msgid "Sharing"
 msgstr "compartir"
 
-#: library/options/options.php:737
+#: library/options/options.php:738
 #@ default
 msgid "Tagsifeature"
 msgstr ""
 
-#: library/options/options.php:773
+#: library/options/options.php:774
 #@ ifeature
 msgid "Define a custom Featured Image size below (default is 100 by 100):"
 msgstr "Definir un tamaño de destacados imagen (por defecto es 100 por 100):"
 
-#: library/options/options.php:797
+#: library/options/options.php:798
 #@ ifeature
 msgid "Height"
 msgstr "altura"
 
-#: library/options/options.php:801
+#: library/options/options.php:802
 #@ ifeature
 msgid "Width"
 msgstr "ancho"
 
-#: library/options/options.php:821
+#: library/options/options.php:822
 #@ ifeature
 msgid " Custom Logo"
 msgstr "Logotipo personalizado"
 
-#: library/options/options.php:844
+#: library/options/options.php:845
 #@ ifeature
 msgid "Upload a logo image to use"
 msgstr "Subir una imagen del logotipo de usar"
 
-#: library/options/options.php:869
+#: library/options/options.php:102
+#: library/options/options.php:870
 #@ ifeature
 msgid "Custom Favicon"
 msgstr "Favicon personalizado"
 
-#: library/options/options.php:892
+#: library/options/options.php:893
 #@ ifeature
 msgid "Upload a favicon image to use"
 msgstr "Subir una imagen favicon para el uso"
 
-#: library/options/options.php:920
+#: library/options/options.php:921
 #@ ifeature
 msgid "Check this box to hide the Facebook icon."
 msgstr "Marque esta casilla para ocultar el icono de Facebook."
 
-#: library/options/options.php:945
+#: library/options/options.php:946
 #@ ifeature
 msgid "Check this box to hide the Twitter icon."
 msgstr "Marque esta casilla para ocultar el icono de Twitter."
 
-#: library/options/options.php:970
+#: library/options/options.php:971
 #@ ifeature
 msgid "Check this box to hide the Google + icon."
 msgstr "Marque esta casilla para ocultar el icono de Google +."
 
-#: library/options/options.php:994
+#: library/options/options.php:995
 #@ ifeature
 msgid "Check this box to hide the Flickr icon."
 msgstr "Marque esta casilla para ocultar el icono de Flickr."
 
-#: library/options/options.php:1020
+#: library/options/options.php:1021
 #@ ifeature
 msgid "Check this box to hide the LinkedIn icon."
 msgstr "Marque esta casilla para ocultar el icono de LinkedIn."
 
-#: library/options/options.php:1044
+#: library/options/options.php:1045
 #@ ifeature
 msgid "Check this box to hide the YouTube icon."
 msgstr "Marque esta casilla para ocultar el icono de YouTube."
 
-#: library/options/options.php:1068
+#: library/options/options.php:1069
 #@ ifeature
 msgid "Check this box to hide the Google Maps icon. "
 msgstr "Marque esta casilla para ocultar el icono de Google Maps."
 
-#: library/options/options.php:1092
+#: library/options/options.php:1093
 #@ ifeature
 msgid "Check this box to hide the Email icon. "
 msgstr "Marque esta casilla para ocultar el icono de correo electrónico."
 
-#: library/options/options.php:1115
+#: library/options/options.php:1116
 #@ ifeature
 msgid "Check this box to hide the RSS icon."
 msgstr "Marque esta casilla para ocultar el icono de RSS."
 
-#: library/options/options.php:1244
+#: library/options/options.php:1245
 #@ ifeature
 msgid "WARNING THIS RESTORES ALL DEFAULTS"
 msgstr "ADVERTENCIA Esto restaura todos los valores predeterminados"
 
-#: loop.php:74
+#: archive.php:68
+#: loop.php:75
 #: single.php:54
 #@ ifeature
 msgid "No Comments &#187;"
 msgstr "No hay comentarios &#187;"
 
-#: loop.php:74
+#: archive.php:68
+#: loop.php:75
 #: single.php:54
 #@ ifeature
 msgid "1 Comment &#187;"
 msgstr "1 comentario &#187;"
 
-#: loop.php:74
+#: archive.php:68
+#: loop.php:75
 #: single.php:54
 #@ ifeature
 msgid "% Comments &#187;"
@@ -653,6 +657,7 @@ msgstr "en"
 msgid "on"
 msgstr "en"
 
+#: loop.php:45
 #: page.php:57
 #: single.php:38
 #@ ifeature
@@ -859,62 +864,61 @@ msgstr "Neuro Pro es la nueva generación tema para WordPress publicado bajo la 
 msgid "Buy Neuro Pro"
 msgstr "Comprar Neuro Pro"
 
-#: library/options/options.php:418
+#: library/options/options.php:419
 #@ ifeature
 msgid "General"
 msgstr "General"
 
-#: library/options/options.php:419
+#: library/options/options.php:420
 #@ ifeature
 msgid "Design"
 msgstr "Diseño"
 
-#: library/options/options.php:420
+#: library/options/options.php:421
 #@ ifeature
 msgid "Blog"
 msgstr "Blog"
 
-#: library/options/options.php:421
+#: library/options/options.php:422
 #@ ifeature
 msgid "iFeature Slider"
 msgstr "iFeature Slider"
 
-#: library/options/options.php:422
+#: library/options/options.php:423
 #@ ifeature
 msgid "Social"
 msgstr "Social"
 
-#: library/options/options.php:475
-#: library/options/options.php:493
-#: library/options/options.php:511
-#: library/options/options.php:530
-#: library/options/options.php:549
+#: library/options/options.php:476
+#: library/options/options.php:494
+#: library/options/options.php:512
+#: library/options/options.php:531
+#: library/options/options.php:550
 #@ ifeature
-#@ ifeture
 msgid "Read the"
 msgstr "Lea el"
 
-#: library/options/options.php:475
+#: library/options/options.php:476
 #@ ifeature
 msgid "General Options Tab FAQ"
 msgstr "Opciones Ficha General FAQ"
 
-#: library/options/options.php:493
+#: library/options/options.php:494
 #@ ifeature
 msgid "Design Options Tab FAQ"
 msgstr "Opciones de la ficha Diseño FAQ"
 
-#: library/options/options.php:511
+#: library/options/options.php:512
 #@ ifeature
 msgid "Social Options Tab FAQ"
 msgstr "Opciones de la ficha social FAQ"
 
-#: library/options/options.php:530
+#: library/options/options.php:531
 #@ ifeature
 msgid "Blog Options Tab FAQ"
 msgstr "Opciones de la ficha de blog FAQ"
 
-#: library/options/options.php:549
+#: library/options/options.php:550
 #@ ifeature
 msgid "Slider Options Tab FAQ"
 msgstr "Opciones de control deslizante Tab FAQ"
@@ -938,4 +942,47 @@ msgstr "conectado"
 #@ ifeture
 msgid "to post a comment."
 msgstr ""
+
+#: archive.php:81
+#: index.php:37
+#@ ifeature
+msgid "Not Found"
+msgstr "no se ha encontrado"
+
+#: library/options/options.php:89
+#@ ifeature
+msgid "Logo URL"
+msgstr "URL del logotipo"
+
+#: library/options/options.php:96
+#@ ifeature
+msgid "Header Contact Area"
+msgstr "Cabecera de contacto con el"
+
+#: library/options/options.php:108
+#@ ifeature
+msgid "Disable Breadcrumbs"
+msgstr "desactivar migas"
+
+#: library/options/options.php:114
+#@ ifeature
+msgid "Footer Copyright"
+msgstr "Footer Copyright"
+
+#: library/options/options.php:120
+#@ ifeature
+msgid "Google Analytics Code"
+msgstr "Google Analytics Code"
+
+#: loop.php:44
+#: single.php:37
+#@ ifeature
+msgid "Pages:"
+msgstr "páginas:"
+
+#: loop.php:64
+#: single.php:48
+#@ ifeature
+msgid "Tags:"
+msgstr "Tags:"
 

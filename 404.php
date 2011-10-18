@@ -15,7 +15,7 @@ get_header();
 	<div id="content_left">
 		<div class="content_padding">
 
-	<div class="error"><?php _e('Error 404' , 'ifeature'); ?><br />
+	<div class="error"><?php printf( __('Error 404' , 'ifeature')); ?><br />
 	<center><img src="<?php echo get_template_directory_uri() ;?>/images/confusedchimp.png" height="400" width="400" alt="confused chimp" /></center>
 	
 	</div>
