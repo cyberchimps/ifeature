@@ -116,7 +116,7 @@ msgstr "Propulsé par WordPress, state-of-the-art plateforme de publication pers
 #: functions.php:117
 #@ ifeature
 msgid "Page"
-msgstr ""
+msgstr "Page"
 
 #: header.php:172
 #@ ifeature
@@ -382,7 +382,7 @@ msgstr "(Valeur par défaut est tous)"
 #: library/options/options.php:264
 #@ ifeature
 msgid "Number of Featured Posts:"
-msgstr ""
+msgstr "Nombre de messages en vedette:"
 
 #: library/options/options.php:265
 #@ ifeature
@@ -918,4 +918,24 @@ msgstr "Blog onglet Options FAQ"
 #@ ifeature
 msgid "Slider Options Tab FAQ"
 msgstr "Curseur de l'onglet Options de FAQ"
+
+#: comments.php:12
+#@ default
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: comments.php:57
+#@ ifeature
+msgid "You must be"
+msgstr "Vous devez être"
+
+#: comments.php:57
+#@ ifeature
+msgid "logged in"
+msgstr "connecté"
+
+#: comments.php:57
+#@ ifeture
+msgid "to post a comment."
+msgstr ""
 
