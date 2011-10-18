@@ -34,7 +34,7 @@ $options = get_option('ifeature') ;
 
 		<?php else : ?>
 
-			<h2>Not Found</h2>
+			<h2><?php printf( __( 'Not Found', 'ifeature' )); ?></h2>
 
 		<?php endif; ?>
 		</div> <!--end content_padding-->
