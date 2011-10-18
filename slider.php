@@ -26,10 +26,6 @@
 /* End blog category */
 		
     query_posts('category_name='.$blogcategory.'&showposts=50');
-  
-  
-
-  	
     	
 	    if (have_posts()) :
 	    	$out = "<div id='slider' class='nivoSlider'>"; 

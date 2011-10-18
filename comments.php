@@ -9,7 +9,7 @@
 */
 
 	if ( post_password_required() ) { ?>
-		This post is password protected. Enter the password to view comments.
+		<?php printf( __( 'This post is password protected. Enter the password to view comments.' )); ?>
 	<?php
 		return;
 	}
@@ -54,7 +54,7 @@
 	</div>
 
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
-		<p>You must be <a href="<?php echo wp_login_url( get_permalink() ); ?>">logged in</a> to post a comment.</p>
+		<p><?php printf (__( 'You must be', 'ifeature' )); ?><a href="<?php echo wp_login_url( get_permalink() ); ?>"><?php printf( __( 'logged in', 'ifeature' ), '</a>', __('to post a comment.', 'ifeture' )); ?></p>
 	<?php else : ?>
 	
 	<?php comment_form(); ?>

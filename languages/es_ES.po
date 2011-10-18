@@ -114,9 +114,9 @@ msgid "Powered by WordPress, state-of-the-art semantic personal publishing platf
 msgstr "Desarrollado por WordPress, el estado de la técnica de la plataforma semántica de publicación personal."
 
 #: functions.php:117
-#@ default
+#@ ifeature
 msgid "Page"
-msgstr ""
+msgstr "página"
 
 #: header.php:172
 #@ ifeature
@@ -875,14 +875,14 @@ msgid "Blog"
 msgstr "Blog"
 
 #: library/options/options.php:421
-#@ default
+#@ ifeature
 msgid "iFeature Slider"
-msgstr ""
+msgstr "iFeature Slider"
 
 #: library/options/options.php:422
-#@ default
+#@ ifeature
 msgid "Social"
-msgstr ""
+msgstr "Social"
 
 #: library/options/options.php:475
 #: library/options/options.php:493
@@ -918,4 +918,24 @@ msgstr "Opciones de la ficha de blog FAQ"
 #@ ifeature
 msgid "Slider Options Tab FAQ"
 msgstr "Opciones de control deslizante Tab FAQ"
+
+#: comments.php:12
+#@ default
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: comments.php:57
+#@ ifeature
+msgid "You must be"
+msgstr "Usted debe ser"
+
+#: comments.php:57
+#@ ifeature
+msgid "logged in"
+msgstr "conectado"
+
+#: comments.php:57
+#@ ifeture
+msgid "to post a comment."
+msgstr ""
 
