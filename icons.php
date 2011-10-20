@@ -72,16 +72,16 @@
 		<a href="http://google.com/maps/"><img src="<?php echo get_template_directory_uri(); ?>/images/social/googlemaps.png" height=32 width=32 alt="Google Maps" /></a>
 	<?php endif;?>
 	<?php if ($hideemail != '1' AND $email != ''):?>
-		<a href="mailto:<?php echo esc_url( __( $email, 'ifeature' )); ?> ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/email.png" height=32 width=32 alt="<?php esc_attr_e( 'E-mail', 'ifeature' ); ?>" /></a>
+		<a href="mailto:<?php echo $email ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/email.png" height=32 width=32 alt="<?php esc_attr_e( 'E-mail', 'ifeature' ); ?>" /></a>
 	<?php endif;?>
 		<?php if ($hideemail != '1' AND $email == ''):?>
-		<a href="<?php echo esc_url( __( 'mailto:no@way.com', 'ifeature' )); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/email.png" height=32 width=32 alt="<?php esc_attr_e( 'E-mail', 'ifeature' ); ?>" /></a>
+		<a href="mailto:no@way.com" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/email.png" height=32 width=32 alt="<?php esc_attr_e( 'E-mail', 'ifeature' ); ?>" /></a>
 	<?php endif;?>
 	<?php if ($hiderss != '1' and $rss != '' ):?>
-		<a href="<?php echo esc_url( __($rss, 'ifeature' )); ?> ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/rss.png" height=32 width=32 alt="<?php esc_attr_e( 'RSS', 'ifeature' ); ?>" /></a>
+		<a href="<?php echo esc_url( __($rss, 'ifeature' )); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/rss.png" height=32 width=32 alt="<?php esc_attr_e( 'RSS', 'ifeature' ); ?>" /></a>
 	<?php endif;?>
 	<?php if ($hiderss != '1' and $rss == ''  ):?>
-		<a href="<?php echo esc_url( __(bloginfo('rss2_url'), 'ifeature' )); ?> ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/rss.png" height=32 width=32 alt="<?php esc_attr_e( 'RSS', 'ifeature' ); ?>" /></a>
+		<a href="<?php echo esc_url( __(bloginfo('rss2_url'), 'ifeature' )); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/rss.png" height=32 width=32 alt="<?php esc_attr_e( 'RSS', 'ifeature' ); ?>" /></a>
 	<?php endif;?>
 	
 </div>

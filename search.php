@@ -47,7 +47,7 @@ get_header(); ?>
 
 	<?php else : ?>
 
-		<h2><?php printf( __( 'No posts found.' 'ifeature' )) ; ?></h2>
+		<h2><?php printf( __( 'No posts found.', 'ifeature' )) ; ?></h2>
 
 	<?php endif; ?>
 		</div><!--end content_padding-->
