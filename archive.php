@@ -23,7 +23,7 @@ get_header(); ?>
  			<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 
 			<?php /* If this is a category archive */ if (is_category()) { ?>
-				<h2><font size="5"><?php printf( __( 'Archive for the &#8216;'. 'ifeature' )); ?><?php single_cat_title(); ?><?php printf( __( '&#8217; Category:', 'ifeature' )); ?></font></h2><br />
+				<h2><font size="5"><?php printf( __( 'Archive for the &#8216;', 'ifeature' )); ?><?php single_cat_title(); ?><?php printf( __( '&#8217; Category:', 'ifeature' )); ?></font></h2><br />
 
 			<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
 				<h2><font size="5"><?php printf( __( 'Posts Tagged &#8216;', 'ifeature' )); ?><?php single_tag_title(); ?><?php printf( __( '&#8217;:', 'ifeature' )); ?></font></h2><br />
