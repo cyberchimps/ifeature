@@ -9,6 +9,7 @@ Version 2.1.1 (10-25-11)
 -Fixed missing text domain in comments.php.
 -Fixed breadcrumb syntax error on page.php
 -General HTML elements styling.
+-Fixed broken jQuery call. 
 -Fixed error in recent posts default widget where scheduled posts were displaying. 
 
 Version 2.1 (10-18-11)
