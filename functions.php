@@ -269,7 +269,7 @@ function ifeature_add_scripts() {
 } //end add_our_scripts function
  
 //Add our function to the wp_head. You can also use wp_print_scripts.
-add_action( 'wp_head', 'ifeature_add_scripts',0);
+add_action( 'wp_enqueue_scripts', 'ifeature_add_scripts',0);
 	
 	// Register menu names
 	
