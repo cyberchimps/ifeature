@@ -9,7 +9,7 @@
 */
 
 	if ( post_password_required() ) { ?>
-		<?php printf( __( 'This post is password protected. Enter the password to view comments.' )); ?>
+		<?php printf( __( 'This post is password protected. Enter the password to view comments.', 'ifeature' )); ?>
 	<?php
 		return;
 	}
