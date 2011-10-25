@@ -206,6 +206,12 @@ function ifeature_render_ie_pie() { ?>
 
 add_action('wp_head', 'ifeature_render_ie_pie', 8);
 
+// Load jQuery
+ 	
+if ( !is_admin() ) {
+    wp_enqueue_script('jquery');
+}
+
 // + 1 Button 
 
 function ifeature_plusone(){
@@ -239,29 +245,26 @@ function ifeature_add_nivoslider(){
 add_action('wp_head', 'ifeature_add_nivoslider');
 
 
-	// Register superfish scripts
-	
-function ifeature_add_scripts() {
- 
-    if (!is_admin()) { // Add the scripts, but not to the wp-admin section.
-    // Adjust the below path to where scripts dir is, if you must.
-    $scriptdir = get_template_directory_uri() ."/library/sf/";
- 
-    // Register the Superfish javascript files
-    wp_register_script( 'superfish', $scriptdir.'sf.js', false, '1.4.8');
-    wp_register_script( 'sf-menu', $scriptdir.'sf-menu.js');
-    // Now the superfish CSS
+// Call Superfish
+if ( !is_admin() ) 
+{
+	function ifeature_superfish()
+ 	{  
    
-    //load the scripts and style.
-	wp_enqueue_style('superfish-css');
-    wp_enqueue_script('superfish');
-    wp_enqueue_script('sf-menu');
-    wp_enqueue_script('jquery');
-    } // end the !is_admin function
-} //end add_our_scripts function
+    	// Adjust the below path to where scripts dir is, if you must.
+    	$scriptdir = get_template_directory_uri() ."/library/sf/";
  
-//Add our function to the wp_head. You can also use wp_print_scripts.
-add_action( 'wp_enqueue_scripts', 'ifeature_add_scripts',0);
+    	// Register the Superfish javascript file
+    	wp_register_script( 'superfish', $scriptdir.'sf.js', false, '1.4.8');
+    	wp_register_script( 'sf-menu', $scriptdir.'sf-menu.js');
+   
+   		 //load the scripts.
+    	wp_enqueue_script('superfish');
+    	wp_enqueue_script('sf-menu');
+    	
+  	}
+add_action('wp_enqueue_scripts', 'ifeature_superfish');
+}
 	
 	// Register menu names
 	
