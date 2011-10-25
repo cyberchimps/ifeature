@@ -29,10 +29,14 @@
 		<h2 class="sidebar-widget-title"><?php printf( __( 'Recent Posts', 'ifeature' )); ?></h2>
 		<ul>
 		<?php
+		
+			
 			$args = array( 'numberposts' => '5' );
 			$recent_posts = wp_get_recent_posts( $args );
 			foreach( $recent_posts as $post ){
-					echo '<li><a href="' . get_permalink($post["ID"]) . '" title="Look '.$post["post_title"].'" >' .   $post["post_title"].'</a> </li> ';
+					if ($post["post_status"]=="publish") {
+						echo '<li><a href="' . get_permalink($post["ID"]) . '" title="Look '.$post["post_title"].'" >' .   $post["post_title"].'</a> </li> ';
+					}
 		}
 		?>
 		</ul>
