@@ -222,16 +222,7 @@ function ifeature_plusone(){
 add_action('wp_head', 'ifeature_plusone');
 
 	
-// Load jQuery
-if ( !is_admin() ) 
-{
-  function ifeature_frontend_scripts()
-  {
-    wp_enqueue_script('jquery');
-  }
-  add_action('wp_enqueue_scripts', 'ifeature_frontend_scripts');
 
-}
 // Nivo Slider 
 
 function ifeature_add_nivoslider(){
@@ -265,6 +256,7 @@ function ifeature_add_scripts() {
 	wp_enqueue_style('superfish-css');
     wp_enqueue_script('superfish');
     wp_enqueue_script('sf-menu');
+    wp_enqueue_script('jquery');
     } // end the !is_admin function
 } //end add_our_scripts function
  
