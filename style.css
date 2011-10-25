@@ -22,11 +22,14 @@ body { font-size: 14px;	}
 
 /* Fonts  */
 
-
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 4px;
+	margin-top: 4px;
+}
 
 .error { font-size: 28px; text-align: center;}
 
-p { margin: 0 0 10px 0; }
+p { margin: 5px 0 12px 0; p: line-height: 1.3em;}
 a { color: #717171; text-decoration: none; }
 a:hover { color: #555; }
 
@@ -41,18 +44,34 @@ a img {border: none; }
 
 ul, ol { margin: 0 0 10px 0; }
 
+hr {
+	margin-bottom: 5px;
+}
+
 .entry { }
 .entry a { }
 .entry a:hover { }
 
-pre { }
+tr { }
+
+th { padding-right: 30px; padding-bottom: 10px; }
+
+td {
+border-top: 1px solid #DDD;
+padding: 6px 10px 6px 0;
+}
+
+table {border-bottom: 1px solid #DDD;}
+
 code, tt { }
 
 #crumbs {margin-bottom: 5px;}
 
-dt {font-weight: bold; margin-top: 10px;}
+dt {font-weight: bold; margin-top: 5px; margin-bottom: 5px; margin-left: 26px; }
 
-dd {margin-bottom: 15px; }
+dd {margin-bottom: 15px; margin-left: 26px; }
+
+pre {margin-left: 20px;}
 
 /* Page Layout  */
 
@@ -80,7 +99,7 @@ dd {margin-bottom: 15px; }
 }
 
 #sitename {
-	margin-bottom: 42px;
+	margin-bottom: 40px;
 	padding-top: 1px;
 	margin-top: 10px;
 	width: 600px;
@@ -152,7 +171,9 @@ dd {margin-bottom: 15px; }
 
 input[type=text] { 
 	width: 120px;
+	margin-bottom: 5px;
 }
+
 
 /* Search Bar */
 
@@ -210,13 +231,14 @@ input[type=text] {
 
 .content_padding { padding: 2px 8px 8px 2px; }
 
+fieldset {border: none;}
+
 /* Posts Styling */
 
 .post_container {
 	background-color: #fff;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
-	margin-bottom: 10px;
 	padding: 0px 5px 5px 5px;
 
 }
@@ -252,7 +274,8 @@ ol {
 .posts_title {
 	font-size: 24px;
 	font-weight: bold;
-	margin-bottom: 2px;
+	margin-bottom: 5px;
+	margin-left: 1px;
 }
 
 .post { 
@@ -260,7 +283,7 @@ ol {
 }
 
 .entry {
-	padding-top: 5px;
+	padding-top: 2px;
 	margin-left: 1px;
 
 }
@@ -356,7 +379,8 @@ p {
 blockquote { 
 	background-color: #ccc;
 	margin: 10px;
-	padding: 3px;
+	padding: 10px;
+	font-style: italic;
 }
 
 blockquote p { }
@@ -386,6 +410,7 @@ blockquote p { }
 .comments {
 	float:right;
 	margin-right: 10px;
+	margin-top: 2px;
 }
 
 #comments .navigation {
@@ -586,7 +611,12 @@ ol.commentlist li.thread-odd { }
 
 form { }
 
-textarea { }
+textarea {
+	margin-top: 10px;
+	padding-bottom: 10px; 
+	width: 90%
+	
+ }
 
 @media print {
 
