@@ -227,8 +227,6 @@ function ifeature_plusone(){
 }
 add_action('wp_head', 'ifeature_plusone');
 
-	
-
 // Nivo Slider 
 
 function ifeature_add_nivoslider(){
@@ -243,7 +241,6 @@ function ifeature_add_nivoslider(){
 	echo $script;
 }
 add_action('wp_head', 'ifeature_add_nivoslider');
-
 
 // Call Superfish
 if ( !is_admin() ) 

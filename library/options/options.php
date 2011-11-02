@@ -52,7 +52,7 @@ global $themename, $shortname, $options;
 
 
 $select_font = array(
-	'0' => array('value' =>'Arial','label' => 'Arial'),'1' => array('value' =>'Allan','label' => 'Allan'),'2' => array('value' =>'Alice','label' => 'Alice'),'4' => array('value' =>'Cantarell','label' => 'Cantarell'),'5' => array('value' =>'Courier New','label' => 'Courier New'),'6' => array('value' =>'Georgia','label' => 'Georgia'),'6' => array('value' =>'Lucida Grande','label' => 'Lucida Grande (default)'),'7' => array('value' =>'Tahoma','label' => 'Tahoma'),'8' => array('value' =>'Times New Roman','label' => 'Times New Roman'),'9' => array('value' =>'Ubuntu','label' => 'Ubuntu'),
+	'0' => array('value' =>'Arial','label' => 'Arial (default)'),'1' => array('value' =>'Allan','label' => 'Allan'),'2' => array('value' =>'Alice','label' => 'Alice'),'4' => array('value' =>'Cantarell','label' => 'Cantarell'),'5' => array('value' =>'Courier New','label' => 'Courier New'),'6' => array('value' =>'Georgia','label' => 'Georgia'),'6' => array('value' =>'Lucida Grande','label' => 'Lucida Grande'),'7' => array('value' =>'Tahoma','label' => 'Tahoma'),'8' => array('value' =>'Times New Roman','label' => 'Times New Roman'),'9' => array('value' =>'Ubuntu','label' => 'Ubuntu'),
 
 );
 
