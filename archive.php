@@ -23,16 +23,16 @@ get_header(); ?>
  			<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 
 			<?php /* If this is a category archive */ if (is_category()) { ?>
-				<h2><font size="5"><?php printf( __( 'Archive for the &#8216;', 'ifeature' )); ?><?php single_cat_title(); ?><?php printf( __( '&#8217; Category:', 'ifeature' )); ?></font></h2><br />
+				<h2 class="archivetitle"><font size="5"><?php printf( __( 'Archive for the &#8216;', 'ifeature' )); ?><?php single_cat_title(); ?><?php printf( __( '&#8217; Category:', 'ifeature' )); ?></font></h2><br />
 
 			<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
-				<h2><font size="5"><?php printf( __( 'Posts Tagged &#8216;', 'ifeature' )); ?><?php single_tag_title(); ?><?php printf( __( '&#8217;:', 'ifeature' )); ?></font></h2><br />
+				<h2 class="tagtitle"><font size="5"><?php printf( __( 'Posts Tagged &#8216;', 'ifeature' )); ?><?php single_tag_title(); ?><?php printf( __( '&#8217;:', 'ifeature' )); ?></font></h2><br />
 
 			<?php /* If this is a daily archive */ } elseif (is_day()) { ?>
-				<h2><font size="5"><?php printf( __( 'Archive for:', 'ifeature' )); ?><?php the_time('F jS, Y'); ?>:</font></h2><br />
+				<h2 class="datetitle"><font size="5"><?php printf( __( 'Archive for:', 'ifeature' )); ?><?php the_time('F jS, Y'); ?>:</font></h2><br />
 
 			<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-				<h2><font size="5"><?php printf( __( 'Archive for:', 'ifeature' )); ?><?php the_time('F, Y'); ?>:</font></h2><br />
+				<h2 class="datetitle"><font size="5"><?php printf( __( 'Archive for:', 'ifeature' )); ?><?php the_time('F, Y'); ?>:</font></h2><br />
 
 			<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
 				<h2 class="pagetitle"><font size="5"><?php printf( __( 'Archive for:', 'ifeature' )); ?> <?php the_time('Y'); ?>:</font></h2><br />

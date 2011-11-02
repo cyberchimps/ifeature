@@ -2,8 +2,10 @@ iFeature Changelog
 
 ****************************
 Version 2.1.2 (11-02-11)
--Added Romanian language support.
+-Added Romanian language po and mo files.
 -Removed "default" label from Lucida Grande in font selection dropdown, added it to Arial instead. 
+-Added classes for category, tag and date archive titles and adjusted margin.
+-Adjusted margin on breadcrumb div. 
 
 Version 2.1.1 (10-25-11)
 -Fixed syntax error in search.php

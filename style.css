@@ -65,7 +65,10 @@ table {border-bottom: 1px solid #DDD;}
 
 code, tt { }
 
-#crumbs {margin-bottom: 5px;}
+#crumbs {
+	margin-bottom: 5px;
+	margin-left: 5px;	
+}
 
 dt {font-weight: bold; margin-top: 5px; margin-bottom: 5px; margin-left: 26px; }
 
@@ -216,6 +219,10 @@ input[type=text] {
    
 /* Content */   
 
+.pagetitle, .archivetitle, .datetitle, .tagtitle {
+	margin-left: 5px;
+}
+
 #content_wrap {
 	width: 100%;
 	min-height: 400px;
@@ -248,7 +255,6 @@ fieldset {border: none;}
 	list-style: disc;
 	margin-left: 21px;
 	list-style-position: inside;
-
 }
 
 ol {
@@ -275,7 +281,6 @@ ol {
 	font-size: 24px;
 	font-weight: bold;
 	margin-bottom: 5px;
-	margin-left: 1px;
 }
 
 .post { 
