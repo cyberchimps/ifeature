@@ -1,6 +1,9 @@
 iFeature Changelog
 
 ****************************
+Version 2.1.3 (11-16-11)
+-Social icon z-index fix. 
+
 Version 2.1.2 (11-02-11)
 -Added Romanian language po and mo files.
 -Removed "default" label from Lucida Grande in font selection dropdown, added it to Arial instead. 
