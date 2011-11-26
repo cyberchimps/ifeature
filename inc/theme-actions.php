@@ -51,7 +51,7 @@ function ifeature_header_standard_content() {
 		
 	<div class='clear'>&nbsp;</div>
 
-<?
+<?php
 }
 
 
@@ -110,7 +110,7 @@ global $options, $themeslug;?>
 		
 	<div class='clear'>&nbsp;</div>
 
-<?
+<?php
 }
 
 /**

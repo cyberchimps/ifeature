@@ -174,7 +174,7 @@ echo "</div>";
 ?>
 <div class="slider_nav" style="width: 640px; ">&nbsp;</div>
 <div class='clear'>&nbsp;</div>
-<?
+<?php
 
 }
 

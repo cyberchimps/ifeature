@@ -132,7 +132,7 @@ function chimps_afterfooter_credit() {
 			<a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/achimps.png" alt="credit" /></a>
 		</div> 
 	
-	<? }
+	<?php }
 }
 
 /**

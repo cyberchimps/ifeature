@@ -85,7 +85,7 @@ function chimps_page_section_lite_content() {
 
 <div class='clear'>&nbsp;</div>
 
-<?
+<?php
 }
 
 
