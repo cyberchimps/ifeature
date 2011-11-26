@@ -80,9 +80,7 @@ function chimps_meta_tags() {
 
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 <meta name="distribution" content="global" />
-<meta http-equiv="X-UA-Compatible" content="IE=7" />
-<meta http-equiv="X-UA-Compatible" content="IE=8" />
-<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="language" content="en" /> <?php
 
 	if ($options->get($themeslug.'_home_title') != '' AND is_front_page()) { ?>
@@ -389,7 +387,7 @@ function chimps_nav() {
 			<?php if ($options->get($themeslug.'_hide_home_icon') != "1"):?><div id="home"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ;?>/images/home.png" alt="home" /></a></div><?php endif;?>
 		    <?php wp_nav_menu( array(
 		    'theme_location' => 'header-menu', // Setting up the location for the main-menu, Main Navigation.
-		    'fallback_cb' => 'menu_fallback', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
+		    'fallback_cb' => 'chimps_menu_fallback', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
 		    )
 		);
     	?>

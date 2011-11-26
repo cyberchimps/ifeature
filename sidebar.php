@@ -2,19 +2,7 @@
     
         <!-- All this stuff in here only shows up if you DON'T have any widgets active in this zone -->
     
-		<div class="widget-container">    
-		<h2 class="widget-title">Welcome to iFeature Pro 3</h2>
-    	<ul>
-						<li>Thank you for purchasing iFeature Pro 3.</li>
-						<li>&nbsp;</li>
-						<li>We designed iFeature Pro 3 to be as user friendly as possible, but if you do run into trouble we provide a <a href="http://cyberchimps.com/forum">support forum</a>, and <a href="http://www.cyberchimps.com/ifeature-pro/docs/">precise documentation</a>.</li>
-						<li>&nbsp;</li>
-						<li>If we were all designers then every WordPress theme would look this good.</li>
-						<li>&nbsp;</li>
-						<li><small>(To remove this Widget login to your admin account, go to Appearance, then Widgets and drag new widgets into Sidebar Widgets)</small></li>
-					</ul>
-    	</div>
-		
+				
 		<div class="widget-container">    
 		<h2 class="widget-title"><?php printf( __('Pages', 'ifeature' )); ?></h2>
 		<ul>

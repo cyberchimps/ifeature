@@ -17,11 +17,13 @@
 
 <div class="container_12">
 
+<?php if (function_exists('chimps_breadcrumbs')) chimps_breadcrumbs(); ?>
+
 	<div id="main">
 	
 		<div id="content" class="grid_8">
 		
-		<?php if (function_exists('chimps_breadcrumbs')) chimps_breadcrumbs(); ?>
+		
 		
 		<!--Begin @Core before_archive hook-->
 			<?php chimps_before_archive(); ?>

@@ -23,7 +23,7 @@ if ( is_admin() && isset($_GET['activated'] ) && $pagenow ==	"themes.php" )
 	
 //Gallery options 
 
-function custom_gallery_post_format( $content ) {
+function if_custom_gallery_post_format( $content ) {
 global $options, $themeslug, $post;
 $root = get_template_directory_uri(); 
 ob_start();
@@ -70,47 +70,13 @@ ob_start();
 	return $content;
 }
 
-add_filter('chimps_post_formats_gallery_content', 'custom_gallery_post_format' ); 
-	
-function mytheme_comment($comment, $args, $depth) {
-   $GLOBALS['comment'] = $comment; ?>
-   <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
-     <div id="comment-<?php comment_ID(); ?>">
-      <div class="comment-author vcard">
-         <?php echo get_avatar( $comment, 48 ); ?>
-
-         <?php printf(__('<cite class="fn">%s</cite> <span class="says"></span>'), get_comment_author_link()) ?>
-      </div>
-      <?php if ($comment->comment_approved == '0') : ?>
-         <em><?php _e('Your comment is awaiting moderation.') ?></em>
-         <br />
-      <?php endif; ?>
-
-      <div class="comment-meta commentmetadata"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'),'  ','') ?></div>
-
-      <?php comment_text() ?>
-
-      <div class="reply">
-         <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-      </div>
-     </div>
-<?php
-}
-	
-/* Localization */
-	    
-	load_theme_textdomain( 'core', TEMPLATEPATH . '/languages' );
-
-	    $locale = get_locale();
-	    $locale_file = TEMPLATEPATH . "/languages/$locale.php";
-	    if ( is_readable( $locale_file ) )
-		    require_once( $locale_file );
-
+add_filter('chimps_post_formats_gallery_content', 'if_custom_gallery_post_format' ); 
+		
 /* End global variables. */	
 
 /* Begin custom excerpt functions. */	
 
-function new_excerpt_more($more) {
+function if_new_excerpt_more($more) {
 
 	global $themename, $themeslug, $options;
     
@@ -125,9 +91,9 @@ function new_excerpt_more($more) {
     global $post;
 	return '<a href="'. get_permalink($post->ID) . '"> <br /><br /> '.$linktext.'</a>';
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+add_filter('excerpt_more', 'if_new_excerpt_more');
 
-function new_excerpt_length($length) {
+function if_new_excerpt_length($length) {
 
 	global $themename, $themeslug, $options;
 	
@@ -141,7 +107,7 @@ function new_excerpt_length($length) {
 
 	return $length;
 }
-add_filter('excerpt_length', 'new_excerpt_length');
+add_filter('excerpt_length', 'if_new_excerpt_length');
 
 /* End excerpt functions. */
 
@@ -150,7 +116,7 @@ add_theme_support('automatic-feed-links');
 	
 /* Add post-thumb support. */
 
-function init_featured_image() {	
+function if_init_featured_image() {	
 if ( function_exists( 'add_theme_support' ) ) {
 
  global $themename, $themeslug, $options;
@@ -175,7 +141,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 	set_post_thumbnail_size( $featureheight, $featurewidth, true );
 }	
 }
-add_action( 'init', 'init_featured_image', 11);	
+add_action( 'init', 'if_init_featured_image', 11);	
 
 // Featured image support.
 add_theme_support( 'post-thumbnails' );
@@ -187,7 +153,7 @@ add_editor_style();
 * Attach CSS3PIE behavior to elements
 * Add elements here that need PIE applied
 */   
-function render_ie_pie() { ?>
+function if_render_ie_pie() { ?>
 	
 	<style type="text/css" media="screen">
 		#header li a, .postmetadata, .post_container, #navbackground, .wp-caption, .sidebar-widget-style, .sidebar-widget-title, .boxes, .box1, .box2, .box3, .box-widget-title, #calloutwrap, .calloutbutton, #twitterbar 
@@ -199,11 +165,11 @@ function render_ie_pie() { ?>
 <?php
 }
 
-add_action('wp_head', 'render_ie_pie', 8);
+add_action('wp_head', 'if_render_ie_pie', 8);
 	
 // Nivo Slider 
 
-function nivoslider(){
+function if_nivoslider(){
 	 
 	$path =  get_template_directory_uri() ."/core/library/ns";
 
@@ -214,11 +180,11 @@ function nivoslider(){
 	
 	echo $script;
 }
-add_action('wp_head', 'nivoslider');
+add_action('wp_head', 'if_nivoslider');
 
 // + 1 Button 
 
-function plusone(){
+function if_plusone(){
 	
 	$path =  get_template_directory_uri() ."/core/library/js";
 
@@ -229,7 +195,23 @@ function plusone(){
 	
 	echo $script;
 }
-add_action('wp_head', 'plusone');
+add_action('wp_head', 'if_plusone');
+
+// Menu JS
+
+function if_menu_script(){
+	
+	$path =  get_template_directory_uri() ."/core/library/js";
+
+	$script = "
+		
+		<script type=\"text/javascript\" src=\"".$path."/menu.js\"></script>
+		";
+	
+	echo $script;
+}
+add_action('wp_footer', 'if_menu_script');
+
 
 
 // Register jQuery
@@ -237,28 +219,20 @@ add_action('wp_head', 'plusone');
 // Load jQuery
 	if ( !is_admin() ) {
 	   wp_deregister_script('jquery');
-	   wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"), false);
+	   wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"), false);
 	   wp_enqueue_script('jquery');
 	}
 	
 	// Register menu names
 	
-	function register_menus() {
+	function if_register_menus() {
 	register_nav_menus(
 	array( 'header-menu' => __( 'Header Menu' ), 'footer-menu' => __( 'Footer Menu' ))
   );
 }
-	add_action( 'init', 'register_menus' );
+	add_action( 'init', 'if_register_menus' );
 	
-	// Menu fallback
-	
-	function menu_fallback() {
-	global $post; ?>
-	
-	<ul id="menu-nav" class="sf-menu">
-		<?php wp_list_pages( 'title_li=&sort_column=menu_order&depth=3'); ?>
-	</ul><?php
-}
+
 
 function ifp_widgets_init() {
     register_sidebar(array(
@@ -284,14 +258,14 @@ add_action ('widgets_init', 'ifp_widgets_init');
 
 //Add link to theme settings in Admin bar
 
-function admin_link() {
+function if_admin_link() {
 
 	global $wp_admin_bar;
 
 	$wp_admin_bar->add_menu( array( 'id' => 'iFeature', 'title' => 'iFeature Pro Options', 'href' => admin_url('themes.php?page=ifeature')  ) ); 
   
 }
-add_action( 'admin_bar_menu', 'admin_link', 113 );
+add_action( 'admin_bar_menu', 'if_admin_link', 113 );
 
 //Set content width
 
