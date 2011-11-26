@@ -44,9 +44,6 @@ $options
 			->color($themeslug."_tagline_color", "Site Description Color")
 		->subsection_end()
 	->section("Header")
-		->open_outersection()
-		->checkbox($themeslug."_disable_header", "Toggle to hide the header")
-		->close_outersection()
 		->subsection("Header Options")
 			->upload($themeslug."_logo", "Custom Logo")
 			->checkbox($themeslug."_show_description", "Show Site Description")
@@ -113,7 +110,6 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ) ) )
 	
 	->section("Footer")
 		->open_outersection()
-			->checkbox($themeslug."_disable_footer", "Toggle to disable the footer")
 			->text($themeslug."_footer_text", "Footer Copyright Text")
 		->close_outersection()
 	
