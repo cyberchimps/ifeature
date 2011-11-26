@@ -35,14 +35,10 @@
 <!-- End @Core before_header hook content -->
 			
 	<header id="head">
-		
-	<?php if ($options->get($themeslug.'_disable_header') != "1"):?>
 	
 		<!-- Begin @iFeature header content hook-->
 			<?php ifeature_header_content(); ?> 
 		<!-- End @iFeature header content hook -->	
-				
-	<?php endif;?>
 
 		<!-- Begin @Core navigation contact area hook -->
 			<?php chimps_navigation(); ?> 

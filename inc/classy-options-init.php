@@ -56,8 +56,8 @@ $options
 		->subsection_end()
 		->subsection("iMenu Options")
 			->select($themeslug."_menu_font", "Choose a Menu Font", array( 'options' => array("Arial" => "Arial (default)", "Courier New" => "Courier New", "Georgia" => "Georgia", "Helvetica" => "Helvetica", "Lucida Grande" => "Lucida Grande", "Tahoma" => "Tahoma", "Times New Roman" => "Times New Roman", "Verdana" => "Verdana", "Maven+Pro" => "Maven Pro", "Ubuntu" => "Ubuntu")))
-			->checkbox($themeslug."_hide_home_icon", "Toggle to disable the home icon")
-			->checkbox($themeslug."_hide_search", "Toggle to disable the searchbar")
+			->checkbox($themeslug."_hide_home_icon", "Home Icon", array('default' => true)
+			->checkbox($themeslug."_hide_search", "Searchbar", array('default' => true)
 		
 		->subsection_end()
 		->subsection("Social")
