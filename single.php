@@ -8,66 +8,75 @@
 	Copyright (C) 2011 CyberChimps
 */
 
-	$showfblike		= $options['if_show_fb_like'];
+
+
+/* End variable definition. */	
+
 
 get_header(); ?>
 
-<div id="content_wrap">
+<div class="container_12">
+<?php if (function_exists('chimps_breadcrumbs')) chimps_breadcrumbs(); ?>
+
 	
-	<div id="content_left">
-	
-		<div class="content_padding">
-				
+		<div id="content" class="grid_8">
+
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
-				<div class="post_container">
+			<div class="post_container">
+				<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+		
+				<!--Begin @Core index loop hook-->
+					<?php chimps_index_loop(); ?>
+				<!--End @Core index loop hook-->	
+			
+				<!--Begin @Core link pages hook-->
+					<?php chimps_link_pages(); ?>
+				<!--End @Core link pages hook-->
+			
+				<!--Begin @Core post edit link hook-->
+					<?php chimps_edit_link(); ?>
+				<!--End @Core post edit link hook-->
+			
+				<!--Begin @Core FB like hook-->
+					<?php chimps_fb_like_plus_one(); ?>
+				<!--End @Core FB like hook-->
+			
+				<!--Begin @Core post tags hook-->
+					<?php chimps_post_tags(); ?>
+				<!--End @Core post tags hook-->
 				
-				<?php if (function_exists('ifeature_breadcrumbs') && $options['if_disable_breadcrumbs'] != "1") ifeature_breadcrumbs(); ?>
-
-					<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+				<!--Begin @Core post pagination hook-->
+					<?php chimps_post_pagination(); ?>
+				<!--End @Core post pagination hook-->				
+								
+				<!--Begin @Core post bar hook-->
+					<?php chimps_post_bar(); ?>
+				<!--End @Core post bar hook-->
 			
-						<h2 class="posts_title"><?php the_title(); ?></h2>
-			
-						<?php get_template_part ('meta', 'single'); ?>
-
-							<div class="entry">
-								<?php the_content(); ?>
-							</div><!--end entry-->
-							<div style=clear:both;></div>
-							<?php wp_link_pages(array('before' => __('Pages:', 'ifeature' ), 'next_or_number' => 'number')); ?>	
-						<?php edit_post_link ( __( 'Edit this entry.' , 'ifeature' ) , '<p>', '</p>'); ?>
-						
-							<?php if ($showfblike == "1" ):?>
-							<div class="fb" >
-								<iframe src="http://www.facebook.com/plugins/like.php?href=<?php the_permalink() ?>&layout=standard&show_faces=true&width=450&action=like&colorscheme=light" scrolling="no" frameborder="0"  allowTransparency="true" style="border:none; overflow:hidden; width:530px; height:28px"></iframe>
-							</div>
-							<?php endif;?>
-							<!--end fb-->
-						
-							<div class="tags">
-								<?php the_tags( __( 'Tags:', 'ifeature' ), ', ', '<br />'); ?>
-							</div><!--end tags-->
-
-							<div class="postmetadata">
-									<?php get_template_part ('share', 'single' ); ?>
-								<div class="comments">
-									<?php comments_popup_link( __('No Comments &#187;', 'ifeature' ), __('1 Comment &#187;', 'ifeature' ), __('% Comments &#187;' , 'ifeature' )); ?>
-								</div><!--end comments-->	
-							</div><!--end postmetadata-->
-							
-					</div><!--end post_class-->
-
-		<?php comments_template(); ?>
-		
-
-		<?php endwhile; endif; ?>
-				</div><!--end post_container-->
-		</div><!--end content_padding-->
-	</div> <!--end content_left-->
+				</div><!--end post_class-->	
+		</div><!--end post container--> 
 	
-	<?php get_sidebar(); ?>
+			<?php endwhile; ?>
+			
+			<?php comments_template(); ?>
 		
-</div><!--end content_wrap-->
-<div style=clear:both;></div>
+			<?php else : ?>
+
+				<h2>Not Found</h2>
+
+			<?php endif; ?>
+		
+		</div><!--end content-->
+
+	<!--Begin @Core index after entry hook-->
+	<?php chimps_index_after_entry(); ?>
+	<!--End @Core index after entry hook-->
+
+
+
+</div><!--end container_12-->
+
+<div style="clear:both;"></div>
 
 <?php get_footer(); ?>
