@@ -171,7 +171,7 @@ jQuery(document).ready(function($) {
   $("#if_show_excerpts").change(function() {
     var toShow = $("#section-if_excerpt_link_text, #section-if_excerpt_length");
     if($(this).is(':checked')) {
-      toShow.show();
+      toShow.fadeIn();
     } else {
       toShow.hide();
     }
