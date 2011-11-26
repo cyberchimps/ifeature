@@ -369,7 +369,7 @@ function chimps_header_social_icons_content() {
 function chimps_nav() {
 	global $options, $themeslug; //call globals 
 	
-	if ($options->get($themeslug.'_disable_homeicon') == "1" && $options->get($themeslug.'_disable_search') == "1") {
+	if ($options->get($themeslug.'_disable_homeicon') != "1" && $options->get($themeslug.'_disable_search') != "1") {
 		$grid = 'grid_12';
 	}
 	
