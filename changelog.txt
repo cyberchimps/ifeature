@@ -1,6 +1,19 @@
 iFeature Changelog
 
 ****************************
+Version 3.0 (11-26-11)
+-Introduction of CyberChimps Core WordPress Framework. 
+-New Theme Options panel using Classy Options Framework.
+-Introduction of Drag and Drop page elements. 
+-Introduction of custom CSS grid.
+-New theme design, includes bordered post and page containers, modified post layout.
+-Removed SuperFish, using CSS menu. 
+-Twitterbar added for use on a per-page basis. 
+-Post formats support added.
+-New social icon set added.
+-Added post pagination links to single.php.
+
+
 Version 2.1.3 (11-16-11)
 -Social icon z-index fix. 
 
