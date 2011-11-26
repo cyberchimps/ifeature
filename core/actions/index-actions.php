@@ -142,7 +142,7 @@ function chimps_index_loop_content($content) {
 					<!--Call @Core Meta hook-->
 			<?php chimps_post_byline(); ?>
 				<?php
-				if ( has_post_thumbnail() && $options->get($themeslug.'_show_featured_images') == '1' ) {
+				if ( has_post_thumbnail() && $options->get($themeslug.'_show_featured_images') == '1' && !is_single() ) {
  		 			echo '<div class="featured-image">';
  		 			echo '<a href="' . get_permalink($post->ID) . '" >';
  		 				the_post_thumbnail();

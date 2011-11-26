@@ -37,7 +37,7 @@ ob_start();
 					<!--Call @Core Meta hook-->
 			<?php chimps_post_byline(); ?>
 				<?php
-				if ( has_post_thumbnail() && $options->get($themeslug.'_show_featured_images') == '1' ) {
+				if ( has_post_thumbnail() && $options->get($themeslug.'_show_featured_images') == '1' && !is_single() ) {
  		 			echo '<div class="featured-image">';
  		 			echo '<a href="' . get_permalink($post->ID) . '" >';
  		 				the_post_thumbnail();
@@ -46,8 +46,9 @@ ob_start();
 				}
 			?>	
 				<div class="entry" <?php if ( has_post_thumbnail() && $options->get($themeslug.'_show_featured_images') == '1' ) { echo 'style="min-height: 115px;" '; }?>>
-		<?php
-					$images = get_children( array( 'post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC', 'numberposts' => 999 ) );
+				
+				<?php if (!is_single()): ?>
+				<?php $images = get_children( array( 'post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC', 'numberposts' => 999 ) );
 					if ( $images ) :
 						$total_images = count( $images );
 						$image = array_shift( $images );
@@ -60,6 +61,11 @@ ob_start();
 					This gallery contains <?php echo $total_images ; ?> images
 					<?php endif;?>
 				</figure><!-- .gallery-thumb -->
+				<?php endif;?>
+				
+				<?php if (is_single()): ?>
+					<?php the_content(); ?>
+				<?php endif;?>
 				</div><!--end entry-->
 
 				
