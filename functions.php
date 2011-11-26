@@ -162,7 +162,7 @@ add_editor_style();
 function if_render_ie_pie() { ?>
 	
 	<style type="text/css" media="screen">
-		#header li a, .postmetadata, .post_container, #navbackground, .wp-caption, .sidebar-widget-style, .sidebar-widget-title, .boxes, .box1, .box2, .box3, .box-widget-title, #calloutwrap, .calloutbutton, #twitterbar 
+		#wrapper input, textarea, input[type=submit], input[type=reset], #imenu, .searchform, .post_container, .postformats, .postbar, .post-edit-link, .widget-container, .widget-title, .footer-widget-title, .comments_container, ol.commentlist li.even, ol.commentlist li.odd, .slider_nav, #twitterbar 
   		
   			{
   				behavior: url('<?php get_stylesheet_directory_uri(); ?>/core/library/pie/PIE.htc');
