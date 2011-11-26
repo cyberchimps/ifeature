@@ -1,9 +1,9 @@
 <?php
 
-add_action('chimps_page_section_lite', 'chimps_page_section_lite_content' );
+add_action('chimps_page_section', 'chimps_page_section_content' );
 
 
-function chimps_page_section_lite_content() { 
+function chimps_page_section_content() { 
 	global $options, $themeslug, $post;
 	
 	

@@ -18,12 +18,12 @@
 /**
 * Core Twitterbar actions
 */
-add_action( 'chimps_twitterbar_section_lite', 'chimps_twitterbar_section_lite_content' );
+add_action( 'chimps_twitterbar_section', 'chimps_twitterbar_section_content' );
 
 /**
 * Retrieves the Twitterbar options and sets up the HTML
 */
-function chimps_twitterbar_section_lite_content() {
+function chimps_twitterbar_section_content() {
 	global $post; //call globals
 	
 	$twitterbar = get_post_meta($post->ID, 'enable_twitter_bar' , true);

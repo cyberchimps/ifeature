@@ -192,8 +192,6 @@ function chimps_navigation() {
 	do_action('chimps_navigation');
 }
 
-
-
 /** 
 * Pagination 
 */
@@ -210,10 +208,10 @@ function chimps_post_pagination() {
 }
 
 /** 
-* page
+* Page
 */
-function chimps_page_section_lite() {
-	do_action('chimps_page_section_lite');
+function chimps_page_section() {
+	do_action('chimps_page_section');
 }
 
 /** 
@@ -236,6 +234,13 @@ function chimps_after_search() {
 */
 function chimps_blog_slider_lite() {
 	do_action('chimps_blog_slider_lite');
+}
+
+/** 
+* Twitterbar
+*/
+function chimps_twitterbar_section() {
+	do_action('chimps_twitterbar_section');
 }
 
 /**

@@ -816,10 +816,10 @@ function initialize_the_meta_boxes() {
 				'id' => 'page_section_order',
 				'type' => 'section_order',
 				'options' => array(
-					'twitterbar_section_lite' => "Twitter Bar",
-					'page_section_lite' => "Page",		
+					'twitterbar_section' => "Twitter Bar",
+					'page_section' => "Page",		
 					),
-					'std' => 'page_section_lite'
+					'std' => 'page_section'
 				),
 
 			
