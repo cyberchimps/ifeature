@@ -66,7 +66,7 @@ echo "<div id='slider-wrapper'>";
 	    	
 	    		the_post(); 
 	    		
-	    		$postimage 	= get_post_meta($post->ID, 'slider_post_image' , true);
+	    		$postimage 	= get_post_meta($post->ID, 'slider_image' , true);
 	    		$text 		= get_post_meta($post->ID, 'slider_text' , true);
 	    		$permalink 	= get_permalink();
 	    		$thetitle	= get_the_title(); 

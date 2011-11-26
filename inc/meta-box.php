@@ -736,7 +736,7 @@ function initialize_the_meta_boxes() {
 					array(
 						'name' => $themenamefull.' Pro Slider Image',
 						'desc' => 'Upload your image here:',
-						'id' => $prefix . 'post_image',
+						'id' => $prefix . 'image',
 						'type' => 'image',
 						'std' => ''
 					),
