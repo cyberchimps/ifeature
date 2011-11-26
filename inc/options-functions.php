@@ -75,7 +75,7 @@ function if_disable_breadcrumbs() {
 	global $options, $themeslug;
 	$root = get_template_directory_uri();
 	
-	if ($options->get($themeslug.'_disable_breadcrumbs') == "1") {
+	if ($options->get($themeslug.'_disable_breadcrumbs') != "1") {
 		
 		echo '<style type="text/css">';
 		echo "#crumbs {display: none;}";
