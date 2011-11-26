@@ -49,7 +49,7 @@ $options
 			->checkbox($themeslug."_show_description", "Show Site Description")
 			->text($themeslug."_icon_margin", "Social Icon Margin Top", array('default' => '10px'))
 			->upload($themeslug."_favicon", "Custom Favicon")
-			->checkbox($themeslug."_disable_breadcrumbs", "Disable breadcrumbs")
+			->checkbox($themeslug."_disable_breadcrumbs", "Breadcrumbs")
 		->subsection_end()
 		->subsection("iMenu Options")
 			->select($themeslug."_menu_font", "Choose a Menu Font", array( 'options' => array("Arial" => "Arial (default)", "Courier New" => "Courier New", "Georgia" => "Georgia", "Helvetica" => "Helvetica", "Lucida Grande" => "Lucida Grande", "Tahoma" => "Tahoma", "Times New Roman" => "Times New Roman", "Verdana" => "Verdana", "Maven+Pro" => "Maven Pro", "Ubuntu" => "Ubuntu")))
