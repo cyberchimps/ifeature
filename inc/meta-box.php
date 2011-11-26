@@ -23,7 +23,7 @@ function rw_delete_file() {
 	}
 	wp_delete_attachment($attach_id);
 	delete_post_meta($post_id, $key, $src);
-	_e('File has been successfully deleted.');
+	('File has been successfully deleted.');
 	die();
 }
 
