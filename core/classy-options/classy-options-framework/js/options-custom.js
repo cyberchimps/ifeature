@@ -179,7 +179,7 @@ jQuery(document).ready(function($) {
   $("#if_show_featured_images").change(function() {
     var toShow = $("#section-if_featured_image_align, #section-if_featured_image_height, #section-if_featured_image_width");
     if($(this).is(':checked')) {
-      toShow.show();
+      toShow.fadeIn();
     } else {
       toShow.hide();
     }
@@ -219,7 +219,7 @@ jQuery(document).ready(function($) {
       $("#if_custom_background").change(function() {
     var toShow = $("#section-if_background_upload, #section-if_bg_image_position, #section-if_bg_image_repeat, #section-if_background_color, #section-if_bg_image_attachment ");
     if($(this).is(':checked')) {
-      toShow.show();
+      toShow.fadeIn();
     } else {
       toShow.hide();
     }
