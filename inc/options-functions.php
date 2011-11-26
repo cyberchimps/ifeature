@@ -10,41 +10,22 @@
 
 /* Icon margin*/
 
-function icon_margin() {
+function if_icon_margin() {
 	global $options, $themeslug;
 	$margin = $options->get($themeslug.'_icon_margin');
 	
-	if ($options->get($themeslug.'_icon_margin') != '18px' ) {
+	if ($options->get($themeslug.'_icon_margin') != '10px' ) {
 		echo '<style type="text/css">';
 		echo ".icons {margin-top: $margin;}";
 		echo '</style>';
 	}
 
 }
-add_action( 'wp_head', 'icon_margin' );
-
-/* Adjust postbar width for full width and 2 sidebar configs*/
-
-function postbar_option() {
-	global $options, $themeslug;
-	
-	if ($options->get($themeslug.'_blog_sidebar') == 'two-right' OR $options->get($themeslug.'_blog_sidebar') == 'right-left') {
-		echo '<style type="text/css">';
-		echo ".postbar {width: 95.4%;}";
-		echo '</style>';
-	}
-	
-	if ($options->get($themeslug.'_blog_sidebar') == 'none') {
-		echo '<style type="text/css">';
-		echo ".postbar {width: 97.8%;}";
-		echo '</style>';
-	}
-}
-add_action( 'wp_head', 'postbar_option');
+add_action( 'wp_head', 'if_icon_margin' );
 
 /* Backgound Option*/
 
-function background_option() {
+function if_background_option() {
 
 	global $options, $themeslug;
 	$root = get_template_directory_uri();
@@ -75,28 +56,7 @@ function background_option() {
 		echo "body {background-image: url('$root/images/backgrounds/wood.png'); background-repeat: repeat; background-position: top left; background-attachment: fixed;}";
 		echo '</style>';
 	}
-	
-	if ($options->get($themeslug.'_background_image')  == "blue" && $options->get($themeslug.'_custom_background') != "1")  {
-	
-		echo '<style type="text/css">';
-		echo "body {background-image: url('$root/images/backgrounds/blue.jpg'); background-repeat: repeat-x; background-position: top center; background-attachment: fixed;}";
-		echo '</style>';
-	}
-	
-	if ($options->get($themeslug.'_background_image') == "metal" && $options->get($themeslug.'_custom_background') != "1")   {
-	
-		echo '<style type="text/css">';
-		echo "body {background-image: url('$root/images/backgrounds/metal.jpg'); background-color: #000; background-repeat: repeat-x; background-position: top center; background-attachment: fixed;}";
-		echo '</style>';
-	}
-	
-	if ($options->get($themeslug.'_background_image') == "space" && $options->get($themeslug.'_custom_background') != "1")  {
-	
-		echo '<style type="text/css">';
-		echo "body {background-image: url('$root/images/backgrounds/space.jpg'); background-color: #000; background-repeat: repeat-x; background-position: top center; background-attachment: fixed;}";
-		echo '</style>';
-	}
-	
+		
 	if ($options->get($themeslug.'_custom_background') == "1") {
 	
 		echo '<style type="text/css">';
@@ -106,11 +66,11 @@ function background_option() {
 	}
 	
 }
-add_action( 'wp_head', 'background_option');
+add_action( 'wp_head', 'if_background_option');
 
 /* Disable breadcrumbs*/
  
-function disable_breadcrumbs() {
+function if_disable_breadcrumbs() {
 
 	global $options, $themeslug;
 	$root = get_template_directory_uri();
@@ -123,11 +83,11 @@ function disable_breadcrumbs() {
 
 	}
 }
-add_action( 'wp_head', 'disable_breadcrumbs');
+add_action( 'wp_head', 'if_disable_breadcrumbs');
 
 /* Plus 1 Allignment */
 
-function plusone_alignment() {
+function if_plusone_alignment() {
 
 	global $themename, $themeslug, $options;
 	
@@ -140,12 +100,12 @@ function plusone_alignment() {
 	}
 	
 }
-add_action( 'wp_head', 'plusone_alignment');
+add_action( 'wp_head', 'if_plusone_alignment');
 
 
 /* Featured Image Alignment */
 
-function featured_image_alignment() {
+function if_featured_image_alignment() {
 
 	global $themename, $themeslug, $options;
 	
@@ -175,28 +135,11 @@ function featured_image_alignment() {
 
 	
 }
-add_action( 'wp_head', 'featured_image_alignment');
-
-/* Post Meta Data width */
-
-function post_meta_data_width() {
-
-	global $themename, $themeslug, $options;
-
-	if ($options->get($themeslug.'_blog_sidebar') == "two-right" OR $options->get($themeslug.'_blog_sidebar') == "right-left") {
-
-		echo '<style type="text/css">';
-		echo ".postmetadata {width: 480px;}";
-		echo '</style>';
-		
-	}
-	
-}
-add_action( 'wp_head', 'post_meta_data_width');
+add_action( 'wp_head', 'if_featured_image_alignment');
 
 /* Site Title Color */
 
-function add_sitetitle_color() {
+function if_add_sitetitle_color() {
 
 	global $themename, $themeslug, $options;
 
@@ -213,49 +156,11 @@ function add_sitetitle_color() {
 		echo '</style>';
 		
 }
-add_action( 'wp_head', 'add_sitetitle_color');
-
-/* Link Color */
-
-function add_link_color() {
-
-	global $themename, $themeslug, $options;
-
-	if ($options->get($themeslug.'_link_color') != '') {
-		$link = $options->get($themeslug.'_link_color'); 
-	
-
-		echo '<style type="text/css">';
-		echo "a {color: $link;}";
-		echo '</style>';
-	}
-}
-add_action( 'wp_head', 'add_link_color');
-
-
-/* Menu Link Color */
-
-function add_menulink_color() {
-
-	global $themename, $themeslug, $options;
-
-	if (!$options->get($themeslug.'_menulink_color')) {
-		$sitelink = '#FFFFFF';
-	}
-	
-	else{ 
-		$sitelink = $options->get($themeslug.'_menulink_color'); 
-	}	
-		
-		echo '<style type="text/css">';
-		echo "#nav ul li a {color: $sitelink;}";
-		echo '</style>';
-}
-add_action( 'wp_head', 'add_menulink_color');
+add_action( 'wp_head', 'if_add_sitetitle_color');
 
 /* Tagline Color */
 
-function add_tagline_color() {
+function if_add_tagline_color() {
 
 	global $themename, $themeslug, $options;
 
@@ -272,45 +177,12 @@ function add_tagline_color() {
 		echo '</style>';
 
 }
-add_action( 'wp_head', 'add_tagline_color');
+add_action( 'wp_head', 'if_add_tagline_color');
 
-/* Post Title Color */
-
-function add_posttitle_color() {
-
-	global $themename, $themeslug, $options;
-
-	if ($options->get($themeslug.'_posttitle_color') != '') {
-		$posttitle = $options->get($themeslug.'_posttitle_color'); 
-			
-		echo '<style type="text/css">';
-		echo ".posts_title a {color: $posttitle;}";
-		echo '</style>';
-	}
-}
-add_action( 'wp_head', 'add_posttitle_color');
-
-/* Footer Color */
-
-function add_footer_color() {
-
-	global $themename, $themeslug, $options;
-
-	if ($options->get($themeslug.'_footer_color') != "#222222" ) {
-	
-		$footercolor = $options->get($themeslug.'_footer_color'); 
-	
-	
-		echo '<style type="text/css">';
-		echo "#footer {background: $footercolor;}";
-		echo '</style>';
-	}
-}
-add_action( 'wp_head', 'add_footer_color');
 
 /* Menu Font */
  
-function add_menu_font() {
+function if_add_menu_font() {
 		
 	global $themename, $themeslug, $options;	
 		
@@ -333,45 +205,6 @@ function add_menu_font() {
 		echo "#nav ul li a {font-family: $fontstrip;}";
 		echo '</style>';
 }
-add_action( 'wp_head', 'add_menu_font'); 
-
-/* Widget title background */
- 
-/*function widget_title_bg() {
-
-	global $themename, $themeslug, $options;
-	$root = get_template_directory_uri();
-	
-	if (v($options, $themeslug.'_widget_title_bg') == "1") {
-		
-		echo '<style type="text/css">';
-		echo ".box-widget-title {background: url($root/images/wtitlebg.png) no-repeat center top; margin: -6px -5px 5px -5px;}";
-		echo ".sidebar-widget-title {background: url($root/images/wtitlebg.png) no-repeat center top; margin: -6px -5px 5px -5px;}";
-		echo '</style>';
-
-	}
-}
-add_action( 'wp_head', 'widget_title_bg'); */
-
-
-/* Custom CSS */
-
-function custom_css() {
-
-	global $themename, $themeslug, $options;
-	
-	$custom =$options->get($themeslug.'_css_options');
-	echo '<style type="text/css">' . "\n";
-	echo custom_css_filter ( $custom ) . "\n";
-	echo '</style>' . "\n";
-}
-
-function custom_css_filter($_content) {
-	$_return = preg_replace ( '/@import.+;( |)|((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/))/i', '', $_content );
-	$_return = htmlspecialchars ( strip_tags($_return), ENT_NOQUOTES, 'UTF-8' );
-	return $_return;
-}
-		
-add_action ( 'wp_head', 'custom_css' );
+add_action( 'wp_head', 'if_add_menu_font'); 
 
 ?>
