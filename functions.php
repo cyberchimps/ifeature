@@ -211,10 +211,6 @@ function if_menu_script(){
 	echo $script;
 }
 add_action('wp_footer', 'if_menu_script');
-
-
-
-// Register jQuery
 	
 // Load jQuery
 	if ( !is_admin() ) {
