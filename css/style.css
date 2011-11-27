@@ -280,7 +280,7 @@ ol {list-style-position: inside;margin-left: 21px; list-style-type: }
 /* Footer  */
 
 #footer {
-	background: #666 url(../images/linen.jpg) repeat-x center top;
+	background: #666 url(../images/linen.jpg) repeat center top;
 	border-top: 2px solid #222;
 }
 
