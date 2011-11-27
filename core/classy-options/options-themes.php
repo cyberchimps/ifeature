@@ -50,6 +50,7 @@ function cyberchimps_store_page_init() {
 			<li><a href="http://cyberchimps.com/forum/" target="_blank">Forum</a></li>
 			<li><a href="http://twitter.com/#!/cyberchimps" target="_blank">Twitter</a></li>
 			<li><a href="http://www.facebook.com/CyberChimps" target="_blank">Facebook</a></li>
+			<li><a href="http://cyberchimpspro.com/" target="_blank">CyberChimps Pro</a></li>
 		</ul>
 	</div>
 	<div style="clear: both;"></div>
@@ -58,7 +59,7 @@ function cyberchimps_store_page_init() {
 	<div id="container">
 	
 	<div class="theme_images">
-		<a href="http://cyberchimps.com/ifeaturepro/" target="_blank"><img src="<?php echo $root ;?>/images/themes/ifeaturepro2.png" /></a>
+		<a href="http://cyberchimps.com/ifeaturepro/" target="_blank"><img src="<?php echo $root ;?>/images/themes/ifeaturepro.png" /></a>
 	</div>
 	<div class="theme_desciptions">
 		<div class="theme_titles"><a href="http://cyberchimps.com/ifeaturepro/" target="_blank">iFeature Pro</a></div>
