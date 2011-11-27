@@ -34,7 +34,7 @@ function chimps_search_content() {
 
 		<?php if (have_posts()) : ?>
 
-		<h2><font size="5"><?php printf( __( $results ), '<span>' . get_search_query() . '</span>' ); ?></font></h2><br />
+		<h3><<?php printf( __( $results ), '<span>' . get_search_query() . '</span>' ); ?></h3><br />
 
 		<?php while (have_posts()) : the_post(); ?>
 		
