@@ -23,6 +23,8 @@ $terms2 = get_terms('category', 'hide_empty=0');
 
 
 $options
+		->section("Welcome")
+		->info("<iframe width='480' height='360' src='http://www.youtube.com/embed/LFWa721Im_g' frameborder='0' allowfullscreen></iframe>")
 		->section("Design")
 		->open_outersection()
 			->select($themeslug."_color_scheme", "Select a Color Scheme", array( 'options' => array("grey" => "Grey (default)", "green" => "Green"), 'default' => 'grey'))
