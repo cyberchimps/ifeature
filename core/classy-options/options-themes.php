@@ -64,9 +64,9 @@ function cyberchimps_store_page_init() {
 	<div class="theme_desciptions">
 		<div class="theme_titles"><a href="http://cyberchimps.com/ifeaturepro/" target="_blank">iFeature Pro</a></div>
 		<br />
-		iFeature Pro turns WordPress into a beautifully designed feature rich Content Management System (CMS). We thought differently when developing iFeature Pro, and took CyberChimps years of experience developing websites for clients and built user friendly settings for the most requested features from the ground up.
+		iFeature Pro 3 is one of the most advanced personal content management WordPress Themes in the world and now offers intuitive theme options which make using iFeature Pro even more personal and fun than ever before.
 		<br /><br />
-		iFeature Pro is an advanced WordPress theme released under the GNU GPL v2. iFeature Pro works great in Chrome, Safari, FireFox, and Internet Explorer 7, 8, and 9 (we do not support Internet Explorer 6). <br /><br />
+		iFeature Pro is an advanced WordPress theme released under the GNU GPL v2. iFeature Pro is optimized for Chrome, Safari, FireFox, and Internet Explorer 9 (we do not support Internet Explorer 6). <br /><br />
 		<div class="buy"><a href="http://cyberchimps.com/ifeaturepro/" target="_blank">Buy iFeature Pro</a></div>
 	</div>
 	
@@ -78,7 +78,7 @@ function cyberchimps_store_page_init() {
 		<br />
 		A premium WordPress theme designed by CyberChimps.com inspired by the popular Android mobile phone operating system by Google. DroidPress features customizable theme options on a per-page basis, a feature posts section, post format support, feature slider, callout section, dynamic header for custom logo, social icons, widgetized sidebar and footer, and typography support including Typekit and Google Fonts.
 		<br /><br />
-		DroidPress Pro is an advanced WordPress theme released under the GNU GPL v2. iFeature Pro works great in Chrome, Safari, FireFox, and Internet Explorer 7, 8, and 9 (we do not support Internet Explorer 6). <br /><br />
+		DroidPress Pro is an advanced WordPress theme released under the GNU GPL v2. iFeature Pro is optimized for Chrome, Safari, FireFox, and Internet Explorer 9 (we do not support Internet Explorer 6). <br /><br />
 		<div class="buy"><a href="http://cyberchimps.com/ifeaturepro/" target="_blank">Buy DroidPress Pro</a></div>
 	</div><br />
 	
@@ -103,7 +103,7 @@ function cyberchimps_store_page_init() {
 		<br />
 		Neuro Pro features intuitive design options allowing anyone the ability to easily customize the look and feel of WordPress. We also included several popular color scheme to choose from, as well as beautiful modern background images. Neuro Pro also offers designers and developers Custom CSS, Import / Export options, and support for CSS3 and HTML5.
 		<br /><br />
-		Neuro Pro is a next generation WordPress theme released under the GNU GPL v2. Neuro Pro works great in Chrome, Safari, FireFox, and Internet Explorer 7, 8, and 9 (we do not support Internet Explorer 6).
+		Neuro Pro is a next generation WordPress theme released under the GNU GPL v2. Neuro Pro is optimized for Chrome, Safari, FireFox, and Internet Explorer 9 (we do not support Internet Explorer 6).
 		<br /> <br />
 		<div class="buy"><a href="http://cyberchimps.com/neuropro/" target="_blank">Buy Neuro Pro</a></div>
 	</div>
