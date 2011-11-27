@@ -22,9 +22,9 @@ class ClassyOptionsSanitize {
 	}
 
 	static function sanitize_textarea($input) {
-		global $allowedtags;
-		$output = wp_kses( $input, $allowedtags);
-		return $output;
+		// global $allowedtags;
+		// $output = wp_kses( $input, $allowedtags + array( 'script' ) );
+		return $input;
 	}
 
 	static function sanitize_checkbox( $input ) {
