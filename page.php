@@ -14,57 +14,63 @@
 	
 /* End header. */	
 
+/* Define global variables. */
 
-	$hidetitle = get_post_meta($post->ID, 'hide_title' , true);
+	$enable = get_post_meta($post->ID, 'page_enable_slider' , true);
+	$size = get_post_meta($post->ID, 'page_slider_size' , true);
+	$hidetitle = get_post_meta($post->ID, 'hide_page_title' , true);
+	$sidebar = get_post_meta($post->ID, 'page_sidebar' , true);
+	$callout = get_post_meta($post->ID, 'enable_callout_section' , true);
+	$twitterbar = get_post_meta($post->ID, 'enable_twitter_bar' , true);
+	$enableboxes = get_post_meta($post->ID, 'enable_box_section' , true);
+	$pagecontent = get_post_meta($post->ID, 'hide_page_content' , true);
+	$page_section_order = get_post_meta($post->ID, 'page_section_order' , true);
+	if(!$page_section_order) {
+		$page_section_order = 'page_section';
+	}
+	$test = get_post_meta($post->ID, 'page_section_order' , true);
+
+/* End define global variables. */
+
+/* Adjust Post Meta Data bar width.  NEED TO FIGURE SOMETHING TO REPLACE THIS */
+
+if ($sidebar == "1" OR $sidebar == "2") {
 	
+		echo '<style type="text/css">';
+		echo ".postmetadata {width: 480px;}";
+		echo '</style>';
+		
+	}
+	
+
+
+if ($size == "0") {
+
+add_action ('chimps_page_slider', 'chimps_page_slider_content' );
+
+}
+
+if (preg_match("/page_slider/", $test ) && $size == "1" ) {
+
+add_action ('chimps_page_content_slider', 'chimps_page_slider_content' );
+
+}
+
+
 ?>
 
-<div id="content_wrap">
+<div class="container_12">
 
-
-	<div id="content_left">
-				
-		<?php if (function_exists('ifeature_breadcrumbs') && $options['if_disable_breadcrumbs'] != "1") ifeature_breadcrumbs(); ?>
-
-		<div class="content_padding">
-		
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		
-			<div class="post_container">
-			
-				<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-
-					<?php if ($hidetitle == ""): ?>
-				
-			
-
-					<h2 class="posts_title"><?php the_title(); ?></h2>
-						<?php endif;?>
-
-
-					<div class="entry">
-
-						<?php the_content(); ?>
-
-						<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
-
-					</div><!--end entry-->
-
-				<?php edit_post_link ( __( 'Edit this entry.' , 'ifeature' ) , '<p>', '</p>'); ?>
-
-				</div><!--end post-->
-				
-			<?php comments_template(); ?>
-
-			<?php endwhile; endif; ?>
-			</div><!--end post_container-->
-			
-		</div><!--end content_padding-->
-		
-	</div><!--end content_left-->
-
-	<div id="sidebar_right"><?php get_sidebar(); ?></div>
-</div><!--end content_wrap-->
+<?php
+	foreach(explode(",", $page_section_order) as $key) {
+		$fn = 'chimps_' . $key;
+		if(function_exists($fn)) {
+			call_user_func_array($fn, array());
+		}
+	}
+?>
+	
+</div>
 
 <div style=clear:both;></div>
 <?php get_footer(); ?>
