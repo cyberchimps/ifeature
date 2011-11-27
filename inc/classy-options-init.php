@@ -62,6 +62,8 @@ $options
 	->section("Header")
 		->subsection("Header Options")
 			->upload($themeslug."_logo", "Custom Logo")
+			->checkbox($themeslug."_enable_header_contact", "Header Contact Area")
+			->textarea($themeslug."_header_contact", "Enter Your Information")
 			->checkbox($themeslug."_show_description", "Show Site Description")
 			->text($themeslug."_icon_margin", "Social Icon Margin Top", array('default' => '10px'))
 			->upload($themeslug."_favicon", "Custom Favicon")

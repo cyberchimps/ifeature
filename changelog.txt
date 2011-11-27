@@ -1,6 +1,14 @@
 iFeature Changelog
 
 ****************************
+
+Version 3.0.2 (11-27-11)
+-Fixed Google Analytics code option.
+-Added missing Header Contact area option.
+
+Version 3.0.1 (11-26-11)
+-Removed .gitignore file.
+
 Version 3.0 (11-26-11)
 -Introduction of CyberChimps Core WordPress Framework. 
 -New Theme Options panel using Classy Options Framework.

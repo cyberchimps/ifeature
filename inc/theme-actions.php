@@ -72,6 +72,16 @@ global $options, $themeslug;?>
 			<!-- End @Core header sitename hook -->
 				
 		</div>	
+		
+				<div id="header_contact" class="grid_6">
+				&nbsp;
+			<?php if ($options->get($themeslug.'_enable_header_contact') == '1'	): ?>
+
+		<!-- Begin @Core header contact area hook -->
+			<?php chimps_header_contact_area(); ?>
+		<!-- End @Core header contact area hook -->
+					<?php endif ; ?>
+		</div>	
 			
 					
 	</div>
