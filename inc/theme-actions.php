@@ -99,7 +99,7 @@ global $options, $themeslug;?>
 			<?php endif; ?>
 		</div>
 			
-		<div id="social" class="grid_6">
+		<div class="grid_6">
 			
 			<!-- Begin @Core header social icon hook -->
 				<?php chimps_header_social_icons(); ?> 
