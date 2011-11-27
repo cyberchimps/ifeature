@@ -77,18 +77,21 @@ class ClassyOptions {
 				<div class="logo">
 				<h2><?php esc_html_e($this->name); ?></h2>
 				</div>
+				<div id="upgrade">
+				<strong><a href="http://cyberchimps.com/ifeaturepro/" target="_blank" class="upgrade">Want more choices? Upgrade to iFeature Pro 3 for amazing new features!</a></strong>
+				</div>
 				<div class="clear"></div>
 					<p class="submit">
 						<input type="submit" class="button-primary" name="update" value="<?php esc_attr_e( 'Save Options' ); ?>" />
 					</p>
 				<div class="menu">
 					<ul>
-						<li><a href="http://cyberchimps.com/support" target="_blank"><?php printf( __( 'Support', 'ifeature' )); ?></a></li>
+						<li><a href="http://cyberchimps.com/ifeaturepro/" target="_blank"><?php printf( __( 'iFeature Pro', 'ifeature' )); ?></a></li>
+						<li><a href="http://cyberchimps.com/store/" target="_blank"><?php printf( __( 'CyberChimps Store', 'ifeature' )); ?></a></li>
 						<li><a href="http://cyberchimps.com/ifeature-free/docs" target="_blank"> <?php printf( __( 'Documentation', 'ifeature' )); ?></a></li>
 						<li><a href="http://cyberchimps.com/forum/" target="_blank"><?php printf( __( 'Forum', 'ifeature' )); ?></a></li>
 						<li><a href="http://twitter.com/#!/cyberchimps" target="_blank"><?php printf( __( 'Twitter', 'ifeature' ));?></a></li>
 						<li><a href="http://facebook.com/cyberchimps/" target="_blank"><?php printf( __( 'Facebook', 'ifeature' ));?></a></li>
-						<li><a href="http://cyberchimps.com/store/" target="_blank"><?php printf( __( 'CyberChimps Store', 'ifeature' )); ?></a></li>
 						<li><a href="http://cyberchimpspro.com/" target="_blank"><?php printf( __( 'CyberChimps Pro', 'ifeature' )); ?></a></li>
 					</ul>
 				</div>
