@@ -24,7 +24,20 @@ $terms2 = get_terms('category', 'hide_empty=0');
 
 $options
 		->section("Welcome")
-		->info("<iframe width='480' height='360' src='http://www.youtube.com/embed/LFWa721Im_g' frameborder='0' allowfullscreen></iframe>")
+		->info("<h1>iFeature 3</h1>
+		<h2>A Different Kind of WordPress Theme</h2>
+<strong>Intuitive New Theme Options. New Design. Post Formats.</strong>
+<p>iFeature 3 is one of the most advanced personal content management WordPress Themes in the world and now offers intuitive theme options which make using iFeature even more personal and fun than ever before.</p>
+
+<p>To get started simply work your way through the menus to the left, select your options, add your content, and always remember to hit save after making any changes.</p>
+
+<p>If you want even more amazing new options <a href='http://cyberchimps.com/ifeaturepro/' target='_blank'>upgrade to iFeature Pro 3</a> which includes Drag & Drop Page Elements, the iFeature Pro Slider with full-width custom slides, 8 beautiful preselected color schemes, more custom color pickers, amazing new background images, a featured posts section, callout section, more widgetized boxes, expanded typography including TypeKit support, and many more amazing new features please visit <a href='http://cyberchimps.com/ifeaturepro/' target='_blank'>CyberChimps.com</a> to learn more!
+
+</p>
+
+<p>We tried to make iFeature 3 as easy to use as possible, but if you still need help please read the <a href='http://cyberchimps.com/ifeature-free/docs/' target='_blank'>documentation</a>, and visit our <a href='http://cyberchimps.com/forum/' target='_blank'>support forum</a>.</p>
+
+<p>Thank you for using iFeature 3, a <a href='http://cyberchimps.com' target='_blank'>CyberChimps WordPress Theme</a>.</p>")
 		->section("Design")
 		->open_outersection()
 			->select($themeslug."_color_scheme", "Select a Color Scheme", array( 'options' => array("grey" => "Grey (default)", "green" => "Green"), 'default' => 'grey'))
