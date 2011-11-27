@@ -75,7 +75,7 @@ class ClassyOptions {
 
 			<div id="header">
 				<div class="logo">
-				<h2><?php esc_html_e($this->name); ?></h2>
+				<h2>iFeature 3 Options</h2>
 				</div>
 				<div id="upgrade">
 				<strong><a href="http://cyberchimps.com/ifeaturepro/" target="_blank" class="upgrade">Want more choices? Upgrade to iFeature Pro 3 for amazing new features!</a></strong>
