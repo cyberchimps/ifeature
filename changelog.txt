@@ -4,6 +4,7 @@ iFeature Changelog
 
 Version 3.0.3 (11-28-11)
 -Adjustment to search results text.
+-Posts with no title will now display "Untitled".
 -Fixed child theme support.
 -Adjustment to UL in comments.
 
