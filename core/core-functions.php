@@ -31,6 +31,19 @@ function chimps_text_domain() {
 		return;    
 }
 
+//Add title to untitled posts
+
+add_filter('the_title', 'startup_title');
+
+function startup_title($title) {
+
+	if ($title == '') {
+		return 'Untitled';
+	} else {
+		return $title;
+	}
+}
+
 	add_theme_support(
 		'post-formats',
 		array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat')

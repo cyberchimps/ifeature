@@ -4,6 +4,8 @@ iFeature Changelog
 
 Version 3.0.3 (11-28-11)
 -Adjustment to search results text.
+-Fixed child theme support.
+-Adjustment to UL in comments.
 
 Version 3.0.2 (11-27-11)
 -Fixed Google Analytics code option.

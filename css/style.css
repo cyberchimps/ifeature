@@ -228,7 +228,7 @@ table {border-bottom: 1px solid #DDD;}
 
 pre {margin-left: 20px;}
 
-ol {list-style-position: inside;margin-left: 21px; list-style-type: }
+ol, ul {list-style-position: inside;margin-left: 21px; list-style-type: }
 
 /* Sidebar  */
 
@@ -542,7 +542,7 @@ ol.commentlist li.comment ul.children li.depth-5 { }
 ol.commentlist li.comment ul.children li.odd { }
 ol.commentlist li.even { background: #fafafa;border: 1px solid #ccc;border-radius: 4px;-moz-border-radius: 4px; }
 ol.commentlist li.odd { background: #fff;border: 1px solid #ccc;border-radius: 4px;-moz-border-radius: 4px; }
-ol.commentlist li.parent { border-left: 1px solid #111; }
+ol.commentlist li.parent { }
 ol.commentlist li.thread-alt { }
 ol.commentlist li.thread-even { }
 ol.commentlist li.thread-odd { }
