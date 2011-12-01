@@ -265,11 +265,11 @@ function chimps_header_social_icons_content() {
 	global $options, $themeslug; //call globals
 	
 	$facebook		= $options->get($themeslug.'_facebook');
-	$hidefacebook   = $options->get($themeslug.'_hide_facebook');
+	$hidefacebook   = $options->get($themeslug.'_hide_facebook_icon');
 	$twitter		= $options->get($themeslug.'_twitter');;
-	$hidetwitter    = $options->get($themeslug.'_hide_twitter');;
+	$hidetwitter    = $options->get($themeslug.'_hide_twitter_icon');;
 	$gplus		    = $options->get($themeslug.'_gplus');
-	$hidegplus      = $options->get($themeslug.'_hide_gplus');
+	$hidegplus      = $options->get($themeslug.'_hide_gplus_icon');
 	$flickr		    = $options->get($themeslug.'_flickr');
 	$hideflickr     = $options->get($themeslug.'_hide_flickr');
 	$myspace	    = $options->get($themeslug.'_myspace');
@@ -283,7 +283,7 @@ function chimps_header_social_icons_content() {
 	$email			= $options->get($themeslug.'_email');
 	$hideemail      = $options->get($themeslug.'_hide_email');
 	$rss			= $options->get($themeslug.'_rsslink');
-	$hiderss   		= $options->get($themeslug.'_hide_rss');
+	$hiderss   		= $options->get($themeslug.'_hide_rss_icon');
 	
 	if ($options->get($themeslug.'_icon_style') == '') {
 	
@@ -301,22 +301,22 @@ function chimps_header_social_icons_content() {
 
 	<div class="icons">
 
-		<?php if ($hidefacebook != '0' AND $facebook != '' ):?>
+		<?php if ($hidefacebook == '1' AND $facebook != '' OR $hidefacebook == '' AND $facebook != '' ):?>
 			<a href="<?php echo $facebook ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/<?php echo $folder; ?>/facebook.png" alt="Facebook" /></a>
 		<?php endif;?>
-		<?php if ($hidefacebook != '0' AND $facebook == '' ):?>
+		<?php if ($hidefacebook == '1' AND $facebook == '' OR $hidefacebook == '' AND $facebook == '' ):?>
 			<a href="http://facebook.com" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/<?php echo $folder; ?>/facebook.png" alt="Facebook" /></a>
 		<?php endif;?>
-		<?php if ($hidetwitter == '1' AND $twitter != '' ):?>
+		<?php if ($hidetwitter == '1' AND $twitter != '' OR $hidetwitter == '' AND $twitter != '' ):?>
 			<a href="<?php echo $twitter ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/<?php echo $folder; ?>/twitter.png" alt="Twitter" /></a>
 		<?php endif;?>
-		<?php if ($hidetwitter == '1' AND $twitter == '' ):?>
+		<?php if ($hidetwitter == '1' AND $twitter == '' OR $hidetwitter == '' AND $twitter == '' ):?>
 			<a href="http://twitter.com" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/<?php echo $folder; ?>/twitter.png" alt="Twitter" /></a>
 		<?php endif;?>
-		<?php if ($hidegplus == '1' AND $gplus != '' ):?>
+		<?php if ($hidegplus == '1' AND $gplus != ''  OR $hidegplus == '' AND $gplus != '' ):?>
 			<a href="<?php echo $gplus ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/<?php echo $folder; ?>/gplus.png" alt="Gplus" /></a>
 		<?php endif;?>
-		<?php if ($hidegplus == '1' AND $gplus == '' ):?>
+		<?php if ($hidegplus == '1' AND $gplus == '' OR $hidegplus == '' AND $gplus == '' ):?>
 			<a href="https://plus.google.com" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/<?php echo $folder; ?>/gplus.png" alt="Gplus" /></a>
 		<?php endif;?>
 		<?php if ($hideflickr == '1' AND $flickr != '' ):?>
@@ -355,10 +355,10 @@ function chimps_header_social_icons_content() {
 		<?php if ($hideemail == '1' AND $email == ''):?>
 			<a href="mailto:no@way.com" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/<?php echo $folder; ?>/email.png" alt="E-mail" /></a>
 		<?php endif;?>
-		<?php if ($hiderss == '1' and $rss != '' ):?>
+		<?php if ($hiderss == '1' and $rss != '' OR $hiderss == '' and $rss != '' ):?>
 			<a href="<?php echo $rss ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/<?php echo $folder; ?>/rss.png" alt="RSS" /></a>
 		<?php endif;?>
-		<?php if ($hiderss == '1' and $rss == ''  ):?>
+		<?php if ($hiderss == '1' and $rss == '' OR $hiderss == '' and $rss == '' ):?>
 			<a href="<?php bloginfo('rss2_url'); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/<?php echo $folder; ?>/rss.png" alt="RSS" /></a>
 		<?php endif;?>
 	
@@ -374,12 +374,12 @@ function chimps_header_social_icons_content() {
 function chimps_nav() {
 	global $options, $themeslug; //call globals 
 	
-	if ($options->get($themeslug.'_hide_home_icon') != "1" && $options->get($themeslug.'_hide_search') != "1") {
-		$grid = 'grid_12';
+	if ($options->get($themeslug.'_hide_home_icon') != "0" && $options->get($themeslug.'_hide_search') != "0") {
+		$grid = 'grid_9';
 	}
 	
 	else {
-		$grid = 'grid_9';
+		$grid = 'grid_12';
 	}
 	
 	?>

@@ -42,13 +42,15 @@ echo "<div id='slider-wrapper'>";
 		
 /* Define blog category */
 
-	if ($category == 'All') {
+	if ($category == 'all' OR $category == '') {
 		$blogcategory = '';
 	}
 	
 	else {
 		$blogcategory = $category;
 	}
+	
+
 	
 /* End blog category */
 		
