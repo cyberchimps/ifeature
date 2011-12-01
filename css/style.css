@@ -186,6 +186,10 @@ ol {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
 }
 
+.next-posts-single {text-align:right;padding:5px; margin-top:-35px;}
+
+.prev-posts-single {text-align:left;padding:5px; margin-top: -10px; margin-bottom: 5px; margin-left: -5px; max-width:300px;}
+
 .comments {text-align: left;float: left;padding-top: 3px;font-size: 12px;}
 
 .share {text-align:right;float:right;}

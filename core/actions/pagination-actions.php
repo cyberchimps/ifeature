@@ -67,12 +67,11 @@ function chimps_wp_link_pages() {
 * @since 1.0
 */
 function chimps_post_pagination_content() {
-	global $options, $themeslug; ?>
-<?php if ($options->get($themeslug.'_post_pagination') == "1"): ?>
-
-				<div style="text-align:left;padding:5px; margin-top: -10px; margin-bottom: 5px; margin-left: -5px;"><?php previous_post_link(); ?></div> <div style="float:right;padding:5px; margin-top:-35px;"><?php next_post_link(); ?></div>
-					<?php endif; 
+	global $options, $themeslug?>
 	
+	<?php if ($options->get($themeslug.'_post_pagination') != "0"):?>
+	<div class="prev-posts-single"><?php previous_post_link(); ?></div> <div class="next-posts-single"><?php next_post_link(); ?></div>
+	<?php endif; 
 }
 
 /**
