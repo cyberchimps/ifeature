@@ -9,6 +9,7 @@ Version 3.0.3 (12-01-11)
 -Adjustment to UL in comments.
 -Fixed bug where not keymaster admins in multisite installs could not access theme options.
 -Changed footer styling.
+-Fixed visual issues with IE. 
 
 Version 3.0.2 (11-27-11)
 -Fixed Google Analytics code option.
