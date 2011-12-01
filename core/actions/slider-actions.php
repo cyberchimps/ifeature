@@ -114,8 +114,9 @@ echo "<div id='slider-wrapper'>";
 	    
 	     $navigation = 'false'; 
 	    	echo '<style type="text/css">';
-			echo '.nivo-controlNav {display: none;}';
-			echo '#slider {margin-bottom: 5px;}';
+			echo ".nivo-controlNav {display: none;}";
+		echo ".slider_nav {display: none;}";
+		echo '#slider-wrapper {margin-bottom: 20px;}';
 			echo '</style>';
 	    
 	    }

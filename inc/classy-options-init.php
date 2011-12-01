@@ -51,7 +51,7 @@ $options
 			->checkbox($themeslug."_custom_background", "Toggle to use a custom background")
 			->upload($themeslug."_background_upload", "Background Image")
 			->radio($themeslug."_bg_image_position", "Select the Image Position", array( 'options' => array("top left" => "Left", "top center" => "Center", "top right" => "Right")))
-			->radio($themeslug."_bg_image_repeat", "Select the Image Repeat", array( 'options' => array("repeat-x" => "No Repeat", "repeat" => "Tile", "repeat-x" => "Tile Horizontally", "repeat-y" => "Tile Vertically")))
+			->radio($themeslug."_bg_image_repeat", "Select the Image Repeat", array( 'options' => array("repeat" => "Tile", "repeat-x" => "Tile Horizontally", "repeat-y" => "Tile Vertically", "no-repeat" => "No Tile")))
 			->radio($themeslug."_bg_image_attachment", "Select the Image Attachment", array( 'options' => array("scroll" => "Scroll", "fixed" => "Fixed")))
 			->color($themeslug."_background_color", "Select a Background Color")
 		->subsection_end()

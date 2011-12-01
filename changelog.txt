@@ -10,6 +10,8 @@ Version 3.0.3 (12-01-11)
 -Fixed bug where not keymaster admins in multisite installs could not access theme options.
 -Changed footer styling.
 -Fixed visual issues with IE. 
+-Added missing No Tile option to custom backgrounds. 
+-Disabling slider navigation also hides slider nav style.
 
 Version 3.0.2 (11-27-11)
 -Fixed Google Analytics code option.
