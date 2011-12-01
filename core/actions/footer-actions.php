@@ -35,28 +35,28 @@ function chimps_footer_widgets() {
 
    	if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer") ) { ?>
 		
-		<div class="footer-widgets">
+		<div class="grid_3 footer-widgets">
 			<h3 class="footer-widget-title"><?php printf( __( 'Recent Posts', 'core' )); ?></h3>
 			<ul>
 				<?php wp_get_archives('type=postbypost&limit=4'); ?>
 			</ul>
 		</div>
 		
-		<div class="footer-widgets">
+		<div class="grid_3 footer-widgets">
 			<h3 class="footer-widget-title"><?php printf( __( 'Archives', 'core' )); ?></h3>
 			<ul>
 				<?php wp_get_archives('type=monthly&limit=16'); ?>
 			</ul>
 		</div>
 
-		<div class="footer-widgets">
+		<div class="grid_3 footer-widgets">
 			<h3 class="footer-widget-title"><?php printf( __( 'Links', 'core' )); ?></h3>
 			<ul>
 				<?php wp_list_bookmarks('categorize=0&title_li='); ?>
 			</ul>
 		</div>
 
-		<div class="footer-widgets">
+		<div class="grid_3 footer-widgets">
 			<h3 class="footer-widget-title"><?php printf( __( 'WordPress', 'core' )); ?></h3>
 			<ul>
     		<?php wp_register(); ?>

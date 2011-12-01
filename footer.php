@@ -16,7 +16,7 @@ global $options, $themeslug;
 </div><!--end container 12 main wrap-->	
 
 <div id="footer">
-     <div id="footer_container">
+     <div class="container_12">
     	
 	<!-- Begin @Core footer hook content-->
 		<?php chimps_footer(); ?>
