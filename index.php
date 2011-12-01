@@ -20,7 +20,7 @@
 
 		<div id="content" class="grid_8">
 		
-	<?php if ($options->get($themeslug.'_hide_slider_blog') == '1' ): ?>
+	<?php if ($options->get($themeslug.'_hide_slider_blog') != '0' ): ?>
 			<!--Begin @Core index entry hook-->
 				<?php chimps_blog_slider_lite(); ?>
 			<!--End @Core index entry hook-->

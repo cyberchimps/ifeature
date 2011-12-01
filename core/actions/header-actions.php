@@ -177,8 +177,8 @@ function chimps_link_rel() {
 	else {
 		$font = $options->get($themeslug.'_font'); 
 	} 
-	if ($options->get($themeslug.'_color_scheme') == '') {
-		$color = 'blue';
+	if ($options->get($themeslug.'_color_scheme') != 'green') {
+		$color = 'grey';
 	}
 	else {
 		$color = $options->get($themeslug.'_color_scheme');
@@ -301,10 +301,10 @@ function chimps_header_social_icons_content() {
 
 	<div class="icons">
 
-		<?php if ($hidefacebook == '1' AND $facebook != '' ):?>
+		<?php if ($hidefacebook != '0' AND $facebook != '' ):?>
 			<a href="<?php echo $facebook ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/<?php echo $folder; ?>/facebook.png" alt="Facebook" /></a>
 		<?php endif;?>
-		<?php if ($hidefacebook == '1' AND $facebook == '' ):?>
+		<?php if ($hidefacebook != '0' AND $facebook == '' ):?>
 			<a href="http://facebook.com" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/<?php echo $folder; ?>/facebook.png" alt="Facebook" /></a>
 		<?php endif;?>
 		<?php if ($hidetwitter == '1' AND $twitter != '' ):?>
@@ -389,7 +389,7 @@ function chimps_nav() {
 	<div class="grid_12" id="imenu">
 
 		<div id="nav" class="<?php echo $grid; ?>">
-			<?php if ($options->get($themeslug.'_hide_home_icon') == "1"):?><div id="home"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ;?>/images/home.png" alt="home" /></a></div><?php endif;?>
+			<?php if ($options->get($themeslug.'_hide_home_icon') != "0"):?><div id="home"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ;?>/images/home.png" alt="home" /></a></div><?php endif;?>
 		    <?php wp_nav_menu( array(
 		    'theme_location' => 'header-menu', // Setting up the location for the main-menu, Main Navigation.
 		    'fallback_cb' => 'chimps_menu_fallback', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
@@ -397,7 +397,7 @@ function chimps_nav() {
 		);
     	?>
    		</div>
-   		<?php if ($options->get($themeslug.'_hide_search') == "1"):?>
+   		<?php if ($options->get($themeslug.'_hide_search') != "0"):?>
 		<div class="grid_2">
 			<?php get_search_form(); ?>
 		</div>

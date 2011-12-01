@@ -8,6 +8,7 @@ Version 3.0.3 (12-01-11)
 -Fixed child theme support.
 -Adjustment to UL in comments.
 -Fixed bug where not keymaster admins in multisite installs could not access theme options.
+-Changed footer styling.
 
 Version 3.0.2 (11-27-11)
 -Fixed Google Analytics code option.
