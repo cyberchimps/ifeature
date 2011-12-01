@@ -40,9 +40,9 @@ function chimps_post_byline_content() {
 	$hidden = $options->get($themeslug.'_hide_byline');?>
 	
 	<div class="meta">
-		<?php if (($hidden[$themeslug.'_hide_date'])):?> <?php printf( __( 'Published on', 'core' )); ?> <a href="<?php the_permalink() ?>"><?php the_time('F jS, Y') ?></a><?php endif;?>
-		<?php if (($hidden[$themeslug.'_hide_author'])):?><?php printf( __( 'by', 'core' )); ?> <?php the_author_posts_link(); ?> <?php endif;?> 
-		<?php if (($hidden[$themeslug.'_hide_categories'])):?><?php printf( __( 'in', 'core' )); ?> <?php the_category(', ') ?> <?php endif;?>
+		<?php if (($hidden[$themeslug.'_hide_date']) != '0'):?> <?php printf( __( 'Published on', 'core' )); ?> <a href="<?php the_permalink() ?>"><?php the_time('F jS, Y') ?></a><?php endif;?>
+		<?php if (($hidden[$themeslug.'_hide_author']) != '0'):?><?php printf( __( 'by', 'core' )); ?> <?php the_author_posts_link(); ?> <?php endif;?> 
+		<?php if (($hidden[$themeslug.'_hide_categories']) != '0'):?><?php printf( __( 'in', 'core' )); ?> <?php the_category(', ') ?> <?php endif;?>
 		</div> <?php
 }
 
@@ -57,14 +57,14 @@ function chimps_post_bar_content() {
 	
 	
 		<div class="postbar" class="grid_8">
-		<?php if (($hidden[$themeslug.'_hide_share'])):?>
+		<?php if (($hidden[$themeslug.'_hide_share']) != '0'):?>
 			<div class="share">
 		<a href="http://www.facebook.com/share.php?u=<?php the_permalink() ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/share/facebook.png" alt="Share on Facebook" height="16px" width="16px" /></a> 
 		<a href="http://twitter.com/home?status=<?php the_permalink() ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/share/twitter.png" alt="Share on Twitter" height="16px" width="16px" /></a> 
 		<a href="http://reddit.com/submit?url=<?php the_permalink() ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/share/reddit.png" alt="Share on Reddit" height="16px" width="16px" /></a> <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php the_permalink() ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/share/linkedin.png" alt="Share on LinkedIn" height="16px" width="16px" /></a>	
 		</div><!--end share-->
 	<?php endif;?>		
-		<?php if (($hidden[$themeslug.'_hide_comments'])):?>
+		<?php if (($hidden[$themeslug.'_hide_comments']) != '0'):?>
 		<div class="comments">
 			<img src="<?php echo get_template_directory_uri(); ?>/images/Commentsgrey.png" height="21px" width="21px" alt="comments"/>&nbsp;
 				<?php comments_popup_link( __('No Comments &#187;', 'core' ), __('1 Comment &#187;', 'core' ), __('% Comments &#187;' , 'core' )); //need a filer here ?>
@@ -100,7 +100,7 @@ function chimps_post_tags_content() {
 	global $options, $themeslug; 
 	$hidden = $options->get($themeslug.'_hide_byline'); ?>
 
-	<?php if (has_tag() AND ($hidden[$themeslug.'_hide_tags'])):?>
+	<?php if (has_tag() AND ($hidden[$themeslug.'_hide_tags']) != '0'):?>
 	<div class="tags">
 			<?php the_tags('Tags: ', ', ', '<br />'); ?>
 		
