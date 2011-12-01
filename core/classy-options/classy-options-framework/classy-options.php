@@ -11,7 +11,7 @@ class ClassyOptions {
 	}
 
 	function admin_menu() {
-		$page = add_theme_page( 'iFeature Options', 'iFeature Options', 'edit_themes', $this->id, array( $this, 'render' ) );
+		$page = add_theme_page( 'iFeature Options', 'iFeature Options', 'edit_theme_options', $this->id, array( $this, 'render' ) );
 
 		add_action( "admin_print_styles-$page", array($this, 'load_styles') );
 		add_action( "admin_print_scripts-$page",  array($this, 'load_scripts') );

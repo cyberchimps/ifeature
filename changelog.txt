@@ -2,11 +2,12 @@ iFeature Changelog
 
 ****************************
 
-Version 3.0.3 (11-28-11)
+Version 3.0.3 (12-01-11)
 -Adjustment to search results text.
 -Posts with no title will now display "Untitled".
 -Fixed child theme support.
 -Adjustment to UL in comments.
+-Fixed bug where not keymaster admins in multisite installs could not access theme options.
 
 Version 3.0.2 (11-27-11)
 -Fixed Google Analytics code option.
