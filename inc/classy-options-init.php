@@ -119,7 +119,7 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 			->select($themeslug.'_slider_category', 'Select the post category', array( 'options' => $blogoptions ))
 			->text($themeslug."_slider_posts_number", "Number of Featured Blog Posts")
 			->text($themeslug."_slider_delay", "Slider Delay")
-			->checkbox($themeslug."_slider_navigation", "Slider Navigation" , array('default' => true))
+			->checkbox($themeslug."hide_slider_navigation", "Slider Navigation" , array('default' => true))
 		->subsection_end()->subsection("SEO")
 			->textarea($themeslug."_home_description", "Home Description")
 			->textarea($themeslug."_home_keywords", "Home Keywords")

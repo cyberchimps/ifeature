@@ -42,7 +42,7 @@ echo "<div id='slider-wrapper'>";
 		
 /* Define blog category */
 
-	if ($category == 'all' OR $category == '') {
+	if ($category == 'all' OR $category == 'All' OR $category == '') {
 		$blogcategory = '';
 	}
 	
@@ -109,7 +109,7 @@ echo "<div id='slider-wrapper'>";
 	    	$delay = '3500';
 	    else $delay = $options->get($themeslug.'_slider_delay');
 	  
-	    if ($options->get($themeslug.'_slider_navigation') != '0') {
+	    if ($options->get($themeslug.'hide_slider_navigation') != '0' OR $options->get($themeslug.'hide_slider_navigation') == '' ) {
 	    	$navigation = 'true';
 	    }
 	    else {
