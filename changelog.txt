@@ -5,6 +5,7 @@ iFeature Changelog
 Version 3.0.4 (12-05-11)
 -Removed cursor:pointer from iMenu css. 
 -Removed call to missing stylesheet. 
+-Fixed post formats icons not displaying without saving settings. 
 
 Version 3.0.3 (12-01-11)
 -Adjustment to search results text.

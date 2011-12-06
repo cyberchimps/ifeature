@@ -133,7 +133,7 @@ function chimps_index_loop_content($content) {
 		
 		<?php ob_start(); ?>
 			
-			<?php if ($options->get($themeslug.'_post_formats') == '1') : ?>
+			<?php if ($options->get($themeslug.'_post_formats') != '0') : ?>
 			<div class="postformats"><!--begin format icon-->
 				<img src="<?php echo get_template_directory_uri(); ?>/images/formats/<?php echo $format ;?>.png" alt="formats" />
 			</div><!--end format-icon-->
