@@ -87,7 +87,7 @@ function chimps_comments_loop() {
 	</div>
 
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
-		<p><?php printf (__( 'You must be', 'core' )); ?><a href="<?php echo wp_login_url( get_permalink() ); ?>"><?php printf( __( 'logged in', 'core' ), '</a>', __('to post a comment.', 'ifeture' )); ?></p>
+		<p><?php printf (__( 'You must be', 'core' )); ?><a href="<?php echo wp_login_url( get_permalink() ); ?>"><?php printf( __( 'logged in', 'core' ), '</a>', __('to post a comment.', 'core' )); ?></p>
 	<?php else : ?>
 	
 	<?php comment_form(); ?>

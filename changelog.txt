@@ -2,10 +2,14 @@ iFeature Changelog
 
 ****************************
 
-Version 3.0.4 (12-05-11)
+Version 3.0.4 (12-08-11)
 -Removed cursor:pointer from iMenu css. 
 -Removed call to missing stylesheet. 
+-Removed unecessary template file in Core directory.
 -Fixed post formats icons not displaying without saving settings. 
+-jQuery no-conflict fix.
+-Now enqueing WP jQuery library.
+-Changed old 'ifeature' textdomain to 'core' in comments.php. 
 
 Version 3.0.3 (12-01-11)
 -Adjustment to search results text.
