@@ -11,6 +11,7 @@ Version 3.0.4 (12-08-11)
 -Now enqueing WP jQuery library.
 -Changed old 'ifeature' textdomain to 'core' in comments.php. 
 -Minor CSS tweak to meta link colors. 
+-Centered theme option panel.
 
 Version 3.0.3 (12-01-11)
 -Adjustment to search results text.

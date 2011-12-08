@@ -46,7 +46,8 @@ div.updated, .login .message {
 	width:642px;
 }
 #of_container {
-	margin: 10px 0;
+	margin: auto;
+	margin-top: 25px;
 	width: 850px;
 	position:relative;
 	z-index: 0;
@@ -61,11 +62,16 @@ div.updated, .login .message {
 	background: -ms-linear-gradient(top,  #f8f8f8 0%,#ededed 40%,#dddddd 100%); /* IE10+ */
 	background: linear-gradient(top,  #f8f8f8 0%,#ededed 40%,#dddddd 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
-	border: 1px solid #ccc;
-	border-bottom: 1px solid #999;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;	
+	border-bottom: 1px solid #aaa;
 	padding: 0px 10px 10px 10px;
 	border-radius: 4px 4px 0px 0px;
 	-moz-border-radius: 4px 4px 0px 0px;
+	-moz-box-shadow:0 0 4px #AAAAAA;
+    -webkit-box-shadow:0 0 4px #AAAAAA;
+    box-shadow:0 0 4px #AAAAAA;
 }
 #of_container #header .logo {
 	float: left;
@@ -127,9 +133,11 @@ input.button-primary {font-size:14px !important;}
 
 #of_container #main {
 	background: url(../images/carbon_fibre.png) #212121;
-	border-left: 1px solid #d8d8d8;
-	border-right: 1px solid #d8d8d8;
-	border-bottom: 1px solid #d8d8d8;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	-moz-box-shadow:0 0 4px #AAAAAA;
+    -webkit-box-shadow:0 0 4px #AAAAAA;
+    box-shadow:0 0 4px #AAAAAA;
 }
 #of_container #of-nav {
 	float: left;
@@ -157,7 +165,7 @@ input.button-primary {font-size:14px !important;}
 }
 #of_container #content {
 	float: left;
-	min-height: 560px;
+	min-height: 520px;
 	width: 660px;
 	margin-left: -1px;
 	padding: 0 14px;
@@ -404,7 +412,9 @@ input.button-primary {font-size:14px !important;}
 	background: -ms-linear-gradient(top,  #f8f8f8 0%,#ededed 40%,#dddddd 100%); /* IE10+ */
 	background: linear-gradient(top,  #f8f8f8 0%,#ededed 40%,#dddddd 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
-	border: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
 	border-top: 1px solid #aaa;
 	padding: 10px 20px 0px 20px;
 	height: 35px;
@@ -415,6 +425,9 @@ input.button-primary {font-size:14px !important;}
 	-webkit-border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
 	border-bottom-left-radius: 3px;
+	-moz-box-shadow:0 0 4px #AAAAAA;
+    -webkit-box-shadow:0 0 4px #AAAAAA;
+    box-shadow:0 0 4px #AAAAAA;
 }
 
 #of_container .subsection > h3 {
@@ -520,6 +533,7 @@ span.minus {
   border-radius: 4px;
   -moz-border-radius: 4px;
 }
+
 
 #upgrade {float:right;margin-top:19px;}
 #upgrade2 {margin-top:15px;}
