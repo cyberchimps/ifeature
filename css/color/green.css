@@ -4,8 +4,6 @@ a {color: #336600;}
 
 a:hover {color: #99cc66;}
 
-.meta a{color: #99cc66}
-
 #imenu {
 	background: #336600; /* Old browsers */
 	background: -moz-linear-gradient(top,  #99cc66 0%, #336600 100%); /* FF3.6+ */
