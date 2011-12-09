@@ -2,7 +2,7 @@ iFeature Changelog
 
 ****************************
 
-Version 3.0.4 (12-08-11)
+Version 3.0.4 (12-09-11)
 -Removed cursor:pointer from iMenu css. 
 -Removed call to missing stylesheet. 
 -Removed unecessary template file in Core directory.
