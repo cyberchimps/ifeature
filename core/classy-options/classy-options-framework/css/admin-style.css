@@ -2,6 +2,8 @@
 /* OptionsFramework Admin Styles */
 /*-------------------------------------------------------------------------------------------*/
 
+.menu {padding-top: 0em;}
+
 .section-info{
   background: #fff;
   border: 1px solid #ccc;
