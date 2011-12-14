@@ -34,4 +34,4 @@ function chimps_404_content() {
 * End
 */
 
-?><img src="../../images/confusedchimp.png" alt="confusedchimp" width="1000" height="1000" />
+?>
