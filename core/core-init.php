@@ -35,7 +35,6 @@ require_once ( get_template_directory() . '/core/actions/search-actions.php' );
 require_once ( get_template_directory() . '/core/actions/slider-actions.php' );
 require_once ( get_template_directory() . '/core/actions/twitterbar-actions.php' );
 
-
 //Options
 
 require_once ( get_template_directory() . '/core/classy-options/options-themes.php' );

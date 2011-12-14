@@ -6,17 +6,9 @@ add_action('chimps_page_section', 'chimps_page_section_content' );
 function chimps_page_section_content() { 
 	global $options, $themeslug, $post;
 	
-	
-	$enable = get_post_meta($post->ID, 'page_enable_slider' , true);
-	$size = get_post_meta($post->ID, 'page_slider_size' , true);
 	$hidetitle = get_post_meta($post->ID, 'hide_page_title' , true);
 	$sidebar = get_post_meta($post->ID, 'page_sidebar' , true);
-	$callout = get_post_meta($post->ID, 'enable_callout_section' , true);
-	$twitterbar = get_post_meta($post->ID, 'enable_twitter_bar' , true);
-	$enableboxes = get_post_meta($post->ID, 'enable_box_section' , true);
-	$pagecontent = get_post_meta($post->ID, 'hide_page_content' , true);
-	$test = get_post_meta($post->ID, 'page_section_order' , true);
-	
+
 	if ($sidebar == "1" ) {
 		$content_grid = 'grid_12';
 	}
@@ -24,8 +16,6 @@ function chimps_page_section_content() {
 	else {
 		$content_grid = 'grid_8';
 	}
-
-
 
 ?>
 <div class="container_12">
