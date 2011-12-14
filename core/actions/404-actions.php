@@ -27,13 +27,11 @@ add_action( 'chimps_404', 'chimps_404_content' );
 */
 function chimps_404_content() {
 	$message_text = apply_filters( 'chimps_404_message', 'Error 404' ); ?>
-	<div class="error"><?php printf( __( $message_text, 'core' )); ?><br />
-		<center><img src="<?php echo get_template_directory_uri() ;?>/images/confusedchimp.png" height="400" width="400" /></center>
-	</div> <?php
+	<div class="error"><?php printf( __( $message_text, 'core' )); ?><br /></div> <?php
 }
 
 /**
 * End
 */
 
-?>
+?><img src="../../images/confusedchimp.png" alt="confusedchimp" width="1000" height="1000" />
