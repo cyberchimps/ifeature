@@ -47,9 +47,9 @@ a:hover {color: #5ca9d6;}
 
 /* Header  */
 
-#header_contact{ text-align:right;}
+header {margin-top: 15px;}
 
-#head {margin-top: 15px;}
+#header_contact{ text-align:right;}
 
 #logo {margin-bottom: 5px;}
 

@@ -5,6 +5,7 @@ iFeature Changelog
 Version 3.0.5 (12-15-11)
 -Additional visual tweaks for WordPress 3.3.
 -Minor tweak to comments hook. 
+-Minor HTML markup tweak. 
 
 Version 3.0.4 (12-09-11)
 -Removed cursor:pointer from iMenu css. 

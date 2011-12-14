@@ -34,7 +34,7 @@
 	<?php chimps_before_header(); ?> 
 <!-- End @Core before_header hook content -->
 			
-	<header id="head">
+	<header>
 	
 		<!-- Begin @iFeature header content hook-->
 			<?php ifeature_header_content(); ?> 
