@@ -15,6 +15,7 @@
 	$themenamefull = 'iFeature';
 	$themeslug = 'if';
 	$root = get_template_directory_uri(); 
+	$slider_default = "$root/images/ifeaturefree.jpg";
 	
 	
 //Redirect after activation

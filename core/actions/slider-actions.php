@@ -28,7 +28,7 @@ function chimps_blog_slider_lite_content() {
 
 /* Call globals. */	
 
-	global $themename, $themeslug, $options, $wp_query, $post;
+	global $themename, $themeslug, $options, $wp_query, $post, $slider_default;
 
 /* End globals. */
 
@@ -80,7 +80,7 @@ echo "<div id='slider-wrapper'>";
 	    	}
 	    	
 	    	else {
-	    		$image = "$root/images/ifeaturefree.jpg";
+	    		$image = $slider_default;
 	    	}
 
 	    		
