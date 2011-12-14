@@ -7,6 +7,7 @@ Version 3.0.5 (12-15-11)
 -Minor tweak to comments hook. 
 -Minor HTML markup tweak. 
 -Removed 404 image. 
+-General fixes and cleanup. 
 
 Version 3.0.4 (12-09-11)
 -Removed cursor:pointer from iMenu css. 
