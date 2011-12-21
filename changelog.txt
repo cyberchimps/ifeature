@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 3.0.6 (12-22-11)
+-Added Portuguese language support. 
+
 Version 3.0.5 (12-15-11)
 -Additional visual tweaks for WordPress 3.3.
 -Minor tweak to comments hook. 
