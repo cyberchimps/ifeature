@@ -2,6 +2,10 @@ iFeature Changelog
 
 ****************************
 
+Version 3.1 (12-29-11)
+-Changes to CyberChimps Core Framework.
+-New metabox code/styling.
+
 Version 3.0.6 (12-22-11)
 -Added Portuguese language support. 
 -Added rel="me" attribute to social icon links.
