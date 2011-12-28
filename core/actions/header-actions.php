@@ -68,7 +68,6 @@ function chimps_html_attributes() { ?>
 */
 function chimps_meta_tags() {
 	global $themeslug, $options, $post; //Call global variables
-	if(!$post) return; // in case of 404 page or something
 	$title = get_post_meta($post->ID, 'seo_title' , true);
 	$pagedescription = get_post_meta($post->ID, 'seo_description' , true);
 	$keywords = get_post_meta($post->ID, 'seo_keywords' , true);  ?>
@@ -118,7 +117,7 @@ function chimps_title_tag() {
 		bloginfo('name'); echo ' - '; wp_title(''); echo ' Archive '; 
 	}    
 	elseif (is_search()) { /*Title for search */ 
-		bloginfo('name'); echo ' - '; echo 'Search for &quot;'.wp_specialchars($s).'&quot;  '; 
+		bloginfo('name'); echo ' - '; echo 'Search for &quot;'.get_search_query().'&quot;  '; 
 	}    
 	elseif (is_404()) { /*Title for 404 */
 		bloginfo('name'); echo ' - '; echo 'Not Found '; 
