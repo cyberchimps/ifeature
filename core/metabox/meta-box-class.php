@@ -323,7 +323,7 @@ class RW_Meta_Box {
 
 	function show_field_checkbox($field, $meta) {
 		$this->show_field_begin($field, $meta);
-		echo "<input type='checkbox' class='checkbox' name='{$field['id']}' id='checkbox-{$field['id']}' " . ($meta === 'true' ? 'checked="checked"' : '' ) . " value='1'/> {$field['desc']}</td>";
+		echo "<input type='checkbox' class='checkbox' name='{$field['id']}' id='checkbox-{$field['id']}' " . ($meta === 'on' ? 'checked="checked"' : '' ) . " value='1'/> {$field['desc']}</td>";
 	}
 
 	function show_field_wysiwyg($field, $meta) {
@@ -702,7 +702,7 @@ class RW_Meta_Box {
 	}
 
 	function save_field_checkbox($post_id, $field, $old, $new) {
-		$new = $new ? "true" : "false";
+		$new = $new ? "on" : "off";
 		update_post_meta($post_id, $field['id'], $new);
 	}
 
