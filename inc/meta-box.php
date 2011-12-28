@@ -40,7 +40,6 @@ function initialize_the_meta_boxes() {
 			->single_image('slider_image', 'Slider Image', '')
 			->text('slider_text', 'Slider Text', 'Enter your slider text here')
 			->checkbox('slider_hidetitle', 'Title Bar', '', array('std' => 'true'))
-			->single_image('slider_custom_thumb', 'Custom Thumbnail', 'Use the image uploader to upload a custom navigation thumbnail')
 			->sliderhelp('', 'Need Help?', '')
 		->end();
 	

@@ -16,6 +16,8 @@
 	$themeslug = 'if';
 	$root = get_template_directory_uri(); 
 	$slider_default = "$root/images/ifeaturefree.jpg";
+	$pagedocs = 'http://cyberchimps.com/question/using-the-ifeature-free-3-page-options/';
+	$sliderdocs = 'http://cyberchimps.com/question/using-the-ifeature-3-slider/';
 	
 	
 //Redirect after activation

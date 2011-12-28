@@ -334,13 +334,17 @@ class RW_Meta_Box {
 	
 	
 	function show_field_pagehelp($field, $meta) {
+		global $themenamefull, $pagedocs; 
+		
 		$this->show_field_begin($field, $meta);
-		echo "Visit our iFeature Pro 3 Page Options help page here: <a href='http://cyberchimps.com/question/using-the-ifeature-pro-page-meta-options/' target='_blank'>Page Options Documentation</a></td>";
+		echo "Visit our $themenamefull Page Options help page here: <a href='$pagedocs' target='_blank'>Page Options Documentation</a></td>";
 	}
 		
 	function show_field_sliderhelp($field, $meta) {
+		global $themenamefull, $sliderdocs;
+		
 		$this->show_field_begin($field, $meta);
-		echo "Visit our iFeature Pro Slider help page here: <a href='http://cyberchimps.com/question/using-the-ifeature-pro-2-slider' target='_blank'>Page Options Documentation</a></td>";
+		echo "Visit our $themenamefull Slider help page here: <a href='$sliderdocs' target='_blank'>Slider Documentation</a></td>";
 	}
 	
 	function show_field_reorder($field, $meta) {
