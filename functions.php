@@ -19,8 +19,9 @@
 	$pagedocs = 'http://cyberchimps.com/question/using-the-ifeature-free-3-page-options/';
 	$sliderdocs = 'http://cyberchimps.com/question/using-the-ifeature-3-slider/';
 	
-	
-//Redirect after activation
+/* End global variables. */	
+
+//Redirect to theme options after activation
 if ( is_admin() && isset($_GET['activated'] ) && $pagenow ==	"themes.php" )
 	wp_redirect( 'themes.php?page=ifeature' );
 	
@@ -31,48 +32,48 @@ global $options, $themeslug, $post;
 $root = get_template_directory_uri(); 
 ob_start();
 ?>
-		<?php if ($options->get($themeslug.'_post_formats') == '1') : ?>
-			<div class="postformats"><!--begin format icon-->
-				<img src="<?php echo get_template_directory_uri(); ?>/images/formats/gallery.png" />
-			</div><!--end format-icon-->
-		<?php endif;?>
-				<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-					<!--Call @Core Meta hook-->
+	<?php if ($options->get($themeslug.'_post_formats') == '1') : ?>
+		<div class="postformats"><!--begin format icon-->
+			<img src="<?php echo get_template_directory_uri(); ?>/images/formats/gallery.png" />
+		</div><!--end format-icon-->
+	<?php endif;?>
+	
+		<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+		<!--Call @Core Meta hook-->
 			<?php chimps_post_byline(); ?>
-				<?php
-				if ( has_post_thumbnail() && $options->get($themeslug.'_show_featured_images') == '1' && !is_single() ) {
- 		 			echo '<div class="featured-image">';
- 		 			echo '<a href="' . get_permalink($post->ID) . '" >';
- 		 				the_post_thumbnail();
-  					echo '</a>';
-  					echo '</div>';
-				}
-			?>	
-				<div class="entry" <?php if ( has_post_thumbnail() && $options->get($themeslug.'_show_featured_images') == '1' ) { echo 'style="min-height: 115px;" '; }?>>
+		<!--End @Core Meta hook-->
+		<?php
+			if ( has_post_thumbnail() && $options->get($themeslug.'_show_featured_images') == '1' && !is_single() ) {
+ 		 		echo '<div class="featured-image">';
+ 		 		echo '<a href="' . get_permalink($post->ID) . '" >';
+ 		 			the_post_thumbnail();
+  				echo '</a>';
+  				echo '</div>';
+			}
+		?>	
+		<div class="entry" <?php if ( has_post_thumbnail() && $options->get($themeslug.'_show_featured_images') == '1' ) { echo 'style="min-height: 115px;" '; }?>>
 				
-				<?php if (!is_single()): ?>
+			<?php if (!is_single()): ?>
 				<?php $images = get_children( array( 'post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC', 'numberposts' => 999 ) );
 					if ( $images ) :
 						$total_images = count( $images );
 						$image = array_shift( $images );
 						$image_img_tag = wp_get_attachment_image( $image->ID, 'thumbnail' );
 				?>
-
-				<figure class="gallery-thumb">
-					<a href="<?php the_permalink(); ?>"><?php echo $image_img_tag; ?></a>
-					<br /><br />
-					This gallery contains <?php echo $total_images ; ?> images
-					<?php endif;?>
-				</figure><!-- .gallery-thumb -->
+			<figure class="gallery-thumb">
+				<a href="<?php the_permalink(); ?>"><?php echo $image_img_tag; ?></a>
+				<br /><br />
+				This gallery contains <?php echo $total_images ; ?> images
 				<?php endif;?>
-				
-				<?php if (is_single()): ?>
-					<?php the_content(); ?>
-				<?php endif;?>
-				</div><!--end entry-->
-
-				
-				<div style=clear:both;></div>
+			</figure><!-- .gallery-thumb -->
+			<?php endif;?>
+		
+			<?php if (is_single()): ?>
+				<?php the_content(); ?>
+			<?php endif;?>
+		</div><!--end entry-->
+		<div style=clear:both;></div>
+		
 	<?php	
 	$content = ob_get_clean();
 	
@@ -80,8 +81,6 @@ ob_start();
 }
 
 add_filter('chimps_post_formats_gallery_content', 'if_custom_gallery_post_format' ); 
-		
-/* End global variables. */	
 
 /* Begin custom excerpt functions. */	
 
