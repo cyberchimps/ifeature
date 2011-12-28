@@ -178,8 +178,6 @@ function chimps_navigation() {
 	do_action('chimps_navigation');
 }
 
-
-
 /** 
 * Pagination 
 */
@@ -196,7 +194,7 @@ function chimps_post_pagination() {
 }
 
 /** 
-* page
+* Page
 */
 function chimps_page_section() {
 	do_action('chimps_page_section');
@@ -215,6 +213,13 @@ function chimps_search() {
 
 function chimps_after_search() {
 	do_action('chimps_after_search');
+}
+
+/** 
+* Slider
+*/
+function chimps_blog_slider_lite() {
+	do_action('chimps_blog_slider_lite');
 }
 
 /** 

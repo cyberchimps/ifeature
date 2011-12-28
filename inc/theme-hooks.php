@@ -25,3 +25,29 @@ function ifeature_header_content() {
 	do_action('ifeature_header_content');
 }
 
+/**
+* Hook for the post bar
+*
+* @since 3.1
+*/
+function ifeature_post_bar() {
+	do_action('ifeature_post_bar');
+}
+
+/**
+* Hook for the Facebook and Plus One buttons
+*
+* @since 3.1
+*/
+function ifeature_fb_like_plus_one() { //this will be renamed I promise
+	do_action('ifeature_fb_like_plus_one');
+}
+
+/**
+* Hook for the Header Contact Area
+*
+* @since 3.1
+*/
+function ifeature_header_contact_area() {
+	do_action('ifeature_header_contact_area');
+}

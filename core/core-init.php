@@ -37,9 +37,6 @@ require_once ( get_template_directory() . '/core/actions/search-actions.php' );
 //Call metabox class file
 require_once ( get_template_directory() . '/core/metabox/meta-box-class.php' );
 
-//Call extend (this is only tempoaray)
-require_once ( get_template_directory() . '/core/pro/pro-init.php' );
-
 //Options
 
 require_once ( get_template_directory() . '/core/classy-options/options-themes.php' );
