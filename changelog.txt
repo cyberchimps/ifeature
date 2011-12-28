@@ -6,6 +6,7 @@ Version 3.1 (12-29-11)
 -Changes to CyberChimps Core Framework.
 -Added new theme specific hooks in light of changes to Core Framework.
 -New metabox code/styling.
+-Cleaned up functions file. 
 
 Version 3.0.6 (12-22-11)
 -Added Portuguese language support. 

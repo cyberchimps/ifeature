@@ -129,19 +129,16 @@ if ( function_exists( 'add_theme_support' ) ) {
 
  global $themename, $themeslug, $options;
 	
-		if ($options->get($themeslug.'_featured_image_height') == '') {
+	if ($options->get($themeslug.'_featured_image_height') == '') {
 			$featureheight = '100';
 	}		
-	
 	else {
 		$featureheight = $options->get($themeslug.'_featured_image_height'); 
 		
 	}
-	
-		if ($options->get($themeslug.'_featured_image_width') == "") {
+	if ($options->get($themeslug.'_featured_image_width') == "") {
 			$featurewidth = '100';
 	}		
-	
 	else {
 		$featurewidth = $options->get($themeslug.'_featured_image_width'); 
 	} 
