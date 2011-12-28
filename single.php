@@ -8,6 +8,7 @@
 	Copyright (C) 2011 CyberChimps
 */
 
+global $options, $themeslug, $post; // call globals
 
 
 /* End variable definition. */	
@@ -16,7 +17,7 @@
 get_header(); ?>
 
 <div class="container_12">
-<?php if (function_exists('chimps_breadcrumbs')) chimps_breadcrumbs(); ?>
+<?php if (function_exists('chimps_breadcrumbs') && ($options->get($themeslug.'_disable_breadcrumbs') == "1")) { chimps_breadcrumbs(); }?>
 
 	
 		<div id="content" class="grid_8">
@@ -39,7 +40,7 @@ get_header(); ?>
 				<!--End @Core post edit link hook-->
 			
 				<!--Begin @Core FB like hook-->
-					<?php chimps_fb_like_plus_one(); ?>
+					<?php ifeature_fb_like_plus_one(); ?>
 				<!--End @Core FB like hook-->
 			
 				<!--Begin @Core post tags hook-->
@@ -51,7 +52,7 @@ get_header(); ?>
 				<!--End @Core post pagination hook-->				
 								
 				<!--Begin @Core post bar hook-->
-					<?php chimps_post_bar(); ?>
+					<?php ifeature_post_bar(); ?>
 				<!--End @Core post bar hook-->
 			
 				</div><!--end post_class-->	

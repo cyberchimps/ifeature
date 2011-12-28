@@ -16,6 +16,9 @@
 
 /* Define global variables. */
 
+	global $options, $themeslug, $post; // call globals
+
+
 	$enable = get_post_meta($post->ID, 'page_enable_slider' , true);
 	$size = get_post_meta($post->ID, 'page_slider_size' , true);
 	$hidetitle = get_post_meta($post->ID, 'hide_page_title' , true);
@@ -60,6 +63,7 @@ add_action ('chimps_page_content_slider', 'chimps_page_slider_content' );
 ?>
 
 <div class="container_12">
+<?php if (function_exists('chimps_breadcrumbs') && ($options->get($themeslug.'_disable_breadcrumbs') == "1")) { chimps_breadcrumbs(); }?>
 
 <?php
 	foreach(explode(",", $page_section_order) as $key) {

@@ -17,7 +17,7 @@
 
 <div class="container_12">
 
-<?php if (function_exists('chimps_breadcrumbs')) chimps_breadcrumbs(); ?>
+<?php if (function_exists('chimps_breadcrumbs') && ($options->get($themeslug.'_disable_breadcrumbs') == "1")) { chimps_breadcrumbs(); }?>
 
 	<div id="main">
 	
