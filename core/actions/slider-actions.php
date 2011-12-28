@@ -50,8 +50,6 @@ echo "<div id='slider-wrapper'>";
 		$blogcategory = $category;
 	}
 	
-
-	
 /* End blog category */
 		
     query_posts('category_name='.$blogcategory.'&showposts=50');

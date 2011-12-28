@@ -537,10 +537,3 @@ span.minus {
   border-radius: 4px;
   -moz-border-radius: 4px;
 }
-
-
-#upgrade {float:right;margin-top:19px;}
-#upgrade2 {margin-top:15px;}
-
-.upgrade {color:#fff;text-decoration:none;padding:5px;background-color: #777;border: 1px solid #777;border-radius: 4px;-moz-border-radius: 4px;}
-.upgrade:hover{color:#fff;background-color: #444;}

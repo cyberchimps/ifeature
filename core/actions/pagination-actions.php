@@ -62,7 +62,7 @@ function chimps_wp_link_pages() {
 }
 
 /**
-* Uses wp_link_pages to display post pagination. 
+* Post pagination links 
 *
 * @since 1.0
 */

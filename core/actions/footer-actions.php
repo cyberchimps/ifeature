@@ -69,7 +69,6 @@ function chimps_footer_widgets() {
 			<?php }
 			
 			echo "<div class='clear'></div> ";
-
 }
 
 /**
@@ -101,8 +100,6 @@ function chimps_afterfooter_copyright() {
 	echo "<div id='afterfootercopyright'>";
 		echo "&copy; $copyright";
 	echo "</div>";
-	
-
 }
 
 /**
@@ -125,11 +122,10 @@ function chimps_afterfooter_menu() {
 */
 function chimps_afterfooter_credit() { ?>
 		
-		<div class="credit">
-			<a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/achimps.png" alt="credit" /></a>
-		</div> <?php 
+	<div class="credit">
+		<a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/achimps.png" alt="credit" /></a>
+	</div> <?php 
 }
-
 /**
 * End
 */

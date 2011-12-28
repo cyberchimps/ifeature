@@ -11,7 +11,7 @@ class ClassyOptions {
 	}
 
 	function admin_menu() {
-		$page = add_theme_page( 'iFeature Options', 'iFeature Options', 'edit_theme_options', $this->id, array( $this, 'render' ) );
+		$page = add_theme_page( 'iFeature Pro Options', 'iFeature Pro Options', 'edit_theme_options', $this->id, array( $this, 'render' ) );
 
 		add_action( "admin_print_styles-$page", array($this, 'load_styles') );
 		add_action( "admin_print_scripts-$page",  array($this, 'load_scripts') );
@@ -75,10 +75,7 @@ class ClassyOptions {
 
 			<div id="header">
 				<div class="logo">
-				<h2>iFeature 3 Options</h2>
-				</div>
-				<div id="upgrade">
-				<strong><a href="http://cyberchimps.com/ifeaturepro/" target="_blank" class="upgrade">Want more choices? Upgrade to iFeature Pro 3 for amazing new features!</a></strong>
+				<h2>iFeature Pro Options</h2>
 				</div>
 				<div class="clear"></div>
 					<p class="submit">
@@ -86,9 +83,9 @@ class ClassyOptions {
 					</p>
 				<div class="menu">
 					<ul class="buttons">
-						<li><a href="http://cyberchimps.com/ifeaturepro/" target="_blank"><?php printf( __( 'iFeature Pro', 'ifeature' )); ?></a></li>
 						<li><a href="http://cyberchimps.com/store/" target="_blank"><?php printf( __( 'CyberChimps Store', 'ifeature' )); ?></a></li>
-						<li><a href="http://cyberchimps.com/ifeature-free/docs" target="_blank"> <?php printf( __( 'Documentation', 'ifeature' )); ?></a></li>
+						<li><a href="http://cyberchimps.com/support" target="_blank"><?php printf( __( 'Support', 'ifeature' )); ?></a></li>
+						<li><a href="http://cyberchimps.com/ifeaturepro/docs/" target="_blank"> <?php printf( __( 'Documentation', 'ifeature' )); ?></a></li>
 						<li><a href="http://cyberchimps.com/forum/" target="_blank"><?php printf( __( 'Forum', 'ifeature' )); ?></a></li>
 						<li><a href="http://twitter.com/#!/cyberchimps" target="_blank"><?php printf( __( 'Twitter', 'ifeature' ));?></a></li>
 						<li><a href="http://facebook.com/cyberchimps/" target="_blank"><?php printf( __( 'Facebook', 'ifeature' ));?></a></li>
@@ -111,7 +108,7 @@ class ClassyOptions {
 			</div>
 			<div class="of_admin_bar">
    			    <div id="top"><a href='#TOP'><img src="<?php echo get_template_directory_uri() ;?>/images/options/top.png" /></a></div>
-				<input type="submit" class="reset-button button-secondary" name="reset" value="<?php esc_attr_e( 'Restore Defaults' ); ?>" onclick="return confirm( '<?php print esc_js( __( 'Click OK to reset. Any theme settings will be lost!', 'core' ) ); ?>' );" />
+				<input type="submit" class="reset-button button-secondary" name="reset" value="<?php esc_attr_e( 'Restore Defaults' ); ?>" onclick="return confirm( '<?php print esc_js( __( 'Click OK to reset. Any theme settings will be lost!' ) ); ?>' );" />
 				<div class="chimps"><a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri() ;?>/images/options/cyberchimpsmini.png" /></a></div>
 			</div>
 			<div class="clear"></div>

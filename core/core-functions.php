@@ -2,7 +2,7 @@
 /**
 * CyberChimps Core Framework functions
 *
-* Authors: Tyler Cunningham
+* Authors: Tyler Cunningham, Ben Allfree
 * Copyright: © 2011
 * {@link http://cyberchimps.com/ CyberChimps LLC}
 *
@@ -30,9 +30,12 @@ function chimps_text_domain() {
 		
 		return;    
 }
-
-//Add title to untitled posts
-
+	
+/**
+* Adds "untitled" to posts with no title.
+*
+* @since 1.0
+*/
 add_filter('the_title', 'startup_title');
 
 function startup_title($title) {
@@ -44,12 +47,37 @@ function startup_title($title) {
 	}
 }
 
-	add_theme_support(
-		'post-formats',
-		array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat')
-	);
-	
-	function chimps_comment($comment, $args, $depth) {
+/**
+* Truncate next/previous post link text for post pagination.
+*
+* @since 1.0
+*/
+function filter_shorten_linktext($linkstring,$link) {
+	$characters = 33;
+	preg_match('/<a.*?>(.*?)<\/a>/is',$linkstring,$matches);
+	$displayedTitle = $matches[1];
+	$newTitle = shorten_with_ellipsis($displayedTitle,$characters);
+	return str_replace('>'.$displayedTitle.'<','>'.$newTitle.'<',$linkstring);
+}
+
+function shorten_with_ellipsis($inputstring,$characters) {
+  return (strlen($inputstring) >= $characters) ? substr($inputstring,0,($characters-3)) . '...' : $inputstring;
+}
+
+// This adds filters to the next and previous links, using the above functions
+// to shorten the text displayed in the post-navigation bar. The last 2 arguments
+// are necessary; the last one is the crucial one. Saying "2" means the function
+// "filter_shorten_linktext()" takes 2 arguments. If you don't say so here, the
+// hook won't pass them when it's called and you'll get a PHP error.
+add_filter('previous_post_link','filter_shorten_linktext',10,2);
+add_filter('next_post_link','filter_shorten_linktext',10,2);
+
+/**
+* Comment function
+*
+* @since 1.0
+*/
+function chimps_comment($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
      <div id="comment-<?php comment_ID(); ?>">
@@ -74,37 +102,6 @@ function startup_title($title) {
 <?php
 }
 
-	// Menu fallback
-	
-	function chimps_menu_fallback() {
-	global $post; ?>
-	
-	<ul id="menu-nav" class="sf-menu">
-		<?php wp_list_pages( 'title_li=&sort_column=menu_order&depth=3'); ?>
-	</ul><?php
-}
-
-//Shorten previous/next post links to avoid text overlap
-function if_filter_shorten_linktext($linkstring,$link) {
-	$characters = 33;
-	preg_match('/<a.*?>(.*?)<\/a>/is',$linkstring,$matches);
-	$displayedTitle = $matches[1];
-	$newTitle = shorten_with_ellipsis($displayedTitle,$characters);
-	return str_replace('>'.$displayedTitle.'<','>'.$newTitle.'<',$linkstring);
-}
-
-function shorten_with_ellipsis($inputstring,$characters) {
-  return (strlen($inputstring) >= $characters) ? substr($inputstring,0,($characters-3)) . '...' : $inputstring;
-}
-
-// This adds filters to the next and previous links, using the above functions
-// to shorten the text displayed in the post-navigation bar. The last 2 arguments
-// are necessary; the last one is the crucial one. Saying "2" means the function
-// "filter_shorten_linktext()" takes 2 arguments. If you don't say so here, the
-// hook won't pass them when it's called and you'll get a PHP error.
-add_filter('previous_post_link','if_filter_shorten_linktext',10,2);
-add_filter('next_post_link','if_filter_shorten_linktext',10,2);
-
 
 /**
 * Breadcrumbs function
@@ -123,7 +120,7 @@ function chimps_breadcrumbs() {
     echo '<div id="crumbs" class="grid_10">';
  
     global $post;
-    $homeLink = home_url();
+    $homeLink = get_bloginfo('url');
     echo '<a href="' . $homeLink . '">' . $home . '</a> ' . $delimiter . ' ';
  
     if ( is_category() ) {
@@ -202,7 +199,7 @@ function chimps_breadcrumbs() {
  
     if ( get_query_var('paged') ) {
       if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
-      echo __('Page', 'core' ) . ' ' . get_query_var('paged');
+      echo __('Page') . ' ' . get_query_var('paged');
       if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
     }
  

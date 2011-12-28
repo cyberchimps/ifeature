@@ -19,50 +19,12 @@
 * Core Index actions
 */
 
-add_action( 'chimps_index_after_entry', 'chimps_index_after_entry_sidebar' );
-
-add_action( 'chimps_index_before_entry', 'chimps_index_before_entry_slider' );
-add_action( 'chimps_index_before_entry', 'chimps_index_before_entry_sidebar' );
-
 add_action( 'chimps_index_loop', 'chimps_index_loop_content' );
 
-add_action( 'chimps_index_entry', 'chimps_index_content_slider' );
-
-
-/**
-* Index content slider
-*
-* @since 1.0
-*/
-function chimps_index_content_slider() { 
-		global $options, $themeslug; ?>
-		
-		<?php if ($options->get($themeslug.'_hide_slider_blog') != '1' && $options->get($themeslug.'_slider_size') != "key2"): ?>
-		
-			<?php chimps_blog_slider(); ?>
-		
-	<?php endif;
-
-}
+add_action( 'chimps_index_after_entry', 'chimps_index_after_entry_sidebar' );
 
 /**
-* Index content before entry slider
-*
-* @since 1.0
-*/
-function chimps_index_before_entry_slider() { 
-		global $options, $themeslug; ?>
-		
-		<?php if ($options->get($themeslug.'_hide_slider_blog') != '1' && $options->get($themeslug.'_slider_size') == "key2"): ?>
-	
-			<?php chimps_blog_slider(); ?>
-		
-	<?php endif;
-
-}
-
-/**
-* Before entry sidebar
+* After entry sidebar
 *
 * @since 1.0
 */
@@ -73,45 +35,13 @@ function chimps_index_after_entry_sidebar() {
 	$sidebar = get_post_meta($post->ID, 'page_sidebar' , true);?>
 	
 	
-	
 	<?php if ($sidebar == "0" OR $blogsidebar == 'right' OR $blogsidebar == '' ): ?>
 	<div id="sidebar" class="grid_4">
 		<?php get_sidebar(); ?>
 	</div>
 	<?php endif;?>
-	
-	<?php if ($sidebar == "3" OR $blogsidebar == 'two-right' ): ?>
-	<div id="sidebar" class="grid_3">
-		<?php get_sidebar('left'); ?>
-	</div>
-	<?php endif;?> 
-	
-	<?php if ($sidebar == "2" OR $sidebar == "3" OR $blogsidebar == 'two-right' OR $blogsidebar == 'right-left' ): ?>
-	<div id="sidebar" class="grid_3">
-		<?php get_sidebar('right'); ?>
-	</div>
-	<?php endif;?> <?php 
+ <?php 
 }
-
-/**
-* Before entry sidebar
-*
-* @since 1.0
-*/
-function chimps_index_before_entry_sidebar() { 
-	global $options, $themeslug, $post; // call globals
-	
-	$blogsidebar = $options->get($themeslug.'_blog_sidebar');
-	$sidebar = get_post_meta($post->ID, 'page_sidebar' , true);?>
-				
-	<?php if ($sidebar == "3" OR $blogsidebar == 'right-left' ): ?>
-	<div id="sidebar" class="grid_3">
-		<?php get_sidebar('left'); ?>
-	</div>
-	<?php endif;
-	
-	}
-
 
 /**
 * Check for post format type, apply filter based on post format name for easy modification.
@@ -122,14 +52,12 @@ function chimps_index_loop_content($content) {
 
 	global $options, $themeslug, $post; //call globals
 	
-		
 	if (get_post_format() == '') {
 		$format = "default";
 	}
 	else {
 		$format = get_post_format();
 	} ?>
-	
 		
 		<?php ob_start(); ?>
 			
@@ -142,7 +70,7 @@ function chimps_index_loop_content($content) {
 					<!--Call @Core Meta hook-->
 			<?php chimps_post_byline(); ?>
 				<?php
-				if ( has_post_thumbnail() && $options->get($themeslug.'_show_featured_images') == '1' && !is_single() ) {
+				if ( has_post_thumbnail() && $options->get($themeslug.'_show_featured_images') == '1'  && !is_single()) {
  		 			echo '<div class="featured-image">';
  		 			echo '<a href="' . get_permalink($post->ID) . '" >';
  		 				the_post_thumbnail();
@@ -150,9 +78,9 @@ function chimps_index_loop_content($content) {
   					echo '</div>';
 				}
 			?>	
-				<div class="entry" <?php if ( has_post_thumbnail() && $options->get($themeslug.'_show_featured_images') == '1' ) { echo 'style="min-height: 115px;" '; }?>>
+				<div class="entry" <?php if ( has_post_thumbnail() && $options->get($themeslug.'_show_featured_images') == '1' && !is_single()  ) { echo 'style="min-height: 115px;" '; }?>>
 					<?php 
-						if ($options->get($themeslug.'_show_excerpts') == '1' && !is_single()) {
+						if ($options->get($themeslug.'_show_excerpts') == '1' && !is_single() ) {
 						the_excerpt();
 						}
 						else {

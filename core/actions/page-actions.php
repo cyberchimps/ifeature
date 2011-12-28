@@ -1,8 +1,31 @@
 <?php
+/**
+* Page actions used by the CyberChimps Core Framework 
+*
+* Author: Tyler Cunningham
+* Copyright: © 2011
+* {@link http://cyberchimps.com/ CyberChimps LLC}
+*
+* Released under the terms of the GNU General Public License.
+* You should have received a copy of the GNU General Public License,
+* along with this software. In the main directory, see: /licensing/
+* If not, see: {@link http://www.gnu.org/licenses/}.
+*
+* @package Core
+* @since 1.0
+*/
+
+/**
+* Core page actions
+*/
 
 add_action('chimps_page_section', 'chimps_page_section_content' );
 
-
+/**
+* Sets up the page content. 
+*
+* @since 1.0
+*/
 function chimps_page_section_content() { 
 	global $options, $themeslug, $post;
 	
@@ -25,10 +48,7 @@ function chimps_page_section_content() {
 			<?php get_sidebar('left'); ?>
 		</div>
 	<?php endif;?>
-	
-	
-<?php if (function_exists('chimps_breadcrumbs')) chimps_breadcrumbs(); ?>
-		
+			
 		<div id="content" class="<?php echo $content_grid; ?>">
 			
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -60,9 +80,7 @@ function chimps_page_section_content() {
 
 			<?php endwhile; endif; ?>
 			</div><!--end post_container-->
-				
-		
-		
+						
 	</div><!--end content_left-->
 	
 	<?php if ($sidebar == "0" OR $sidebar == ""): ?>
@@ -73,9 +91,5 @@ function chimps_page_section_content() {
 	
 </div><!--end container_12-->
 
-<div class='clear'>&nbsp;</div>
-
-<?php
+<div class='clear'>&nbsp;</div> <?php
 }
-
-

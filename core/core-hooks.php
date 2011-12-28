@@ -77,18 +77,11 @@ function chimps_after_content() {
 
 
 /** 
-* Entry 
+* Index
 */
-function chimps_index_before_entry() {
-	do_action('chimps_index_before_entry');
-}
 
 function chimps_index_after_entry() {
 	do_action('chimps_index_after_entry');
-}
-
-function chimps_meta() {
-	do_action('chimps_meta');
 }
 
 function chimps_index_entry() {
@@ -129,8 +122,9 @@ function chimps_after_footer() {
 /** 
 * Global 
 */
-function chimps_post_bar() {
-	do_action('chimps_post_bar');
+
+function chimps_meta() {
+	do_action('chimps_meta');
 }
 
 function chimps_post_byline() {
@@ -147,10 +141,6 @@ function chimps_link_pages() {
 
 function chimps_edit_link() {
 	do_action('chimps_edit_link');
-}
-
-function chimps_fb_like_plus_one() { //this will be renamed I promise
-	do_action('chimps_fb_like_plus_one');
 }
 
 /** 
@@ -180,10 +170,6 @@ function chimps_header_site_description() {
 	do_action('chimps_header_site_description');
 }
 
-function chimps_header_contact_area() {
-	do_action('chimps_header_contact_area');
-}
-
 function chimps_header_social_icons() {
 	do_action('chimps_header_social_icons');
 }
@@ -191,6 +177,8 @@ function chimps_header_social_icons() {
 function chimps_navigation() {
 	do_action('chimps_navigation');
 }
+
+
 
 /** 
 * Pagination 
@@ -208,7 +196,7 @@ function chimps_post_pagination() {
 }
 
 /** 
-* Page
+* page
 */
 function chimps_page_section() {
 	do_action('chimps_page_section');
@@ -230,17 +218,10 @@ function chimps_after_search() {
 }
 
 /** 
-* Slider
-*/
-function chimps_blog_slider_lite() {
-	do_action('chimps_blog_slider_lite');
-}
-
-/** 
-* Twitterbar
+* Twitterbar Section
 */
 function chimps_twitterbar_section() {
-	do_action('chimps_twitterbar_section');
+	do_action ('chimps_twitterbar_section');
 }
 
 /**

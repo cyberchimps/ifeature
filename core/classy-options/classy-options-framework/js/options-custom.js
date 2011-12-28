@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
 	 /*
       Progressive enhancement.  If javascript is enabled we change the body class.  Which in turn hides the checkboxes with css.
     */
-   $('body').addClass("js");
+    $('body').addClass("js");
     
     /*
       Add toggle switch after each checkbox.  If checked, then toggle the switch.
@@ -171,7 +171,7 @@ jQuery(document).ready(function($) {
   $("#if_show_excerpts").change(function() {
     var toShow = $("#section-if_excerpt_link_text, #section-if_excerpt_length");
     if($(this).is(':checked')) {
-      toShow.fadeIn();
+      toShow.show();
     } else {
       toShow.hide();
     }
@@ -179,7 +179,7 @@ jQuery(document).ready(function($) {
   $("#if_show_featured_images").change(function() {
     var toShow = $("#section-if_featured_image_align, #section-if_featured_image_height, #section-if_featured_image_width");
     if($(this).is(':checked')) {
-      toShow.fadeIn();
+      toShow.show();
     } else {
       toShow.hide();
     }
@@ -187,17 +187,17 @@ jQuery(document).ready(function($) {
   $("#if_hide_slider_blog").change(function() {
     var toShow = $("#section-if_hide_slider_blog").siblings();
     if($(this).is(':checked')) {
-      toShow.fadeIn();
+      toShow.show();
     } else {
-      toShow.fadeOut();
+      toShow.hide();
     }
   }).change();
     $("#if_disable_footer").change(function() {
     var toShow = $("#section-if_footer_text, #section-if_hide_link");
     if($(this).is(':checked')) {
-      toShow.fadeOut();
-    } else {
       toShow.fadeIn();
+    } else {
+      toShow.fadeOut();
     }
    }).change();
     $("#if_show_carousel").change(function() {
@@ -205,7 +205,7 @@ jQuery(document).ready(function($) {
     if($(this).is(':checked')) {
       toShow.fadeIn();
     } else {
-      toShow.fadeOut();
+      toShow.hide();
     }
   }).change();
       $("#if_enable_header_contact").change(function() {
@@ -219,7 +219,7 @@ jQuery(document).ready(function($) {
       $("#if_custom_background").change(function() {
     var toShow = $("#section-if_background_upload, #section-if_bg_image_position, #section-if_bg_image_repeat, #section-if_background_color, #section-if_bg_image_attachment ");
     if($(this).is(':checked')) {
-      toShow.fadeIn();
+      toShow.show();
     } else {
       toShow.hide();
     }

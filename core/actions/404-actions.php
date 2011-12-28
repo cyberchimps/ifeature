@@ -27,7 +27,8 @@ add_action( 'chimps_404', 'chimps_404_content' );
 */
 function chimps_404_content() {
 	$message_text = apply_filters( 'chimps_404_message', 'Error 404' ); ?>
-	<div class="error"><?php printf( __( $message_text, 'core' )); ?><br /></div> <?php
+	<div class="error"><?php printf( __( $message_text, 'core' )); ?><br />	</div> 
+	<?php
 }
 
 /**
