@@ -198,7 +198,6 @@ function chimps_secondary_footer() {
 	do_action('chimps_secondary_footer');
 }
 
-
 /**
 * Post byline content. 
 *
@@ -226,41 +225,83 @@ function chimps_link_pages() {
 	do_action('chimps_link_pages');
 }
 
+/**
+* Creates admin edit link for pages and posts. 
+*
+* @since 1.0
+*/
 function chimps_edit_link() {
 	do_action('chimps_edit_link');
 }
 
-/** 
-* Header 
+/**
+* Contains HTML, title, rel and meta elements. 
+*
+* @since 1.0
+*/
+function chimps_head_tag() {
+	do_action('chimps_head_tag');
+}
+
+/**
+* Placed after closing HEAD tag, contains font function. 
+*
+* @since 1.0
 */
 function chimps_after_head_tag() {
 	do_action('chimps_after_head_tag');
 }
 
+/**
+* For adding content before the main header content. 
+*
+* @since 1.0
+*/
 function chimps_before_header() {
 	do_action('chimps_before_header');
 }
 
-function chimps_head_tag() {
-	do_action('chimps_head_tag');
-}
-
+/**
+* For adding content after the main header content. 
+*
+* @since 1.0
+*/
 function chimps_after_header() {
 	do_action('chimps_after_header');
 }
 
+/**
+* Sitename/logo content. 
+*
+* @since 1.0
+*/
 function chimps_header_sitename() {
 	do_action('chimps_header_sitename');
 }
 
+/**
+* Site description. 
+*
+* @since 1.0
+*/
 function chimps_header_site_description() {
 	do_action('chimps_header_site_description');
 }
 
+/**
+* Header social icon section. 
+*
+* @since 1.0
+*/
 function chimps_header_social_icons() {
 	do_action('chimps_header_social_icons');
 }
 
+/**
+* Site menu. 
+*
+* @since 1.0
+*/
 function chimps_navigation() {
 	do_action('chimps_navigation');
 }
