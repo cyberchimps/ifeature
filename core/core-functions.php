@@ -2,7 +2,7 @@
 /**
 * CyberChimps Core Framework functions
 *
-* Authors: Tyler Cunningham, Ben Allfree
+* Authors: Tyler Cunningham
 * Copyright: © 2011
 * {@link http://cyberchimps.com/ CyberChimps LLC}
 *
@@ -36,9 +36,9 @@ function chimps_text_domain() {
 *
 * @since 1.0
 */
-add_filter('the_title', 'startup_title');
+add_filter('the_title', 'chimps_title');
 
-function startup_title($title) {
+function chimps_title($title) {
 
 	if ($title == '') {
 		return 'Untitled';
@@ -52,7 +52,7 @@ function startup_title($title) {
 *
 * @since 1.0
 */
-function filter_shorten_linktext($linkstring,$link) {
+function chimps_shorten_linktext($linkstring,$link) {
 	$characters = 33;
 	preg_match('/<a.*?>(.*?)<\/a>/is',$linkstring,$matches);
 	$displayedTitle = $matches[1];
@@ -64,13 +64,8 @@ function shorten_with_ellipsis($inputstring,$characters) {
   return (strlen($inputstring) >= $characters) ? substr($inputstring,0,($characters-3)) . '...' : $inputstring;
 }
 
-// This adds filters to the next and previous links, using the above functions
-// to shorten the text displayed in the post-navigation bar. The last 2 arguments
-// are necessary; the last one is the crucial one. Saying "2" means the function
-// "filter_shorten_linktext()" takes 2 arguments. If you don't say so here, the
-// hook won't pass them when it's called and you'll get a PHP error.
-add_filter('previous_post_link','filter_shorten_linktext',10,2);
-add_filter('next_post_link','filter_shorten_linktext',10,2);
+add_filter('previous_post_link','chimps_shorten_linktext',10,2);
+add_filter('next_post_link','chimps_shorten_linktext',10,2);
 
 /**
 * Comment function
@@ -207,7 +202,6 @@ function chimps_breadcrumbs() {
  
   }
 } 
-
 
 /**
 * End
