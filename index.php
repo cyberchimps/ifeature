@@ -15,8 +15,10 @@
 * @since 3.1
 */
 
+/**
+* Variable definition.
+*/
 	global $options, $themeslug, $post; // call globals
-	
 	$blogsidebar = $options->get($themeslug.'_blog_sidebar');
 	
 ?>

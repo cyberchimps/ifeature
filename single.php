@@ -15,18 +15,21 @@
 * @since 3.1
 */
 
-global $options, $themeslug, $post; // call globals
+/**
+* Variable definition.
+*/
+global $options, $themeslug, $post;
 
+/**
+* Call the header.
+*/
+get_header(); 
 
-/* End variable definition. */	
-
-
-get_header(); ?>
+?>
 
 <div class="container_12">
 <?php if (function_exists('chimps_breadcrumbs') && ($options->get($themeslug.'_disable_breadcrumbs') == "1")) { chimps_breadcrumbs(); }?>
 
-	
 		<div id="content" class="grid_8">
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

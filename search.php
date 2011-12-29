@@ -14,6 +14,10 @@
 * @package iFeature
 * @since 3.1
 */
+
+/**
+* Call the header.
+*/
 get_header(); 
 
 ?>

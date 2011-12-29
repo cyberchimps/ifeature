@@ -15,20 +15,17 @@
 * @since 3.1
 */
 
-/* Header call. */
+/**
+* Variable definition.
+*/	
+	global $options, $themeslug, $post; // call globals
+	$page_section_order = get_post_meta($post->ID, 'page_section_order' , true);
 
+/**
+* Call the header.
+*/
 	get_header(); 
 	
-/* End header. */	
-
-/* Define global variables. */
-
-	global $options, $themeslug, $post; // call globals
-
-	$page_section_order = get_post_meta($post->ID, 'page_section_order' , true);
-	
-/* End define global variables. */
-
 ?>
 
 <div class="container_12">

@@ -15,13 +15,15 @@
 * @since 3.1
 */
 
-/* Call globals. */	
-
+/**
+* Variable definition.
+*/ 
 	global $themename, $themeslug, $options;
 	
-	ifeature_header_content_init();
-
-/* End globals. */
+/**
+* Initialize the header content.
+*/ 
+	ifeature_header_content_init(); 
 	
 ?>
 <!-- Begin @Core head_tag hook content-->
