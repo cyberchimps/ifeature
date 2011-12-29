@@ -25,7 +25,7 @@ global $options, $themeslug;
      <div class="container_12">
      
     <!-- Begin @Core before footer hook content-->
-		<?php chimps_befre_footer(); ?>
+		<?php chimps_before_footer(); ?>
 	<!-- End @Core before footer hook content-->
     	
 	<!-- Begin @Core footer hook content-->

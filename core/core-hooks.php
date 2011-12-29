@@ -199,22 +199,29 @@ function chimps_secondary_footer() {
 }
 
 
-/** 
-* Global 
+/**
+* Post byline content. 
+*
+* @since 1.0
 */
-
-function chimps_meta() {
-	do_action('chimps_meta');
-}
-
 function chimps_post_byline() {
 	do_action('chimps_post_byline');
 }
 
+/**
+* Calls post tags. 
+*
+* @since 1.0
+*/
 function chimps_post_tags() {
 	do_action('chimps_post_tags');
 }
 
+/**
+* Post pagination. 
+*
+* @since 1.0
+*/
 function chimps_link_pages() {
 	do_action('chimps_link_pages');
 }

@@ -20,7 +20,7 @@
 */
 add_action('chimps_pagination', 'chimps_previous_posts');
 add_action('chimps_pagination', 'chimps_newer_posts');
-add_action('chimps_links_pages', 'chimps_wp_link_pages');
+add_action('chimps_link_pages', 'chimps_link_pages_content');
 add_action('chimps_post_pagination', 'chimps_post_pagination_content');
 
 /**
@@ -50,15 +50,12 @@ function chimps_newer_posts() {
 }
 
 /**
-* Uses wp_link_pages to display post pagination. 
+* Sets up the WP link pages
 *
 * @since 1.0
 */
-function chimps_wp_link_pages() {
-	wp_link_pages(array(
-		'before' => 'Pages: ', // should we add a filter/translation wrapper here?
-		'next_or_number' => 'number') // same here?
-	);
+function chimps_link_pages_content() {
+	 wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number'));
 }
 
 /**
