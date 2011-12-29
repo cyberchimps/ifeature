@@ -21,9 +21,9 @@
 add_action ( 'chimps_footer', 'chimps_footer_widgets' );
 add_action ( 'chimps_footer', 'chimps_analytics' );
 
-add_action ( 'chimps_afterfooter', 'chimps_afterfooter_copyright' );
-add_action ( 'chimps_afterfooter', 'chimps_afterfooter_menu' );
-add_action ( 'chimps_afterfooter', 'chimps_afterfooter_credit' );
+add_action ( 'chimps_secondary_footer', 'chimps_secondary_footer_copyright' );
+add_action ( 'chimps_secondary_footer', 'chimps_secondary_footer_menu' );
+add_action ( 'chimps_secondary_footer', 'chimps_secondary_footer_credit' );
 
 
 /**
@@ -87,7 +87,7 @@ function chimps_analytics() {
 *
 * @since 1.0
 */
-function chimps_afterfooter_copyright() {
+function chimps_secondary_footer_copyright() {
 	global $options, $themeslug; //call globals
 		
 	if ($options->get($themeslug.'_footer_text') == "") {
@@ -107,7 +107,7 @@ function chimps_afterfooter_copyright() {
 *
 * @since 1.0
 */
-function chimps_afterfooter_menu() {
+function chimps_secondary_footer_menu() {
 	echo "<div id='afterfootermenu'>";
 	wp_nav_menu( array(
 		'theme_location' => 'footer-menu', 
@@ -120,7 +120,7 @@ function chimps_afterfooter_menu() {
 *
 * @since 1.0
 */
-function chimps_afterfooter_credit() { ?>
+function chimps_secondary_footer_credit() { ?>
 		
 	<div class="credit">
 		<a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/achimps.png" alt="credit" /></a>

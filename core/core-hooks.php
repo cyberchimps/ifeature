@@ -167,24 +167,37 @@ function chimps_after_loop() {
 	do_action('chimps_after_loop');
 }
 
-/** 
-* Footer 
+/**
+* For use before the footer content. 
+*
+* @since 1.0
 */
 function chimps_before_footer() {
 	do_action('chimps_before_footer_content');
 }
 
+/**
+* Footer content. 
+*
+* @since 1.0
+*/
 function chimps_footer() {
 	do_action('chimps_footer');
 }
 
-function chimps_afterfooter() { 
-	do_action('chimps_afterfooter');
-}
-
+/**
+* For use after the footer content. 
+*
+* @since 1.0
+*/
 function chimps_after_footer() {
 	do_action('chimps_after_footer_content');
 }
+
+function chimps_secondary_footer() { 
+	do_action('chimps_secondary_footer');
+}
+
 
 /** 
 * Global 

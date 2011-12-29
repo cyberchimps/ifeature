@@ -23,10 +23,18 @@ global $options, $themeslug;
 
 <div id="footer">
      <div class="container_12">
+     
+    <!-- Begin @Core before footer hook content-->
+		<?php chimps_befre_footer(); ?>
+	<!-- End @Core before footer hook content-->
     	
 	<!-- Begin @Core footer hook content-->
 		<?php chimps_footer(); ?>
 	<!-- End @Core footer hook content-->
+	
+	<!-- Begin @Core after footer hook content-->
+		<?php chimps_after_footer(); ?>
+	<!-- End @Core after footer hook content-->
 			   
 	</div><!--end footer_wrap-->
 </div><!--end footer-->
@@ -34,9 +42,9 @@ global $options, $themeslug;
 	<div id="afterfooter">
 		<div id="afterfooterwrap">
 		
-		<!-- Begin @Core afterfooter hook content-->
-			<?php chimps_afterfooter(); ?>
-		<!-- End @Core afterfooter hook content-->
+		<!-- Begin @Core secondary footer hook content-->
+			<?php chimps_secondary_footer(); ?>
+		<!-- End @Core secondary footer hook content-->
 				
 		</div>  <!--end afterfooterwrap-->	
 	</div> <!--end afterfooter-->	
