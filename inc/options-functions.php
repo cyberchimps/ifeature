@@ -29,7 +29,6 @@ function if_icon_margin() {
 		echo ".icons {margin-top: $margin;}";
 		echo '</style>';
 	}
-
 }
 add_action( 'wp_head', 'if_icon_margin' );
 
