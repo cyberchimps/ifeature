@@ -1,15 +1,25 @@
 <?php
-/* 
-	Options	Functions
-	Author: Tyler Cuningham
-	Establishes the theme options functions.
-	Copyright (C) 2011 CyberChimps
-	Version 2.0
-	
+/**
+* Functions related to iFeature Theme Options.
+*
+* Author: Tyler Cunningham
+* Copyright: © 2011
+* {@link http://cyberchimps.com/ CyberChimps LLC}
+*
+* Released under the terms of the GNU General Public License.
+* You should have received a copy of the GNU General Public License,
+* along with this software. In the main directory, see: /licensing/
+* If not, see: {@link http://www.gnu.org/licenses/}.
+*
+* @package iFeature
+* @since 3.1
 */
 
-/* Icon margin*/
-
+/**
+* Custom social icon margin. 
+*
+* @since 3.0
+*/
 function if_icon_margin() {
 	global $options, $themeslug;
 	$margin = $options->get($themeslug.'_icon_margin');
@@ -23,8 +33,11 @@ function if_icon_margin() {
 }
 add_action( 'wp_head', 'if_icon_margin' );
 
-/* Backgound Option*/
-
+/**
+* Establishes the theme background. 
+*
+* @since 3.0
+*/
 function if_background_option() {
 
 	global $options, $themeslug;
@@ -42,34 +55,32 @@ function if_background_option() {
 		echo "body {background-image: url('$root/images/backgrounds/noise.jpg'); background-repeat: repeat; background-position: top left; background-attachment: fixed;}";
 		echo '</style>';
 	}
-	
 	if ($options->get($themeslug.'_background_image') == "dark" && $options->get($themeslug.'_custom_background') != "1")  {
 	
 		echo '<style type="text/css">';
 		echo "body {background-image: url('$root/images/backgrounds/dark.png'); background-repeat: repeat; background-position: top left; background-attachment: fixed;}";
 		echo '</style>';
 	}
-	
 	if ($options->get($themeslug.'_background_image') == "wood" && $options->get($themeslug.'_custom_background') != "1")  {
 	
 		echo '<style type="text/css">';
 		echo "body {background-image: url('$root/images/backgrounds/wood.png'); background-repeat: repeat; background-position: top left; background-attachment: fixed;}";
 		echo '</style>';
 	}
-		
 	if ($options->get($themeslug.'_custom_background') == "1") {
 	
 		echo '<style type="text/css">';
 		echo "body {background-image: url('$custom'); background-color: $color; background-repeat: $repeat; background-position: $position; background-attachment: $attachment;}";
 		echo '</style>';
-	
 	}
-	
 }
 add_action( 'wp_head', 'if_background_option');
 
-/* Plus 1 Allignment */
-
+/**
+* Google Plus One button alignment. 
+*
+* @since 3.0
+*/
 function if_plusone_alignment() {
 
 	global $themename, $themeslug, $options;
@@ -79,15 +90,15 @@ function if_plusone_alignment() {
 		echo '<style type="text/css">';
 		echo ".gplusone {float: right; margin-right: -38px;}";
 		echo '</style>';
-		
 	}
-	
 }
 add_action( 'wp_head', 'if_plusone_alignment');
 
-
-/* Featured Image Alignment */
-
+/**
+* Featured image alignment. 
+*
+* @since 3.0
+*/
 function if_featured_image_alignment() {
 
 	global $themename, $themeslug, $options;
@@ -97,31 +108,27 @@ function if_featured_image_alignment() {
 		echo '<style type="text/css">';
 		echo ".featured-image {float: right;}";
 		echo '</style>';
-		
 	}
-	
 	elseif ($options->get($themeslug.'_featured_image_align') == "key2" ) {
 
 		echo '<style type="text/css">';
 		echo ".featured-image {text-align: center;}";
-		echo '</style>';
-		
+		echo '</style>';	
 	}
-	
 	else {
 
 		echo '<style type="text/css">';
 		echo ".featured-image {float: left;}";
 		echo '</style>';
-		
 	}
-
-	
 }
 add_action( 'wp_head', 'if_featured_image_alignment');
 
-/* Site Title Color */
-
+/**
+* Change site title color. 
+*
+* @since 3.0
+*/
 function if_add_sitetitle_color() {
 
 	global $themename, $themeslug, $options;
@@ -129,7 +136,6 @@ function if_add_sitetitle_color() {
 	if ($options->get($themeslug.'_sitetitle_color') == "") {
 		$sitetitle = '#717171';
 	}
-	
 	else {
 		$sitetitle = $options->get($themeslug.'_sitetitle_color'); 
 	}		
@@ -137,12 +143,14 @@ function if_add_sitetitle_color() {
 		echo '<style type="text/css">';
 		echo ".sitename a {color: $sitetitle;}";
 		echo '</style>';
-		
 }
 add_action( 'wp_head', 'if_add_sitetitle_color');
 
-/* Tagline Color */
-
+/**
+* Change site tagline color. 
+*
+* @since 3.0
+*/
 function if_add_tagline_color() {
 
 	global $themename, $themeslug, $options;
@@ -150,7 +158,6 @@ function if_add_tagline_color() {
 	if (!$options->get($themeslug.'_tagline_color')) {
 		$tagline = '#000';
 	}
-	
 	else { 
 		$tagline = $options->get($themeslug.'_tagline_color'); 
 	}		
@@ -158,13 +165,15 @@ function if_add_tagline_color() {
 		echo '<style type="text/css">';
 		echo "#description {color: $tagline;}";
 		echo '</style>';
-
 }
 add_action( 'wp_head', 'if_add_tagline_color');
 
 
-/* Menu Font */
- 
+/**
+* Set custom menu font. 
+*
+* @since 3.0
+*/
 function if_add_menu_font() {
 		
 	global $themename, $themeslug, $options;	
@@ -172,11 +181,9 @@ function if_add_menu_font() {
 	if ($options->get($themeslug.'_menu_font') == "") {
 		$font = 'Arial';
 	}		
-		
 	elseif ($options->get($themeslug.'_menu_font') == 'custom' && $options->get($themeslug.'_custom_menu_font') != "") {
 		$font = $options->get($themeslug.'_custom_menu_font');	
 	}
-	
 	else {
 		$font = $options->get($themeslug.'_menu_font'); 
 	}
