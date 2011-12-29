@@ -15,36 +15,65 @@
 * @since 1.0
 */
 
-/** 
-* 404
+/**
+* Placed before the 404 message content.
+*
+* @since 1.0
 */
 function chimps_before_404() {
 	do_action('chimps_before_404');
 }
 
+/**
+* 404 page template message content.
+*
+* @since 1.0
+*/
 function chimps_404() {
 	do_action('chimps_404');
 }
 
+/**
+* Placed after the 404 message content.
+*
+* @since 1.0
+*/
 function chimps_after_404() {
 	do_action('chimps_after_404');
 }
 
-/** 
-* Archive
+/**
+* Placed before the archive template content. 
+*
+* @since 1.0
 */
 function chimps_before_archive() {
 	do_action('chimps_before_archive');
 }
 
-function chimps_archive() {
-	do_action('chimps_archive');
-}
-
+/**
+* Conditionals for various archive page title types.
+*
+* @since 1.0
+*/
 function chimps_archive_title() {
 	do_action('chimps_archive_title');
 }
 
+/**
+* Archive template loop content.
+*
+* @since 1.0
+*/
+function chimps_archive() {
+	do_action('chimps_archive');
+}
+
+/**
+* Placed after the archive template content. 
+*
+* @since 1.0
+*/
 function chimps_after_archive() {
 	do_action('chimps_after_archive');
 }
