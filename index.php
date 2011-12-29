@@ -1,11 +1,18 @@
 <?php
-
- /*
-	Index
-	
-	Creates the iFeature default index page.
-	
-	Copyright (C) 2011 CyberChimps
+/**
+* Index template used by the iFeature theme.
+*
+* Authors: Tyler Cunningham, Trent Lapinski.
+* Copyright: © 2011
+* {@link http://cyberchimps.com/ CyberChimps LLC}
+*
+* Released under the terms of the GNU General Public License.
+* You should have received a copy of the GNU General Public License,
+* along with this software. In the main directory, see: license.txt.
+* If not, see: {@link http://www.gnu.org/licenses/}.
+*
+* @package iFeature
+* @since 3.1
 */
 
 	global $options, $themeslug, $post; // call globals
@@ -25,7 +32,6 @@
 				<?php chimps_blog_slider_lite(); ?>
 			<!--End @Core index entry hook-->
 		<?php endif; ?>
-
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
@@ -76,8 +82,6 @@
 	<!--Begin @Core index after entry hook-->
 	<?php chimps_index_after_entry(); ?>
 	<!--End @Core index after entry hook-->
-
-	
 
 </div><!--end container_12-->
 

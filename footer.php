@@ -1,12 +1,18 @@
 <?php
-
-/*
-	
-	Footer
-	Establishes the widgetized footer and static post-footer section of iFeature. 
-	Copyright (C) 2011 CyberChimps
-	Version 2.0
-	
+/**
+* Footer template used by the iFeature theme.
+*
+* Authors: Tyler Cunningham, Trent Lapinski.
+* Copyright: © 2011
+* {@link http://cyberchimps.com/ CyberChimps LLC}
+*
+* Released under the terms of the GNU General Public License.
+* You should have received a copy of the GNU General Public License,
+* along with this software. In the main directory, see: /licensing/
+* If not, see: {@link http://www.gnu.org/licenses/}.
+*
+* @package iFeature
+* @since 3.1
 */
 
 global $options, $themeslug;
@@ -34,7 +40,6 @@ global $options, $themeslug;
 				
 		</div>  <!--end afterfooterwrap-->	
 	</div> <!--end afterfooter-->	
-	
 	
 	<?php wp_footer(); ?>	
 </body>

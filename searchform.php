@@ -1,11 +1,19 @@
 <?php
-
-/*
-	Search Form
-	Creates the iFeature search form 
-	Copyright (C) 2011 CyberChimps
+/**
+* Searchform used by the iFeature theme.
+*
+* Authors: Tyler Cunningham, Trent Lapinski.
+* Copyright: © 2011
+* {@link http://cyberchimps.com/ CyberChimps LLC}
+*
+* Released under the terms of the GNU General Public License.
+* You should have received a copy of the GNU General Public License,
+* along with this software. In the main directory, see: license.txt.
+* If not, see: {@link http://www.gnu.org/licenses/}.
+*
+* @package iFeature
+* @since 3.1
 */
-
 ?>
 
 <form method="get" class="searchform" action="<?php echo home_url(); ?>/">

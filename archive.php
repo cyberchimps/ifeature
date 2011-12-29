@@ -1,10 +1,18 @@
 <?php 
-
-/*
-	Archive
-	Creates the iFeature archive pages.
-	Copyright (C) 2011 CyberChimps
-	Version 2.0
+/**
+* Archive page template used by the iFeature theme.
+*
+* Authors: Tyler Cunningham, Trent Lapinski.
+* Copyright: © 2011
+* {@link http://cyberchimps.com/ CyberChimps LLC}
+*
+* Released under the terms of the GNU General Public License.
+* You should have received a copy of the GNU General Public License,
+* along with this software. In the main directory, see: license.txt.
+* If not, see: {@link http://www.gnu.org/licenses/}.
+*
+* @package iFeature
+* @since 3.1
 */
 
 /* Header call. */
@@ -22,8 +30,6 @@
 	<div id="main">
 	
 		<div id="content" class="grid_8">
-		
-		
 		
 		<!--Begin @Core before_archive hook-->
 			<?php chimps_before_archive(); ?>
@@ -59,15 +65,13 @@
 	
 		</div><!--end content_padding-->
 		
-
-
 		<div id="sidebar" class="grid_4">
-				<?php get_sidebar(); ?>
+			<?php get_sidebar(); ?>
 		</div>
 	
-</div><!--end content_wrap-->
+	</div><!--end main-->
 
-	</div><!--end content_left-->
+</div><!--end container_12-->
 
 <div class='clear'>&nbsp;</div>
 
