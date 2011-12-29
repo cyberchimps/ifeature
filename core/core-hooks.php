@@ -78,37 +78,57 @@ function chimps_after_archive() {
 	do_action('chimps_after_archive');
 }
 
-/** 
-* Comments
+/**
+* Placed after the comment section content. 
+*
+* @since 1.0
 */
 function chimps_before_comments() {
 	do_action('chimps_before_comments');
 }
 
+/**
+* Creates the comment section. 
+*
+* @since 1.0
+*/
 function chimps_comments() {
 	do_action('chimps_comments');
 }
 
+/**
+* Placed after the comment section. 
+*
+* @since 1.0
+*/
 function chimps_after_comments() {
 	do_action('chimps_after_comments');
 }
 
-/** 
-* Content 
+/**
+* For use before main content divs. 
+*
+* @since 1.0
 */
 function chimps_before_content() {
 	do_action('chimps_before_content');
 }
 
+/**
+* For use after main content divs. 
+*
+* @since 1.0
+*/
 function chimps_after_content() {
 	do_action('chimps_after_content');
 }
 
 
+
+
 /** 
 * Index
 */
-
 function chimps_index_after_entry() {
 	do_action('chimps_index_after_entry');
 }
@@ -117,16 +137,34 @@ function chimps_index_entry() {
 	do_action('chimps_index_entry');
 }
 
-function chimps_index_loop() {
-	do_action('chimps_index_loop');
+
+
+
+/**
+* For use before the loop. 
+*
+* @since 1.0
+*/
+function chimps_before_loop() {
+	do_action('chimps_before_loop');
 }
 
-function chimps_index_before_loop() {
-	do_action('chimps_index_before_loop');
+/**
+* The loop. 
+*
+* @since 1.0
+*/
+function chimps_loop() {
+	do_action('chimps_loop');
 }
 
-function chimps_index_after_loop() {
-	do_action('chimps_index_after_loop');
+/**
+* For use after the loop. 
+*
+* @since 1.0
+*/
+function chimps_after_loop() {
+	do_action('chimps_after_loop');
 }
 
 /** 

@@ -39,10 +39,18 @@
 			
 			<div class="post_container">
 				<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+				
+				<!--Begin @Core index loop hook-->
+					<?php chimps_before_loop(); ?>
+				<!--End @Core index loop hook-->
 		
 				<!--Begin @Core index loop hook-->
-					<?php chimps_index_loop(); ?>
+					<?php chimps_loop(); ?>
 				<!--End @Core index loop hook-->	
+				
+				<!--Begin @Core index loop hook-->
+					<?php chimps_after_loop(); ?>
+				<!--End @Core index loop hook-->
 			
 				<!--Begin @Core link pages hook-->
 					<?php chimps_link_pages(); ?>

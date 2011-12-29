@@ -19,7 +19,7 @@
 * Core Index actions
 */
 
-add_action( 'chimps_index_loop', 'chimps_index_loop_content' );
+add_action( 'chimps_loop', 'chimps_loop_content' );
 
 add_action( 'chimps_index_after_entry', 'chimps_index_after_entry_sidebar' );
 
@@ -48,7 +48,7 @@ function chimps_index_after_entry_sidebar() {
 *
 * @since 1.0
 */
-function chimps_index_loop_content($content) { 
+function chimps_loop_content($content) { 
 
 	global $options, $themeslug, $post; //call globals
 	
