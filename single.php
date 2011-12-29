@@ -2,9 +2,7 @@
 
 /*
 	Single
-	
 	Establishes the single post template of iFeature. 
-	
 	Copyright (C) 2011 CyberChimps
 */
 

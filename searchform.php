@@ -2,9 +2,7 @@
 
 /*
 	Search Form
-	
 	Creates the iFeature search form 
-	
 	Copyright (C) 2011 CyberChimps
 */
 

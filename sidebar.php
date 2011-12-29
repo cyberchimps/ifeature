@@ -1,8 +1,15 @@
-<?php if (dynamic_sidebar('Sidebar Widgets')) : else : ?>
+<?php 
+
+/*
+	Sidebar
+	Establishes the widgetized sidebar of iFeature. 
+	Copyright (C) 2011 CyberChimps
+*/
+
+	if (dynamic_sidebar('Sidebar Widgets')) : else : ?>
     
         <!-- All this stuff in here only shows up if you DON'T have any widgets active in this zone -->
-    
-				
+    			
 		<div class="widget-container">    
 		<h2 class="widget-title"><?php printf( __('Pages', 'ifeature' )); ?></h2>
 		<ul>
