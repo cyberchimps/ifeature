@@ -16,7 +16,7 @@
 */
 
 /**
-* Placed before the 404 message content.
+* Placed before the 404 message content (404.php).
 *
 * @since 1.0
 */
@@ -25,7 +25,7 @@ function chimps_before_404() {
 }
 
 /**
-* 404 page template message content.
+* 404 page template message content (404.php).
 *
 * @since 1.0
 */
@@ -34,7 +34,7 @@ function chimps_404() {
 }
 
 /**
-* Placed after the 404 message content.
+* Placed after the 404 message content (404.php).
 *
 * @since 1.0
 */
@@ -43,7 +43,7 @@ function chimps_after_404() {
 }
 
 /**
-* Placed before the archive template content. 
+* Placed before the archive template content (archive.php). 
 *
 * @since 1.0
 */
@@ -52,7 +52,7 @@ function chimps_before_archive() {
 }
 
 /**
-* Conditionals for various archive page title types.
+* Conditionals for various archive page title types (archive.php).
 *
 * @since 1.0
 */
@@ -61,7 +61,7 @@ function chimps_archive_title() {
 }
 
 /**
-* Archive template loop content.
+* Archive template loop content (archive.php).
 *
 * @since 1.0
 */
@@ -70,7 +70,7 @@ function chimps_archive() {
 }
 
 /**
-* Placed after the archive template content. 
+* Placed after the archive template content (archive.php). 
 *
 * @since 1.0
 */
@@ -79,7 +79,7 @@ function chimps_after_archive() {
 }
 
 /**
-* Placed after the comment section content. 
+* Placed after the comment section content (comments.php). 
 *
 * @since 1.0
 */
@@ -88,7 +88,7 @@ function chimps_before_comments() {
 }
 
 /**
-* Creates the comment section. 
+* Creates the comment section (comments.php). 
 *
 * @since 1.0
 */
@@ -97,7 +97,7 @@ function chimps_comments() {
 }
 
 /**
-* Placed after the comment section. 
+* Placed after the comment section (comments.php). 
 *
 * @since 1.0
 */
@@ -106,39 +106,31 @@ function chimps_after_comments() {
 }
 
 /**
-* For use before main content divs. 
+* For use before main page content. 
 *
 * @since 1.0
 */
-function chimps_before_content() {
-	do_action('chimps_before_content');
+function chimps_before_page_content() {
+	do_action('chimps_before_page_content');
 }
 
 /**
-* For use after main content divs. 
+* For use after main page content. 
 *
 * @since 1.0
 */
-function chimps_after_content() {
-	do_action('chimps_after_content');
+function chimps_after_page_content() {
+	do_action('chimps_after_page_content');
 }
 
-
-
-
-/** 
-* Index
+/**
+* Placed after post entry (sets up sidebar). 
+*
+* @since 1.0
 */
-function chimps_index_after_entry() {
-	do_action('chimps_index_after_entry');
+function chimps_after_entry() {
+	do_action('chimps_after_entry');
 }
-
-function chimps_index_entry() {
-	do_action('chimps_index_entry');
-}
-
-
-
 
 /**
 * For use before the loop. 
@@ -194,6 +186,11 @@ function chimps_after_footer() {
 	do_action('chimps_after_footer_content');
 }
 
+/**
+* Contains the secondary footer elements. 
+*
+* @since 1.0
+*/
 function chimps_secondary_footer() { 
 	do_action('chimps_secondary_footer');
 }
@@ -306,52 +303,82 @@ function chimps_navigation() {
 	do_action('chimps_navigation');
 }
 
-/** 
-* Pagination 
+/**
+* Index pagination. 
+*
+* @since 1.0
 */
 function chimps_pagination() { 
 	do_action('chimps_pagination');
 }
 
+/**
+* Post page pagination. 
+*
+* @since 1.0
+*/
 function chimps_links_pages() { 
 	do_action('chimps_links_pages');
 }
 
+/**
+* Next/Prev post links for single.php. 
+*
+* @since 1.0
+*/
 function chimps_post_pagination() { 
 	do_action('chimps_post_pagination');
 }
 
-/** 
-* Page
+/**
+* Sets up the page section for page.php. 
+*
+* @since 1.0
 */
 function chimps_page_section() {
 	do_action('chimps_page_section');
 }
 
-/** 
-* Search
+/**
+* Placed before the search result content. 
+*
+* @since 1.0
 */
 function chimps_before_search() {
 	do_action('chimps_before_search');
 }
 
+/**
+* Sets up the search result content. 
+*
+* @since 1.0
+*/
 function chimps_search() {
 	do_action('chimps_search');
 }
 
+/**
+* Placed after the search result content. 
+*
+* @since 1.0
+*/
 function chimps_after_search() {
 	do_action('chimps_after_search');
 }
 
-/** 
-* Slider
+/**
+* Generates the lite version of the iFeature slider. 
+*
+* @since 1.0
 */
 function chimps_blog_slider_lite() {
 	do_action('chimps_blog_slider_lite');
 }
 
-/** 
-* Twitterbar Section
+/**
+* Generates the Twitter Bar page element. 
+*
+* @since 1.0
 */
 function chimps_twitterbar_section() {
 	do_action ('chimps_twitterbar_section');

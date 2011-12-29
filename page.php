@@ -31,6 +31,10 @@
 <div class="container_12">
 <?php if (function_exists('chimps_breadcrumbs') && ($options->get($themeslug.'_disable_breadcrumbs') == "1")) { chimps_breadcrumbs(); }?>
 
+	<!--Begin @Core before page content hook-->
+		<?php chimps_before_page_content(); ?>
+	<!--End @Core before page content hook-->
+
 <?php //calls the Page Elements
 	foreach(explode(",", $page_section_order) as $key) {
 		$fn = 'chimps_' . $key;
@@ -39,6 +43,10 @@
 		}
 	}
 ?>
+
+	<!--Begin @Core after page content hook-->
+		<?php chimps_after_page_content(); ?>
+	<!--End @Core after page content hook-->
 	
 </div>
 

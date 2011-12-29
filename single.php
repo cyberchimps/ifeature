@@ -38,7 +38,7 @@ get_header();
 				<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 		
 				<!--Begin @Core index loop hook-->
-					<?php chimps_index_loop(); ?>
+					<?php chimps_loop(); ?>
 				<!--End @Core index loop hook-->	
 			
 				<!--Begin @Core link pages hook-->
@@ -81,7 +81,7 @@ get_header();
 		</div><!--end content-->
 
 	<!--Begin @Core index after entry hook-->
-	<?php chimps_index_after_entry(); ?>
+	<?php chimps_after_entry(); ?>
 	<!--End @Core index after entry hook-->
 
 

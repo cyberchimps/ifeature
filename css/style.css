@@ -359,7 +359,7 @@ ol, ul {list-style-position: inside;margin-left: 21px; list-style-type: }
 
 /* WordPress Styles  */
 
-.featured-image {margin-top: 8px;margin-right: 12px;margin-bottom: 10px;}
+.featured-image {margin-top: 4px;margin-right: 12px;margin-bottom: 10px;}
 
 .alignnone {
 	display: block;

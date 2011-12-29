@@ -21,14 +21,14 @@
 
 add_action( 'chimps_loop', 'chimps_loop_content' );
 
-add_action( 'chimps_index_after_entry', 'chimps_index_after_entry_sidebar' );
+add_action( 'chimps_after_entry', 'chimps_after_entry_sidebar' );
 
 /**
 * After entry sidebar
 *
 * @since 1.0
 */
-function chimps_index_after_entry_sidebar() {
+function chimps_after_entry_sidebar() {
 	global $options, $themeslug, $post; // call globals
 	
 	$blogsidebar = $options->get($themeslug.'_blog_sidebar');
