@@ -34,8 +34,6 @@
 		</div><!--end content_padding-->
 	</div><!--end content_left-->
 
-
-	
 </div><!--end content_wrap-->
 <div class='clear'>&nbsp;</div>
 

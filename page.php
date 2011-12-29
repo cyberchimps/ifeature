@@ -27,7 +27,7 @@
 <div class="container_12">
 <?php if (function_exists('chimps_breadcrumbs') && ($options->get($themeslug.'_disable_breadcrumbs') == "1")) { chimps_breadcrumbs(); }?>
 
-<?php
+<?php //calls the Page Elements
 	foreach(explode(",", $page_section_order) as $key) {
 		$fn = 'chimps_' . $key;
 		if(function_exists($fn)) {
@@ -38,5 +38,5 @@
 	
 </div>
 
-<div style=clear:both;></div>
+<div style="clear:both;"></div>
 <?php get_footer(); ?>
