@@ -38,8 +38,7 @@ require_once ( get_template_directory() . '/core/actions/slider-actions.php' );
 //Call metabox class file
 require_once ( get_template_directory() . '/core/metabox/meta-box-class.php' );
 
-//Options
-
+//CyberChimps Themes Page
 require_once ( get_template_directory() . '/core/classy-options/options-themes.php' );
 
 /**
