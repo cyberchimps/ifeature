@@ -8,6 +8,7 @@ Version 3.1 (12-29-11)
 -New metabox code/styling.
 -Cleaned up functions file. 
 -General HTML markup revisions.
+-Added Dutch and German translation files.
 
 Version 3.0.6 (12-22-11)
 -Added Portuguese language support. 
