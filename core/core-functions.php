@@ -30,6 +30,7 @@ function chimps_text_domain() {
 		
 		return;    
 }
+add_action('after_setup_theme', 'chimps_text_domain');
 	
 /**
 * Adds "untitled" to posts with no title.
