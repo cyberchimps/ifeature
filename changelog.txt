@@ -2,7 +2,7 @@ iFeature Changelog
 
 ****************************
 
-Version 3.1 (12-29-11)
+Version 3.1 (01-04-12)
 -Changes to CyberChimps Core Framework.
 -Added new theme specific hooks in light of changes to Core Framework.
 -New metabox code/styling.
