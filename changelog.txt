@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 3.1.1 (01-05-12)
+-IE 8 fix.
+
 Version 3.1 (01-04-12)
 -Changes to CyberChimps Core Framework.
 -Added new theme specific hooks in light of changes to Core Framework.
