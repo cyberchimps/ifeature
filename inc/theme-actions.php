@@ -92,7 +92,7 @@ function ifeature_nav() {
 			<?php if ($options->get($themeslug.'_hide_home_icon') != "0"):?><div id="home"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ;?>/images/home.png" alt="home" /></a></div><?php endif;?>
 		    <?php wp_nav_menu( array(
 		    'theme_location' => 'header-menu', // Setting up the location for the main-menu, Main Navigation.
-		    'fallback_cb' => 'menu_fallback', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
+		    'fallback_cb' => 'if_menu_fallback', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
 		    )
 		);
     	?>
@@ -151,7 +151,7 @@ function ifeature_link_rel() {
 		$font = $options->get($themeslug.'_font'); 
 	} 
 	if ($options->get($themeslug.'_color_scheme') == '') {
-		$color = 'blue';
+		$color = 'grey';
 	}
 	else {
 		$color = $options->get($themeslug.'_color_scheme');
