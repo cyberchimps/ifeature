@@ -227,6 +227,17 @@ function if_jquery() {
 	}
 }
 add_action('wp_enqueue_scripts', 'if_jquery');	
+
+// Menu fallback
+	
+	function if_menu_fallback() {
+	global $post; ?>
+	
+	<ul id="menu-nav" class="sf-menu">
+		<?php wp_list_pages( 'title_li=&sort_column=menu_order&depth=3'); ?>
+	</ul><?php
+}
+
 	
 /**
 * Register custom menus.

@@ -2,6 +2,11 @@ iFeature Changelog
 
 ****************************
 
+Version 3.1.2 (01-06-12)
+-Fixed social icon bug.
+-Fixed menu bug.
+-Fixed default color scheme bug.
+
 Version 3.1.1 (01-05-12)
 -IE 8 fix.
 
