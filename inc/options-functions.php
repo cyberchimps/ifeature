@@ -167,6 +167,25 @@ function if_add_tagline_color() {
 }
 add_action( 'wp_head', 'if_add_tagline_color');
 
+/* Link Color */
+
+function if_add_link_color() {
+
+	global $themename, $themeslug, $options;
+
+	if ($options->get($themeslug.'_link_color') != '') {
+		$link = $options->get($themeslug.'_link_color'); 
+	
+
+		echo '<style type="text/css">';
+		echo "a {color: $link;}";
+		echo ".meta a {color: $link;}";
+		echo '</style>';
+	}
+}
+add_action( 'wp_head', 'if_add_link_color');
+
+
 
 /**
 * Set custom menu font. 

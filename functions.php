@@ -151,7 +151,7 @@ function if_init_featured_image() {
 			$featurewidth = $options->get($themeslug.'_featured_image_width'); 
 		} 
 	 
-	set_post_thumbnail_size( $featureheight, $featurewidth, true );
+	set_post_thumbnail_size( $featurewidth, $featureheight, true );
 	}	
 }
 add_action( 'init', 'if_init_featured_image', 11);	

@@ -73,6 +73,7 @@ $options
 		->subsection("Custom Colors")
 			->color($themeslug."_sitetitle_color", "Site Title Color")
 			->color($themeslug."_tagline_color", "Site Description Color")
+			->color($themeslug."_link_color", "Link Color")
 		->subsection_end()
 	->section("Header")
 		->subsection("Header Options")
