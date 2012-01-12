@@ -5,6 +5,7 @@ iFeature Changelog
 Version 3.1.3 (01-11-12)
 -Fixed bug with featured thumb option.
 -Re-added link color option.
+-Removed unnecessary option from post meta options. 
 
 Version 3.1.2 (01-06-12)
 -Fixed social icon bug.

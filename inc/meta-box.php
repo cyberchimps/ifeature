@@ -39,7 +39,6 @@ function initialize_the_meta_boxes() {
 		->tab("Slider Options")
 			->single_image('slider_image', 'Slider Image', '')
 			->text('slider_text', 'Slider Text', 'Enter your slider text here')
-			->checkbox('slider_hidetitle', 'Title Bar', '', array('std' => 'true'))
 			->sliderhelp('', 'Need Help?', '')
 		->end();
 	
