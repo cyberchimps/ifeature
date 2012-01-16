@@ -2,11 +2,8 @@ iFeature Changelog
 
 ****************************
 
-<<<<<<< HEAD
+
 Version 3.1.3 (01-16-12)
-=======
-Version 3.1.3 (01-12-12)
->>>>>>> c6082551266a4c38509cadbbdc94e5060b7978a4
 -Fixed bug with featured thumb option.
 -Re-added link color option.
 -Removed unnecessary option from post meta options. 
