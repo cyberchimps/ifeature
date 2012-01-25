@@ -181,52 +181,26 @@ function if_render_ie_pie() { ?>
 }
 
 add_action('wp_head', 'if_render_ie_pie', 8);
-	
-/**
-* Call script for Nivo Slider.
-*/ 
-function if_nivoslider(){
-	 
-	$path =  get_template_directory_uri() ."/core/library/ns";
-	$script = "<script type=\"text/javascript\" src=\"".$path."/jquery.nivo.slider.js\"></script>";
-	
-	echo $script;
-}
-add_action('wp_head', 'if_nivoslider');
 
 /**
-* Script for +1 button.
+* Register scripts and load jQuery.
 */ 
-function if_plusone(){
-	
-	$path =  get_template_directory_uri() ."/core/library/js";
-	$script = "<script type=\"text/javascript\" src=\"".$path."/plusone.js\"></script>";
-	
-	echo $script;
-}
-add_action('wp_head', 'if_plusone');
-
-/**
-* Menu JS.
-*/ 
-function if_menu_script(){
-	
-	$path =  get_template_directory_uri() ."/core/library/js";
-	$script = "<script type=\"text/javascript\" src=\"".$path."/menu.js\"></script>";
-	
-	echo $script;
-}
-add_action('wp_footer', 'if_menu_script');
-	
-/**
-* Load jQuery.
-*/ 
-function if_jquery() {
+function if_scripts() {
 	if ( !is_admin() ) {
 	   wp_enqueue_script('jquery');
 	}
+	
+	$path =  get_template_directory_uri() ."/core/library/";
+	
+	wp_register_script( 'nivoslider' ,$path.'/ns/jquery.nivo.slider.js');
+	wp_register_script( 'menu' ,$path.'js/menu.js');
+	wp_register_script( 'plusone' ,$path.'js/plusone.js');
+	
+	wp_enqueue_script ('nivoslider');
+	wp_enqueue_script ('menu');
+	wp_enqueue_script ('plusone');
 }
-add_action('wp_enqueue_scripts', 'if_jquery');	
+add_action('wp_enqueue_scripts', 'if_scripts');	
 
 // Menu fallback
 	
@@ -238,7 +212,6 @@ add_action('wp_enqueue_scripts', 'if_jquery');
 	</ul><?php
 }
 
-	
 /**
 * Register custom menus.
 */ 

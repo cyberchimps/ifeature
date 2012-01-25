@@ -2,6 +2,8 @@ iFeature Changelog
 
 ****************************
 
+Version 3.1.4 (01-25-12)
+-Moved scripts into unified function, hooking into wp_enqueue_script.
 
 Version 3.1.3 (01-16-12)
 -Fixed bug with featured thumb option.
