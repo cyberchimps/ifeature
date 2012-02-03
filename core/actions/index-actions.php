@@ -1,6 +1,6 @@
 <?php
 /**
-* Index actions used by the CyberChimps Core Framework 
+* Index actions used by the CyberChimps Synapse Core Framework
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -11,92 +11,99 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Core
+* @package Synapse
 * @since 1.0
 */
 
 /**
-* Core Index actions
+* Synapse index actions
 */
 
-add_action( 'chimps_loop', 'chimps_loop_content' );
-
-add_action( 'chimps_after_entry', 'chimps_after_entry_sidebar' );
+add_action( 'synapse_index', 'synapse_index_content');
 
 /**
-* After entry sidebar
+* Index content
 *
 * @since 1.0
 */
-function chimps_after_entry_sidebar() {
-	global $options, $themeslug, $post; // call globals
-	
-	$blogsidebar = $options->get($themeslug.'_blog_sidebar');
-	$sidebar = get_post_meta($post->ID, 'page_sidebar' , true);?>
-	
-	
-	<?php if ($sidebar == "0" OR $blogsidebar == 'right' OR $blogsidebar == '' ): ?>
-	<div id="sidebar" class="grid_4">
-		<?php get_sidebar(); ?>
-	</div>
-	<?php endif;?>
- <?php 
-}
+function synapse_index_content() { 
 
-/**
-* Check for post format type, apply filter based on post format name for easy modification.
-*
-* @since 1.0
-*/
-function chimps_loop_content($content) { 
-
-	global $options, $themeslug, $post; //call globals
+	global $options, $themeslug, $post, $sidebar, $content_grid; // call globals ?>
 	
-	if (get_post_format() == '') {
-		$format = "default";
-	}
-	else {
-		$format = get_post_format();
-	} ?>
+	<!--Begin @Core sidebar init-->
+		<?php synapse_sidebar_init(); ?>
+	<!--End @Core sidebar init-->
+	<div class="row">
+<!--Begin @Core before content sidebar hook-->
+		<?php synapse_before_content_sidebar(); ?>
+	<!--End @Core before content sidebar hook-->
+
+		<div id="content" class="<?php echo $content_grid; ?>">
 		
-		<?php ob_start(); ?>
+		<!--Begin @Core index entry hook-->
+		<?php synapse_blog_content_slider(); ?>
+		<!--End @Core index entry hook-->
+
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
-			<?php if ($options->get($themeslug.'_post_formats') != '0') : ?>
-			<div class="postformats"><!--begin format icon-->
-				<img src="<?php echo get_template_directory_uri(); ?>/images/formats/<?php echo $format ;?>.png" alt="formats" />
-			</div><!--end format-icon-->
-			<?php endif; ?>
-				<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-					<!--Call @Core Meta hook-->
-			<?php chimps_post_byline(); ?>
-				<?php
-				if ( has_post_thumbnail() && $options->get($themeslug.'_show_featured_images') == '1'  && !is_single()) {
- 		 			echo '<div class="featured-image">';
- 		 			echo '<a href="' . get_permalink($post->ID) . '" >';
- 		 				the_post_thumbnail();
-  					echo '</a>';
-  					echo '</div>';
-				}
-			?>	
-				<div class="entry" <?php if ( has_post_thumbnail() && $options->get($themeslug.'_show_featured_images') == '1' && !is_single()  ) { echo 'style="min-height: 115px;" '; }?>>
-					<?php 
-						if ($options->get($themeslug.'_show_excerpts') == '1' && !is_single() ) {
-						the_excerpt();
-						}
-						else {
-							the_content();
-						}
-					 ?>
-				</div><!--end entry-->
-				
-				<div class='clear'>&nbsp;</div>
-			<?php	
+			<div class="post_container">
+				<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 		
-		$content = ob_get_clean();
-		$content = apply_filters( 'chimps_post_formats_'.$format.'_content', $content );
+				<!--Begin @Core index loop hook-->
+					<?php synapse_loop(); ?>
+				<!--End @Core index loop hook-->	
+			
+				<!--Begin @Core link pages hook-->
+					<?php synapse_link_pages(); ?>
+				<!--End @Core link pages hook-->
+			
+				<!--Begin @Core post edit link hook-->
+					<?php synapse_edit_link(); ?>
+				<!--End @Core post edit link hook-->
+			
+				<!--Begin @Core FB like hook-->
+					<?php synapse_fb_like_plus_one(); ?>
+				<!--End @Core FB like hook-->
+			
+				<!--Begin @Core post tags hook-->
+					<?php synapse_post_tags(); ?>
+				<!--End @Core post tags hook-->
+				
+				<?php if (is_single() && $options->get($themeslug.'_post_pagination') == "1") : ?>
+				<!--Begin @Core post pagination hook-->
+					<?php synapse_post_pagination(); ?>
+				<!--End @Core post pagination hook-->			
+				<?php endif;?>
+			
+				</div><!--end post_class-->
+			</div><!--end post container-->
+			<?php if (is_single()):?>
+			<?php comments_template(); ?>
+			<?php endif ?>
+			<!--Begin @iFeature post bar hook-->
+				<?php synapse_post_bar(); ?>
+			<!--End @iFeature post bar hook-->
 	
-		echo $content; 
-}
+			<?php endwhile; ?>
+		
+			<?php else : ?>
+
+				<h2>Not Found</h2>
+
+			<?php endif; ?>
+			
+				<!--Begin @Core pagination hook-->
+			<?php synapse_pagination(); ?>
+			<!--End @Core pagination loop hook-->
+		
+		</div><!--end content-->
+
+	<!--Begin @Core after content sidebar hook-->
+		<?php synapse_after_content_sidebar(); ?>
+	<!--End @Core after content sidebar hook-->
+
+</div>
+<?php }
 
 /**
 * End

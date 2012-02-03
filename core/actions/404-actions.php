@@ -1,6 +1,6 @@
 <?php
 /**
-* 404 actions used by the CyberChimps Core Framework
+* 404 actions used by the CyberChimps Synapse Core Framework
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -11,22 +11,29 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Core
+* @package Synapse
 * @since 1.0
 */
 
 /**
-* Core 404 actions
+* Synapse 404 actions
 */
-add_action( 'chimps_404', 'chimps_404_content' );
+add_action( 'synapse_404', 'synapse_404_content' );
 
 /**
 * Sets up the 404 content message
 *
 * @since 1.0 
 */
-function chimps_404_content() {
-	$message_text = apply_filters( 'chimps_404_message', 'Error 404' ); ?>
+function synapse_404_content() {
+	global $options, $themeslug; // call globals
+	
+	if ($options->get($themeslug.'_custom_404') != '') {
+		$message_text = $options->get($themeslug.'_custom_404');
+	}
+	else {
+		$message_text = apply_filters( 'synapse_404_message', 'Error 404' );
+	} ?>
 	<div class="error"><?php printf( __( $message_text, 'core' )); ?><br />	</div> 
 	<?php
 }

@@ -1,53 +1,50 @@
 <?php
-/**
-* Footer template used by the iFeature theme.
-*
-* Authors: Tyler Cunningham, Trent Lapinski.
-* Copyright: © 2011
-* {@link http://cyberchimps.com/ CyberChimps LLC}
-*
-* Released under the terms of the GNU General Public License.
-* You should have received a copy of the GNU General Public License,
-* along with this software. In the main directory, see: /licensing/
-* If not, see: {@link http://www.gnu.org/licenses/}.
-*
-* @package iFeature
-* @since 3.1
+
+/*
+	
+	Footer
+	Establishes the widgetized footer and static post-footer section of iFeature. 
+	Copyright (C) 2011 CyberChimps
+	Version 2.0
+	
 */
 
 global $options, $themeslug;
 
 ?>
+	
+<?php if ($options->get($themeslug.'_disable_footer') != "0"):?>	
 
-</div><!--end container 12 main wrap-->	
+</div><!--end container wrap-->
 
-<div id="footer">
-     <div class="container_12">
-     
-    <!-- Begin @Core before footer hook content-->
-		<?php chimps_before_footer(); ?>
-	<!-- End @Core before footer hook content-->
+	<div id="footer">
+     	<div class="container">
+     		<div class="row">
     	
-	<!-- Begin @Core footer hook content-->
-		<?php chimps_footer(); ?>
-	<!-- End @Core footer hook content-->
+	<!-- Begin @synapse footer hook content-->
+		<?php synapse_footer(); ?>
+	<!-- End @synapse footer hook content-->
 	
-	<!-- Begin @Core after footer hook content-->
-		<?php chimps_after_footer(); ?>
-	<!-- End @Core after footer hook content-->
-			   
-	</div><!--end footer_wrap-->
-</div><!--end footer-->
+	<?php endif;?>
 	
+
+		</div><!--end footer_wrap-->
+	</div><!--end footer-->
+</div> 
+
+<?php if ($options->get($themeslug.'_disable_afterfooter') != "0"):?>
+
 	<div id="afterfooter">
 		<div id="afterfooterwrap">
-		
-		<!-- Begin @Core secondary footer hook content-->
-			<?php chimps_secondary_footer(); ?>
-		<!-- End @Core secondary footer hook content-->
+		<div class="row">	
+		<!-- Begin @synapse afterfooter hook content-->
+			<?php synapse_secondary_footer(); ?>
+		<!-- End @synapse afterfooter hook content-->
 				
 		</div>  <!--end afterfooterwrap-->	
 	</div> <!--end afterfooter-->	
+		</div> 	
+	<?php endif;?>
 	
 	<?php wp_footer(); ?>	
 </body>

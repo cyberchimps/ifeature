@@ -1,6 +1,6 @@
 <?php
 /**
-* Twitterbar actions used by the CyberChimps Core Framework
+* Twitterbar actions used by the CyberChimps Synapse Core Framework
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -11,33 +11,37 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Core
+* @package Synapse
 * @since 1.0
 */
 
 /**
-* Core Twitterbar actions
+* Synapse Twitterbar actions
 */
-add_action( 'chimps_twitterbar_section', 'chimps_twitterbar_section_content' );
+add_action( 'synapse_twitterbar_section', 'synapse_twitterbar_section_content' );
 
 /**
 * Retrieves the Twitterbar options and sets up the HTML
 */
-function chimps_twitterbar_section_content() {
-	global $post; //call globals
+function synapse_twitterbar_section_content() {
+	global $options, $themeslug, $post; //call globals
+	$root = get_template_directory_uri();
 	
-	$twitterbar = get_post_meta($post->ID, 'enable_twitter_bar' , true);
-	$handle = get_post_meta($post->ID, 'twitter_handle' , true);
-	$root = get_template_directory_uri(); ?>
-	
-		<div id="twitterbar"><!--id="twitterbar"-->
-			<div class="twittertext">
+	if (is_page()) {
+	$handle = get_post_meta($post->ID, 'twitter_handle' , true); 
+	}
+	else {
+	$handle = $options->get($themeslug.'_blog_twitter');
+	}?>
+	<div class="row">
+		<div id="twitterbar" class="twelve columns"><!--id="twitterbar"-->
+			<div id="twittertext">
 				<a href=" http://twitter.com/<?php echo $handle ; ?>" > <img src="<?php echo "$root/images/twitterbird.png" ?>" /> <?php echo $handle ;?> - </a><?php twitter_messages($handle); ?>
 			</div>
 		</div><!--end twitterbar--> 
-		<div class='clear'>&nbsp;</div><?php
-
-	}	
+	</div>
+		<?php
+}	
 
 /**
 * End

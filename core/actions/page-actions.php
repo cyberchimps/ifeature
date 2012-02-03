@@ -1,6 +1,6 @@
 <?php
 /**
-* Page actions used by the CyberChimps Core Framework 
+* Page actions used by the CyberChimps Synapse Core Framework
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -11,46 +11,39 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Core
+* @package Synapse
 * @since 1.0
 */
 
 /**
-* Core page actions
+* Synapse page actions
 */
 
-add_action('chimps_page_section', 'chimps_page_section_content' );
+add_action('synapse_page_section', 'synapse_page_section_content' );
 
 /**
 * Sets up the page content. 
 *
 * @since 1.0
 */
-function chimps_page_section_content() { 
-	global $options, $themeslug, $post;
+function synapse_page_section_content() { 
+	global $options, $themeslug, $post, $sidebar, $content_grid;
+	
+	synapse_sidebar_init();
 	
 	$hidetitle = get_post_meta($post->ID, 'hide_page_title' , true);
-	$sidebar = get_post_meta($post->ID, 'page_sidebar' , true);
 
-	if ($sidebar == "1" ) {
-		$content_grid = 'grid_12';
-	}
-	
-	else {
-		$content_grid = 'grid_8';
-	}
 
 ?>
-<div class="container_12">
-
-	<?php if ($sidebar == "2"): ?>
-		<div id="sidebar" class="grid_3">
-			<?php get_sidebar('left'); ?>
-		</div>
-	<?php endif;?>
+<div class="row">
+	<!--Begin @Core before content sidebar hook-->
+		<?php synapse_before_content_sidebar(); ?>
+	<!--End @Core before content sidebar hook-->
 			
 		<div id="content" class="<?php echo $content_grid; ?>">
-			
+		
+		<?php synapse_page_content_slider(); ?>
+		
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
 			<div class="post_container">
@@ -80,16 +73,18 @@ function chimps_page_section_content() {
 
 			<?php endwhile; endif; ?>
 			</div><!--end post_container-->
-						
+				
 	</div><!--end content_left-->
 	
-	<?php if ($sidebar == "0" OR $sidebar == ""): ?>
-		<div id="sidebar" class="grid_4">
-			<?php get_sidebar(); ?>
-		</div>
-	<?php endif;?>
-	
-</div><!--end container_12-->
-
-<div class='clear'>&nbsp;</div> <?php
+	<!--Begin @Core after content sidebar hook-->
+		<?php synapse_after_content_sidebar(); ?>
+	<!--End @Core after content sidebar hook-->
+</div>
+<?php
 }
+
+/**
+* End
+*/
+
+?>

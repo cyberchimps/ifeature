@@ -1,6 +1,6 @@
 <?php
 /**
-* Archive actions used by the CyberChimps Core Framework 
+* Archive actions used by the CyberChimps Synapse Core Framework
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -11,22 +11,21 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Core
+* @package Synapse
 * @since 1.0
 */
 
 /**
-* Core archive actions
+* Synapse archive actions
 */
-add_action( 'chimps_archive_title', 'chimps_archive_page_title' );
-add_action( 'chimps_archive', 'chimps_archive_loop' );
+add_action( 'synapse_archive_title', 'synapse_archive_page_title' );
 
 /**
 * Output archive page title based on archive type. 
 *
 * @since 1.0
 */
-function chimps_archive_page_title() { 
+function synapse_archive_page_title() { 
 	global $post; ?>
 	
 		<?php if (is_category()) { ?>
@@ -52,38 +51,6 @@ function chimps_archive_page_title() {
 	
 		<?php } 
 }
-
-/**
-* Archive page loop. 
-*
-* @since 1.0
-*/
-function chimps_archive_loop() { 
-?>
-	<div class="post_container">
-			
-		<div <?php post_class() ?>>
-				
-			<h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-				
-				<!--Begin @Core post tags hook-->
-					<?php chimps_post_byline(); ?>
-				<!--Begin @Core post tags hook-->
-						
-					<div class="entry">
-						<?php the_excerpt(); ?>
-					</div>
-				
-				<!--Begin @Core post tags hook-->
-					<?php chimps_post_tags(); ?>
-				<!--End @Core post tags hook-->	
-											
-		</div><!--end post-->
-				
-	</div><!--end post_container-->
-			
-<?php }
-
 
 /**
 * End

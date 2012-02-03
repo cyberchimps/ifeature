@@ -1,6 +1,6 @@
 <?php
 /**
-* CyberChimps Core Framework functions
+* CyberChimps Synapse Core Framework functions
 *
 * Authors: Tyler Cunningham
 * Copyright: © 2011
@@ -11,7 +11,7 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Core
+* @package Synapse
 * @since 1.0
 */
 
@@ -20,7 +20,7 @@
 *
 * @since 1.0
 */
-function chimps_text_domain() {
+function synapse_text_domain() {
 	load_theme_textdomain( 'core', TEMPLATEPATH . '/core/languages' );
 
 	    $locale = get_locale();
@@ -30,16 +30,41 @@ function chimps_text_domain() {
 		
 		return;    
 }
-add_action('after_setup_theme', 'chimps_text_domain');
+add_action('after_setup_theme', 'synapse_text_domain');
+
+/**
+* Load jQuery and register additional scripts.
+*/ 
+function synapse_scripts() {
+	if ( !is_admin() ) {
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('jquery-ui-tabs');
+	}
 	
+	$path =  get_template_directory_uri() ."/core/library";
+	
+	wp_register_script( 'foundation' ,$path.'/js/foundation.js');
+	wp_register_script( 'orbit' ,$path.'/js/jquery.orbit.js');
+	wp_register_script( 'apps' ,$path.'/js/app.js');
+	wp_register_script( 'menu' ,$path.'/js/menu.js');
+	wp_register_script( 'plusone' ,$path.'/js/plusone.js');
+	
+	wp_enqueue_script ('foundation');
+	wp_enqueue_script ('orbit');
+	wp_enqueue_script ('apps');
+	wp_enqueue_script ('menu');
+	wp_enqueue_script ('plusone');
+}
+add_action('wp_enqueue_scripts', 'synapse_scripts');	
+
 /**
 * Adds "untitled" to posts with no title.
 *
 * @since 1.0
 */
-add_filter('the_title', 'chimps_title');
+add_filter('the_title', 'synapse_title');
 
-function chimps_title($title) {
+function synapse_title($title) {
 
 	if ($title == '') {
 		return 'Untitled';
@@ -53,7 +78,7 @@ function chimps_title($title) {
 *
 * @since 1.0
 */
-function chimps_shorten_linktext($linkstring,$link) {
+function synapse_shorten_linktext($linkstring,$link) {
 	$characters = 33;
 	preg_match('/<a.*?>(.*?)<\/a>/is',$linkstring,$matches);
 	$displayedTitle = $matches[1];
@@ -65,15 +90,15 @@ function shorten_with_ellipsis($inputstring,$characters) {
   return (strlen($inputstring) >= $characters) ? substr($inputstring,0,($characters-3)) . '...' : $inputstring;
 }
 
-add_filter('previous_post_link','chimps_shorten_linktext',10,2);
-add_filter('next_post_link','chimps_shorten_linktext',10,2);
+add_filter('previous_post_link','synapse_shorten_linktext',10,2);
+add_filter('next_post_link','synapse_shorten_linktext',10,2);
 
 /**
 * Comment function
 *
 * @since 1.0
 */
-function chimps_comment($comment, $args, $depth) {
+function synapse_comment($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
      <div id="comment-<?php comment_ID(); ?>">
@@ -104,7 +129,7 @@ function chimps_comment($comment, $args, $depth) {
 *
 * @since 1.0
 */
-function chimps_breadcrumbs() {
+function synapse_breadcrumbs() {
  
   $delimiter = '&raquo;';
   $home = 'Home'; // text for the 'Home' link
@@ -113,7 +138,7 @@ function chimps_breadcrumbs() {
  
   if ( !is_home() && !is_front_page() || is_paged() ) {
  
-    echo '<div id="crumbs" class="grid_10">';
+    echo '<div id="crumbs" class="twelve columns">';
  
     global $post;
     $homeLink = get_bloginfo('url');

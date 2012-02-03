@@ -1,6 +1,6 @@
 <?php
 /**
-* Hook wrappers used by the CyberChimps Core Framework
+* Hook wrappers used by the CyberChimps Synapse Core Framework
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -11,17 +11,26 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Core
+* @package Synapse
 * @since 1.0
 */
+
+/**
+* Facebook like and plus one. 
+*
+* @since 1.0
+*/
+function synapse_sidebar_init() {
+	do_action ('synapse_sidebar_init');
+}
 
 /**
 * Placed before the 404 message content (404.php).
 *
 * @since 1.0
 */
-function chimps_before_404() {
-	do_action('chimps_before_404');
+function synapse_before_404() {
+	do_action('synapse_before_404');
 }
 
 /**
@@ -29,8 +38,8 @@ function chimps_before_404() {
 *
 * @since 1.0
 */
-function chimps_404() {
-	do_action('chimps_404');
+function synapse_404() {
+	do_action('synapse_404');
 }
 
 /**
@@ -38,8 +47,8 @@ function chimps_404() {
 *
 * @since 1.0
 */
-function chimps_after_404() {
-	do_action('chimps_after_404');
+function synapse_after_404() {
+	do_action('synapse_after_404');
 }
 
 /**
@@ -47,8 +56,8 @@ function chimps_after_404() {
 *
 * @since 1.0
 */
-function chimps_before_archive() {
-	do_action('chimps_before_archive');
+function synapse_before_archive() {
+	do_action('synapse_before_archive');
 }
 
 /**
@@ -56,8 +65,8 @@ function chimps_before_archive() {
 *
 * @since 1.0
 */
-function chimps_archive_title() {
-	do_action('chimps_archive_title');
+function synapse_archive_title() {
+	do_action('synapse_archive_title');
 }
 
 /**
@@ -65,8 +74,8 @@ function chimps_archive_title() {
 *
 * @since 1.0
 */
-function chimps_archive() {
-	do_action('chimps_archive');
+function synapse_archive() {
+	do_action('synapse_archive');
 }
 
 /**
@@ -74,8 +83,8 @@ function chimps_archive() {
 *
 * @since 1.0
 */
-function chimps_after_archive() {
-	do_action('chimps_after_archive');
+function synapse_after_archive() {
+	do_action('synapse_after_archive');
 }
 
 /**
@@ -83,8 +92,8 @@ function chimps_after_archive() {
 *
 * @since 1.0
 */
-function chimps_before_comments() {
-	do_action('chimps_before_comments');
+function synapse_before_comments() {
+	do_action('synapse_before_comments');
 }
 
 /**
@@ -92,8 +101,8 @@ function chimps_before_comments() {
 *
 * @since 1.0
 */
-function chimps_comments() {
-	do_action('chimps_comments');
+function synapse_comments() {
+	do_action('synapse_comments');
 }
 
 /**
@@ -101,8 +110,8 @@ function chimps_comments() {
 *
 * @since 1.0
 */
-function chimps_after_comments() {
-	do_action('chimps_after_comments');
+function synapse_after_comments() {
+	do_action('synapse_after_comments');
 }
 
 /**
@@ -110,8 +119,8 @@ function chimps_after_comments() {
 *
 * @since 1.0
 */
-function chimps_before_page_content() {
-	do_action('chimps_before_page_content');
+function synapse_before_page_content() {
+	do_action('synapse_before_page_content');
 }
 
 /**
@@ -119,8 +128,8 @@ function chimps_before_page_content() {
 *
 * @since 1.0
 */
-function chimps_after_page_content() {
-	do_action('chimps_after_page_content');
+function synapse_after_page_content() {
+	do_action('synapse_after_page_content');
 }
 
 /**
@@ -128,8 +137,8 @@ function chimps_after_page_content() {
 *
 * @since 1.0
 */
-function chimps_after_entry() {
-	do_action('chimps_after_entry');
+function synapse_after_entry() {
+	do_action('synapse_after_entry');
 }
 
 /**
@@ -137,8 +146,8 @@ function chimps_after_entry() {
 *
 * @since 1.0
 */
-function chimps_before_loop() {
-	do_action('chimps_before_loop');
+function synapse_before_loop() {
+	do_action('synapse_before_loop');
 }
 
 /**
@@ -146,8 +155,17 @@ function chimps_before_loop() {
 *
 * @since 1.0
 */
-function chimps_loop() {
-	do_action('chimps_loop');
+function synapse_loop() {
+	do_action('synapse_loop');
+}
+
+/**
+* The loop (single.php). 
+*
+* @since 1.0
+*/
+function synapse_single_loop() {
+	do_action('synapse_single_loop');
 }
 
 /**
@@ -155,8 +173,8 @@ function chimps_loop() {
 *
 * @since 1.0
 */
-function chimps_after_loop() {
-	do_action('chimps_after_loop');
+function synapse_after_loop() {
+	do_action('synapse_after_loop');
 }
 
 /**
@@ -164,8 +182,8 @@ function chimps_after_loop() {
 *
 * @since 1.0
 */
-function chimps_before_footer() {
-	do_action('chimps_before_footer_content');
+function synapse_before_footer() {
+	do_action('synapse_before_footer_content');
 }
 
 /**
@@ -173,8 +191,8 @@ function chimps_before_footer() {
 *
 * @since 1.0
 */
-function chimps_footer() {
-	do_action('chimps_footer');
+function synapse_footer() {
+	do_action('synapse_footer');
 }
 
 /**
@@ -182,8 +200,8 @@ function chimps_footer() {
 *
 * @since 1.0
 */
-function chimps_after_footer() {
-	do_action('chimps_after_footer_content');
+function synapse_after_footer() {
+	do_action('synapse_after_footer_content');
 }
 
 /**
@@ -191,8 +209,36 @@ function chimps_after_footer() {
 *
 * @since 1.0
 */
-function chimps_secondary_footer() { 
-	do_action('chimps_secondary_footer');
+function synapse_secondary_footer() { 
+	do_action('synapse_secondary_footer');
+}
+
+/**
+* Post byline content (single.php). 
+*
+* @since 1.0
+*/
+function synapse_single_post_byline() {
+	do_action('synapse_single_post_byline');
+}
+
+/**
+* Post byline content (archive.php). 
+*
+* @since 1.0
+*/
+function synapse_archive_post_byline() {
+	do_action('synapse_archive_post_byline');
+}
+
+
+/**
+* Calls post tags (single.php). 
+*
+* @since 1.0
+*/
+function synapse_single_post_tags() {
+	do_action('synapse_single_post_tags');
 }
 
 /**
@@ -200,8 +246,8 @@ function chimps_secondary_footer() {
 *
 * @since 1.0
 */
-function chimps_post_byline() {
-	do_action('chimps_post_byline');
+function synapse_post_byline() {
+	do_action('synapse_post_byline');
 }
 
 /**
@@ -209,8 +255,17 @@ function chimps_post_byline() {
 *
 * @since 1.0
 */
-function chimps_post_tags() {
-	do_action('chimps_post_tags');
+function synapse_post_tags() {
+	do_action('synapse_post_tags');
+}
+
+/**
+* Calls post tags (archive.php). 
+*
+* @since 1.0
+*/
+function synapse_archive_post_tags() {
+	do_action('synapse_archive_post_tags');
 }
 
 /**
@@ -218,8 +273,8 @@ function chimps_post_tags() {
 *
 * @since 1.0
 */
-function chimps_link_pages() {
-	do_action('chimps_link_pages');
+function synapse_link_pages() {
+	do_action('synapse_link_pages');
 }
 
 /**
@@ -227,8 +282,8 @@ function chimps_link_pages() {
 *
 * @since 1.0
 */
-function chimps_edit_link() {
-	do_action('chimps_edit_link');
+function synapse_edit_link() {
+	do_action('synapse_edit_link');
 }
 
 /**
@@ -236,8 +291,8 @@ function chimps_edit_link() {
 *
 * @since 1.0
 */
-function chimps_head_tag() {
-	do_action('chimps_head_tag');
+function synapse_head_tag() {
+	do_action('synapse_head_tag');
 }
 
 /**
@@ -245,8 +300,8 @@ function chimps_head_tag() {
 *
 * @since 1.0
 */
-function chimps_after_head_tag() {
-	do_action('chimps_after_head_tag');
+function synapse_after_head_tag() {
+	do_action('synapse_after_head_tag');
 }
 
 /**
@@ -254,8 +309,8 @@ function chimps_after_head_tag() {
 *
 * @since 1.0
 */
-function chimps_before_header() {
-	do_action('chimps_before_header');
+function synapse_before_header() {
+	do_action('synapse_before_header');
 }
 
 /**
@@ -263,8 +318,8 @@ function chimps_before_header() {
 *
 * @since 1.0
 */
-function chimps_after_header() {
-	do_action('chimps_after_header');
+function synapse_after_header() {
+	do_action('synapse_after_header');
 }
 
 /**
@@ -272,8 +327,8 @@ function chimps_after_header() {
 *
 * @since 1.0
 */
-function chimps_header_sitename() {
-	do_action('chimps_header_sitename');
+function synapse_header_sitename() {
+	do_action('synapse_header_sitename');
 }
 
 /**
@@ -281,8 +336,8 @@ function chimps_header_sitename() {
 *
 * @since 1.0
 */
-function chimps_header_site_description() {
-	do_action('chimps_header_site_description');
+function synapse_header_site_description() {
+	do_action('synapse_header_site_description');
 }
 
 /**
@@ -290,8 +345,8 @@ function chimps_header_site_description() {
 *
 * @since 1.0
 */
-function chimps_header_social_icons() {
-	do_action('chimps_header_social_icons');
+function synapse_header_social_icons() {
+	do_action('synapse_header_social_icons');
 }
 
 /**
@@ -299,8 +354,8 @@ function chimps_header_social_icons() {
 *
 * @since 1.0
 */
-function chimps_navigation() {
-	do_action('chimps_navigation');
+function synapse_navigation() {
+	do_action('synapse_navigation');
 }
 
 /**
@@ -308,8 +363,8 @@ function chimps_navigation() {
 *
 * @since 1.0
 */
-function chimps_pagination() { 
-	do_action('chimps_pagination');
+function synapse_pagination() { 
+	do_action('synapse_pagination');
 }
 
 /**
@@ -317,8 +372,8 @@ function chimps_pagination() {
 *
 * @since 1.0
 */
-function chimps_links_pages() { 
-	do_action('chimps_links_pages');
+function synapse_links_pages() { 
+	do_action('synapse_links_pages');
 }
 
 /**
@@ -326,8 +381,8 @@ function chimps_links_pages() {
 *
 * @since 1.0
 */
-function chimps_post_pagination() { 
-	do_action('chimps_post_pagination');
+function synapse_post_pagination() { 
+	do_action('synapse_post_pagination');
 }
 
 /**
@@ -335,8 +390,8 @@ function chimps_post_pagination() {
 *
 * @since 1.0
 */
-function chimps_page_section() {
-	do_action('chimps_page_section');
+function synapse_page_section() {
+	do_action('synapse_page_section');
 }
 
 /**
@@ -344,8 +399,8 @@ function chimps_page_section() {
 *
 * @since 1.0
 */
-function chimps_before_search() {
-	do_action('chimps_before_search');
+function synapse_before_search() {
+	do_action('synapse_before_search');
 }
 
 /**
@@ -353,8 +408,8 @@ function chimps_before_search() {
 *
 * @since 1.0
 */
-function chimps_search() {
-	do_action('chimps_search');
+function synapse_search() {
+	do_action('synapse_search');
 }
 
 /**
@@ -362,8 +417,8 @@ function chimps_search() {
 *
 * @since 1.0
 */
-function chimps_after_search() {
-	do_action('chimps_after_search');
+function synapse_after_search() {
+	do_action('synapse_after_search');
 }
 
 /**
@@ -371,8 +426,8 @@ function chimps_after_search() {
 *
 * @since 1.0
 */
-function chimps_blog_slider_lite() {
-	do_action('chimps_blog_slider_lite');
+function synapse_blog_slider_lite() {
+	do_action('synapse_blog_slider_lite');
 }
 
 /**
@@ -380,8 +435,53 @@ function chimps_blog_slider_lite() {
 *
 * @since 1.0
 */
-function chimps_twitterbar_section() {
-	do_action ('chimps_twitterbar_section');
+function synapse_twitterbar_section() {
+	do_action ('synapse_twitterbar_section');
+}
+
+/**
+* Generates the before content sidebar. 
+*
+* @since 1.0
+*/
+function synapse_before_content_sidebar() {
+	do_action ('synapse_before_content_sidebar');
+}
+
+/**
+* Generates the after content sidebar. 
+*
+* @since 1.0
+*/
+function synapse_after_content_sidebar() {
+	do_action ('synapse_after_content_sidebar');
+}
+
+/**
+* Index content. 
+*
+* @since 1.0
+*/
+function synapse_index() {
+	do_action ('synapse_index');
+}
+
+/**
+* Postbar. 
+*
+* @since 1.0
+*/
+function synapse_post_bar() {
+	do_action ('synapse_post_bar');
+}
+
+/**
+* Facebook like and plus one. 
+*
+* @since 1.0
+*/
+function synapse_fb_like_plus_one() {
+	do_action ('synapse_fb_like_plus_one');
 }
 
 /**

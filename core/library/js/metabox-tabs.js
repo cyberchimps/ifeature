@@ -112,4 +112,23 @@ jQuery(document).ready(function($) {
      $('.checkbox').toggle()
      e.preventDefault();
     });
+
+    $('#checkbox-extra_callout_options').change(function(){
+	    var items = $("tr.callout_image, tr.custom_callout_color, tr.custom_callout_title_color, tr.custom_callout_text_color, tr.custom_callout_button_color, tr.custom_callout_button_text_color");
+		if($(this).is(':checked')) {
+			items.show();
+		} else {
+			items.hide();
+		}
+		$("#checkbox-disable_callout_button").trigger("change");
+    }).trigger('change');
+
+    $('#checkbox-disable_callout_button').change(function(){
+	    var items = $("tr.callout_button_text, tr.callout_url");
+		if($(this).is(':checked')) {
+			items.show();
+		} else {
+			items.hide();
+		}
+    }).trigger('change');
 });

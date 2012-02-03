@@ -17,10 +17,15 @@ class ClassyOptionsSanitize {
 		add_filter( 'cof_sanitize_images', array( __CLASS__, 'sanitize_enum' ), 10, 2);
 		add_filter( 'cof_sanitize_radio', array( __CLASS__, 'sanitize_enum' ), 10, 2);
 		add_filter( 'cof_sanitize_select', array( __CLASS__, 'sanitize_enum' ), 10, 2);
-		add_filter( 'cof_sanitize_textarea', array( __CLASS__, 'sanitize_textarea' ) );
-		add_filter( 'cof_sanitize_text', 'sanitize_text_field' );
+		add_filter( 'cof_sanitize_section_order', array( __CLASS__, 'sanitize_section_order' ), 10, 2 );
+		
+		add_filter( 'cof_sanitize_textarea', array( __CLASS__, 'no_filter' ) );
+		add_filter( 'cof_sanitize_text', array( __CLASS__, 'no_filter' ) );
 	}
 
+	static function no_filter($input) {
+		return $input;
+	}
 	static function sanitize_textarea($input) {
 		// global $allowedtags;
 		// $output = wp_kses( $input, $allowedtags + array( 'script' ) );
@@ -315,6 +320,17 @@ class ClassyOptionsSanitize {
 		else {
 			return true;
 		}
+	}
+
+	static function sanitize_section_order($input, $option) {
+		return $input;
+		$exploded = explode($input, ",");
+		$output = array();
+		foreach($option['options'] as $key => $value) {
+			if(in_array($key, $exploded))
+				$output[] = $key;
+		}
+		return implode(',', $output);
 	}
 }
 
