@@ -492,6 +492,15 @@ function synapse_fb_like_plus_one() {
 function synapse_blog_content_slider() {
 	do_action ('synapse_blog_content_slider');
 }
+
+/**
+* Page content slider. 
+*
+* @since 1.0
+*/
+function synapse_page_content_slider() {
+	do_action ('synapse_page_content_slider');
+}
 /**
 * End
 */

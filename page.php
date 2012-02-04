@@ -31,7 +31,7 @@
 	<div class="row"> 
 	
 	<!--Begin @Core before page content hook-->
-		<?php chimps_before_page_content(); ?>
+		<?php synapse_before_page_content(); ?>
 	<!--End @Core before page content hook-->
 
 		<?php
@@ -44,7 +44,7 @@
 		?>	
 		
 	<!--Begin @Core after page content hook-->
-		<?php chimps_after_page_content(); ?>
+		<?php synapse_after_page_content(); ?>
 	<!--End @Core after page content hook-->
 	
 	</div><!--end row-->
