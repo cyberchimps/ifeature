@@ -112,6 +112,7 @@ function synapse_blog_slider_lite_content() {
 			echo ".nivo-controlNav {display: none;}";
 			echo ".slider_nav {display: none;}";
 			echo '#slider-wrapper {margin-bottom: 20px;}';
+			echo '#orbitDemo {margin-bottom: 0px;}';
 			echo '</style>';
 	    
 	    }
@@ -127,7 +128,7 @@ function synapse_blog_slider_lite_content() {
          advanceSpeed: $delay,
          captionAnimation: 'slideOpen',		// fade, slideOpen, none
          captionAnimationSpeed: 800,  
-         bullets: true,
+         bullets: $navigation,
      });
      });
 </script>
