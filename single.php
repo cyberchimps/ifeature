@@ -21,11 +21,10 @@ get_header(); ?>
 		<?php if (function_exists('synapse_breadcrumbs') && ($options->get($themeslug.'_disable_breadcrumbs') == "1")) { synapse_breadcrumbs(); }?>
 	</div>
 	<div class="row">
+	
 	<!--Begin @Core post area-->
 		<?php synapse_index(); ?>
 	<!--End @Core post area-->
-	
-
 
 	</div>
 </div><!--end container-->

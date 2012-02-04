@@ -64,7 +64,7 @@ function cyberchimps_store_page_init() {
 	<div class="theme_desciptions">
 		<div class="theme_titles"><a href="http://cyberchimps.com/ifeaturepro/" target="_blank">iFeature Pro</a></div>
 		<br />
-		iFeature Pro 3 is one of the most advanced personal content management WordPress Themes in the world and now offers intuitive theme options which make using iFeature Pro even more personal and fun than ever before.
+		iFeature Pro 4 is one of the most advanced personal content management WordPress Themes in the world and now offers intuitive theme options which make using iFeature Pro even more personal and fun than ever before.
 		<br /><br />
 		iFeature Pro is an advanced WordPress theme released under the GNU GPL v2. iFeature Pro is optimized for Chrome, Safari, FireFox, and Internet Explorer 9 (we do not support Internet Explorer 6). <br /><br />
 		<div class="buy"><a href="http://cyberchimps.com/ifeaturepro/" target="_blank">Buy iFeature Pro</a></div>
