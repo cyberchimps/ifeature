@@ -248,7 +248,6 @@ add_action ('widgets_init', 'ifp_widgets_init');
 */ 
 require_once ( get_template_directory() . '/core/core-init.php' );
 
-
 /**
 * Call additional files required by theme.
 */ 

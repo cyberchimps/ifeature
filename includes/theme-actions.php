@@ -18,21 +18,65 @@
 /**
 * iFeature Actions
 */
+add_action( 'ifeature_header_contact_area', 'ifeature_header_contact_area_content' );
 
 add_action( 'ifeature_header_content', 'ifeature_header_standard_content');
-add_action( 'ifeature_header_contact_area', 'ifeature_header_contact_area_content' );
-add_action( 'ifeature_sitename_register', 'ifeature_sitename_register_content');
 add_action( 'ifeature_sitename_contact', 'ifeature_sitename_contact_content');
 add_action( 'ifeature_description_icons', 'ifeature_description_icons_content');
-add_action( 'ifeature_logo_menu', 'ifeature_logo_menu_content');
 add_action( 'ifeature_logo_description', 'ifeature_logo_description_content');
-add_action( 'ifeature_banner', 'ifeature_banner_content');
+
 
 remove_action( 'synapse_head_tag', 'synapse_link_rel' );
 add_action( 'synapse_head_tag', 'ifeature_link_rel' );
 
 remove_action( 'synapse_box_section', 'synapse_box_section_content' );
 add_action( 'synapse_box_section', 'ifeature_box_section_content' );
+
+remove_action( 'synapse_sidebar_init', 'synapse_sidebar_init_content' );
+add_action( 'synapse_sidebar_init', 'custom_sidebar_init_content' );
+
+remove_action( 'synapse_before_content_sidebar', 'synapse_before_content_sidebar_markup' );
+
+remove_action( 'synapse_after_content_sidebar', 'synapse_after_content_sidebar_markup' );
+add_action( 'synapse_after_content_sidebar', 'custom_after_content_sidebar_markup' );
+
+/**
+* Set sidebar and grid variables.
+*
+* @since 1.0
+*/
+function custom_sidebar_init_content() {
+
+	global $options, $themeslug, $post, $sidebar, $content_grid;
+
+	if (is_page()) {
+	$sidebar = get_post_meta($post->ID, 'page_sidebar' , true);
+	}
+	
+	if ($sidebar == "1") {
+		$content_grid = 'twelve columns';
+	}
+	else {
+		$content_grid = 'eight columns';
+	}
+}
+
+/**
+* After entry sidebar
+*
+* @since 1.0
+*/
+function custom_after_content_sidebar_markup() {
+	global $options, $themeslug, $post, $sidebar; // call globals ?>
+	
+	<?php if ($sidebar == '0' OR $sidebar == '' ): ?>
+	<div id="sidebar" class="four columns">
+		<?php get_sidebar(); ?>
+	</div>
+	<?php endif;?>
+	<?php 
+}
+
 
 /**
 * Sets up the header contact area
@@ -59,45 +103,6 @@ function ifeature_header_contact_area_content() {
 }
 
 /**
-* Sets up the Box Section wigetized area
-*
-* @since 3.1
-*/
-function ifeature_box_section_content() { 
-	global $post; //call globals
-	
-	$enableboxes = get_post_meta($post->ID, 'enable_box_section' , true);
-	$root = get_template_directory_uri(); ?>
-	
-<div class="row">
-	<div id="box_container" class="twelve columns"> <!--box container-->
-		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Left") ) : ?>
-			<div id="box1" class="four columns">
-				<h2 class="box-widget-title">iFeature Pro Slider</h2>
-					<img src="<?php echo $root ; ?>/images/icons/slidericon.png" height="100" alt="slider" class="aligncenter" />
-					<p>The iFeature Pro Slider includes auto-image resizing, new transitions, thumbnails, custom categories, improved captions, and the ability to have a slider on every page.</p>
-			</div><!--end box1-->
-			<?php endif; ?>
-			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Middle") ) : ?>
-			<div id="box2" class="four columns">
-				<h2 class="box-widget-title">New Design</h2>
-					<img src="<?php echo $root ; ?>/images/icons/blueprint.png" height="100" alt="blueprint" class="aligncenter" />
-					<p>With <a href="http://cybersynapse.com/ifeaturepro/">iFeature Pro</a> we’ve done the design work for you, all you need to do is pick a color scheme, select your options, and add your content.</p>
-			</div><!--end box2-->
-			<?php endif; ?>
-			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Right") ) : ?>
-			<div id="box3" class="four columns">
-				<h2 class="box-widget-title">Excellent Support</h2>
-				<img src="<?php echo $root ; ?>/images/icons/docs.png" height="100" alt="docs" class="aligncenter" />
-				<p>We designed iFeature Pro to be as easy to design with as possible, if you do run into trouble we provide a <a href="http://cybersynapse.com/forum">support forum</a>, and <a href="http://www.cybersynapse.com/ifeaturepro/docs/">precise documentation</a>.</p>
-			</div><!--end box3-->
-		<?php endif; ?>
-</div>
-	</div><!--end box_container--><?php
-}
-
-
-/**
 * Sets the header link rel attributes
 *
 * @since 3.0.2
@@ -116,7 +121,7 @@ function ifeature_link_rel() {
 		$font = $options->get($themeslug.'_font'); 
 	} 
 	if ($options->get($themeslug.'_color_scheme') == '') {
-		$color = 'blue';
+		$color = 'grey';
 	}
 	else {
 		$color = $options->get($themeslug.'_color_scheme');
@@ -132,7 +137,6 @@ function ifeature_link_rel() {
 <?php endif; ?>
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/app.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/ie.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/shortcode.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/color/<?php echo $color; ?>.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/elements.css" type="text/css" />
@@ -144,46 +148,6 @@ function ifeature_link_rel() {
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <link href='http://fonts.googleapis.com/css?family=<?php echo $font ; ?>' rel='stylesheet' type='text/css' /> <?php
-}
-
-/**
-* Sitename/Register
-*
-* @since 3.0
-*/
-function ifeature_sitename_register_content() {
-global $current_user;
-?>
-
-	<div class="container">
-		<div class="row">
-		
-			<div class="seven columns">
-				
-				<!-- Begin @Core header sitename hook -->
-					<?php synapse_header_sitename(); ?> 
-				<!-- End @Core header sitename hook -->
-			
-				
-			</div>	
-			
-			<div id="register" class="five columns">
-			
-			<?php if(!is_user_logged_in()) :?>
-
-		<li><?php wp_loginout(); ?></li> <?php wp_meta(); ?><li> |<?php wp_register(); ?>  </li>
-
-			<?php else :?>
-
-			Welcome back <strong><?php global $current_user; get_currentuserinfo(); echo ($current_user->user_login); ?></strong> | <?php wp_loginout(); ?>
-
-		<?php endif;?>
-				
-			</div>	
-		</div><!--end row-->
-	</div>
-
-<?php
 }
 
 /**
@@ -215,39 +179,6 @@ function ifeature_sitename_contact_content() {
 		</div><!--end row-->
 	</div>
 	
-<?php
-}
-
-/**
-* Full-Width Logo
-*
-* @since 3.0
-*/
-function ifeature_banner_content() {
-global $themeslug, $options, $root; //Call global variables
-$banner = $options->get($themeslug.'_banner'); //Calls the logo URL from the theme options
-$default = "$root/images/pro/banner.jpg";
-
-?>
-	<div class="container">
-		<div class="row">
-		
-			<div class="twelve columns">
-			<div id="banner">
-			
-			<?php if ($banner != ""):?>
-				<a href="<?php echo home_url(); ?>/"><img src="<?php echo stripslashes($banner['url']); ?>" alt="logo"></a>		
-			<?php endif; ?>
-			
-			<?php if ($banner == ""):?>
-				<a href="<?php echo home_url(); ?>/"><img src="<?php echo $default; ?>" alt="logo"></a>		
-			<?php endif; ?>
-			
-			</div>		
-			</div>	
-		</div><!--end row-->
-	</div>	
-
 <?php
 }
 
@@ -312,40 +243,6 @@ function ifeature_description_icons_content() {
 		</div><!--end row-->
 	</div>	
 
-<?php
-}
-
-/**
-* Description/Icons
-*
-* @since 3.0
-*/
-function ifeature_logo_menu_content() {
-?>
-	
-	<div class="container">
-		<div class="row">	
-			
-			<div class="five columns">
-				
-				<!-- Begin @Core header sitename hook -->
-					<?php synapse_header_sitename(); ?> 
-				<!-- End @Core header sitename hook -->
-			
-			</div>	
-			
-			<div class="seven columns">
-			<div id="halfnav">
-			<?php wp_nav_menu( array(
-		    'theme_location' => 'sub-menu' // Setting up the location for the main-menu, Main Navigation.
-			    )
-			);
-	    	?>
-			</div>					
-			</div>	
-		
-		</div><!--end row-->
-	</div>
 <?php
 }
 
