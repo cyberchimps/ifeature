@@ -1,4 +1,4 @@
-iFeature Pro Changelog
+iFeature Changelog
 
 ****************************
 
@@ -7,197 +7,292 @@ Version 4.0 (02-03-12)
 -Drag and Drop Header and Blog elements added.
 -Added WordPress Template Options (404, Search, Archive, Single)
 -Replaced NivoSlider with Orbit.
--Added new responsive Carousel.
--Added Left-Sidebar option.
--New design options.
 -General bug and style fixes.
 
-Version 3.1.1 (01-08-12)
--Called missing globals in page.php.
--CSS fix related to page options.
+Version 3.1.4 (01-25-12)
+-Moved scripts into unified function, hooking into wp_enqueue_script.
+
+Version 3.1.3 (01-16-12)
+-Fixed bug with featured thumb option.
+-Re-added link color option.
+-Removed unnecessary option from post meta options. 
+-Fixed bug with page SEO output. 
+
+Version 3.1.2 (01-06-12)
+-Fixed social icon bug.
+-Fixed menu bug.
+-Fixed default color scheme bug.
+
+Version 3.1.1 (01-05-12)
+-IE 8 fix.
 
 Version 3.1 (01-04-12)
--Changes to CyberChimps Core Framework. 
--Revised metabox code/styling. 
--Removed border-left on OL comment lists.
--Added Dutch, German, and Portuguese translation files. 
--Added rel=me to social icon URLs.
--Fix for comment pingbacks, moved custom comment function to Core functions file.
--Fixed callout color options, added option for callout button text color. 
--Breadcrumbs no longer blowing out pages with two sidebars, properly hiding breadcrumbs if disabled in options.
+-Changes to CyberChimps Core Framework.
+-Added new theme specific hooks in light of changes to Core Framework.
+-New metabox code/styling.
+-Cleaned up functions file. 
+-General HTML markup revisions.
+-Added Dutch and German translation files.
+
+Version 3.0.6 (12-22-11)
+-Added Portuguese language support. 
+-Added rel="me" attribute to social icon links.
+-Removed unnecessary code from social icon function. 
+
+Version 3.0.5 (12-15-11)
 -Additional visual tweaks for WordPress 3.3.
--Moved menu JavaScript code. 
--Removed extra localization function in theme functions file. 
 -Minor tweak to comments hook. 
--Minor HTML markup tweaks.
--Removed 404 image.
--Fixed slider caption bug on index page. 
--Fixed BBPress bug.
+-Minor HTML markup tweak. 
+-Removed 404 image. 
+-General fixes and cleanup. 
 
 Version 3.0.4 (12-09-11)
--Removed cursor: pointer; from all iMenu css. 
--Fixed menu grid variable when search and home button are disabled. 
--Removed special charcters filter from Custom CSS option.
--Added class to archive title H2 tags. 
--Fixed post formats icon bug. 
--Added link hover color option.
+-Removed cursor:pointer from iMenu css. 
+-Removed call to missing stylesheet. 
+-Removed unecessary template file in Core directory.
+-Fixed post formats icons not displaying without saving settings. 
 -jQuery no-conflict fix.
+-Now enqueing WP jQuery library.
+-Changed old 'ifeature' textdomain to 'core' in comments.php. 
+-Minor CSS tweak to meta link colors. 
 -Centered theme options panel, added WordPress 3.3 fix. 
--Button shortcode css. 
+
 
 Version 3.0.3 (12-01-11)
--Various IE visual fixes.
--General bug fixes and style changes. 
-
-Version 3.0.2 (11-30-11)
--Fix for child theme support.
+-Adjustment to search results text.
 -Posts with no title will now display "Untitled".
--Fixed UL styling bug. 
--PHP tag fixes for Windows Server support.
--Fixed jQuery no-conflict issue in the slider (not sure how undone).
--Fixed bug related to previous Featured Image fix.
--Fixed some theme elements not showing upon activation: header, footer, post byline elements. 
--Added fix for non-keymaster admins not having access to theme option in multisite installs. 
--Added missing No Tile option to custom backgrounds. 
--Added option to enable/disable post pagination links, fixed text overlap for long post titles. 
--Fixed slider thumbnail issue, also now hiding slider nav div if navigation disabled. 
--Adjusted several option names for more clarity. 
--Added secondary option to toggle afterfooter independent from footer. 
--Added option to toggle widget title backgrounds.
+-Fixed child theme support.
+-Adjustment to UL in comments.
+-Fixed bug where not keymaster admins in multisite installs could not access theme options.
 -Changed footer styling.
+-Fixed visual issues with IE. 
+-Added missing No Tile option to custom backgrounds. 
+-Disabling slider navigation also hides slider nav style.
+-Fixed some social icons not showing up by default.
 
-Version 3.0.1 (11-27-11)
--Fixed issue with galleries in single post pages. 
--Changed search result text from h2 to h3, removed unnecessary font size attribute. 
--Minor change to credit link option.
--Reduced background image file size.
--Added Dark Blue color option.
--Fixed Featured Image's showing up on single post page.
+Version 3.0.2 (11-27-11)
+-Fixed Google Analytics code option.
+-Added missing Header Contact area option.
+-Added missing defaults to image options. 
+
+Version 3.0.1 (11-26-11)
+-Removed .gitignore file.
 
 Version 3.0 (11-26-11)
 -Introduction of CyberChimps Core WordPress Framework. 
 -New Theme Options panel using Classy Options Framework.
 -Introduction of Drag and Drop page elements. 
 -Introduction of custom CSS grid.
--Added Featured Post carousel.
 -New theme design, includes bordered post and page containers, modified post layout.
--Introduced the Featured Post Carousel.
 -Removed SuperFish, using CSS menu. 
+-Twitterbar added for use on a per-page basis. 
 -Post formats support added.
 -New social icon set added.
 -Added post pagination links to single.php.
 
-Version 2.0.2 (10-05-11)
--Small patch related to footer widgetized area.
 
-Version 2.0.2 (10-04-11)
--Added Flickr and Myspace social icons. 
--Added breadcrumb links to single post, page, archive, and search templates. 
--Added max-width and height:auto to full-size images to fix blowout issue. 
--Floats now properly clearing. 
--Post pagination added to main blog index page. 
--register_sidebar calls now within a function hooked into widgets_init. 
--Added styling to definition list title and text elements.
--Added link to theme settings in the admin bar. 
+Version 2.1.3 (11-16-11)
+-Social icon z-index fix. 
+
+Version 2.1.2 (11-02-11)
+-Added Romanian language po and mo files.
+-Removed "default" label from Lucida Grande in font selection dropdown, added it to Arial instead. 
+-Added classes for category, tag and date archive titles and adjusted margin.
+-Adjusted margin on breadcrumb div. 
+
+Version 2.1.1 (10-25-11)
+-Fixed syntax error in search.php
+-Removed unecessary PHP closing tags from RSS icon code.
+-Removed unecessary esc_url from email icon. 
+-Fixed syntax error in archive.php.
+-Fixed missing text domain in comments.php.
+-Fixed breadcrumb syntax error on page.php
+-General HTML elements styling.
+-Fixed broken jQuery call. 
+-Fixed error in recent posts default widget where scheduled posts were displaying. 
+
+Version 2.1 (10-18-11)
+-Added localization support, includes ifeature.pot as well as Spanish and French .po/.mo files. 
+-Changed default font family to Arial, Helvetica, serif. 
+-URLs now sanitized using esc_url when necessary. 
+-Removed outdated get_bloginfo('url') call from breadcrumb function. 
+-Fixed several broken links in theme options page. 
+-Updated theme description and tags in stylesheet. 
+
+Version 2.0.9 (10-11-11)
+-jQuery call now placed within a function that hooks into wp_enqueue_scripts. 
+-E_STRICT fix in options.php, theme options validation now within a function.  
+-Modified disable breadcrumb option. 
+-Added missing image alt tags. 
+
+Version 2.0.8 (10-1-11)
+-Added breadcrumb links for single post, page, archive and search templates. 
+-Added definition list title and text styles. 
+-Added Flickr social icon. 
+-Adjusted h tag styles. 
+
+Version 2.0.7 (9-23-11)
+-Added height:auto element to img.size-full class.
+-Removed unnecessary trailing slash in JS script file paths in functions.php.
+-Renamed sidebar_register function to ifeature_widgets_init.
+-Removed various empty lines from template files. 
+-Increased font size of site title. 
+
+Version 2.0.6 (9-15-11)
+-Register sidebars now placed in a function that hooks into widgets_init. 
+-Added ID and description to the footer widgetized area. 
+-Fixed post thumbnail alignment issue caused by clearing float fix from 2.0.4.
+-Added post pagination links on main blog index. 
+-Fixed img.size-full width. 
+
+Version 2.0.5 (09-08-11)
+-Stripping HTML from Google + and Google Maps social icon URL option.
+-Stripping HTML from logo and favicon URL option.
+-Updated font choices.
+-Updated readme.txt.
+
+Version 2.0.4 (8-31-11)
+-Fixed HTML code showing up in header contact area.
+-Added trailing slashes to default social icon URLs.
+-Added height and width element to social icons.
+-Fixed floats not clearing on images. 
+-Fixed paddings on site title/description. 
+-Lightened link hover color in footer. 
+-Adjusted padding, margins and font size of footer widget titles. 
+-Adjusted margins/padding on post title, meta, and entry classes. 
+-Added link hover on secondary footer menu. 
+-Removed unnecessary text domain property from link to theme settings in admin menu. 
+
+Version 2.0.3 (8-23-11)
+-Fixed issue related to Google Analytics code appearing in the footer. 
+-Added link to iFeature theme options settings in the Admin bar. 
+-Added Arial and serif secondary fonts to body font family. 
+-Updated NivoSlider script to 2.6.
+-Now enqueueing WP jQuery library again in light of NivoSlider update. 
+
+Version 2.0.2 (8-16-11)
+-Replaced Cantarell with web-safe Lucida Grande as default font for better browser readability.
+-Replaced stripslashes() with esc_textarea() (Thanks to Chip for pointing that one out). 
+-Removed function_exists() conditional wrapper for add_theme_support() in functions.php.
+-Removed instances of localization calls. Localization support will be added in 2.1.
+-Adjusted site name and description margins in header. 
 
 Version 2.0.1 (8-05-11)
--Removed TimThumb, replaced with WordThumb for increased security.
--Added option to disable image resizing on iFeature Pro Slider. 
--Removed function stripping special characters from callout text value.
--Fixed title conditionals in header.php. 
+-Fixed bugs with Google Plus, Email and RSS social icons.
+-Changed all social icon/ credit links to open in new window. 
+-Updated some theme options copy. 
+-Fixed title conditionals in header.php.
+-Removed wp_specialchars(), replaced with esc_html().
+-Updated 404 page, added custom image. 
 
 Version 2.0 (8-01-11)
--TimThumb support added for automatic slider image resizing.
--Cleaned up stylesheet.
--iFeature Pro settings now found under Appearance tab in WP-Admin.
--Added Design tab, adding user control over various visual elements of the theme.
--Header options tab now called Social, moved several options to General and added check boxes to hide individual icons.
--Added Blog options tab, includes support for post excerpts, featured images, ability to hide meta elements.
--Replaced CoinSlider with Nivoslider, adds more animation effects and functionality options.
--Added custom Google Font input option.
--Added taxonomy structure to Custom Slides, users can now assign slides to custom categories to be called on a per-page basis.
--Added image uploader support for site logo and favicon in theme options.
--Added category drop-down menu support for theme options page.
--Added tabbed meta options for per-page options.
+-Added "Design", "Social", "Blog" theme options tabs, removed "Header", "Footer" and "SEO", moved footer copyright option to "General".
+-Added image uploader for logo and favicon, removed text input for URL.
+-Added color picker for link color.
+-Replaced Coinslider with NivoSlider.
+-Changed sidebar widget title background style, added option to revert to "classic" mode.
+-Added checkboxes to hide social icons.
+-Added support for post excerpts, featured images, and hiding various post meta elements.
+-Added Google +1 button option.
+-Added link to Author archives in post meta content.
+-Added drop down menu option for picking blog post category for feature slider. 
+-Restyled theme options page. 
+-General bug fixes. 
+
+Version 1.2.1 (7-27-11)
+-Added CyberChimps Themes page in preparation for iFeature Pro 2.0. 
+
+Version 1.2 (7-19-11)
+-Added search query to title on search results page.
+-Fixed featured images not clearing with short posts.
+-Added "Allan" Google Font. 
+
+Version 1.1.9 (7-13-11)
+-Added Google + social icon.
+
+Version 1.1.8 (7-06-11)
+-Adjusted theme option CSS to eliminate WordPress 3.2 footer styling conflict causing footer to appear in middle of theme opions.
+
+Version 1.1.7 (7-01-11)
 -Security fix in comments.php removing $_SERVER variable statement.
--Slider, SEO, and Callout options tabs removed, moved options to page meta options.
--Added Loop file.
--General bug fixes.
+-Cleaned up options.php, removed unnecessary functions.
+-Now enqueueing WordPress jQuery library instead of Google's for offline functionality. 
 
-Version 1.1.6 (6-12-2011)
--API added for push updates.
--Added jQuery noconflict support to fix issues with plugins calling additional jQuery libraries.
+Version 1.1.6 (6-13-11)
+-jQuery noconflict patch to fix third-party plugin compatibility issues.
 
-Version 1.1.5 (6-06-2011)
--Updated search.php to reflect support for custom backgrounds.
--Fixed bug related to custom slides and "blog pages show at most" setting.
+Version 1.1.5 (6-6-11)
+-Fixed broken menu item background for links beyond first row of navigation.
+-Featured images now link to corresponding post, fixed featured image alignment.
 
-Version 1.1.4 (5-5-2011)
+Version 1.1.4 (6-5-11)
+-Fixed post container bug related to custom backgrounds in search.php.
+
+Version 1.1.3 (5-25-11)
+-Made SEO tags in header dependent on theme options settings.
+-Optimized style.css, removed outdated styles.
+-Removed legacy custom field options for iFeature slider options.
+-Removed title / alt tags from credit link.
+-Fixed issue where bullets and numbers on lists weren't displaying properly.
+-Updated doctype to HTML5.
+-Updated .ico support, including a default .ico.
+
+Version 1.1.2 (5-11-11)
 -Fixed menu CSS to eliminate dropdown blowout when loading certain pages.
--CSS postcontainer added to support background colors and images.
+-Added WordPress background color / image support.
+-Revised CSS for posts and pages to have a post container with a white background.
 -Searchbar CSS fixes for IE.
 -Implemented PIE for rounded corners in IE7-8.
--Removed alpha filter for social icons for IE7-8 due to rendering issue (hover no longer supported for IE7-8, IE9 and modern browsers are fine).
--Two new multiple sidebar templates including left and right sidebars, and two right sidebars.
--Import / Export for theme settings.
+-Removed alpha filter for social icons for IE7-8 due to rendering issue (hover no longer supported for IE7-8, IE9 and modern browsers are fine). 
 
-Version 1.1.3 (5-4-2011)
--CSS fixes for iMenu.
--New CSS div structure for iMenu.
--Fixed Font issue (default is sticky now).
+Version 1.1.1 (5-4-11)
+-CSS fixes (iMenu).
 
-Version 1.1.2 (5-3-2011)
--Custom CSS option added to General theme options.
--Moved Custom Home Button option to Header theme options.
--Added option to hide iFeature Slider title bar to meta options.
+Version 1.1 (5-2-11)
+-CSS fixes (footer, comments).
+-Credit.php text revised.
+-Now using Meta-options instead of custom fields.
 
-Version 1.1.1 (5-2-2011)
--Minor bug fixes related to PHP4 errors.
--Feature slider now displays the number of custom slides rather than option in the theme settings.
--Fixed broken "hide CyberChimps link" option (sorry about that one everyone).
+Version 1.0.7
+-Fixed menu blowout issue, extra menu items now display below main navigation.
+-Set max image and caption width for post content to avoid blowout.
+-Removed hard-coded superfish script from header, now hooked from functions file.
+-moved wp_footer in footer.php above closing HTML body tag.
+-Removed function_exists() conditionals from register_sidebar calls.
+-Searchbar in nav.php now called from get_search_form().
+-post_class() added to all page templates.
 
-Version 1.1.0 (4-30-2011)
--Custom slides for iFeature Slider using custom post types.
--iFeature Slider now available for default post template, resizes to 640 pixels to accommodate sidebar.
--Updated iFeature Slider options page.
--Added custom meta options box to post pages for iFeature Slider options, no longer using custom fields.
--Fixed secondary footer menu blowout.
--Fixed several HTML errors.
--Updated menu images.
--General bug fixes.
-
-Version 1.0.7 (4-25-2011)
--Optimized images.
--Geneal bugfixes. 
-
-Version 1.0.6 (4-24-2011
-- Defined default Page template page.php as "Page with Sidebar (default)". 
-- Updated sf.js to fix jQuery issue.
+Version 1.0.6
+-Removed "Tangerine" font choice
+-Fixed secondary footer menu blowout issue
+-Removed WordPress Background option
+-Updated sf.js to fix jQuery issue.
+-Updated docs on credit.php.
 
 Version 1.0.5 (4-24-2011)
--Fixed search page pushdown issue, removed extra instance of pagination. 
--"Search" text in search field removes when user clicks within the search box.
--Reset button in theme settings properly redirects back to theme settings page.
--Replaced depreciated WordPress function in header.php with current version.
--Added more detailed theme description in style.css.
+-Fixed search page pushdown issue, removed extra instance of pagination 
+-"Search" text in search field removes when user clicks within the search box
+-Reset button in theme settings properly redirects back to theme settings page
+-Replaced depreciated WordPress function in header.php with current version
+-Added more detailed theme description in style.css
 
-Version 1.0.4 (4-23-2011)
--General bug fixes.
+Version 1.0.4 (4-22-2011)
+-Removed a default widget.
 
-Version 1.0.3 (4-22-2011)
--Separated theme options code from general functions file, now called options.php.
--Modified theme options page to remove unidentified index errors and modified the UI.
--Fixed sidebar pushdown issue on comment-enabled pages.
--Fixed all HTML related errors, now Valid XHTML 1.0 Transitional.
--general bug fixes.
+Version 1.0.3 (4-21-2011)
+-Separated theme options code from general functions file, now called options.php
+-Modified theme options page to remove unidentified index errors and modified the UI
+-Fixed sidebar pushdown issue on comment-enabled pages
+-Fixed all HTML related errors, now Valid XHTML 1.0 Transitional 
+-general bug fixes
 
 Version 1.0.2 (4-9-2011)
--Fixed parse errors related to older PHP builds.
--updated depreciated WordPress calls.
--general bug fixes.
+-Fixed parse errors related to older PHP builds
+-updated depreciated WordPress calls
+-general bug fixes
 
 Version 1.0.1 (4-6-2011)
--Updated Theme URI in style.css. 
+-Updated Theme URI in style.css 
 
 Version 1.0 (4-5-2011)
--Initial release.
+-Initial release
