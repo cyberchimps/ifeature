@@ -422,11 +422,11 @@ require_once ( get_template_directory() . '/includes/theme-hooks.php' ); // Them
 require_once ( get_template_directory() . '/includes/theme-actions.php' ); // Actions for theme specific hooks.
 
 // Presstrends
-function presstrends() {
+function if_presstrends() {
 
 // Add your PressTrends and Theme API Keys
 $api_key = 'zwhgyc1lnt56hki8cpwobb47bblas4er226b';
-$auth = 'c3kal5v4c3o30aiy9kewst9a8vsuatlll';
+$auth = 'j9nqc9xelb0ouiexmgttjumytrcrnclqz';
 
 // NO NEED TO EDIT BELOW
 $data = get_transient( 'presstrends_data' );
@@ -462,7 +462,7 @@ $url .= $k . '/' . $v . '/';
 $response = wp_remote_get( $url );
 set_transient('presstrends_data', $data, 60*60*24);
 }}
-add_action('admin_init', 'presstrends');
+add_action('admin_init', 'if_presstrends');
 
 /**
 * End
