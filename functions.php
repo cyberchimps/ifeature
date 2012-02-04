@@ -45,17 +45,17 @@ if ( is_admin() && isset($_GET['activated'] ) && $pagenow =="themes.php" ) {
 /**
 * Add link to theme options in Admin bar.
 */ 
-function admin_link() {
+function if_admin_link() {
 	global $wp_admin_bar;
 
-	$wp_admin_bar->add_menu( array( 'id' => 'iFeature', 'title' => 'iFeature Pro Options', 'href' => admin_url('themes.php?page=ifeature')  ) ); 
+	$wp_admin_bar->add_menu( array( 'id' => 'iFeature', 'title' => 'iFeature Options', 'href' => admin_url('themes.php?page=ifeature')  ) ); 
 }
-add_action( 'admin_bar_menu', 'admin_link', 113 );
+add_action( 'admin_bar_menu', 'if_admin_link', 113 );
 
 /**
 * Custom markup for gallery posts in main blog index.
 */ 
-function custom_gallery_post_format( $content ) {
+function if_custom_gallery_post_format( $content ) {
 	global $options, $themeslug, $post;
 	$root = get_template_directory_uri(); 
 	
@@ -107,12 +107,12 @@ function custom_gallery_post_format( $content ) {
 	
 	return $content;
 }
-add_filter('synapse_post_formats_gallery_content', 'custom_gallery_post_format' ); 
+add_filter('synapse_post_formats_gallery_content', 'if_custom_gallery_post_format' ); 
 	
 /**
 * Set custom post excerpt link text based on theme option.
 */ 
-function new_excerpt_more($more) {
+function if_new_excerpt_more($more) {
 
 	global $themename, $themeslug, $options, $post;
     
@@ -125,12 +125,12 @@ function new_excerpt_more($more) {
 
 	return '<a href="'. get_permalink($post->ID) . '"> <br /><br /> '.$linktext.'</a>';
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+add_filter('excerpt_more', 'if_new_excerpt_more');
 
 /**
 * Set custom post excerpt length based on theme option.
 */ 
-function new_excerpt_length($length) {
+function if_new_excerpt_length($length) {
 
 	global $themename, $themeslug, $options;
 	
@@ -148,7 +148,7 @@ add_filter('excerpt_length', 'new_excerpt_length');
 /**
 * Custom featured image size based on theme options.
 */ 
-function init_featured_image() {	
+function if_init_featured_image() {	
 	if ( function_exists( 'add_theme_support' ) ) {
 	
 	global $themename, $themeslug, $options;
@@ -168,15 +168,15 @@ function init_featured_image() {
 	set_post_thumbnail_size( $featurewidth, $featureheight, true );
 	}	
 }
-add_action( 'init', 'init_featured_image', 11);	
+add_action( 'init', 'if_init_featured_image', 11);	
 
 /**
 * Attach CSS3PIE behavior to elements
 */   
-function render_ie_pie() { ?>
+function if_render_ie_pie() { ?>
 	
 	<style type="text/css" media="screen">
-		#wrapper input, textarea, #twitterbar, input[type=submit], input[type=reset], #imenu, .searchform, .post_container, .postformats, .postbar, .post-edit-link, .widget-container, .widget-title, .footer-widget-title, .comments_container, ol.commentlist li.even, ol.commentlist li.odd, .slider_nav, ul.metabox-tabs li, .tab-content, .list_item, .section-info, #of_container #header, .menu ul li a, .submit input, #of_container textarea, #of_container input, #of_container select, #of_container .screenshot img, #of_container .of_admin_bar, #of_container .subsection > h3, .subsection, #of_container #content .outersection .section, #carousel_list, #calloutwrap, #calloutbutton, .box1, .box2, .box3
+		#wrapper input, textarea, #twitterbar, input[type=submit], input[type=reset], #imenu, .searchform, .post_container, .postformats, .postbar, .post-edit-link, .widget-container, .widget-title, .footer-widget-title, .comments_container, ol.commentlist li.even, ol.commentlist li.odd, .slider_nav, ul.metabox-tabs li, .tab-content, .list_item, .section-info, #of_container #header, .menu ul li a, .submit input, #of_container textarea, #of_container input, #of_container select, #of_container .screenshot img, #of_container .of_admin_bar, #of_container .subsection > h3, .subsection, #of_container #content .outersection .section
   		
   	{
   		behavior: url('<?php bloginfo('stylesheet_directory'); ?>/core/library/pie/PIE.htc');
@@ -185,144 +185,28 @@ function render_ie_pie() { ?>
 <?php
 }
 
-add_action('wp_head', 'render_ie_pie', 8);
+add_action('wp_head', 'if_render_ie_pie', 8);
 
 /**
-* Custom post types for Slider, Carousel.
+* Add Google Analytics based on theme option.
 */ 
-function create_post_type() {
-
-	global $themename, $themeslug, $options, $root;
-	
-	register_post_type( $themeslug.'_custom_slides',
-		array(
-			'labels' => array(
-				'name' => __( 'iFeature Slides' ),
-				'singular_name' => __( 'Slides' )
-			),
-			'public' => true,
-			'show_ui' => true, 
-			'supports' => array('custom-fields', 'title'),
-			'taxonomies' => array( 'slide_categories'),
-			'has_archive' => true,
-			'menu_icon' => "$root/images/pro/favicon.ico",
-			'rewrite' => array('slug' => 'slides')
-		)
-	);
-	
-	register_post_type( $themeslug.'_featured_posts',
-		array(
-			'labels' => array(
-				'name' => __( 'Carousel' ),
-				'singular_name' => __( 'Posts' )
-			),
-			'public' => true,
-			'show_ui' => true, 
-			'supports' => array('custom-fields'),
-			'taxonomies' => array( 'carousel_categories'),
-			'has_archive' => true,
-			'menu_icon' => "$root/images/pro/favicon.ico",
-			'rewrite' => array('slug' => 'slides')
-		)
-	);
-}
-add_action( 'init', 'create_post_type' );
-
-/**
-* Custom taxonomies for Slider, Carousel.
-*/ 
-function custom_taxonomies() {
-
-	global $themename, $themeslug, $options;
-	
-	register_taxonomy(
-		'slide_categories',		
-		$themeslug.'_custom_slides',		
-		array(
-			'hierarchical' => true,
-			'label' => 'Slide Categories',	
-			'query_var' => true,	
-			'rewrite' => array( 'slug' => 'slide_categories' ),	
-		)
-	);
-	register_taxonomy(
-		'carousel_categories',		
-		$themeslug.'_carousel_categories',		
-		array(
-			'hierarchical' => true,
-			'label' => 'Carousel Categories',	
-			'query_var' => true,	
-			'rewrite' => array( 'slug' => 'carousel_categories' ),	
-		)
-	);
-}
-add_action('init', 'custom_taxonomies', 0);
-
-/**
-* Assign default category for Slider, Carousel posts.
-*/ 
-function custom_taxonomy_default( $post_id, $post ) {
-
-	global $themename, $themeslug, $options;	
-
-	if( 'publish' === $post->post_status ) {
-
-		$defaults = array(
-
-			'slide_categories' => array( 'default' ), 'carousel_categories' => array( 'default' ),
-
-			);
-
-		$taxonomies = get_object_taxonomies( $post->post_type );
-
-		foreach( (array) $taxonomies as $taxonomy ) {
-
-			$terms = wp_get_post_terms( $post_id, $taxonomy );
-
-			if( empty( $terms ) && array_key_exists( $taxonomy, $defaults ) ) {
-
-				wp_set_object_terms( $post_id, $defaults[$taxonomy], $taxonomy );
-
-			}
-		}
-	}
-}
-
-add_action( 'save_post', 'custom_taxonomy_default', 100, 2 );
-
-/**
-* Add TypeKit support based on theme option.
-*/ 
-function typekit_support() {
-	global $themename, $themeslug, $options;
-	
-	$embed = $options->get($themeslug.'_typekit');
-	
-	echo stripslashes($embed);
-
-}
-add_action('wp_head', 'typekit_support');
-
-/**
-* Add TypeKit support based on theme option.
-*/ 
-function google_analytics() {
+function if_google_analytics() {
 	global $themename, $themeslug, $options;
 	
 	echo stripslashes ($options->get($themeslug.'_ga_code'));
 
 }
-add_action('wp_head', 'google_analytics');
+add_action('wp_head', 'if_google_analytics');
 	
 /**
 * Register custom menus for header, footer.
 */ 
-function register_menus() {
+function if_register_menus() {
 	register_nav_menus(
-	array( 'header-menu' => __( 'Header Menu' ), 'footer-menu' => __( 'Footer Menu' ), 'sub-menu' => __( 'Sub Menu' ))
+	array( 'header-menu' => __( 'Header Menu' ), 'footer-menu' => __( 'Footer Menu' ))
   );
 }
-add_action( 'init', 'register_menus' );
+add_action( 'init', 'if_register_menus' );
 	
 /**
 * Menu fallback if custom menu not used.
@@ -417,7 +301,6 @@ require_once ( get_template_directory() . '/core/core-init.php' );
 require_once ( get_template_directory() . '/includes/classy-options-init.php' ); // Theme options markup.
 require_once ( get_template_directory() . '/includes/options-functions.php' ); // Custom functions based on theme options.
 require_once ( get_template_directory() . '/includes/meta-box.php' ); // Meta options markup.
-require_once ( get_template_directory() . '/includes/update.php' ); // Notify user of theme update on "Updates" page in Dashboard.
 require_once ( get_template_directory() . '/includes/theme-hooks.php' ); // Theme specific hooks.
 require_once ( get_template_directory() . '/includes/theme-actions.php' ); // Actions for theme specific hooks.
 
