@@ -143,7 +143,7 @@ function if_new_excerpt_length($length) {
     	
 	return $length;
 }
-add_filter('excerpt_length', 'new_excerpt_length');
+add_filter('excerpt_length', 'if_new_excerpt_length');
 
 /**
 * Custom featured image size based on theme options.
