@@ -231,53 +231,7 @@ function ifp_widgets_init() {
     	'before_title'  => '<h2 class="widget-title">',
     	'after_title'   => '</h2>'
     ));
-    register_sidebar(array(
-    	'name' => 'Sidebar Left',
-    	'id'   => 'sidebar-left',
-    	'description'   => 'These are widgets for the left sidebar.',
-    	'before_widget' => '<div id="%1$s" class="widget-container">',
-    	'after_widget'  => '</div>',
-    	'before_title'  => '<h2 class="widget-title">',
-    	'after_title'   => '</h2>'
-    ));    	
-    register_sidebar(array(
-    	'name' => 'Sidebar Right',
-    	'id'   => 'sidebar-right',
-    	'description'   => 'These are widgets for the right sidebar.',
-    	'before_widget' => '<div id="%1$s" class="widget-container">',
-    	'after_widget'  => '</div>',
-    	'before_title'  => '<h2 class="widget-title">',
-    	'after_title'   => '</h2>'
-   	));
-    	
-    register_sidebar(array(
-		'name' => 'Box Left',
-		'id' => 'box-left',
-		'description' => 'This is the left widget of the three-box section',
-		'before_widget' => '<div id="box1" class="four columns">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="box-widget-title">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar(array(
-		'name' => 'Box Middle',
-		'id' => 'box-middle',
-		'description' => 'This is the middle widget of the three-box section',
-		'before_widget' => '<div id="box2" class="four columns">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="box-widget-title">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar(array(
-		'name' => 'Box Right',
-		'id' => 'box-right',
-		'description' => 'This is the right widget of the three-box section',
-		'before_widget' => '<div id="box3" class="four columns">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="box-widget-title">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar(array(
+    	register_sidebar(array(
 		'name' => 'Footer',
 		'id' => 'footer-widgets',
 		'description' => 'These are the footer widgets',
