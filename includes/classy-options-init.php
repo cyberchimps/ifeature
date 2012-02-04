@@ -39,21 +39,25 @@ $terms2 = get_terms('category', 'hide_empty=0');
 
 $options
 		->section("Welcome")
-		->info("<h1>iFeature 3</h1>
-		<h2>A Different Kind of WordPress Theme</h2>
-<strong>Intuitive New Theme Options. New Design. Post Formats.</strong>
+		->info("<h1>iFeature 4</h1>
+		
+<p><strong>A Responsive Drag & Drop Free WordPress Theme</strong></p>
 
-<p>iFeature 3 is one of the most advanced personal content management WordPress Themes in the world and now offers intuitive theme options which make using iFeature even more personal and fun than ever before.</p>
+<div id='upgrade2'><strong><a href='http://cyberchimps.com/ifeaturepro/' target='_blank' class='upgrade'>Upgrade to iFeature Pro 4</a></strong></div>
+
+<p>If you want even more amazing new features <a href='http://cyberchimps.com/ifeaturepro/' target='_blank'>upgrade to iFeature Pro 4</a> which includes dozens of more feautres such as more Drag & Drop Header, Blog and Page Elements, the Responsive iFeature Pro Slider with full-width custom slides, 8 beautiful preselected color schemes, custom color pickers, amazing background images, a responsive featured posts section, callout section, more widgetized boxes, expanded typography including TypeKit support, and many more powerful new features. Please visit <a href='http://cyberchimps.com/ifeaturepro/' target='_blank'>CyberChimps.com</a> to learn more!</p>
+
+<p>iFeature 4 includes a Responsive Apple-like design (which magically adjusts to mobile devices such as the iPhone and iPad), Responsive iFeature Slider, New Drag & Drop Header Elements, Page and Blog Elements, intuitive Theme Options, and is built with HTML5 and CSS3.</p>
 
 <p>To get started simply work your way through the menus to the left, select your options, add your content, and always remember to hit save after making any changes.</p>
 
-<p>If you want even more amazing new features <a href='http://cyberchimps.com/ifeaturepro/' target='_blank'>upgrade to iFeature Pro 3</a> which includes Drag & Drop Page Elements, the iFeature Pro Slider with full-width custom slides, 8 beautiful preselected color schemes, more custom color pickers, amazing new background images, a featured posts section, callout section, more widgetized boxes, expanded typography including TypeKit support, and many more powerful new features please visit <a href='http://cyberchimps.com/ifeaturepro/' target='_blank'>CyberChimps.com</a> to learn more!</p>
+<p>We tried to make iFeature 4 as easy to use as possible, but if you still need help please read the <a href='http://cyberchimps.com/ifeature-free/docs/' target='_blank'>documentation</a>, and visit our <a href='http://cyberchimps.com/forum/' target='_blank'>support forum</a>.</p>
 
-<div id='upgrade2'><strong><a href='http://cyberchimps.com/ifeaturepro/' target='_blank' class='upgrade'>Upgrade to iFeature Pro 3</a></strong></div>
+<p>Thank you for using iFeature 4.</p>
 
-<p>We tried to make iFeature 3 as easy to use as possible, but if you still need help please read the <a href='http://cyberchimps.com/ifeature-free/docs/' target='_blank'>documentation</a>, and visit our <a href='http://cyberchimps.com/forum/' target='_blank'>support forum</a>.</p>
+<h4>A Different Kind of WordPress Theme</h4>
 
-<p>Thank you for using iFeature 3, a <a href='http://cyberchimps.com' target='_blank'>CyberChimps WordPress Theme</a>.</p>")
+<p><a href='http://cyberchimps.com' target='_blank'>A CyberChimps WordPress Theme</a></p>")
 		->section("Design")
 		->open_outersection()
 			->select($themeslug."_color_scheme", "Select a Color Scheme", array( 'options' => array("grey" => "Grey (default)", "green" => "Green"), 'default' => 'grey'))
