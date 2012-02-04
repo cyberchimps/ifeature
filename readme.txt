@@ -1,16 +1,14 @@
-iFeature Pro is a Premium WordPress theme designed by CyberChimps.com in California.
+iFeature is a free WordPress theme designed by CyberChimps.com in California.
 
-Theme Homepage -  http://cyberchimps.com/ifeaturepro
+Theme Homepage -  http://cyberchimps.com/ifeature/
 
 Licensed under GNU General Public License v2.0 - http://www.gnu.org/licenses/gpl-2.0.html
--------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
-For updated documentation, walkthroughs, and support please visit http://cyberchimps.com/
+For updated documentation, walkthroughs, and support please visit http://cyberchimps.com/docs/
 
-For updated docs please visit http://cyberchimps.com/ifeaturepro/docs/
+To upgrade to iFeature Pro please visit: http://cyberchimps.com/ifeaturepro/
 
 For the support forum please visit: http://cyberchimps.com/forum/
 
-For more support options please visit http://cyberchimps.com/ifeaturepro/support/
-
-Also, please read our guide on upgrading to iFeature Pro 4 if you are coming from an older version. http://cyberchimps.com/question/updating-ifeature-pro-3/
+For all other questions please visit: http://cyberchimps.com/support/
