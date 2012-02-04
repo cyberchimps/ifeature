@@ -11,7 +11,7 @@
 * Define global theme functions.
 */ 
 	$themename = 'ifeature';
-	$themenamefull = 'iFeature Pro';
+	$themenamefull = 'iFeature';
 	$themeslug = 'if';
 	$root = get_template_directory_uri(); 
 	$slider_default = "$root/images/ifeaturefree.jpg";
@@ -409,7 +409,7 @@ add_action ('widgets_init', 'ifp_widgets_init');
 * Initialize Synapse Core Framework and Pro Extension.
 */ 
 require_once ( get_template_directory() . '/core/core-init.php' );
-require_once ( get_template_directory() . '/core/pro/pro-init.php' );
+
 
 /**
 * Call additional files required by theme.
