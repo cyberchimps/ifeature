@@ -44,9 +44,6 @@ require_once ( get_template_directory() . '/core/metabox/meta-box-class.php' );
 //CyberChimps Themes Page
 require_once ( get_template_directory() . '/core/classy-options/options-themes.php' );
 
-//Widgets
-//require_once ( get_template_directory() . '/core/widgets/tabbed-widget.php' );
-
 /**
 * End
 */
