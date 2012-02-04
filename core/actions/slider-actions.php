@@ -82,9 +82,9 @@ function synapse_blog_slider_lite_content() {
 	    		
 	    	/* Markup for slides */
 
-	    	$out .= "<a href='$link' $caption>
-	    				<img src='$image' width='$imgwidth' alt='Slider' />
-	    						<span class='orbit-caption' id='htmlCaption$i'>$title <br /> $text</span>
+	    	$out .= "<a href='$permalink' $text>
+	    				<img src='$image' alt='Slider' />
+	    						<span class='orbit-caption' id='htmlCaption$i'>$thetitle <br /> $text</span>
 	    				</a>
 	    			";
 
@@ -123,11 +123,11 @@ function synapse_blog_slider_lite_content() {
 <script type="text/javascript">
    $(window).load(function() {
     $('#orbitDemo').orbit({
-         animation: '$animation',
-         advanceSpeed: $sliderdelay,
+        
+         advanceSpeed: $delay,
          captionAnimation: 'slideOpen',		// fade, slideOpen, none
          captionAnimationSpeed: 800,  
-         bullets: $dots,
+         bullets: true,
      });
      });
 </script>
