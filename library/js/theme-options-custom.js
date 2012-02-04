@@ -136,9 +136,7 @@ jQuery(function($) {
 		var show = $(this).val().split(",");
 		var map = {
 			synapse_blog_slider: "subsection-blogslider",
-			synapse_callout_section: "subsection-calloutoptions",
-			synapse_twitterbar_section: "subsection-twtterbaroptions",
-			synapse_index_carousel_section: "subsection-carouseloptions"
+			synapse_twitterbar_section: "subsection-twtterbaroptions"
 			// , synapse_box_section: ""
 		};
 
