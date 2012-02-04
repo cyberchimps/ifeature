@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4..0.1 (02-04-12)
+-License notification and theme URI fix. 
+
 Version 4.0 (02-03-12)
 -Added Foundation CSS grid, offering both responsive and static design.
 -Drag and Drop Header and Blog elements added.
