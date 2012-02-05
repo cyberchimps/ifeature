@@ -4,6 +4,7 @@ iFeature Changelog
 
 Version 4.0.2 (02-05-12)
 -Fixed slider image filename.
+-Fixed postbar bug on single pages.
 
 Version 4.0.1 (02-04-12)
 -License notification and theme URI fix. 
