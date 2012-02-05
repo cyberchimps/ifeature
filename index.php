@@ -14,9 +14,11 @@
 	$slidersize = $options->get($themeslug.'_slider_size');
 			
 /* Set slider hook based on page option */
-		
-	add_action ( 'synapse_blog_content_slider', 'synapse_blog_slider_lite');
 
+	if (preg_match("/synapse_blog_slider/", $reorder )) {
+		add_action ( 'synapse_blog_content_slider', 'synapse_blog_slider_lite');
+	}
+	
 /* End set slider hook*/
 
 ?>
