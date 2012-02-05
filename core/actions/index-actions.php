@@ -77,12 +77,14 @@ function synapse_index_content() {
 			
 				</div><!--end post_class-->
 			</div><!--end post container-->
-			<?php if (is_single()):?>
-			<?php comments_template(); ?>
-			<?php endif ?>
+			
 			<!--Begin @iFeature post bar hook-->
 				<?php synapse_post_bar(); ?>
 			<!--End @iFeature post bar hook-->
+			
+			<?php if (is_single()):?>
+			<?php comments_template(); ?>
+			<?php endif ?>
 	
 			<?php endwhile; ?>
 		
