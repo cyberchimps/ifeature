@@ -2,7 +2,10 @@ iFeature Changelog
 
 ****************************
 
-Version 4..0.1 (02-04-12)
+Version 4.0.2 (02-05-12)
+-Fixed slider image filename.
+
+Version 4.0.1 (02-04-12)
 -License notification and theme URI fix. 
 
 Version 4.0 (02-03-12)
