@@ -37,6 +37,7 @@ function synapse_blog_slider_lite_content() {
         $tmp_query = $wp_query; 
 		$category = $options->get($themeslug.'_slider_category');
 		$root = get_template_directory_uri();
+		$timer = $options->get($themeslug.'_slider_timer');
 		
 /* Define blog category */
 
@@ -142,6 +143,13 @@ echo $out;
 
 
 ?>
+
+<?php if ($timer == '0') :?>
+	<style type="text/css" media="screen">
+		div.timer {display: none;}
+	</style>
+<?php endif;?>
+
 <div class="slider_nav"></div>
 <?php
 

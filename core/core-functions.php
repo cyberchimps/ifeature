@@ -48,12 +48,14 @@ function synapse_scripts() {
 	wp_register_script( 'apps' ,$path.'/js/app.js');
 	wp_register_script( 'menu' ,$path.'/js/menu.js');
 	wp_register_script( 'plusone' ,$path.'/js/plusone.js');
+	wp_register_script( 'mobilemenu' ,$path.'/js/mobilemenu.js');
 	
 	wp_enqueue_script ('foundation');
 	wp_enqueue_script ('orbit');
 	wp_enqueue_script ('apps');
 	wp_enqueue_script ('menu');
 	wp_enqueue_script ('plusone');
+	wp_enqueue_script ('mobilemenu');
 }
 add_action('wp_enqueue_scripts', 'synapse_scripts');	
 

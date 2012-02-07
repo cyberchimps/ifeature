@@ -150,6 +150,7 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 			->text($themeslug."_slider_posts_number", "Number of Featured Blog Posts")
 			->text($themeslug."_slider_delay", "Slider Delay")
 			->checkbox($themeslug."hide_slider_navigation", "Slider Navigation" , array('default' => true))
+			->checkbox($themeslug."_slider_timer", "Slider Timer", array('default' => true))
 		->subsection_end()
 		->subsection("Twtterbar Options")
 			->text($themeslug."_blog_twitter", "Enter your Twitter handle")

@@ -358,6 +358,7 @@ function synapse_nav() {
 		    <?php wp_nav_menu( array(
 		    'theme_location' => 'header-menu', // Setting up the location for the main-menu, Main Navigation.
 		    'fallback_cb' => 'menu_fallback', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
+		    'items_wrap'      => '<ul id="nav_menu">%3$s</ul>',
 			    )
 			);
 	    	?>

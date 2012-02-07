@@ -16,22 +16,6 @@ input[type=reset]{font-size: 12px;padding: 2px;margin-top: 5px;border: 1px solid
 a img{border:none}
 a{outline:none}
 
-@media handheld, only screen and (max-width: 767px) {
-
-	#box1, #box2 {margin-right: 0px !important;} 
-	.searchform {display: none;}
-    #nav ul ul li:hover ul, #nav ul ul ul li:hover ul {margin: 0px !important;}
-    #nav ul ul .parent > a, #nav ul ul .parent:hover > a:hover, #nav ul ul li:hover ul .parent > a, #nav ul ul li:hover ul .parent > a:hover{background-image:url(../images/arrow.png) !important;background-position:right !important;background-repeat:no-repeat !important;}
-    .carousel_caption {font-size: 10px;}
-    .callout_title {text-align: center;}
-    #calloutbutton {width: 200px; margin: auto; margin-bottom: 30px;}
-    #banner {margin-top: 10px;}
-}
-
-@media handheld, only screen and (max-width: 400px) {
-	.carousel_caption {font-size: 6px;}
-}
-
 #sidebar {right: -2px;}
 
 #register {text-align: right; list-style: none;}
@@ -681,3 +665,35 @@ figure {
 .ui-tabs-hide {
 	display: none;
 }
+
+@media handheld, only screen and (max-width: 767px) {
+
+	#box1, #box2 {margin-right: 0px !important;} 
+	.searchform {display: none;}
+    #nav ul ul li:hover ul, #nav ul ul ul li:hover ul {margin: 0px !important;}
+    #nav ul ul .parent > a, #nav ul ul .parent:hover > a:hover, #nav ul ul li:hover ul .parent > a, #nav ul ul li:hover ul .parent > a:hover{background-image:url(../images/arrow.png) !important;background-position:right !important;background-repeat:no-repeat !important;}
+    .carousel_caption {font-size: 10px;}
+    .callout_title {text-align: center;}
+    #calloutbutton {width: 200px; margin: auto; margin-bottom: 30px;}
+    #banner {margin-top: 10px;}
+}
+
+@media handheld, only screen and (max-width: 400px) {
+	#box1 {margin-top:0px;margin-bottom:7px;}
+	#box2 {margin-top:7px;margin-bottom:7px;}
+	#box3 {margin-top:7px;margin-bottom:14px;}
+	.carousel_caption {font-size: 6px;}
+	.icons{text-align: center;}
+	#logo{text-align:center;}
+	.sitename {text-align:center;}
+	#register {text-align: center;}
+	.description{text-align: center;}
+	#header_contact {text-align: center;}
+	#halfnav {text-align: center; float: none;}
+	#afterfootermenu {display:none;}
+	#credit {float:right;margin-right:15px;margin-top:4px;}
+	#afterfootercopyright {float: left;margin-left:15px;margin-bottom:2px;}
+	#mobileMenu_nav_menu {float: right; margin-top: 10px; margin-right: 10px;}
+	#imenu {height: 35px;}
+}
+
