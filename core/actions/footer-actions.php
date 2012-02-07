@@ -110,7 +110,7 @@ function synapse_secondary_footer_menu() {
 */
 function synapse_secondary_footer_credit() { ?>
 		
-	<div class="four columns credit">
+	<div id="credit" class="four columns">
 		<a href="http://cybersynapse.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/achimps.png" alt="credit" /></a>
 	</div> <?php 
 }
