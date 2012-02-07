@@ -214,7 +214,7 @@ add_action( 'init', 'if_register_menus' );
 function menu_fallback() {
 	global $post; ?>
 	
-	<ul id="menu-nav">
+	<ul id="nav_menu">
 		<?php wp_list_pages( 'title_li=&sort_column=menu_order&depth=3'); ?>
 	</ul><?php
 }
