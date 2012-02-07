@@ -7,6 +7,8 @@ Version 4.0.2 (02-05-12)
 -Fixed postbar bug on single pages.
 -Removing slider from active blog elements now hides it.
 -Fixed CSS bug with media embeds. 
+-Various responive design style fixes.
+-Added old slider arrows back, added option to disable timer. 
 
 Version 4.0.1 (02-04-12)
 -License notification and theme URI fix. 
