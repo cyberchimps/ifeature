@@ -222,7 +222,8 @@
 	
 	
 	
-	img, object, embed { max-width: 100%; height: auto; }
+	img { max-width: 100%; height: auto; }
+	object, embed { max-width: 100%; }
 	img { -ms-interpolation-mode: bicubic; }
 	 
 	 /* Nicolas Gallagher's micro clearfix */
