@@ -2,7 +2,7 @@ iFeature Changelog
 
 ****************************
 
-Version 4.0.2 (02-05-12)
+Version 4.0.2 (02-06-12)
 -Fixed slider image filename.
 -Fixed postbar bug on single pages.
 -Removing slider from active blog elements now hides it.
