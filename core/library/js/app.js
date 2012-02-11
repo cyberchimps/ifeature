@@ -1,5 +1,5 @@
 /* Foundation v2.1.4 http://foundation.zurb.com */
-$(document).ready(function () {
+jQuery(document).ready(function ($) {
 
 	/* Use this js doc for all application specific JS */
 

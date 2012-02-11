@@ -123,13 +123,14 @@ function synapse_blog_slider_lite_content() {
     
     $out .= <<<OUT
 <script type="text/javascript">
-   $(window).load(function() {
+	jQuery(document).ready(function ($) {
+   	$(window).load(function() {
     $('#orbitDemo').orbit({
-        
          advanceSpeed: $delay,
          captionAnimation: 'slideOpen',		// fade, slideOpen, none
          captionAnimationSpeed: 800,  
          bullets: $navigation,
+     });
      });
      });
 </script>
