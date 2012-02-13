@@ -1142,17 +1142,17 @@ div.slider-nav span.left {
 
 @media handheld, only screen and (max-width: 400px) {
 	#orbitDemo {height: 90px;}
-	.icons{text-align: center;}
-	#logo{text-align:center;}
-	.sitename {text-align:center;}
-	#register {text-align: center;}
-	.description{text-align: center;}
-	#header_contact {text-align: center;}
+	.icons{text-align: center !important;}
+	#logo{text-align:center !important;}
+	.sitename {text-align:center !important;}
+	#register {text-align: center !important;}
+	.description{text-align: center !important;}
+	#header_contact {text-align: center !important;}
 	#halfnav {text-align: center; float: none;}
 	#afterfootermenu {display:none;}
 	#credit {float:right;margin-right:15px;margin-top:4px;}
 	#afterfootercopyright {float: left;margin-left:15px;margin-bottom:2px;}
 	#mobileMenu_nav_menu {float: right; margin-top: 10px; margin-right: 10px;}
-	#imenu {height: 35px;}
+	#imenu {height: 35px !important;}
 }
 
