@@ -10,6 +10,7 @@ Version 4.0.3 (02-13-12)
 -Moved custom responsive CSS out of general style sheet to avoid conflict with responsive design disabled.
 -Removed several unecessary options.
 -Fixed description color option.
+-Adjustment to home button.
 
 Version 4.0.2 (02-06-12)
 -Fixed slider image filename.
