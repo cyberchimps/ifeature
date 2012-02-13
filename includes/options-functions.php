@@ -162,7 +162,7 @@ function if_add_tagline_color() {
 	}		
 		
 		echo '<style type="text/css">';
-		echo "#description {color: $tagline;}";
+		echo ".description {color: $tagline;}";
 		echo '</style>';
 }
 add_action( 'wp_head', 'if_add_tagline_color');
