@@ -1,3 +1,7 @@
+jQuery(document).ready(function($){
+	$('#nav_menu').mobileMenu();
+});
+
 (function($){
 
   //variable for storing the menu count when no ID is present

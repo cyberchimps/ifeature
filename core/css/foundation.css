@@ -588,7 +588,7 @@
 /* PUT IN YOUR SLIDER ID AND SIZE TO MAKE LOAD BEAUTIFULLY
    ================================================== */
    
-#orbitDemo { background: url(orbit/spinner.gif) no-repeat center center #000; max-height: 330px; margin-bottom: 45px; }
+#orbitDemo { background: url(orbit/spinner.gif) no-repeat center center #000; height: 330px; margin-bottom: 45px; }
 #orbitDemo.orbit { height: auto; }
 #orbitDemo img, #orbitDemo div { display: none; }
 #orbitDemo.orbit img, #orbitDemo.orbit div { display: block;}
@@ -738,23 +738,23 @@ div.slider-nav {
     display: block }
 
 div.slider-nav span {
-    width: 40px;
-    height: 40px;
+    width: 39px;
+    height: 50px;
     text-indent: -9999px;
     position: absolute;
     z-index: 1000;
     top: 50%;
-    margin-top: -20px;
+    margin-top: -25px;
     cursor: pointer; }
 
 div.slider-nav span.right {
-    background: url(orbit/next.png) no-repeat;
+    background: url(orbit/right-arrow.png) no-repeat;
     right: 0; }
 
 div.slider-nav span.left {
-    background: url(orbit/prev.png) no-repeat;
-    margin-left: 20px;
+    background: url(orbit/left-arrow.png) no-repeat;
     left: 0; }
+
 
 /* BULLET NAV
    ================================================== */
@@ -1125,3 +1125,34 @@ div.slider-nav span.left {
 	@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
 		.video { padding-top: 0; }
 	}
+	
+	
+/* Custom */	
+@media handheld, only screen and (max-width: 767px) {
+
+	#box1, #box2 {margin-right: 0px !important;} 
+	.searchform {display: none;}
+    #nav ul ul li:hover ul, #nav ul ul ul li:hover ul {margin: 0px !important;}
+    #nav ul ul .parent > a, #nav ul ul .parent:hover > a:hover, #nav ul ul li:hover ul .parent > a, #nav ul ul li:hover ul .parent > a:hover{background-image:url(../images/arrow.png) !important;background-position:right !important;background-repeat:no-repeat !important;}
+    .carousel_caption {font-size: 10px;}
+    .callout_title {text-align: center;}
+    #calloutbutton {width: 200px; margin: auto; margin-bottom: 30px;}
+    #banner {margin-top: 10px;}
+}
+
+@media handheld, only screen and (max-width: 400px) {
+	#orbitDemo {height: 90px;}
+	.icons{text-align: center;}
+	#logo{text-align:center;}
+	.sitename {text-align:center;}
+	#register {text-align: center;}
+	.description{text-align: center;}
+	#header_contact {text-align: center;}
+	#halfnav {text-align: center; float: none;}
+	#afterfootermenu {display:none;}
+	#credit {float:right;margin-right:15px;margin-top:4px;}
+	#afterfootercopyright {float: left;margin-left:15px;margin-bottom:2px;}
+	#mobileMenu_nav_menu {float: right; margin-top: 10px; margin-right: 10px;}
+	#imenu {height: 35px;}
+}
+

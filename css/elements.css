@@ -1,5 +1,7 @@
 /* Page Elements */
 
+div.timer {display: none;}
+
 .slider_nav {
 	height: 50px;
 	width: 99.8%;

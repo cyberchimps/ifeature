@@ -591,7 +591,7 @@
 /* PUT IN YOUR SLIDER ID AND SIZE TO MAKE LOAD BEAUTIFULLY
    ================================================== */
    
-#orbitDemo { background: url(orbit/spinner.gif) no-repeat center center #000; max-height: 330px; margin-bottom: 45px; }
+#orbitDemo { background: url(orbit/spinner.gif) no-repeat center center #000; height: 330px; margin-bottom: 45px; }
 #orbitDemo.orbit { height: auto; }
 #orbitDemo img, #orbitDemo div { display: none; }
 #orbitDemo.orbit img, #orbitDemo.orbit div { display: block;}
@@ -728,23 +728,23 @@ div.slider-nav {
     display: block }
 
 div.slider-nav span {
-    width: 40px;
-    height: 40px;
+    width: 39px;
+    height: 50px;
     text-indent: -9999px;
     position: absolute;
     z-index: 1000;
     top: 50%;
-    margin-top: -20px;
+    margin-top: -25px;
     cursor: pointer; }
 
 div.slider-nav span.right {
-    background: url(orbit/next.png) no-repeat;
+    background: url(orbit/right-arrow.png) no-repeat;
     right: 0; }
 
 div.slider-nav span.left {
-    background: url(orbit/prev.png) no-repeat;
-    margin-left: 20px;
+    background: url(orbit/left-arrow.png) no-repeat;
     left: 0; }
+
 
 /* BULLET NAV
    ================================================== */
