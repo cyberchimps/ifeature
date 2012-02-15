@@ -104,14 +104,14 @@ function synapse_secondary_footer_menu() {
 }
 
 /**
-* Adds the Cybersynapse credit.
+* Adds the CyberChimps credit.
 *
 * @since 1.0
 */
 function synapse_secondary_footer_credit() { ?>
 		
 	<div id="credit" class="four columns">
-		<a href="http://cybersynapse.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/achimps.png" alt="credit" /></a>
+		<a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/achimps.png" alt="credit" /></a>
 	</div> <?php 
 }
 /**
