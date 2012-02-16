@@ -98,7 +98,7 @@ header {margin-top: 15px;}
 
 /* Home Button */
 
-#home {float: left;border-right:#777 1px solid;margin-right:4px;margin-left:16px; height: 36px;}
+#home {float: left;border-right:#777 1px solid;margin-right:4px;margin-left:15px; height: 36px;}
 #home a:hover{opacity: .5}
 #nohome {float: left; margin-right:4px;margin-left:5px; height: 35px;}
 
