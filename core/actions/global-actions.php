@@ -69,7 +69,7 @@ function synapse_loop_content($content) {
 					<!--Call @Core Meta hook-->
 			<?php synapse_post_byline(); ?>
 				<?php
-				if ( has_post_thumbnail() && $featured_images == '1'  && !is_single()) {
+				if ( has_post_thumbnail() && $featured_images == '1') {
  		 			echo '<div class="featured-image">';
  		 			echo '<a href="' . get_permalink($post->ID) . '" >';
  		 				the_post_thumbnail();
@@ -77,7 +77,7 @@ function synapse_loop_content($content) {
   					echo '</div>';
 				}
 			?>	
-				<div class="entry" <?php if ( has_post_thumbnail() && $featured_images == '1' && !is_single()  ) { echo 'style="min-height: 115px;" '; }?>>
+				<div class="entry" <?php if ( has_post_thumbnail() && $featured_images == '1' ) { echo 'style="min-height: 115px;" '; }?>>
 					<?php 
 						if ($excerpts == '1' && !is_single() ) {
 						the_excerpt();

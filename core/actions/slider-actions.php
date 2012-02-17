@@ -68,7 +68,8 @@ function synapse_blog_slider_lite_content() {
 	    		$postimage 	= get_post_meta($post->ID, 'slider_image' , true);
 	    		$text 		= get_post_meta($post->ID, 'slider_text' , true);
 	    		$permalink 	= get_permalink();
-	    		$thetitle	= get_the_title(); 
+	    		$title	= get_the_title(); 
+	    		$caption = "data-caption='#htmlCaption$i'";
 	    		
 	    	/* Controls slide image and thumbnails */
 
@@ -83,9 +84,9 @@ function synapse_blog_slider_lite_content() {
 	    		
 	    	/* Markup for slides */
 
-	    	$out .= "<a href='$permalink' $text>
+	    	$out .= "<a href='$permalink' $caption>
 	    				<img src='$image' alt='Slider' />
-	    						<span class='orbit-caption' id='htmlCaption$i'>$thetitle <br /> $text</span>
+	    						<span class='orbit-caption' id='htmlCaption$i'><span class='caption_title'>$title</span> <br /> <span class='caption_text'>$text</span></span>
 	    				</a>
 	    			";
 

@@ -34,7 +34,7 @@ function initialize_the_meta_boxes() {
 	$mb
 		->tab("Page Options")
 			->image_select('page_sidebar', 'Select Page Layout', '',  array('options' => array(TEMPLATE_URL . '/images/options/right.png', TEMPLATE_URL . '/images/options/none.png')))
-			->checkbox('hide_page_title', 'Page Title', '', array('std' => 'true'))
+			->checkbox('hide_page_title', 'Page Title', '', array('std' => 'on'))
 			->section_order('page_section_order', 'Page Elements', '', array('options' => array(
 					'page_section' => 'Page',
 					'twitterbar_section' => 'Twitter Bar',			

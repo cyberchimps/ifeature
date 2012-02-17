@@ -4,7 +4,12 @@ iFeature Changelog
 
 Version 4.0.4 (02-17-12)
 -Adjustment to Foundation JS calls to fix further plugin conflicts.
+-Fixed broken credit link.
 -Fixed IE8 post thumbnail bug.
+-IE7 styling fixes.
+-Fixed slider captions not displaying.
+-Fixed page title option bug. 
+-Extended featured image option to Archive and Single templates.
 
 Version 4.0.3 (02-13-12)
 -jQuery no-conflict fix for better plugin compatibility. 
