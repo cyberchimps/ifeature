@@ -44,15 +44,21 @@ function synapse_scripts() {
 	
 	$path =  get_template_directory_uri() ."/core/library";
 	
-	wp_register_script( 'foundation' ,$path.'/js/foundation.js');
-	wp_register_script( 'orbit' ,$path.'/js/jquery.orbit.js');
-	wp_register_script( 'apps' ,$path.'/js/app.js');
+	wp_register_script( 'orbit' ,$path.'/js/foundation/jquery.orbit.js');
+	wp_register_script( 'apps' ,$path.'/js/foundation/app.js');
+	wp_register_script( 'placeholder' ,$path.'/js/foundation/jquery.placeholder.min.js');
+	wp_register_script( 'reveal' ,$path.'/js/foundation/jquery.reveal.js');
+	wp_register_script( 'tooltips' ,$path.'/js/foundation/jquery.tooltips.js');
+	wp_register_script( 'modernizr' ,$path.'/js/foundation/modernizr.foundation.js');
 	wp_register_script( 'menu' ,$path.'/js/menu.js');
 	wp_register_script( 'plusone' ,$path.'/js/plusone.js');
 	
-	wp_enqueue_script ('foundation');
 	wp_enqueue_script ('orbit');
 	wp_enqueue_script ('apps');
+	wp_enqueue_script ('placeholder');
+	wp_enqueue_script ('reveal');
+	wp_enqueue_script ('tooltips');
+	wp_enqueue_script ('modernizr');
 	wp_enqueue_script ('menu');
 	wp_enqueue_script ('plusone');
 	
@@ -64,7 +70,6 @@ function synapse_scripts() {
 	}
 }
 add_action('wp_enqueue_scripts', 'synapse_scripts');	
-
 /**
 * Adds "untitled" to posts with no title.
 *
