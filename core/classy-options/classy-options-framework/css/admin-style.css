@@ -2,6 +2,9 @@
 /* OptionsFramework Admin Styles */
 /*-------------------------------------------------------------------------------------------*/
 
+.jetpack-message .squeezer {display: none;}
+#message.updated.jetpack-message.jp-connect {display: none;}
+
 .upgradepro a{
 	font-family: Helvetica, Arial, Serif;
     text-decoration: none;
