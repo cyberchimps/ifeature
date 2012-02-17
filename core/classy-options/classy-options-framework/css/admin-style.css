@@ -237,7 +237,6 @@ input.button-primary {font-size:14px !important;}
 	border-width:1px;
 }
 #of_container .controls input, #of_container .controls select, #of_container .controls textarea {
-	margin-bottom: 10px;
 	background-color: #f1f1f1;
 	border: 1px solid;
 	border-color: #ccc #e6e6e6 #e6e6e6 #ccc;

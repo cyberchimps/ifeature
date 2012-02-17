@@ -10,6 +10,7 @@ Version 4.0.4 (02-17-12)
 -Fixed slider captions not displaying.
 -Fixed page title option bug. 
 -Extended featured image option to Archive and Single templates.
+-Theme options copy update.
 
 Version 4.0.3 (02-13-12)
 -jQuery no-conflict fix for better plugin compatibility. 
