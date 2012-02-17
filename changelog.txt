@@ -4,6 +4,7 @@ iFeature Changelog
 
 Version 4.0.4 (02-17-12)
 -Adjustment to Foundation JS calls to fix further plugin conflicts.
+-Fixed IE8 post thumbnail bug.
 
 Version 4.0.3 (02-13-12)
 -jQuery no-conflict fix for better plugin compatibility. 

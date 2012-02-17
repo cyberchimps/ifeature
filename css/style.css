@@ -39,6 +39,8 @@ a{outline:none}
 	margin-bottom: 15px;
 }
 
+.featured-image {float: inherit\0/ !important;}
+
 /* Fonts  */
 
 .meta {color: #989898;font-size: 12px;font-weight: 500;padding-bottom: 10px;}
