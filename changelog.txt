@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.0.5 (02-20-12)
+-Fix for HTML tables.
+
 Version 4.0.4 (02-17-12)
 -Adjustment to Foundation JS calls to fix further plugin conflicts.
 -Fixed broken credit link.
