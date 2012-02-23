@@ -8,6 +8,7 @@ Version 4.0.5 (02-20-12)
 -Added missing translation wrapper to Tags: text. 
 -Added a few IE related CSS fixes.
 -Responsive design tweaks.
+-Modified breadcrumb style, made them a page element and a templates option.
 
 Version 4.0.4 (02-17-12)
 -Adjustment to Foundation JS calls to fix further plugin conflicts.
