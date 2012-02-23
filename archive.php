@@ -28,10 +28,6 @@
 	
 		<div id="content" class="<?php echo $content_grid; ?>">
 		
-			<!--Begin @synapse archive hook-->
-			<?php synapse_archive_title(); ?>
-			<!--End @synapse archive hook-->
-		
 		<!--Begin @synapse before_archive hook-->
 			<?php synapse_before_archive(); ?>
 		<!--End @synapse before_archive hook-->

@@ -35,9 +35,7 @@ function synapse_search_content() {
 
 		<?php if (have_posts()) : ?>
 
-		<h3><?php printf( __( $results ), '<span>' . get_search_query() . '</span>' ); ?></h3><br />
-
-		<?php while (have_posts()) : the_post(); ?>
+				<?php while (have_posts()) : the_post(); ?>
 		
 		<div class="post_container">
 

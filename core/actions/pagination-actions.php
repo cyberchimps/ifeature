@@ -18,37 +18,51 @@
 /**
 * Synapse pagination actions
 */
-add_action('synapse_pagination', 'synapse_previous_posts');
-add_action('synapse_pagination', 'synapse_newer_posts');
+add_action('synapse_pagination', 'synapse_pagination_content');
 add_action('synapse_link_pages', 'synapse_link_pages_content');
 add_action('synapse_post_pagination', 'synapse_post_pagination_content');
 
 /**
-* Sets up the previous post link and applies a filter to the link text.
+* Sets up the post index pagination.
 *
 * @since 1.0
 */
-function synapse_previous_posts() {
-	$previous_text = apply_filters('synapse_previous_posts_text', '&laquo; Older Entries' ); 
-	
-	echo "<div class='pagnext-posts'>";
-	next_posts_link( __( $previous_text, 'core' ));
-	echo "</div>";
+function synapse_pagination_content($pages = '', $range = 4)
+{
+     $showitems = ($range * 2)+1;  
+ 
+     global $paged;
+     if(empty($paged)) $paged = 1;
+ 
+     if($pages == '')
+     {
+         global $wp_query;
+         $pages = $wp_query->max_num_pages;
+         if(!$pages)
+         {
+             $pages = 1;
+         }
+     }   
+ 
+     if(1 != $pages)
+     {
+         echo "<div class=\"pagination\"><span>Page ".$paged." of ".$pages."</span>";
+         if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<a href='".get_pagenum_link(1)."'>&laquo; First</a>";
+         if($paged > 1 && $showitems < $pages) echo "<a href='".get_pagenum_link($paged - 1)."'>&lsaquo; Previous</a>";
+ 
+         for ($i=1; $i <= $pages; $i++)
+         {
+             if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
+             {
+                 echo ($paged == $i)? "<span class=\"current\">".$i."</span>":"<a href='".get_pagenum_link($i)."' class=\"inactive\">".$i."</a>";
+             }
+         }
+ 
+         if ($paged < $pages && $showitems < $pages) echo "<a href=\"".get_pagenum_link($paged + 1)."\">Next &rsaquo;</a>";
+         if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>Last &raquo;</a>";
+         echo "</div>\n";
+     }
 }
-
-/**
-* Sets up the next post link and applies a filter to the link text. 
-*
-* @since 1.0
-*/
-function synapse_newer_posts() {
-	$newer_text = apply_filters('synapse_newer_posts_text', 'Newer Entries &raquo;' );
-	
-	echo "<div class='pagprev-posts'>";
-	previous_posts_link( __( $newer_text, 'core' ));
-	echo "</div>";
-}
-
 /**
 * Sets up the WP link pages
 *
