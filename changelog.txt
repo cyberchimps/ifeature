@@ -2,7 +2,7 @@ iFeature Changelog
 
 ****************************
 
-Version 4.0.5 (02-20-12)
+Version 4.0.5 (02-23-12)
 -Fix for HTML tables.
 -Added align:none option for featured images.
 -Added missing translation wrapper to Tags: text. 
