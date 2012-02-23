@@ -1154,5 +1154,6 @@ div.slider-nav span.left {
 	#afterfootercopyright {float: left;margin-left:15px;margin-bottom:2px;}
 	#mobileMenu_nav_menu {float: right; margin-top: 10px; margin-right: 10px;}
 	#imenu {height: 35px !important;}
+	.connect_widget td.connect_widget_vertical_center {font-size: 8px !important; }
 }
 
