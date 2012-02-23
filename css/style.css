@@ -223,7 +223,19 @@ header {margin-top: 15px;}
 
 .prev-posts { float: right;padding: 5px 0 5px 0; }
 
-#crumbs {padding: 0px 5px 5px 5px;}
+#crumbs {border: 1px solid;
+	border-top: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	box-shadow:inset 0 0 2px #ccc;
+	background: #fff;
+	margin-bottom: 15px;
+}
+
+.crumbs_text {padding: 2px 0 7px 15px;}
 
 .pagnext-posts {float: left;padding: 5px;margin-bottom: 10px;}
 

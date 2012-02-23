@@ -143,15 +143,16 @@ function synapse_comment($comment, $args, $depth) {
 * @since 1.0
 */
 function synapse_breadcrumbs() {
- 
-  $delimiter = '&raquo;';
+  global $root;
+  
+  $delimiter = "<img src='$root/images/breadcrumb-arrow.png'>";
   $home = 'Home'; // text for the 'Home' link
   $before = '<span class="current">'; // tag before the current crumb
   $after = '</span>'; // tag after the current crumb
  
   if ( !is_home() && !is_front_page() || is_paged() ) {
  
-    echo '<div id="crumbs" class="twelve columns">';
+    echo '<div class="row"><div id="crumbs" class="twelve columns"><div class="crumbs_text">';
  
     global $post;
     $homeLink = get_bloginfo('url');
@@ -237,7 +238,7 @@ function synapse_breadcrumbs() {
       if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
     }
  
-    echo '</div>';
+    echo '</div></div></div>';
  
   }
 } 
