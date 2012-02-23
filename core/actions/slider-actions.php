@@ -111,10 +111,10 @@ function synapse_blog_slider_lite_content() {
 	    
 	     $navigation = 'false'; 
 	    	echo '<style type="text/css">';
-			echo ".nivo-controlNav {display: none;}";
-			echo ".slider_nav {display: none;}";
-			echo '#slider-wrapper {margin-bottom: 20px;}';
-			echo '#orbitDemo {margin-bottom: 0px;}';
+			echo ".nivo-controlNav {display: none !important;}";
+			echo ".slider_nav {display: none !important;}";
+			echo '#slider-wrapper {margin-bottom: 20px !important;}';
+			echo '#orbitDemo {margin-bottom: 0px !important;}';
 			echo '</style>';
 	    
 	    }
@@ -148,7 +148,7 @@ echo $out;
 
 <?php if ($timer == '0') :?>
 	<style type="text/css" media="screen">
-		div.timer {display: none;}
+		div.timer {display: none !important;}
 	</style>
 <?php endif;?>
 
