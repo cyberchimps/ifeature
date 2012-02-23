@@ -4,6 +4,7 @@ iFeature Changelog
 
 Version 4.0.5 (02-20-12)
 -Fix for HTML tables.
+-Added align:none option for featured images.
 
 Version 4.0.4 (02-17-12)
 -Adjustment to Foundation JS calls to fix further plugin conflicts.

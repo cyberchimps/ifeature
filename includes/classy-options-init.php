@@ -136,7 +136,7 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 			->text($themeslug."_excerpt_link_text", "Excerpt Link Text", array('default' => '(More)…'))
 			->text($themeslug."_excerpt_length", "Excerpt Character Length", array('default' => '55'))
 			->checkbox($themeslug."_show_featured_images", "Enable Featured Images")
-			->select($themeslug."_featured_image_align", "Featured Image Alignment", array( 'options' => array("key1" => "Left", "key2" => "Center", "key3" => "Right")))
+			->select($themeslug."_featured_image_align", "Featured Image Alignment", array( 'options' => array("key1" => "Left", "key2" => "Center", "key3" => "Right", "key4" => "None")))
 			->text($themeslug."_featured_image_height", "Featured Image Height", array('default' => '100'))
 			->text($themeslug."_featured_image_width", "Featured Image Width", array('default' => '100'))
 			->multicheck($themeslug."_hide_byline", "Post Byline Elements", array( 'options' => array($themeslug."_hide_author" => "Author" , $themeslug."_hide_categories" => "Categories", $themeslug."_hide_date" => "Date", $themeslug."_hide_comments" => "Comments", $themeslug."_hide_share" => "Share", $themeslug."_hide_tags" => "Tags"), 'default' => array( $themeslug."_hide_tags" => true, $themeslug."_hide_share" => true, $themeslug."_hide_author" => true, $themeslug."_hide_date" => true, $themeslug."_hide_comments" => true, $themeslug."_hide_categories" => true ) ) )
