@@ -19,15 +19,13 @@
 	$size = get_post_meta($post->ID, 'page_slider_size' , true);
 	$page_section_order = get_post_meta($post->ID, 'page_section_order' , true);
 	if(!$page_section_order) {
-		$page_section_order = 'page_section';
+		$page_section_order = 'breadcrumbs,page_section';
 	}
 	
 /* End define global variables. */?>
 
 <div class="container">
-	<div class="row">
-		<?php if (function_exists('synapse_breadcrumbs') && ($options->get($themeslug.'_disable_breadcrumbs') == "1")) { synapse_breadcrumbs(); }?>
-	</div>
+	
 	<div class="row"> 
 	
 	<!--Begin @Core before page content hook-->

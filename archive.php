@@ -19,9 +19,7 @@
 ?>
 
 <div class="container">
-	<div class="row">
-		<?php if (function_exists('synapse_breadcrumbs') && ($options->get($themeslug.'_disable_breadcrumbs') == "1")) { synapse_breadcrumbs(); }?>
-	</div>
+	<?php if ($options->get($themeslug.'_archive_breadcrumbs') == "1") { synapse_breadcrumbs();}?>
 	<div class="row">
 	<!--Begin @synapse before content sidebar hook-->
 		<?php synapse_before_content_sidebar(); ?>

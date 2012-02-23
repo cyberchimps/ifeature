@@ -17,9 +17,7 @@
 get_header(); ?>
 
 <div class="container">
-	<div class="row">
-		<?php if (function_exists('synapse_breadcrumbs') && ($options->get($themeslug.'_disable_breadcrumbs') == "1")) { synapse_breadcrumbs(); }?>
-	</div>
+	<?php if ($options->get($themeslug.'_single_breadcrumbs') == "1") { synapse_breadcrumbs();}?>
 	<div class="row">
 	
 	<!--Begin @Core post area-->
