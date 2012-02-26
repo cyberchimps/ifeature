@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.0.6 (02-25-12)
+-Additional margin fix for HTML tables.
+
 Version 4.0.5 (02-23-12)
 -Fix for HTML tables.
 -Added align:none option for featured images.
