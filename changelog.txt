@@ -4,6 +4,7 @@ iFeature Changelog
 
 Version 4.0.6 (02-25-12)
 -Additional margin fix for HTML tables.
+-Updated Foundation CSS.
 
 Version 4.0.5 (02-23-12)
 -Fix for HTML tables.
