@@ -16,23 +16,6 @@
 */
 
 /**
-* Custom social icon margin. 
-*
-* @since 3.0
-*/
-function if_icon_margin() {
-	global $options, $themeslug;
-	$margin = $options->get($themeslug.'_icon_margin');
-	
-	if ($options->get($themeslug.'_icon_margin') != '10px' ) {
-		echo '<style type="text/css">';
-		echo ".icons {margin-top: $margin;}";
-		echo '</style>';
-	}
-}
-add_action( 'wp_head', 'if_icon_margin' );
-
-/**
 * Establishes the theme background. 
 *
 * @since 3.0
