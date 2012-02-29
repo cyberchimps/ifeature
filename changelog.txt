@@ -2,11 +2,12 @@ iFeature Changelog
 
 ****************************
 
-Version 4.0.6 (02-25-12)
+Version 4.0.6 (03-01-12)
 -Additional margin fix for HTML tables.
 -Updated Foundation CSS.
 -Adjusted doctype. 
 -Removed legacy icon margin option.
+-CSS tweaks.
 
 Version 4.0.5 (02-23-12)
 -Fix for HTML tables.
