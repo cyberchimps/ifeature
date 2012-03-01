@@ -8,6 +8,7 @@ Version 4.0.6 (03-01-12)
 -Adjusted doctype. 
 -Removed legacy icon margin option.
 -CSS tweaks.
+-Removed HTML comment before doctype call, fixes IE quirks mode issue. 
 
 Version 4.0.5 (02-23-12)
 -Fix for HTML tables.
