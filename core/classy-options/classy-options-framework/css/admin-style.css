@@ -2,6 +2,8 @@
 /* OptionsFramework Admin Styles */
 /*-------------------------------------------------------------------------------------------*/
 
+.upload {max-width: 350px;}
+
 .jetpack-message .squeezer {display: none;}
 #message.updated.jetpack-message.jp-connect {display: none;}
 

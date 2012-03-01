@@ -9,6 +9,7 @@ Version 4.0.6 (03-01-12)
 -Removed legacy icon margin option.
 -CSS tweaks.
 -Removed HTML comment before doctype call, fixes IE quirks mode issue. 
+-Adjusted image upload preview style.
 
 Version 4.0.5 (02-23-12)
 -Fix for HTML tables.
