@@ -49,7 +49,7 @@ function synapse_page_section_content() {
 			<div class="post_container">
 			
 				<div class="post" id="post-<?php the_ID(); ?>">
-				<?php if ($hidetitle == "on"): ?>
+				<?php if ($hidetitle == "on" OR $hidetitle == ""): ?>
 				
 
 					<h2 class="posts_title"><?php the_title(); ?></h2>
