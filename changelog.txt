@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.0.7 (03-03-12)
+-Fixed typo in theme options panel.
+
 Version 4.0.6 (03-01-12)
 -Additional margin fix for HTML tables.
 -Updated Foundation CSS.
