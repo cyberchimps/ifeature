@@ -2,9 +2,12 @@ iFeature Changelog
 
 ****************************
 
-Version 4.0.7 (03-03-12)
+Version 4.0.7 (03-07-12)
 -Fixed typo in theme options panel.
 -Fix for page titles.
+-Updated Google Font Library call to be SSL friendly.
+-Added browser specific HTML classes for IE CSS.
+-Updated some theme copy. 
 
 Version 4.0.6 (03-01-12)
 -Additional margin fix for HTML tables.
