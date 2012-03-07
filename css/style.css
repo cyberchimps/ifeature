@@ -47,6 +47,13 @@ background: #3279BB;
 color:#fff;
 }
 
+#image_pagination {border: 1px solid #DDD; margin-bottom: 15px; background: #FFF; display: block;}
+
+.image_wrap {padding: 10px 15px 5px 15px; height: 105px;}
+
+.previous_image {float: left;}
+
+.next_image {float: right;}
 
 #sidebar {right: -2px;}
 

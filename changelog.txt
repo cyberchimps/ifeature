@@ -9,6 +9,7 @@ Version 4.0.7 (03-07-12)
 -Added browser specific HTML classes for IE CSS.
 -Updated some theme copy. 
 -CSS tweak for HTML tables to fix calendar widget bug.
+-Added next/previous image paginiation for attachments. 
 
 Version 4.0.6 (03-01-12)
 -Additional margin fix for HTML tables.
