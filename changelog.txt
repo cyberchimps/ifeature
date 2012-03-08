@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.0.8 (03-08-12)
+-Removed PressTrends function.
+
 Version 4.0.7 (03-07-12)
 -Fixed typo in theme options panel.
 -Fix for page titles.
