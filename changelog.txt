@@ -2,6 +2,8 @@ iFeature Changelog
 
 ****************************
 
+Version 4.0.9 (03-14-12)
+
 Version 4.0.8 (03-08-12)
 -Removed PressTrends function.
 
