@@ -7,7 +7,8 @@ Version 4.0.9 (03-14-12)
 -CSS fix for search widget.
 -zindex fix for fallback menu dropdowns.
 -IE8 fix for featured images.
--Minor style tweaks. 
+-Minor style and copy tweaks. 
+-Removed some old images.
 
 Version 4.0.8 (03-08-12)
 -Removed PressTrends function.
