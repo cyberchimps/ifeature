@@ -3,7 +3,8 @@ iFeature Changelog
 ****************************
 
 Version 4.0.9 (03-14-12)
--Added French translation files. 
+-Added French translation files.
+-CSS fix for search widget. 
 
 Version 4.0.8 (03-08-12)
 -Removed PressTrends function.
