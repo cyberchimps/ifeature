@@ -5,7 +5,8 @@ iFeature Changelog
 Version 4.0.9 (03-14-12)
 -Added French translation files.
 -CSS fix for search widget.
--zindex fix for fallback menu dropdowns. 
+-zindex fix for fallback menu dropdowns.
+-IE8 fix for featured images. 
 
 Version 4.0.8 (03-08-12)
 -Removed PressTrends function.
