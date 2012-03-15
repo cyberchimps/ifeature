@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.1 (03-15-12)
+-Clear fix for posts.
+
 Version 4.0.9 (03-14-12)
 -Added French translation files.
 -CSS fix for search widget.
