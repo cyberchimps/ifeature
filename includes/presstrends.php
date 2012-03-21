@@ -1,13 +1,13 @@
 <?php
 
 // Add PressTrends Option
-add_action('admin_menu', 'presstrends_theme_menu');
+add_action('admin_menu', 'if_presstrends_theme_menu');
 
-function presstrends_theme_menu() {
-	add_theme_page('PressTrends', 'PressTrends', 'manage_options', 'presstrends_theme_options', 'presstrends_theme_options');
+function if_presstrends_theme_menu() {
+	add_theme_page('PressTrends', 'PressTrends', 'manage_options', 'if_presstrends_theme_options', 'if_presstrends_theme_options');
 }
 
-function presstrends_theme_options() {
+function if_presstrends_theme_options() {
 	if (!current_user_can('manage_options'))  {
 		wp_die( __('You do not have sufficient permissions to access this page.') );
 	}
@@ -23,21 +23,21 @@ function presstrends_theme_options() {
 }
 
 // PressTrends Option Settings
-add_action('admin_init', 'presstrends_theme_init');
+add_action('admin_init', 'if_presstrends_theme_init');
 
-function presstrends_theme_init(){
+function if_presstrends_theme_init(){
 	register_setting( 'presstrends_theme_opt', 'presstrends_theme_opt');
-	add_settings_section('presstrends_top', '', 'presstrends_top_text', 'presstrends_top');
-	add_settings_field('presstrends_opt_in', 'Activate PressTrends?', 'presstrends_opt_string', 'presstrends_top', 'presstrends_top');
+	add_settings_section('presstrends_top', '', 'if_presstrends_top_text', 'presstrends_top');
+	add_settings_field('presstrends_opt_in', 'Activate PressTrends?', 'if_presstrends_opt_string', 'presstrends_top', 'presstrends_top');
 }
 
 // PressTrends Section Text
-function presstrends_top_text() {
+function if_presstrends_top_text() {
     echo '<p style="width:190px;float:left;"><img src="http://presstrends.io/images/logo.png"/></p><p style="width:500px;float:left;color:#777;padding-top:2px;"><b>PressTrends</b> helps theme authors build better themes and provide awesome support by retrieving aggregated stats. PressTrends also provides a <a href="http://wordpress.org/extend/plugins/presstrends/" title="PressTrends Plugin for WordPress" target="_blank">plugin</a> that delivers stats on how your site is performing against the web and similar sites like yours. <a href="http://presstrends.io" title="PressTrends" target="_blank">Learn more…</a></p>';
 }
 
 // PressTrends Opt-In Option
-function presstrends_opt_string() {
+function if_presstrends_opt_string() {
     $current_key = get_option('presstrends_theme_opt');
     $opt = $current_key['activated'];
 	if($opt == 'on') {
@@ -48,14 +48,14 @@ function presstrends_opt_string() {
 }
 
 // Add PressTrends Pointer
-function be_password_pointer_enqueue( $hook_suffix ) {
+function if_be_password_pointer_enqueue( $hook_suffix ) {
 	$enqueue = false;
 
 	$dismissed = explode( ',', (string) get_user_meta( get_current_user_id(), 'dismissed_wp_pointers', true ) );
 
 	if ( ! in_array( 'activatepresstrends', $dismissed ) ) {
 		$enqueue = true;
-		add_action( 'admin_print_footer_scripts', 'be_password_pointer_print_admin_bar' );
+		add_action( 'admin_print_footer_scripts', 'if_be_password_pointer_print_admin_bar' );
 	}
 
 	if ( $enqueue ) {
@@ -63,9 +63,9 @@ function be_password_pointer_enqueue( $hook_suffix ) {
 		wp_enqueue_script( 'wp-pointer' );
 	}
 }
-add_action( 'admin_enqueue_scripts', 'be_password_pointer_enqueue' );
+add_action( 'admin_enqueue_scripts', 'if_be_password_pointer_enqueue' );
 
-function be_password_pointer_print_admin_bar() {
+function if_be_password_pointer_print_admin_bar() {
 	$pointer_content  = '<h3>' . 'Activate PressTrends' . '</h3>';
 	$pointer_content .= '<p>' . 'Help theme authors build better themes and provide awesome support by retrieving aggregated stats.' . '</p>';
 
@@ -91,7 +91,7 @@ jQuery(document).ready( function($) {
 }
 
 // Add Presstrends API
-function presstrends() {
+function if_presstrends() {
 
     // Add your PressTrends and Theme API Keys
     $api_key = 'zwhgyc1lnt56hki8cpwobb47bblas4er226b';
@@ -136,7 +136,7 @@ function presstrends() {
 $current_key = get_option('presstrends_theme_opt');
 $opt = $current_key['activated'];
 if($opt == 'on') {
-    add_action('admin_init', 'presstrends');
+    add_action('admin_init', 'if_presstrends');
 }
 
 ?>

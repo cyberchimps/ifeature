@@ -2,8 +2,11 @@ iFeature Changelog
 
 ****************************
 
-Version 4.1 (03-15-12)
--Clear fix for posts.
+Version 4.1 (03-21-12)
+-Clear fix for posts for non logged-in users.
+-Re-added PressTrends with new opt-in only option. 
+-Fix for Google +1 button.
+-Updated core.pot
 
 Version 4.0.9 (03-14-12)
 -Added French translation files.

@@ -213,7 +213,7 @@ function synapse_fb_like_plus_one_content() {
 
 	<?php if ($gplus == "1"):?>
 		<div class="gplusone">	
-			<g:plusone size="standard" count="true"></g:plusone>
+			<g:plusone size=”standard” count=”true” href=”<?php the_permalink() ?>“></g:plusone>
 		</div>
 	<?php endif;?>
 						
