@@ -221,7 +221,7 @@ function menu_fallback() {
 /**
 * Register widgets.
 */ 
-function ifp_widgets_init() {
+function if_widgets_init() {
     register_sidebar(array(
     	'name' => 'Sidebar Widgets',
     	'id'   => 'sidebar-widgets',
@@ -241,7 +241,7 @@ function ifp_widgets_init() {
 		'after_title' => '</h3>',
 	));
 }
-add_action ('widgets_init', 'ifp_widgets_init');
+add_action ('widgets_init', 'if_widgets_init');
 
 /**
 * Initialize Synapse Core Framework and Pro Extension.
@@ -256,6 +256,7 @@ require_once ( get_template_directory() . '/includes/options-functions.php' ); /
 require_once ( get_template_directory() . '/includes/meta-box.php' ); // Meta options markup.
 require_once ( get_template_directory() . '/includes/theme-hooks.php' ); // Theme specific hooks.
 require_once ( get_template_directory() . '/includes/theme-actions.php' ); // Actions for theme specific hooks.
+require_once ( get_template_directory() . '/includes/presstrends.php' ); // Opt-in PressTrends option.
 
 /**
 * End
