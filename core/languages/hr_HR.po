@@ -1,0 +1,183 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Core 1.0\n"
+"Report-Msgid-Bugs-To: http://cyberchimps.com/forum\n"
+"POT-Creation-Date: 10-17-11\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: \n"
+"X-Poedit-Country: \n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: core/actions/archive-actions.php:36
+#@ core
+msgid "Archive for the &#8216;"
+msgstr "Arhiva za &#8216;"
+
+#: core/actions/archive-actions.php:36
+#@ core
+msgid "&#8217; Category:"
+msgstr "&#8217; Kategorija:"
+
+#: core/actions/archive-actions.php:39
+#@ core
+msgid "Posts Tagged &#8216;"
+msgstr "Članaka označeno &#8216;"
+
+#: core/actions/archive-actions.php:39
+#@ core
+msgid "&#8217;:"
+msgstr "&#8217;:"
+
+#: core/actions/archive-actions.php:42
+#: core/actions/archive-actions.php:45
+#@ core
+msgid "Archive for"
+msgstr "Arhiva za"
+
+#: core/actions/archive-actions.php:48
+#@ core
+msgid "Archive for:"
+msgstr "Arhiva za:"
+
+#: core/actions/archive-actions.php:51
+#@ core
+msgid "Author Archive:"
+msgstr "Autor arhive:"
+
+#: core/actions/archive-actions.php:54
+#@ core
+msgid "Blog Archives:"
+msgstr "Blog arhive:"
+
+#: core/actions/comments-actions.php:49
+#@ core
+msgid "No Responses"
+msgstr "Nema odgovora"
+
+#: core/actions/comments-actions.php:49
+#@ core
+msgid "One Response"
+msgstr "Jedan odgovor"
+
+#: core/actions/comments-actions.php:49
+#@ core
+msgid "% Responses"
+msgstr "% odgovora"
+
+#: core/actions/comments-actions.php:88
+#@ core
+msgid "You must be"
+msgstr "Moraš biti"
+
+#: core/actions/comments-actions.php:88
+#@ core
+msgid "logged in"
+msgstr "prijavljen"
+
+#: core/actions/comments-actions.php:88
+#@ ifeture
+msgid "to post a comment."
+msgstr "da bi dodao komentar"
+
+#: core/actions/footer-actions.php:39
+#@ core
+msgid "Recent Posts"
+msgstr "Posljednji članci"
+
+#: core/actions/footer-actions.php:46
+#: sidebar.php:26
+#@ core
+#@ ifeature
+msgid "Archives"
+msgstr "Arhive"
+
+#: core/actions/footer-actions.php:53
+#@ core
+msgid "Links"
+msgstr "Poveznice"
+
+#: core/actions/footer-actions.php:60
+#: core/actions/footer-actions.php:64
+#: sidebar.php:40
+#: sidebar.php:44
+#@ core
+msgid "WordPress"
+msgstr "WordPress"
+
+#: core/actions/footer-actions.php:64
+#: sidebar.php:44
+#@ core
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: core/actions/footer-actions.php:64
+#: sidebar.php:44
+#@ core
+msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform."
+msgstr "Powered by WordPress, state-of-the-art semantic personal publishing platform."
+
+#: core/actions/global-actions.php:43
+#@ core
+msgid "Published on"
+msgstr "Publicirano"
+
+#: core/actions/global-actions.php:44
+#@ core
+msgid "by"
+msgstr "od"
+
+#: core/actions/global-actions.php:45
+#@ core
+msgid "in"
+msgstr "u"
+
+#: core/actions/global-actions.php:70
+#@ core
+msgid "No Comments &#187;"
+msgstr "Nema komentara &#187;"
+
+#: core/actions/global-actions.php:70
+#@ core
+msgid "1 Comment &#187;"
+msgstr "1 komentar &#187;"
+
+#: core/actions/global-actions.php:70
+#@ core
+msgid "% Comments &#187;"
+msgstr "% komentara &#187;"
+
+#: sidebar.php:19
+#@ core
+msgid "Pages"
+msgstr "Stranice"
+
+#: sidebar.php:33
+#@ core
+msgid "Categories"
+msgstr "Kategorije"
+
+#: sidebar.php:50
+#@ core
+msgid "Subscribe"
+msgstr "Pretplati se"
+
+#: sidebar.php:52
+#@ core
+msgid "Entries (RSS)"
+msgstr "Članaka (RSS)"
+
+#: sidebar.php:53
+#@ core
+msgid "Comments (RSS)"
+msgstr "Komentara (RSS)"

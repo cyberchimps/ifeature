@@ -7,6 +7,7 @@ Version 4.1 (03-21-12)
 -Re-added PressTrends with new opt-in only option. 
 -Fix for Google +1 button.
 -Updated core.pot
+-Added Croatian translation files.
 
 Version 4.0.9 (03-14-12)
 -Added French translation files.
