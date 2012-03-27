@@ -32,11 +32,37 @@ function synapse_twitterbar_section_content() {
 	}
 	else {
 	$handle = $options->get($themeslug.'_blog_twitter');
-	}?>
+	}
+	
+	// Your twitter username.
+$username = $handle;
+
+// Prefix - some text you want displayed before your latest tweet.
+// (HTML is OK, but be sure to escape quotes with backslashes: for example href=\"link.html\")
+
+// Suffix - some text you want display after your latest tweet. (Same rules as the prefix.)
+$suffix = "";
+
+$feed = "http://search.twitter.com/search.atom?q=from:" . $username . "&rpp=1";
+$messages = fetch_feed('http://twitter.com/statuses/user_timeline/'.$username.'.rss');
+
+
+function parse_feed($feed) {
+    $stepOne = explode("<content type=\"html\">", $feed);
+    $stepTwo = explode("</content>", $stepOne[1]);
+    $tweet = $stepTwo[0];
+    $tweet = str_replace("&lt;", "<", $tweet);
+    $tweet = str_replace("&gt;", ">", $tweet);
+    return $tweet;
+}
+
+$twitterFeed = file_get_contents($feed);
+
+	?>
 	<div class="row">
 		<div id="twitterbar" class="twelve columns"><!--id="twitterbar"-->
 			<div id="twittertext">
-				<a href=" http://twitter.com/<?php echo $handle ; ?>" > <img src="<?php echo "$root/images/twitterbird.png" ?>" /> <?php echo $handle ;?> - </a><?php twitter_messages($handle); ?>
+				<a href=" http://twitter.com/<?php echo $handle ; ?>" > <img src="<?php echo "$root/images/twitterbird.png" ?>" /> <?php echo $handle ;?> - </a><?php echo  parse_feed($twitterFeed) . stripslashes($suffix); ?>
 			</div>
 		</div><!--end twitterbar--> 
 	</div>
