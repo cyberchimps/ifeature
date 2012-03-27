@@ -34,35 +34,71 @@ function synapse_twitterbar_section_content() {
 	$handle = $options->get($themeslug.'_blog_twitter');
 	}
 	
-	// Your twitter username.
-$username = $handle;
+//Get Latest Tweet
+function latest_tweet($username,$tweetnumber){
+$url = "http://search.twitter.com/search.atom?q=from:$username&amp;rpp=10";
+$xml = simplexml_load_file($url);
+$tweettitle = $xml->entry[$tweetnumber]->title;
+$mytweet = $xml->entry[$tweetnumber]->content;
+$firstChar = substr($tweettitle, 0, 1);
+//Exclude @ replies
+if($firstChar == "@"){
+//If this tweet is an @ reply move on to the previous one
+while ($firstChar == "@"){
+$tweetnumber++;
+$tweettitle = $xml->entry[$tweetnumber]->title;
+$mytweet = $xml->entry[$tweetnumber]->content;
+$firstChar = substr($tweettitle, 0, 1);
+if($firstChar != "@"){
+//If the previous tweet is not an @ reply output it
+return $mytweet;
+}
+}
+}else{
+//If first tweet is not an @ reply output it
+return $mytweet;
+}
+}
+//End Get Latest Tweet
 
-// Prefix - some text you want displayed before your latest tweet.
-// (HTML is OK, but be sure to escape quotes with backslashes: for example href=\"link.html\")
+function profileXML($user)
 
-// Suffix - some text you want display after your latest tweet. (Same rules as the prefix.)
-$suffix = "";
+           {
 
-$feed = "http://search.twitter.com/search.atom?q=from:" . $username . "&rpp=1";
-$messages = fetch_feed('http://twitter.com/statuses/user_timeline/'.$username.'.rss');
+$objDOM = new DOMDocument();
+
+$objDOM->load("http://api.twitter.com/1/users/show.xml?screen_name=".$user);
+
+$note = $objDOM->getElementsByTagName("user");
 
 
-function parse_feed($feed) {
-    $stepOne = explode("<content type=\"html\">", $feed);
-    $stepTwo = explode("</content>", $stepOne[1]);
-    $tweet = $stepTwo[0];
-    $tweet = str_replace("&lt;", "<", $tweet);
-    $tweet = str_replace("&gt;", ">", $tweet);
-    return $tweet;
+
+foreach($note as $value )
+
+       {
+
+$id = $value->getElementsByTagName("id");
+
+$id  = $id->item(0)->nodeValue;
+
+$profile["id"]=$id;
+
+                
+}    
+
+
+return $profile;
+
+
+
 }
 
-$twitterFeed = file_get_contents($feed);
 
 	?>
 	<div class="row">
 		<div id="twitterbar" class="twelve columns"><!--id="twitterbar"-->
 			<div id="twittertext">
-				<a href=" http://twitter.com/<?php echo $handle ; ?>" > <img src="<?php echo "$root/images/twitterbird.png" ?>" /> <?php echo $handle ;?> - </a><?php echo  parse_feed($twitterFeed) . stripslashes($suffix); ?>
+				<a href=" http://twitter.com/<?php echo $handle ; ?>" > <img src="<?php echo "$root/images/twitterbird.png" ?>" /> <?php echo $handle ;?> - </a><?php echo  latest_tweet($handle, 1); print_r(profileXML("cyberchimps")); ?>
 			</div>
 		</div><!--end twitterbar--> 
 	</div>
