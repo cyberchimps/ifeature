@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.1.2 (03-28-12)
+-Twitter Bar
+
 Version 4.1.1 (03-28-12)
 -Updated missed Google Font library call for SSL support.
 -Fixed strange quotes around HTML elements in Google +1 button code.

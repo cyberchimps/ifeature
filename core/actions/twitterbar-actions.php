@@ -32,11 +32,73 @@ function synapse_twitterbar_section_content() {
 	}
 	else {
 	$handle = $options->get($themeslug.'_blog_twitter');
-	}?>
+	}
+
+//Get Latest Tweet
+function latest_tweet($username,$tweetnumber){
+$url = "http://search.twitter.com/search.atom?q=from:$username&amp;rpp=10";
+$xml = simplexml_load_file($url);
+$tweettitle = $xml->entry[$tweetnumber]->title;
+$mytweet = $xml->entry[$tweetnumber]->content;
+$firstChar = substr($tweettitle, 0, 1);
+//Exclude @ replies
+if($firstChar == "@"){
+//If this tweet is an @ reply move on to the previous one
+while ($firstChar == "@"){
+$tweetnumber++;
+$tweettitle = $xml->entry[$tweetnumber]->title;
+$mytweet = $xml->entry[$tweetnumber]->content;
+$firstChar = substr($tweettitle, 0, 1);
+if($firstChar != "@"){
+//If the previous tweet is not an @ reply output it
+return $mytweet;
+}
+}
+}else{
+//If first tweet is not an @ reply output it
+return $mytweet;
+}
+}
+//End Get Latest Tweet
+
+function profileXML($user)
+
+           {
+
+$objDOM = new DOMDocument();
+
+$objDOM->load("http://api.twitter.com/1/users/show.xml?screen_name=".$user);
+
+$note = $objDOM->getElementsByTagName("user");
+
+
+
+foreach($note as $value )
+
+       {
+
+$id = $value->getElementsByTagName("id");
+
+$id  = $id->item(0)->nodeValue;
+
+$profile["id"]=$id;
+
+                
+}    
+
+
+return $profile;
+
+
+
+}
+
+
+	?>
 	<div class="row">
 		<div id="twitterbar" class="twelve columns"><!--id="twitterbar"-->
 			<div id="twittertext">
-				<a href=" http://twitter.com/<?php echo $handle ; ?>" > <img src="<?php echo "$root/images/twitterbird.png" ?>" /> <?php echo $handle ;?> - </a><?php twitter_messages($handle); ?>
+				<a href=" http://twitter.com/<?php echo $handle ; ?>" > <img src="<?php echo "$root/images/twitterbird.png" ?>" /> <?php echo $handle ;?> - </a><?php echo  latest_tweet($handle, 1); print_r(profileXML("cyberchimps")); ?>
 			</div>
 		</div><!--end twitterbar--> 
 	</div>
