@@ -197,7 +197,7 @@ function if_add_menu_font() {
 	
 		$fontstrip =  ereg_replace("[^A-Za-z0-9]", " ", $font );
 	
-		echo "<link href='http://fonts.googleapis.com/css?family=$font' rel='stylesheet' type='text/css' />";
+		echo "<link href='//fonts.googleapis.com/css?family=$font' rel='stylesheet' type='text/css' />";
 		echo '<style type="text/css">';
 		echo "#nav ul li a {font-family: $fontstrip;}";
 		echo '</style>';
