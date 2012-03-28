@@ -61,7 +61,7 @@ function synapse_scripts() {
 	wp_enqueue_script ('modernizr');
 	wp_enqueue_script ('menu');
 	
-	if ($options->get($themeslug.'_show_gplus') == '1' OR $options->get($themeslug.'single_show_gplus') == '1' OR $options->get($themeslug.'archive_show_gplus') == '1') {
+	if ($options->get($themeslug.'_show_gplus') == '1' OR $options->get($themeslug.'_single_show_gplus') == '1' OR $options->get($themeslug.'_archive_show_gplus') == '1') {
 		wp_enqueue_script ('plusone');
 	}
 		
