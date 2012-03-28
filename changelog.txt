@@ -7,6 +7,9 @@ Version 4.1.1 (03-28-12)
 -Fixed strange quotes around HTML elements in Google +1 button code.
 -Only enqueue Google +1 script if enabled in theme options.
 -Fix for Facebook Like and Google +1 alignment on Single and Archive templates.
+-Changed <!--more--> link text to "Read more…" when the_content() is used.
+-Fixed several translation functions.
+-Updated core.pot.
 
 Version 4.1 (03-21-12)
 -Clear fix for posts for non logged-in users.

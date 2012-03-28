@@ -128,36 +128,35 @@ msgstr ""
 msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform."
 msgstr ""
 
-#: core/actions/global-actions.php:43
+#: core/actions/footer-actions.php:38
 #@ core
-msgid "Published on"
+msgid "Footer Widgets"
 msgstr ""
 
-#: core/actions/global-actions.php:44
+#: core/actions/global-actions.php:86
 #@ core
-msgid "by"
+msgid "Read more…"
 msgstr ""
 
-#: core/actions/global-actions.php:45
+#: core/actions/global-actions.php:128
 #@ core
-msgid "in"
+msgid "No Comments"
 msgstr ""
 
-#: core/actions/global-actions.php:70
+#: core/actions/global-actions.php:128
 #@ core
-msgid "No Comments &#187;"
+msgid "1 Comment"
 msgstr ""
 
-#: core/actions/global-actions.php:70
+#: core/actions/global-actions.php:128
 #@ core
-msgid "1 Comment &#187;"
+msgid "% Comments"
 msgstr ""
 
-#: core/actions/global-actions.php:70
+#: core/actions/global-actions.php:187
 #@ core
-msgid "% Comments &#187;"
+msgid "Tags: "
 msgstr ""
-
 #: sidebar.php:19
 #@ core
 msgid "Pages"

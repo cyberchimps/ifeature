@@ -132,7 +132,7 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 		->subsection("Blog Options")
 			->checkbox($themeslug."_post_formats", "Post Format Icons",  array('default' => true))
 			->checkbox($themeslug."_show_excerpts", "Post Excerpts")
-			->text($themeslug."_excerpt_link_text", "Excerpt Link Text", array('default' => '(More)…'))
+			->text($themeslug."_excerpt_link_text", "Excerpt Link Text", array('default' => 'Read More…'))
 			->text($themeslug."_excerpt_length", "Excerpt Character Length", array('default' => '55'))
 			->checkbox($themeslug."_show_featured_images", "Enable Featured Images")
 			->select($themeslug."_featured_image_align", "Featured Image Alignment", array( 'options' => array("key1" => "Left", "key2" => "Center", "key3" => "Right", "key4" => "None")))

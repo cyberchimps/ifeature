@@ -83,7 +83,7 @@ function synapse_loop_content($content) {
 						the_excerpt();
 						}
 						else {
-							the_content();
+							the_content(__('Read more…', 'core'));
 						}
 					 ?>
 				</div><!--end entry-->
