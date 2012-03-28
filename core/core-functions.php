@@ -60,13 +60,14 @@ function synapse_scripts() {
 	wp_enqueue_script ('tooltips');
 	wp_enqueue_script ('modernizr');
 	wp_enqueue_script ('menu');
-	wp_enqueue_script ('plusone');
 	
-	if ($options->get($themeslug.'_responsive_design') == '1' ) {
-	
-	wp_register_script( 'mobilemenu' ,$path.'/js/mobilemenu.js');
-	wp_enqueue_script ('mobilemenu');
-	
+	if ($options->get($themeslug.'_show_gplus') == '1' OR $options->get($themeslug.'single_show_gplus') == '1' OR $options->get($themeslug.'archive_show_gplus') == '1') {
+		wp_enqueue_script ('plusone');
+	}
+		
+	if ($options->get($themeslug.'_responsive_design') == '1'  ) {
+		wp_register_script( 'mobilemenu' ,$path.'/js/mobilemenu.js');
+		wp_enqueue_script ('mobilemenu');
 	}
 }
 add_action('wp_enqueue_scripts', 'synapse_scripts');	
