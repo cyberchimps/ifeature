@@ -3,7 +3,7 @@ iFeature Changelog
 ****************************
 
 Version 4.1.1 (03-28-12)
--Updated Twitter Bar element to not need Twitter for WordPress plugin.
+
 
 Version 4.1 (03-21-12)
 -Clear fix for posts for non logged-in users.
