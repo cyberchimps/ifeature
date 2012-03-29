@@ -25,88 +25,69 @@ add_action( 'synapse_twitterbar_section', 'synapse_twitterbar_section_content' )
 */
 function synapse_twitterbar_section_content() {
 	global $options, $themeslug, $post; //call globals
-	$root = get_template_directory_uri();
 
-	if (is_page()) {
-	$handle = get_post_meta($post->ID, 'twitter_handle' , true); 
-	}
-	else {
-	$handle = $options->get($themeslug.'_blog_twitter');
+	if ( is_page() ) {
+		$handle = get_post_meta($post->ID, 'twitter_handle' , true); 
+	} else {
+		$handle = $options->get($themeslug.'_blog_twitter');
 	}
 
-//Get Latest Tweet
-function latest_tweet($username,$tweetnumber){
-$url = "http://search.twitter.com/search.atom?q=from:$username&amp;rpp=10";
-$xml = simplexml_load_file($url);
-$tweettitle = $xml->entry[$tweetnumber]->title;
-$mytweet = $xml->entry[$tweetnumber]->content;
-$firstChar = substr($tweettitle, 0, 1);
-//Exclude @ replies
-if($firstChar == "@"){
-//If this tweet is an @ reply move on to the previous one
-while ($firstChar == "@"){
-$tweetnumber++;
-$tweettitle = $xml->entry[$tweetnumber]->title;
-$mytweet = $xml->entry[$tweetnumber]->content;
-$firstChar = substr($tweettitle, 0, 1);
-if($firstChar != "@"){
-//If the previous tweet is not an @ reply output it
-return $mytweet;
-}
-}
-}else{
-//If first tweet is not an @ reply output it
-return $mytweet;
-}
-}
-//End Get Latest Tweet
-
-function profileXML($user)
-
-           {
-
-$objDOM = new DOMDocument();
-
-$objDOM->load("http://api.twitter.com/1/users/show.xml?screen_name=".$user);
-
-$note = $objDOM->getElementsByTagName("user");
-
-
-
-foreach($note as $value )
-
-       {
-
-$id = $value->getElementsByTagName("id");
-
-$id  = $id->item(0)->nodeValue;
-
-$profile["id"]=$id;
-
-                
-}    
-
-
-return $profile;
-
-
-
+	if ( $handle ) {
+		synapse_display_latest_tweets( $handle );
+	}
 }
 
-
-	?>
+/**
+* Display the latest tweets from Twitter
+*/
+function synapse_display_latest_tweets( $username ) {
+	$latest_tweet = synapse_get_latest_tweets( $username );
+?>
 	<div class="row">
 		<div id="twitterbar" class="twelve columns"><!--id="twitterbar"-->
 			<div id="twittertext">
-				<a href=" http://twitter.com/<?php echo $handle ; ?>" > <img src="<?php echo "$root/images/twitterbird.png" ?>" /> <?php echo $handle ;?> - </a><?php echo  latest_tweet($handle, 1); print_r(profileXML("cyberchimps")); ?>
+				<?php
+					if ( $latest_tweet ) {	
+						$screen_name = $latest_tweet['user']['screen_name'];
+						$user_permalink = 'http://twitter.com/#!/'.$screen_name;
+						$tweet_permalink = 'http://twitter.com/#!/'.$screen_name.'/status/'.$latest_tweet['id_str'];
+						echo '<a href="'.$user_permalink.'"> <img src="'.get_template_directory_uri().'/images/twitterbird.png" /> '. $screen_name .' - </a>'.$latest_tweet['text'].' <small><a href="'.$tweet_permalink.'">' .human_time_diff(strtotime($latest_tweet['created_at']), current_time('timestamp')).' ago</a></small>';
+					} else {
+						echo '<p>No tweets to display</p>';
+					}
+				?>
 			</div>
 		</div><!--end twitterbar--> 
-	</div>
-		<?php
-}	
+	</div>	
+<?php
+}
 
+/**
+* Get the latest tweets from Twitter
+*/
+function synapse_get_latest_tweets( $username ) {
+	if ( $username ) :
+		// Check to see if Latest Tweet is Saved in Transient
+		$latest_tweet = get_transient('synapse_latest_tweet');
+		if ($latest_tweet !== false) return $latest_tweet;
+
+		// Latest Tweet not set create it now
+		$latest_tweet = '';
+		$data = wp_remote_get('https://api.twitter.com/1/statuses/user_timeline.json?screen_name='.$username.'&exclude_replies=true', array('sslverify' => false) );
+		if (!is_wp_error($data)) {
+			$value = json_decode($data['body'],true);
+			$latest_tweet = $value[0]; // Array key 0 pulls the most recent Tweet
+		}
+
+		// Set the transient cache value
+		set_transient('synapse_latest_tweet', $latest_tweet, apply_filters('synapse_latest_tweets_cache_time', 3600));
+		
+		return $latest_tweet;
+	else :
+		return false;
+	endif;
+}
 /**
 * End
 */
-
 ?>
