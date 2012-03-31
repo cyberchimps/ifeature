@@ -28,8 +28,10 @@ function synapse_twitterbar_section_content() {
 
 	if ( is_page() ) {
 		$handle = get_post_meta($post->ID, 'twitter_handle' , true); 
+		$reply = get_post_meta($post->ID, 'twitter_reply' , true); 
 	} else {
 		$handle = $options->get($themeslug.'_blog_twitter');
+		$reply = $options->get($themeslug.'_blog_twitter_reply');
 	}
 
 	if ( $handle ) {

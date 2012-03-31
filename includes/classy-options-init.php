@@ -150,7 +150,7 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 		->subsection_end()
 		->subsection("Twtterbar Options")
 			->text($themeslug."_blog_twitter", "Enter your Twitter handle")
-			->info('Requires the <a href="http://wordpress.org/extend/plugins/twitter-for-wordpress/" target="_blank">Twitter for WordPress</a> plugin')
+			->checkbox($themeslug."_blog_twitter_reply", "Show @ Replies")
 		->subsection_end()
 		->subsection("SEO")
 			->textarea($themeslug."_home_description", "Home Description")
