@@ -21,29 +21,29 @@
 add_action( 'synapse_twitterbar_section', 'synapse_twitterbar_section_content' );
 
 /**
-* Retrieves the Twitterbar options and sets up the HTML
+* Retrieves the Twitterbar options
 */
 function synapse_twitterbar_section_content() {
 	global $options, $themeslug, $post; //call globals
 
 	if ( is_page() ) {
 		$handle = get_post_meta($post->ID, 'twitter_handle' , true); 
-		$reply = get_post_meta($post->ID, 'twitter_reply' , true); 
+		$show_replies = get_post_meta($post->ID, 'twitter_reply' , true); 
 	} else {
 		$handle = $options->get($themeslug.'_blog_twitter');
-		$reply = $options->get($themeslug.'_blog_twitter_reply');
+		$show_replies = $options->get($themeslug.'_blog_twitter_reply');
 	}
 
 	if ( $handle ) {
-		synapse_display_latest_tweets( $handle );
+		synapse_display_latest_tweets( $handle, $show_replies );
 	}
 }
 
 /**
 * Display the latest tweets from Twitter
 */
-function synapse_display_latest_tweets( $username ) {
-	$latest_tweet = synapse_get_latest_tweets( $username );
+function synapse_display_latest_tweets( $username, $show_replies = 0 ) {
+	$latest_tweet = synapse_get_latest_tweets( $username, $show_replies );
 ?>
 	<div class="row">
 		<div id="twitterbar" class="twelve columns"><!--id="twitterbar"-->
@@ -67,22 +67,23 @@ function synapse_display_latest_tweets( $username ) {
 /**
 * Get the latest tweets from Twitter
 */
-function synapse_get_latest_tweets( $username ) {
+function synapse_get_latest_tweets( $username, $show_replies = 0 ) {
 	if ( $username ) :
-		// Check to see if Latest Tweet is Saved in Transient
-		$latest_tweet = get_transient('synapse_latest_tweet');
-		if ($latest_tweet !== false) return $latest_tweet;
+		// Check to see if Latest Tweet is Saved in Transient and settings have not changed
+		$cached_latest_tweet = get_transient('synapse_latest_tweet');
+		if ($cached_latest_tweet !== false && ($cached_latest_tweet['show_replies'] == $show_replies) && ($cached_latest_tweet['username'] == $username) ) return $cached_latest_tweet['latest_tweet'];
 
 		// Latest Tweet not set create it now
 		$latest_tweet = '';
-		$data = wp_remote_get('https://api.twitter.com/1/statuses/user_timeline.json?screen_name='.$username.'&exclude_replies=true', array('sslverify' => false) );
+		$exclude_replies = ( $show_replies == 0 ) ? '&exclude_replies=true' : '';
+		$data = wp_remote_get('https://api.twitter.com/1/statuses/user_timeline.json?screen_name='.$username.$exclude_replies, array('sslverify' => false) );
 		if (!is_wp_error($data)) {
 			$value = json_decode($data['body'],true);
 			$latest_tweet = $value[0]; // Array key 0 pulls the most recent Tweet
 		}
 
 		// Set the transient cache value
-		set_transient('synapse_latest_tweet', $latest_tweet, apply_filters('synapse_latest_tweets_cache_time', 3600));
+		set_transient('synapse_latest_tweet', array('username' => $username, 'show_replies' => $show_replies, 'latest_tweet' => $latest_tweet), apply_filters('synapse_latest_tweets_cache_time', 3600));
 		
 		return $latest_tweet;
 	else :
