@@ -67,6 +67,9 @@ function synapse_scripts() {
 		
 	if ($options->get($themeslug.'_responsive_design') == '1'  ) {
 		wp_register_script( 'mobilemenu' ,$path.'/js/mobilemenu.js');
+		wp_register_script( 'video' ,$path.'/js/video.js');
+		
+		wp_enqueue_script ('video');
 		wp_enqueue_script ('mobilemenu');
 	}
 }

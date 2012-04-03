@@ -10,6 +10,7 @@ Version 4.1.2 (04-03-12)
 -Removed height: auto from objects in responsive style sheet. 
 -Fixed bug with archive of an empty category.
 -Adjusted "viewport" initial scale for full-width mobile device view. 
+-Added script to wrap YouTube and Vimeo embeds in special div when responsive design is enabled. 
 
 Version 4.1.1 (03-28-12)
 -Updated missed Google Font library call for SSL support.
