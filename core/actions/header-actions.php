@@ -83,7 +83,7 @@ function synapse_meta_tags() {
 
 <meta name="language" content="en" /> 
 <!-- Set the viewport width to device width for mobile -->
-<meta name="viewport" content="initial-scale=1.6; maximum-scale=1.0; width=device-width; "/><?php
+<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width"/><?php
 
 	if ($options->get($themeslug.'_home_title') != '' AND is_front_page()) { ?>
 <meta name='title' content='<?php echo ($options->get($themeslug.'_home_title')) ;?>'/> <?php

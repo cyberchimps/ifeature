@@ -24,10 +24,10 @@
 	<!--Begin @synapse before content sidebar hook-->
 		<?php synapse_before_content_sidebar(); ?>
 	<!--End @synapse before content sidebar hook-->
+	
+	<div id="content" class="<?php echo $content_grid; ?>">
 	<?php if (have_posts()) : ?>
 	
-		<div id="content" class="<?php echo $content_grid; ?>">
-		
 		<!--Begin @synapse before_archive hook-->
 			<?php synapse_before_archive(); ?>
 		<!--End @synapse before_archive hook-->
@@ -50,9 +50,10 @@
 		 <?php endwhile; ?>
 	 
 	 <?php else : ?>
+	 
+			<h2>Nothing found</h2>
 
-		<h2>Nothing found</h2>
-
+	
 	<?php endif; ?>
 
 		<!--Begin @synapse pagination hook-->
