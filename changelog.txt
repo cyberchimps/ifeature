@@ -8,7 +8,7 @@ Version 4.1.2 (04-03-12)
 -Added Romanian language files. 
 -Updated screenshot. 
 -Removed height: auto from objects in responsive style sheet. 
--Fixed bug with archive layout of an empty category.
+-Fixed bug with archive of an empty category.
 -Adjusted "viewport" initial scale for full-width mobile device view. 
 
 Version 4.1.1 (03-28-12)
