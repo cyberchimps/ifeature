@@ -607,7 +607,7 @@ class RW_Meta_Box {
 				$name = $field['id'];
 				$type = $field['type'];
 				$old = get_post_meta($post_id, $name, !(isset($field['multiple']) && $field['multiple']));
-				$new = isset($_POST[$name]) ? $_POST[$name] : ($field['multiple'] ? array() : '');
+				$new = isset($_POST[$name]) ? $_POST[$name] : ((isset($field['multiple']) && $field['multiple']) ? array() : '');
 
 				// validate meta value
 				if (class_exists('RW_Meta_Box_Validate') && method_exists('RW_Meta_Box_Validate', $field['validate_func'])) {
