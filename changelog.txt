@@ -2,8 +2,10 @@ iFeature Changelog
 
 ****************************
 
-Version 4.1.2 (03-28-12)
--Twitter Bar
+Version 4.1.2 (04-03-12)
+-Twitter Bar no longer requires Twitter for WordPress plugin.
+-Unidentified index error fix for meta box code. 
+-Added Romanian language files. 
 
 Version 4.1.1 (03-28-12)
 -Updated missed Google Font library call for SSL support.
