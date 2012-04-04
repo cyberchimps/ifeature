@@ -28,8 +28,18 @@ function synapse_twitterbar_section_content() {
 
 	if ( is_page() ) {
 		$handle = get_post_meta($post->ID, 'twitter_handle' , true); 
-		$show_replies = get_post_meta($post->ID, 'twitter_reply' , true); 
-	} else {
+		$replies = get_post_meta($post->ID, 'twitter_reply' , true); 
+		
+		if ($replies = "off") {
+			$show_replies = '0'; 
+		}
+		
+		else {
+			$show_replies = '1'; 
+		}
+	var_dump($replies);	
+	}
+	else {
 		$handle = $options->get($themeslug.'_blog_twitter');
 		$show_replies = $options->get($themeslug.'_blog_twitter_reply');
 	}
