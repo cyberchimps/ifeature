@@ -5,6 +5,7 @@ iFeature Changelog
 Version 4.1.3 (04-10-12)
 -Fixed Twitter Bar @replies option in page options.
 -Added Hebrew language files.
+-Removed unecessary translations from several po files, updated corresponding mo files.
 
 Version 4.1.2 (04-03-12)
 -Twitter Bar no longer requires Twitter for WordPress plugin.

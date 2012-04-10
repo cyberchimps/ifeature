@@ -162,41 +162,6 @@ msgid "Page"
 msgstr ""
 
 # @ core
-#: core/classy-options/classy-options-framework/classy-options.php:86
-msgid "Support"
-msgstr ""
-
-# @ core
-#: core/classy-options/classy-options-framework/classy-options.php:87
-msgid "Documentation"
-msgstr ""
-
-# @ core
-#: core/classy-options/classy-options-framework/classy-options.php:88
-msgid "Forum"
-msgstr ""
-
-# @ core
-#: core/classy-options/classy-options-framework/classy-options.php:89
-msgid "Twitter"
-msgstr ""
-
-# @ core
-#: core/classy-options/classy-options-framework/classy-options.php:90
-msgid "Facebook"
-msgstr ""
-
-# @ core
-#: core/classy-options/classy-options-framework/classy-options.php:91
-msgid "CyberChimps Store"
-msgstr "Boutique CyberChimps "
-
-# @ core
-#: core/classy-options/classy-options-framework/classy-options.php:92
-msgid "CyberChimps Pro"
-msgstr ""
-
-# @ core
 #: sidebar.php:19
 msgid "Pages"
 msgstr ""
@@ -220,4 +185,3 @@ msgstr "Flux RSS des publications"
 #: sidebar.php:53
 msgid "Comments (RSS)"
 msgstr "Flux RSS des commentaires"
-
