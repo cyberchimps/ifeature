@@ -47,7 +47,7 @@ function synapse_font() {
 		$font = $options->get($themeslug.'_font'); 
 	} ?>
 	
-	<body style="font-family:'<?php echo ereg_replace("[^A-Za-z0-9]", " ", $font ); ?>', <?php echo $family; ?>" <?php body_class(); ?> > <?php
+	<body style="font-family:'<?php echo str_replace("+", " ", $font ); ?>', <?php echo $family; ?>" <?php body_class(); ?> > <?php
 }
 
 /**
@@ -71,7 +71,8 @@ function synapse_html_attributes() { ?>
 *
 * @since 1.0
 */
-function synapse_meta_tags() { 
+function synapse_meta_tags() {?>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><?php  
 	global $themeslug, $options, $post; //Call global variables
 	if(!$post) return; // in case of 404 page or something
 	$title = get_post_meta($post->ID, 'seo_title' , true);

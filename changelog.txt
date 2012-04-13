@@ -2,8 +2,10 @@ iFeature Changelog
 
 ****************************
 
-Version 4.1.4 (04-11-12)
+Version 4.1.4 (04-13-12)
 -CSS fix for menu in IE.
+-Removed ereg_replace from Google Font code for PHP 5.3 compatibility. 
+-Re-added IE Quirks fix. 
 
 Version 4.1.3 (04-10-12)
 -Fixed Twitter Bar @replies option in page options.
