@@ -41,6 +41,10 @@
 				<?php synapse_loop(); ?>
 			<!--End @synapse archive hook-->
 			
+			<!--Begin @Core post tags hook-->
+				<?php synapse_post_tags(); ?>
+			<!--End @Core post tags hook-->
+			
 			</div><!--end post_class-->	
 		</div><!--end post container--> 
 		<!--Begin @iFeature post bar hook-->

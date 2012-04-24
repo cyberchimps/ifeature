@@ -4,6 +4,9 @@ iFeature Changelog
 
 Version 4.1.5 (04-24-12)
 -Added missing $content_width global to theme setup function.
+-Added missing tags hook to archive template.
+-Updated pagination function with missing translation functions.
+-Updated core.pot.
 
 Version 4.1.4 (04-17-12)
 -CSS fix for menu in IE.

@@ -46,9 +46,9 @@ function synapse_pagination_content($pages = '', $range = 4)
  
      if(1 != $pages)
      {
-         echo "<div class=\"pagination\"><span>Page ".$paged." of ".$pages."</span>";
-         if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<a href='".get_pagenum_link(1)."'>&laquo; First</a>";
-         if($paged > 1 && $showitems < $pages) echo "<a href='".get_pagenum_link($paged - 1)."'>&lsaquo; Previous</a>";
+         echo '<div class="pagination"><span>'.__( 'Page', 'core' ).' '.$paged.' of '.$pages.'</span>';
+         if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo '<a href="'.get_pagenum_link(1).'">'.__( '&laquo; First', 'core' ).'</a>';
+         if($paged > 1 && $showitems < $pages) echo '<a href="'.get_pagenum_link($paged - 1).'">'.__( '&lsaquo; Previous', 'core' ).'</a>';
  
          for ($i=1; $i <= $pages; $i++)
          {
@@ -58,8 +58,8 @@ function synapse_pagination_content($pages = '', $range = 4)
              }
          }
  
-         if ($paged < $pages && $showitems < $pages) echo "<a href=\"".get_pagenum_link($paged + 1)."\">Next &rsaquo;</a>";
-         if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>Last &raquo;</a>";
+         if ($paged < $pages && $showitems < $pages) echo '<a href=\"'.get_pagenum_link($paged + 1).'"\">'.__( 'Next &rsaquo;', 'core').'</a>';
+         if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo '<a href="'.get_pagenum_link($pages).'">'.__( 'Last &raquo;', 'core' ).'</a>';
          echo "</div>\n";
      }
 }
@@ -96,7 +96,7 @@ function synapse_newer_posts() {
 * @since 1.0
 */
 function synapse_link_pages_content() {
-	 wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number'));
+	 wp_link_pages(array('before' =>  __('Pages:', 'core' ) , 'next_or_number' => 'number'));
 }
 
 /**
