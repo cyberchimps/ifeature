@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.1.5 (04-24-12)
+-Added missing $content_width global to theme setup function.
+
 Version 4.1.4 (04-17-12)
 -CSS fix for menu in IE.
 -Removed ereg_replace from Google Font code for PHP 5.3 compatibility. 
