@@ -1142,6 +1142,11 @@ div.slider-nav span.left {
     #banner {margin-top: 10px;}
 }
 
+@media handheld, only screen and (max-width: 480px) {
+	#mobileMenu_nav_menu {float: right; margin-top: 10px; margin-right: 10px;}
+	#imenu {height: 35px !important;}
+}
+
 @media handheld, only screen and (max-width: 400px) {
 	#orbitDemo {height: 90px;}
 	.icons{text-align: center !important;}

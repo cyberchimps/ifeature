@@ -12,7 +12,7 @@ jQuery(document).ready(function($){
     
     //plugin's default options
     var settings = {
-      switchWidth: 400,
+      switchWidth: 480,
       topOptionText: 'Select a page',
       indentString: '&nbsp;&nbsp;&nbsp;'
     };
