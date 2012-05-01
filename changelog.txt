@@ -2,9 +2,10 @@ iFeature Changelog
 
 ****************************
 
-Version 4.1.6 (04-30-12)
+Version 4.1.6 (05-01-12)
 -Fixed blowout when all social icons are enabled.
 -Mobile Menu now works in phone landscape mode. 
+-Fixed bug with "next" link in pagination.
 
 Version 4.1.5 (04-24-12)
 -Added missing $content_width global to theme setup function.
