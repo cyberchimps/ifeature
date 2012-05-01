@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.1.6 (04-30-12)
+-Fixed blowout when all social icons are enabled.
+
 Version 4.1.5 (04-24-12)
 -Added missing $content_width global to theme setup function.
 -Added missing tags hook to archive template.
