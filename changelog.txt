@@ -4,6 +4,7 @@ iFeature Changelog
 
 Version 4.1.6 (05-01-12)
 -Fixed blowout when all social icons are enabled.
+-Removed some additional unused images.
 -Mobile Menu now works in phone landscape mode. 
 -Fixed bug with broken "next" link in pagination.
 
