@@ -46,7 +46,7 @@ function synapse_pagination_content($pages = '', $range = 4)
  
      if(1 != $pages)
      {
-         echo '<div class="pagination"><span>'.__( 'Page', 'core' ).' '.$paged.' of '.$pages.'</span>';
+         echo '<div class="pagination"><span>'.__( 'Page', 'core' ).' '.$paged.' '.__( 'of', 'core' ).' '.$pages.'</span>';
          if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo '<a href="'.get_pagenum_link(1).'">'.__( '&laquo; First', 'core' ).'</a>';
          if($paged > 1 && $showitems < $pages) echo '<a href="'.get_pagenum_link($paged - 1).'">'.__( '&lsaquo; Previous', 'core' ).'</a>';
  
