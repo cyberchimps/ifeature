@@ -6,6 +6,7 @@ Version 4.5 (05-08-12)
 -Added Product Element.
 -Updated styling of Twitter Bar Element.
 -General CSS cleanup. 
+-Updated default background image.
 -Missing translation wrapper on post pagination.
 -Added Italian, Turkish, Swedish, Spanish, Persian and Russian language files.
 
