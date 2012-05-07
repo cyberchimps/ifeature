@@ -63,9 +63,9 @@ color:#fff;
 
 #register.five.columns {width: 40%; margin-left: 3.5%;}
 
-#content {*margin-left: 0px; *margin-top: 15px;}
+#content {*margin-left: 0px; *margin-top: 15px; margin-top: 10px;}
 
-#sidebar {*margin-top: 15px;}
+#sidebar {*margin-top: 15px; margin-top: 10px;}
 
 #container {
 	margin-left: auto;
@@ -266,20 +266,6 @@ header {margin-top: 15px;}
 .next-posts {float: left;padding: 5px 0 5px 0; }
 
 .prev-posts { float: right;padding: 5px 0 5px 0; }
-
-#crumbs {border: 1px solid;
-	border-top: 1px solid #CCC;
-	border-left: 1px solid #CCC;
-	border-right: 1px solid #BBB;
-	border-bottom: 1px solid #BBB;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
-	box-shadow:inset 0 0 2px #ccc;
-	background: #fff;
-	margin-bottom: 15px;
-}
-
-.crumbs_text {padding: 2px 0 7px 15px;}
 
 .pagnext-posts {float: left;padding: 5px;margin-bottom: 10px;}
 

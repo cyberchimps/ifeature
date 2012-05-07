@@ -15,7 +15,7 @@ div.timer {display: none;}
 	border-radius: 0px 0px 4px 4px;
 	-moz-border-radius: 0px 0px 4px 4px;
 	margin: auto;
-	margin-bottom: 7px;
+	margin-bottom: 20px;
 	background: #f8f8f8; /* Old browsers */
 	background: -moz-linear-gradient(top,  #f8f8f8 0%, #ededed 40%, #dddddd 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(40%,#ededed), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
@@ -73,6 +73,7 @@ div.timer {display: none;}
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 );
 }
 
+.crumbs_text {padding: 2px 0 7px 15px;}
 
 /*============================*/
 /*====== Product Element =====*/
