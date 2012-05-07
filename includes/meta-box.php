@@ -52,7 +52,7 @@ function initialize_the_meta_boxes() {
 			->text('product_title', 'Product Title', '', array('std' => 'Product'))
 			->textarea('product_text', 'Proudct Text', '', array('std' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. '))
 			->select('product_type', 'Media Type', '', array('options' => array('Image', 'Video')) )
-			->single_image('product_image', 'Product Image', '', array('std' =>  TEMPLATE_URL . '/images/pro/product.jpg'))
+			->single_image('product_image', 'Product Image', '', array('std' =>  TEMPLATE_URL . '/images/product.jpg'))
 			->textarea('product_video', 'Video Embed', '')
 			->checkbox('product_link_toggle', 'Product Link', '', array('std' => 'on'))
 			->text('product_link_url', 'Link URL', '', array('std' => home_url()))

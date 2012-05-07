@@ -159,7 +159,7 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 			->text($themeslug."_blog_product_title", "Product Title", array('default' =>'Product'))
 			->textarea($themeslug."_blog_product_text", "Product Text", array('default' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. '))
 			->select($themeslug."_blog_product_type", "Media Type", array( 'options' => array("key1" => "Image", "key2" => "Video")))
-			->upload($themeslug."_blog_product_image", "Product Image", array('default' => array('url' => TEMPLATE_URL . '/images/pro/product.jpg')))
+			->upload($themeslug."_blog_product_image", "Product Image", array('default' => array('url' => TEMPLATE_URL . '/images/product.jpg')))
 			->textarea($themeslug."_blog_product_video", "Video Embed")
 			->checkbox($themeslug."_blog_product_link_toggle", "Product Link", array('default' => true))
 			->text($themeslug."_blog_product_link_url", "Link", array('default' => home_url()))
