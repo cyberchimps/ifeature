@@ -4,7 +4,7 @@ iFeature Changelog
 
 Version 4.5 (05-08-12)
 -Added Product Element.
--Updated styling of Twitter Bar Element.
+-Updated styling of Twitter Bar and Breadcrumb Elements.
 -General CSS cleanup. 
 -Updated default background image.
 -Added Italian, Turkish, Swedish, Spanish, Persian and Russian language files.
