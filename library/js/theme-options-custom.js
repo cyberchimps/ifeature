@@ -40,6 +40,29 @@ jQuery(document).ready(function($) {
       post.show(); custom.hide();
     }
   }).change();
+   $("#if_blog_product_link_toggle").change(function() {
+    var toShow = $("#section-if_blog_product_link_url, #section-if_blog_product_link_text");
+    if($(this).is(':checked')) {
+      toShow.show();
+    } else {
+      toShow.hide();
+    }
+  }).change();
+   $("#section-if_blog_product_type").change(function() {
+    if($(this).find(":selected").val() == 'key1') {
+      $('#section-if_blog_product_image').fadeIn();
+    } else {
+      $('#section-if_blog_product_image').hide();
+    }
+  }).change();
+     $("#section-if_blog_product_type").change(function() {
+    if($(this).find(":selected").val() == 'key2') {
+      $('#section-if_blog_product_video').fadeIn();
+    } else {
+      $('#section-if_blog_product_video').hide();
+    }
+  }).change();
+
 
   $.each(['twitter', 'facebook', 'gplus', 'flickr', 'linkedin', 'pinterest', 'youtube', 'googlemaps', 'email', 'rsslink'], function(i, val) {
 	  $("#section-if_" + val).each(function(){
@@ -106,8 +129,8 @@ jQuery(function($) {
 		var show = $(this).val().split(",");
 		var map = {
 			synapse_blog_slider: "subsection-blogslider",
-			synapse_twitterbar_section: "subsection-twtterbaroptions"
-			// , synapse_box_section: ""
+			synapse_twitterbar_section: "subsection-twtterbaroptions",
+			synapse_product_element: "subsection-productoptions"
 		};
 
 		$.each(map, function(key, value) {

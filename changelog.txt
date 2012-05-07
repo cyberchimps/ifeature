@@ -2,6 +2,13 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5 (05-08-12)
+-Added Product Element.
+-Updated styling of Twitter Bar Element.
+-General CSS cleanup. 
+-Missing translation wrapper on post pagination.
+-Added Italian, Turkish, Swedish, Spanish, Persian and Russian language files.
+
 Version 4.1.6 (05-01-12)
 -Fixed blowout when all social icons are enabled.
 -Removed some additional unused images.

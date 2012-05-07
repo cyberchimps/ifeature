@@ -38,7 +38,8 @@ function initialize_the_meta_boxes() {
 			->section_order('page_section_order', 'Page Elements', '', array('options' => array(
 					'breadcrumbs' => 'Breadcrumbs',
 					'page_section' => 'Page',
-					'twitterbar_section' => 'Twitter Bar',			
+					'twitterbar_section' => 'Twitter Bar',	
+					'product_element' => 'Product'		
 					),
 					'std' => 'breadcrumbs,page_section'
 				))
@@ -46,6 +47,16 @@ function initialize_the_meta_boxes() {
 		->tab("Twitter Options")
 			->text('twitter_handle', 'Twitter Handle', 'Enter your Twitter handle if using the Twitter bar')
 			->checkbox('twitter_reply', 'Show @ Replies', '')
+		->tab("Product Options")
+			->select('product_text_align', 'Text Align', '', array('options' => array('Left', 'Right')) )
+			->text('product_title', 'Product Title', '', array('std' => 'Product'))
+			->textarea('product_text', 'Proudct Text', '', array('std' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. '))
+			->select('product_type', 'Media Type', '', array('options' => array('Image', 'Video')) )
+			->single_image('product_image', 'Product Image', '', array('std' =>  TEMPLATE_URL . '/images/pro/product.jpg'))
+			->textarea('product_video', 'Video Embed', '')
+			->checkbox('product_link_toggle', 'Product Link', '', array('std' => 'on'))
+			->text('product_link_url', 'Link URL', '', array('std' => home_url()))
+			->text('product_link_text', 'Link Text', '', array('std' => 'Buy Now'))
 		->tab("SEO Options")
 			->text('seo_title', 'SEO Title', '')
 			->textarea('seo_description', 'SEO Description', '')

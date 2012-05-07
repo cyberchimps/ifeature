@@ -48,6 +48,7 @@ jQuery(document).ready(function($) {
 		page_slider: "subsection-iFeature-Pro-Slider-Options",
 		callout_section: "subsection-Callout-Options",
 		carousel_section: "subsection-Carousel-Options",
+		product_element: "subsection-Product-Options",
 		twitterbar_section: "subsection-Twitter-Options"
 	};
 	$("#page_section_order").change(function(){
@@ -125,6 +126,14 @@ jQuery(document).ready(function($) {
 
     $('#checkbox-disable_callout_button').change(function(){
 	    var items = $("tr.callout_button_text, tr.callout_url");
+		if($(this).is(':checked')) {
+			items.show();
+		} else {
+			items.hide();
+		}
+    }).trigger('change');
+         $('#checkbox-product_link_toggle').change(function(){
+	    var items = $("tr.product_link_url, tr.product_link_text");
 		if($(this).is(':checked')) {
 			items.show();
 		} else {

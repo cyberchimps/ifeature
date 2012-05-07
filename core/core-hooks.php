@@ -501,6 +501,16 @@ function synapse_blog_content_slider() {
 function synapse_page_content_slider() {
 	do_action ('synapse_page_content_slider');
 }
+
+/**
+* Page content slider. 
+*
+* @since 1.0
+*/
+function synapse_product_element() {
+	do_action ('synapse_product_element');
+}
+
 /**
 * End
 */
