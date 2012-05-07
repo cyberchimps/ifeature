@@ -7,6 +7,7 @@ Version 4.5 (05-08-12)
 -Updated styling of Twitter Bar and Breadcrumb Elements.
 -General CSS cleanup. 
 -Updated default background image.
+-Adding missing translation wrapper to pagination function.
 -Added Italian, Turkish, Swedish, Spanish, Persian and Russian language files.
 
 Version 4.1.6 (05-01-12)
