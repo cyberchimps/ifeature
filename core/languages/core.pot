@@ -159,6 +159,11 @@ msgid "Tags: "
 msgstr ""
 
 #: core/actions/pagination-actions.php:49
+#@ core
+msgid "of" 
+msgstr ""
+
+#: core/actions/pagination-actions.php:49
 #: core/core-functions.php:241
 #@ core
 #@ default
