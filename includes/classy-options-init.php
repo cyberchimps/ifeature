@@ -61,6 +61,7 @@ $options
 		->section("Design")
 		->open_outersection()
 			->checkbox($themeslug."_responsive_design", "Responsive Design", array('default' => true))
+			->checkbox($themeslug."_responsive_video", "Responsive Videos")
 			->select($themeslug."_color_scheme", "Select a Skin Color", array( 'options' => array("grey" => "Grey (default)", "green" => "Green"), 'default' => 'grey'))
 		->close_outersection()
 		->subsection("Typography")

@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.1 (05-15-12)
+-Added option for responsive embeded videos (Youtube/Vimeo).
+
 Version 4.5 (05-08-12)
 -Added Product Element.
 -Updated styling of Twitter Bar and Breadcrumb Elements.
