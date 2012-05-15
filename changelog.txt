@@ -2,9 +2,13 @@ iFeature Changelog
 
 ****************************
 
-Version 4.5.1 (05-15-12)
+Version 4.5.2 (05-15-12)
+-Removed call for unecessary JS file causing errors for some users.  
+-Updated some copy in the stylesheet. 
+
+Version 4.5.1 (05-14-12)
 -Added option for responsive embeded videos (Youtube/Vimeo).
--Added Polish language files. 
+-Added Polish language files.
 
 Version 4.5 (05-08-12)
 -Added Product Element.
