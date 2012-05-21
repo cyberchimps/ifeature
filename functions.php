@@ -40,7 +40,8 @@ add_action( 'after_setup_theme', 'if_theme_setup' );
 /**
 * Redirect user to theme options page after activation.
 */ 
-if ( is_admin() && isset($_GET['activated'] ) && $pagenow =="themes.php" ) {
+if ( is_admin() && ( ( isset($_GET['activated'] ) && $pagenow == 'themes.php') || $pagenow == 'update-core.php?action=do-theme-upgrade') ) {
+
 	wp_redirect( 'themes.php?page=ifeature' );
 }
 
@@ -264,4 +265,65 @@ require_once ( get_template_directory() . '/includes/presstrends.php' ); // Opt-
 * End
 */
 
+function ifeature_theme_activation() {
+	// Get last used theme version
+	$theme_version = get_option('if_theme_version') ?: '0';
+	
+	if ( $theme_version < '4.5.3') {
+		// Update post meta_key values
+		$prev_post_meta_keys = array(
+			'slider_image' => 'if_slider_image',
+			'slider_text' => 'if_slider_text',
+		);
+		
+		foreach ($prev_post_meta_keys as $prev_key => $updated_key) {
+			response_update_meta_key('post', $updated_key, $prev_key);
+		}
+		
+		// Update page meta_key values
+		$prev_page_meta_keys = array(
+			'page_sidebar' => 'if_page_sidebar',
+			'hide_page_title' => 'if_hide_page_title',
+			'page_section_order' => 'if_page_section_order',
+			'twitter_handle' => 'if_twitter_handle',
+			'twitter_reply' => 'if_twitter_reply',
+			'product_text_align' => 'if_product_text_align',
+			'product_title' => 'if_product_title',
+			'product_text' => 'if_product_text',
+			'product_type' => 'if_product_type',
+			'product_image' => 'if_product_image',
+			'product_video' => 'if_product_video',
+			'product_link_toggle' => 'if_product_link_toggle',
+			'product_link_url' => 'if_product_link_url',
+			'product_link_text' => 'if_product_link_text',
+			'seo_title' => 'if_seo_title',
+			'seo_description' => 'sif_eo_description',
+			'seo_keywords' => 'if_seo_keywords'
+		);
+		
+		foreach ($prev_page_meta_keys as $prev_key => $updated_key) {
+			response_update_meta_key('post', $updated_key, $prev_key);
+		}
+
+		// Set new theme version
+		update_option('if_theme_version', '4.5.3');
+	}
+}
+
+function ifeature_update_meta_key($meta_type, $meta_key, $prev_meta_key) {
+	if ( !$meta_type || !$meta_key || !$prev_meta_key)
+		return false;
+
+	if ( ! $table = _get_meta_table($meta_type) )
+		return false;
+
+	global $wpdb;
+
+	$column = esc_sql($meta_type . '_id');
+
+	$prev_meta_key = stripslashes($prev_meta_key);
+	$meta_key = stripslashes($meta_key);
+	
+	$wpdb->update( $table, array( 'meta_key' => $meta_key), array( 'meta_key' => $prev_meta_key ) );
+}
 ?>
