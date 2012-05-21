@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.3 (05-21-12)
+-Added prefixes for all custom post meta data options.
+
 Version 4.5.2 (05-15-12)
 -Removed call for unecessary JS file causing errors for some users.  
 -Updated some copy in the stylesheet. 

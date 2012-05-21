@@ -65,8 +65,8 @@ function synapse_blog_slider_lite_content() {
 	    	
 	    		the_post(); 
 	    		
-	    		$postimage 	= get_post_meta($post->ID, 'slider_image' , true);
-	    		$text 		= get_post_meta($post->ID, 'slider_text' , true);
+	    		$postimage 	= get_post_meta($post->ID, $themeslug.'_slider_image' , true);
+	    		$text 		= get_post_meta($post->ID, $themeslug.'_slider_text' , true);
 	    		$permalink 	= get_permalink();
 	    		$title	= get_the_title(); 
 	    		$caption = "data-caption='#htmlCaption$i'";

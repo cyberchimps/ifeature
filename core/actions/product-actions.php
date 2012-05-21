@@ -21,15 +21,15 @@ function synapse_product_element_content(){
 	global $options, $themeslug, $root, $post;
 	
 	if (is_page()) {
-		$title = get_post_meta($post->ID, 'product_title' , true);
-		$text  = get_post_meta($post->ID, 'product_text' , true);
-		$type  = get_post_meta($post->ID, 'product_type' , true);
-		$image = get_post_meta($post->ID, 'product_image' , true);
-		$video = get_post_meta($post->ID, 'product_video' , true);	
-		$align = get_post_meta($post->ID, 'product_text_align' , true);
-		$link_enable  = get_post_meta($post->ID, 'product_link_toggle' , true);
-		$link  = get_post_meta($post->ID, 'product_link_url' , true);
-		$link_text  = get_post_meta($post->ID, 'product_link_text' , true);
+		$title = get_post_meta($post->ID, $themeslug.'_product_title' , true);
+		$text  = get_post_meta($post->ID, $themeslug.'_product_text' , true);
+		$type  = get_post_meta($post->ID, $themeslug.'_product_type' , true);
+		$image = get_post_meta($post->ID, $themeslug.'_product_image' , true);
+		$video = get_post_meta($post->ID, $themeslug.'_product_video' , true);	
+		$align = get_post_meta($post->ID, $themeslug.'_product_text_align' , true);
+		$link_enable  = get_post_meta($post->ID, $themeslug.'_product_link_toggle' , true);
+		$link  = get_post_meta($post->ID, $themeslug.'_product_link_url' , true);
+		$link_text  = get_post_meta($post->ID, $themeslug.'_product_link_text' , true);
 	}
 	else {
 		$text  = $options->get($themeslug.'_blog_product_text');

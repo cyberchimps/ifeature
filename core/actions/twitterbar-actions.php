@@ -27,8 +27,8 @@ function synapse_twitterbar_section_content() {
 	global $options, $themeslug, $post; //call globals
 
 	if ( is_page() ) {
-		$handle = get_post_meta($post->ID, 'twitter_handle' , true); 
-		$replies = get_post_meta($post->ID, 'twitter_reply' , true); 
+		$handle = get_post_meta($post->ID, $themeslug.'_twitter_handle' , true); 
+		$replies = get_post_meta($post->ID, $themeslug.'_twitter_reply' , true); 
 		
 		if ($replies == "off") {
 			$show_replies = '0'; 
