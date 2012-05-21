@@ -75,9 +75,9 @@ function synapse_meta_tags() {?>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><?php  
 	global $themeslug, $options, $post; //Call global variables
 	if(!$post) return; // in case of 404 page or something
-	$title = get_post_meta($post->ID, 'seo_title' , true);
-	$pagedescription = get_post_meta($post->ID, 'seo_description' , true);
-	$keywords = get_post_meta($post->ID, 'seo_keywords' , true);  ?>
+	$title = get_post_meta($post->ID, $themeslug.'_seo_title' , true);
+	$pagedescription = get_post_meta($post->ID, $themeslug.'_seo_description' , true);
+	$keywords = get_post_meta($post->ID, $themeslug.'_seo_keywords' , true);  ?>
 
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 <meta name="distribution" content="global" />
