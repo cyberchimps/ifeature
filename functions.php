@@ -271,7 +271,7 @@ require_once ( get_template_directory() . '/includes/presstrends.php' ); // Opt-
 function ifeature_meta_update() {
 	global $theme_version;
 	// Get last used theme version
-	$theme_version = get_option('if_theme_version') ?: '0';
+	$theme_version = (get_option('if_theme_version')) ? get_option('if_theme_version') : '0';
 	
 	if ( $theme_version < '4.5.3') {
 		// Update post meta_key values
