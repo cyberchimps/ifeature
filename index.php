@@ -18,7 +18,7 @@
 	if (preg_match("/synapse_blog_slider/", $reorder )) {
 		add_action ( 'synapse_blog_content_slider', 'synapse_blog_slider_lite');
 	}
-	
+		
 /* End set slider hook*/
 
 ?>
