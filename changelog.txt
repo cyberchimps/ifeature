@@ -6,6 +6,7 @@ Version 4.5.3 (05-22-12)
 -Added prefixes for all custom post meta data options.
 -Added function to convert previous custom post meta values to new ones.
 -Added Danish language files.
+-Added Catalan language files.
 
 Version 4.5.2 (05-15-12)
 -Removed call for unnecessary JS file causing errors for some users.  
