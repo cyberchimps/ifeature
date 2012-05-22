@@ -277,7 +277,7 @@ function ifeature_theme_activation() {
 		);
 		
 		foreach ($prev_post_meta_keys as $prev_key => $updated_key) {
-			response_update_meta_key('post', $updated_key, $prev_key);
+			ifeature_update_meta_key('post', $updated_key, $prev_key);
 		}
 		
 		// Update page meta_key values
@@ -302,7 +302,7 @@ function ifeature_theme_activation() {
 		);
 		
 		foreach ($prev_page_meta_keys as $prev_key => $updated_key) {
-			response_update_meta_key('post', $updated_key, $prev_key);
+			ifeature_update_meta_key('post', $updated_key, $prev_key);
 		}
 
 		// Set new theme version
