@@ -4,13 +4,15 @@ iFeature Changelog
 
 Version 4.5.3 (05-22-12)
 -Added prefixes for all custom post meta data options.
+-Added function to convert previous custom post meta values to new ones.
+-Added Danish language files.
 
 Version 4.5.2 (05-15-12)
 -Removed call for unnecessary JS file causing errors for some users.  
 -Updated some copy in the stylesheet. 
 
 Version 4.5.1 (05-14-12)
--Added option for responsive embeded videos (Youtube/Vimeo).
+-Added option for responsive video embeds (Youtube/Vimeo).
 -Added Polish language files.
 
 Version 4.5 (05-08-12)
