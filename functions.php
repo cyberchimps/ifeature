@@ -40,8 +40,7 @@ add_action( 'after_setup_theme', 'if_theme_setup' );
 /**
 * Redirect user to theme options page after activation.
 */ 
-if ( is_admin() && ( ( isset($_GET['activated'] ) && $pagenow == 'themes.php') || $pagenow == 'update-core.php?action=do-theme-upgrade') ) {
-
+if ( is_admin() && isset($_GET['activated'] ) && $pagenow =="themes.php" ) {
 	wp_redirect( 'themes.php?page=ifeature' );
 }
 
