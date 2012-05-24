@@ -50,7 +50,7 @@ function custom_sidebar_init_content() {
 	global $options, $themeslug, $post, $sidebar, $content_grid;
 
 	if (is_page()) {
-	$sidebar = get_post_meta($post->ID, 'page_sidebar' , true);
+	$sidebar = get_post_meta($post->ID, $themeslug.'_page_sidebar' , true);
 	}
 	
 	if ($sidebar == "1") {
