@@ -309,7 +309,7 @@ function ifeature_meta_update() {
 		}
 
 		// Set new theme version
-		update_option('if_theme_version', '4.5.3');
+		update_option('if_theme_version', '4.5.4');
 	}
 }
 
