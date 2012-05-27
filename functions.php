@@ -63,20 +63,20 @@ add_action( 'admin_bar_menu', 'if_admin_link', 113 );
 function ifeature_customize_register($wp_customize) {
 global $options, $themename, $themeslug;
 
-$wp_customize->add_section( $themeslug.'_new_color_scheme', array(
-	'title'          => __( 'Color Scheme', 'themename' ),
+$wp_customize->add_section( $themeslug.'_skin_color', array(
+	'title'          => __( 'Skin Color', 'themename' ),
 	'priority'       => 35,
 ));
 
-$wp_customize->add_setting( $themename.'_theme_options[color_scheme]', array(
+$wp_customize->add_setting( $themename.'_theme_options[skin_color]', array(
 	'default'        => 'grey',
 	'type'           => 'option',
 ));
 
 $wp_customize->add_control( $themeslug.'_new_color_scheme', array(
-	'label'      => __( 'Color Scheme', 'themename' ),
-	'section'    => $themeslug.'_new_color_scheme',
-	'settings'   => $themename.'_theme_options[color_scheme]',
+	'label'      => __( 'Skin Color', 'ifeature' ),
+	'section'    => $themeslug.'_skin_color',
+	'settings'   => $themename.'_theme_options[skin_color]',
 	'type'       => 'select',
 	'choices'    => array(
 		'grey' => 'Grey (default)',
