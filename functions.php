@@ -58,6 +58,36 @@ function if_admin_link() {
 add_action( 'admin_bar_menu', 'if_admin_link', 113 );
 
 /**
+* Theme customizer function.
+*/ 
+function ifeature_customize_register($wp_customize) {
+global $options, $themename, $themeslug;
+
+$wp_customize->add_section( $themeslug.'_new_color_scheme', array(
+	'title'          => __( 'Color Scheme', 'themename' ),
+	'priority'       => 35,
+));
+
+$wp_customize->add_setting( $themename.'_theme_options[color_scheme]', array(
+	'default'        => 'grey',
+	'type'           => 'option',
+));
+
+$wp_customize->add_control( $themeslug.'_new_color_scheme', array(
+	'label'      => __( 'Color Scheme', 'themename' ),
+	'section'    => $themeslug.'_new_color_scheme',
+	'settings'   => $themename.'_theme_options[color_scheme]',
+	'type'       => 'select',
+	'choices'    => array(
+		'grey' => 'Grey (default)',
+		'green' => 'Green',
+		),
+));
+}
+add_action( 'customize_register', 'ifeature_customize_register' );
+
+
+/**
 * Custom markup for gallery posts in main blog index.
 */ 
 function if_custom_gallery_post_format( $content ) {
@@ -309,7 +339,7 @@ function ifeature_meta_update() {
 		}
 
 		// Set new theme version
-		update_option('if_theme_version', '4.5.4');
+		update_option('if_theme_version', '4.5.5');
 	}
 }
 
