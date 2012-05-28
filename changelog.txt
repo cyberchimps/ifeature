@@ -3,7 +3,8 @@ iFeature Changelog
 ****************************
 
 Version 4.5.5 (05-29-12)
--Added skin color option to Theme Customizer (WP 3.4 support)
+-Added skin color option to Theme Customizer (WP 3.4 support).
+-Added Hindi language files.
 
 Version 4.5.4 (05-24-12)
 -Bug fix for sidebars related to last update. 
