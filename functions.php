@@ -60,11 +60,14 @@ add_action( 'admin_bar_menu', 'if_admin_link', 113 );
 /**
 * Theme customizer function.
 */ 
-function ifeature_customize_register($wp_customize) {
+function ifeature_customizer_options($wp_customize) {
 global $options, $themename, $themeslug;
 
+/**
+* Skin Color.
+*/
 $wp_customize->add_section( $themeslug.'_skin_color', array(
-	'title'          => __( 'Skin Color', 'themename' ),
+	'title'          => __( 'Skin Color', 'ifeature' ),
 	'priority'       => 35,
 ));
 
@@ -83,8 +86,41 @@ $wp_customize->add_control( $themeslug.'_new_color_scheme', array(
 		'green' => 'Green',
 		),
 ));
+
+/**
+* Typography.
+*/
+$wp_customize->add_section( $themeslug.'_font', array(
+	'title'          => __( 'Typography', 'ifeature' ),
+	'priority'       => 35,
+));
+
+$wp_customize->add_setting( $themename.'_theme_options[font]', array(
+	'default'        => 'Arial',
+	'type'           => 'option',
+));
+
+$wp_customize->add_control( $themeslug.'_font', array(
+	'label'      => __( 'Typography', 'ifeature' ),
+	'section'    => $themeslug.'_font',
+	'settings'   => $themename.'_theme_options[font]',
+	'type'       => 'select',
+	'choices'    => array(
+		"Arial" => "Arial (default)", 
+		"Courier New" => "Courier New", 
+		"Georgia" => "Georgia", 
+		"Helvetica" => "Helvetica", 
+		"Lucida Grande" => "Lucida Grande", 
+		"Tahoma" => "Tahoma", 
+		"Times New Roman" => "Times New Roman", 
+		"Verdana" => "Verdana", 
+		"Maven+Pro" => "Maven Pro", 
+		"Ubuntu" => "Ubuntu",
+		),
+));
 }
-add_action( 'customize_register', 'ifeature_customize_register' );
+add_action( 'customize_register', 'ifeature_customizer_options' );
+
 
 
 /**
