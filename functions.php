@@ -67,7 +67,7 @@ global $options, $themename, $themeslug;
 * Skin Color.
 */
 $wp_customize->add_section( $themeslug.'_skin_color', array(
-	'title'          => __( 'Skin Color', 'ifeature' ),
+	'title'          => __( 'Skin Color', $themename ),
 	'priority'       => 35,
 ));
 
@@ -77,7 +77,7 @@ $wp_customize->add_setting( $themename.'_theme_options[skin_color]', array(
 ));
 
 $wp_customize->add_control( $themeslug.'_new_color_scheme', array(
-	'label'      => __( 'Skin Color', 'ifeature' ),
+	'label'      => __( 'Skin Color', $themename ),
 	'section'    => $themeslug.'_skin_color',
 	'settings'   => $themename.'_theme_options[skin_color]',
 	'type'       => 'select',
@@ -91,7 +91,7 @@ $wp_customize->add_control( $themeslug.'_new_color_scheme', array(
 * Typography.
 */
 $wp_customize->add_section( $themeslug.'_font', array(
-	'title'          => __( 'Typography', 'ifeature' ),
+	'title'          => __( 'Typography', $themename ),
 	'priority'       => 35,
 ));
 
@@ -101,7 +101,7 @@ $wp_customize->add_setting( $themename.'_theme_options[font]', array(
 ));
 
 $wp_customize->add_control( $themeslug.'_font', array(
-	'label'      => __( 'Typography', 'ifeature' ),
+	'label'      => __( 'Typography', $themename ),
 	'section'    => $themeslug.'_font',
 	'settings'   => $themename.'_theme_options[font]',
 	'type'       => 'select',
