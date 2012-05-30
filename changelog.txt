@@ -4,7 +4,7 @@ iFeature Changelog
 
 Version 4.5.5 (05-30-12)
 -Added Hindi language files.
--Removed extra options related to Header Contact Area and cleaned up related code.
+-Removed unused theme options and cleaned up related theme code.
 -Code cleanup in comments-actions.php.
 
 Version 4.5.4 (05-24-12)
