@@ -89,8 +89,6 @@ $options
 		->close_outersection()
 		->subsection("Header Options")
 			->upload($themeslug."_logo", "Custom Logo")
-			->checkbox($themeslug."_enable_header_contact", "Header Contact Area")
-			->textarea($themeslug."_header_contact", "Enter Your Information")
 			->checkbox($themeslug."_show_description", "Show Site Description")
 			->upload($themeslug."_favicon", "Custom Favicon")
 			->checkbox($themeslug."_disable_breadcrumbs", "Breadcrumbs" , array('default' => true))
