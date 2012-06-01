@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.6 (06-01-12)
+-3.4 Customizer.
+
 Version 4.5.5 (05-30-12)
 -Added Hindi language files.
 -Removed unused theme options and cleaned up related theme code.
