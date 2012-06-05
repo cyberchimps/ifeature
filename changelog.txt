@@ -4,6 +4,7 @@ iFeature Changelog
 
 Version 4.5.6 (06-06-12)
 -Added Czech language files.
+-Responsive design tweak for social icons.
 
 Version 4.5.5 (05-30-12)
 -Added Hindi language files.
