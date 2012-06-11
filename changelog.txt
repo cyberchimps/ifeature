@@ -2,6 +2,10 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.7 (06-12-12)
+-Fixed breadcrumb issue related to single posts/media attachments. 
+-Fix for random "no tweets to display" message for the Twitterbar. 
+
 Version 4.5.6 (06-06-12)
 -Added Czech language files.
 -Responsive design tweak for social icons.
