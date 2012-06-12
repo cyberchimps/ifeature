@@ -1,5 +1,10 @@
 <?php
 
+/**
+* Exit if file is directly accessed. 
+*/ 
+if ( !defined('ABSPATH')) exit;
+
 // Add PressTrends Option
 add_action('admin_menu', 'if_presstrends_theme_menu');
 

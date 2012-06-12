@@ -1,4 +1,10 @@
 <?php
+
+/**
+* Exit if file is directly accessed. 
+*/ 
+if ( !defined('ABSPATH')) exit;
+
 global $options, $themeslug, $themenamefull;
 
 class ClassyOptions {

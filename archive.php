@@ -1,5 +1,10 @@
 <?php 
 
+/**
+* Exit if file is directly accessed. 
+*/ 
+if ( !defined('ABSPATH')) exit;
+
 /*
 	Archive
 	Creates the iFeature archive pages.

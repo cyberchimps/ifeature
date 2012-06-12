@@ -1,5 +1,11 @@
 <?php
 
+/**
+* Exit if file is directly accessed. 
+*/ 
+if ( !defined('ABSPATH')) exit;
+
+
 class ClassyOptionsSanitize {
 	static function initialize() {
 		add_filter( 'cof_font_face', array( __CLASS__, 'sanitize_font_face' ) );

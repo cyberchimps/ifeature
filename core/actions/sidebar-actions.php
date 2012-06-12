@@ -1,5 +1,10 @@
 <?php
 /**
+* Exit if file is directly accessed. 
+*/ 
+if ( !defined('ABSPATH')) exit;
+
+/**
 * Sidebar actions used by the CyberChimps Synapse Core Framework
 *
 * Author: Tyler Cunningham

@@ -1,5 +1,10 @@
 <?php 
 
+/**
+* Exit if file is directly accessed. 
+*/ 
+if ( !defined('ABSPATH')) exit;
+
 /*
 	404
 	Creates the iFeature 404 page.

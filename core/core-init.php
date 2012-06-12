@@ -1,4 +1,10 @@
 <?php
+
+/**
+* Exit if file is directly accessed. 
+*/ 
+if ( !defined('ABSPATH')) exit;
+
 /**
 * Initializes the CyberChimps Synapse Core Framework
 *

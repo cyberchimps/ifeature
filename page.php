@@ -1,5 +1,10 @@
 <?php 
 
+/**
+* Exit if file is directly accessed. 
+*/ 
+if ( !defined('ABSPATH')) exit;
+
 /*
 	Page
 	Establishes the iFeature Pro page tempate.

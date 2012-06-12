@@ -1,5 +1,10 @@
 <?php
 
+/**
+* Exit if file is directly accessed. 
+*/ 
+if ( !defined('ABSPATH')) exit;
+
 /********************* BEGIN DEFINITION OF META BOXES ***********************/
 
 add_action('init', 'initialize_the_meta_boxes');

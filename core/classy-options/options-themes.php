@@ -1,5 +1,11 @@
 <?php
 
+/**
+* Exit if file is directly accessed. 
+*/ 
+if ( !defined('ABSPATH')) exit;
+
+
 // Add scripts and stylesheet
 
 function enqueue_store_styles() {

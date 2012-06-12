@@ -1,4 +1,10 @@
-<?php if (dynamic_sidebar('Sidebar Widgets')) : else : ?>
+<?php 
+/**
+* Exit if file is directly accessed. 
+*/ 
+if ( !defined('ABSPATH')) exit;
+
+if (dynamic_sidebar('Sidebar Widgets')) : else : ?>
     
         <!-- All this stuff in here only shows up if you DON'T have any widgets active in this zone -->
     
