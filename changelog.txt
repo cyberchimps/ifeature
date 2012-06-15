@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.8 (06-15-12)
+-Replaced wp_theme_data() (deprecated) with wp_get_theme() in opt-in PressTrends function.
+
 Version 4.5.7 (06-12-12)
 -Fixed breadcrumb issue related to single posts/media attachments. 
 -Fix for random "no tweets to display" message for the Twitterbar. 
