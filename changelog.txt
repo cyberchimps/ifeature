@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.9 (06-20-12)
+-Fixed validation error with "Read more..."  link.
+
 Version 4.5.8 (06-15-12)
 -Replaced wp_theme_data() (deprecated) with wp_get_theme() in opt-in PressTrends function, backwards compatible with 3.3 and below.
 
