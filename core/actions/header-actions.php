@@ -381,13 +381,24 @@ function synapse_nav() {
 	    	?>
    			</div>
    			<?php if ($options->get($themeslug.'_hide_search') != "0"):?>
-			<div class="three columns">
+			<div class="three columns hide-on-phones">
 				<?php get_search_form(); ?>
 			</div>
 			<?php endif;?>
 		</div>
 	</div>
 </div>
+<?php if ($options->get($themeslug.'_hide_search') != "0"):?>
+<div class="show-on-phones">
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+					<?php get_search_form(); ?>
+      </div>
+    </div>
+   </div>
+  </div>
+<?php endif;?>
  <?php
 }
 

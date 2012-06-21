@@ -1132,8 +1132,7 @@ div.slider-nav span.left {
 /* Custom */	
 @media handheld, only screen and (max-width: 767px) {
 
-	#box1, #box2 {margin-right: 0px !important;} 
-	.searchform {display: none;}
+	#box1, #box2 {margin-right: 0px !important;}
     #nav ul ul li:hover ul, #nav ul ul ul li:hover ul {margin: 0px !important;}
     #nav ul ul .parent > a, #nav ul ul .parent:hover > a:hover, #nav ul ul li:hover ul .parent > a, #nav ul ul li:hover ul .parent > a:hover{background-image:url(../images/arrow.png) !important;background-position:right !important;background-repeat:no-repeat !important;}
     .carousel_caption {font-size: 10px;}
