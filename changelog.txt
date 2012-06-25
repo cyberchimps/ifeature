@@ -4,7 +4,7 @@ iFeature Changelog
 
 Version 4.5.10 (06-24-12)
 -Search for mobile was missing. Removed .searchform {display:none} from foundation.css
-added hide-on-phones for original search and created a new search just for phones below nav bar in header-actions.php.
+added hide-on-phones for original search and created a new search just for phones below nav bar in header-actions.php. Centered search.
 
 Version 4.5.9 (06-20-12)
 -Fixed validation error with "Read more..."  link.
