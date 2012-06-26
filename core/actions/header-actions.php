@@ -388,7 +388,7 @@ function synapse_nav() {
 		</div>
 	</div>
 </div>
-<?php if ($options->get($themeslug.'_hide_mobile_search') != "0"):?>
+<?php if ( $options->get($themeslug.'_hide_mobile_search') != "0" && $options->get($themeslug."_responsive_design") != "0" ):?>
 <div class="show-on-phones">
 	<div class="container">
 		<div class="row">
