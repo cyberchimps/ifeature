@@ -34,6 +34,9 @@ if ( !defined('ABSPATH')) exit;
 <!-- Begin @synapse before_header hook  content-->
 	<?php synapse_before_header(); ?> 
 <!-- End @synapse before_header hook content -->
+
+<!-- Adding wrapper class for sticky footer -->
+<div class="wrapper">
 			
 <header>		
 	<?php
