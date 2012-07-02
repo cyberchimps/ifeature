@@ -2,6 +2,11 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.11 (07-02-12)
+-Added ability to turn off mobile search.
+-Fixed search bar issue when responsive design was disabled.
+-Implemented footer CSS fix.
+
 Version 4.5.10 (06-24-12)
 -Search for mobile was missing. Removed .searchform {display:none} from foundation.css
 added hide-on-phones for original search and created a new search just for phones below nav bar in header-actions.php. Centered search.
