@@ -133,7 +133,7 @@ header {padding-top: 15px;}
 #nav .menu > li:first-child a:hover{border-radius:0}
 #nav .menu .sub-menu li a:hover{border-radius:0}
 #nav ul li{position:relative}
-#nav li ul{display:none;position:absolute;top:27px;left:7px}
+#nav li ul{display:none;position:absolute;top:27px;left:7px;z-index: 2147483647;}
 #nav li ul a{background:#555}
 #nav ul ul li:hover ul, #nav ul ul ul li:hover ul{left:0;margin:-37px 0 11px 180px}
 #nav ul li:hover ul{display:inline-block}
