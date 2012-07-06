@@ -2,6 +2,12 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.12 (07-06-12)
+-Twitter embed fix.
+-z-index nav fix.
+-Inactive element fix.
+-Sticky footer push div.
+
 Version 4.5.11 (07-02-12)
 -Added ability to turn off mobile search.
 -Fixed search bar issue when responsive design was disabled.
