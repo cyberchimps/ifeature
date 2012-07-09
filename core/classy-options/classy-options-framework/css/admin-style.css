@@ -2,6 +2,37 @@
 /* OptionsFramework Admin Styles */
 /*-------------------------------------------------------------------------------------------*/
 
+.upgrade-callout {
+  height: 60px;
+  background: #81c7ef;
+  margin-left: 5px;
+  font-size: 1.5em;
+  border: 1px solid #5ba9d3;
+  -webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+.upgrade-callout p {
+  float: left;
+  color: #FFFFFF;
+  margin: 20px 0 0 15px;
+}
+.upgrade-callout p img {
+  float: left;
+  margin: -5px 5px 0 0;
+}
+.upgrade-callout a:link {
+  color: #FFFFFF;
+}
+.upgrade-callout a:visited {
+  color: #FFFFFF;
+}
+.upgrade-callout a:hover {
+  color: #EEEEEE;
+}
+.upgrade-callout div.twitter {
+  float: left;
+  margin: 15px 0 0 15px;
+}
 .upload {max-width: 350px;}
 
 .jetpack-message .squeezer {display: none;}
