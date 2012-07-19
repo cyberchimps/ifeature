@@ -34,8 +34,11 @@
 }
 .upgrade-callout span.twitter {
   position: relative;
-  top: 8px;
+  top: 5px;
   left: 10px;
+}
+.upgrade-callout span.twitter .twitter-follow-button {
+  height: 21px!important;
 }
 
 .upload {max-width: 350px;}
