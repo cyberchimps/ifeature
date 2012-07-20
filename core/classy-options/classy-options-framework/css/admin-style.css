@@ -32,15 +32,22 @@
 .upgrade-callout a:hover {
   color: #EEEEEE;
 }
-.upgrade-callout span.twitter {
+.upgrade-callout div.social-container {
   position: relative;
-  top: 5px;
-  left: 10px;
+  left:50%;
+	height: 20px;
+  margin-top: 10px;
+  margin-left: -100px;
 }
-.upgrade-callout span.twitter .twitter-follow-button {
+.upgrade-callout div.social {
+  float: left;
+}
+.upgrade-callout div.social .twitter-follow-button {
   height: 21px!important;
 }
-
+.upgrade-callout div.social:last-child {
+  margin-left: 10px;
+}
 .upload {max-width: 350px;}
 
 .jetpack-message .squeezer {display: none;}
