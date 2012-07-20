@@ -106,7 +106,7 @@ function synapse_meta_tags() {?>
 		echo "<meta name='title' content='$title' />";
 	}
 	if ($pagedescription != '' AND !is_front_page()) {
-		echo "<meta name='description' content='echo $pagedescription'/>";
+		echo "<meta name='description' content='$pagedescription'/>";
 	}
 	if ($keywords != '' AND !is_front_page()) {
 		echo "<meta name='keywords' content='$keywords'/>";
