@@ -5,7 +5,7 @@
 .upgrade-callout {
   background: #81c7ef;
   margin-left: 5px;
-  padding: 0px 10px 10px 10px;
+  padding: 0 10px 10px 10px;
   font-size: 1.5em;
   border: 1px solid #5ba9d3;
   -webkit-border-radius: 3px;
@@ -24,13 +24,13 @@
   margin-right: 5px;
 }
 .upgrade-callout a:link {
-  color: #FFFFFF;
+  color: #006da8;
 }
 .upgrade-callout a:visited {
-  color: #FFFFFF;
+  color: #006da8;
 }
 .upgrade-callout a:hover {
-  color: #EEEEEE;
+  color: #0085cf;
 }
 .upgrade-callout div.social-container {
   position: relative;

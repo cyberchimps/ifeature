@@ -91,7 +91,7 @@ class ClassyOptions {
 		settings_errors(); ?>
 <div class="wrap">
 <div class="upgrade-callout">
-<p><img src="<?php echo get_template_directory_uri() ;?>/images/chimp.png" alt="CyberChimps" /><strong>Welcome to <?php echo $themenamefull; ?>! Learn more now about <a href="http://cyberchimps.com/ifeaturepro/" target="_blank">upgrading to <?php echo $themenamefull; ?> Pro today</a>.</p>
+<p><img src="<?php echo get_template_directory_uri() ;?>/images/chimp.png" alt="CyberChimps" /><strong>Welcome to <?php echo $themenamefull; ?>! Learn more now about upgrading to <a href="http://cyberchimps.com/ifeaturepro/" target="_blank"><?php echo $themenamefull; ?> Pro</a> today.</p>
 <div class="social-container">
 <div class="social">
 <a href="https://twitter.com/cyberchimps" class="twitter-follow-button" data-show-count="false" data-size="small">Follow @cyberchimps</a>
