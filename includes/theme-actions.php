@@ -137,9 +137,11 @@ function ifeature_link_rel() {
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/color/<?php echo $color; ?>.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/elements.css" type="text/css" />
 
+<?php if( $options->get($themeslug.'_apple_touch_toggle') == true && is_array( $options->get($themeslug.'_apple_touch') ) ): ?>
 <!--  For apple touch icon -->
 <?php $apple_icon = $options->get($themeslug.'_apple_touch'); ?>
 <link rel="apple-touch-icon" href="<?php echo $apple_icon['url']; ?>"/>
+<?php endif; ?>
 
 <?php if (is_child_theme()) :  //add support for child themes?>
 	<link rel="stylesheet" href="<?php echo bloginfo('stylesheet_directory') ; ?>/style.css" type="text/css" />

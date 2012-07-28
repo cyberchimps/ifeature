@@ -14,6 +14,14 @@ jQuery(document).ready(function($) {
       toShow.hide();
     }
   }).change();
+	$("#if_apple_touch_toggle").change(function() {
+    var toShow = $("#section-if_apple_touch");
+    if($(this).is(':checked')) {
+      toShow.show();
+    } else {
+      toShow.hide();
+    }
+		}).change();
   $("#if_show_featured_images").change(function() {
     var toShow = $("#section-if_featured_image_align, #section-if_featured_image_height, #section-if_featured_image_width");
     if($(this).is(':checked')) {
