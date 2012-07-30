@@ -2,6 +2,13 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.15 (07-30-12)
+-Apple-touch icon off by default.
+
+Version 4.5.14 (07-23-12)
+-Upgrade bar improvements, added Facebook like.
+-Apple touch icon implemented.
+
 Version 4.5.13 (07-16-12)
 -German translation fix.
 -Improved marketing copy.
