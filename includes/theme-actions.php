@@ -122,8 +122,10 @@ function ifeature_link_rel() {
 	else {
 		$color = $options->get($themeslug.'_color_scheme');
 	}?>
-	
-<link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
+  
+<?php if( $options->get( $themeslug.'_favicon_toggle' )	== true ): ?>
+	<link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
+<?php endif; ?>
 
 <?php if ($options->get($themeslug.'_responsive_design') == '1') : ?>
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/foundation.css" type="text/css" />

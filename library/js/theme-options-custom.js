@@ -14,6 +14,14 @@ jQuery(document).ready(function($) {
       toShow.hide();
     }
   }).change();
+	$("#if_favicon_toggle").change(function() {
+    var toShow = $("#section-if_favicon");
+    if($(this).is(':checked')) {
+      toShow.show();
+    } else {
+      toShow.hide();
+    }
+		}).change();
 	$("#if_apple_touch_toggle").change(function() {
     var toShow = $("#section-if_apple_touch");
     if($(this).is(':checked')) {
