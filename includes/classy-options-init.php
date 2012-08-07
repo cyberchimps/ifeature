@@ -95,7 +95,7 @@ $options
 		->close_outersection()
 		->subsection("Header Options")
 			->upload($themeslug."_logo", "Custom Logo")
-			->checkbox($themeslug."_favicon_toggle", "Favicon Toggle" , array('default' => true))
+			->checkbox($themeslug."_favicon_toggle", "Favicon Toggle" , array('default' => false))
 			->upload($themeslug."_favicon", "Custom Favicon", array('default' => array('url' => TEMPLATE_URL . '/images/favicon.ico')))
 			->checkbox($themeslug."_apple_touch_toggle", "Apple Touch Toggle" , array('default' => false))
 			->upload($themeslug."_apple_touch", "Apple Touch Icon", array('default' => array('url' => TEMPLATE_URL . '/images/apple-icon.png')))
