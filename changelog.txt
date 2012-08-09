@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.16 (08-08-12)
+-Favicon added (off by default).
+
 Version 4.5.15 (07-30-12)
 -Apple-touch icon off by default.
 
