@@ -129,8 +129,8 @@ function if_presstrends() {
         $data['comments'] = $comments_count->total_comments;
         $data['approved'] = $comments_count->approved;
         $data['spam'] = $comments_count->spam;
-        $data['theme_version'] = $theme_data['Version'];
-        $data['theme_name'] = $theme_data['Name'];
+        $data['theme_version'] = is_array( $theme_data ) ? $theme_data['Version'] : $theme_data->Version;
+        $data['theme_name'] = is_array( $theme_data ) ? $theme_data['Name'] : $theme_data->Name;
         $data['site_name'] = str_replace( ' ', '', get_bloginfo( 'name' ));
         $data['plugins'] = $plugin_count;
         $data['plugin'] = urlencode($plugin_name);
