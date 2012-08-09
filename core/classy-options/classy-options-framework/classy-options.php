@@ -59,7 +59,7 @@ class ClassyOptions {
 		$wp_admin_bar->add_menu( array(
 			'parent' => 'appearance',
 			'id' => $this->id,
-			'title' => __( $this->name ),
+			'title' => $this->name,
 			'href' => admin_url( 'themes.php?page=' . $this->id )
 		));
 	}
@@ -143,7 +143,7 @@ class ClassyOptions {
 			</div>
 			<div class="of_admin_bar">
 			    <div id="top"><a href='#TOP'><img src="<?php echo get_template_directory_uri() ;?>/images/options/top.png" /></a></div>
-				<input type="submit" class="reset-button button-secondary" name="reset" value="<?php esc_attr_e( 'Restore Defaults' ); ?>" onclick="return confirm( '<?php print esc_js( __( 'Click OK to reset. Any theme settings will be lost!' ) ); ?>' );" />
+				<input type="submit" class="reset-button button-secondary" name="reset" value="<?php esc_attr_e( 'Restore Defaults' ); ?>" onclick="return confirm( '<?php print esc_js( __( 'Click OK to reset. Any theme settings will be lost!', 'core' ) ); ?>' );" />
 				<div class="chimps"><a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri() ;?>/images/options/cyberchimpsmini.png" /></a></div>
 			</div>
 			<div class="clear"></div>
@@ -587,6 +587,7 @@ class ClassyOptions {
 				$output .=  "<div class='list_items'>";
 				foreach($values as $k) {
 					if(!$k) continue;
+					if(!isset($value['options'][$k])) continue;
 					$val = $value['options'][$k];
 					$output .=  "<div class='list_item'>";
 					$output .=  "<img src='$root/images/minus.png' class='action' title='Remove'/>";

@@ -38,7 +38,7 @@ function synapse_comments_password_required() {
 	
 	$password_text = apply_filters( 'synapse_password_required_text', 'This post is password protected. Enter the password to view comments.');
 	if ( post_password_required() ) { 
-		printf( __( $password_text, 'core' )); 
+		printf( $password_text ); 
 		return;
 	}
 }
@@ -58,6 +58,7 @@ function synapse_comments_loop() {
 			<div class="next-posts"><?php previous_comments_link() ?></div>
 			<div class="prev-posts"><?php next_comments_link() ?></div>
 		</div>
+    <div class="clear"></div>
 
 		<ol class="commentlist">
 			<?php wp_list_comments('callback=synapse_comment'); ?>
@@ -67,6 +68,7 @@ function synapse_comments_loop() {
 			<div class="next-posts"><?php previous_comments_link() ?></div>
 			<div class="prev-posts"><?php next_comments_link() ?></div>
 		</div>
+    <div class="clear"></div>
 		
 	</div><!--end comments_container-->
 	

@@ -22,7 +22,6 @@ if ( !defined('ABSPATH')) exit;
 ?>
 	<?php synapse_head_tag(); ?>
 
-<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?> <!-- wp_enqueue_script( 'comment-reply' );-->
 <?php wp_head(); ?> <!-- wp_head();-->
 	
 </head><!-- closing head tag-->

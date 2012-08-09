@@ -27,16 +27,91 @@ if ( !defined('ABSPATH')) exit;
 * @since 1.0
 */
 function synapse_text_domain() {
-	load_theme_textdomain( 'core', TEMPLATEPATH . '/core/languages' );
+	load_theme_textdomain( 'core', get_template_directory() . '/core/languages' );
 
 	    $locale = get_locale();
-	    $locale_file = TEMPLATEPATH . "/core/languages/$locale.php";
+	    $locale_file = get_template_directory() . "/core/languages/$locale.php";
 	    if ( is_readable( $locale_file ) )
 		    require_once( $locale_file );
 		
 		return;    
 }
 add_action('after_setup_theme', 'synapse_text_domain');
+
+/**
+* Load styles.
+*/ 
+
+function synapse_styles() {
+	global $options, $themeslug, $wp_styles;
+	
+	// set paths to stylesheet dir
+	$core_path =  get_template_directory_uri() ."/core/css";
+	$path = get_template_directory_uri() ."/css";
+	
+	// color
+	if ($options->get($themeslug.'_color_scheme') == '') {
+		$color = 'grey';
+	}
+	else {
+		$color = $options->get($themeslug.'_color_scheme');
+	}
+	
+	// register stylesheets
+	if ($options->get($themeslug.'_responsive_design') == '1') {
+		wp_register_style( 'foundation', $core_path.'/foundation.css' );
+	}
+	if ($options->get($themeslug.'_responsive_design') == '0') {
+		wp_register_style( 'foundation_static', $core_path.'/foundation-static.css' );
+	}
+	wp_register_style( 'foundation_apps', $core_path.'/app.css' );
+	wp_register_style( 'shortcode', $path.'/shortcode.css' );
+	wp_register_style( 'synapse_style', $path.'/style.css', array( 'foundation_apps' ) );
+	wp_register_style( 'elements', $path.'/elements.css', array( 'foundation_apps', 'synapse_style' ) );
+	wp_register_style( 'synapse_color', $path.'/color/'.$color.'.css', array( 'elements' ) );
+	
+	// ie conditional stylesheet
+	wp_register_style( 'synapse_ie', $core_path.'/ie.css' );
+	$wp_styles->add_data( 'synapse_ie', 'conditional', 'IE' );
+	
+	// child theme support
+	wp_register_style( 'child_theme', get_stylesheet_directory_uri().'/style.css', array( 'synapse_style' ) );
+	if( is_child_theme() ) {
+		wp_enqueue_style( 'child_theme' );
+	}
+	
+	// get fonts
+	if ($options->get($themeslug.'_font') == "" AND $options->get($themeslug.'_custom_font') == "") {
+		$font = apply_filters( 'synapse_default_font', 'Arial' );
+	}		
+	elseif ($options->get($themeslug.'_custom_font') != "" && $options->get($themeslug.'_font') == 'custom') {
+		$font = $options->get($themeslug.'_custom_font');	
+	}	
+	else {
+		$font = $options->get($themeslug.'_font'); 
+	} 
+	// register font stylesheet
+	wp_register_style( 'fonts', 'http://fonts.googleapis.com/css?family='.$font, array( 'synapse_style' ) ); 		
+	
+	// enqueue foundation stylesheets
+	if ($options->get($themeslug.'_responsive_design') == '1') {
+		wp_enqueue_style( 'foundation' );
+	}
+	if ($options->get($themeslug.'_responsive_design') == '0') {
+		wp_enqueue_style( 'foundation_static' );
+	}
+	wp_enqueue_style( 'foundation_apps' );
+	
+	// enqueus styles
+	wp_enqueue_style( 'shortcode' );
+	wp_enqueue_style( 'synapse_style' );
+	wp_enqueue_style( 'elements' );
+	wp_enqueue_style( 'synapse_color' );
+	wp_enqueue_style( 'fonts' );
+	wp_enqueue_style( 'synapse_ie' );
+}
+
+add_action( 'wp_enqueue_scripts', 'synapse_styles' );
 
 /**
 * Load jQuery and register additional scripts.
@@ -68,6 +143,8 @@ function synapse_scripts() {
 	wp_enqueue_script ('modernizr');
 	wp_enqueue_script ('menu');
 	wp_enqueue_script ('oembed');
+	
+	if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
 	
 	if ($options->get($themeslug.'_show_gplus') == '1' OR $options->get($themeslug.'_single_show_gplus') == '1' OR $options->get($themeslug.'_archive_show_gplus') == '1') {
 		wp_enqueue_script ('plusone');
@@ -170,7 +247,7 @@ function synapse_breadcrumbs() {
     echo '<div class="row"><div id="crumbs" class="twelve columns"><div class="crumbs_text">';
  
     global $post;
-    $homeLink = get_bloginfo('url');
+    $homeLink = home_url();
     echo '<a href="' . $homeLink . '">' . $home . '</a> ' . $delimiter . ' ';
  
     if ( is_category() ) {
@@ -249,7 +326,7 @@ function synapse_breadcrumbs() {
  
     if ( get_query_var('paged') ) {
       if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
-      echo __('Page') . ' ' . get_query_var('paged');
+      echo __('Page','core') . ' ' . get_query_var('paged');
       if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
     }
  

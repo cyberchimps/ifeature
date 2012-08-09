@@ -9,7 +9,7 @@ if ( !defined('ABSPATH')) exit;
 * Global actions used by the CyberChimps Synapse Core Framework
 *
 * Author: Tyler Cunningham
-* Copyright: © 2011
+* Copyright: &#169; 2011
 * {@link http://cyberchimps.com/ CyberChimps LLC}
 *
 * Released under the terms of the GNU General Public License.
@@ -89,7 +89,7 @@ function synapse_loop_content($content) {
 						the_excerpt();
 						}
 						else {
-							the_content(__('Read more…', 'core'));
+							the_content(__('Read more&#8230;', 'core'));
 						}
 					 ?>
 				</div><!--end entry-->

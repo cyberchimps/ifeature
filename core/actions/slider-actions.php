@@ -128,8 +128,8 @@ function synapse_blog_slider_lite_content() {
 	    wp_reset_query();
 /* Begin NivoSlider javascript */ 
     
-    $out .= <<<OUT
-<script type="text/javascript">
+    $out .= 
+"<script type='text/javascript'>
 	jQuery(document).ready(function ($) {
    	$(window).load(function() {
     $('#orbitDemo').orbit({
@@ -140,8 +140,7 @@ function synapse_blog_slider_lite_content() {
      });
      });
      });
-</script>
-OUT;
+</script>";
 
 /* End NivoSlider javascript */ 
 

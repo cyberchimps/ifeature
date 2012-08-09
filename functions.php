@@ -25,12 +25,29 @@ if ( !defined('ABSPATH')) exit;
 	$sliderdocs = 'http://cyberchimps.com/question/using-the-ifeature-3-slider/';
 
 /**
+* Content width.
+*/ 
+if ( ! isset( $content_width ) ) $content_width = 608; //Set content width
+
+/**
 * Basic theme setup.
 */ 
 function if_theme_setup() {
-	global $content_width; 
 	
-	if ( ! isset( $content_width ) ) $content_width = 608; //Set content width
+/**
+* Initialize Synapse Core Framework and Pro Extension.
+*/ 
+	require_once ( get_template_directory() . '/core/core-init.php' );
+
+/**
+* Call additional files required by theme.
+*/ 
+	require_once ( get_template_directory() . '/includes/classy-options-init.php' ); // Theme options markup.
+	require_once ( get_template_directory() . '/includes/options-functions.php' ); // Custom functions based on theme options.
+	require_once ( get_template_directory() . '/includes/meta-box.php' ); // Meta options markup.
+	require_once ( get_template_directory() . '/includes/theme-hooks.php' ); // Theme specific hooks.
+	require_once ( get_template_directory() . '/includes/theme-actions.php' ); // Actions for theme specific hooks.
+	require_once ( get_template_directory() . '/includes/presstrends.php' ); // Opt-in PressTrends option.
 	
 	add_theme_support(
 		'post-formats',
@@ -190,7 +207,7 @@ function if_render_ie_pie() { ?>
 		#wrapper input, textarea, #twitterbar, input[type=submit], input[type=reset], #imenu, .searchform, .post_container, .postformats, .postbar, .post-edit-link, .widget-container, .widget-title, .footer-widget-title, .comments_container, ol.commentlist li.even, ol.commentlist li.odd, .slider_nav, ul.metabox-tabs li, .tab-content, .list_item, .section-info, #of_container #header, .menu ul li a, .submit input, #of_container textarea, #of_container input, #of_container select, #of_container .screenshot img, #of_container .of_admin_bar, #of_container .subsection > h3, .subsection, #of_container #content .outersection .section
   		
   	{
-  		behavior: url('<?php bloginfo('stylesheet_directory'); ?>/core/library/pie/PIE.htc');
+  		behavior: url('<?php echo get_stylesheet_directory_uri(); ?>/core/library/pie/PIE.htc');
 	}
 	</style>
 <?php
@@ -214,7 +231,7 @@ add_action('wp_head', 'if_google_analytics');
 */ 
 function if_register_menus() {
 	register_nav_menus(
-	array( 'header-menu' => __( 'Header Menu' ), 'footer-menu' => __( 'Footer Menu' ))
+	array( 'header-menu' => __( 'Header Menu', 'core' ), 'footer-menu' => __( 'Footer Menu', 'core' ))
   );
 }
 add_action( 'init', 'if_register_menus' );
@@ -253,25 +270,6 @@ function if_widgets_init() {
 	));
 }
 add_action ('widgets_init', 'if_widgets_init');
-
-/**
-* Initialize Synapse Core Framework and Pro Extension.
-*/ 
-require_once ( get_template_directory() . '/core/core-init.php' );
-
-/**
-* Call additional files required by theme.
-*/ 
-require_once ( get_template_directory() . '/includes/classy-options-init.php' ); // Theme options markup.
-require_once ( get_template_directory() . '/includes/options-functions.php' ); // Custom functions based on theme options.
-require_once ( get_template_directory() . '/includes/meta-box.php' ); // Meta options markup.
-require_once ( get_template_directory() . '/includes/theme-hooks.php' ); // Theme specific hooks.
-require_once ( get_template_directory() . '/includes/theme-actions.php' ); // Actions for theme specific hooks.
-require_once ( get_template_directory() . '/includes/presstrends.php' ); // Opt-in PressTrends option.
-
-/**
-* End
-*/
 
 function ifeature_meta_update() {
 	global $theme_version;
@@ -339,4 +337,8 @@ function ifeature_update_meta_key($meta_type, $meta_key, $prev_meta_key) {
 	
 	$wpdb->update( $table, array( 'meta_key' => $meta_key), array( 'meta_key' => $prev_meta_key ) );
 }
+
+/**
+* End
+*/
 ?>
