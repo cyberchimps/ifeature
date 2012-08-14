@@ -2,6 +2,11 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.17 (08-14-12)
+-Chrome sidebar and decimal fix.
+-Presstrends fix.
+-Theme check fixes.
+
 Version 4.5.16 (08-08-12)
 -Favicon added (off by default).
 
