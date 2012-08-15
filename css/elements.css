@@ -37,6 +37,7 @@ div.timer {display: none;}
 	margin-top: 10px;
 	box-shadow: none;
 	border: 1px solid #CCC;
+	border-radius: 4px;
     background: #ffffff;
 	background: -moz-linear-gradient(top,  #ffffff 0%, #f9f9f9 75%, #f4f4f4 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(75%,#f9f9f9), color-stop(100%,#f4f4f4));
@@ -45,6 +46,7 @@ div.timer {display: none;}
 	background: -ms-linear-gradient(top,  #ffffff 0%,#f9f9f9 75%,#f4f4f4 100%);
 	background: linear-gradient(top,  #ffffff 0%,#f9f9f9 75%,#f4f4f4 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 );
+	
 }
 
 #twittertext {
