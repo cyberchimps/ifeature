@@ -2,6 +2,11 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.18 (08-15-12)
+-Twitter bar border radius implemented.
+-wp_title fix.
+-Made meta tag language dynamic.
+
 Version 4.5.17 (08-14-12)
 -Chrome sidebar and decimal fix.
 -Presstrends fix.
