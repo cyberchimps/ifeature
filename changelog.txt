@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.19 (08-21-12)
+-Custom URL support.
+
 Version 4.5.18 (08-15-12)
 -Twitter bar border radius implemented.
 -wp_title fix.
