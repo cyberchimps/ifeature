@@ -144,15 +144,16 @@ function synapse_link_rel() {
 function synapse_header_sitename_content() {
 	global $themeslug, $options; //Call global variables
 	$logo = $options->get($themeslug.'_logo'); //Calls the logo URL from the theme options
+	$url = $options->get($themeslug.'_logo_url') != '' ? $options->get($themeslug.'_logo_url') : get_home_url();
 
 	if ($logo != '') { ?>
 	<div id="logo">
-		<a href="<?php echo home_url(); ?>/"><img src="<?php echo stripslashes($logo['url']); ?>" alt="logo"></a>
+		<a href="<?php echo $url; ?>/"><img src="<?php echo stripslashes($logo['url']); ?>" alt="logo"></a>
 	</div> <?php
 	}
 						
 	if ($logo == '' ) { ?>
-		<h1 class="sitename"><a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?> </a></h1>
+		<h1 class="sitename"><a href="<?php echo $url; ?>/"><?php bloginfo('name'); ?> </a></h1>
 		<?php
 	}						 
 }
@@ -280,6 +281,7 @@ function synapse_header_social_icons_content() {
 */
 function synapse_nav() {
 	global $options, $themeslug; //call globals 
+	$url = $options->get($themeslug.'_logo_url') != '' ? $options->get($themeslug.'_logo_url') : get_home_url();
 	
 	if ($options->get($themeslug.'_hide_home_icon') == "0" && $options->get($themeslug.'_hide_search') == "0" OR $options->get($themeslug.'_hide_home_icon') == "1" && $options->get($themeslug.'_hide_search') == "0" ) {
 		$grid = 'twelve columns';
@@ -297,7 +299,7 @@ function synapse_nav() {
 			<div class="twelve columns" id="imenu">
 
 			<div id="nav" class="<?php echo $grid; ?>">
-			<?php if ($options->get($themeslug.'_hide_home_icon') != "0"):?><div id="home"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ;?>/images/home.png" alt="home" /></a></div><?php endif;?>
+			<?php if ($options->get($themeslug.'_hide_home_icon') != "0"):?><div id="home"><a href="<?php echo $url; ?>"><img src="<?php echo get_template_directory_uri() ;?>/images/home.png" alt="home" /></a></div><?php endif;?>
 			<?php if ($options->get($themeslug.'_hide_home_icon') == "0"):?>
 			<div id="nohome"></div>
 			<?php endif;?>
