@@ -144,7 +144,13 @@ function synapse_link_rel() {
 function synapse_header_sitename_content() {
 	global $themeslug, $options; //Call global variables
 	$logo = $options->get($themeslug.'_logo'); //Calls the logo URL from the theme options
-	$url = $options->get($themeslug.'_logo_url') != '' ? $options->get($themeslug.'_logo_url') : get_home_url();
+	if( $url = $options->get($themeslug.'_logo_url_toggle' ) == 1 )
+	{
+		$url = $options->get($themeslug.'_logo_url') != '' ? $options->get($themeslug.'_logo_url') : get_home_url();
+	}
+	else {
+		$url = get_home_url();
+	}
 
 	if ($logo != '') { ?>
 	<div id="logo">

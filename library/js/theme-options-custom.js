@@ -6,6 +6,14 @@
 jQuery(document).ready(function($) {
 
 	
+	$("#if_logo_url_toggle").change(function() {
+    var toShow = $("#section-if_logo_url");
+    if($(this).is(':checked')) {
+      toShow.show();
+    } else {
+      toShow.hide();
+    }
+  }).change();
   $("#if_show_excerpts").change(function() {
     var toShow = $("#section-if_excerpt_link_text, #section-if_excerpt_length");
     if($(this).is(':checked')) {
