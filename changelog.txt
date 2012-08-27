@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.20 (08-27-12)
+-Logo url on / off option added.
+
 Version 4.5.19 (08-21-12)
 -Custom URL support.
 
