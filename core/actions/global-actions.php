@@ -83,7 +83,7 @@ function synapse_loop_content($content) {
   					echo '</div>';
 				}
 			?>	
-				<div class="entry" <?php if ( has_post_thumbnail() && $featured_images == '1' ) { echo 'style="min-height: 115px;" '; }?>>
+				<div class="entry">
 					<?php 
 						if ($excerpts == '1' && !is_single() ) {
 						the_excerpt();
