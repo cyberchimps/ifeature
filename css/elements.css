@@ -4,6 +4,10 @@ div.timer {display: none;}
 
 .caption_title {font-size:16px;}
 
+#orbitDemo.orbit > a {
+  width: 100%;
+}
+
 .slider_nav {
 	height: 50px;
 	width: 99.8%;
