@@ -2,6 +2,10 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.21 (09-04-12)
+-Fixed responsive slider in IE and Firefox.
+-Fixed float IE issue.
+
 Version 4.5.20 (08-27-12)
 -Logo url on / off option added.
 
