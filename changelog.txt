@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.22 (09-10-12)
+-Fixed language files.
+
 Version 4.5.21 (09-04-12)
 -Fixed responsive slider in IE and Firefox.
 -Fixed float IE issue.
