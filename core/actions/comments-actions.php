@@ -94,7 +94,7 @@ function synapse_comments_loop() {
 	</div>
 
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
-		<br /><p><?php echo __( 'You must be', 'core' ); ?><a href="<?php echo wp_login_url( get_permalink() ); ?>"> <?php echo __( 'logged in', 'core' ); ?></a> <?php echo __('to post a comment.', 'core' ); ?></p>
+		<br /><p><?php _e( 'You must be', 'core' ); ?> <a href="<?php echo wp_login_url( get_permalink() ); ?>"><?php _e( 'logged in', 'core' ); ?></a> <?php _e('to post a comment.', 'core' ); ?></p>
 	<?php else : ?>
 	
 	<?php comment_form(); ?>
