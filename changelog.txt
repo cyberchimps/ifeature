@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.23 (09-18-12)
+-Changed how translations are laid out.
+
 Version 4.5.22 (09-10-12)
 -Fixed language files.
 
