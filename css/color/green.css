@@ -12,6 +12,7 @@ a:hover {color: #99cc66;}
 	background: -o-linear-gradient(top,  #99cc66 0%,#336600 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  #99cc66 0%,#336600 100%); /* IE10+ */
 	background: linear-gradient(top,  #99cc66 0%,#336600 100%); /* W3C */
+  -pie-background: linear-gradient(top,  #99cc66 0%,#336600 100%);
 	-moz-border-radius: 4px; 
 	-webkit-border-radius: 4px;
 	border-radius: 4px;

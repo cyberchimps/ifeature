@@ -224,7 +224,7 @@ function if_render_ie_pie() { ?>
 		#wrapper input, textarea, #twitterbar, input[type=submit], input[type=reset], #imenu, .searchform, .post_container, .postformats, .postbar, .post-edit-link, .widget-container, .widget-title, .footer-widget-title, .comments_container, ol.commentlist li.even, ol.commentlist li.odd, .slider_nav, ul.metabox-tabs li, .tab-content, .list_item, .section-info, #of_container #header, .menu ul li a, .submit input, #of_container textarea, #of_container input, #of_container select, #of_container .screenshot img, #of_container .of_admin_bar, #of_container .subsection > h3, .subsection, #of_container #content .outersection .section
   		
   	{
-  		behavior: url('<?php echo get_stylesheet_directory_uri(); ?>/core/library/pie/PIE.htc');
+  		behavior: url('<?php echo get_stylesheet_directory_uri(); ?>/core/library/pie/PIE.php');
 	}
 	</style>
 <?php
