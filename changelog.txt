@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.25 (10-01-12)
+-Printf call to echo variable.
+
 Version 4.5.24 (09-24-12)
 -Setup pie.php file.
 
