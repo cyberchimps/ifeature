@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.27 (10-15-12)
+-Quick edit fix.
+
 Version 4.5.26 (10-08-12)
 -Archive actions fix.
 
