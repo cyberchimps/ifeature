@@ -83,7 +83,7 @@ function synapse_comments_loop() {
 	
 <?php endif; ?>
 
-<?php if ( comments_open() ) : ?>
+<?php if ( comments_open() && ! post_password_required() ) : ?>
 
 <div class="comments_container">
 
@@ -97,9 +97,7 @@ function synapse_comments_loop() {
 		<br /><p><?php _e( 'You must be', 'core' ); ?> <a href="<?php echo wp_login_url( get_permalink() ); ?>"><?php _e( 'logged in', 'core' ); ?></a> <?php _e('to post a comment.', 'core' ); ?></p>
 	<?php else : ?>
 	
-	<?php if( ! post_password_required() ) {
-					comment_form(); 
-				}	?>
+	<?php comment_form(); ?>
 	
 		<?php endif; ?>
 		
