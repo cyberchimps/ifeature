@@ -2,6 +2,10 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.28 (10-23-12)
+-Comments hidden when protect page / post.
+-French support added.
+
 Version 4.5.27 (10-15-12)
 -Quick edit fix.
 
