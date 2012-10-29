@@ -203,7 +203,19 @@ function if_add_menu_font() {
 	
 		$fontstrip =  str_replace("+", " ", $font );
 	
-		echo "<link href='//fonts.googleapis.com/css?family=$font' rel='stylesheet' type='text/css' />";
+		// register font stylesheet
+		if( $font == 'Actor' ||
+			$font == 'Coda' ||
+			$font == 'Maven Pro' ||
+			$font == 'Metrophobic' ||
+			$font == 'News Cycle' ||
+			$font == 'Nobile' ||
+			$font == 'Tenor Sans' ||
+			$font == 'Quicksand' ||
+			$font == 'Ubuntu') {
+			echo "<link href='//fonts.googleapis.com/css?family=$font' rel='stylesheet' type='text/css' />";
+		}
+
 		echo '<style type="text/css">';
 		echo "#nav ul li a {font-family: $fontstrip;}";
 		echo '</style>';
