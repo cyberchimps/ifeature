@@ -2,6 +2,10 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.29 (10-31-12)
+-Updated Presstrends.
+-Google font fix.
+
 Version 4.5.28 (10-23-12)
 -Comments hidden when protect page / post.
 -French support added.
