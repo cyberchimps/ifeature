@@ -37,13 +37,25 @@ if ( !defined('ABSPATH')) exit;
 	<!--End @Core before page content hook-->
 
 		<?php
+		// Checking for password protection.
+		if( ! post_password_required() ) {
 			foreach(explode(",", $page_section_order) as $key) {
 				$fn = 'synapse_' . $key;
 				if(function_exists($fn)) {
 					call_user_func_array($fn, array());
 				}
 			}
-		?>	
+		}
+		else {
+		?>
+			<!-- Get the form to submit password -->
+			<div id="content" class="eight columns">
+				<div class="post_container">
+					<?php echo get_the_password_form(); ?>
+				</div>
+			</div>
+		<?php
+		} ?>
 		
 	<!--Begin @Core after page content hook-->
 		<?php synapse_after_page_content(); ?>
