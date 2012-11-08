@@ -41,32 +41,32 @@ function synapse_footer_widgets() {
    	if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer") ) { ?>
 		
 		<div class="three columns footer-widgets">
-			<h3 class="footer-widget-title"><?php printf( __( 'Footer Widgets', 'core' )); ?></h3>
+			<h3 class="footer-widget-title"><?php _e( 'Footer Widgets', 'core' ); ?></h3>
 			<ul>
 				<li>To customize this widget area login to your admin account, go to Appearance, then Widgets and drag new widgets into Footer Widgets</li>
 			</ul>
 		</div>
 
 		<div class="three columns footer-widgets">
-			<h3 class="footer-widget-title"><?php printf( __( 'Recent Posts', 'core' )); ?></h3>
+			<h3 class="footer-widget-title"><?php _e( 'Recent Posts', 'core' ); ?></h3>
 			<ul>
 				<?php wp_get_archives('type=postbypost&limit=4'); ?>
 			</ul>
 		</div>
 		
 		<div class="three columns footer-widgets">
-			<h3 class="footer-widget-title"><?php printf( __( 'Archives', 'core' )); ?></h3>
+			<h3 class="footer-widget-title"><?php _e( 'Archives', 'core' ); ?></h3>
 			<ul>
 				<?php wp_get_archives('type=monthly&limit=16'); ?>
 			</ul>
 		</div>
 
 		<div class="three columns footer-widgets">
-			<h3 class="footer-widget-title"><?php printf( __( 'WordPress', 'core' )); ?></h3>
+			<h3 class="footer-widget-title"><?php _e( 'WordPress', 'core' ); ?></h3>
 			<ul>
     		<?php wp_register(); ?>
     		<li><?php wp_loginout(); ?></li>
-    		<li><a href="<?php echo esc_url( __('http://wordpress.org/', 'core' )); ?>" target="_blank" title="<?php esc_attr_e('Powered by WordPress, state-of-the-art semantic personal publishing platform.', 'core'); ?>"> <?php printf( __('WordPress', 'core' )); ?></a></li>
+    		<li><a href="<?php echo esc_url( __('http://wordpress.org/', 'core' )); ?>" target="_blank" title="<?php esc_attr_e('Powered by WordPress, state-of-the-art semantic personal publishing platform.', 'core'); ?>"> <?php _e('WordPress', 'core' ); ?></a></li>
     		<?php wp_meta(); ?>
     		</ul>
 		</div>
