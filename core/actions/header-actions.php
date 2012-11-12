@@ -93,23 +93,23 @@ function synapse_meta_tags() {?>
 <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width"/><?php
 
 	if ($options->get($themeslug.'_home_title') != '' AND is_front_page()) { ?>
-<meta name='title' content='<?php echo ($options->get($themeslug.'_home_title')) ;?>'/> <?php
+<meta name='title' content='<?php esc_attr_e( ($options->get($themeslug.'_home_title')) ) ;?>'/> <?php
 	}
 	if ($options->get($themeslug.'_home_description') != '' AND is_front_page()) { ?>
-<meta name='description' content='<?php echo ($options->get($themeslug.'_home_description')) ;?>' /> <?php
+<meta name='description' content='<?php esc_attr_e( ($options->get($themeslug.'_home_description')) ) ;?>' /> <?php
 	}
 	if ($options->get($themeslug.'_home_keywords') != '' AND is_front_page()) { ?>
-<meta name='keywords' content=' <?php echo ($options->get($themeslug.'_home_keywords')) ; ?>' /> <?php
+<meta name='keywords' content=' <?php esc_attr_e( ($options->get($themeslug.'_home_keywords')) ) ; ?>' /> <?php
 	}
 	
 	if ($title != '' AND !is_front_page()) {
-		echo "<meta name='title' content='$title' />";
+		echo "<meta name='title' content='".esc_attr( $title )."' />";
 	}
 	if ($pagedescription != '' AND !is_front_page()) {
-		echo "<meta name='description' content='$pagedescription'/>";
+		echo "<meta name='description' content='".esc_attr( $pagedescription )."' />";
 	}
 	if ($keywords != '' AND !is_front_page()) {
-		echo "<meta name='keywords' content='$keywords'/>";
+		echo "<meta name='keywords' content='".esc_attr( $keywords )."'/>";
 	} 
 }
 
@@ -154,12 +154,12 @@ function synapse_header_sitename_content() {
 
 	if ($logo != '') { ?>
 	<div id="logo">
-		<a href="<?php echo $url; ?>/"><img src="<?php echo stripslashes($logo['url']); ?>" alt="logo"></a>
+		<a href="<?php esc_attr_e( $url ); ?>/"><img src="<?php esc_attr_e( $logo['url'] ); ?>" alt="logo"></a>
 	</div> <?php
 	}
 						
 	if ($logo == '' ) { ?>
-		<h1 class="sitename"><a href="<?php echo $url; ?>/"><?php bloginfo('name'); ?> </a></h1>
+		<h1 class="sitename"><a href="<?php esc_attr_e( $url ); ?>/"><?php bloginfo('name'); ?> </a></h1>
 		<?php
 	}						 
 }
@@ -305,7 +305,7 @@ function synapse_nav() {
 			<div class="twelve columns" id="imenu">
 
 			<div id="nav" class="<?php echo $grid; ?>">
-			<?php if ($options->get($themeslug.'_hide_home_icon') != "0"):?><div id="home"><a href="<?php echo $url; ?>"><img src="<?php echo get_template_directory_uri() ;?>/images/home.png" alt="home" /></a></div><?php endif;?>
+			<?php if ($options->get($themeslug.'_hide_home_icon') != "0"):?><div id="home"><a href="<?php esc_attr_e( $url ); ?>"><img src="<?php echo get_template_directory_uri() ;?>/images/home.png" alt="home" /></a></div><?php endif;?>
 			<?php if ($options->get($themeslug.'_hide_home_icon') == "0"):?>
 			<div id="nohome"></div>
 			<?php endif;?>

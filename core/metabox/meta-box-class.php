@@ -617,17 +617,17 @@ class RW_Meta_Box {
 					$old = get_post_meta($post_id, $name, !(isset($field['multiple']) && $field['multiple']));
 					$new = isset($_POST[$name]) ? $_POST[$name] : ((isset($field['multiple']) && $field['multiple']) ? array() : '');
 
-					// validate meta value
+					// validate meta value * this now wraps the save_func so that only sanatized data is saved to the database
 					if (class_exists('RW_Meta_Box_Validate') && method_exists('RW_Meta_Box_Validate', $field['validate_func'])) {
 						$new = call_user_func(array('RW_Meta_Box_Validate', $field['validate_func']), $new);
-					}
 
-					// call defined method to save meta value, if there's no methods, call common one
-					$save_func = 'save_field_' . $type;
-					if (method_exists($this, $save_func)) {
-						call_user_func(array(&$this, 'save_field_' . $type), $post_id, $field, $old, $new);
-					} else {
-						$this->save_field($post_id, $field, $old, $new);
+						// call defined method to save meta value, if there's no methods, call common one
+						$save_func = 'save_field_' . $type;
+						if (method_exists($this, $save_func)) {
+							call_user_func(array(&$this, 'save_field_' . $type), $post_id, $field, $old, $new);
+						} else {
+							$this->save_field($post_id, $field, $old, $new);
+						}
 					}
 				}
 			}
