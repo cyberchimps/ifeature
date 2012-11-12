@@ -2,6 +2,13 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.31 (11-12-12)
+-Google Fonts - added option for http or https protocol
+-Header-actions.php - added esc_attr() and esc_url() to relevant variables
+-Meta-box-class.php - stopped saving un-sanitized data to the database
+-Footer actions error fixed.
+
+
 Version 4.5.30 (11-07-12)
 -Added password protection for elements.
 -Styles for shortcodes.
