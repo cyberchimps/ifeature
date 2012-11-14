@@ -344,6 +344,9 @@ function synapse_title_tag_filter( $old_title ) {
 	if (function_exists('is_tag') && is_tag()) { /*Title for tags */
 		$title_tag = get_bloginfo('name').' - Tag Archive for &quot;'.single_tag_title("", FALSE).'&quot;  ';
 	}
+	elseif( is_feed() ) {
+		$title_tag = '';
+	}
 	elseif (is_archive()) { /*Title for archives */ 
 		$title_tag = get_bloginfo('name').$old_title.' Archive '; 
 	}    
@@ -374,11 +377,11 @@ function synapse_title_tag_filter( $old_title ) {
 	elseif (is_page() AND is_front_page() AND $blogtitle == '') { /*Title if blog page with no custom title */
 		$title_tag = get_bloginfo('name').$old_title; 
 	}
-	elseif ($blogtitle != '') { /* Title for feed */ 
-		$title_tag = ' - '.$blogtitle ; 
+	elseif ($blogtitle != '') { /*Title if blog page with custom title */ 
+		$title_tag = get_bloginfo('name').' - '.$blogtitle ; 
 	}
-	else { /*Title for feed without custom title */
-		$title_tag = ' - '.get_bloginfo('description'); 
+	else { /*Title if blog page without custom title */
+		$title_tag = get_bloginfo('name').$old_title; 
 	}
 	
 	return $title_tag;
