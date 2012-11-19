@@ -2,6 +2,11 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.32 (11-19-12)
+-Meta box temporary fix.
+-Feed Title - removed.
+
+
 Version 4.5.31 (11-12-12)
 -Google Fonts - added option for http or https protocol
 -Header-actions.php - added esc_attr() and esc_url() to relevant variables
