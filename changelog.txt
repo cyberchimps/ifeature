@@ -2,10 +2,12 @@ iFeature Changelog
 
 ****************************
 
+Version 4.5.33 (11-26-12)
+-Pinch to Zoom enabled.
+
 Version 4.5.32 (11-19-12)
 -Meta box temporary fix.
 -Feed Title - removed.
-
 
 Version 4.5.31 (11-12-12)
 -Google Fonts - added option for http or https protocol
