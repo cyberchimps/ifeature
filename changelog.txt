@@ -1,0 +1,19 @@
+iFeature Pro 5 Changelog
+
+****************************
+
+Version 5.0.2 (11-29-12)
+-New theme updater
+
+Version 5.0.1 (11-27-12)
+-Removed default widget text.
+-Improved filters.
+-Enabled Home button for menu.
+-Fixed media uploader conflict.
+-Added slider speed option, fixed height, posts.
+-Customizer support added.
+-3.5 background bug fix.
+-Top bar fix for iPhone.
+
+Version 5.0 (11-24-12)
+-Initial Release
