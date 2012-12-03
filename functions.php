@@ -246,21 +246,6 @@ add_filter( 'cyberchimps_typography_sizes', 'ifeature_typography_sizes' );
 add_filter( 'cyberchimps_typography_faces', 'ifeature_typography_faces' );
 add_filter( 'cyberchimps_typography_styles', 'ifeature_typography_styles' );
 
-// turn cyberchimps footer link off
-
-function ifeature_footer_link() {
-	$array = array(
-								'name' => __('Cyberchimps Link', 'cyberchimps'),
-								'id' => 'footer_cyberchimps_link',
-								'std' => 1,
-								'type' => 'toggle',
-								'section' => 'cyberchimps_footer_section',
-								'heading' => 'cyberchimps_footer_heading'
-							);
-	return $array;
-}
-add_filter( 'footer_cyberchimps_link', 'ifeature_footer_link' );
-
 function ifeature_post_tags( $tags ) {
 	$tag = trim( $tags, 'Tags:' );
 	$tag = explode( ',', $tag );
