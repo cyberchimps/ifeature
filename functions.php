@@ -190,7 +190,6 @@ add_filter( 'searchbar_default', 'ifeature_searchbar_default' );
 function ifeature_skin_color_options( $options ) {
 	$options = array(  
 			'default' => __( 'Default', 'cyberchimps' ),
-			'black' => __( 'Black', 'cyberchimps' ),
 			'green' => __( 'Green', 'cyberchimps' )
 			);
 	return $options;
