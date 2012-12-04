@@ -281,17 +281,6 @@ function ifeature_fields_filter( $fields ) {
 																'section' => 'cyberchimps_imenu_section',
 																'heading' => 'cyberchimps_header_heading'											
 															),
-												array(
-																'name'		=> __( 'Upgrade to ', 'cyberchimps' ) . apply_filters( 'cyberchimps_upgrade_pro_title', __( 'Pro', 'cyberchimps' ) ),
-																'id'		=> 'contact_upgrade',
-																'class' => 'cyberchimps_pro_upgrade',
-																'desc' 	 	=> sprintf( __( 'iFeature Pro allows you to have specific fields for your email and telephone number in the header, upgrade to %1$s to benefit from this excellent feature', 'cyberchimps' ),
-																											'<a href="'.apply_filters( 'cyberchimps_upgrade_link', 'http://cyberchimps.com' ).'" title="'.apply_filters( 'cyberchimps_upgrade_pro_title', __( 'Pro', 'cyberchimps' ) ).'">'.apply_filters( 'cyberchimps_upgrade_pro_title', __( 'Pro', 'cyberchimps' ) ).'</a>'
-																											),
-																'type' 		=> 'info',
-																'section'	=> 'cyberchimps_header_details_section',
-																'heading'	=> 'cyberchimps_header_heading'
-															)
 											);							
 	$fields = array_merge( $fields, $new_fields );
 	
