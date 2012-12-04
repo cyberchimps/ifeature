@@ -173,7 +173,7 @@ add_filter( 'default_background_color', 'ifeature_default_background_color' );
 // default header option
 function ifeature_header_drag_and_drop_default() {
 	$option =  array(
-			'cyberchimps_sitename_contact'  => 'Logo + Contact',
+			'cyberchimps_logo'				=> __( 'Logo', 'cyberchimps' )
 		);
 	return $option;
 }
@@ -295,7 +295,6 @@ function ifeature_fields_filter( $fields ) {
 											);							
 	$fields = array_merge( $fields, $new_fields );
 	
-	// drop unwanted fields
 	foreach( $fields as $key => $value ):
 	// move the search bar to imenu section	
 		if( $value['id'] == 'searchbar' ):
