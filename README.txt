@@ -24,6 +24,6 @@ For updated documentation, walkthroughs, and support please visit http://cyberch
 
 For updated docs please visit http://cyberchimps.com/help/
 
-For the support forum please visit: http://cyberchimps.com/forum/pro/
+For the support forum please visit: http://cyberchimps.com/forum/
 
 For more support options please visit http://cyberchimps.com/
