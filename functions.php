@@ -133,7 +133,7 @@ function ifeature_options_help_header() {
 	return $text;
 }
 function ifeature_options_help_sub_header(){
-	$text = __( 'CyberChimps Pro Responsive WordPress Starter Theme', 'cyberchimps' );
+	$text = __( 'iFeature Responsive Drag and Drop WordPress Theme', 'cyberchimps' );
 	return $text;
 }
 
