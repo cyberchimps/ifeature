@@ -16,10 +16,6 @@
 // Load Core
 require_once( get_template_directory() . '/cyberchimps/init.php' );
 
-// Notify user of theme update on "Updates" page in Dashboard.
-require_once( get_template_directory() . '/inc/update.php' );
-new WPUpdatesThemeUpdater( 'http://wp-updates.com/api/1/theme', 93, basename( get_template_directory() ) );
-
 // Set the content width based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) )
 	$content_width = 640; /* pixels */

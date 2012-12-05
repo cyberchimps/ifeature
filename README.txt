@@ -1,4 +1,4 @@
-iFeature Pro 5 Responsive Drag and Drop WordPress Theme
+iFeature 5 Responsive Drag and Drop WordPress Theme
 =======================================================
 
 Visit http://CyberChimps.com for more information and instructions.
