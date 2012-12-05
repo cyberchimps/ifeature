@@ -26,7 +26,7 @@ if (cyberchimps_get_option('footer_show_toggle') == '1') : ?>
 <div id="footer-widgets" class="row-fluid">
   <div id="footer-widget-container" class="span12">
   <div class="row-fluid">
-    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('cyberchimps-footer-widgets')) : ?>
+    <?php if ( !dynamic_sidebar('cyberchimps-footer-widgets')) : ?>
       
       <aside class="widget-container span3">
         <h3 class="widget-title"><?php _e('Pages', 'cyberchimps' ); ?></h3>
