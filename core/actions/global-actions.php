@@ -156,9 +156,9 @@ function synapse_post_byline_content() {
 	}?>
 	
 	<div class="meta">
-		<?php if (($hidden[$themeslug.'_hide_date']) != '0'):?> <?php printf( __( 'Published on', 'core' )); ?> <a href="<?php the_permalink() ?>"><?php echo get_the_date(); ?></a><?php endif;?>
-		<?php if (($hidden[$themeslug.'_hide_author']) != '0'):?><?php printf( __( 'by', 'core' )); ?> <?php the_author_posts_link(); ?> <?php endif;?> 
-		<?php if (($hidden[$themeslug.'_hide_categories']) != '0'):?><?php printf( __( 'in', 'core' )); ?> <?php the_category(', ') ?> <?php endif;?>
+		<?php if (($hidden[$themeslug.'_hide_date']) != '0'):?> <?php _e( 'Published on', 'core' ); ?> <a href="<?php the_permalink() ?>"><?php echo get_the_date(); ?></a><?php endif;?>
+		<?php if (($hidden[$themeslug.'_hide_author']) != '0'):?><?php _e( 'by', 'core' ); ?> <?php the_author_posts_link(); ?> <?php endif;?> 
+		<?php if (($hidden[$themeslug.'_hide_categories']) != '0'):?><?php _e( 'in', 'core' ); ?> <?php the_category(', ') ?> <?php endif;?>
 	</div> <?php
 }
 
