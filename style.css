@@ -306,7 +306,6 @@ article {
 }
 .entry-header {
   margin: 0;
-	padding: 15px 20px 10px 20px;
 }
 .entry-summary {
   margin: 0;
@@ -381,7 +380,7 @@ blockquote cite:before {
 h2.entry-title {
   font-weight: 400;
   line-height: 1.2em;
-  margin-top: 0 !important;
+  margin: 15px 20px 0px 20px;
 }
 h2.entry-title a {
   color: #333333;
