@@ -2,6 +2,10 @@ iFeature 5 Changelog
 
 ****************************
 
+Version 5.0.4 (12-13-12)
+-Comments fix.
+-Menu options.
+
 Version 5.0.3 (12-12-12)
 -3.5 fixes, and bugs.
 
