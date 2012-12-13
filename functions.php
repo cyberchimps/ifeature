@@ -25,10 +25,10 @@ function ifeature_add_site_info() { ?>
 <?php }
 add_action('cyberchimps_site_info', 'ifeature_add_site_info');	
 
-if ( ! function_exists( 'ifeature_comment' ) ) :
+if ( ! function_exists( 'cyberchimps_comment' ) ) :
 // Template for comments and pingbacks.
 // Used as a callback by wp_list_comments() for displaying the comments.
-function ifeature_comment( $comment, $args, $depth ) {
+function cyberchimps_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
 		case 'pingback' :
