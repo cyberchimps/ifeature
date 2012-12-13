@@ -61,7 +61,7 @@ h2.entry-title a:hover {
 .main-navigation .nav > li > a:hover {
 	background: #3A6D07;
 }
-.main-navigation .nav li.dropdown.active > .dropdown-toggle {
+.main-navigation .nav li.dropdown.active > .dropdown-toggle, .current-menu-ancestor.dropdown {
 	color: #fff;
 	background: #3A6D07;
 }

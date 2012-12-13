@@ -217,7 +217,7 @@ header #search #searchform {
   color:  #f6f6f6;
   background: #666;
 }
-.main-navigation .nav .active > a, .main-navigation .nav .current_page_item > a {
+.main-navigation .nav .active > a, .main-navigation .nav .current_page_item > a, .current-menu-ancestor.dropdown {
   color: #FFFFFF;
   background: #717171;
 }
@@ -270,14 +270,6 @@ header #search #searchform {
 }
 .navbar .btn-navbar {
 	margin-bottom: 5px;
-}
-
-.current-menu-ancestor.dropdown {
-	background-color: #111;
-}
-
-.current-menu-ancestor.dropdown >a{
-	color: #fff !important;
 }
 
 /********************************************************************************************************************/
