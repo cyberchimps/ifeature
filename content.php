@@ -26,7 +26,15 @@
 			// get the page title toggle option
 			 $page_title = get_post_meta( get_the_ID(), 'cyberchimps_page_title_toggle', true);
 			 
-			if( $page_title == "1" || $page_title == "" ) :
+			if( is_search() ):
+			?>
+				<h2 class='entry-title'>
+					<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'cyberchimps' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
+						<?php ( get_the_title() )? the_title() : the_permalink(); ?>
+					</a>
+				</h2>
+			<?php	
+			elseif( $page_title == "1" || $page_title == "" ) :
 				echo "<h2 class='entry-title'>";
 				( get_the_title() )? the_title() : the_permalink();
 				echo "</h2>";
