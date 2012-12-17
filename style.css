@@ -504,7 +504,6 @@ footer.entry-meta {
 .tag-links {
   display: inline-block;
   margin-left: 0;
-  height: 25px;
 }
 .tag-links a {
   float: left;
@@ -541,6 +540,7 @@ footer.entry-meta {
 .edit-link {
   clear: both;
   display: block;
+	margin: 10px 0;
 }
 .edit-link a {
   color: #fff;

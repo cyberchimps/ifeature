@@ -76,7 +76,7 @@
   
 		<div class="entry-content">
     	<?php cyberchimps_featured_image(); ?>
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'cyberchimps' ) ); ?>
+			<?php the_content( __( 'Continue reading', 'cyberchimps' ) . ' <span class="meta-nav">&rarr;</span>' ); ?>
 			<?php edit_post_link( __( 'Edit', 'cyberchimps' ), '<span class="edit-link">', '</span>' ); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'cyberchimps' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
@@ -90,7 +90,7 @@
     <?php else: ?>
     	<div class="entry-content">
     		<?php cyberchimps_featured_image(); ?>
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'cyberchimps' ) ); ?>
+				<?php the_content( __( 'Continue reading', 'cyberchimps' ) . ' <span class="meta-nav">&rarr;</span>' ); ?>
 				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'cyberchimps' ), 'after' => '</div>' ) ); ?>
 			</div><!-- .entry-content -->
     <?php endif; ?>
@@ -121,7 +121,7 @@
     <?php else: ?>
     	<div class="entry-content">
     		<?php cyberchimps_featured_image(); ?>
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'cyberchimps' ) ); ?>
+				<?php the_content( __( 'Continue reading', 'cyberchimps' ) . ' <span class="meta-nav">&rarr;</span>' ); ?>
 				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'cyberchimps' ), 'after' => '</div>' ) ); ?>
 			</div><!-- .entry-content -->
     <?php endif; ?>
@@ -131,8 +131,7 @@
 		<?php if ( 'post' == get_post_type() && cyberchimps_option( 'post_byline_tags' ) ) : // Hide category and tag text for pages on Search ?>
 	<footer class="entry-meta">
     	
-		<?php cyberchimps_post_tags(); ?>
-		        	
-	</footer><!-- #entry-meta -->
+		<?php cyberchimps_post_tags(); ?>       	
+	</footer><!-- #entry-meta --> 
   <?php endif; // End if 'post' == get_post_type() ?>	
 </article><!-- #post-<?php the_ID(); ?> -->
