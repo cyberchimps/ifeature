@@ -91,6 +91,37 @@ h2.entry-title a:hover {
 	color: #ddd;
 	background-color: #3A6D07;
 }
+@media (max-width: 979px) {
+	.nav-collapse.in {
+		background-image: none;
+		background-color: #3E7508;
+	}
+	.nav-collapse.in .nav li {
+		background-color: #3E7508;
+	}
+	.nav-collapse.in .nav ul {
+		background: #3E7508;
+	}
+	.navbar-inverse .nav-collapse.in .nav > li > a:hover, .navbar-inverse .nav-collapse.in .dropdown-menu a:hover {
+		color: #fff;
+		background-color: #315b06;
+	}
+	.navbar-inverse .nav-collapse.in .nav li a, .nav-collapse.in .dropdown-menu a {
+		color: #fff;
+		font-weight: normal;
+		text-shadow: none;
+	}
+	.navbar-inverse .nav-collapse.in .nav > li.current-menu-item > a, .navbar-inverse .nav-collapse.in .nav > li.current-menu-ancestor > a {
+		color: #fff;
+		box-shadow: none;
+		background: #315b06;
+	}
+	.navbar-inverse .nav-collapse.in .dropdown-menu .active > a, .navbar-inverse .nav li.dropdown.active > .dropdown-toggle {
+		color: #fff;
+		background-image: none;
+		background-color: #315b06;
+	}
+}
 
 /********************************************************************************************************************/
 /******************************************** SIDEBAR & WIDGETS *****************************************************/

@@ -271,6 +271,46 @@ header #search #searchform {
 .navbar .btn-navbar {
 	margin-bottom: 5px;
 }
+@media (max-width: 979px) {
+	.nav-collapse.in {
+		background-image: none;
+		background-color: #747474;
+	}
+	.nav-collapse.in .nav li {
+		background-color: #747474;
+	}
+	.nav-collapse.in .nav ul {
+		background: #747474;
+	}
+	.navbar .nav > li > .dropdown-menu::before, .navbar .nav > li > .dropdown-menu::after {
+		display: none;
+	}
+	.navbar-inverse .nav-collapse.in .nav > li > a:hover, .navbar-inverse .nav-collapse.in .dropdown-menu a:hover {
+		color: #fff;
+		background-color: #666;
+	}
+	.navbar-inverse .nav-collapse.in .nav li a, .nav-collapse.in .dropdown-menu a {
+		color: #fff;
+		font-weight: normal;
+		text-shadow: none;
+	}
+	.navbar-inverse .nav-collapse.in .nav > li.current-menu-item > a, .navbar-inverse .nav-collapse.in .nav > li.current-menu-ancestor > a {
+		color: #fff;
+		box-shadow: none;
+		background: #666;
+	}
+	.nav-collapse.in .dropdown .caret {
+		display: none;
+	}
+	.nav-collapse.in .dropdown-menu {
+		display: block;
+	}
+	.navbar-inverse .nav-collapse.in .dropdown-menu .active > a, .navbar-inverse .nav li.dropdown.active > .dropdown-toggle {
+		color: #fff;
+		background-image: none;
+		background-color: #666;
+	}
+}
 
 /********************************************************************************************************************/
 /******************************************** MAIN CONTENT **********************************************************/
