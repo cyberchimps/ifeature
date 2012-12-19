@@ -312,13 +312,14 @@ function ifeature_fields_filter( $fields ) {
 add_filter( 'cyberchimps_field_filter', 'ifeature_fields_filter', 2 );
 
 //add home button to menu
-function ifeature_add_home_menu( $menu ) {
-	//check if the toggle is set and if it is add the home button to the start of the menu
+function ifeature_add_home_menu( $menu, $args ) {
+
+	//check if the toggle is set. And if it is, then add the home button to the start of the primary menu.
 	$is_home = cyberchimps_option( 'menu_home_button' );
-	if( $is_home == 1 ) {
+	if( $is_home == 1 && $args->theme_location == 'primary' ) {
 		$home = '<li id="menu-item-ifeature-home"><a href="'. home_url() .'"><img src="'. get_template_directory_uri() .'/images/home.png" alt="Home" /></a></li>';
 		$menu = $home . $menu;
 	}
 	return $menu;
 }
-add_filter( 'wp_nav_menu_items', 'ifeature_add_home_menu' );
+add_filter( 'wp_nav_menu_items', 'ifeature_add_home_menu', 10, 2 );
