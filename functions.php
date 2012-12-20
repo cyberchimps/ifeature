@@ -323,7 +323,7 @@ function ifeature_meta_update() {
 			'product_link_url' => 'if_product_link_url',
 			'product_link_text' => 'if_product_link_text',
 			'seo_title' => 'if_seo_title',
-			'seo_description' => 'sif_eo_description',
+			'seo_description' => 'if_eo_description',
 			'seo_keywords' => 'if_seo_keywords'
 		);
 		
