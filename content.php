@@ -117,11 +117,13 @@
   		<div class="entry-summary">
       	<?php cyberchimps_featured_image(); ?>
         <?php the_excerpt(); ?>
+		<?php edit_post_link( __( 'Edit', 'cyberchimps' ), '<span class="edit-link">', '</span>' ); ?>
       </div>
     <?php else: ?>
     	<div class="entry-content">
     		<?php cyberchimps_featured_image(); ?>
 				<?php the_content( __( 'Continue reading', 'cyberchimps' ) . ' <span class="meta-nav">&rarr;</span>' ); ?>
+				<?php edit_post_link( __( 'Edit', 'cyberchimps' ), '<span class="edit-link">', '</span>' ); ?>
 				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'cyberchimps' ), 'after' => '</div>' ) ); ?>
 			</div><!-- .entry-content -->
     <?php endif; ?>
