@@ -2,6 +2,9 @@ iFeature 5 Changelog
 
 ****************************
 
+Version 5.0.6 (12-29-12)
+-Code cleanup.
+
 Version 5.0.5 (12-22-12)
 -CSS bug fixes.
 -Core framework updates.
