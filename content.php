@@ -82,7 +82,7 @@
 		</div><!-- .entry-content -->
     
     <?php elseif( is_archive() ): ?>
-  	<?php if( cyberchimps_option( 'archive_post_excerpts' ) ): ?>
+  	<?php if( cyberchimps_get_option( 'archive_post_excerpts', 0 ) ): ?>
   		<div class="entry-summary">
       	<?php cyberchimps_featured_image(); ?>
         <?php the_excerpt(); ?>
@@ -113,7 +113,7 @@
 		</div><!-- .entry-summary -->
 	
 	<?php else :// blog post pages ?>
-  	<?php if( cyberchimps_option( 'post_excerpts' ) ): ?>
+  	<?php if( cyberchimps_get_option( 'post_excerpts', 0 ) ): ?>
   		<div class="entry-summary">
       	<?php cyberchimps_featured_image(); ?>
         <?php the_excerpt(); ?>
@@ -130,7 +130,7 @@
 		
 	<?php endif; ?>
 	
-		<?php if ( 'post' == get_post_type() && cyberchimps_option( 'post_byline_tags' ) ) : // Hide category and tag text for pages on Search ?>
+		<?php if ( 'post' == get_post_type() && cyberchimps_get_option( 'post_byline_tags', 1 ) ) : // Hide category and tag text for pages on Search ?>
 	<footer class="entry-meta">
     	
 		<?php cyberchimps_post_tags(); ?>       	

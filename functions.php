@@ -189,7 +189,7 @@ add_filter( 'default_background_color', 'ifeature_default_background_color' );
 // default header option
 function ifeature_header_drag_and_drop_default() {
 	$option =  array(
-			'cyberchimps_logo'				=> __( 'Logo', 'cyberchimps' )
+			'cyberchimps_logo' => __( 'Logo', 'cyberchimps' )
 		);
 	return $option;
 }
@@ -315,7 +315,7 @@ add_filter( 'cyberchimps_field_filter', 'ifeature_fields_filter', 2 );
 function ifeature_add_home_menu( $menu, $args ) {
 
 	//check if the toggle is set. And if it is, then add the home button to the start of the primary menu.
-	$is_home = cyberchimps_option( 'menu_home_button' );
+	$is_home = cyberchimps_get_option( 'menu_home_button', 1 );
 	if( $is_home == 1 && $args->theme_location == 'primary' ) {
 		$home = '<li id="menu-item-ifeature-home"><a href="'. home_url() .'"><img src="'. get_template_directory_uri() .'/images/home.png" alt="Home" /></a></li>';
 		$menu = $home . $menu;
