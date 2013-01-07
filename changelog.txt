@@ -2,6 +2,10 @@ iFeature 5 Changelog
 
 ****************************
 
+Version 5.0.7 (1-6-13)
+-3rd tier menu.
+-Framework improvements.
+
 Version 5.0.6 (12-29-12)
 -Code cleanup.
 
