@@ -204,10 +204,13 @@ add_filter( 'searchbar_default', 'ifeature_searchbar_default' );
 
 //theme specific skin options in array. Must always include option default
 function ifeature_skin_color_options( $options ) {
-	$options = array(  
-			'default' => __( 'Default', 'cyberchimps' ),
-			'green' => __( 'Green', 'cyberchimps' )
-			);
+	// Get path of image
+	$imagepath = get_template_directory_uri(). '/inc/css/skins/images/';
+	
+	$options = array(
+		'default'	=> $imagepath . 'default.png',
+		'green'		=> $imagepath . 'green.png'
+	);		
 	return $options;
 }
 add_filter( 'cyberchimps_skin_color', 'ifeature_skin_color_options', 1 );
