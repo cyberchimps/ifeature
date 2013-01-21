@@ -584,11 +584,11 @@ footer.entry-meta {
   margin-top: 10px;
   line-height: 1.2em;
 }
-.tag-links {
+.taglinks {
   display: inline-block;
   margin-left: 0;
 }
-.tag-links a {
+.taglinks a {
   float: left;
   position: relative;
   font-size: 1em;
@@ -607,7 +607,7 @@ footer.entry-meta {
   background: linear-gradient(to bottom,  #ffffff 0%,#e7e7e7 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e7e7e7',GradientType=0 );
 }
-.tag-links a:after {
+.taglinks a:after {
   position: absolute;
   top: -1px;
   left: 100%;
