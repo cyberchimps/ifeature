@@ -2,6 +2,9 @@ iFeature 5 Changelog
 
 ****************************
 
+Version 5.0.9 (1-23-13)
+-js improvements, meta tag-links classes fix.
+
 Version 5.0.8 (1-14-13)
 -POT file updated, framework updates.
 
