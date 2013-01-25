@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.0.0 (1-25-13)
+-Fix upload bug
+
 Version 5.0.9 (1-23-13)
 -js improvements, meta tag-links classes fix.
 
