@@ -772,3 +772,14 @@ tr {border-top: 1px solid #E7E7E7;}
 #of_container #content .section-section_order .controls {
 	width: 400px;
 }
+
+.upload_image_button {
+	font-size: 14px !important;
+	padding: 5px 10px !important;
+	width: 70px !important;
+}
+
+.upload-text {
+	float: right;
+	clear: right;
+}

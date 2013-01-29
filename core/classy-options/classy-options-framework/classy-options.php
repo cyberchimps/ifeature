@@ -46,11 +46,13 @@ class ClassyOptions {
 		// Enqueued scripts
 		wp_enqueue_script('jquery-ui-core');
 		wp_enqueue_script('jquery-ui-sortable');
+		wp_enqueue_script('media-upload');
 		wp_enqueue_script('thickbox');
 		wp_enqueue_script('color-picker', CLASSY_OPTIONS_FRAMEWORK_URL.'js/colorpicker.js', array('jquery'));
 		wp_enqueue_script('options-custom', CLASSY_OPTIONS_FRAMEWORK_URL.'js/options-custom.js', array('jquery'));
 		wp_enqueue_script('theme-options-custom', get_template_directory_uri().'/library/js/theme-options-custom.js', array('jquery'));
 		wp_enqueue_script('media-uploader', CLASSY_OPTIONS_FRAMEWORK_URL.'js/of-medialibrary-uploader.js', array('jquery'));
+		wp_enqueue_script('custom', get_template_directory_uri() . '/core/library/js/custom.js', array('jquery') );
 	}
 
 	function add_admin_bar() {
@@ -411,8 +413,10 @@ class ClassyOptions {
 				if(isset($val['url'])) {
 					$output .= "Preview: " . "<img class='upload' src='{$val['url']}'/><br/>";
 				}
-				$output .= " &nbsp;&nbsp;&nbsp;&nbsp; URL <input type='text' name='{$value['id']}_text' size='72' value='" . (isset($val['url']) ? $val['url'] : "") . "'/>";
-				$output .= " or upload File: <input type='file' id='{$value['id']}' name='{$value['id']}'>";
+				$output .= "<input type='button' class='upload_image_button' value='".__( 'Upload', 'cyberchimps' )."' />";
+				$output .= "<br/><div class='upload-text'>or enter URL</div>";
+				$output .= "<input type='text' class='upload_image_field'  name='{$value['id']}_text' size='72' value='" . (isset($val['url']) ? $val['url'] : "") . "'/>";
+				
 			break;
 			
 			// Typography
