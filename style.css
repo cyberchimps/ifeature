@@ -315,6 +315,17 @@ header #search #searchform {
 	content: '';
 }
 @media (max-width: 979px) {
+	.main-navigation .nav > li > ul > li > ul::after, .main-navigation .nav > li > ul > li > ul::before {
+		border: none;
+	}
+	.main-navigation .nav > li > ul > li > ul {
+		display: block;
+		position: static;
+		border: none;
+	}
+	.nav-collapse .dropdown-menu li + li a {
+		margin-bottom: 0px;
+	}
 	.nav-collapse.in {
 		background-image: none;
 		background-color: #747474;
