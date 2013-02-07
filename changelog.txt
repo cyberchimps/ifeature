@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.3 (2-6-13)
+-Added style for 3rd level menu items.
+
 Version 5.1.2 (1-30-13)
 -Added embed to video.js
 
