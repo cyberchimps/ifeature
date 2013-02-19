@@ -88,9 +88,9 @@ if (cyberchimps_get_option('footer_show_toggle') == '1') : ?>
 
 <?php do_action('cyberchimps_after_wrapper'); ?>
 
-<?php wp_footer(); ?>
-
 </div><!-- footer wrapper -->
+
+<?php wp_footer(); ?>
 
 </body>
 </html>

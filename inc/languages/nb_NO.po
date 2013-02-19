@@ -5,7 +5,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 "Project-Id-Version: iFeature\n"
-"Language: es\n"
+"Language: no\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
@@ -14,101 +14,101 @@ msgstr ""
 
 #: ../../404.php:34
 msgid "Oops! That page cannot be found."
-msgstr "Oops! Esa página no se puede encontrar."
+msgstr "Ojsann, kunne ikke finne den siden!"
 
 #: ../../404.php:42
 msgid ""
 "It looks like nothing was found at this location. Maybe try searching for it?"
 msgstr ""
-"Parece que no se encontró nada en este lugar. Tal vez intente buscarlo?"
+"Det ser ut til at det ikke finnes noe her. Kanskje du skal prøve et lite søk?"
 
 #: ../../archive.php:34
 msgid "Category Archives: %s"
-msgstr "Archivos de la categoría: %s"
+msgstr "Kategoriarkiv: %s"
 
 #: ../../archive.php:37
 msgid "Tag Archives: %s"
-msgstr "Tags: %s"
+msgstr "Stikkordarkiv: %s"
 
 #: ../../archive.php:44
 msgid "Author Archives: %s"
-msgstr "Archivo del Autor: %s"
+msgstr "Forfatterarkiv: %s"
 
 #: ../../archive.php:52
 msgid "Daily Archives: %s"
-msgstr "Archivos diarios: %s"
+msgstr "Dagsarkiv: %s"
 
 #: ../../archive.php:55
 msgid "Monthly Archives: %s"
-msgstr "Archivos por mes: %s"
+msgstr "Månedsarkiv: %s"
 
 #: ../../archive.php:58
 msgid "Yearly Archives: %s"
-msgstr "Archivos por Año: %s"
+msgstr "Årsarkiv: %s"
 
 #: ../../archive.php:61 ../../footer.php:39 ../../sidebar-left.php:32
 #: ../../sidebar-right.php:32 ../../sidebar.php:32
 msgid "Archives"
-msgstr "Archivos"
+msgstr "Arkiv"
 
 #: ../../comments.php:34
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "Un pensamiento en &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s pensamiento en &ldquo;%2$s&rdquo;"
+msgstr[0] "Ett innspill på &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s innspill på &ldquo;%2$s&rdquo;"
 
 #: ../../comments.php:41 ../../comments.php:61
 msgid "Comment navigation"
-msgstr "Navegación de comentarios"
+msgstr "Kommentarnavigering"
 
 #: ../../comments.php:42
 msgid "Older Comments"
-msgstr "Mayores Comentarios"
+msgstr "Eldre kommentarer"
 
 #: ../../comments.php:43
 msgid "Newer Comments"
-msgstr "Nuevos comentarios"
+msgstr "Nyere kommentarer"
 
 #: ../../comments.php:62
 msgid "&larr; Older Comments"
-msgstr "&larr; Comentarios más antiguos"
+msgstr "&larr; Eldre kommentarer"
 
 #: ../../comments.php:63
 msgid "Newer Comments &rarr;"
-msgstr "Comentarios más nuevos &rarr;"
+msgstr "Nyere kommentarer &rarr;"
 
 #: ../../comments.php:73
 msgid "Comments are closed."
-msgstr "Los comentarios están cerrados."
+msgstr "Kommentarfeltet er stengt."
 
 #: ../../content.php:32 ../../content.php:49 ../../content.php:56
 #: ../../cyberchimps/functions.php:429
 msgid "Permalink to %s"
-msgstr "Enlace permanente a %s"
+msgstr "Permalenke til %s"
 
 #: ../../content.php:79 ../../content.php:93 ../../content.php:125
 msgid "Continue reading"
-msgstr "Continuar leyendo"
+msgstr "Fortsett lesing"
 
 #: ../../content.php:80 ../../content.php:112 ../../content.php:120
 #: ../../content.php:126 ../../image.php:49 ../../image.php:152
 msgid "Edit"
-msgstr "Editar"
+msgstr "Rediger"
 
 #: ../../content.php:81 ../../content.php:94 ../../content.php:127
 #: ../../image.php:77
 msgid "Pages:"
-msgstr "Páginas:"
+msgstr "Sider:"
 
 #: ../../footer.php:32 ../../sidebar-left.php:25 ../../sidebar-right.php:25
 #: ../../sidebar.php:25
 msgid "Pages"
-msgstr "Páginas"
+msgstr "Sider"
 
 #: ../../footer.php:46 ../../sidebar-left.php:39 ../../sidebar-right.php:39
 #: ../../sidebar.php:39 ../../cyberchimps/options/options-core.php:289
 msgid "Categories"
-msgstr "Categorías"
+msgstr "Kategorier"
 
 #: ../../footer.php:53 ../../footer.php:57 ../../sidebar-left.php:46
 #: ../../sidebar-left.php:50 ../../sidebar-right.php:46
@@ -120,33 +120,31 @@ msgstr "WordPress"
 #: ../../sidebar.php:50
 msgid ""
 "Powered by WordPress, state-of-the-art semantic personal publishing platform."
-msgstr ""
-"Powered by WordPress, el estado de la técnica de plataforma semántica de "
-"publicación personal."
+msgstr "Drevet av WordPress."
 
 #: ../../functions.php:38
 msgid "Pingback:"
-msgstr "Pingback:"
+msgstr "Tilbakeping:"
 
 #: ../../functions.php:38 ../../functions.php:63
 msgid "(Edit)"
-msgstr "(Editar)"
+msgstr "(Rediger)"
 
 #: ../../functions.php:50
 msgid "says"
-msgstr "dice"
+msgstr "sier"
 
 #: ../../functions.php:53
 msgid "Your comment is awaiting moderation."
-msgstr "Su comentario está en espera de moderación."
+msgstr "Din kommentar avventer moderering."
 
 #: ../../functions.php:61
 msgid "%1$s at %2$s"
-msgstr "%1$s en %2$s"
+msgstr "%1$s den %2$s"
 
 #: ../../functions.php:156
 msgid "iFeature Responsive Drag and Drop WordPress Theme"
-msgstr "iFeature Responsive Drag and Drop WordPress Tema"
+msgstr "iFeature Responsivt Dra-og-Slipp Wordpress Tema"
 
 #: ../../functions.php:192 ../../cyberchimps/options/options-core.php:620
 msgid "Logo"
@@ -154,181 +152,180 @@ msgstr "Logo"
 
 #: ../../functions.php:285
 msgid "iMenu Options"
-msgstr "Opciones imenu"
+msgstr "iMenu-innstillinger"
 
 #: ../../functions.php:296
 msgid "Menu Home Icon"
-msgstr "Menú Inicio Icono"
+msgstr "Meny Hjem-ikon"
 
 #: ../../image.php:45
 msgid "Published"
-msgstr "Publicado"
+msgstr "Publisert"
 
 #: ../../image.php:46
 msgid "size"
-msgstr "Tamaño:"
+msgstr "størrelse"
 
 #: ../../image.php:53
 msgid "Previous"
-msgstr "anterior"
+msgstr "Forrige"
 
 #: ../../image.php:54
 msgid "Next"
-msgstr "Siguiente"
+msgstr "Neste"
 
 #: ../../image.php:136
 msgid "Post a comment"
-msgstr "Publicar un comentar"
+msgstr "Skriv en kommentar"
 
 #: ../../image.php:137
 msgid "or leave a trackback"
-msgstr "o dejar un trackback"
+msgstr "eller legg igjen et tilbaketråkk"
 
 #: ../../image.php:139 ../../image.php:144
 msgid "Trackback URL"
-msgstr "URL Trackback"
+msgstr "Tilbaketråkk-URL"
 
 #: ../../image.php:142
 msgid "Comments are closed, but you can leave a trackback"
-msgstr "Los comentarios están cerrados, pero puedes dejar un trackback"
+msgstr "Kommentarfeltet er stengt, men du kan legge igjen et tilbaketråkk"
 
 #: ../../image.php:147
 msgid "Trackbacks are closed, but you can"
-msgstr "Trackbacks están cerrados, pero se puede"
+msgstr "Tilbaketråkk er stengt, men du kan"
 
 #: ../../image.php:148
 msgid "post a comment"
-msgstr "Publicar un comentar"
+msgstr "skrive en kommentar"
 
 #: ../../image.php:150
 msgid "Both comments and trackbacks are currently closed."
-msgstr "Los comentarios y trackbacks están cerrados."
+msgstr "Både kommentarer og tilbaketråkk er for tiden stengt."
 
 #: ../../no-results.php:19
 msgid "Nothing Found"
-msgstr "No se encontró nada"
+msgstr "Ingenting ble funnet"
 
 #: ../../no-results.php:26
 msgid "Ready to publish your first post?"
-msgstr "Listo para publicar su primer post?"
+msgstr "Klar til å publisere ditt første innlegg?"
 
 #: ../../no-results.php:28
 msgid "Get started here"
-msgstr "Comience aquí"
+msgstr "Kom igang her"
 
 #: ../../no-results.php:32
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Lo sentimos, pero nada corresponde a tus criterios de búsqueda. Por favor, "
-"inténtalo de nuevo con palabras clave diferentes."
+"Beklager, men vi fant ikke noe som traff søkeordene dine. Prøv igjen med "
+"noen andre nøkkelord."
 
 #: ../../no-results.php:37
 msgid ""
 "It seems we cannot find what you are looking for. Perhaps searching can help."
 msgstr ""
-"Parece que no puede encontrar lo que busca. Puede que la búsqueda puede "
-"ayudar."
+"Det ser ut til at vi ikke kan finne det du leter etter. Kanskje et søk kan "
+"hjelpe."
 
 #: ../../search.php:31
 msgid "Search Results for: %s"
-msgstr "Resultados de búsqueda de: %s"
+msgstr "Søkeresultater for: %s"
 
 #: ../../searchform.php:18 ../../cyberchimps/options/options-core.php:243
 msgid "Search"
-msgstr "Buscar"
+msgstr "Søk"
 
 #: ../../sidebar-left.php:56 ../../sidebar-right.php:56 ../../sidebar.php:56
 msgid "Subscribe"
-msgstr "Suscribirse"
+msgstr "Abonner"
 
 #: ../../sidebar-left.php:58 ../../sidebar-right.php:58 ../../sidebar.php:58
 msgid "Entries (RSS)"
-msgstr "Entradas (RSS)"
+msgstr "Innlegg (RSS)"
 
 #: ../../sidebar-left.php:59 ../../sidebar-right.php:59 ../../sidebar.php:59
 msgid "Comments (RSS)"
-msgstr "Comentarios (RSS)"
+msgstr "Kommentarer (RSS)"
 
 #: ../../cyberchimps/functions.php:320
 msgid "View all posts by"
-msgstr "Ver todos los mensajes"
+msgstr "Se alle innlegg av"
 
 #: ../../cyberchimps/functions.php:322
 msgid "Posted on "
-msgstr "Enviado el "
+msgstr "Lagt inn den "
 
 #: ../../cyberchimps/functions.php:323
 msgid " by "
-msgstr " por "
+msgstr " av "
 
 #: ../../cyberchimps/functions.php:348
 msgid "Posted in"
-msgstr "Publicado en"
+msgstr "Lagt inn i"
 
 #: ../../cyberchimps/functions.php:374
 msgid "Tags:"
-msgstr "Etiquetas:"
+msgstr "Nøkkelord:"
 
 #: ../../cyberchimps/functions.php:397 ../../cyberchimps/functions.php:409
 msgid "Leave a comment"
-msgstr "Deja tu comentario"
+msgstr "Skriv en kommentar"
 
 #: ../../cyberchimps/functions.php:400
 msgid "1 Comment"
-msgstr "1 Comentario"
+msgstr "1 kommentar"
 
 #: ../../cyberchimps/functions.php:400
 #: ../../cyberchimps/options/options-core.php:291
 msgid "Comments"
-msgstr "Comentarios"
+msgstr "Kommentarer"
 
 #: ../../cyberchimps/functions.php:509 ../../cyberchimps/inc/meta-box.php:133
 #: ../../elements/init.php:60
 msgid "Page"
-msgstr "página"
+msgstr "Side"
 
 #: ../../cyberchimps/functions.php:609
 msgid "Continue Reading"
-msgstr "Continuar leyendo &raquo;"
+msgstr "Fortsett lesing"
 
 #: ../../cyberchimps/functions.php:783
 msgid "Welcome"
-msgstr "Bienvenido"
+msgstr "Velkommen"
 
 #: ../../cyberchimps/functions.php:787
 msgid "Congratulations you have successfully installed"
-msgstr "Enhorabuena, ha instalado satisfactoriamente"
+msgstr "Gratulerer, du har installert"
 
 #: ../../cyberchimps/functions.php:789
 msgid "Your website is important to us, so please read the"
-msgstr "Su sitio web es importante para nosotros, así que por favor lea la"
+msgstr "Din webside er viktig for oss, så vær vennlig og les"
 
 #: ../../cyberchimps/functions.php:789
 msgid "instructions"
-msgstr "instrucciones"
+msgstr "instruksjonene"
 
 #: ../../cyberchimps/functions.php:789
 msgid "to learn how to use"
-msgstr "para aprender a utilizar"
+msgstr "for å lære hvordan du bruker"
 
 #: ../../cyberchimps/functions.php:791
 msgid "If you have any questions please post in our"
-msgstr ""
-"Si usted tiene alguna pregunta, por favor incluya su mensaje en nuestro"
+msgstr "Hvis du har noen spørsmål, kan du stille disse i vårt"
 
 #: ../../cyberchimps/functions.php:791
 msgid "support forum"
-msgstr "Soporte de Foro"
+msgstr "support-forum"
 
 #: ../../cyberchimps/functions.php:791
 msgid "and we will get back to you as soon as we can"
-msgstr "y nos pondremos en contacto con usted tan pronto como nos sea posible"
+msgstr "og vi vil komme tilbake til deg så snar vi kan"
 
 #: ../../cyberchimps/functions.php:793
 msgid "Thank you for choosing CyberChimps Professional WordPress Themes"
-msgstr "Gracias por elegir CyberChimps Profesional Temas de WordPress"
+msgstr "Takk for at du valgte CyberChimps Professional WordPress Themes"
 
 #: ../../cyberchimps/functions.php:796
 #: ../../cyberchimps/options/options-core.php:1046
@@ -339,25 +336,26 @@ msgstr "Pro"
 
 #: ../../cyberchimps/functions.php:803
 msgid "Complete Installation"
-msgstr "Instalación completa"
+msgstr "Ferdigstill installasjonen"
 
 #: ../../cyberchimps/functions.php:820
 #: ../../cyberchimps/options/options-init.php:134
 msgid "Instructions"
-msgstr "Instrucciones"
+msgstr "Instruksjoner"
 
 #: ../../cyberchimps/functions.php:826
 #: ../../cyberchimps/options/options-init.php:133
 msgid "Support"
-msgstr "Asistencia Técnica"
+msgstr "Support"
 
 #: ../../cyberchimps/functions.php:835
 msgid "Upgrade to"
-msgstr "Actualizar a"
+msgstr "Oppgrader til"
 
 #: ../../cyberchimps/functions.php:841
 msgid "If you want even more amazing new features upgrade to"
-msgstr "Si desea nuevas características incluso más sorprendentes actualizar a"
+msgstr ""
+"Hvis du ønsker enda flere utrolige nye muligheter, kan du oppgradere til"
 
 #: ../../cyberchimps/functions.php:841
 msgid ""
@@ -365,49 +363,47 @@ msgid ""
 "Callout Section, expanded typography including Google Fonts, more color "
 "skins, and many more powerful new features. Please visit"
 msgstr ""
-"que incluye un deslizador características personalizadas, Carrusel de "
-"imágenes, cuadros Widgetized, Llamada Sección, tipografía ampliada, "
-"incluyendo fuentes de Google, más pieles de color, y muchas características "
-"nuevas más poderosas. Por favor, visite"
+"som inkluderer Egendefinert Lysbildevisning, Bildekarusell, Innstikkaktige "
+"Bokser, Callout-seksjon, utvidet typografi som inkluderer Google Fonts, "
+"flere fargeskjema, og mange flere kraftige nye muligheter. Besøk"
 
 #: ../../cyberchimps/functions.php:841
 msgid "to learn more!"
-msgstr "para saber más!"
+msgstr "for å lære mer!"
 
 #: ../../cyberchimps/functions.php:858
 msgid "Welcome to %1$s! Learn more now about upgrading to"
-msgstr ""
-"Bienvenido a %1$s ! Obtenga más información acerca de la actualización a"
+msgstr "Velkommen til %1$s! Les mer nå om hvordan du oppgraderer til"
 
 #: ../../cyberchimps/functions.php:858
 msgid "today."
-msgstr "TODAY"
+msgstr "i dag."
 
 #: ../../cyberchimps/functions.php:897
 #: ../../cyberchimps/options/options-init.php:128
 msgid "Options"
-msgstr "Opciones"
+msgstr "Innstillinger"
 
 #: ../../cyberchimps/functions.php:897
 msgid " Options"
-msgstr " Opciones"
+msgstr " Innstillinger"
 
 #: ../../cyberchimps/init.php:79
 msgid "Primary Menu"
-msgstr "Menú Principal"
+msgstr "Hovedmeny"
 
 #: ../../cyberchimps/init.php:154
 msgid "Sidebar Left"
-msgstr "Barra lateral: Izquierda"
+msgstr "Sidefelt venstre"
 
 #: ../../cyberchimps/init.php:163
 msgid "Sidebar Right"
-msgstr "Barra lateral: Derecha"
+msgstr "Sidefelt høyre"
 
 #: ../../cyberchimps/init.php:172
 #: ../../cyberchimps/options/options-core.php:2096
 msgid "Footer Widgets"
-msgstr "Artilugios Footer"
+msgstr "Bunnlinjeinnstikk"
 
 #: ../../cyberchimps/hooks/blog-hooks.php:23
 #: ../../cyberchimps/inc/meta-box.php:135
@@ -415,79 +411,79 @@ msgstr "Artilugios Footer"
 #: ../../cyberchimps/options/options-core.php:920 ../../elements/init.php:49
 #: ../../elements/init.php:61
 msgid "Slider Lite"
-msgstr "Deslizador Lite"
+msgstr "Lysbilder Lite"
 
 #: ../../cyberchimps/hooks/blog-hooks.php:24
 #: ../../cyberchimps/inc/meta-box.php:132
 #: ../../cyberchimps/options/options-core.php:912
 #: ../../cyberchimps/options/options-core.php:917
 msgid "Boxes"
-msgstr "ca"
+msgstr "Bokser"
 
 #: ../../cyberchimps/hooks/blog-hooks.php:25
 #: ../../cyberchimps/options/options-core.php:913
 #: ../../cyberchimps/options/options-core.php:919 ../../elements/init.php:48
 msgid "Post Page"
-msgstr "Publica página"
+msgstr "Innlegg"
 
 #: ../../cyberchimps/hooks/header-hooks.php:21
 #: ../../cyberchimps/options/options-core.php:614
 #: ../../cyberchimps/options/options-core.php:618
 msgid "Logo + Icons"
-msgstr "Logo + Iconos"
+msgstr "Logo + Ikoner"
 
 #: ../../cyberchimps/inc/cc-custom-background.php:98
 msgid "Or choose one of CyberChimps background images"
-msgstr "O elegir una de las imágenes de fondo CyberChimps"
+msgstr "Eller velg en av CyberChimp sine bakgrunnsbilder"
 
 #: ../../cyberchimps/inc/meta-box-class.php:376
 msgid "Uploaded files"
-msgstr "Archivos cargados"
+msgstr "Opplastede filer"
 
 #: ../../cyberchimps/inc/meta-box-class.php:390
 msgid "Upload new files"
-msgstr "Subir archivos nuevos"
+msgstr "Last opp nye filer"
 
 #: ../../cyberchimps/inc/meta-box-class.php:393
 msgid "Add more file"
-msgstr "Añadir más archivos"
+msgstr "Legg til flere filer"
 
 #: ../../cyberchimps/inc/meta-box-class.php:418
 msgid "Uploaded images"
-msgstr "Las imágenes subidas"
+msgstr "Opplastede bilder"
 
 #: ../../cyberchimps/inc/meta-box-class.php:432
 msgid "Upload new images (Make sure to publish the post to save)"
-msgstr "Sube imágenes nuevas (asegúrese de publicar el post para guardar)"
+msgstr "Last opp nye bilder (publiser innlegget for å lagre)"
 
 #: ../../cyberchimps/inc/meta-box-class.php:444
 msgid "Select a color"
-msgstr "Seleccione un color"
+msgstr "Velg en farge"
 
 #: ../../cyberchimps/inc/meta-box-class.php:603
 #: ../../cyberchimps/options/options-medialibrary-uploader.php:112
 msgid "Upload"
-msgstr "Subir"
+msgstr "Last opp"
 
 #: ../../cyberchimps/inc/meta-box-class.php:604
 msgid "or enter URL"
-msgstr "o introduzca la URL"
+msgstr "eller skriv inn en URL"
 
 #: ../../cyberchimps/inc/meta-box.php:110
 msgid "Slider Options"
-msgstr "Opciones deslizante"
+msgstr "Lysbildeinnstillinger"
 
 #: ../../cyberchimps/inc/meta-box.php:113
 msgid "Slider Image"
-msgstr "Image Slider"
+msgstr "Lysbilde"
 
 #: ../../cyberchimps/inc/meta-box.php:114
 msgid "Slider Caption"
-msgstr "Deslizador Leyenda"
+msgstr "Lysbilde, bildetekst"
 
 #: ../../cyberchimps/inc/meta-box.php:115
 msgid "Custom Slide Link"
-msgstr "Enlace Presentación personalizada"
+msgstr "Egendefinert lysbildelenke"
 
 #: ../../cyberchimps/inc/meta-box.php:116
 #: ../../cyberchimps/inc/meta-box.php:203
@@ -497,140 +493,140 @@ msgstr "Enlace Presentación personalizada"
 #: ../../cyberchimps/options/options-core.php:1387
 #: ../../cyberchimps/options/options-core.php:1721
 msgid "Title"
-msgstr "Título"
+msgstr "Tittel"
 
 #: ../../cyberchimps/inc/meta-box.php:117
 msgid "Caption"
-msgstr "Título"
+msgstr "Bildetekst"
 
 #: ../../cyberchimps/inc/meta-box.php:118
 #: ../../cyberchimps/inc/meta-box.php:140
 #: ../../cyberchimps/inc/meta-box.php:168
 msgid "Need Help?"
-msgstr "¿Necesita Ayuda?"
+msgstr "Trenger du hjelp?"
 
 #: ../../cyberchimps/inc/meta-box.php:124
 msgid "Select Page Layout"
-msgstr "Seleccione Diseño de página"
+msgstr "Velg sideutseende"
 
 #: ../../cyberchimps/inc/meta-box.php:129
 msgid "Page Title"
-msgstr "Título de Página:"
+msgstr "Sidetittel"
 
 #: ../../cyberchimps/inc/meta-box.php:130
 msgid "Page Elements"
-msgstr "Elementos de página"
+msgstr "Side-elementer"
 
 #: ../../cyberchimps/inc/meta-box.php:134
 #: ../../cyberchimps/options/options-core.php:918 ../../elements/init.php:47
 #: ../../elements/init.php:59
 msgid "Portfolio Lite"
-msgstr "Cartera Lite"
+msgstr "Portefølje Lite"
 
 #: ../../cyberchimps/inc/meta-box.php:136
 #: ../../cyberchimps/options/options-core.php:921 ../../elements/init.php:50
 #: ../../elements/init.php:62
 msgid "Twitter Bar"
-msgstr "Twitter Bar"
+msgstr "Twitterlinje"
 
 #: ../../cyberchimps/inc/meta-box.php:142
 #: ../../cyberchimps/options/options-core.php:1399
 msgid "Meta Data"
-msgstr "Metadatos"
+msgstr "Metadata"
 
 #: ../../cyberchimps/inc/meta-box.php:143
 #: ../../cyberchimps/options/options-core.php:1408
 msgid "Featured Image"
-msgstr "Foto principal"
+msgstr "Fremhevet bilde"
 
 #: ../../cyberchimps/inc/meta-box.php:144
 #: ../../cyberchimps/options/options-core.php:1426
 msgid "Number of Columns"
-msgstr "Número de columnas"
+msgstr "Antall kolonner"
 
 #: ../../cyberchimps/inc/meta-box.php:145
 msgid "Number of Posts"
-msgstr "Número de mensajes"
+msgstr "Antall innlegg"
 
 #: ../../cyberchimps/inc/meta-box.php:146
 #: ../../cyberchimps/options/options-core.php:1455
 msgid "Wide Posts Below Magazine"
-msgstr "Mensajes ancho debajo de la Revista"
+msgstr "Brede innlegg under Magasin"
 
 #: ../../cyberchimps/inc/meta-box.php:147
 msgid "Number of Wide Posts "
-msgstr "Cantidad de envíos amplias "
+msgstr "Antall brede innlegg "
 
 #: ../../cyberchimps/inc/meta-box.php:153
 msgid "Slide One Image"
-msgstr "Deslice una imagen"
+msgstr "Lysbilde en, bilde"
 
 #: ../../cyberchimps/inc/meta-box.php:154
 msgid "Slide One Link"
-msgstr "Deslice One Link"
+msgstr "Lysbilde en, lenke"
 
 #: ../../cyberchimps/inc/meta-box.php:155
 msgid "Slide Two Image"
-msgstr "Deslice dos imágenes"
+msgstr "Lysbilde to, bilde"
 
 #: ../../cyberchimps/inc/meta-box.php:156
 msgid "Slide Two Link"
-msgstr "Deslice Dos Enlace"
+msgstr "Lysbilde to, lenke"
 
 #: ../../cyberchimps/inc/meta-box.php:157
 msgid "Slide Three Image"
-msgstr "Deslice Tres de imagen"
+msgstr "Lysbilde tre, bilde"
 
 #: ../../cyberchimps/inc/meta-box.php:158
 msgid "Slide Three Link"
-msgstr "Deslice Tres Enlace"
+msgstr "Lysbilde tre, lenke"
 
 #: ../../cyberchimps/inc/meta-box.php:160
 #: ../../cyberchimps/options/options-core.php:1491
 msgid "Slider Size"
-msgstr "Regulador de tamaño"
+msgstr "Lysbildestørrelse"
 
 #: ../../cyberchimps/inc/meta-box.php:160
 #: ../../cyberchimps/options/options-core.php:1496
 msgid "Full"
-msgstr " llena."
+msgstr "Full"
 
 #: ../../cyberchimps/inc/meta-box.php:160
 #: ../../cyberchimps/options/options-core.php:1497
 msgid "Half"
-msgstr "SEMI"
+msgstr "Halv"
 
 #: ../../cyberchimps/inc/meta-box.php:161
 #: ../../cyberchimps/options/options-core.php:1504
 msgid "Slider Type"
-msgstr "Tipo deslizante"
+msgstr "Lysbildetype"
 
 #: ../../cyberchimps/inc/meta-box.php:161
 #: ../../cyberchimps/options/options-core.php:1510
 msgid "Custom"
-msgstr "Personalizado"
+msgstr "Egendefinert"
 
 #: ../../cyberchimps/inc/meta-box.php:161
 #: ../../cyberchimps/options/options-core.php:1509
 msgid "Posts"
-msgstr "Posts"
+msgstr "Innlegg"
 
 #: ../../cyberchimps/inc/meta-box.php:162
 #: ../../cyberchimps/options/options-core.php:1517
 #: ../../cyberchimps/options/options-core.php:1740
 msgid "Post Categories"
-msgstr "Publica Categorías"
+msgstr "Innleggkategori"
 
 #: ../../cyberchimps/inc/meta-box.php:162
 #: ../../cyberchimps/inc/meta-box.php:226
 msgid "All"
-msgstr "Todos"
+msgstr "Alle"
 
 #: ../../cyberchimps/inc/meta-box.php:163
 #: ../../cyberchimps/options/options-core.php:1528
 #: ../../cyberchimps/options/options-core.php:1539
 msgid "Custom Categories"
-msgstr "Categorías personalizadas"
+msgstr "Egendefinerte kategorier"
 
 #: ../../cyberchimps/inc/meta-box.php:163
 #: ../../cyberchimps/inc/meta-box.php:201
@@ -641,41 +637,41 @@ msgstr "Categorías personalizadas"
 #: ../../cyberchimps/options/options-core.php:1776
 #: ../../cyberchimps/options/options-core.php:1799
 msgid "You need to create a Category"
-msgstr "Es necesario crear una categoría"
+msgstr "Du må opprette en kategori"
 
 #: ../../cyberchimps/inc/meta-box.php:164
 #: ../../cyberchimps/options/options-core.php:1439
 msgid "Number of Featured Posts"
-msgstr "Número de Puestos destacados"
+msgstr "Antall fremhevede innlegg"
 
 #: ../../cyberchimps/inc/meta-box.php:165
 #: ../../cyberchimps/options/options-core.php:1558
 msgid "Slider Height"
-msgstr "Deslizador Altura"
+msgstr "Lysbilde høyde"
 
 #: ../../cyberchimps/inc/meta-box.php:166
 msgid "Slider Speed"
-msgstr "Control deslizante de velocidad"
+msgstr "Lysbilde fart"
 
 #: ../../cyberchimps/inc/meta-box.php:167
 #: ../../cyberchimps/options/options-core.php:1577
 msgid "Slider Arrows"
-msgstr "Flechas del deslizador"
+msgstr "Lysbilde piler"
 
 #: ../../cyberchimps/inc/meta-box.php:180
 #: ../../cyberchimps/options/options-core.php:1588
 msgid "Callout Title"
-msgstr "Llamada Título"
+msgstr "Callout-tittel"
 
 #: ../../cyberchimps/inc/meta-box.php:181
 #: ../../cyberchimps/options/options-core.php:1590
 msgid "%1$s's Call Out Element"
-msgstr "%1$s 's Call Out Element"
+msgstr "%1$s sitt Callout-element"
 
 #: ../../cyberchimps/inc/meta-box.php:183
 #: ../../cyberchimps/options/options-core.php:1597
 msgid "Callout Text"
-msgstr "Llamada de texto"
+msgstr "Callout-tekst"
 
 #: ../../cyberchimps/inc/meta-box.php:184
 #: ../../cyberchimps/options/options-core.php:1599
@@ -683,117 +679,117 @@ msgid ""
 "Use %1$s's Call Out section on any page where you want to deliver an "
 "important message to your customer or client."
 msgstr ""
-"Utilice %1$s Call 's Out sección en cualquier página en la que desea "
-"entregar un mensaje importante para su cliente o cliente."
+"Bruk %1$s sin Callout-seksjon på de sidene der du ønsker å gi en viktig "
+"beskjed til dine kunder/klienter."
 
 #: ../../cyberchimps/inc/meta-box.php:186
 #: ../../cyberchimps/options/options-core.php:1606
 msgid "Callout Button"
-msgstr "Llamada Button"
+msgstr "Callout-knapp"
 
 #: ../../cyberchimps/inc/meta-box.php:187
 #: ../../cyberchimps/options/options-core.php:1615
 msgid "Callout Button Text"
-msgstr "Llamada texto del botón"
+msgstr "Callout-knapp, tekst"
 
 #: ../../cyberchimps/inc/meta-box.php:188
 #: ../../cyberchimps/options/options-core.php:1625
 msgid "Callout Button URL"
-msgstr "Llamada URL Button"
+msgstr "Callout-knapp, URL"
 
 #: ../../cyberchimps/inc/meta-box.php:189
 #: ../../cyberchimps/options/options-core.php:1635
 msgid "Custom Callout Options"
-msgstr "Custom Llamada Opciones"
+msgstr "Egendefinerte Callout-innstillinger"
 
 #: ../../cyberchimps/inc/meta-box.php:190
 msgid "Custom Button Image"
-msgstr "Imagen de botón personalizado"
+msgstr "Egendefinert knappebilde"
 
 #: ../../cyberchimps/inc/meta-box.php:191
 msgid "Custom Background Color"
-msgstr "Color de fondo personalizada"
+msgstr "Egendefinert bakgrunnsfarge"
 
 #: ../../cyberchimps/inc/meta-box.php:192
 msgid "Custom Title Color"
-msgstr "Color Título Personalizado"
+msgstr "Egendefinert tittelfarge"
 
 #: ../../cyberchimps/inc/meta-box.php:193
 msgid "Custom Text Color"
-msgstr "Color de texto personalizado"
+msgstr "Egendefinert tekstfarge"
 
 #: ../../cyberchimps/inc/meta-box.php:194
 msgid "Custom Button Color"
-msgstr "Color del botón personalizado"
+msgstr "Egendefinert knappefarge"
 
 #: ../../cyberchimps/inc/meta-box.php:195
 msgid "Custom Button Text Color"
-msgstr "Botón de encargo Color del texto"
+msgstr "Egendefinert knappetekstfarge"
 
 #: ../../cyberchimps/inc/meta-box.php:196
 msgid "Need help?"
-msgstr "¿Necesita ayuda?"
+msgstr "Trenger du hjelp?"
 
 #: ../../cyberchimps/inc/meta-box.php:198
 msgid "Custom HTML"
-msgstr "Custom HTML"
+msgstr "Egendefinert HTML"
 
 #: ../../cyberchimps/inc/meta-box.php:198
 msgid "Enter your custom html here"
-msgstr "Introduce tu html costumbre aquí"
+msgstr "Skriv inn din egendefinerte HTML her"
 
 #: ../../cyberchimps/inc/meta-box.php:200
 msgid "Images per row"
-msgstr "Imágenes por fila"
+msgstr "Bilder per rad"
 
 #: ../../cyberchimps/inc/meta-box.php:200
 msgid "Two"
-msgstr "Dos"
+msgstr "To"
 
 #: ../../cyberchimps/inc/meta-box.php:200
 msgid "Three"
-msgstr "Tres "
+msgstr "Tre"
 
 #: ../../cyberchimps/inc/meta-box.php:200
 msgid "Four"
-msgstr "Cuatro"
+msgstr "Fire"
 
 #: ../../cyberchimps/inc/meta-box.php:201
 #: ../../cyberchimps/options/options-core.php:1359
 #: ../../cyberchimps/options/options-core.php:1369
 msgid "Portfolio Category"
-msgstr "Portafolio Categoría"
+msgstr "Porteføljekategori"
 
 #: ../../cyberchimps/inc/meta-box.php:202
 #: ../../cyberchimps/inc/meta-box.php:221
 #: ../../cyberchimps/options/options-core.php:1247
 #: ../../cyberchimps/options/options-core.php:1379
 msgid "Portfolio Title"
-msgstr "Cartera Título"
+msgstr "Porteføljetittel"
 
 #: ../../cyberchimps/inc/meta-box.php:203
 #: ../../cyberchimps/inc/meta-box.php:222
 msgid "Portfolio"
-msgstr "Portafolio"
+msgstr "Portefølje"
 
 #: ../../cyberchimps/inc/meta-box.php:205
 #: ../../cyberchimps/options/options-core.php:1073
 msgid "First Portfolio Image"
-msgstr "Imagen primera cartera"
+msgstr "Første portefølje, bilde"
 
 #: ../../cyberchimps/inc/meta-box.php:206
 #: ../../cyberchimps/options/options-core.php:1084
 msgid "First Portfolio Image Caption"
-msgstr "Cartera First Pie de foto"
+msgstr "Første portefølje, bildetekst"
 
 #: ../../cyberchimps/inc/meta-box.php:206
 msgid "Image 1"
-msgstr "Imagen 1"
+msgstr "Bilde 1"
 
 #: ../../cyberchimps/inc/meta-box.php:207
 #: ../../cyberchimps/options/options-core.php:1094
 msgid "First Porfolio Link"
-msgstr "En primer enlace Porfolio"
+msgstr "Første portefølje, lenke"
 
 #: ../../cyberchimps/inc/meta-box.php:208
 #: ../../cyberchimps/inc/meta-box.php:212
@@ -804,304 +800,304 @@ msgstr "En primer enlace Porfolio"
 #: ../../cyberchimps/options/options-core.php:1191
 #: ../../cyberchimps/options/options-core.php:1235
 msgid "Link URL"
-msgstr "Enlace URL:"
+msgstr "Lenke-URL"
 
 #: ../../cyberchimps/inc/meta-box.php:209
 #: ../../cyberchimps/options/options-core.php:1117
 msgid "Second Portfolio Image"
-msgstr "Imagen segunda cartera"
+msgstr "Andre portefølje, bilde"
 
 #: ../../cyberchimps/inc/meta-box.php:210
 #: ../../cyberchimps/options/options-core.php:1128
 msgid "Second Portfolio Image Caption"
-msgstr "Cartera Segunda Pie de foto"
+msgstr "Andre portefølje, bildetekst"
 
 #: ../../cyberchimps/inc/meta-box.php:210
 msgid "Image 2"
-msgstr "Imagen 2"
+msgstr "Bilde 2"
 
 #: ../../cyberchimps/inc/meta-box.php:211
 #: ../../cyberchimps/options/options-core.php:1138
 msgid "Second Porfolio Link"
-msgstr "Segundo Enlace Porfolio"
+msgstr "Andre portefølje, lenke"
 
 #: ../../cyberchimps/inc/meta-box.php:213
 #: ../../cyberchimps/options/options-core.php:1161
 msgid "Third Portfolio Image"
-msgstr "Imagen Cartera Tercera"
+msgstr "Tredje portefølje, bilde"
 
 #: ../../cyberchimps/inc/meta-box.php:214
 #: ../../cyberchimps/options/options-core.php:1172
 msgid "Third Portfolio Image Caption"
-msgstr "Cartera Tercer Pie de foto"
+msgstr "Tredje portefølje, bildetekst"
 
 #: ../../cyberchimps/inc/meta-box.php:214
 msgid "Image 3"
-msgstr "Imagen 3"
+msgstr "Bilde 3"
 
 #: ../../cyberchimps/inc/meta-box.php:215
 #: ../../cyberchimps/options/options-core.php:1182
 msgid "Third Porfolio Link"
-msgstr "Tercer Enlace Porfolio"
+msgstr "Tredje portefølje, lenke"
 
 #: ../../cyberchimps/inc/meta-box.php:217
 #: ../../cyberchimps/options/options-core.php:1205
 msgid "Fourth Portfolio Image"
-msgstr "Imagen Cartera Cuarto"
+msgstr "Fjerde portefølje, bilde"
 
 #: ../../cyberchimps/inc/meta-box.php:218
 #: ../../cyberchimps/options/options-core.php:1216
 msgid "Fourth Portfolio Image Caption"
-msgstr "Cartera Cuarto Pie de foto"
+msgstr "Fjerde portefølje, bildetekst"
 
 #: ../../cyberchimps/inc/meta-box.php:218
 msgid "Image 4"
-msgstr "Imagen 4"
+msgstr "Bilde 4"
 
 #: ../../cyberchimps/inc/meta-box.php:219
 #: ../../cyberchimps/options/options-core.php:1226
 msgid "Fourth Porfolio Link"
-msgstr "Cuarto Enlace Porfolio"
+msgstr "Fjerde portefølje, lenke"
 
 #: ../../cyberchimps/inc/meta-box.php:226
 msgid "Post Category"
-msgstr "Publicar Categoría"
+msgstr "Innleggskategori"
 
 #: ../../cyberchimps/inc/meta-box.php:227
 #: ../../cyberchimps/options/options-core.php:1750
 msgid "Images"
-msgstr "Imágenes"
+msgstr "Bilder"
 
 #: ../../cyberchimps/inc/meta-box.php:229
 msgid "Carousel Category"
-msgstr "Carousel Categoría"
+msgstr "Karusellkategori"
 
 #: ../../cyberchimps/inc/meta-box.php:231
 #: ../../cyberchimps/options/options-core.php:1810
 msgid "Twitter Handle"
-msgstr "Twitter Mango"
+msgstr "Twitternavn"
 
 #: ../../cyberchimps/inc/meta-box.php:231
 msgid "Enter your Twitter handle if using the Twitter bar"
-msgstr "Introduzca el mango de su Twitter si se utiliza la barra de Twitter"
+msgstr "Legg inn ditt Twitternavn hvis du bruker Twitterlinjen"
 
 #: ../../cyberchimps/inc/meta-box.php:233
 msgid "Boxes Category"
-msgstr "Cajas Categoría"
+msgstr "Bokskategori"
 
 #: ../../cyberchimps/options/options-core.php:24
 msgid "Help"
-msgstr "Ayuda"
+msgstr "Hjelp"
 
 #: ../../cyberchimps/options/options-core.php:29
 msgid "Design"
-msgstr "diseño "
+msgstr "Utforming"
 
 #: ../../cyberchimps/options/options-core.php:34
 msgid "Header"
-msgstr "Cabecera"
+msgstr "Hode"
 
 #: ../../cyberchimps/options/options-core.php:39
 msgid "Blog"
-msgstr "Blog"
+msgstr "Blogg"
 
 #: ../../cyberchimps/options/options-core.php:44
 msgid "Templates"
-msgstr "Plantillas"
+msgstr "Maler"
 
 #: ../../cyberchimps/options/options-core.php:49
 msgid "Footer"
-msgstr "Footer"
+msgstr "Bunnlinje"
 
 #: ../../cyberchimps/options/options-core.php:78
 msgid "Layout Options"
-msgstr "Opciones de diseño:"
+msgstr "Layout-innstillinger"
 
 #: ../../cyberchimps/options/options-core.php:92
 msgid "Custom Colors"
-msgstr "Personalizar coloresh"
+msgstr "Egendefinerte farger"
 
 #: ../../cyberchimps/options/options-core.php:98
 msgid "Typography"
-msgstr "Tipografía"
+msgstr "Typografi"
 
 #: ../../cyberchimps/options/options-core.php:112
 msgid "Header Drag &#38; Drop"
-msgstr "Encabezado Drag & Drop"
+msgstr "Hode Dra &#38; Slipp"
 
 #: ../../cyberchimps/options/options-core.php:118
 msgid "Header Options"
-msgstr "Opciones de encabezado"
+msgstr "Hodeinnstillinger"
 
 #: ../../cyberchimps/options/options-core.php:124
 msgid "Social Icons"
-msgstr "Iconos Sociales"
+msgstr "Sosiale ikoner"
 
 #: ../../cyberchimps/options/options-core.php:132
 msgid "Drag & Drop"
-msgstr "Arrastrar /soltar"
+msgstr "Dra & Slipp"
 
 #: ../../cyberchimps/options/options-core.php:138
 msgid "Blog Options"
-msgstr "Opciones blog"
+msgstr "Blogginnstillinger"
 
 #: ../../cyberchimps/options/options-core.php:146
 msgid "Blog Slider Lite"
-msgstr "Blog deslizante Lite"
+msgstr "Blogg-lysbilder Lite"
 
 #: ../../cyberchimps/options/options-core.php:152
 msgid "Portfolio Lite Options"
-msgstr "Cartera Lite Opciones"
+msgstr "Portefølje Lite-innstillinger"
 
 #: ../../cyberchimps/options/options-core.php:158 ../../elements/boxes.php:25
 #: ../../elements/boxes.php:26 ../../elements/init.php:46
 #: ../../elements/init.php:58
 msgid "Boxes Lite"
-msgstr "Boxes Lite"
+msgstr "Bokser Lite"
 
 #: ../../cyberchimps/options/options-core.php:168
 msgid "Blog Slider"
-msgstr "Blog deslizante"
+msgstr "Blogg-lysbilder"
 
 #: ../../cyberchimps/options/options-core.php:174
 msgid "Callout Options"
-msgstr "Llamada Opciones"
+msgstr "Callout-innstillinger"
 
 #: ../../cyberchimps/options/options-core.php:180
 msgid "HTML Box Options"
-msgstr "Opciones HTML Caja"
+msgstr "HTML-boks-innstillinger"
 
 #: ../../cyberchimps/options/options-core.php:186
 msgid "Carousel Options"
-msgstr "Opciones del carrusel"
+msgstr "Karusell-innstillinger"
 
 #: ../../cyberchimps/options/options-core.php:192
 msgid "Magazine Options"
-msgstr "Opciones Revista"
+msgstr "Magasin-innstillinger"
 
 #: ../../cyberchimps/options/options-core.php:198
 msgid "Portfolio Pro Options"
-msgstr "Cartera de Opciones Pro"
+msgstr "Portefølje Pro-innstillinger"
 
 #: ../../cyberchimps/options/options-core.php:204
 msgid "Recent Posts Options"
-msgstr "Opciones Mensajes recientes"
+msgstr "Nyeste innlegg-innstillinger"
 
 #: ../../cyberchimps/options/options-core.php:211
 msgid "Twitterbar Options"
-msgstr "Opciones TwitterBar"
+msgstr "Twitterlinje-innstillinger"
 
 #: ../../cyberchimps/options/options-core.php:217
 msgid "Boxes Options"
-msgstr "Cajas de Opciones"
+msgstr "Bokser-innstillinger"
 
 #: ../../cyberchimps/options/options-core.php:231
 msgid "Single Post"
-msgstr "- Mensaje Individual"
+msgstr "Enkelt innlegg"
 
 #: ../../cyberchimps/options/options-core.php:237
 msgid "Archive"
-msgstr "Archivar"
+msgstr "Arkiv"
 
 #: ../../cyberchimps/options/options-core.php:257
 msgid "Footer Options"
-msgstr "Opciones Footer"
+msgstr "Bunnlinje-innstillinger"
 
 #: ../../cyberchimps/options/options-core.php:288
 msgid "Author"
-msgstr "Autor"
+msgstr "Forfatter"
 
 #: ../../cyberchimps/options/options-core.php:290
 msgid "Date"
-msgstr "FECHA"
+msgstr "Dato"
 
 #: ../../cyberchimps/options/options-core.php:292
 msgid "Tags"
-msgstr "Etiquetas"
+msgstr "Stikkord"
 
 #: ../../cyberchimps/options/options-core.php:379
 msgid "Cyberchimps Help"
-msgstr "Cyberchimps Ayuda"
+msgstr "CyberChimps Hjelp"
 
 #: ../../cyberchimps/options/options-core.php:387
 msgid "Welcome Note"
-msgstr "Saludo inicial"
+msgstr "Velkommen-notis"
 
 #: ../../cyberchimps/options/options-core.php:398 ../../elements/boxes.php:156
 msgid "Responsive Design"
-msgstr "Diseño Sensible"
+msgstr "Responsivt Design"
 
 #: ../../cyberchimps/options/options-core.php:407
 msgid "Responsive Videos"
-msgstr "Videos Responsive"
+msgstr "Responsive videoer"
 
 #: ../../cyberchimps/options/options-core.php:415
 #: ../../cyberchimps/options/options-customizer.php:167
 msgid "Max Width"
-msgstr "Max Ancho"
+msgstr "Maks bredde"
 
 #: ../../cyberchimps/options/options-core.php:419
 msgid "enter the width of your site in pixels"
-msgstr "introducir el ancho de su sitio en píxeles"
+msgstr "legg inn bredden på nettstedet ditt i piksler"
 
 #: ../../cyberchimps/options/options-core.php:510
 msgid "Select a Skin Color"
-msgstr "Seleccione un color de piel"
+msgstr "Velg en temafarge"
 
 #: ../../cyberchimps/options/options-core.php:533
 #: ../../cyberchimps/options/options-customizer.php:194
 msgid "Text Color"
-msgstr "Color de texto"
+msgstr "Tekstfarge"
 
 #: ../../cyberchimps/options/options-core.php:534
 msgid "Select text color"
-msgstr "Seleccione el color del texto"
+msgstr "Velg tekstfarge"
 
 #: ../../cyberchimps/options/options-core.php:542
 #: ../../cyberchimps/options/options-customizer.php:206
 msgid "Link Color"
-msgstr "Color de enlaces"
+msgstr "Lenkefarge"
 
 #: ../../cyberchimps/options/options-core.php:543
 msgid "Select link color"
-msgstr "Elige color de enlace"
+msgstr "Velg lenkefarge"
 
 #: ../../cyberchimps/options/options-core.php:551
 #: ../../cyberchimps/options/options-customizer.php:218
 msgid "Link Hover Color"
-msgstr "Enlace Hover color"
+msgstr "Lenke hover-farge"
 
 #: ../../cyberchimps/options/options-core.php:552
 msgid "Select link hover color"
-msgstr "Seleccione el enlace de color libración"
+msgstr "Velg lenke hover-farge"
 
 #: ../../cyberchimps/options/options-core.php:570
 msgid "Typography Options"
-msgstr "Opciones Tipografía"
+msgstr "Typografi-innstillinger"
 
 #: ../../cyberchimps/options/options-core.php:580
 msgid "Google fonts"
-msgstr "Google fuentes"
+msgstr "Google Fonter"
 
 #: ../../cyberchimps/options/options-core.php:589
 msgid "Enter Google font"
-msgstr "Ingrese fuente Google"
+msgstr "Legg inn Google Font"
 
 #: ../../cyberchimps/options/options-core.php:599
 msgid "Demo Text"
-msgstr "Demostración de texto"
+msgstr "Demotekst"
 
 #: ../../cyberchimps/options/options-core.php:611
 msgid "Header Drag/Drop"
-msgstr "Encabezado Drag / Drop"
+msgstr "Hode Dra/Slipp"
 
 #: ../../cyberchimps/options/options-core.php:619
 msgid "Logo + Search"
-msgstr "Logo + Buscar"
+msgstr "Logo + Søk"
 
 #: ../../cyberchimps/options/options-core.php:629
 msgid "Custom Logo URL"
-msgstr "URL de logotipo personalizada"
+msgstr "Egendefinert Logo-URL"
 
 #: ../../cyberchimps/options/options-core.php:637
 msgid "URL"
@@ -1109,15 +1105,15 @@ msgstr "URL"
 
 #: ../../cyberchimps/options/options-core.php:638
 msgid "Enter URL"
-msgstr "Introducir URL"
+msgstr "Legg inn URL"
 
 #: ../../cyberchimps/options/options-core.php:648
 msgid "Custom Logo"
-msgstr "Logotipo personalizado"
+msgstr "Egendefinert Logo"
 
 #: ../../cyberchimps/options/options-core.php:656
 msgid "Logo Image"
-msgstr "Imagen del logotipo"
+msgstr "Logobilde"
 
 #: ../../cyberchimps/options/options-core.php:657
 #: ../../cyberchimps/options/options-core.php:676
@@ -1130,11 +1126,11 @@ msgstr "Imagen del logotipo"
 #: ../../cyberchimps/options/options-core.php:1301
 #: ../../cyberchimps/options/options-core.php:1320
 msgid "Enter URL or upload file"
-msgstr "Introduzca la URL o archivo de carga"
+msgstr "Legg inn URL eller last opp en fil"
 
 #: ../../cyberchimps/options/options-core.php:667
 msgid "Custom Favicon"
-msgstr "Favicon personalizado "
+msgstr "Egendefinert Favicon"
 
 #: ../../cyberchimps/options/options-core.php:675
 msgid "Favicon URL"
@@ -1142,19 +1138,19 @@ msgstr "Favicon URL"
 
 #: ../../cyberchimps/options/options-core.php:685
 msgid "Custom Apple touch icon"
-msgstr "Custom touch de Apple icono"
+msgstr "Egendefinert Apple Touch-ikon"
 
 #: ../../cyberchimps/options/options-core.php:693
 msgid "Apple Touch URL"
-msgstr "URL de Apple Touch"
+msgstr "Apple Touch-URL"
 
 #: ../../cyberchimps/options/options-core.php:704
 msgid "Searchbar"
-msgstr "Searchbar"
+msgstr "Søkelinje"
 
 #: ../../cyberchimps/options/options-core.php:716
 msgid "Choose your icon style"
-msgstr "Elige tu estilo de icono"
+msgstr "Velg ikonstil"
 
 #: ../../cyberchimps/options/options-core.php:729
 msgid "Twitter"
@@ -1162,7 +1158,7 @@ msgstr "Twitter"
 
 #: ../../cyberchimps/options/options-core.php:737
 msgid "Twitter URL"
-msgstr "Twitter URL"
+msgstr "Twitter-URL"
 
 #: ../../cyberchimps/options/options-core.php:747
 msgid "Facebook"
@@ -1170,7 +1166,7 @@ msgstr "Facebook"
 
 #: ../../cyberchimps/options/options-core.php:755
 msgid "Facebook URL"
-msgstr "Facebook URL"
+msgstr "Facebook-URL"
 
 #: ../../cyberchimps/options/options-core.php:765
 msgid "Google+"
@@ -1178,7 +1174,7 @@ msgstr "Google+"
 
 #: ../../cyberchimps/options/options-core.php:773
 msgid "Google+ URL"
-msgstr "URL Google+"
+msgstr "Google+-URL"
 
 #: ../../cyberchimps/options/options-core.php:783
 msgid "Flickr"
@@ -1186,7 +1182,7 @@ msgstr "Flickr"
 
 #: ../../cyberchimps/options/options-core.php:790
 msgid "Flickr URL"
-msgstr "Flickr URL"
+msgstr "Flickr-URL"
 
 #: ../../cyberchimps/options/options-core.php:800
 msgid "Pinterest"
@@ -1194,15 +1190,15 @@ msgstr "Pinterest"
 
 #: ../../cyberchimps/options/options-core.php:807
 msgid "Pinterest URL"
-msgstr "Pinterest URL"
+msgstr "Pinterest-URL"
 
 #: ../../cyberchimps/options/options-core.php:817
 msgid "LinkedIn"
-msgstr "LinkedIn."
+msgstr "LinkedIn"
 
 #: ../../cyberchimps/options/options-core.php:824
 msgid "LinkedIn URL"
-msgstr "LinkedIn URL"
+msgstr "LinkedIn-URL"
 
 #: ../../cyberchimps/options/options-core.php:834
 msgid "YouTube"
@@ -1210,7 +1206,7 @@ msgstr "YouTube"
 
 #: ../../cyberchimps/options/options-core.php:841
 msgid "YouTube URL"
-msgstr "YouTube URL"
+msgstr "YouTube-URL"
 
 #: ../../cyberchimps/options/options-core.php:851
 msgid "RSS"
@@ -1218,15 +1214,15 @@ msgstr "RSS"
 
 #: ../../cyberchimps/options/options-core.php:858
 msgid "RSS URL"
-msgstr "RSS URL"
+msgstr "RSS-URL"
 
 #: ../../cyberchimps/options/options-core.php:868
 msgid "Email"
-msgstr "Email"
+msgstr "Epost"
 
 #: ../../cyberchimps/options/options-core.php:875
 msgid "Email Address"
-msgstr "Dirección de Correo Electrónico"
+msgstr "Epostadresse"
 
 #: ../../cyberchimps/options/options-core.php:884
 msgid "Google Maps"
@@ -1234,11 +1230,11 @@ msgstr "Google Maps"
 
 #: ../../cyberchimps/options/options-core.php:891
 msgid "Google Maps URL"
-msgstr "Google Maps URL"
+msgstr "Google Maps-URL"
 
 #: ../../cyberchimps/options/options-core.php:908
 msgid "Drag & Drop Blog Elements"
-msgstr "Arrastrar y soltar elementos de blog"
+msgstr "Dra&Slipp bloggelementer"
 
 #: ../../cyberchimps/options/options-core.php:929
 #: ../../cyberchimps/options/options-core.php:1834
@@ -1246,67 +1242,67 @@ msgstr "Arrastrar y soltar elementos de blog"
 #: ../../cyberchimps/options/options-core.php:2020
 #: ../../cyberchimps/options/options-core.php:2063
 msgid "Sidebar Options"
-msgstr "Opciones de la barra lateral"
+msgstr "Sidefelt-innstillinger"
 
 #: ../../cyberchimps/options/options-core.php:942
 msgid "Post Formats Icons"
-msgstr "Publica Iconos formatos"
+msgstr "Innleggsformatikoner"
 
 #: ../../cyberchimps/options/options-core.php:950
 #: ../../cyberchimps/options/options-core.php:1950
 #: ../../cyberchimps/options/options-core.php:2034
 msgid "Post Excerpts"
-msgstr "Publica Extractos"
+msgstr "Innleggsutdrag"
 
 #: ../../cyberchimps/options/options-core.php:958
 #: ../../cyberchimps/options/options-core.php:2042
 msgid "Read More Text"
-msgstr "Leer más texto"
+msgstr "Les Mer-tekst"
 
 #: ../../cyberchimps/options/options-core.php:967
 #: ../../cyberchimps/options/options-core.php:2052
 msgid "Excerpt Length"
-msgstr "Extracto Largo"
+msgstr "Utdragslengde"
 
 #: ../../cyberchimps/options/options-core.php:976
 #: ../../cyberchimps/options/options-core.php:1858
 #: ../../cyberchimps/options/options-core.php:1959
 msgid "Featured Images"
-msgstr "Imágenes"
+msgstr "Fremhevede bilder"
 
 #: ../../cyberchimps/options/options-core.php:987
 #: ../../cyberchimps/options/options-core.php:1876
 #: ../../cyberchimps/options/options-core.php:1969
 msgid "Post Byline Author"
-msgstr "Autor Byline"
+msgstr "Innleggsbyline, forfatter"
 
 #: ../../cyberchimps/options/options-core.php:997
 #: ../../cyberchimps/options/options-core.php:1886
 #: ../../cyberchimps/options/options-core.php:1979
 msgid "Post Byline Categories"
-msgstr "Publica Categorías Byline"
+msgstr "Innleggsbyline, kategorier"
 
 #: ../../cyberchimps/options/options-core.php:1007
 #: ../../cyberchimps/options/options-core.php:1896
 #: ../../cyberchimps/options/options-core.php:1989
 msgid "Post Byline Date"
-msgstr "Publica Fecha Byline"
+msgstr "Innleggsbyline, dato"
 
 #: ../../cyberchimps/options/options-core.php:1017
 #: ../../cyberchimps/options/options-core.php:1906
 #: ../../cyberchimps/options/options-core.php:1999
 msgid "Post Byline Comments"
-msgstr "Enviar comentarios Byline"
+msgstr "Innleggsbyline, kommentarer"
 
 #: ../../cyberchimps/options/options-core.php:1027
 #: ../../cyberchimps/options/options-core.php:1917
 #: ../../cyberchimps/options/options-core.php:2009
 msgid "Post Byline Tags"
-msgstr "Publicar Etiquetas Byline"
+msgstr "Innleggsbyline, stikkord"
 
 #: ../../cyberchimps/options/options-core.php:1042
 msgid "Boxes Upgrade"
-msgstr "Cajas de actualización"
+msgstr "Bokser-oppgradering"
 
 #: ../../cyberchimps/options/options-core.php:1045
 msgid ""
@@ -1314,13 +1310,13 @@ msgid ""
 "Upgrade to %1$s to be able to create as many boxes as you like. Categorize "
 "them and display each category on a different page."
 msgstr ""
-"Boxes Lite te limita a un total de 3 cajas a lo largo de todo el sitio. "
-"Actualizar a %1$s para poder crear cuadros de tantas como quieras. "
-"Categorizarlos y mostrar cada categoría en una página diferente."
+"Bokser Lite begrenser deg til totalt 3 bokser på hele nettstedet. Oppgrader "
+"til %1$s for å kunne lage så mange bokser du vil. Du kan kategorisere de og "
+"vise de ulike kategoriene på hver sin side."
 
 #: ../../cyberchimps/options/options-core.php:1058
 msgid "Portfolio Upgrade"
-msgstr "Cartera de actualización"
+msgstr "Portefølje-oppgradering"
 
 #: ../../cyberchimps/options/options-core.php:1061
 msgid ""
@@ -1328,13 +1324,13 @@ msgid ""
 "Upgrade to %1$s to be able to create as many portfolio items as you like. "
 "Categorize them and display each category on a different page."
 msgstr ""
-"Cartera Lite te limita a un total de 4 artículos a lo largo de todo el "
-"sitio. Actualizar a %1$s para ser capaces de crear artículos de parque que "
-"lo desee. Categorizarlos y mostrar cada categoría en una página diferente."
+"Portefølje Lite begrenser deg til totalt 4 elementer på hele nettstedet. "
+"Oppgrader til %1$s for å kunne lage så mange du vil. Du kan kategorisere de "
+"og vise de ulike kategoriene på hver sin side."
 
 #: ../../cyberchimps/options/options-core.php:1269
 msgid "Slider Upgrade"
-msgstr "Deslizador de actualización"
+msgstr "Lysbilder-oppgradering"
 
 #: ../../cyberchimps/options/options-core.php:1272
 msgid ""
@@ -1342,132 +1338,132 @@ msgid ""
 "Upgrade to %1$s to be able to create more images. Categorize them and "
 "display each category on a different page."
 msgstr ""
-"Deslizador Lite te limita a un total de 3 imágenes a lo largo de todo el "
-"sitio. Actualizar a %1$s para poder crear más imágenes. Categorizarlos y "
-"mostrar cada categoría en una página diferente."
+"Lysbilder Lite begrenser deg til totalt 3 bilder på hele nettstedet. "
+"Oppgrader til %1$s for å kunne lage så mange du vil. Du kan kategorisere de "
+"og vise de ulike kategoriene på hver sin side."
 
 #: ../../cyberchimps/options/options-core.php:1281
 msgid "Slider Image 1"
-msgstr "Image Slider 1"
+msgstr "Lysbilder, bilde 1"
 
 #: ../../cyberchimps/options/options-core.php:1291
 msgid "Slide 1 URL"
-msgstr "Deslice una URL"
+msgstr "Lysbilde 1 URL"
 
 #: ../../cyberchimps/options/options-core.php:1300
 msgid "Slider Image 2"
-msgstr "Image Slider 2"
+msgstr "Lysbilder, bilde 2"
 
 #: ../../cyberchimps/options/options-core.php:1310
 msgid "Slide 2 URL"
-msgstr "Diapositiva 2 URL"
+msgstr "Lysbilde 2 URL"
 
 #: ../../cyberchimps/options/options-core.php:1319
 msgid "Slider Image 3"
-msgstr "Image Slider 3"
+msgstr "Lysbilder, bilde 3"
 
 #: ../../cyberchimps/options/options-core.php:1329
 msgid "Slide 3 URL"
-msgstr "Diapositiva 3 URL"
+msgstr "Lysbilde 3 URL"
 
 #: ../../cyberchimps/options/options-core.php:1345
 msgid "Images per Row"
-msgstr "Imágenes por fila"
+msgstr "Bilder per rad"
 
 #: ../../cyberchimps/options/options-core.php:1417
 msgid "Featured Excerpt Length"
-msgstr "Longitud Extracto destacadas"
+msgstr "Lengde på fremhevet utdrag"
 
 #: ../../cyberchimps/options/options-core.php:1464
 msgid "Wide Post Excerpt Length"
-msgstr "Mensaje Wide Largo Extracto"
+msgstr "Lengde på brede innleggsutdrag"
 
 #: ../../cyberchimps/options/options-core.php:1473
 msgid "Number of Wide Posts"
-msgstr "Cantidad de envíos amplias"
+msgstr "Antall brede innlegg"
 
 #: ../../cyberchimps/options/options-core.php:1549
 msgid "Number of Featured Blog Posts"
-msgstr "Número de publicaciones de blog destacados"
+msgstr "Antall fremhevede blogg-innlegg"
 
 #: ../../cyberchimps/options/options-core.php:1568
 msgid "Slider Speed "
-msgstr "Control deslizante de velocidad "
+msgstr "Lysbilde hastighet "
 
 #: ../../cyberchimps/options/options-core.php:1618
 msgid "Click Here"
-msgstr "Pulsa aquí"
+msgstr "Klikk her"
 
 #: ../../cyberchimps/options/options-core.php:1644
 msgid "Custom Callout Button"
-msgstr "Custom Button Llamada"
+msgstr "Egendefinert Callout-knapp"
 
 #: ../../cyberchimps/options/options-core.php:1654
 msgid "Custom Callout Background Color"
-msgstr "Llamada Custom Color de fondo"
+msgstr "Egendefinert Callout bakgrunnsfarge"
 
 #: ../../cyberchimps/options/options-core.php:1664
 msgid "Custom Callout Title Color"
-msgstr "Llamada Custom Color Título"
+msgstr "Egendefinert Callout tittelfarge"
 
 #: ../../cyberchimps/options/options-core.php:1674
 msgid "Custom Callout Text Color"
-msgstr "Llamada Custom Color del texto"
+msgstr "Egendefinert Callout tekstfarge"
 
 #: ../../cyberchimps/options/options-core.php:1684
 msgid "Custom Callout Button Color"
-msgstr "Llamada Custom Color del botón"
+msgstr "Egendefinert Callout-knappefarge"
 
 #: ../../cyberchimps/options/options-core.php:1694
 msgid "Custom Callout Button Text Color"
-msgstr "Custom Button Text Color de Llamada"
+msgstr "Egendefinert Callout-knapp tekstfarge"
 
 #: ../../cyberchimps/options/options-core.php:1707
 msgid "HTML Box"
-msgstr "HTML Caja"
+msgstr "HTML-boks"
 
 #: ../../cyberchimps/options/options-core.php:1710
 msgid "Enter your custom HTML code here"
-msgstr "Ingrese su código HTML personalizado aquí"
+msgstr "Skriv inn din egendefinerte HTML-kode her"
 
 #: ../../cyberchimps/options/options-core.php:1730
 msgid "Custom Title"
-msgstr "Título Personalizado"
+msgstr "Egendefinert Tittel"
 
 #: ../../cyberchimps/options/options-core.php:1763
 #: ../../cyberchimps/options/options-core.php:1773
 #: ../../cyberchimps/options/options-core.php:1786
 #: ../../cyberchimps/options/options-core.php:1796
 msgid "Select a Category"
-msgstr "Seleccione una categoría..."
+msgstr "Velg en kategori"
 
 #: ../../cyberchimps/options/options-core.php:1835
 #: ../../cyberchimps/options/options-core.php:1929
 #: ../../cyberchimps/options/options-core.php:2021
 #: ../../cyberchimps/options/options-core.php:2064
 msgid "Images for layout."
-msgstr "Imágenes para el diseño."
+msgstr "Bilder for sideoppsett"
 
 #: ../../cyberchimps/options/options-core.php:1849
 msgid "Post title"
-msgstr "Título de la entrada"
+msgstr "Innleggtittel"
 
 #: ../../cyberchimps/options/options-core.php:1866
 #: ../../cyberchimps/options/options-core.php:1942
 msgid "Post Format Icons"
-msgstr "Publica iconos de formato"
+msgstr "Innleggformat-ikoner"
 
 #: ../../cyberchimps/options/options-core.php:2077
 msgid "Custom 404 Title"
-msgstr "404 Título Personalizado"
+msgstr "Egendefinert 404-tittel"
 
 #: ../../cyberchimps/options/options-core.php:2085
 msgid "Custom 404 Content"
-msgstr "Contenido 404 personalizada"
+msgstr "Egendefinert 404-innhold"
 
 #: ../../cyberchimps/options/options-core.php:2106
 msgid "Footer Copyright Text"
-msgstr ", Copyright Pie de página"
+msgstr "Bunnlinje copyright-tekst"
 
 #: ../../cyberchimps/options/options-core.php:2115
 msgid "Google Analytics"
@@ -1475,184 +1471,184 @@ msgstr "Google Analytics"
 
 #: ../../cyberchimps/options/options-core.php:2117
 msgid "Copy and paste your Google Analytics code here"
-msgstr "Copia y pega el código de Google Analytics aquí"
+msgstr "Kopier og lim inn din Google Analytics-kode her"
 
 #: ../../cyberchimps/options/options-customizer.php:22
 msgid "Customize"
-msgstr "Personalizar"
+msgstr "Tilpass"
 
 #: ../../cyberchimps/options/options-customizer.php:80
 msgid ""
 "make sure you have removed the image above before selecting one of these"
-msgstr ""
-"asegúrese de que ha eliminado la imagen de arriba antes de seleccionar uno "
-"de estos"
+msgstr "pass på at du har fjernet bildet over før du velger en av disse"
 
 #: ../../cyberchimps/options/options-customizer.php:180
 msgid "Skin Color"
-msgstr "Color de la piel"
+msgstr "Fargeskjema"
 
 #: ../../cyberchimps/options/options-customizer.php:236
 msgid "Typography Size"
-msgstr "Tipografía Tamaño"
+msgstr "Typografi, størrelse"
 
 #: ../../cyberchimps/options/options-customizer.php:250
 msgid "Typography Face"
-msgstr "Tipografía Face"
+msgstr "Typografi, skrift"
 
 #: ../../cyberchimps/options/options-customizer.php:263
 msgid "Typography Style"
-msgstr "Tipografía Estilo"
+msgstr "Typografi, stil"
 
 #: ../../cyberchimps/options/options-customizer.php:277
 msgid "Background Image"
-msgstr "Imagen de fondo"
+msgstr "Bakgrunnsbilde"
 
 #: ../../cyberchimps/options/options-init.php:34
 msgid "Theme Options Page"
-msgstr "Opciones del tema de la página"
+msgstr "Malinnstillinger, Innlegg"
 
 #: ../../cyberchimps/options/options-init.php:35
 #: ../../cyberchimps/options/options-init.php:1075
 msgid "Theme Options"
-msgstr "Opciones del tema"
+msgstr "Malinnstillinger"
 
 #: ../../cyberchimps/options/options-init.php:135
 msgid "Buy Themes"
-msgstr "Comprar Temas"
+msgstr "Kjøp maler"
 
 #: ../../cyberchimps/options/options-init.php:167
 msgid "Open All"
-msgstr "Abierto todo el"
+msgstr "Åpne alle"
 
 #: ../../cyberchimps/options/options-init.php:168
 msgid "Collapse All"
-msgstr "Contraer todo"
+msgstr "Lukk alle"
 
 #: ../../cyberchimps/options/options-init.php:175
 #: ../../cyberchimps/options/options-init.php:283
 msgid "Restore Defaults"
-msgstr "Restaurar ajustes predeterminados"
+msgstr "Gjenopprett standardinnstillinger"
 
 #: ../../cyberchimps/options/options-init.php:175
 #: ../../cyberchimps/options/options-init.php:283
 msgid "Click OK to reset. Any theme settings will be lost!"
-msgstr ""
-"Haga clic en Aceptar para reiniciar. Las opciones del tema se perderán!"
+msgstr "Klikk OK for gjenopprette. Alle malinnstillinger vil bli tapt!"
 
 #: ../../cyberchimps/options/options-init.php:176
 #: ../../cyberchimps/options/options-init.php:237
 #: ../../cyberchimps/options/options-init.php:284
 msgid "Save Options"
-msgstr "Guardar opciones"
+msgstr "Lagre innstillinger"
 
 #: ../../cyberchimps/options/options-init.php:269
 msgid "CyberChimps Wordpress Themes"
 msgstr "CyberChimps Wordpress Themes"
 
 #: ../../cyberchimps/options/options-init.php:393
+#, fuzzy
 msgid "Link to Events plugin settings"
-msgstr "Enlace a la configuración de plug-in Eventos"
+msgstr "Lenke til Hendelser-innstikk-innstillinger"
 
 #: ../../cyberchimps/options/options-init.php:395
+#, fuzzy
 msgid "Insert custom events info and insert install link"
-msgstr "Inserte info eventos personalizados e insertar vínculo de instalación"
+msgstr ""
+"Legg inn egendefinert hendelsesinformasjon og sett inn installasjonslenke"
 
 #: ../../cyberchimps/options/options-init.php:518
 msgid "Default Field"
-msgstr "Defecto de campo"
+msgstr "Standard felt"
 
 #: ../../cyberchimps/options/options-init.php:946
 msgid "Options Imported"
-msgstr "Opciones importados"
+msgstr "Innstillinger importert"
 
 #: ../../cyberchimps/options/options-init.php:949
 msgid "Invalid Data for Import"
-msgstr "Datos no válidos para su importación"
+msgstr "Ugyldig data for import"
 
 #: ../../cyberchimps/options/options-init.php:962
 msgid "Default options restored."
-msgstr "Opciones predeterminadas restauradas."
+msgstr "Standardinnstillinger gjenopprettet."
 
 #: ../../cyberchimps/options/options-init.php:1029
 msgid "Options saved."
-msgstr "Opciones guardadas."
+msgstr "Innstillinger ble lagret."
 
 #: ../../cyberchimps/options/options-medialibrary-uploader.php:23
 msgid "Theme Options Media"
-msgstr "Opciones de Medios temáticas"
+msgstr "Malinnstillinger, media"
 
 #: ../../cyberchimps/options/options-medialibrary-uploader.php:135
 msgid "View File"
-msgstr "Ver archivos"
+msgstr "Vis fil"
 
 #: ../../cyberchimps/options/options-medialibrary-uploader.php:256
 msgid "Gallery"
-msgstr "Galería"
+msgstr "Galleri"
 
 #: ../../cyberchimps/options/options-medialibrary-uploader.php:256
 msgid "Previously Uploaded"
-msgstr "Subido Anteriormente"
+msgstr "Tidligere opplastet"
 
 #: ../../cyberchimps/options/options-sanitize.php:278
 msgid "No Repeat"
-msgstr "No se repite"
+msgstr "Ingen gjentaking"
 
 #: ../../cyberchimps/options/options-sanitize.php:279
 msgid "Repeat Horizontally"
-msgstr "Repetir horizontalmente"
+msgstr "Gjenta horisontalt"
 
 #: ../../cyberchimps/options/options-sanitize.php:280
 msgid "Repeat Vertically"
-msgstr "Repetir verticalmente"
+msgstr "Gjenta vertikalt"
 
 #: ../../cyberchimps/options/options-sanitize.php:281
 msgid "Repeat All"
-msgstr "Repetir todo"
+msgstr "Gjenta alle"
 
 #: ../../cyberchimps/options/options-sanitize.php:294
 msgid "Top Left"
-msgstr "Arriba, izquierda"
+msgstr "Topp venstre"
 
 #: ../../cyberchimps/options/options-sanitize.php:295
 msgid "Top Center"
-msgstr "Arriba, centro"
+msgstr "Topp senter"
 
 #: ../../cyberchimps/options/options-sanitize.php:296
 msgid "Top Right"
-msgstr "Arriba, derecha"
+msgstr "Topp høyre"
 
 #: ../../cyberchimps/options/options-sanitize.php:297
 msgid "Middle Left"
-msgstr "Medio Izquierda"
+msgstr "Midten venstre"
 
 #: ../../cyberchimps/options/options-sanitize.php:298
 msgid "Middle Center"
-msgstr "Central de medios"
+msgstr "Midten senter"
 
 #: ../../cyberchimps/options/options-sanitize.php:299
 msgid "Middle Right"
-msgstr "Centro derecha:"
+msgstr "Midten høyre"
 
 #: ../../cyberchimps/options/options-sanitize.php:300
 msgid "Bottom Left"
-msgstr "Abajo, izquierda"
+msgstr "Bunn venstre"
 
 #: ../../cyberchimps/options/options-sanitize.php:301
 msgid "Bottom Center"
-msgstr "Abajo, centro"
+msgstr "Bunn senter"
 
 #: ../../cyberchimps/options/options-sanitize.php:302
 msgid "Bottom Right"
-msgstr "Abajo, derecha"
+msgstr "Bunn høyre"
 
 #: ../../cyberchimps/options/options-sanitize.php:315
 msgid "Scroll Normally"
-msgstr "Desplácese Normalmente"
+msgstr "Skroll normalt"
 
 #: ../../cyberchimps/options/options-sanitize.php:316
 msgid "Fixed in Place"
-msgstr "Fija en su lugar"
+msgstr "Fast plassering"
 
 #: ../../cyberchimps/options/options-sanitize.php:388
 msgid "Normal"
@@ -1660,68 +1656,68 @@ msgstr "Normal"
 
 #: ../../cyberchimps/options/options-sanitize.php:389
 msgid "Italic"
-msgstr "Cursiva"
+msgstr "Kursiv"
 
 #: ../../cyberchimps/options/options-sanitize.php:390
 msgid "Bold"
-msgstr "Negrita"
+msgstr "Fet"
 
 #: ../../cyberchimps/options/options-sanitize.php:391
 msgid "Bold Italic"
-msgstr "Negrita y cursiva"
+msgstr "Fet kursiv"
 
 #: ../../elements/boxes.php:39 ../../elements/boxes.php:41
 msgid "Boxes Lite Element"
-msgstr "Lite Cajas Element"
+msgstr "Bokser Lite-element"
 
 #: ../../elements/boxes.php:42
 msgid "Box Image"
-msgstr "Caja imagen"
+msgstr "Boks-bilde"
 
 #: ../../elements/boxes.php:43
 msgid "Box URL"
-msgstr "Caja URL"
+msgstr "Boks-URL"
 
 #: ../../elements/boxes.php:44
 msgid "Box Text"
-msgstr "Cuadro de texto"
+msgstr "Boks-tekst"
 
 #: ../../elements/boxes.php:148
 msgid "Responsive iFeature Slider"
-msgstr "Responsive deslizante iFeature"
+msgstr "Responsiv iFeature Lysbilder"
 
 #: ../../elements/boxes.php:149
 msgid ""
 "The New Touch Friendly iFeature 5 Slider now responds to any mobile touch "
 "device."
 msgstr ""
-"El New Touch friendly iFeature 5 deslizante ahora responde a cualquier "
-"dispositivo móvil táctil."
+"Den nye touchvennlige iFeature 5 Lysbilder virker nå på alle mobile touch-"
+"enheter."
 
 #: ../../elements/boxes.php:157
 msgid ""
 "With iFeature Pro 5 and touch friendly responsive design you can now control "
 "your website on any device."
 msgstr ""
-"Con iFeature Pro 5 y el tacto sensible diseño amigable ahora puede controlar "
-"su sitio web en cualquier dispositivo."
+"Med iFeature Pro 5 og touchvennlig responsivt design, kan du nå kontrollere "
+"ditt nettsted på alle enheter."
 
 #: ../../elements/boxes.php:164
 msgid "Excellent Support"
-msgstr "Apoyo Excelente"
+msgstr "Utmerket support"
 
 #: ../../elements/boxes.php:165
 msgid ""
 "Need help? Read the instructions and please visit our dedicated Pro Support "
 "Forum"
 msgstr ""
-"¿Necesitas ayuda? Lea las instrucciones y, por favor visite nuestro Foro de "
-"Soporte dedicado Pro"
+"Trenger du hjelp? Les instruksjonene og besøk oss gjerne på vårt dedikerte "
+"Pro Support-forum"
 
 #: ../../elements/twitter-bar.php:90
 msgid "No tweets to display"
-msgstr "No hay mensajes de twitter para mostrar"
+msgstr "Ingen tvitringer å vise"
 
 #: ../../elements/twitter-bar.php:167
 msgid "Invalid Response"
-msgstr "Respuesta no válida"
+msgstr "Ugyldig respons"
