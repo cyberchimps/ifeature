@@ -186,6 +186,12 @@ function ifeature_default_background_color() {
 }
 add_filter( 'default_background_color', 'ifeature_default_background_color' );
 
+// Default for twitter bar handle
+function cyberchimps_twitter_handle_filter() {
+	return 'WordPress';
+}
+add_filter( 'cyberchimps_twitter_handle_filter', 'cyberchimps_twitter_handle_filter' );
+
 // default header option
 function ifeature_header_drag_and_drop_default() {
 	$option =  array(
