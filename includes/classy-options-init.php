@@ -160,7 +160,7 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 			->checkbox($themeslug."hide_slider_navigation", "Slider Navigation" , array('default' => true))
 		->subsection_end()
 		->subsection("Twtterbar Options")
-			->text($themeslug."_blog_twitter", "Enter your Twitter handle")
+			->text($themeslug."_blog_twitter", "Enter your Twitter handle", array('default' => 'WordPress'))
 			->checkbox($themeslug."_blog_twitter_reply", "Show @ Replies")
 		->subsection_end()
 		->subsection("Product Options")

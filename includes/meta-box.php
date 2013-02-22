@@ -50,7 +50,7 @@ function initialize_the_meta_boxes() {
 				))
 			->pagehelp('', 'Need Help?', '')
 		->tab("Twitter Options")
-			->text($themeslug.'_twitter_handle', 'Twitter Handle', 'Enter your Twitter handle if using the Twitter bar')
+			->text($themeslug.'_twitter_handle', 'Twitter Handle', 'Enter your Twitter handle if using the Twitter bar', array('std' => 'WordPress'))
 			->checkbox($themeslug.'_twitter_reply', 'Show @ Replies', '')
 		->tab("Product Options")
 			->select($themeslug.'_product_text_align', 'Text Align', '', array('options' => array('Left', 'Right')) )
