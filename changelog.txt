@@ -2,6 +2,10 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.5 (2-21-13)
+-Moved wpfooter.
+-Updated language definitions.
+
 Version 5.1.4 (2-14-13)
 -IE8 container fix.
 
