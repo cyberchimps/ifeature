@@ -332,3 +332,17 @@ function ifeature_add_home_menu( $menu, $args ) {
 	return $menu;
 }
 add_filter( 'wp_nav_menu_items', 'ifeature_add_home_menu', 10, 2 );
+
+/* fix full width container that disappears on horizontal scroll */
+function cyberchimps_full_width_fix() {
+	$responsive_design = cyberchimps_get_option( 'responsive_design' );
+	$min_width = cyberchimps_get_option( 'max_width' );
+	if( ! $responsive_design ) {
+		$style = '<style rel="stylesheet" type="text/css" media="all">';
+		$style .= '.container-full, #footer-widgets-wrapper { min-width: '. $min_width . 'px;}';
+		$style .= '</style>';
+		
+		echo $style;
+	}
+}
+add_action( 'wp_head', 'cyberchimps_full_width_fix' );
