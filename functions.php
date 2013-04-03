@@ -339,7 +339,7 @@ function cyberchimps_full_width_fix() {
 	$min_width = cyberchimps_get_option( 'max_width' );
 	if( ! $responsive_design ) {
 		$style = '<style rel="stylesheet" type="text/css" media="all">';
-		$style .= '.container-full, #footer-widgets-wrapper { min-width: '. $min_width . 'px;}';
+		$style .= '.container-full, #footer-widgets-wrapper, #footer-main-wrapper { min-width: '. $min_width . 'px;}';
 		$style .= '</style>';
 		
 		echo $style;
