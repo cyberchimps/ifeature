@@ -77,33 +77,31 @@ header#cc-header {
 
 /*======================================= TOP BAR =============================================*/
 
-.container-full {
-	width: 100%;
+#top_header {
 	background-image: url('images/topbarbg.jpg');
 	margin-bottom: 15px;
 }
 
-.container-full .top-head-description {
+#top_header  .top-head-description {
 	color: #bababa;
-	margin: 8px 0 6px 20px;
+	margin: 8px 0 6px 0;
 	font-size: 14px;
 }
 
-.container-full .top-head-social .icons {
+#top_header  .top-head-social .icons {
 	float: right;
 	margin-top: 5px;
-	margin-right: 20px;
 	margin-bottom: 6px;
 }
 
-.container-full .top-head-social .icons a {
+#top_header  .top-head-social .icons a {
 	float: right;
 	height: 20px;
 	width: 20px;
 	margin-left: 5px;
 }
 
-.container-full .top-head-social .icons a img {
+#top_header  .top-head-social .icons a img {
 	height: 20px;
 	width: 20px;
 }
@@ -853,7 +851,9 @@ table#wp-calendar td {
 /******************************************** FOOTER ****************************************************************/
 /********************************************************************************************************************/
 
-#footer-widgets-wrapper {
+#footer_widgets_wrapper {
+	margin-top: 20px;
+	padding-top: 20px;
 	background-color: #303030;
 }
 #footer-widgets {
@@ -883,7 +883,7 @@ table#wp-calendar td {
 #footer-widgets .widget-container p {
 	color: #ccc;
 }
-#footer-main-wrapper {
+#after_footer {
 	background-color: #171717;
 }
 .site-footer {
