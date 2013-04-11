@@ -15,45 +15,56 @@
  
 get_header(); ?>
 
-<?php do_action( 'cyberchimps_before_container'); ?>
-
-<div id="container" <?php cyberchimps_filter_container_class(); ?>>
+<div id="error_page" class="container-full-width">
 	
-	<?php do_action( 'cyberchimps_before_content_container'); ?>
-	
-	<div id="content" <?php cyberchimps_filter_content_class(); ?>>
+	<div class="container">
+		
+		<div class="container-fluid">
 			
-		<?php do_action( 'cyberchimps_before_content'); ?>
+			<?php do_action( 'cyberchimps_before_container'); ?>
+			
+			<div id="container" <?php cyberchimps_filter_container_class(); ?>>
+				
+				<?php do_action( 'cyberchimps_before_content_container'); ?>
+				
+				<div id="content" <?php cyberchimps_filter_content_class(); ?>>
+						
+					<?php do_action( 'cyberchimps_before_content'); ?>
+			
+					<article id="post-0" class="post error404 not-found">
+						<header class="entry-header">
+							<h2 class="entry-title">
+								<?php if( cyberchimps_option( 'error_custom_title' ) != '' ): ?>
+					  <?php echo cyberchimps_option( 'error_custom_title' ); ?>
+					  <?php else: ?>
+								<?php _e( 'Oops! That page cannot be found.', 'cyberchimps' ); ?></h2>
+					  <?php endif; ?>
+						</header>
+			
+						<div class="entry-content">
+					<?php if( cyberchimps_option( 'error_custom_content' ) != '' ): ?>
+						<p><?php echo cyberchimps_option( 'error_custom_content' ); ?></p>
+					<?php else: ?>
+								<p><?php _e( 'It looks like nothing was found at this location. Maybe try searching for it?', 'cyberchimps' ); ?></p>
+							<?php endif; ?>
+							<?php get_search_form(); ?>
+			
+						</div><!-- .entry-content -->
+					</article><!-- #post-0 -->
+					
+					<?php do_action( 'cyberchimps_after_content'); ?>
+					
+				</div><!-- #content -->
+				
+				<?php do_action( 'cyberchimps_after_content_container'); ?>
+				
+			</div><!-- #container .row-fluid-->
+			
+			<?php do_action( 'cyberchimps_after_container'); ?>
 
-		<article id="post-0" class="post error404 not-found">
-			<header class="entry-header">
-				<h2 class="entry-title">
-					<?php if( cyberchimps_option( 'error_custom_title' ) != '' ): ?>
-          <?php echo cyberchimps_option( 'error_custom_title' ); ?>
-          <?php else: ?>
-					<?php _e( 'Oops! That page cannot be found.', 'cyberchimps' ); ?></h2>
-          <?php endif; ?>
-			</header>
-
-			<div class="entry-content">
-      	<?php if( cyberchimps_option( 'error_custom_content' ) != '' ): ?>
-        	<p><?php echo cyberchimps_option( 'error_custom_content' ); ?></p>
-        <?php else: ?>
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try searching for it?', 'cyberchimps' ); ?></p>
-				<?php endif; ?>
-				<?php get_search_form(); ?>
-
-			</div><!-- .entry-content -->
-		</article><!-- #post-0 -->
+		</div><!--container fluid -->
 		
-		<?php do_action( 'cyberchimps_after_content'); ?>
-		
-	</div><!-- #content -->
-	
-	<?php do_action( 'cyberchimps_after_content_container'); ?>
-	
-</div><!-- #container .row-fluid-->
+	</div><!-- container -->
 
-<?php do_action( 'cyberchimps_after_container'); ?>
-
+</div><!-- container full width -->
 <?php get_footer(); ?>

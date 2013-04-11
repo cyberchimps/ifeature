@@ -15,47 +15,59 @@
  
 get_header(); ?>
 
-<?php do_action( 'cyberchimps_before_container'); ?>
-
-<div id="container" <?php cyberchimps_filter_container_class(); ?>>
+<div id="single_page" class="container-full-width">
 	
-	<?php do_action( 'cyberchimps_before_content_container'); ?>
-	
-	<div id="content" <?php cyberchimps_filter_content_class(); ?>>
+	<div class="container">
 		
-		<?php do_action( 'cyberchimps_before_content'); ?>
-		
-		<?php while ( have_posts() ) : the_post(); ?>
+		<div class="container-fluid">
 
-			<?php get_template_part( 'content', 'single' ); ?>
+			<?php do_action( 'cyberchimps_before_container'); ?>
+			
+			<div id="container" <?php cyberchimps_filter_container_class(); ?>>
 				
-        <div class="more-content">
-          <div class="row-fluid">
-            <div class="span6 previous-post">
-              <?php previous_post_link(); ?>
-            </div>
-            <div class="span6 next-post">
-              <?php next_post_link(); ?>
-            </div>
-          </div>
-        </div>
-      
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() )
-					comments_template( '', true );
-			?>
+				<?php do_action( 'cyberchimps_before_content_container'); ?>
+				
+				<div id="content" <?php cyberchimps_filter_content_class(); ?>>
+					
+					<?php do_action( 'cyberchimps_before_content'); ?>
+					
+					<?php while ( have_posts() ) : the_post(); ?>
+			
+						<?php get_template_part( 'content', 'single' ); ?>
+							
+					<div class="more-content">
+					  <div class="row-fluid">
+						<div class="span6 previous-post">
+						  <?php previous_post_link(); ?>
+						</div>
+						<div class="span6 next-post">
+						  <?php next_post_link(); ?>
+						</div>
+					  </div>
+					</div>
+				  
+						<?php
+							// If comments are open or we have at least one comment, load up the comment template
+							if ( comments_open() || '0' != get_comments_number() )
+								comments_template( '', true );
+						?>
+			
+					<?php endwhile; // end of the loop. ?>
+				
+					<?php do_action( 'cyberchimps_after_content'); ?>
+					
+				</div><!-- #content -->
+				
+				<?php do_action( 'cyberchimps_after_content_container'); ?>
+					
+			</div><!-- #container .row-fluid-->
+			
+			<?php do_action( 'cyberchimps_after_container'); ?>
 
-		<?php endwhile; // end of the loop. ?>
-	
-		<?php do_action( 'cyberchimps_after_content'); ?>
+		</div><!--container fluid -->
 		
-	</div><!-- #content -->
-	
-	<?php do_action( 'cyberchimps_after_content_container'); ?>
-		
-</div><!-- #container .row-fluid-->
+	</div><!-- container -->
 
-<?php do_action( 'cyberchimps_after_container'); ?>
+</div><!-- container full width -->
 
 <?php get_footer(); ?>
