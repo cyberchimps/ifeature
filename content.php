@@ -46,9 +46,7 @@
 				$post_title = cyberchimps_option( 'single_post_title' );
 				if( $post_title == "1" ) : ?>
 					<h2 class="entry-title">
-						<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'cyberchimps' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
-							<?php ( get_the_title() )? the_title() : the_permalink(); ?>
-						</a>
+						<?php ( get_the_title() )? the_title() : the_permalink(); ?>
 					</h2>
 		<?php	endif;
 			else : ?>
