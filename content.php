@@ -43,7 +43,7 @@
 			if( 'post' == get_post_type() && is_single() ) :
 			
 				// get the post title toggle option
-				$post_title = cyberchimps_option( 'single_post_title' );
+				$post_title = cyberchimps_get_option( 'single_post_title' );
 				if( $post_title == "1" ) : ?>
 					<h2 class="entry-title">
 						<?php ( get_the_title() )? the_title() : the_permalink(); ?>
