@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.14 (5-2-13)
+-Woocommerce layout fix
+
 Version 5.1.13 (4-26-13)
 -Replaced cyberchimps_option() with cyberchimps_get_option().
 

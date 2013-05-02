@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.13 (4-26-13)
+-Replaced cyberchimps_option() with cyberchimps_get_option().
+
 Version 5.1.12 (4-19-13)
 -Removed elements using custom post type
 -Added boxes lite to theme and page options
