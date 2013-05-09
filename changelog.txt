@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.15 (5-9-13)
+-Replaced get_template_directory_uri() with the variable already declared locally in the function in cyberchimps/functions.php.
+
 Version 5.1.14 (5-2-13)
 -Woocommerce layout fix
 
