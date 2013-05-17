@@ -2,6 +2,15 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.16 (5-17-13)
+-Updated slimbox to latest version.
+-Prevented default click action on mobile level slimbox.
+-Added the functionality to prevent the image to load in lightbox for mobile devices.
+-Updated Dutch and German Languages.
+-Fixed the double sliders issue.
+-Added filter cyberchimps_sidebar_before_widget to add markup before widget.
+-Updated footer image logo.
+
 Version 5.1.15 (5-9-13)
 -Replaced get_template_directory_uri() with the variable already declared locally in the function in cyberchimps/functions.php.
 
