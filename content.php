@@ -61,11 +61,12 @@
 			
 		if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
-				<?php cyberchimps_posted_on(); ?>
-				
-				<?php cyberchimps_posted_in() ?>
-        
-				<?php cyberchimps_post_comments() ?>
+				<?php
+				cyberchimps_posted_on();
+				cyberchimps_posted_by();
+				cyberchimps_posted_in();
+				cyberchimps_post_comments();
+				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
