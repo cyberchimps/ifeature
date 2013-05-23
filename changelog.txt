@@ -2,6 +2,11 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.17 (5-23-13)
+-Added function cyberchimps_posted_by() to display author link.
+-Modified function cyberchimps_posted_on(), tags containing date fields are made to be printed only when date toggle is on.
+-Added function call to cyberchimps_posted_by().
+
 Version 5.1.16 (5-17-13)
 -Updated slimbox to latest version.
 -Prevented default click action on mobile level slimbox.
