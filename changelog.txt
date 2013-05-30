@@ -2,6 +2,10 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.18 (5-30-13)
+-Removed modal welcome note on theme install.
+-Boxes - added filter for default number 
+
 Version 5.1.17 (5-23-13)
 -Added function cyberchimps_posted_by() to display author link.
 -Modified function cyberchimps_posted_on(), tags containing date fields are made to be printed only when date toggle is on.
