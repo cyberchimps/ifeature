@@ -2,6 +2,13 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.19 (6-6-13)
+-Updated meta in pot file.
+-Added updated class to the time tag in cyberchimps_posted_on() function.
+-Fixed custom css sanitization at php and js levels.
+-Updated woocommerce styling.
+-Improved comments schema for microformats.
+
 Version 5.1.18 (5-30-13)
 -Removed modal welcome note on theme install.
 -Boxes - added filter for default number 
