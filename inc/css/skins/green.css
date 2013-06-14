@@ -25,16 +25,16 @@ a:visited {
 a:hover {
 	color: #6DA03A;
 }
-h2.entry-title {
+h1.entry-title {
 	color: #3A6D07;
 }
-h2.entry-title a {
+h1.entry-title a {
 	color: #3A6D07;
 }
-h2.entry-title a:visited {
+h1.entry-title a:visited {
 	color: #3A6D07;
 }
-h2.entry-title a:hover {
+h1.entry-title a:hover {
 	color: #6DA03A;
 }
 

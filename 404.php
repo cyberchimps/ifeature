@@ -33,11 +33,11 @@ get_header(); ?>
 			
 					<article id="post-0" class="post error404 not-found">
 						<header class="entry-header">
-							<h2 class="entry-title">
+							<h1 class="entry-title">
 								<?php if( cyberchimps_get_option( 'error_custom_title' ) != '' ): ?>
 					  <?php echo cyberchimps_get_option( 'error_custom_title' ); ?>
 					  <?php else: ?>
-								<?php _e( 'Oops! That page cannot be found.', 'cyberchimps' ); ?></h2>
+								<?php _e( 'Oops! That page cannot be found.', 'cyberchimps' ); ?></h1>
 					  <?php endif; ?>
 						</header>
 			
