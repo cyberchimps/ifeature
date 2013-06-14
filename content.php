@@ -28,11 +28,11 @@
 			 
 			if( is_search() ):
 			?>
-				<h1 class='entry-title'>
+				<h2 class='entry-title'>
 					<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'cyberchimps' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
 						<?php ( get_the_title() )? the_title() : the_permalink(); ?>
 					</a>
-				</h1>
+				</h2>
 			<?php	
 			elseif( $page_title == "1" || $page_title == "" ) :
 				echo "<h1 class='entry-title'>";
@@ -50,11 +50,11 @@
 					</h1>
 		<?php	endif;
 			else : ?>
-				<h1 class="entry-title">
+				<h2 class="entry-title">
 					<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'cyberchimps' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
 						<?php ( get_the_title() )? the_title() : the_permalink(); ?>
 					</a>
-				</h1>
+				</h2>
 		<?php
 			endif;
 		endif;

@@ -470,16 +470,16 @@ blockquote cite:before {
 
 /*==================================== TAXONOMY ========================================================*/
 
-h1.entry-title {
+.entry-title {
   font-weight: 400;
   line-height: 1.2em;
   margin-bottom: 2px;
   font-size: 31.5px;
 }
-h1.entry-title a {
+.entry-title a {
   color: #333333;
 }
-h1.entry-title a:hover {
+.entry-title a:hover {
 	color: #0088CC;
 	text-decoration: none;
 }
