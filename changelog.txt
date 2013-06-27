@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.22 (6-27-13)
+-Updated twitter API to v1.1
+
 Version 5.1.21 (6-21-13)
 -Replaced headlines tags from h2 to h1 at required places.
 
