@@ -2,6 +2,14 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.23 (7-4-13)
+-Removed twitter element.
+-Updated default images and icons.
+-Updated translation.
+-Added option to add title to blog page.
+-Updated carousel plugin.
+-Fixed YouTube video responsive issue.
+
 Version 5.1.22 (6-27-13)
 -Updated twitter API to v1.1
 
