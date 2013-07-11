@@ -2,6 +2,11 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.24 (7-11-13)
+- Added filters to widget titles.
+- Woocommerce - removed max-width.
+- Changed where the skin css gets added in the head.
+
 Version 5.1.23 (7-4-13)
 -Removed twitter element.
 -Updated default images and icons.
