@@ -2,6 +2,11 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.26 (7-26-13)
+- Added upsell page listing all CyberChimps themes.
+- Added one click plugin instalation support for "Easy Digital Download".
+- Added polish language support.
+
 Version 5.1.25 (7-19-13)
 - Swapped position of buttons "Save Option" and "Restore Defaults" so that when you are in an input field, on press of "Enter" it saves the options.
 - Added default text for boxes element.
