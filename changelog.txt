@@ -2,6 +2,10 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.27 (8-2-13)
+- Fixed site width issue.
+- Half slider order tweak.
+
 Version 5.1.26 (7-26-13)
 - Added upsell page listing all CyberChimps themes.
 - Added one click plugin instalation support for "Easy Digital Download".
