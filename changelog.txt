@@ -2,6 +2,12 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.27 (8-9-13)
+- Removed duplicated customizer menu for WPv3.6.
+- Fixed standard violation notices regarding Walker class for WPv3.6.
+- Added functionality to allow HTML Footer Copyright Text option.
+- Updated URLs to theme's help, guides, forum page etc.
+
 Version 5.1.27 (8-2-13)
 - Fixed site width issue.
 - Half slider order tweak.
