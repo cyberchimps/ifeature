@@ -1037,6 +1037,13 @@ h2.box-widget-title {
 		padding-right: 20px;
 		padding-left: 20px;
 	}
+	body {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.container-full-width .container{
+		margin: 0px 20px;
+	}
 }
 /*==================================== PHONES ====================================================*/
 
@@ -1061,6 +1068,9 @@ h2.box-widget-title {
 	}
 	.container-full .top-head-social .icons {
 		margin-bottom: 10px;
+	}
+	.container-full-width .container{
+		margin: 0px 10px;
 	}
 }
 
