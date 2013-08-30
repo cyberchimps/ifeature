@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.32 (8-30-13)
+- Added new class for metabox options.
+
 Version 5.1.31 (8-23-13)
 - Social icons reordering.
 - Upsell page update: Updated screenshot and info of Neuro Pro.
