@@ -2,7 +2,11 @@ iFeature Changelog
 
 ****************************
 
-Version 5.1.34 (13-6-13)
+Version 5.1.35 (9-20-13)
+- Slider option from post is removed as it was not part of free themes.
+- Fixed google font issue.
+
+Version 5.1.34 (9-13-13)
 - Updated README file.
 
 Version 5.1.33 (9-6-13)
