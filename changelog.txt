@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.36 9-27-13)
+- Upsell page: If the listed theme is installed then add a tick mark next to it.
+
 Version 5.1.35 (9-20-13)
 - Slider option from post is removed as it was not part of free themes.
 - Fixed google font issue.
