@@ -2,7 +2,7 @@ iFeature Changelog
 
 ****************************
 
-Version 5.1.36 9-27-13)
+Version 5.1.36 (9-27-13)
 - Upsell page: If the listed theme is installed then add a tick mark next to it.
 
 Version 5.1.35 (9-20-13)
