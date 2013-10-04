@@ -17,25 +17,31 @@
 /********************************************************************************************************************/
 
 a {
-	color: #3A6D07;
+	color: #3a6d07;
 }
+
 a:visited {
-	color: #3A6D07;
+	color: #3a6d07;
 }
+
 a:hover {
-	color: #6DA03A;
+	color: #6da03a;
 }
+
 .entry-title {
-	color: #3A6D07;
+	color: #3a6d07;
 }
+
 .entry-title a {
-	color: #3A6D07;
+	color: #3a6d07;
 }
+
 .entry-title a:visited {
-	color: #3A6D07;
+	color: #3a6d07;
 }
+
 .entry-title a:hover {
-	color: #6DA03A;
+	color: #6da03a;
 }
 
 /********************************************************************************************************************/
@@ -43,81 +49,98 @@ a:hover {
 /********************************************************************************************************************/
 
 .main-navigation .navbar-inner {
-	background: #3A6D07;
-  background: -moz-linear-gradient(top,  #d4f9ae 0%, #8FC15D 1%, #6DA03A 51%, #4d910a 52%, #3A6D07 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d4f9ae), color-stop(1%,#8FC15D), color-stop(51%,#6DA03A), color-stop(52%,#4d910a), color-stop(100%,#3A6D07));
-  background: -webkit-linear-gradient(top,  #d4f9ae 0%,#8FC15D 1%,#6DA03A 51%,#4d910a 52%,#3A6D07 100%);
-  background: -o-linear-gradient(top,  #d4f9ae 0%,#8FC15D 1%,#6DA03A 51%,#4d910a 52%,#3A6D07 100%);
-  background: -ms-linear-gradient(top,  #d4f9ae 0%,#8FC15D 1%,#6DA03A 51%,#4d910a 52%,#3A6D07 100%);
-  background: linear-gradient(to bottom,  #d4f9ae 0%,#8FC15D 1%,#6DA03A 51%,#4d910a 52%,#3A6D07 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8FC15D', endColorstr='#3A6D07',GradientType=0 );
-  border-color: #7faa53 #487021 #487021 #487021;
+	background: #3a6d07;
+	background: -moz-linear-gradient(top, #d4f9ae 0%, #8fc15d 1%, #6da03a 51%, #4d910a 52%, #3a6d07 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d4f9ae), color-stop(1%, #8fc15d), color-stop(51%, #6da03a), color-stop(52%, #4d910a), color-stop(100%, #3a6d07));
+	background: -webkit-linear-gradient(top, #d4f9ae 0%, #8fc15d 1%, #6da03a 51%, #4d910a 52%, #3a6d07 100%);
+	background: -o-linear-gradient(top, #d4f9ae 0%, #8fc15d 1%, #6da03a 51%, #4d910a 52%, #3a6d07 100%);
+	background: -ms-linear-gradient(top, #d4f9ae 0%, #8fc15d 1%, #6da03a 51%, #4d910a 52%, #3a6d07 100%);
+	background: linear-gradient(to bottom, #d4f9ae 0%, #8fc15d 1%, #6da03a 51%, #4d910a 52%, #3a6d07 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8FC15D', endColorstr='#3A6D07', GradientType=0);
+	border-color: #7faa53 #487021 #487021 #487021;
 }
+
 .main-navigation .nav > li {
-  border-right: 1px solid #666;
-  -webkit-box-shadow:  1px 0px 0px 0px rgba(256,256,256,0.3);
-  box-shadow:  1px 0px 0px 0px rgba(256,256,256,0.3);
+	border-right: 1px solid #666666;
+	-webkit-box-shadow: 1px 0px 0px 0px rgba(256, 256, 256, 0.3);
+	box-shadow: 1px 0px 0px 0px rgba(256, 256, 256, 0.3);
 }
+
 .main-navigation .nav > li > a:hover {
-	background: #3A6D07;
+	background: #3a6d07;
 }
+
 .main-navigation .nav li.dropdown.active > .dropdown-toggle, .current-menu-ancestor.dropdown {
-	color: #fff;
-	background: #3A6D07;
+	color: #ffffff;
+	background: #3a6d07;
 }
+
 .main-navigation .nav li.dropdown.active > .dropdown-toggle .caret {
-	border-top-color: #fff;
-	border-bottom-color: #fff;
+	border-top-color: #ffffff;
+	border-bottom-color: #ffffff;
 }
+
 .main-navigation .nav > li.dropdown > a.dropdown-toggle .caret {
-	border-top-color: #ddd;
-	border-bottom-color: #ddd;
-  margin-top: 10px;
+	border-top-color: #dddddd;
+	border-bottom-color: #dddddd;
+	margin-top: 10px;
 }
+
 .main-navigation .nav .active > a, .main-navigation .nav .current_page_item > a {
-  color: #ddd;
-  background: #3A6D07;
+	color: #dddddd;
+	background: #3a6d07;
 }
+
 .main-navigation .nav li.dropdown:hover ul.dropdown-menu {
-	background: #6DA03A;
+	background: #6da03a;
 }
+
 .navbar .nav > li > .dropdown-menu::before {
-	border-bottom: 7px solid #6DA03A;
+	border-bottom: 7px solid #6da03a;
 }
+
 .navbar .nav > li > .dropdown-menu::after {
-	border-bottom: 6px solid #6DA03A;
+	border-bottom: 6px solid #6da03a;
 }
+
 .main-navigation .nav li ul li a:hover, .main-navigation .nav .current_page_item > a:hover {
-	color: #ddd;
-	background-color: #3A6D07;
+	color: #dddddd;
+	background-color: #3a6d07;
 }
+
 @media (max-width: 979px) {
 	.nav-collapse.in {
 		background-image: none;
-		background-color: #3E7508;
+		background-color: #3e7508;
 	}
+
 	.nav-collapse.in .nav li {
-		background-color: #3E7508;
+		background-color: #3e7508;
 	}
+
 	.nav-collapse.in .nav ul {
-		background: #3E7508;
+		background: #3e7508;
 	}
+
 	.navbar-inverse .nav-collapse.in .nav > li > a:hover, .navbar-inverse .nav-collapse.in .dropdown-menu a:hover {
-		color: #fff;
+		color: #ffffff;
 		background-color: #315b06;
 	}
+
 	.navbar-inverse .nav-collapse.in .nav li a, .nav-collapse.in .dropdown-menu a {
-		color: #fff;
+		color: #ffffff;
 		font-weight: normal;
 		text-shadow: none;
 	}
+
 	.navbar-inverse .nav-collapse.in .nav > li.current-menu-item > a, .navbar-inverse .nav-collapse.in .nav > li.current-menu-ancestor > a {
-		color: #fff;
+		color: #ffffff;
 		box-shadow: none;
 		background: #315b06;
 	}
+
 	.navbar-inverse .nav-collapse.in .dropdown-menu .active > a, .navbar-inverse .nav li.dropdown.active > .dropdown-toggle {
-		color: #fff;
+		color: #ffffff;
 		background-image: none;
 		background-color: #315b06;
 	}
@@ -128,17 +151,17 @@ a:hover {
 /********************************************************************************************************************/
 
 #sidebar h3.widget-title {
-  color: #fff;
-  font-weight: 100;
-  background: #b6b6b6;
-  background: -moz-linear-gradient(top,  #d4f9ae 0%, #8FC15D 2%, #3A6D07 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d4f9ae), color-stop(2%,#8FC15D), color-stop(100%,#3A6D07));
-  background: -webkit-linear-gradient(top,  #d4f9ae 0%,#8FC15D 2%,#3A6D07 100%);
-  background: -o-linear-gradient(top,  #d4f9ae 0%,#8FC15D 2%,#3A6D07 100%);
-  background: -ms-linear-gradient(top,  #d4f9ae 0%,#8FC15D 2%,#3A6D07 100%);
-  background: linear-gradient(to bottom,  #d4f9ae 0%,#8FC15D 2%,#3A6D07 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8FC15D', endColorstr='#3A6D07',GradientType=0 );
-  border-color: #7faa53 #487021 #487021 #487021;
+	color: #ffffff;
+	font-weight: 100;
+	background: #b6b6b6;
+	background: -moz-linear-gradient(top, #d4f9ae 0%, #8fc15d 2%, #3a6d07 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d4f9ae), color-stop(2%, #8fc15d), color-stop(100%, #3a6d07));
+	background: -webkit-linear-gradient(top, #d4f9ae 0%, #8fc15d 2%, #3a6d07 100%);
+	background: -o-linear-gradient(top, #d4f9ae 0%, #8fc15d 2%, #3a6d07 100%);
+	background: -ms-linear-gradient(top, #d4f9ae 0%, #8fc15d 2%, #3a6d07 100%);
+	background: linear-gradient(to bottom, #d4f9ae 0%, #8fc15d 2%, #3a6d07 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8FC15D', endColorstr='#3A6D07', GradientType=0);
+	border-color: #7faa53 #487021 #487021 #487021;
 }
 
 /********************************************************************************************************************/
@@ -146,15 +169,15 @@ a:hover {
 /********************************************************************************************************************/
 
 .postformats {
-  background: #000;
-  background: -moz-linear-gradient(top,  #d4f9ae 0%, #8FC15D 1%, #6DA03A 51%, #4d910a 52%, #3A6D07 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d4f9ae), color-stop(1%,#8FC15D), color-stop(51%,#6DA03A), color-stop(52%,#4d910a), color-stop(100%,#3A6D07));
-  background: -webkit-linear-gradient(top,  #d4f9ae 0%,#8FC15D 1%,#6DA03A 51%,#4d910a 52%,#3A6D07 100%);
-  background: -o-linear-gradient(top,  #d4f9ae 0%,#8FC15D 1%,#6DA03A 51%,#4d910a 52%,#3A6D07 100%);
-  background: -ms-linear-gradient(top,  #d4f9ae 0%,#8FC15D 1%,#6DA03A 51%,#4d910a 52%,#3A6D07 100%);
-  background: linear-gradient(to bottom,  #d4f9ae 0%,#8FC15D 1%,#6DA03A 51%,#4d910a 52%,#3A6D07 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8FC15D', endColorstr='#3A6D07',GradientType=0 );
-  border-color: #7faa53 #487021 #487021 #487021;
+	background: #000000;
+	background: -moz-linear-gradient(top, #d4f9ae 0%, #8fc15d 1%, #6da03a 51%, #4d910a 52%, #3a6d07 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d4f9ae), color-stop(1%, #8fc15d), color-stop(51%, #6da03a), color-stop(52%, #4d910a), color-stop(100%, #3a6d07));
+	background: -webkit-linear-gradient(top, #d4f9ae 0%, #8fc15d 1%, #6da03a 51%, #4d910a 52%, #3a6d07 100%);
+	background: -o-linear-gradient(top, #d4f9ae 0%, #8fc15d 1%, #6da03a 51%, #4d910a 52%, #3a6d07 100%);
+	background: -ms-linear-gradient(top, #d4f9ae 0%, #8fc15d 1%, #6da03a 51%, #4d910a 52%, #3a6d07 100%);
+	background: linear-gradient(to bottom, #d4f9ae 0%, #8fc15d 1%, #6da03a 51%, #4d910a 52%, #3a6d07 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8FC15D', endColorstr='#3A6D07', GradientType=0);
+	border-color: #7faa53 #487021 #487021 #487021;
 }
 
 /********************************************************************************************************************/
@@ -162,12 +185,13 @@ a:hover {
 /********************************************************************************************************************/
 
 .pagination ul li a {
-	color: #3A6D07;
+	color: #3a6d07;
 	border: 1px solid #487021;
 }
+
 .pagination ul li.active a, .pagination ul li a:hover {
-	background-color: #6DA03A;
-	border:  1px solid #487021;
+	background-color: #6da03a;
+	border: 1px solid #487021;
 }
 
 /********************************************************************************************************************/
@@ -175,20 +199,20 @@ a:hover {
 /********************************************************************************************************************/
 
 #callout_button a .btn-primary {
-	background: #000;
-  background: -moz-linear-gradient(top,  #d4f9ae 0%, #8FC15D 1%, #6DA03A 51%, #4d910a 52%, #3A6D07 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d4f9ae), color-stop(1%,#8FC15D), color-stop(51%,#6DA03A), color-stop(52%,#4d910a), color-stop(100%,#3A6D07));
-  background: -webkit-linear-gradient(top,  #d4f9ae 0%,#8FC15D 1%,#6DA03A 51%,#4d910a 52%,#3A6D07 100%);
-  background: -o-linear-gradient(top,  #d4f9ae 0%,#8FC15D 1%,#6DA03A 51%,#4d910a 52%,#3A6D07 100%);
-  background: -ms-linear-gradient(top,  #d4f9ae 0%,#8FC15D 1%,#6DA03A 51%,#4d910a 52%,#3A6D07 100%);
-  background: linear-gradient(to bottom,  #d4f9ae 0%,#8FC15D 1%,#6DA03A 51%,#4d910a 52%,#3A6D07 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8FC15D', endColorstr='#3A6D07',GradientType=0 );
-  border-color: #7faa53 #487021 #487021 #487021;
-}
-#callout_button a:hover .btn {
-	background-color: #3A6D07;
+	background: #000000;
+	background: -moz-linear-gradient(top, #d4f9ae 0%, #8fc15d 1%, #6da03a 51%, #4d910a 52%, #3a6d07 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d4f9ae), color-stop(1%, #8fc15d), color-stop(51%, #6da03a), color-stop(52%, #4d910a), color-stop(100%, #3a6d07));
+	background: -webkit-linear-gradient(top, #d4f9ae 0%, #8fc15d 1%, #6da03a 51%, #4d910a 52%, #3a6d07 100%);
+	background: -o-linear-gradient(top, #d4f9ae 0%, #8fc15d 1%, #6da03a 51%, #4d910a 52%, #3a6d07 100%);
+	background: -ms-linear-gradient(top, #d4f9ae 0%, #8fc15d 1%, #6da03a 51%, #4d910a 52%, #3a6d07 100%);
+	background: linear-gradient(to bottom, #d4f9ae 0%, #8fc15d 1%, #6da03a 51%, #4d910a 52%, #3a6d07 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8FC15D', endColorstr='#3A6D07', GradientType=0);
+	border-color: #7faa53 #487021 #487021 #487021;
 }
 
+#callout_button a:hover .btn {
+	background-color: #3a6d07;
+}
 
 /********************************************************************************************************************/
 /****************************************** ADD ONS *****************************************************************/
@@ -196,7 +220,7 @@ a:hover {
 
 /*==================================== The Events Calendar ====================================================*/
 .tribe-event-notices {
-	background: #8FC15D;
-    border: 1px solid;
-    border-color: #7faa53 #487021 #487021 #487021;
+	background: #8fc15d;
+	border: 1px solid;
+	border-color: #7faa53 #487021 #487021 #487021;
 }

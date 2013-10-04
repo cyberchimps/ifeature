@@ -14,7 +14,7 @@
  */
 ?>
 
-<form method="get"  id="searchform" class="navbar-search pull-right" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
-	<input type="text" class="search-query input-medium" name="s" placeholder="<?php esc_attr_e( 'Search', 'cyberchimps' ) . ' &hellip;'; ?>" />
+<form method="get" id="searchform" class="navbar-search pull-right" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+	<input type="text" class="search-query input-medium" name="s" placeholder="<?php esc_attr_e( 'Search', 'cyberchimps' ) . ' &hellip;'; ?>"/>
 </form>
 <div class="clear"></div>

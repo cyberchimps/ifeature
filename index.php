@@ -12,13 +12,13 @@
  * @license  http://www.opensource.org/licenses/gpl-license.php GPL v2.0 (or later)
  * @link     http://www.cyberchimps.com/
  */
- 
+
 get_header(); ?>
 
 <?php do_action( 'cyberchimps_before_container' ); ?>
-	
-<?php do_action( 'cyberchimps_blog_content' ); ?>	
 
-<?php do_action( 'cyberchimps_after_container'); ?>
+<?php do_action( 'cyberchimps_blog_content' ); ?>
+
+<?php do_action( 'cyberchimps_after_container' ); ?>
 
 <?php get_footer(); ?>
