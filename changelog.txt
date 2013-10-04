@@ -2,6 +2,10 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.36 (10-4-13)
+- Minified JS.
+- Reformatted code( Replaced spaces with tabs ).
+
 Version 5.1.36 (9-27-13)
 - Upsell page: If the listed theme is installed then add a tick mark next to it.
 
