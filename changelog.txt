@@ -2,7 +2,10 @@ iFeature Changelog
 
 ****************************
 
-Version 5.1.36 (10-4-13)
+Version 5.1.38 (10-11-13)
+- Changed ID name separator to (_) from (-) for elements/boxes.php
+
+Version 5.1.37 (10-4-13)
 - Minified JS.
 - Reformatted code( Replaced spaces with tabs ).
 
