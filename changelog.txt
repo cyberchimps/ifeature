@@ -2,6 +2,10 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.39 (10-18-13)
+- Container width fix.
+- Added class cc-responsive if responisve design is on.
+
 Version 5.1.38 (10-11-13)
 - Changed ID name separator to (_) from (-) for elements/boxes.php
 
