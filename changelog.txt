@@ -2,8 +2,10 @@ iFeature Changelog
 
 ****************************
 
-Version 5.1.40 (10-28-13)
+Version 5.1.40 (10-30-13)
 - Slider lite ID separator change from (-) to(_). Changed affected JS and CSS.
+- Theme License update to GPL v3.0
+- Updated Font licenses
 
 Version 5.1.39 (10-18-13)
 - Container width fix.
