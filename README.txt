@@ -3,7 +3,7 @@ iFeature 5 Responsive Drag and Drop WordPress Theme
 
 - iFeature 5
 - by CyberChimps http://cyberchimps.com
-- Licensed under GNU General Public License v2.0 - http://www.gnu.org/licenses/gpl-2.0.html
+- Licensed under GNU General Public License v3.0 - http://www.gnu.org/licenses/gpl-3.0.html
 
 - Bootstrap
 - Adds core styles and responsive structure
@@ -30,19 +30,9 @@ iFeature 5 Responsive Drag and Drop WordPress Theme
 - by David Furfero http://touchpunch.furf.com/
 - dual licensed under the MIT or GPL Version 2 licenses.
 
-- Noto Sans and Imprima
-- Fonts using @import from Google
-- by Google http://www.google.com/fonts
-- licensed under the Creative Commons license (http://creativecommons.org/licenses/by/3.0/) Google.com
-
-- Magazine Image
-- the magazine image used by default in the header image
-- by 123rf http://123rf.com
-- licensed under the 123RF LIMITED ROYALTY FREE LICENSE AGREEMENT (Extended Electronic Distribution RF License) http://www.123rf.com/license.php?type=el_electronic
-
 - All other images
 - by CyberChimps http://cyberchimps.com
-- Licensed under GNU General Public License v2.0 - http://www.gnu.org/licenses/gpl-2.0.html
+- Licensed under GNU General Public License v3.0 - http://www.gnu.org/licenses/gpl-3.0.html
 
 ====================================================================================================================================
 
