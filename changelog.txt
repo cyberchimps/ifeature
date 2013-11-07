@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.42 (11-7-13)
+- Removed unused code
+
 Version 5.1.41 (11-1-13)
 - Added new metabox class.
 
