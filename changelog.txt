@@ -2,6 +2,11 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.43 (11-8-13)
+- Translation domain fix.
+- Sanitization added to few metabox option types.
+- Js minification in core.
+
 Version 5.1.42 (11-7-13)
 - Removed unused code
 
