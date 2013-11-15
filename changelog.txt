@@ -2,6 +2,11 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.44 (11-15-13)
+- Added new background image option.
+- Js minification for elements.
+- Translation update.
+
 Version 5.1.43 (11-12-13)
 - Remove skins in customizer
 - Post slides removed
