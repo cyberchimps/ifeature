@@ -1,7 +1,7 @@
 iFeature 5 Responsive Drag and Drop WordPress Theme
 ====================================================
 
-- iFeature 5
+- iFeature 5, Copyright 2013
 - by CyberChimps http://cyberchimps.com
 - Licensed under GNU General Public License v3.0 - http://www.gnu.org/licenses/gpl-3.0.html
 
