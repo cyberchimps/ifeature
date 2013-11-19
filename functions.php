@@ -195,15 +195,6 @@ add_filter( 'cyberchimps_slide_pro_img1', 'ifeature_slider_image_1' );
 add_filter( 'cyberchimps_slide_pro_img2', 'ifeature_slider_image_1' );
 add_filter( 'cyberchimps_slide_pro_img3', 'ifeature_slider_image_1' );
 
-// default background color
-function ifeature_default_background_color() {
-	$color = 'f7f7f7';
-
-	return $color;
-}
-
-add_filter( 'default_background_color', 'ifeature_default_background_color' );
-
 // Default for twitter bar handle
 function cyberchimps_twitter_handle_filter() {
 	return 'WordPress';
@@ -245,22 +236,6 @@ function ifeature_skin_color_options( $options ) {
 }
 
 add_filter( 'cyberchimps_skin_color', 'ifeature_skin_color_options', 1 );
-
-// theme specific background images
-function ifeature_background_image( $options ) {
-	$imagepath = get_template_directory_uri() . '/cyberchimps/lib/images/';
-	$options   = array(
-		'none'  => $imagepath . 'backgrounds/thumbs/none.png',
-		'noise' => $imagepath . 'backgrounds/thumbs/noise.png',
-		'blue'  => $imagepath . 'backgrounds/thumbs/blue.png',
-		'dark'  => $imagepath . 'backgrounds/thumbs/dark.png',
-		'space' => $imagepath . 'backgrounds/thumbs/space.png'
-	);
-
-	return $options;
-}
-
-add_filter( 'cyberchimps_background_image', 'ifeature_background_image' );
 
 // theme specific typography options
 function ifeature_typography_sizes( $sizes ) {
