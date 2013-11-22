@@ -13,6 +13,15 @@
  * @link     http://www.cyberchimps.com/
  */
 
+// Theme check function to determine whether the them is free or pro.
+if( !function_exists( 'cyberchimps_theme_check' ) ) {
+	function cyberchimps_theme_check() {
+		$level = 'free';
+
+		return $level;
+	}
+}
+
 // Load Core
 require_once( get_template_directory() . '/cyberchimps/init.php' );
 
@@ -106,15 +115,6 @@ function cyberchimps_next_previous_posts() {
 
 add_action( 'cyberchimps_after_content', 'cyberchimps_next_previous_posts' );
 
-if( !function_exists( 'cyberchimps_theme_check' ) ) :
-// core options customization Names and URL's
-//Pro or Free has to stay prepended with cyberchimps_
-	function cyberchimps_theme_check() {
-		$level = 'free';
-
-		return $level;
-	}
-endif;
 //Theme Name
 function ifeature_options_theme_name() {
 	$text = 'iFeature';
