@@ -2,6 +2,11 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.45 (12-04-13)
+- Image size fix: Hooked add_image_size to after_setup_theme.
+- Deleted unused images.
+- Added TGM class to recommend responsive Add Ons.
+
 Version 5.1.44 (11-15-13)
 - Added new background image option.
 - Js minification for elements.
