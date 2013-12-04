@@ -6,6 +6,8 @@ Version 5.1.45 (12-04-13)
 - Image size fix: Hooked add_image_size to after_setup_theme.
 - Deleted unused images.
 - Added TGM class to recommend responsive Add Ons.
+- Removed Google Analytics option (requested by WordPress).
+- Removed theme redirection (requested by WordPress).
 
 Version 5.1.44 (11-15-13)
 - Added new background image option.
