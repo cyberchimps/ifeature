@@ -2,6 +2,12 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.46 (12-11-13)
+- Added Font-Based Social Icons.
+- Integrated Font Awesome (Bootstrap font).
+- Added retina ready images and style for it.
+- Changed the way of metabox css/js getting enqueued to support child theme.
+
 Version 5.1.45 (12-04-13)
 - Image size fix: Hooked add_image_size to after_setup_theme.
 - Deleted unused images.
