@@ -142,7 +142,7 @@ msgstr "%1$s pada %2$s"
 
 #: ../../functions.php
 msgid "iFeature Responsive Drag and Drop WordPress Theme"
-msgstr "iFeature Responsif Drag dan Drop Wordpress Theme"
+msgstr "iFeature Responsif Drag dan Drop WordPress Theme"
 
 #: ../../functions.php
 msgid "Logo"

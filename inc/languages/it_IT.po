@@ -116,7 +116,7 @@ msgstr "WordPress"
 #: ../../footer.php
 msgid ""
 "Powered by WordPress, state-of-the-art semantic personal publishing platform."
-msgstr "Funziona con Wordpress."
+msgstr "Funziona con WordPress."
 
 #: ../../functions.php
 msgid "Pingback:"

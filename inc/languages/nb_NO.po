@@ -139,7 +139,7 @@ msgstr "%1$s den %2$s"
 
 #: ../../functions.php
 msgid "iFeature Responsive Drag and Drop WordPress Theme"
-msgstr "iFeature Responsivt Dra-og-Slipp Wordpress Tema"
+msgstr "iFeature Responsivt Dra-og-Slipp WordPress Tema"
 
 #: ../../functions.php
 msgid "Logo"
