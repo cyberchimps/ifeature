@@ -100,25 +100,20 @@ header#cc-header {
 	font-size: 14px;
 }
 
-#top_header  .top-head-social .icons {
+#top_header .top-head-social .symbol {
 	float: right;
 	margin-top: 5px;
+	margin-right: 0;
 	margin-bottom: 6px;
-}
-
-#top_header  .top-head-social .icons a {
-	float: right;
-	height: 20px;
-	width: 20px;
 	margin-left: 5px;
-}
-
-#top_header  .top-head-social .icons a img {
-	height: 20px;
 	width: 20px;
+	height: 20px;
+	font-size: 2em;
+	padding: 0;
+	line-height: 0.7;
 }
 
-header #social .icons a {
+header #social .symbol {
 	float: right;
 	margin-left: 5px;
 }
