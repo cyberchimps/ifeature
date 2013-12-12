@@ -2,6 +2,10 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.47 (12-12-13)
+- Fixed social icon links.
+- Fixed metabox toggle option.
+
 Version 5.1.46 (12-11-13)
 - Added Font-Based Social Icons.
 - Integrated Font Awesome (Bootstrap font).
