@@ -2,6 +2,10 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.51 (1-14-14)
+- Changed blog layout option text.
+- Fixed upload button not working issue with child themes.
+
 Version 5.1.50 (1-6-14)
 - Modified Helvetica font-family.
 - Removed translation of a variable.
