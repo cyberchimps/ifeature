@@ -2,6 +2,11 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.54 (2-5-14)
+- Fixed multiple thumbnails issue on image attachment page.
+- Fixed image load issue for boxes element.
+- Upsell page tweaked(Font & Text).
+
 Version 5.1.53 (1-27-14)
 - Boxes: Added latest default images and retina versions.
 - Added Danish translation to core.
