@@ -37,7 +37,7 @@ get_header(); ?>
 									<?php if (cyberchimps_get_option( 'error_custom_title' ) != ''): ?>
 										<?php echo cyberchimps_get_option( 'error_custom_title' ); ?>
 									<?php else: ?>
-									<?php _e( 'Oops! That page cannot be found.', 'cyberchimps' ); ?></h1>
+									<?php _e( 'Oops! That page cannot be found.', 'ifeature' ); ?></h1>
 								<?php endif; ?>
 							</header>
 
@@ -45,7 +45,7 @@ get_header(); ?>
 								<?php if( cyberchimps_get_option( 'error_custom_content' ) != '' ): ?>
 									<p><?php echo cyberchimps_get_option( 'error_custom_content' ); ?></p>
 								<?php else: ?>
-									<p><?php _e( 'It looks like nothing was found at this location. Maybe try searching for it?', 'cyberchimps' ); ?></p>
+									<p><?php _e( 'It looks like nothing was found at this location. Maybe try searching for it?', 'ifeature' ); ?></p>
 								<?php endif; ?>
 								<?php get_search_form(); ?>
 

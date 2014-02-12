@@ -13,6 +13,11 @@
  * @link     http://www.cyberchimps.com/
  */
 
+// Load text domain.
+function cyberchimps_text_domain() {
+	load_theme_textdomain( 'ifeature', get_template_directory() . '/inc/languages' );
+}
+
 // Theme check function to determine whether the them is free or pro.
 if( !function_exists( 'cyberchimps_theme_check' ) ) {
 	function cyberchimps_theme_check() {
@@ -56,7 +61,7 @@ if( !function_exists( 'cyberchimps_comment' ) ) :
 			case 'trackback' :
 				?>
 				<li class="post pingback">
-				<p><?php _e( 'Pingback:', 'cyberchimps' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'cyberchimps' ), ' ' ); ?></p>
+				<p><?php _e( 'Pingback:', 'ifeature' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'ifeature' ), ' ' ); ?></p>
 				<?php
 				break;
 			default :
@@ -68,11 +73,11 @@ if( !function_exists( 'cyberchimps_comment' ) ) :
 								<?php echo get_avatar( $comment, 40 ); ?>
 								<?php printf( '%1$s <span class="says">%2$s</span>', sprintf( '<cite class="fn">%1$s</cite>',
 								                                                              get_comment_author_link() ),
-								              __( 'says', 'cyberchimps' ) ); ?>
+								              __( 'says', 'ifeature' ) ); ?>
 							</div>
 							<!-- .comment-author .vcard -->
 							<?php if( $comment->comment_approved == '0' ) : ?>
-								<em><?php _e( 'Your comment is awaiting moderation.', 'cyberchimps' ); ?></em>
+								<em><?php _e( 'Your comment is awaiting moderation.', 'ifeature' ); ?></em>
 								<br/>
 							<?php endif; ?>
 
@@ -81,10 +86,10 @@ if( !function_exists( 'cyberchimps_comment' ) ) :
 									<time pubdate datetime="<?php comment_time( 'c' ); ?>">
 										<?php
 										/* translators: 1: date, 2: time */
-										printf( __( '%1$s at %2$s', 'cyberchimps' ), get_comment_date(), get_comment_time() ); ?>
+										printf( __( '%1$s at %2$s', 'ifeature' ), get_comment_date(), get_comment_time() ); ?>
 									</time>
 								</a>
-								<?php edit_comment_link( __( '(Edit)', 'cyberchimps' ), ' ' );
+								<?php edit_comment_link( __( '(Edit)', 'ifeature' ), ' ' );
 								?>
 							</div>
 							<!-- .comment-meta .commentmetadata -->
@@ -164,7 +169,7 @@ function ifeature_options_help_header() {
 }
 
 function ifeature_options_help_sub_header() {
-	$text = __( 'iFeature Responsive Drag and Drop WordPress Theme', 'cyberchimps' );
+	$text = __( 'iFeature Responsive Drag and Drop WordPress Theme', 'ifeature' );
 
 	return $text;
 }
@@ -205,7 +210,7 @@ add_filter( 'cyberchimps_twitter_handle_filter', 'cyberchimps_twitter_handle_fil
 // default header option
 function ifeature_header_drag_and_drop_default() {
 	$option = array(
-		'cyberchimps_logo' => __( 'Logo', 'cyberchimps' )
+		'cyberchimps_logo' => __( 'Logo', 'ifeature' )
 	);
 
 	return $option;
@@ -300,7 +305,7 @@ add_filter( 'cyberchimps_entry_meta_sep', 'ifeature_seperator' );
 //add imenu section
 function ifeature_sections_filter( $sections ) {
 	$new_sections = array( array( 'id'      => 'cyberchimps_imenu_section',
-	                              'label'   => __( 'iMenu Options', 'cyberchimps' ),
+	                              'label'   => __( 'iMenu Options', 'ifeature' ),
 	                              'heading' => 'cyberchimps_header_heading'
 	)
 	);
@@ -313,7 +318,7 @@ add_filter( 'cyberchimps_sections_filter', 'ifeature_sections_filter' );
 
 // add top bar option and add contact information
 function ifeature_fields_filter( $fields ) {
-	$new_fields = array( array( 'name'    => __( 'Menu Home Icon', 'cyberchimps' ),
+	$new_fields = array( array( 'name'    => __( 'Menu Home Icon', 'ifeature' ),
 	                            'id'      => 'menu_home_button',
 	                            'type'    => 'toggle',
 	                            'std'     => 1,

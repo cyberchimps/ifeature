@@ -30,7 +30,7 @@
 
 			if( is_search() ):
 				?>
-				<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'cyberchimps' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
+				<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'ifeature' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
 					<?php ( get_the_title() ) ? the_title() : the_permalink(); ?>
 				</a>
 			<?php
@@ -46,7 +46,7 @@
 					<?php ( get_the_title() ) ? the_title() : the_permalink(); ?>
 				<?php    endif;
 			else : ?>
-				<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'cyberchimps' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
+				<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'ifeature' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
 					<?php ( get_the_title() ) ? the_title() : the_permalink(); ?>
 				</a>
 			<?php
@@ -72,9 +72,9 @@
 
 		<div class="entry-content">
 			<?php cyberchimps_featured_image(); ?>
-			<?php the_content( __( 'Continue reading', 'cyberchimps' ) . ' <span class="meta-nav">&rarr;</span>' ); ?>
-			<?php edit_post_link( __( 'Edit', 'cyberchimps' ), '<span class="edit-link">', '</span>' ); ?>
-			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'cyberchimps' ), 'after' => '</div>' ) ); ?>
+			<?php the_content( __( 'Continue reading', 'ifeature' ) . ' <span class="meta-nav">&rarr;</span>' ); ?>
+			<?php edit_post_link( __( 'Edit', 'ifeature' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'ifeature' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 
 	<?php elseif( is_archive() ): ?>
@@ -86,8 +86,8 @@
 		<?php else: ?>
 			<div class="entry-content">
 				<?php cyberchimps_featured_image(); ?>
-				<?php the_content( __( 'Continue reading', 'cyberchimps' ) . ' <span class="meta-nav">&rarr;</span>' ); ?>
-				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'cyberchimps' ), 'after' => '</div>' ) ); ?>
+				<?php the_content( __( 'Continue reading', 'ifeature' ) . ' <span class="meta-nav">&rarr;</span>' ); ?>
+				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'ifeature' ), 'after' => '</div>' ) ); ?>
 			</div><!-- .entry-content -->
 		<?php endif; ?>
 
@@ -107,7 +107,7 @@
 		<div class="entry-summary">
 			<?php cyberchimps_featured_image(); ?>
 			<?php the_content(); ?>
-			<?php edit_post_link( __( 'Edit', 'cyberchimps' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php edit_post_link( __( 'Edit', 'ifeature' ), '<span class="edit-link">', '</span>' ); ?>
 		</div><!-- .entry-summary -->
 
 	<?php
@@ -116,14 +116,14 @@
 			<div class="entry-summary">
 				<?php cyberchimps_featured_image(); ?>
 				<?php the_excerpt(); ?>
-				<?php edit_post_link( __( 'Edit', 'cyberchimps' ), '<span class="edit-link">', '</span>' ); ?>
+				<?php edit_post_link( __( 'Edit', 'ifeature' ), '<span class="edit-link">', '</span>' ); ?>
 			</div>
 		<?php else: ?>
 			<div class="entry-content">
 				<?php cyberchimps_featured_image(); ?>
-				<?php the_content( __( 'Continue reading', 'cyberchimps' ) . ' <span class="meta-nav">&rarr;</span>' ); ?>
-				<?php edit_post_link( __( 'Edit', 'cyberchimps' ), '<span class="edit-link">', '</span>' ); ?>
-				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'cyberchimps' ), 'after' => '</div>' ) ); ?>
+				<?php the_content( __( 'Continue reading', 'ifeature' ) . ' <span class="meta-nav">&rarr;</span>' ); ?>
+				<?php edit_post_link( __( 'Edit', 'ifeature' ), '<span class="edit-link">', '</span>' ); ?>
+				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'ifeature' ), 'after' => '</div>' ) ); ?>
 			</div><!-- .entry-content -->
 		<?php endif; ?>
 

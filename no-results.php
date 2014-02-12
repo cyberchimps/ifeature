@@ -16,7 +16,7 @@
 
 <article id="post-0" class="post no-results not-found">
 	<header class="entry-header">
-		<h1 class="entry-title"><?php _e( 'Nothing Found', 'cyberchimps' ); ?></h1>
+		<h1 class="entry-title"><?php _e( 'Nothing Found', 'ifeature' ); ?></h1>
 	</header>
 	<!-- .entry-header -->
 
@@ -24,20 +24,20 @@
 		<?php if( is_home() ) { ?>
 
 			<p><?php printf( '%1$s <a href="%2$s">%3$s</a>.',
-			                 __( 'Ready to publish your first post?', 'cyberchimps' ),
+			                 __( 'Ready to publish your first post?', 'ifeature' ),
 			                 admin_url( 'post-new.php' ),
-			                 __( 'Get started here', 'cyberchimps' ) ); ?></p>
+			                 __( 'Get started here', 'ifeature' ) ); ?></p>
 
 		<?php }
 		elseif( is_search() ) { ?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'cyberchimps' ); ?></p>
+			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'ifeature' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php }
 		else { ?>
 
-			<p><?php _e( 'It seems we cannot find what you are looking for. Perhaps searching can help.', 'cyberchimps' ); ?></p>
+			<p><?php _e( 'It seems we cannot find what you are looking for. Perhaps searching can help.', 'ifeature' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php } ?>
