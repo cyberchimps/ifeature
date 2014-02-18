@@ -17,6 +17,7 @@
 function cyberchimps_text_domain() {
 	load_theme_textdomain( 'ifeature', get_template_directory() . '/inc/languages' );
 }
+add_action( 'after_setup_theme', 'cyberchimps_text_domain' );
 
 // Theme check function to determine whether the them is free or pro.
 if( !function_exists( 'cyberchimps_theme_check' ) ) {

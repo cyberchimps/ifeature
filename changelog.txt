@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.56 (2-18-14)
+- Slider is made to be start sliding on page load.
+
 Version 5.1.55 (2-11-14)
 - Updated Translation.
 
