@@ -1078,7 +1078,8 @@ h2.box-widget-title {
 
 .box p {
 	font-size: 1.1em;
-	line-height: 1.2em;
+	line-height: 1.3em;
+	margin-top: 15px;
 }
 
 #boxes-container .box a {
