@@ -2,6 +2,12 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.58 (3-5-14)
+- Fixed conflict between blog post excerpt option and bbpress user profile page.
+- Set up element options defaults for better wp.org preview.
+- Added filter for background default args.
+- HTML Error fix: Added space before menu>li>attribute.
+
 Version 5.1.57 (2-27-14)
 - Slider fix to start on page load.
 - Updated elements images along with boxes images.
