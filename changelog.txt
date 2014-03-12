@@ -2,6 +2,10 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.59 (3-12-14)
+- Fixed duplicate plugin install notification in option page.
+- Modified "More Themes" page to show up all CyberChimps free theme with option to install/activate right there.
+
 Version 5.1.58 (3-5-14)
 - Fixed conflict between blog post excerpt option and bbpress user profile page.
 - Set up element options defaults for better wp.org preview.
