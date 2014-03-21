@@ -2,6 +2,10 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.60 (3-21-14)
+- Updated support forum URL.
+- Fixed IE8 compatibility issue.
+
 Version 5.1.59 (3-12-14)
 - Fixed duplicate plugin install notification in option page.
 - Modified "More Themes" page to show up all CyberChimps free theme with option to install/activate right there.
