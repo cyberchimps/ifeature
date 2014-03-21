@@ -20,8 +20,8 @@ msgstr "Oops! Cette page ne peut pas être trouvé."
 msgid ""
 "It looks like nothing was found at this location. Maybe try searching for it?"
 msgstr ""
-"On dirait que rien n'a été trouvé à cet endroit. Peut-être essayer de "
-"chercher pour elle?"
+"On dirait que rien n'a été trouvé à cet endroit. Peut-être essayer de chercher ailleurs ?"
+
 
 #: ../../archive.php
 msgid "Category Archives: %s"
@@ -63,7 +63,7 @@ msgstr "Commenter la navigation"
 
 #: ../../comments.php
 msgid "Older Comments"
-msgstr "Commentaires âgées"
+msgstr "Anciens commentaires"
 
 #: ../../comments.php
 msgid "Newer Comments"
@@ -201,7 +201,7 @@ msgstr "Les commentaires et les trackbacks sont fermés."
 
 #: ../../no-results.php
 msgid "Nothing Found"
-msgstr "Rien trouvé"
+msgstr "Aucun résultat"
 
 #: ../../no-results.php
 msgid "Ready to publish your first post?"
@@ -223,8 +223,8 @@ msgstr ""
 msgid ""
 "It seems we cannot find what you are looking for. Perhaps searching can help."
 msgstr ""
-"Il semble que nous ne pouvez pas trouver ce que vous recherchez. Peut-être "
-"cherchez peut vous aider."
+"Il semble que nous ne pouvons pas trouver ce que vous recherchez. Essayez de reformuler."
+
 
 #: ../../search.php
 msgid "Search Results for: %s"
@@ -232,7 +232,7 @@ msgstr "Résultats de recherche pour %s"
 
 #: ../../searchform.php
 msgid "Search"
-msgstr "chr"
+msgstr "Recherche"
 
 #: ../../sidebar-right.php ../../sidebar.php ../../sidebar-left.php
 msgid "Subscribe"
