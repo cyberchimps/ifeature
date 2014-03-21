@@ -138,7 +138,7 @@ function ifeature_options_documentation_url() {
 
 // Support Forum URL
 function ifeature_options_support_forum() {
-	$url = 'http://cyberchimps.com/forum/free/ifeature-free/';
+	$url = 'http://cyberchimps.com/forum/free/ifeature/';
 
 	return $url;
 }
