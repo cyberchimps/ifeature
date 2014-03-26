@@ -3,53 +3,54 @@ msgstr ""
 "Project-Id-Version: iFeature 5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-20 09:19:47 UTC\n"
-"PO-Revision-Date: 2014-03-26 16:44+0530\n"
+"PO-Revision-Date: 2014-03-26 16:47+0530\n"
 "Last-Translator: Surya <surya@cyberchimps.com>\n"
-"Language-Team: French, France\n"
+"Language-Team: Danish, Denmark\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ../../404.php
 msgid "Oops! That page cannot be found."
-msgstr "Oops! Cette page ne peut pas être trouvé."
+msgstr "Ups! Denne side kan ikke findes."
 
+#: ../../404.php
 msgid ""
 "It looks like nothing was found at this location. Maybe try searching for it?"
 msgstr ""
-"On dirait que rien n'a été trouvé à cet endroit. Peut-être essayer de "
-"chercher ailleurs?"
+"Det ser ud, som om intet var fundet på denne placering. Måske prøve at søge "
+"efter det?"
 
 #: ../../archive.php
 msgid "Category Archives: %s"
-msgstr "Archives de catégorie: %s"
+msgstr "Kategoriarkiv: %s"
 
 #: ../../archive.php
 msgid "Tag Archives: %s"
-msgstr "Archives du mot-clef %s"
+msgstr "Tag Archives: %s"
 
 #: ../../archive.php
 msgid "Author Archives: %s"
-msgstr "Archives de l'auteur: %s"
+msgstr "Forfatter arkiver: %s"
 
 #: ../../archive.php
 msgid "Daily Archives: %s"
-msgstr "Archives du Quotidien: %s"
+msgstr "Daglige arkiver: %s"
 
 #: ../../archive.php
 msgid "Monthly Archives: %s"
-msgstr "Archives mensuelles: %s"
+msgstr "Månedlige arkiver: %s"
 
 #: ../../archive.php
 msgid "Yearly Archives: %s"
-msgstr "Archives annuel: %s"
+msgstr "Årlige arkiver: %s"
 
 #: ../../archive.php ../../footer.php ../../sidebar-left.php
 #: ../../sidebar-right.php ../../sidebar.php
 msgid "Archives"
-msgstr "Archives"
+msgstr "Arkiver"
 
 #: ../../comments.php
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -58,51 +59,53 @@ msgstr[0] ""
 
 #: ../../comments.php
 msgid "Comment navigation"
-msgstr "Commenter la navigation"
+msgstr "Kommentar navigation"
 
 #: ../../comments.php
 msgid "Older Comments"
-msgstr "Commentaires âgées"
+msgstr "Ældre kommentarer"
 
 #: ../../comments.php
 msgid "Newer Comments"
-msgstr "Commentaires récents"
+msgstr "Nyere Kommentarer"
 
 #: ../../comments.php
 msgid "&larr; Older Comments"
-msgstr "&larr; Anciens commentaires"
+msgstr "&larr; Ældre kommentarer"
 
 #: ../../comments.php
 msgid "Newer Comments &rarr;"
-msgstr "Nouveaux commentaires &rarr;"
+msgstr "Nyere kommentarer &rarr;"
 
 #: ../../comments.php
 msgid "Comments are closed."
-msgstr "Les commentaires sont fermés."
+msgstr "Kommentarer er lukket."
 
 #: ../../content.php
 msgid "Permalink to %s"
-msgstr "Permalien vers %s"
+msgstr "Permalink til %s"
 
 #: ../../content.php
 msgid "Continue reading"
-msgstr "Continuer la lecture"
+msgstr "Fortsæt læsning"
 
 #: ../../content.php ../../image.php
 msgid "Edit"
-msgstr "éd"
+msgstr "Redig駻"
 
 #: ../../content.php ../../image.php
 msgid "Pages:"
-msgstr "Pages&nbsp;:"
+msgstr "Sider"
 
 #: ../../footer.php ../../sidebar-left.php ../../sidebar-right.php
 #: ../../sidebar.php
 msgid "Pages"
-msgstr "Pages"
+msgstr "Sider"
 
+#: ../../footer.php ../../sidebar-left.php ../../sidebar-right.php
+#: ../../sidebar.php
 msgid "Categories"
-msgstr "Catégories"
+msgstr "Kategorier"
 
 #: ../../footer.php ../../sidebar-left.php ../../sidebar-right.php
 #: ../../sidebar.php
@@ -113,32 +116,31 @@ msgstr "WordPress"
 #: ../../sidebar.php
 msgid ""
 "Powered by WordPress, state-of-the-art semantic personal publishing platform."
-msgstr ""
-"Propulsé par WordPress, plate-forme de publication sémantique personnelle."
+msgstr "Websiden bruger Wordpress, et Open Source værktøj i højeste kvalitet."
 
 #: ../../functions.php
 msgid "Pingback:"
-msgstr "Ping"
+msgstr "Pingback"
 
 #: ../../functions.php
 msgid "(Edit)"
-msgstr "(Edit)"
+msgstr "(Rediger)"
 
 #: ../../functions.php
 msgid "says"
-msgstr "dit :"
+msgstr "siger"
 
 #: ../../functions.php
 msgid "Your comment is awaiting moderation."
-msgstr "Votre commentaire est en attente de modération"
+msgstr "Din kommentar afventer moderation."
 
 #: ../../functions.php
 msgid "%1$s at %2$s"
-msgstr "%1$s à %2$s"
+msgstr "%1$ s på %2$ s"
 
 #: ../../functions.php
 msgid "iFeature Responsive Drag and Drop WordPress Theme"
-msgstr "iFonction Drag and Drop Responsive WordPress Theme"
+msgstr "iFeature lydhør træk og slip WordPress tema"
 
 #: ../../functions.php
 msgid "Logo"
@@ -146,96 +148,96 @@ msgstr "Logo"
 
 #: ../../functions.php
 msgid "iMenu Options"
-msgstr "Options de imenu"
+msgstr "Indstillinger af iMenu"
 
 #: ../../functions.php
 msgid "Menu Home Icon"
-msgstr "Menu Accueil Icône"
+msgstr "\"Hjem\" ikon"
 
 #: ../../image.php
 msgid "Published"
-msgstr "Publié"
+msgstr "Udgivet"
 
 #: ../../image.php
 msgid "size"
-msgstr "Taille"
+msgstr "Str."
 
 #: ../../image.php
 msgid "Previous"
-msgstr "précédent"
+msgstr "Forrige"
 
 #: ../../image.php
 msgid "Next"
-msgstr "Suivant"
+msgstr "Næste"
 
 #: ../../image.php
 msgid "Post a comment"
-msgstr "Poster un commentaire"
+msgstr "Skriv en kommentar"
 
 #: ../../image.php
 msgid "or leave a trackback"
-msgstr "ou laisser un trackback"
+msgstr "eller efterlad trackback"
 
 #: ../../image.php
 msgid "Trackback URL"
-msgstr "URL de trackback"
+msgstr "Styrekugle URL"
 
 #: ../../image.php
 msgid "Comments are closed, but you can leave a trackback"
-msgstr "Les commentaires sont fermés, mais vous pouvez laisser un trackback"
+msgstr "Kommentarer er lukket, men du kan efterlade en trackback"
 
 #: ../../image.php
 msgid "Trackbacks are closed, but you can"
-msgstr "Rétroliens sont fermés, mais vous pouvez %s"
+msgstr "Der er lukket for trackbacks, men du kan"
 
 #: ../../image.php
 msgid "post a comment"
-msgstr "Poster un commentaire"
+msgstr "Skriv en kommentar"
 
 #: ../../image.php
 msgid "Both comments and trackbacks are currently closed."
-msgstr "Les commentaires et les trackbacks sont fermés."
+msgstr "Både kommentarer og trackbacks er i øjeblikket lukket."
 
+#: ../../no-results.php
 msgid "Nothing Found"
-msgstr "Aucun résultat"
+msgstr "Intet fundet"
 
 #: ../../no-results.php
 msgid "Ready to publish your first post?"
-msgstr "Prêt à publier votre premier post?"
+msgstr "Klar til at udgive dit første indlæg?"
 
 #: ../../no-results.php
 msgid "Get started here"
-msgstr "Commencez ici"
+msgstr "Kom i gang her"
 
 #: ../../no-results.php
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr ""
-"Désolé, mais rien ne correspond à vos critères de recherche. S'il vous plaît "
-"essayez de nouveau avec quelques mots-clés différents."
+msgstr "Beklager, men intet matchede søgeordene. Prøv igen med andre søgeord."
 
+#: ../../no-results.php
 msgid ""
 "It seems we cannot find what you are looking for. Perhaps searching can help."
 msgstr ""
-"Il semble que nous ne pouvons pas trouver ce que vous recherchez. Essayez de "
-"reformuler."
+"Det synes vi ikke kan finde, hvad du leder efter. Måske søger kan hjælpe."
 
 #: ../../search.php
 msgid "Search Results for: %s"
-msgstr "Résultats de recherche pour %s"
+msgstr "Søge resultater for: %s"
 
+#: ../../searchform.php
 msgid "Search"
-msgstr "Recherche"
+msgstr "S"
 
 #: ../../sidebar-right.php ../../sidebar.php ../../sidebar-left.php
 msgid "Subscribe"
-msgstr "Actions"
+msgstr "Abonnér"
 
 #: ../../sidebar-left.php ../../sidebar-right.php ../../sidebar.php
 msgid "Entries (RSS)"
-msgstr "Articles (RSS)"
+msgstr "Angivelser (RSS)"
 
 #: ../../sidebar-left.php ../../sidebar-right.php ../../sidebar.php
 msgid "Comments (RSS)"
-msgstr "Commentaires (RSS)"
+msgstr "Kommentarer (RSS)"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: iFeature 5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-20 09:19:47 UTC\n"
-"PO-Revision-Date: 2013-03-20 11:51:55 UTC\n"
+"PO-Revision-Date: 2014-03-26 11:12:33 UTC\n"
 "Last-Translator: Web Translate It <support@webtranslateit.com>\n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -44,11 +44,11 @@ msgstr ""
 msgid "Yearly Archives: %s"
 msgstr ""
 
-#: ../../sidebar.php
-#: ../../sidebar-right.php
-#: ../../sidebar-left.php
-#: ../../footer.php
 #: ../../archive.php
+#: ../../footer.php
+#: ../../sidebar-left.php
+#: ../../sidebar-right.php
+#: ../../sidebar.php
 msgid "Archives"
 msgstr ""
 
@@ -94,51 +94,51 @@ msgstr ""
 msgid "Continue reading"
 msgstr ""
 
+#: ../../content.php
+#: ../../content.php
+#: ../../content.php
+#: ../../content.php
 #: ../../image.php
 #: ../../image.php
-#: ../../content.php
-#: ../../content.php
-#: ../../content.php
-#: ../../content.php
 msgid "Edit"
 msgstr ""
 
+#: ../../content.php
+#: ../../content.php
+#: ../../content.php
 #: ../../image.php
-#: ../../content.php
-#: ../../content.php
-#: ../../content.php
 msgid "Pages:"
 msgstr ""
 
-#: ../../sidebar.php
-#: ../../sidebar-right.php
-#: ../../sidebar-left.php
 #: ../../footer.php
+#: ../../sidebar-left.php
+#: ../../sidebar-right.php
+#: ../../sidebar.php
 msgid "Pages"
 msgstr ""
 
-#: ../../sidebar.php
-#: ../../sidebar-right.php
-#: ../../sidebar-left.php
 #: ../../footer.php
+#: ../../sidebar-left.php
+#: ../../sidebar-right.php
+#: ../../sidebar.php
 msgid "Categories"
 msgstr ""
 
-#: ../../sidebar.php
-#: ../../sidebar.php
-#: ../../sidebar-right.php
-#: ../../sidebar-right.php
-#: ../../sidebar-left.php
-#: ../../sidebar-left.php
 #: ../../footer.php
 #: ../../footer.php
+#: ../../sidebar-left.php
+#: ../../sidebar-left.php
+#: ../../sidebar-right.php
+#: ../../sidebar-right.php
+#: ../../sidebar.php
+#: ../../sidebar.php
 msgid "WordPress"
 msgstr ""
 
-#: ../../sidebar.php
-#: ../../sidebar-right.php
-#: ../../sidebar-left.php
 #: ../../footer.php
+#: ../../sidebar-left.php
+#: ../../sidebar-right.php
+#: ../../sidebar.php
 msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform."
 msgstr ""
 
@@ -252,21 +252,21 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: ../../sidebar-left.php
-#: ../../sidebar.php
 #: ../../sidebar-right.php
+#: ../../sidebar.php
+#: ../../sidebar-left.php
 msgid "Subscribe"
 msgstr ""
 
-#: ../../sidebar.php
-#: ../../sidebar-right.php
 #: ../../sidebar-left.php
+#: ../../sidebar-right.php
+#: ../../sidebar.php
 msgid "Entries (RSS)"
 msgstr ""
 
-#: ../../sidebar.php
-#: ../../sidebar-right.php
 #: ../../sidebar-left.php
+#: ../../sidebar-right.php
+#: ../../sidebar.php
 msgid "Comments (RSS)"
 msgstr ""
 

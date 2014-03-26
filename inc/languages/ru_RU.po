@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: iFeature 5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-20 09:19:47 UTC\n"
-"PO-Revision-Date: 2013-03-20 18:07+0530\n"
-"Last-Translator: Web Translate It <support@webtranslateit.com>\n"
+"PO-Revision-Date: 2014-03-26 16:44+0530\n"
+"Last-Translator: Surya <surya@cyberchimps.com>\n"
 "Language-Team: Russian, Russia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.7\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
@@ -48,8 +48,8 @@ msgstr "Архивы за месяц: %s"
 msgid "Yearly Archives: %s"
 msgstr "Архивы за год: %s"
 
-#: ../../sidebar.php ../../sidebar-right.php ../../sidebar-left.php
-#: ../../footer.php ../../archive.php
+#: ../../archive.php ../../footer.php ../../sidebar-left.php
+#: ../../sidebar-right.php ../../sidebar.php
 msgid "Archives"
 msgstr "Архив"
 
@@ -90,31 +90,31 @@ msgstr "Постоянная ссылка на %s"
 msgid "Continue reading"
 msgstr "Продолжить чтение"
 
-#: ../../image.php ../../content.php
+#: ../../content.php ../../image.php
 msgid "Edit"
 msgstr "все"
 
-#: ../../image.php ../../content.php
+#: ../../content.php ../../image.php
 msgid "Pages:"
 msgstr "Страниц:"
 
-#: ../../sidebar.php ../../sidebar-right.php ../../sidebar-left.php
-#: ../../footer.php
+#: ../../footer.php ../../sidebar-left.php ../../sidebar-right.php
+#: ../../sidebar.php
 msgid "Pages"
 msgstr "Страницы"
 
-#: ../../sidebar.php ../../sidebar-right.php ../../sidebar-left.php
-#: ../../footer.php
+#: ../../footer.php ../../sidebar-left.php ../../sidebar-right.php
+#: ../../sidebar.php
 msgid "Categories"
 msgstr "Рубрики"
 
-#: ../../sidebar.php ../../sidebar-right.php ../../sidebar-left.php
-#: ../../footer.php
+#: ../../footer.php ../../sidebar-left.php ../../sidebar-right.php
+#: ../../sidebar.php
 msgid "WordPress"
 msgstr "WordPress"
 
-#: ../../sidebar.php ../../sidebar-right.php ../../sidebar-left.php
-#: ../../footer.php
+#: ../../footer.php ../../sidebar-left.php ../../sidebar-right.php
+#: ../../sidebar.php
 msgid ""
 "Powered by WordPress, state-of-the-art semantic personal publishing platform."
 msgstr ""
@@ -235,14 +235,14 @@ msgstr "Результаты по запросу: %s"
 msgid "Search"
 msgstr "Поиск"
 
-#: ../../sidebar-left.php ../../sidebar.php ../../sidebar-right.php
+#: ../../sidebar-right.php ../../sidebar.php ../../sidebar-left.php
 msgid "Subscribe"
 msgstr "Подпис"
 
-#: ../../sidebar.php ../../sidebar-right.php ../../sidebar-left.php
+#: ../../sidebar-left.php ../../sidebar-right.php ../../sidebar.php
 msgid "Entries (RSS)"
 msgstr "Записи (RSS)"
 
-#: ../../sidebar.php ../../sidebar-right.php ../../sidebar-left.php
+#: ../../sidebar-left.php ../../sidebar-right.php ../../sidebar.php
 msgid "Comments (RSS)"
 msgstr "Комментарии (RSS)"
