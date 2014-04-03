@@ -2,6 +2,10 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.62 (4-3-14)
+- Added new background option.
+- Removed wp_register_style(or script) for local css/js files.
+
 Version 5.1.61 (3-27-14)
 - Updated Elements Translation.
 - Updated Theme Trnslation.
