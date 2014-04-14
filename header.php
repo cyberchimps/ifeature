@@ -74,7 +74,7 @@ if( cyberchimps_get_option( 'top_header_bar', 1 ) ): ?>
 
 <!-- ---------------- Header --------------------- -->
 
-<div class="container-full-width">
+<div id="header_section" class="container-full-width">
 
 	<div class="container">
 
