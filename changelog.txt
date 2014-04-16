@@ -2,6 +2,11 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.64 (4-16-14)
+- Changed social font icons to font awesome.
+- Removed unwanted function_exists() conditional wrapper.
+- Added id header_section to the header container div.
+
 Version 5.1.63 (4-9-14)
 -Added upgrade button to the free theme customizer.
 -Fixed Vimeo video responsiveness.
