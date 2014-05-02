@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.66 (5-2-14)
+- Fixed byline toggle issue. 
+
 Version 5.1.65 (4-24-14)
 - Added recommendation for clef plugin.
 - Updated translations.
