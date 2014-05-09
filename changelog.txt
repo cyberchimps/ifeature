@@ -2,6 +2,11 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.67 (5-9-14)
+- Fixed W3C validator error issue with IE compatibility meta tags.
+- Fixed missing image error: removed unused function.
+- Added FooBox as recommended plugin.
+
 Version 5.1.66 (5-2-14)
 - Fixed byline toggle issue. 
 
