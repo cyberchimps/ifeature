@@ -14,7 +14,6 @@
  */
 ?>
 	<!DOCTYPE html>
-	<meta http-equiv="X-UA-Compatible" content="IE=10;IE=9;IE=8;IE=EDGE" />
 	<!--[if lt IE 7]>
 	<html class="ie ie6 lte9 lte8 lte7" <?php language_attributes(); ?>>
 	<![endif]-->
