@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.71 (6-06-14)
+- Code reformatting: Changed spaces to tabs.
+
 Version 5.1.70 (5-30-14)
 - Fixed casing of CyberChimpsParallax class.
 
