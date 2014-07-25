@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.79 (7-25-14)
+- Layout fixed for multiple rows of footer widget.
+
 Version 5.1.78 (7-18-14)
 - Fixed broken link to CyberChimps logo.
 
