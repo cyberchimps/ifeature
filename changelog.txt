@@ -2,6 +2,10 @@ iFeature Changelog
 
 ****************************
 
+Version 5.1.80 (8-08-14)
+- Fixed conflict of footer widgets with other widgets.
+- Responsive fix for uploaded video.
+
 Version 5.1.79 (7-25-14)
 - Layout fixed for multiple rows of footer widget.
 
