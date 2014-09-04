@@ -235,7 +235,8 @@ function ifeature_skin_color_options( $options ) {
 
 	$options = array(
 		'default' => $imagepath . 'default.png',
-		'green'   => $imagepath . 'green.png'
+		'green'   => $imagepath . 'green.png',
+		'legacy'   => $imagepath . 'legacy.png'
 	);
 
 	return $options;
