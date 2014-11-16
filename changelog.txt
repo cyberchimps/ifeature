@@ -2,6 +2,11 @@ iFeature Changelog
 
 ****************************
 
+Version 5.5.2 (11-16-14)
+- Removed cyberchimps_mlu_init() as it has register_post_type() which is plugin-territory functionality.
+- Added sanitization to customizer options.
+- Removed deprecated screen_icon().
+
 Version 5.5.1 (9-24-14)
 - Placeholder fix for IE8/9.
 
