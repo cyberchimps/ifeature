@@ -93,7 +93,7 @@ header#cc-header {
 /*======================================= TOP BAR =============================================*/
 
 #top_header {
-	background-image: url('images/topbarbg.jpg');
+	background-image: url('../../../images/topbarbg.jpg');
 	margin-bottom: 15px;
 }
 
@@ -717,7 +717,7 @@ footer.entry-meta {
 	content: '';
 	height: 25px;
 	width: 20px;
-	background: url('images/tag.png') no-repeat 0 0 transparent;
+	background: url('../../../images/tag.png') no-repeat 0 0 transparent;
 }
 
 .comments-link:before {
