@@ -371,3 +371,33 @@ function cyberchimps_full_width_fix() {
 }
 
 add_action( 'wp_head', 'cyberchimps_full_width_fix' );
+
+ /* Add iMenu Options in customizer and remove searchbar from header option */
+    
+    add_action( 'customize_register', 'ifeature_customize_register', 50 );
+
+    function ifeature_customize_register( $wp_customize ) {
+        $wp_customize->remove_setting( 'cyberchimps_options[searchbar]' );
+        $wp_customize->remove_control( 'searchbar' );
+        $wp_customize->add_section( 'cyberchimps_imenu', array(
+            'priority' => 20,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __( 'iMenu Options', 'cyberchimps_core' ),
+            'panel' => 'header_id',
+        ) );
+        $wp_customize->add_setting( 'cyberchimps_options[menu_home_button]', array( 'sanitize_callback' => 'cyberchimps_text_sanitization', 'type' => 'option' ) );
+        $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'menu_home_button', array(
+            'label' => __( 'Menu Home Icon', 'cyberchimps_core' ),
+            'section' => 'cyberchimps_imenu',
+            'settings' => 'cyberchimps_options[menu_home_button]',
+            'type' => 'checkbox'
+        ) ) );
+        $wp_customize->add_setting( 'cyberchimps_options[searchbar]', array( 'sanitize_callback' => 'cyberchimps_text_sanitization', 'type' => 'option' ) );
+        $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'searchbar', array(
+            'label' => __( 'Searchbar', 'cyberchimps_core' ),
+            'section' => 'cyberchimps_imenu',
+            'settings' => 'cyberchimps_options[searchbar]',
+            'type' => 'checkbox'
+        ) ) );
+    }
