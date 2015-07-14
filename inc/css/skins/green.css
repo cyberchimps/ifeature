@@ -91,8 +91,12 @@ a:hover {
 	background: #3a6d07;
 }
 
-.main-navigation .nav li.dropdown:hover ul.dropdown-menu {
+.main-navigation .nav li.dropdown:hover ul.dropdown-menu ,.main-navigation .nav > li > ul > li > ul  {
 	background: #6da03a;
+}
+
+.main-navigation .nav > li > ul > li > ul:after{
+    border-right: 6px solid #6da03a;
 }
 
 .navbar .nav > li > .dropdown-menu::before {
