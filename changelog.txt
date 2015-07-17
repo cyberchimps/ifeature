@@ -2,6 +2,9 @@ iFeature Changelog
 
 ****************************
 
+Version 5.5.5 (17-07-15)
+- Change in theme customizer as per wordpress.org guidelines
+
 Version 5.5.4 (1-23-15)
 - Fixed conflict between slider free and pro plugin.
 - Added new plugin suggestion.
