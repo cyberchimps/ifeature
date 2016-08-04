@@ -446,4 +446,11 @@ remove_action( 'cyberchimps_options_before_container', 'cyberchimps_upgrade_bar'
 if( cyberchimps_theme_check() == 'free' ) {
 	add_action( 'cyberchimps_options_before_container', 'cyberchimps_ifeature_upgrade_bar' );
 }
+
+// enabling theme support for title tag
+function ifeature_title_setup() 
+{
+	add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'ifeature_title_setup' );
 ?>
