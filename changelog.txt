@@ -1,6 +1,9 @@
 iFeature Changelog
 
 ****************************
+Version 5.5.8 (08-05-16)
+- Updated as per latest Theme Check guidelines
+
 Version 5.5.7 (07-04-16)
 - Fixed site font issue
 

@@ -401,3 +401,56 @@ add_action( 'wp_head', 'cyberchimps_full_width_fix' );
             'type' => 'checkbox'
         ) ) );
     }
+
+function cyberchimps_ifeature_upgrade_bar(){
+	$upgrade_link = apply_filters( 'cyberchimps_upgrade_link', 'http://cyberchimps.com' );
+	$pro_title = apply_filters( 'cyberchimps_upgrade_pro_title', 'CyberChimps Pro' );
+?>	
+	<br>
+	<div class="upgrade-callout">
+		<p><img src="<?php echo get_template_directory_uri(); ?>/cyberchimps/options/lib/images/chimp.png" alt="CyberChimps"/>
+			<?php printf(
+				__( 'Welcome to iFeature! Get 30%% off on %1$s using Coupon Code <span style="color:red">IFEATURE30</span>', 'cyberchimps_core' ),
+				'<a href="' . $upgrade_link . '" target="_blank" title="' . $pro_title . '">' . $pro_title . '</a> '
+			); ?>
+		</p>
+	
+	<div class="social-container">
+			<div class="social">
+				<a href="https://twitter.com/cyberchimps" class="twitter-follow-button" data-show-count="false" data-size="small">Follow @cyberchimps</a>
+				<script>!function (d, s, id) {
+						var js, fjs = d.getElementsByTagName(s)[0];
+						if (!d.getElementById(id)) {
+							js = d.createElement(s);
+							js.id = id;
+							js.src = "//platform.twitter.com/widgets.js";
+							fjs.parentNode.insertBefore(js, fjs);
+						}
+					}(document, "script", "twitter-wjs");</script>
+			</div>
+			<div class="social">
+				<iframe
+					src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcyberchimps.com%2F&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21"
+					scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
+			</div>
+		</div>
+	
+	</div>
+<?php	
+}
+
+add_action('admin_init','remove_upgrade_bar');
+function remove_upgrade_bar(){
+remove_action( 'cyberchimps_options_before_container', 'cyberchimps_upgrade_bar');
+}
+if( cyberchimps_theme_check() == 'free' ) {
+	add_action( 'cyberchimps_options_before_container', 'cyberchimps_ifeature_upgrade_bar' );
+}
+
+// enabling theme support for title tag
+function ifeature_title_setup() 
+{
+	add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'ifeature_title_setup' );
+?>
