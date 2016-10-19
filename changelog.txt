@@ -1,6 +1,9 @@
 iFeature Changelog
 
 ****************************
+Version 5.6 (20-10-16)
+- Added Setting to change Menu background color, Menu hover color and Menu text color
+
 Version 5.5.8 (08-05-16)
 - Updated as per latest Theme Check guidelines
 
