@@ -545,16 +545,28 @@ function ifeature_css_styles(){
 			.main-navigation .navbar-inner {
 			background-color: <?php echo $menu_background; ?>;
 			}
+			.nav-collapse.in .nav li, .nav-collapse.in {
+			background-color: <?php echo $menu_background; ?>;
+			}
+			@media (max-width: 767px) {
+			.main-navigation .nav > li  {
+			border-right: 1px solid <?php echo $menu_background; ?>;
+			}
+			}
 		<?php endif; ?>
 
 		<?php if ( !empty( $menu_hover ) ) : ?>
 			.main-navigation .navbar-inner div > ul > li > a:hover {
 			background-color: <?php echo $menu_hover; ?>;
 			}
+			.navbar-inverse .nav-collapse.in .nav > li > a:hover {
+			background-color: <?php echo $menu_hover; ?>;
+			}
 		<?php endif; ?>
 
 		<?php if ( !empty( $menu_text ) ) : ?>
-			.main-navigation .nav > li > a, .main-navigation .nav > li > a:hover {
+			.main-navigation .nav > li > a, .main-navigation .nav > li > a:hover, .navbar-inverse .nav-collapse.in .nav li a,
+			.navbar-inverse .nav-collapse.in .nav li a:hover {
 			color: <?php echo $menu_text; ?>;
 			}
 
