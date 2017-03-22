@@ -1,6 +1,10 @@
 iFeature Changelog
 
 ****************************
+
+Version 5.7 (03-23-17)
+- Fixed issue with PHP version 7.1
+
 Version 5.6 (20-10-16)
 - Added Setting to change Menu background color, Menu hover color and Menu text color
 
