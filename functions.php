@@ -581,8 +581,8 @@ function ifeature_css_styles(){
 /*=========================== Fonts =====================================================*/
 
 // Adding the default theme font Lobster in the list of fonts available in theme options
-add_filter( 'cyberchimps_typography_faces', 'ifeature_typography_faces' );
-function ifeature_typography_faces( $orig ) {
+add_filter( 'cyberchimps_typography_faces', 'ifeature_typography_faces_new' );
+function ifeature_typography_faces_new( $orig ) {
 	$new = array(
 		'"Fira Sans", sans-serif' => 'Fira Sans'
 	);
