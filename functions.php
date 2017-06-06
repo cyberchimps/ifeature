@@ -576,4 +576,70 @@ function ifeature_css_styles(){
 }
 
 /* END  Added by Swapnil - on 19-Oct 2016 for adding new feature for menu coloer change */
-?>
+
+
+/*=========================== Fonts =====================================================*/
+
+// Adding the default theme font Lobster in the list of fonts available in theme options
+add_filter( 'cyberchimps_typography_faces', 'ifeature_typography_faces' );
+function ifeature_typography_faces( $orig ) {
+	$new = array(
+		'"Fira Sans", sans-serif' => 'Fira Sans'
+	);
+	$new = array_merge( $new, $orig );
+	return $new;
+}
+
+// Setting defaults - body
+add_filter( 'cyberchimps_typography_defaults', 'ifeature_typography_defaults' );
+function ifeature_typography_defaults() {
+	$default = array(
+		'size' => '14px',
+		'face' => '"Fira Sans", sans-serif',
+		'style' => 'normal',
+		'color' => ''
+	);
+
+	return $default;
+}
+
+// Setting defaults - h1
+add_filter('cyberchimps_heading1_typography_defaults', 'ifeature_typography_h1');
+function ifeature_typography_h1()
+{
+	$default = array(
+		'size' => '26px',
+		'face' => '"Fira Sans", sans-serif',
+		'style' => '',
+		'color' => '',
+	);
+
+	return $default;
+}
+// Setting defaults - h2
+add_filter('cyberchimps_heading2_typography_defaults', 'ifeature_typography_h2');
+function ifeature_typography_h2()
+{
+	$default = array(
+		'size' => '22px',
+		'face' => '"Fira Sans", sans-serif',
+		'style' => '',
+		'color' => '',
+	);
+
+	return $default;
+}
+// Setting defaults - h3
+add_filter('cyberchimps_heading3_typography_defaults', 'ifeature_typography_h3');
+function ifeature_typography_h3()
+{
+	$default = array(
+		'size' => '18px',
+		'face' => '"Fira Sans", sans-serif',
+		'style' => '',
+		'color' => '',
+	);
+
+	return $default;
+}
+
