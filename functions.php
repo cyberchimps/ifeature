@@ -643,3 +643,58 @@ function ifeature_typography_h3()
 	return $default;
 }
 
+function ifeature_customize_register( $wp_customize ) {
+   
+   $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
+   $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+
+   $wp_customize->selective_refresh->add_partial( 'blogname', array(
+'selector' => '.site-title a',
+'render_callback' => 'ifeature_customize_partial_blogname',
+) );
+
+	$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+		'selector' => '.top-head-description',
+		'render_callback' => 'ifeature_customize_partial_blogdescription',
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[custom_logo]', array(
+		'selector' => '#logo',
+		'render_callback' => 'ifeature_customize_partial_blogname',
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[theme_backgrounds]', array(
+		'selector' => '#social',
+		'render_callback' => 'ifeature_customize_partial_blogname',
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[searchbar]', array(
+		'selector' => '#searchform',
+		'render_callback' => 'ifeature_customize_partial_blogname',
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[footer_show_toggle]', array(
+		'selector' => '#footer_wrapper',
+		'render_callback' => 'ifeature_customize_partial_blogname',
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[footer_copyright_text]', array(
+		'selector' => '#copyright',
+		'render_callback' => 'ifeature_customize_partial_blogname',
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'nav_menu_locations[primary]', array(
+		'selector' => '#navigation',
+		'render_callback' => 'ifeature_customize_partial_blogname',
+	) );
+
+}
+function ifeature_customize_partial_blogname() {
+bloginfo( 'name' );
+}
+
+function ifeature_customize_partial_blogdescription() {
+	bloginfo( 'description' );
+}
+
+add_action( 'customize_register', 'ifeature_customize_register' );
