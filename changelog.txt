@@ -1,8 +1,9 @@
 iFeature Changelog
 
 ****************************
-Version 5.8 (06-14-17)
+Version 5.8 (06-16-17)
 - Default font changed
+- Highlighted edit links in the customizer preview
 
 Version 5.7 (03-23-17)
 - Fixed issue with PHP version 7.1
