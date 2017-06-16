@@ -667,7 +667,7 @@ function ifeature_customize_edit_links( $wp_customize ) {
 	) );
 
 	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[searchbar]', array(
-		'selector' => '#searchform'
+		'selector' => '#navigation #searchform'
 	) );
 
 	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[footer_show_toggle]', array(
