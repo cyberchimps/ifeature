@@ -692,3 +692,4 @@ function ifeature_customize_partial_blogdescription() {
 }
 
 add_action( 'customize_register', 'ifeature_customize_edit_links' );
+add_theme_support( 'customize-selective-refresh-widgets' );
