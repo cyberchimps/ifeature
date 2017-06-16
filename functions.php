@@ -643,3 +643,52 @@ function ifeature_typography_h3()
 	return $default;
 }
 
+function ifeature_customize_edit_links( $wp_customize ) {
+   
+   $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
+   $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+
+   $wp_customize->selective_refresh->add_partial( 'blogname', array(
+'selector' => '.site-title a',
+'render_callback' => 'ifeature_customize_partial_blogname',
+) );
+
+	$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+		'selector' => '.top-head-description',
+		'render_callback' => 'ifeature_customize_partial_blogdescription',
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[custom_logo]', array(
+		'selector' => '#logo'
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[theme_backgrounds]', array(
+		'selector' => '#social'
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[searchbar]', array(
+		'selector' => '#searchform'
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[footer_show_toggle]', array(
+		'selector' => '#footer_wrapper'
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[footer_copyright_text]', array(
+		'selector' => '#copyright'
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'nav_menu_locations[primary]', array(
+		'selector' => '#navigation'
+	) );
+
+}
+function ifeature_customize_partial_blogname() {
+bloginfo( 'name' );
+}
+
+function ifeature_customize_partial_blogdescription() {
+	bloginfo( 'description' );
+}
+
+add_action( 'customize_register', 'ifeature_customize_edit_links' );
