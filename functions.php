@@ -667,7 +667,7 @@ function ifeature_customize_edit_links( $wp_customize ) {
 	) );
 
 	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[searchbar]', array(
-		'selector' => '#searchform'
+		'selector' => '#navigation #searchform'
 	) );
 
 	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[footer_show_toggle]', array(
@@ -692,3 +692,4 @@ function ifeature_customize_partial_blogdescription() {
 }
 
 add_action( 'customize_register', 'ifeature_customize_edit_links' );
+add_theme_support( 'customize-selective-refresh-widgets' );
