@@ -16,8 +16,7 @@ border-collapse:collapse;
 }
 .features-table .dashicons-yes {color: #259e58;}
 .features-table .dashicons-no-alt {color:#ff0000;}
-.featureyes { //background: url('../../icons/icon-tick.png') center no-repeat;text-align: center;}
-.featureno { //background: url('../../icons/icon-cross.png') 0 5px no-repeat;text-align: center;}
+
 .features-table .dashicons-before::before {
 	font-size: 30px;	
 }
@@ -33,7 +32,5 @@ img {max-width: 100%;}
 .features-table p { font-weight: normal;}
 .features-table .feature {font-size: 18px;font-weight: bold;}
 .about-container .buy {margin-top: 20px;float: right;}
-#setting-error-tgmpa p {font-size: 14px;}
-#setting-error-tgmpa strong {font-weight: 400;}
-#setting-error-tgmpa {font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;}
+
 .about-container .buylink {padding-top: 6px; height: 40px;}
