@@ -31,13 +31,14 @@ if( !function_exists( 'cyberchimps_theme_check' ) ) {
 //Theme Name
 function ifeature_options_theme_name() {
 	$text = 'iFeature';
-	
+
 	return $text;
 }
 add_filter( 'cyberchimps_current_theme_name', 'ifeature_options_theme_name', 1 );
 
 // Load Core
 require_once( get_template_directory() . '/cyberchimps/init.php' );
+require( get_template_directory() . '/inc/admin-about.php' );
 
 // Set the content width based on the theme's design and stylesheet.
 if( !isset( $content_width ) ) {
@@ -373,7 +374,7 @@ function cyberchimps_full_width_fix() {
 add_action( 'wp_head', 'cyberchimps_full_width_fix' );
 
  /* Add iMenu Options in customizer and remove searchbar from header option */
-    
+
     add_action( 'customize_register', 'ifeature_customize_register', 50 );
 
     function ifeature_customize_register( $wp_customize ) {
@@ -405,7 +406,7 @@ add_action( 'wp_head', 'cyberchimps_full_width_fix' );
 function cyberchimps_ifeature_upgrade_bar(){
 	$upgrade_link = apply_filters( 'cyberchimps_upgrade_link', 'http://cyberchimps.com' );
 	$pro_title = apply_filters( 'cyberchimps_upgrade_pro_title', 'CyberChimps Pro' );
-?>	
+?>
 	<br>
 	<div class="upgrade-callout">
 		<p><img src="<?php echo get_template_directory_uri(); ?>/cyberchimps/options/lib/images/chimp.png" alt="CyberChimps"/>
@@ -414,7 +415,7 @@ function cyberchimps_ifeature_upgrade_bar(){
 				'<a href="' . $upgrade_link . '" target="_blank" title="' . $pro_title . '">' . $pro_title . '</a> '
 			); ?>
 		</p>
-	
+
 	<div class="social-container">
 			<div class="social">
 				<a href="https://twitter.com/cyberchimps" class="twitter-follow-button" data-show-count="false" data-size="small">Follow @cyberchimps</a>
@@ -434,9 +435,9 @@ function cyberchimps_ifeature_upgrade_bar(){
 					scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
 			</div>
 		</div>
-	
+
 	</div>
-<?php	
+<?php
 }
 
 add_action('admin_init','remove_upgrade_bar');
@@ -448,7 +449,7 @@ if( cyberchimps_theme_check() == 'free' ) {
 }
 
 // enabling theme support for title tag
-function ifeature_title_setup() 
+function ifeature_title_setup()
 {
 	add_theme_support( 'title-tag' );
 }
@@ -572,7 +573,7 @@ function ifeature_css_styles(){
 
 		<?php endif; ?>
 	</style>
-<?php	
+<?php
 }
 
 /* END  Added by Swapnil - on 19-Oct 2016 for adding new feature for menu coloer change */
@@ -644,7 +645,7 @@ function ifeature_typography_h3()
 }
 
 function ifeature_customize_edit_links( $wp_customize ) {
-   
+
    $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
    $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
@@ -693,3 +694,53 @@ function ifeature_customize_partial_blogdescription() {
 
 add_action( 'customize_register', 'ifeature_customize_edit_links' );
 add_theme_support( 'customize-selective-refresh-widgets' );
+
+
+
+add_action( 'admin_notices', 'my_admin_notice' );
+function my_admin_notice(){
+
+	$admin_check_screen = get_admin_page_title();
+
+	if( !class_exists('SlideDeckPlugin') )
+	{
+
+	$slug = 'slidedeck';
+	 if ( $admin_check_screen == 'Theme Options Page' || $admin_check_screen == 'Manage Themes' )
+	{
+		?>
+		<div class="notice notice-info is-dismissible" style="margin-top:15px;">
+		<p>
+		 <a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ); ?>">Install the SlideDeck Lite plugin</a>
+		</p>
+		</div>
+		<?php
+	}
+	}
+
+	if( !class_exists('WPForms') )
+	{
+
+	$slug = 'wpforms-lite';
+	 if ( $admin_check_screen == 'Theme Options Page' || $admin_check_screen == 'Manage Themes' )
+	{
+		?>
+		<div class="notice notice-info is-dismissible" style="margin-top:15px;">
+		<p>
+		 <a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ); ?>">Install the WP Forms Lite plugin</a>
+		</p>
+		</div>
+		<?php
+	}
+	}
+
+	if ( $admin_check_screen == 'Theme Options Page' )
+	{
+	?>
+		<div class="notice notice-success is-dismissible">
+				<b><p>Liked this theme? <a href="https://wordpress.org/support/theme/ifeature/reviews/#new-post" target="_blank">Leave us</a> a ***** rating. Thank you! </p></b>
+		</div>
+		<?php
+	}
+
+}
