@@ -88,18 +88,6 @@ function cyberchimps_display_about() {
 			</tr>
 
 			<tr>
-			<td class="feature">Responsive Videos</td>
-			<td class="featureyes"><span class="dashicons-before dashicons-yes"></span></td>
-			<td class="featureyes"><span class='dashicons-before dashicons-yes'></span></td>
-			</tr>
-
-			<tr>
-			<td class="feature">Gallery Lightbox</td>
-			<td class="featureyes"><span class="dashicons-before dashicons-yes"></span></td>
-			<td class="featureyes"><span class='dashicons-before dashicons-yes'></span></td>
-			</tr>
-
-			<tr>
 			<td class="feature">Drag & Drop Visual Elements for blog and pages</td>
 			<td class="featureyes">3</span></td>
 			<td class="featureyes">11</span></td>
