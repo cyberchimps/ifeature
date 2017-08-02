@@ -695,8 +695,6 @@ function ifeature_customize_partial_blogdescription() {
 add_action( 'customize_register', 'ifeature_customize_edit_links' );
 add_theme_support( 'customize-selective-refresh-widgets' );
 
-
-
 add_action( 'admin_notices', 'my_admin_notice' );
 function my_admin_notice(){
 
@@ -704,14 +702,27 @@ function my_admin_notice(){
 
 	if( !class_exists('SlideDeckPlugin') )
 	{
-
+	$plugin='slidedeck/slidedeck.php';
 	$slug = 'slidedeck';
-	 if ( $admin_check_screen == 'Theme Options Page' || $admin_check_screen == 'Manage Themes' )
+	$installed_plugins = get_plugins();
+
+	 if ( $admin_check_screen == 'Manage Themes' || $admin_check_screen == 'Theme Options Page' )
 	{
 		?>
 		<div class="notice notice-info is-dismissible" style="margin-top:15px;">
 		<p>
-		 <a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ); ?>">Install the SlideDeck Lite plugin</a>
+			<?php if( isset( $installed_plugins[$plugin] ) )
+			{
+			?>
+				 <a href="<?php echo admin_url( 'plugins.php' ); ?>">Activate the SlideDeck Lite plugin</a>
+			 <?php
+			}
+			else
+			{
+			 ?>
+			 <a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ); ?>">Install the SlideDeck Lite plugin</a>
+			 <?php } ?>
+
 		</p>
 		</div>
 		<?php
@@ -720,21 +731,32 @@ function my_admin_notice(){
 
 	if( !class_exists('WPForms') )
 	{
-
+	$plugin = 'wpforms-lite/wpforms.php';
 	$slug = 'wpforms-lite';
-	 if ( $admin_check_screen == 'Theme Options Page' || $admin_check_screen == 'Manage Themes' )
+	$installed_plugins = get_plugins();
+	 if ( $admin_check_screen == 'Manage Themes' || $admin_check_screen == 'Theme Options Page' )
 	{
 		?>
 		<div class="notice notice-info is-dismissible" style="margin-top:15px;">
 		<p>
-		 <a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ); ?>">Install the WP Forms Lite plugin</a>
+			<?php if( isset( $installed_plugins[$plugin] ) )
+			{
+			?>
+				 <a href="<?php echo admin_url( 'plugins.php' ); ?>">Activate the WPForms Lite plugin</a>
+			 <?php
+			}
+			else
+			{
+			 ?>
+	 		 <a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ); ?>">Install the WP Forms Lite plugin</a>
+			 <?php } ?>
 		</p>
 		</div>
 		<?php
 	}
 	}
 
-	if ( $admin_check_screen == 'Theme Options Page' )
+	if ( $admin_check_screen == 'Manage Themes' || $admin_check_screen == 'Theme Options Page' )
 	{
 	?>
 		<div class="notice notice-success is-dismissible">
@@ -742,5 +764,45 @@ function my_admin_notice(){
 		</div>
 		<?php
 	}
+	
+}
 
+add_action( 'cyberchimps_posted_by', 'ifeature_byline_author' );
+function ifeature_byline_author()
+{
+	// Get url of all author archive( the page will contain all posts by the author).
+$auther_posts_url = esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) );
+
+// Set author title text which will appear on hover over the author link.
+$auther_link_title = esc_attr( sprintf( __( 'View all posts by %s', 'cyberchimps_core' ), get_the_author() ) );
+
+// Get value of post byline author toggle option from theme option for different pages.
+if( is_single() ) {
+	$show_author = ( cyberchimps_get_option( 'single_post_byline_author', 1 ) ) ? cyberchimps_get_option( 'single_post_byline_author', 1 ) : false;
+}
+elseif( is_archive() ) {
+	$show_author = ( cyberchimps_get_option( 'archive_post_byline_author', 1 ) ) ? cyberchimps_get_option( 'archive_post_byline_author', 1 ) : false;
+}
+else {
+	$show_author = ( cyberchimps_get_option( 'post_byline_author', 1 ) ) ? cyberchimps_get_option( 'post_byline_author', 1 ) : false;
+}
+
+	$posted_by = sprintf(
+							'<span class="byline"> ' . __( 'by %s', 'cyberchimps_core' ),
+								'<span class="author vcard">
+									<a class="url fn n" href="' . $auther_posts_url . '" title="' . $auther_link_title . '" rel="author">' . esc_html( get_the_author() ) . '</a>
+								</span>
+								<span class="avatar">
+									<a href="' . $auther_posts_url . '" title="' . $auther_link_title . '" rel="avatar">' . get_avatar( get_the_author_meta( 'ID' ), 20) . '</a>
+								</span>
+							</span>'
+
+						);
+
+	if( $show_author )
+	{
+			return $posted_by;
+	}
+
+	return;
 }
