@@ -70,7 +70,7 @@ if( cyberchimps_get_option( 'top_header_bar', 1 ) ): ?>
 <?php endif; ?>
 
 <!-- ---------------- Header --------------------- -->
-
+<div id="header_section">
 <div id="header_section" class="container-full-width">
 
 	<div class="container">
@@ -139,5 +139,5 @@ if( cyberchimps_get_option( 'top_header_bar', 1 ) ): ?>
 	<!-- container -->
 </div>
 <!-- container full width -->
-
+</div>
 <?php do_action( 'cyberchimps_after_navigation' ); ?>
