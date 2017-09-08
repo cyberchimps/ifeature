@@ -35,6 +35,7 @@ get_header(); ?>
 
 							<?php get_template_part( 'content', 'single' ); ?>
 
+							<?php cyberchimps_posts_author_bio();?>
 							<div class="more-content">
 								<div class="row-fluid">
 									<div class="span6 previous-post">

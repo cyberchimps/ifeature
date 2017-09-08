@@ -1,6 +1,10 @@
 iFeature Changelog
 
 ****************************
+Version 6.0 (09-07-17)
+- Added sticky header option
+- Added author bio option
+
 Version 5.9 (08-02-17)
 - Added author gravatar for blog posts
 
