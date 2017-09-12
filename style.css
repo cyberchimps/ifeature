@@ -1273,8 +1273,6 @@ h2.box-widget-title {
 {
     background-color: #fff;
     opacity:0.9;
-
-    min-height: 145px;
 }
 .sticky-header #cc-header
 {
@@ -1282,11 +1280,16 @@ h2.box-widget-title {
 }
 @media all and (max-width: 767px) {
     .sticky-header{
-        padding: 0 20px;
+        padding: 0;
         margin: 0 auto;
         box-sizing: border-box;
         transition: none;
     }
+}
+
+.sticky-header #navigation
+{
+	margin-bottom:10px;
 }
 
 
@@ -1294,6 +1297,7 @@ h2.box-widget-title {
 .author_bio
 {
     padding: 10px;
+    padding-left:20px;
 }
 .avatar_author img
 {
@@ -1321,12 +1325,25 @@ h2.box-widget-title {
 	.author_bio
 	{
 	    margin-left: 10px;
+	    padding-left:10px;
 	}
 }
 @media all and (max-width: 768px)
 {
 	.author_bio
 	{
-	    padding-left: 20px;
+	    text-align:center;
+	    margin-left:0;
+	    padding-left:10px;
+	}
+	.author_bio_wrapper
+	{
+		display:inline-block;
+	}
+	.avatar_author
+	{
+		display: table;
+		margin: 0 auto;
+		text-align: center;
 	}
 }
