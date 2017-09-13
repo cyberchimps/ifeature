@@ -1347,3 +1347,8 @@ h2.box-widget-title {
 		text-align: center;
 	}
 }
+
+.author.vcard.author_bio_name
+{
+	padding-bottom:10px;
+}

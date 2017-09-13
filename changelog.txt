@@ -1,7 +1,7 @@
 iFeature Changelog
 
 ****************************
-Version 6.0 (09-12-17)
+Version 6.0 (09-13-17)
 - Added sticky header option
 - Added author bio option
 
