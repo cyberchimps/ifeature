@@ -9,7 +9,7 @@
  * @since    1.0
  * @author   CyberChimps
  * @license  http://www.opensource.org/licenses/gpl-license.php GPL v3.0 (or later)
- * @link     http://www.cyberchimps.com/
+ * @link     https://www.cyberchimps.com/
  */
 
 /********************************************************************************************************************/
@@ -227,4 +227,27 @@ a:hover {
 	background: #8fc15d;
 	border: 1px solid;
 	border-color: #7faa53 #487021 #487021 #487021;
+}
+
+.excerpt-more.blog-excerpt
+{
+	background:transparent;
+	color:#3A6D07;
+	border:2px solid;
+}
+
+.excerpt-more.blog-excerpt:hover
+{
+	background:#3A6D07;
+	color:#ffffff;
+}
+
+.entry-summary p:last-child a, .more-link a, .excerpt-more
+{
+	border:2px solid #3A6D07;
+}
+
+#navigation .main-navigation .nav > li > a
+{
+	border-top:2px solid #3A6D07;
 }

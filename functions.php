@@ -10,7 +10,7 @@
  * @since    1.0
  * @author   CyberChimps
  * @license  http://www.opensource.org/licenses/gpl-license.php GPL v3.0 (or later)
- * @link     http://www.cyberchimps.com/
+ * @link     https://www.cyberchimps.com/
  */
 
 // Load text domain.
@@ -496,8 +496,61 @@ $wp_customize->add_setting( 'cyberchimps_options[menu_text_colorpicker]', array(
         'section' => 'cyberchimps_design_section',
         'settings' => 'cyberchimps_options[menu_text_colorpicker]',
     ) ) );
+    
+        $wp_customize->add_setting( 'cyberchimps_options[flat_gradient_selector]', array(
+        'type' => 'option',
+        'sanitize_callback' => 'cyberchimps_sanitize_checkbox'
+    ) );
+
+    $wp_customize->add_control( 'cyberchimps_options[flat_gradient_selector]', array(
+        'label' => __( 'Gradient Design', 'ifeature' ),
+        'type' => 'checkbox',
+        'section' => 'cyberchimps_design_section',
+        'settings' => 'cyberchimps_options[flat_gradient_selector]',
+    ) );
+
+    $choices = apply_filters( 'ifeature_menu_design', array( 'default' => get_template_directory_uri() . '/inc/css/menu/images/default.jpg' ) );
+    if ( count( $choices ) > 1 ) {
+        $wp_customize->add_setting( 'cyberchimps_options[ifeature_menu_design]', array(
+            'default' => array( 'default' => get_template_directory_uri() . '/inc/css/menu/images/default.jpg' ),
+            'type' => 'option',
+            'sanitize_callback' => 'cyberchimps_text_sanitization'
+        ) );
+
+        $wp_customize->add_control( new Cyberchimps_skin_selector( $wp_customize, 'skin_design', array(
+            'label' => __( 'Choose a skin', 'ifeature' ),
+            'section' => 'cyberchimps_design_section',
+            'settings' => 'cyberchimps_options[ifeature_menu_design]',
+            'choices' => $choices,
+        ) ) );
+    }
+
+
+    $wp_customize->add_setting( 'cyberchimps_options[sticky_header]', array(
+        'type' => 'option',
+        'sanitize_callback' => 'cyberchimps_sanitize_checkbox'
+    ) );
+
+    $wp_customize->add_control( 'sticky_header', array(
+        'label' => __( 'Sticky Header', 'ifeature' ),
+        'section' => 'cyberchimps_header_section',
+        'settings' => 'cyberchimps_options[sticky_header]',
+        'type' => 'checkbox'
+    ) );
 }
 
+
+add_filter( 'cyberchimps_sections_filter', 'ifeaturepro_extra_sections', 10);
+function ifeaturepro_extra_sections($sections_list) {
+	$sections_list[] = array(
+		'id'      => 'cyberchimps_custom_skin_option_section',
+		'label'   => __( 'Skin Options', 'cyberchimps_core' ),
+		'heading' => 'cyberchimps_design_heading',
+		'priority' => 40
+	);
+	
+return $sections_list;
+}
 
 add_filter( 'cyberchimps_field_list', 'ifeature_add_field' , 30 , 1 );
 function ifeature_add_field($fields_list){
@@ -528,6 +581,28 @@ $fields_list[] = array(
 		'std'     => '',
 		'type'    => 'color',
 		'section' => 'cyberchimps_custom_colors_section',
+		'heading' => 'cyberchimps_design_heading'
+	);
+	
+		$fields_list[] = array(
+		'name'    => __( 'Gradient Design', 'cyberchimps_core' ),
+		'id'      => 'flat_gradient_selector',
+		'type'    => 'toggle',
+		'std'     => 'checked',
+		'section' => 'cyberchimps_custom_colors_section',
+		'heading' => 'cyberchimps_design_heading'
+	);
+
+		$fields_list[] = array(
+		'name'    => __( 'Choose a skin', 'ifeature' ),
+		'id'      => 'ifeature_menu_design',
+		'desc'	  => '<a href="https://cyberchimps.com/guide/ifeature-modern-skin/" target="_blank">Recommended font settings for the Modern skin</a>',
+		'std'     => 'default',
+		'type'    => 'images',
+		'options' => apply_filters( 'ifeature_menu_design', array(
+			'default' => get_template_directory_uri() . '/inc/css/skins/images/default.png'
+		) ),
+		'section' => 'cyberchimps_custom_skin_option_section',
 		'heading' => 'cyberchimps_design_heading'
 	);
 
@@ -585,7 +660,8 @@ function ifeature_css_styles(){
 add_filter( 'cyberchimps_typography_faces', 'ifeature_typography_faces_new' );
 function ifeature_typography_faces_new( $orig ) {
 	$new = array(
-		'"Fira Sans", sans-serif' => 'Fira Sans'
+		'"Fira Sans", sans-serif' => 'Fira Sans',
+		'"Source Sans Pro",sans-serif' => 'Source Sans Pro'
 	);
 	$new = array_merge( $new, $orig );
 	return $new;
@@ -805,4 +881,50 @@ else {
 	}
 
 	return;
+}
+
+//theme specific menu design options in array.
+function ifeature_menu_design_options( $options ) {
+
+	// Get path of image
+	$imagepath = get_template_directory_uri(). '/inc/css/menu/images/';
+
+	$options = array(
+		'default'	=> $imagepath . 'default.jpg',
+		'blackmenu'	=> $imagepath . 'modern.jpg'
+	);
+	return $options;
+}
+add_filter( 'ifeature_menu_design', 'ifeature_menu_design_options', 1 );
+
+
+// add styles for skin selection
+function ifeature_menu_design_styles() {
+	$skin = cyberchimps_get_option( 'ifeature_menu_design' );
+	if( $skin != 'default' ) {
+		wp_enqueue_style( 'ifeature-menu-design', get_template_directory_uri() . '/inc/css/menu/' . $skin . '.css', array( 'style' ), '1.0' );
+	}
+	
+	$skin = cyberchimps_get_option( 'cyberchimps_skin_color' );
+	if(cyberchimps_get_option( 'flat_gradient_selector' )=='')
+	{
+	$skin=$skin.'-nongrad.css';
+	if($skin !== 'default-nongrad.css' )
+			wp_enqueue_style( 'ifeature-non-gradient-design', get_template_directory_uri() . '/inc/css/skins/' . $skin, array( 'style' ), '1.0' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'ifeature_menu_design_styles', 55 );
+
+add_action( 'admin_menu', 'ifeaturepro_modern_skin_css');
+function ifeaturepro_modern_skin_css()
+{
+?>
+<style>
+#cyberchimps_custom_skin_option_section .desc
+{
+	margin-left:50%;
+}
+</style>
+<?php
+
 }

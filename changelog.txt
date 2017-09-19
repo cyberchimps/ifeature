@@ -1,6 +1,11 @@
 iFeature Changelog
 
 ****************************
+Version 6.1 (09-19-17)
+- Added new design skin that impacts font, sidebar, menu design ( Appearance -> Theme Options -> Design -> Skin Options )
+- Added option to turn on/off gradient color scheme ( to choose flat color instead )
+- All 'Read more' hyperlinks changed to a button
+
 Version 6.0 (09-13-17)
 - Added sticky header option
 - Added author bio option

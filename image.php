@@ -12,7 +12,7 @@
  * @since    1.0
  * @author   CyberChimps
  * @license  http://www.opensource.org/licenses/gpl-license.php GPL v3.0 (or later)
- * @link     http://www.cyberchimps.com/
+ * @link     https://www.cyberchimps.com/
  */
 
 get_header(); ?>
