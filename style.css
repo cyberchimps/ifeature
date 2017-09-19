@@ -1,10 +1,10 @@
 /*
 Theme Name: iFeature
-Theme URI: http://cyberchimps.com/ifeature-free/
+Theme URI: https://cyberchimps.com/ifeature-free/
 Author: CyberChimps
-Author URI: http://www.cyberchimps.com/
-Description: iFeature 5.9 is a fully-responsive, translation-ready, universal professional theme. Catering to e-commerce sites, blogging, personal profiles and more. iFeature's touch-friendly drag-and-drop elements allow you to set up a professional website in minutes. When it comes to responsive elements and drag-and-drop options, CyberChimps not only pioneered, but continues to innovate these elements for the greater WordPress community. iFeature 5.9 lets you create responsive websites that you can control on any touch-friendly device, including: iPad, iPhone and Android devices. With options on a per-page basis, this theme allows you to control the look and feel of every page. iFeature has sticky header menu. You can also display author bio for each post. For Support - <a href="https://cyberchimps.com/forum/free/ifeature/"> Support forum</a> (https://cyberchimps.com/forum/free/ifeature/). View <a href="http://demos.cyberchimps.com/ifeature/">iFeature Demo</a> (http://demos.cyberchimps.com/ifeature/). CyberChimps - Themes You Can Trust
-Version: 6.0
+Author URI: https://www.cyberchimps.com/
+Description: iFeature 6.1 is a fully-responsive, translation-ready, universal professional theme. Catering to e-commerce sites, blogging, personal profiles and more. iFeature's touch-friendly drag-and-drop elements allow you to set up a professional website in minutes. When it comes to responsive elements and drag-and-drop options, CyberChimps not only pioneered, but continues to innovate these elements for the greater WordPress community. iFeature 6.1 lets you create responsive websites that you can control on any touch-friendly device, including: iPad, iPhone and Android devices. With options on a per-page basis, this theme allows you to control the look and feel of every page. iFeature has sticky header menu. You can also display author bio for each post. For Support - <a href="https://cyberchimps.com/forum/free/ifeature/"> Support forum</a> (https://cyberchimps.com/forum/free/ifeature/). View <a href="http://demos.cyberchimps.com/ifeature/">iFeature Demo</a> (http://demos.cyberchimps.com/ifeature/). CyberChimps - Themes You Can Trust
+Version: 6.1
 Tags: blog, two-columns, right-sidebar, custom-background, custom-colors, custom-menu, featured-images, post-formats, theme-options, sticky-post, full-width-template, footer-widgets, threaded-comments, translation-ready, e-commerce, portfolio
 Text Domain: ifeature
 License: GNU General Public License version 3
@@ -1352,3 +1352,37 @@ h2.box-widget-title {
 {
 	padding-bottom:10px;
 }
+
+
+/* ========= Excerpts Read More button ========= */
+.excerpt-more.blog-excerpt
+{
+	background:transparent;
+	border:2px solid #b6b6b6;
+}
+
+.excerpt-more.blog-excerpt
+{
+	padding: 0 1.2em;
+	font-size:0.65em;
+    font-family: "Lato",sans-serif;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    line-height:2.19em;
+    box-sizing:border-box;
+    cursor:pointer;
+    display:inline-block;
+    font-weight:bolder;
+}
+
+.excerpt-more.blog-excerpt:hover
+{
+	text-decoration:none;
+}
+
+.entry-summary p:last-child a, .more-link a, .excerpt-more
+{
+	border:2px solid #b6b6b6;
+	padding:5px;
+}
+
