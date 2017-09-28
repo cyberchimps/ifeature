@@ -831,6 +831,33 @@ function my_admin_notice(){
 		<?php
 	}
 	}
+	
+	if( !class_exists('WP_Legal_Pages') )
+	{
+	$plugin = 'wplegalpages/legal-pages.php';
+	$slug = 'wplegalpages';
+	$installed_plugins = get_plugins();
+	 if ( $admin_check_screen == 'Manage Themes' || $admin_check_screen == 'Theme Options Page' )
+	{
+		?>
+		<div class="notice notice-info is-dismissible" style="margin-top:15px;">
+		<p>
+			<?php if( isset( $installed_plugins[$plugin] ) )
+			{
+			?>
+				 <a href="<?php echo admin_url( 'plugins.php' ); ?>">Activate the WP Legal Pages plugin</a>
+			 <?php
+			}
+			else
+			{
+			 ?>
+	 		 <a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ); ?>">Install the WP Legal Pages plugin</a>
+			 <?php } ?>
+		</p>
+		</div>
+		<?php
+	}
+	}
 
 	if ( $admin_check_screen == 'Manage Themes' || $admin_check_screen == 'Theme Options Page' )
 	{
