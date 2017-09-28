@@ -915,7 +915,7 @@ function ifeature_menu_design_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'ifeature_menu_design_styles', 55 );
 
-add_action( 'admin_menu', 'ifeaturepro_modern_skin_css');
+add_action( 'admin_head', 'ifeaturepro_modern_skin_css');
 function ifeaturepro_modern_skin_css()
 {
 ?>
@@ -926,5 +926,4 @@ function ifeaturepro_modern_skin_css()
 }
 </style>
 <?php
-
 }
