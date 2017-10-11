@@ -440,8 +440,8 @@ function cyberchimps_ifeature_upgrade_bar(){
 <?php
 }
 
-add_action('admin_init','removee_upgrade_bar');
-function removee_upgrade_bar(){
+add_action('admin_init','remove_upgrade_bar');
+function remove_upgrade_bar(){
 remove_action( 'cyberchimps_options_before_container', 'cyberchimps_upgrade_bar');
 }
 if( cyberchimps_theme_check() == 'free' ) {
@@ -955,13 +955,13 @@ function ifeaturepro_modern_skin_css()
 <?php
 }
 
-function ifeature_ribbon_styles() {
+function ifeature_blog_styles() {
 	if(cyberchimps_get_option('sidebar_images')=="three-column")
 	{
 	wp_enqueue_style( 'three-column-blog', get_template_directory_uri() . '/inc/css/blog-layout/three-column.css', array( 'style' ), '1.0' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'ifeature_ribbon_styles', 30 );
+add_action( 'wp_enqueue_scripts', 'ifeature_blog_styles', 30 );
 
 add_action( 'blog_layout_options', 'ifeature_blog_templates');
 function ifeature_blog_templates()
