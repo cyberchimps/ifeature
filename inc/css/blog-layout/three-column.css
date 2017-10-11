@@ -1,0 +1,31 @@
+.blog .article-wrapper, .blog article.post {
+    width: 31%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.blog .page-title {
+    text-align: center;
+}
+
+.blog article .entry-meta {
+    margin-top: 10px;
+}
+
+.blog article .featured-image {
+  margin:20px 0;
+}
+
+@media screen and (max-width: 980px) and (min-width: 750px) {
+.blog .article-wrapper, .blog article.post {
+    width: 30%;
+    }
+}
+   
+@media (max-width: 360px) {
+.blog .article-wrapper, .blog article.post {
+    width: 94%;
+    }
+}
