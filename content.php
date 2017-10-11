@@ -19,6 +19,10 @@
 
 	<header class="entry-header">
 
+	<?php	if(cyberchimps_get_option('sidebar_images')=="three-column")
+		{
+			ifeature_featured_image(); 
+		}?>
 		<?php cyberchimps_post_format_icon();
 
 		echo ( 'post' == get_post_type() && !is_single() || is_search() ) ? '<h2 class="entry-title">' : '<h1 class="entry-title">';
@@ -105,7 +109,10 @@
 	<?php
 	elseif( is_page() ): ?>
 		<div class="entry-summary">
-			<?php cyberchimps_featured_image(); ?>
+	<?php	if(cyberchimps_get_option('sidebar_images')!=="three-column")
+		{
+			 cyberchimps_featured_image();
+		} ?>
 			<?php the_content(); ?>
 			<?php edit_post_link( __( 'Edit', 'ifeature' ), '<span class="edit-link">', '</span>' ); ?>
 		</div><!-- .entry-summary -->
@@ -114,13 +121,19 @@
 	elseif( is_home() ): // blog post pages ?>
 		<?php if( cyberchimps_get_option( 'post_excerpts', 0 ) ): ?>
 			<div class="entry-summary">
-				<?php cyberchimps_featured_image(); ?>
+	<?php	if(cyberchimps_get_option('sidebar_images')!=="three-column")
+		{
+			 cyberchimps_featured_image();
+		} ?>
 				<?php the_excerpt(); ?>
 				<?php edit_post_link( __( 'Edit', 'ifeature' ), '<span class="edit-link">', '</span>' ); ?>
 			</div>
 		<?php else: ?>
 			<div class="entry-content">
-				<?php cyberchimps_featured_image(); ?>
+	<?php	if(cyberchimps_get_option('sidebar_images')!=="three-column")
+		{
+			 cyberchimps_featured_image();
+		} ?>
 				<?php the_content( __( 'Continue reading', 'ifeature' ) . ' <span class="meta-nav">&rarr;</span>' ); ?>
 				<?php edit_post_link( __( 'Edit', 'ifeature' ), '<span class="edit-link">', '</span>' ); ?>
 				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'ifeature' ), 'after' => '</div>' ) ); ?>

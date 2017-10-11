@@ -954,3 +954,44 @@ function ifeaturepro_modern_skin_css()
 </style>
 <?php
 }
+
+function ifeature_blog_styles() {
+	if(cyberchimps_get_option('sidebar_images')=="three-column")
+	{
+	wp_enqueue_style( 'three-column-blog', get_template_directory_uri() . '/inc/css/blog-layout/three-column.css', array( 'style' ), '1.0' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'ifeature_blog_styles', 30 );
+
+add_action( 'blog_layout_options', 'ifeature_blog_templates');
+function ifeature_blog_templates()
+{
+$imagepath = get_template_directory_uri() . '/cyberchimps/lib/images/';
+
+$vat=array(
+			'full_width'    => $imagepath . '1col.png',
+			'right_sidebar' => $imagepath . '2cr.png',
+			'three-column' => get_template_directory_uri() . '/images/3col.png'
+	);
+
+
+return $vat;
+}
+
+function ifeature_featured_image() {
+	global $post;
+
+		$show = ( cyberchimps_get_option( 'post_featured_images', 1 ) ) ? cyberchimps_get_option( 'post_featured_images', 1 ) : false;
+
+
+	if( $show ):
+		if( has_post_thumbnail() ): ?>
+			<div class="featured-image">
+				<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'cyberchimps_core' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
+					<?php the_post_thumbnail( apply_filters( 'cyberchimps_post_thumbnail_size', 'full' ) ); ?>
+				</a>
+			</div>
+		<?php    endif;
+	endif;
+}
+
