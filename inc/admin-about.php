@@ -48,9 +48,12 @@ function cyberchimps_display_about() {
 	$theme      = wp_get_theme();
 	?>
 	<div class="about-container">
-
+		<div>
+			<h1 class="heading"><?php echo "iFeature - ".$theme['Version'] ?></h1>	
+			<a href='https://wordpress.org/support/theme/ifeature/reviews/#new-post' target="_blank" style='margin-top: 22px' class="button button-primary"><?php _e('Leave a star rating','ifeature' );?></a>
+		</div>
 		<div class="about-info">
-			<h1><?php echo "iFeature - ".$theme['Version'] ?></h1>
+			
 			<?php
 				$directory_uri = get_template_directory_uri();
 
