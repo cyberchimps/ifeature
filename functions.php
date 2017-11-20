@@ -164,7 +164,7 @@ add_filter( 'cyberchimps_upgrade_pro_title', 'cyberchimps_upgrade_bar_pro_title'
 add_filter( 'cyberchimps_upgrade_link', 'ifeature_upgrade_link' );
 function cyberchimps_demodata()
 {
-	$link = 'https://cyberchimps.com/checkout/?add-to-cart=277266';
+	$link = 'https://cyberchimps.com/checkout/?add-to-cart=277283';
 	return $link.'';
 }
 add_filter( 'cyberchimps_demodata', 'cyberchimps_demodata' );
@@ -427,26 +427,6 @@ function cyberchimps_ifeature_upgrade_bar(){
 				'<a href="' . $upgrade_link . '" target="_blank" title="' . $pro_title . '">' . $pro_title . '</a> '
 			); ?>
 		</p>
-
-	<div class="social-container">
-			<div class="social">
-				<a href="https://twitter.com/cyberchimps" class="twitter-follow-button" data-show-count="false" data-size="small">Follow @cyberchimps</a>
-				<script>!function (d, s, id) {
-						var js, fjs = d.getElementsByTagName(s)[0];
-						if (!d.getElementById(id)) {
-							js = d.createElement(s);
-							js.id = id;
-							js.src = "//platform.twitter.com/widgets.js";
-							fjs.parentNode.insertBefore(js, fjs);
-						}
-					}(document, "script", "twitter-wjs");</script>
-			</div>
-			<div class="social">
-				<iframe
-					src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcyberchimps.com%2F&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21"
-					scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
-			</div>
-		</div>
 
 	</div>
 <?php
