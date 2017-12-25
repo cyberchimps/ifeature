@@ -168,6 +168,14 @@ function cyberchimps_demodata()
 	return $link.'';
 }
 add_filter( 'cyberchimps_demodata', 'cyberchimps_demodata' );
+
+function cyberchimps_gopro()
+{
+	$link = 'https://cyberchimps.com/store/ifeaturepro#whygopro';
+	return $link.'';
+}
+add_filter( 'cyberchimps_gopro', 'cyberchimps_gopro' );
+
 function cyberchimps_rating_link()
 {
 	$link = 'https://wordpress.org/support/theme/ifeature/reviews/#new-post/';
