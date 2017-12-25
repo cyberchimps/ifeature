@@ -64,6 +64,7 @@ function cyberchimps_display_about() {
 		</div>
 
 		<div class="features">
+			<h2>Why upgrade to Pro?</h2>			
 			<table class="features-table">
 			<thead>
 			<tr>
@@ -73,7 +74,7 @@ function cyberchimps_display_about() {
 			</tr>
 
 			<tr>
-			<td class="feature">Responsive layout <p>Works on every device</p></td>
+			<td class="feature">Responsive layout</td>
 			<td class="featureyes"><span class='dashicons-before dashicons-yes'></span></td>
 			<td class="featureyes"><span class='dashicons-before dashicons-yes'></span></td>
 			</tr>

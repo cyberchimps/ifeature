@@ -873,7 +873,7 @@ function ifeature_custom_category_widget( $arg ) {
 add_filter( "widget_categories_args", "ifeature_custom_category_widget" );
 add_filter( "widget_categories_dropdown_args", "ifeature_custom_category_widget" );
 
-function ifeature_exclude_post_cat_recentpost_widget(){
+function ifeature_exclude_post_cat_recentpost_widget($array){
 	$s = '';
 	$i = 1;
 	$excludecat = get_theme_mod( 'cyberchimps_exclude_post_cat' );
@@ -887,10 +887,11 @@ function ifeature_exclude_post_cat_recentpost_widget(){
 				$s .= ', ';
 		}
 	}
+	
+	$array['cat']=array($s);	
+	//$exclude = array( 'cat' => $s );
 
-	$exclude = array( 'cat' => $s );
-
-	return $exclude;
+	return $array;
 }
 add_filter( "widget_posts_args", "ifeature_exclude_post_cat_recentpost_widget" );
 
