@@ -172,7 +172,7 @@ add_filter( 'cyberchimps_demodata', 'cyberchimps_demodata' );
 function cyberchimps_gopro()
 {
 	$link = 'https://cyberchimps.com/store/ifeaturepro#whygopro';
-	return $link.'';
+	return $link;
 }
 add_filter( 'cyberchimps_gopro', 'cyberchimps_gopro' );
 
@@ -975,7 +975,8 @@ add_filter( 'ifeature_menu_design', 'ifeature_menu_design_options', 1 );
 // add styles for skin selection
 function ifeature_menu_design_styles() {
 	$skin = cyberchimps_get_option( 'ifeature_menu_design' );
-	if( $skin != 'default' ) {
+
+	if( isset($skin) && $skin!= '' && $skin != 'default' ) {
 		wp_enqueue_style( 'ifeature-menu-design', get_template_directory_uri() . '/inc/css/menu/' . $skin . '.css', array( 'style' ), '1.0' );
 	}
 	
