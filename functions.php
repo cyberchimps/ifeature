@@ -1043,3 +1043,29 @@ function ifeature_featured_image() {
 	endif;
 }
 
+function ifeature_cyberchimps_selected_blog_elements() {
+	$options = array(
+			'boxes_lite'     => __( 'Boxes Lite', 'cyberchimps_core' ),
+			"portfolio_lite" => __( 'Portfolio Lite', 'cyberchimps_core' ),
+			"page_section"   => __( 'Page', 'cyberchimps_core' ),
+			"slider_lite"    => __( 'Slider Lite', 'cyberchimps_core' )
+			
+	);
+
+	return $options;
+}
+add_filter( 'cyberchimps_elements_draganddrop_options', 'cyberchimps_selected_elements' );
+add_filter( 'cyberchimps_elements_draganddrop_options', 'ifeature_cyberchimps_selected_blog_elements' );
+
+function ifeature_cyberchimps_selected_page_elements() {
+	$options = array(
+			'boxes_lite'     => __( 'Boxes Lite', 'cyberchimps_core' ),
+			"portfolio_lite" => __( 'Portfolio Lite', 'cyberchimps_core' ),
+			"page_section"   => __( 'Page', 'cyberchimps_core' ),
+			"slider_lite"    => __( 'Slider Lite', 'cyberchimps_core' ),			
+	);
+
+	return $options;
+}
+add_filter( 'cyberchimps_elements_draganddrop_page_options', 'cyberchimps_selected_page_elements' );
+add_filter( 'cyberchimps_elements_draganddrop_page_options', 'ifeature_cyberchimps_selected_page_elements' );
