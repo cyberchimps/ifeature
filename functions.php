@@ -39,6 +39,7 @@ add_filter( 'cyberchimps_current_theme_name', 'ifeature_options_theme_name', 1 )
 // Load Core
 require_once( get_template_directory() . '/cyberchimps/init.php' );
 require( get_template_directory() . '/inc/admin-about.php' );
+require_once( get_template_directory() . '/inc/testimonial_template.php' );
 
 // Set the content width based on the theme's design and stylesheet.
 if( !isset( $content_width ) ) {
@@ -52,6 +53,21 @@ function ifeature_add_site_info() {
 }
 
 add_action( 'cyberchimps_site_info', 'ifeature_add_site_info' );
+
+function ifeature_enqueue()
+{
+	$directory_uri  = get_template_directory_uri();
+	wp_enqueue_script( 'jquery-flexslider', $directory_uri . '/inc/js/jquery.flexslider.js', 'jquery', '', true );
+}
+add_action( 'wp_enqueue_scripts', 'ifeature_enqueue' );
+
+function ifeature_set_defaults()
+{
+
+	remove_action('testimonial', array( CyberChimpsTestimonial::instance(), 'render_display' ));
+	add_action('testimonial', 'ifeature_testimonial_render_display');
+}
+add_action( 'init', 'ifeature_set_defaults' );
 
 if( !function_exists( 'cyberchimps_comment' ) ) :
 // Template for comments and pingbacks.
@@ -1043,7 +1059,7 @@ function ifeature_featured_image() {
 	endif;
 }
 
-function ifeature_cyberchimps_selected_blog_elements() {
+/*function ifeature_cyberchimps_selected_blog_elements() {
 	$options = array(
 			'boxes_lite'     => __( 'Boxes Lite', 'cyberchimps_core' ),
 			"portfolio_lite" => __( 'Portfolio Lite', 'cyberchimps_core' ),
@@ -1069,3 +1085,4 @@ function ifeature_cyberchimps_selected_page_elements() {
 }
 add_filter( 'cyberchimps_elements_draganddrop_page_options', 'cyberchimps_selected_page_elements' );
 add_filter( 'cyberchimps_elements_draganddrop_page_options', 'ifeature_cyberchimps_selected_page_elements' );
+*/

@@ -3,8 +3,8 @@ Theme Name: iFeature
 Theme URI: https://cyberchimps.com/ifeature-free/
 Author: CyberChimps
 Author URI: https://www.cyberchimps.com/
-Description: iFeature 6.6 is a fully-responsive, translation-ready, universal professional theme. Catering to e-commerce sites, blogging, personal profiles and more. iFeature's touch-friendly drag-and-drop elements allow you to set up a professional website in minutes. When it comes to responsive elements and drag-and-drop options, CyberChimps not only pioneered, but continues to innovate these elements for the greater WordPress community. iFeature 6.5 lets you create responsive websites that you can control on any touch-friendly device, including: iPad, iPhone and Android devices. With options on a per-page basis, this theme allows you to control the look and feel of every page. iFeature has sticky header menu. It has option available to exclude categories from blog page. You can also display author bio for each post. For Support - <a href="https://cyberchimps.com/forum/free/ifeature/"> Support forum</a> (https://cyberchimps.com/forum/free/ifeature/). View <a href="http://demos.cyberchimps.com/ifeature/">iFeature Demo</a> (http://demos.cyberchimps.com/ifeature/). CyberChimps - Themes You Can Trust
-Version: 6.6
+Description: iFeature 6.7 is a fully-responsive, translation-ready, universal professional theme. Catering to e-commerce sites, blogging, personal profiles and more. iFeature's touch-friendly drag-and-drop elements allow you to set up a professional website in minutes. When it comes to responsive elements and drag-and-drop options, CyberChimps not only pioneered, but continues to innovate these elements for the greater WordPress community. iFeature 6.5 lets you create responsive websites that you can control on any touch-friendly device, including: iPad, iPhone and Android devices. With options on a per-page basis, this theme allows you to control the look and feel of every page. iFeature has sticky header menu. It has option available to exclude categories from blog page. You can also display author bio for each post. For Support - <a href="https://cyberchimps.com/forum/free/ifeature/"> Support forum</a> (https://cyberchimps.com/forum/free/ifeature/). View <a href="http://demos.cyberchimps.com/ifeature/">iFeature Demo</a> (http://demos.cyberchimps.com/ifeature/). CyberChimps - Themes You Can Trust
+Version: 6.7
 Tags: blog, two-columns, right-sidebar, custom-background, custom-colors, custom-menu, featured-images, post-formats, theme-options, sticky-post, full-width-template, footer-widgets, threaded-comments, translation-ready, e-commerce, portfolio
 Text Domain: ifeature
 License: GNU General Public License version 3
@@ -1400,4 +1400,190 @@ h2.box-widget-title {
 {
 	height:330px !important;
 	overflow-y:auto;
+}
+/*============= Testimonial ==========*/
+
+#testimonial_section
+{
+    margin-bottom: 35px;
+}
+#testimonial_section
+{
+    margin: 2% 0 10% 0;
+}
+.if_main_title{
+      margin-top: 80px;
+      text-align: center;
+      font-size: 1.8em;
+  }
+@media all and (max-width: 480px) {
+  #testimonial_section
+  {
+       margin-top: 60px; 
+  }  
+}
+
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.slides.if_carousel {
+  max-width: 100%;
+  display: inline-block;
+  padding-top: 20px;
+  width: auto !important; }
+
+  #testimonial_section .if_short_desc {
+    margin-top: 80px; }
+
+#testimonial_section {
+  background: rgba(0, 0, 0, 0.6) none repeat scroll 0% 0%; }
+  #testimonial_section .img-responsive {
+    -webkit-border-radius: 100%;
+       -moz-border-radius: 100%;
+            border-radius: 100%;
+    border: 5px solid #fff; }
+  #testimonial_section .flexslider {
+    background: transparent;
+    border: none;
+    width: 100%;
+    margin: 0 auto;
+    left: 0;
+    right: 0; }
+  #testimonial_section .if_slider_text_img {
+    color: #fff; }
+    #testimonial_section .if_slider_text_img li {
+      text-align: center; }
+
+  #testimonial_section .if_testimonial_author {
+    font-weight: 600;
+    font-size: 1.125em; }
+  #testimonial_section .if_testimonial_abt_author {
+    font-weight: 500;
+    margin-bottom: 12%; 
+  }
+  #testimonial_section .after_testimonial_text {
+    margin: 25px auto;
+    padding: 0;
+    max-width: 84px;
+    border: 0;
+    border-top: solid 2px #cd834a;
+    text-align: center;
+    background: transparent; 
+  }
+  #testimonial_section #carousel2.flexslider {
+    position: absolute;
+    bottom: -20%; 
+  }
+  #testimonial_section .flex-active-slide img {
+    border-color: #cd834a; 
+  }
+  #testimonial_section .flex-active-slide .arrow-top {
+    position: absolute;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #e14c3d;
+    border-left: 10px solid transparent;
+    top: 12px;
+    left: 13%; 
+  }
+  #testimonial_section .flex-viewport {
+    text-align: center; 
+  }
+  testimonial_section .flexslider .slides {
+    padding-bottom: 30px; 
+  }  
+  #testimonial_section{
+      color: #fff;
+      position: relative;
+      font-size: 16px;
+  }
+  .if_main_title{
+      margin-top: 80px;
+      text-align: center;
+  }
+  .flex-direction-nav{
+      display: none;
+  }
+
+@media all and (max-width: 480px) {
+  #testimonial_section #carousel2.flexslider {
+    bottom: -10%; }
+  #testimonial_section .flexslider#carousel2 {
+    width: 100%; }
+  header#cc-header .contact_details {
+  float: none;
+    }
+    #testimonial_section .if_testimonial_abt_author{
+       margin-bottom: 16%; 
+    }
+
+}
+/* =============================== Contact Section  ========================== */
+.contactus_wrapper{
+    padding: 6% 0 3% 0;
+    color: #fff;
+   
+}
+.contactus_wrapper.span12
+{
+     margin: 0 auto;
+}
+#map_contact_section{
+    margin: 60px 0 0 0;
+}
+#contact_us input[type="text"], #contact_us textarea{
+    width: 96%;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 12px;
+   
+}
+.contact_left_sec{
+    font-size: 16px;
+    line-height: 1.8;
+}
+.fa
+{
+    font-size: 30px;
+}
+.contact_right_sec input[type="submit"]
+{
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #b6b6b6 0%, #828080 100%) repeat scroll 0 0;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-family: lobster,cursive;
+    font-size: 17.5px;
+    border: none;
+    border-radius: 3px;
+    padding: 15px 55px;
+    margin: 2% 32%;
+    
+    
+}
+.contact_title{
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;  
+    font-size: 1.8em;
+}
+
+@media all and (max-width: 767px) {
+    .contact_left_sec
+    {
+        text-align: center;
+    }
+    .contactus_wrapper.span12
+    {
+        padding: 20px 30px;
+    }
+    .contact_addr {
+    padding-bottom: 10px;
+    }
+    .if_testimonial_text{
+    padding: 0 20px;
+    }
 }
