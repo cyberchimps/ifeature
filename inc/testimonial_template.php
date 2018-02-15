@@ -63,7 +63,7 @@ function ifeature_testimonial_render_display()
                 $testimonials[2]['text'] = cyberchimps_get_option( 'cyberchimps_testimonial_three_text', apply_filters( 'cyberchimps_testimonial_text3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec nisl ut est ultricies pellentesque id eu massa. Pellentesque fermentum posuere odio non accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris scelerisque auctor ligula sed aliquet' ) );
                
 	} 
-        $skin_color = cyberchimps_get_option('cyberchimps_skin_color');error_log($skin_color);
+        $skin_color = cyberchimps_get_option('cyberchimps_skin_color');
         ?>
 	<?php 
         if($testimonial_background)
