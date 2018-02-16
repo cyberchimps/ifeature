@@ -856,27 +856,29 @@ function my_admin_notice(){
 	$plugin = 'elementor/elementor.php';
 	$slug = 'elementor';
 	$installed_plugins = get_plugins();
-	if( isset( $installed_plugins[$plugin] ) ) {
-		if( !is_plugin_active( $plugin ) ) {
-	?>
+	if ( $admin_check_screen == 'Manage Themes' || $admin_check_screen == 'Theme Options Page' )
+	{
+		if( isset( $installed_plugins[$plugin] ) ) {
+			if( !is_plugin_active( $plugin ) ) {
+		?>
+				<div class="notice notice-info is-dismissible" style="margin-top:15px;">
+				<p>
+				<a href="<?php echo admin_url( 'plugins.php' ); ?>">Activate the Elementor plugin</a>
+				</p>
+				</div>
+		<?php 		
+		}
+		}
+		else {
+		?>
 			<div class="notice notice-info is-dismissible" style="margin-top:15px;">
 			<p>
-			<a href="<?php echo admin_url( 'plugins.php' ); ?>">Activate the Elementor plugin</a>
+			<a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ); ?>">Install the Elementor plugin</a>
 			</p>
 			</div>
-	<?php 		
+	<?php 	
+		}	
 	}
-	}
-	else {
-	?>
-		<div class="notice notice-info is-dismissible" style="margin-top:15px;">
-		<p>
-		<a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ); ?>">Install the Elementor plugin</a>
-		</p>
-		</div>
-<?php 	
-	}	
-	
 		
 	if( !class_exists('WP_Legal_Pages') )
 	{
