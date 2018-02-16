@@ -19,6 +19,10 @@ function cyberchimps_text_domain() {
 }
 add_action( 'after_setup_theme', 'cyberchimps_text_domain' );
 
+if ( ! defined( 'ELEMENTOR_PARTNER_ID' ) ) {
+	define( 'ELEMENTOR_PARTNER_ID', 2126 );
+}
+
 // Theme check function to determine whether the them is free or pro.
 if( !function_exists( 'cyberchimps_theme_check' ) ) {
 	function cyberchimps_theme_check() {
@@ -848,6 +852,32 @@ function my_admin_notice(){
 	}
 	}
 	
+
+	$plugin = 'elementor/elementor.php';
+	$slug = 'elementor';
+	$installed_plugins = get_plugins();
+	if( isset( $installed_plugins[$plugin] ) ) {
+		if( !is_plugin_active( $plugin ) ) {
+	?>
+			<div class="notice notice-info is-dismissible" style="margin-top:15px;">
+			<p>
+			<a href="<?php echo admin_url( 'plugins.php' ); ?>">Activate the Elementor plugin</a>
+			</p>
+			</div>
+	<?php 		
+	}
+	}
+	else {
+	?>
+		<div class="notice notice-info is-dismissible" style="margin-top:15px;">
+		<p>
+		<a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ); ?>">Install the Elementor plugin</a>
+		</p>
+		</div>
+<?php 	
+	}	
+	
+		
 	if( !class_exists('WP_Legal_Pages') )
 	{
 	$plugin = 'wplegalpages/legal-pages.php';

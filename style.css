@@ -1533,7 +1533,7 @@ h2.box-widget-title {
 }
 #map_contact_section{
     //margin: 60px 0 0 0;
-   margin: 2% 0 10% 0;
+   margin: 2% 0 2% 0;
 }
 #map_contact_section .fa-envelope {
     font-size:24px;
@@ -1575,10 +1575,7 @@ h2.box-widget-title {
   #testimonial_section
   {
        margin-top: 60px; 
-  }
-  .contact_right_sec input[type="submit"] {
-     margin-left:26%;     
-  }		  
+  }  		  
 }
 
 @media all and (max-width: 767px) {
