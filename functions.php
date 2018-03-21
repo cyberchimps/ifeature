@@ -68,6 +68,8 @@ add_action( 'wp_enqueue_scripts', 'ifeature_enqueue' );
 function ifeature_set_defaults()
 {
 
+	remove_filter( 'dynamic_sidebar_params', 'cyberchimps_footer_widgets' );
+	add_filter( 'dynamic_sidebar_params', 'ifeature_footer_widget_param' );
 	remove_action('testimonial', array( CyberChimpsTestimonial::instance(), 'render_display' ));
 	add_action('testimonial', 'ifeature_testimonial_render_display');
 }
@@ -557,6 +559,24 @@ $wp_customize->add_setting( 'cyberchimps_options[menu_text_colorpicker]', array(
         'settings' => 'cyberchimps_options[sticky_header]',
         'type' => 'checkbox'
     ) );
+	// Add footer widget layout option
+	$imagefooterpath = get_template_directory_uri() . '/images/footer/';
+	$footer_layout = apply_filters( 'cyberchimps_footer_widget_layout', array(
+			'footer-4-col' => $imagefooterpath . 'footer-4-col.png',
+			'footer-3-col' => $imagefooterpath . 'footer-3-col.png',			
+	) );
+	$wp_customize->add_setting( 'cyberchimps_options[site_footer_option]', array(
+			'default' => 'footer-4-col',
+			'type' => 'option',
+			'sanitize_callback' => 'cyberchimps_text_sanitization'
+	) );
+	
+	$wp_customize->add_control( new Cyberchimps_skin_selector( $wp_customize, 'site_footer_option', array(
+			'label' => __( 'Choose Footer Widgets Layout', 'cyberchimps_core' ),
+			'section' => 'cyberchimps_footer_section',
+			'settings' => 'cyberchimps_options[site_footer_option]',
+			'choices' => $footer_layout,
+	) ) );
 }
 
 
@@ -624,6 +644,20 @@ $fields_list[] = array(
 		) ),
 		'section' => 'cyberchimps_custom_skin_option_section',
 		'heading' => 'cyberchimps_design_heading'
+	);
+
+	$imagefooterpath = get_template_directory_uri() . '/images/footer/';
+	$fields_list[] = array(
+			'name'    => __( 'Choose Footer Widgets Layout', 'cyberchimps_core' ),
+			'id'      => 'site_footer_option',
+			'std'     => 'footer-4-col',
+			'type'    => 'images',
+			'options' => apply_filters( 'cyberchimps_footer_widget_layout', array(
+					'footer-4-col' => $imagefooterpath . 'footer-4-col.png',
+					'footer-3-col'  => $imagefooterpath . 'footer-3-col.png'					
+			) ),
+			'section' => 'cyberchimps_footer_section',
+			'heading' => 'cyberchimps_footer_heading'
 	);
 
 return $fields_list;
@@ -916,6 +950,44 @@ function my_admin_notice(){
 		<?php
 	}
 	
+}
+function ifeature_footer_widget_param( $params )
+{
+	global $footer_widget_counter_ifeature;
+	$footer_widget_layout = cyberchimps_get_option('site_footer_option');
+
+	if(isset($footer_widget_layout) && $footer_widget_layout != '')
+		$layout = $footer_widget_layout;
+	else
+		$layout = '';
+	$divider = 4;
+
+	//Check if we are displaying "Footer Sidebar"
+	if ( $params[0]['id'] == 'cyberchimps-footer-widgets' ) {
+
+		//Check which footer layout is selcted
+		if ($layout == 'footer-3-col')
+		{
+			// This is 3-col layout
+			$class                      = 'class="span4 ';
+			$divider = 3;
+			$params[0]['before_widget'] = preg_replace('/class="/', $class, $params[0]['before_widget'],1 );
+
+		}
+		else if ($layout == 'footer-4-col')
+		{
+			// This is 4-col layout
+			$divider = 4;
+		}
+	error_log($footer_widget_counter_ifeature. ' '.$divider);	
+		if ( $footer_widget_counter_ifeature % $divider == 0 ) {
+
+			echo '</div> <div class="row-fluid">';
+		}
+		$footer_widget_counter_ifeature++;
+	}
+ 
+	return $params;
 }
 function ifeature_custom_category_widget( $arg ) {
 	$excludecat = get_theme_mod( 'cyberchimps_exclude_post_cat' );
