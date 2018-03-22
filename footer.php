@@ -26,7 +26,19 @@ if( cyberchimps_get_option( 'footer_show_toggle' ) == '1' ) : ?>
 						<div class="row-fluid">
 
 							<?php if( !dynamic_sidebar( 'cyberchimps-footer-widgets' ) ) : ?>
-
+						</div>
+						
+						<?php else : 
+								$footer_widget_layout = cyberchimps_get_option('site_footer_option');
+								if(isset($footer_widget_layout) && $footer_widget_layout != '')
+									$layout = $footer_widget_layout;
+								else
+									$layout = '';
+								
+								if ($layout == 'footer-3-col')
+								{									
+						?>				
+								<div class="row-fluid">
 								<aside class="widget-container span3">
 									<h3 class="widget-title"><?php _e( 'Pages', 'ifeature' ); ?></h3>
 									<ul>
@@ -47,7 +59,8 @@ if( cyberchimps_get_option( 'footer_show_toggle' ) == '1' ) : ?>
 										<?php wp_list_categories( 'show_count=1&title_li=' ); ?>
 									</ul>
 								</aside>
-
+								</div>
+								<div class="row-fluid">
 								<aside class="widget-container span3">
 									<h3 class="widget-title"><?php _e( 'WordPress', 'ifeature' ); ?></h3>
 									<ul>
@@ -59,10 +72,48 @@ if( cyberchimps_get_option( 'footer_show_toggle' ) == '1' ) : ?>
 										<?php wp_meta(); ?>
 									</ul>
 								</aside>
+								</div>
+							<?php 
+							}
+							else
+							{	
+							?>
+								<div class="row-fluid">
+								<aside class="widget-container span3">
+									<h3 class="widget-title"><?php _e( 'Pages', 'ifeature' ); ?></h3>
+									<ul>
+										<?php wp_list_pages( 'title_li=' ); ?>
+									</ul>
+								</aside>
 
-							<?php endif; ?>
-						</div>
-						<!-- .row-fluid -->
+								<aside class="widget-container span3">
+									<h3 class="widget-title"><?php _e( 'Archives', 'ifeature' ); ?></h3>
+									<ul>
+										<?php wp_get_archives( 'type=monthly' ); ?>
+									</ul>
+								</aside>
+
+								<aside class="widget-container span3">
+									<h3 class="widget-title"><?php _e( 'Categories', 'ifeature' ); ?></h3>
+									<ul>
+										<?php wp_list_categories( 'show_count=1&title_li=' ); ?>
+									</ul>
+								</aside>
+								<aside class="widget-container span6">
+										<h3 class="widget-title"><?php _e( 'WordPress', 'iribbon' ); ?></h3>
+										<ul>
+											<?php wp_register(); ?>
+											<li><?php wp_loginout(); ?></li>
+											<li><a href="<?php echo esc_url( 'http://wordpress.org/' ); ?>" target="_blank"
+											       title="<?php esc_attr_e( 'Powered by WordPress, state-of-the-art semantic personal publishing platform.', 'iribbon' ); ?>"> <?php _e( 'WordPress', 'iribbon' ); ?></a>
+											</li>
+											<?php wp_meta(); ?>
+										</ul>
+								</aside>
+								</div>
+								<?php }?>	
+							<?php endif; ?>					
+						
 					</div>
 					<!-- #footer-widget-container -->
 				</div>
