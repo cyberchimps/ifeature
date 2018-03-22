@@ -2,7 +2,7 @@ iFeature Changelog
 
 ****************************
 Version 6.8 (03/22/18)
-- Added new 2 column footer layout
+- Added new 2 column footer widget layout
 
 Version 6.7 (02/16/18)
 - Added Testimonial Element
