@@ -99,7 +99,7 @@ if( cyberchimps_get_option( 'footer_show_toggle' ) == '1' ) : ?>
 										<?php wp_list_categories( 'show_count=1&title_li=' ); ?>
 									</ul>
 								</aside>
-								<aside class="widget-container span6">
+								<aside class="widget-container span3">
 										<h3 class="widget-title"><?php _e( 'WordPress', 'ifeature' ); ?></h3>
 										<ul>
 											<?php wp_register(); ?>
