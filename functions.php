@@ -979,7 +979,7 @@ function ifeature_footer_widget_param( $params )
 			// This is 4-col layout
 			$divider = 4;
 		}
-	error_log($footer_widget_counter_ifeature. ' '.$divider);	
+	
 		if ( $footer_widget_counter_ifeature % $divider == 0 ) {
 
 			echo '</div> <div class="row-fluid">';
