@@ -1,6 +1,9 @@
 iFeature Changelog
 
 ****************************
+Version 6.9 (10/22/18)
+- Added Gutenberg compatibility
+
 Version 6.8 (03/23/18)
 - Added new 2 column footer widget layout
 
@@ -135,7 +138,7 @@ Version 5.1.67 (5-9-14)
 - Added FooBox as recommended plugin.
 
 Version 5.1.66 (5-2-14)
-- Fixed byline toggle issue. 
+- Fixed byline toggle issue.
 
 Version 5.1.65 (4-24-14)
 - Added recommendation for clef plugin.
@@ -355,7 +358,7 @@ Version 5.1.19 (6-6-13)
 
 Version 5.1.18 (5-30-13)
 -Removed modal welcome note on theme install.
--Boxes - added filter for default number 
+-Boxes - added filter for default number
 
 Version 5.1.17 (5-23-13)
 -Added function cyberchimps_posted_by() to display author link.
@@ -540,8 +543,8 @@ Version 4.5.8 (06-15-12)
 -Replaced wp_theme_data() (deprecated) with wp_get_theme() in opt-in PressTrends function, backwards compatible with 3.3 and below.
 
 Version 4.5.7 (06-12-12)
--Fixed breadcrumb issue related to single posts/media attachments. 
--Fix for random "no tweets to display" message for the Twitterbar. 
+-Fixed breadcrumb issue related to single posts/media attachments.
+-Fix for random "no tweets to display" message for the Twitterbar.
 -Added code to prevent direct access to PHP files.
 
 Version 4.5.6 (06-06-12)
@@ -554,7 +557,7 @@ Version 4.5.5 (05-30-12)
 -Code cleanup in comments-actions.php.
 
 Version 4.5.4 (05-24-12)
--Bug fix for sidebars related to last update. 
+-Bug fix for sidebars related to last update.
 
 Version 4.5.3 (05-22-12)
 -Added prefixes for all custom post meta data options.
@@ -563,8 +566,8 @@ Version 4.5.3 (05-22-12)
 -Added Catalan language files.
 
 Version 4.5.2 (05-15-12)
--Removed call for unnecessary JS file causing errors for some users.  
--Updated some copy in the stylesheet. 
+-Removed call for unnecessary JS file causing errors for some users.
+-Updated some copy in the stylesheet.
 
 Version 4.5.1 (05-14-12)
 -Added option for responsive video embeds (Youtube/Vimeo).
@@ -573,7 +576,7 @@ Version 4.5.1 (05-14-12)
 Version 4.5 (05-08-12)
 -Added Product Element.
 -Updated styling of Twitter Bar and Breadcrumb Elements.
--General CSS cleanup. 
+-General CSS cleanup.
 -Updated default background image.
 -Adding missing translation wrapper to pagination function.
 -Added Italian, Turkish, Swedish, Spanish, Persian and Russian language files.
@@ -582,7 +585,7 @@ Version 4.5 (05-08-12)
 Version 4.1.6 (05-01-12)
 -Fixed blowout when all social icons are enabled.
 -Removed some additional unused images.
--Mobile Menu now works in phone landscape mode. 
+-Mobile Menu now works in phone landscape mode.
 -Fixed bug with broken "next" link in pagination.
 
 Version 4.1.5 (04-24-12)
@@ -595,8 +598,8 @@ Version 4.1.5 (04-24-12)
 
 Version 4.1.4 (04-17-12)
 -CSS fix for menu in IE.
--Removed ereg_replace from Google Font code for PHP 5.3 compatibility. 
--Re-added IE Quirks fix. 
+-Removed ereg_replace from Google Font code for PHP 5.3 compatibility.
+-Re-added IE Quirks fix.
 -Removed some unused translation functions.
 
 Version 4.1.3 (04-10-12)
@@ -606,13 +609,13 @@ Version 4.1.3 (04-10-12)
 
 Version 4.1.2 (04-03-12)
 -Twitter Bar no longer requires Twitter for WordPress plugin.
--Unidentified index error fix for meta box code. 
--Added Romanian language files. 
--Updated screenshot. 
--Removed height: auto from objects in responsive style sheet. 
+-Unidentified index error fix for meta box code.
+-Added Romanian language files.
+-Updated screenshot.
+-Removed height: auto from objects in responsive style sheet.
 -Fixed bug with archive of an empty category.
--Adjusted "viewport" initial scale for full-width mobile device view. 
--Added script to wrap YouTube and Vimeo embeds in special div when responsive design is enabled. 
+-Adjusted "viewport" initial scale for full-width mobile device view.
+-Added script to wrap YouTube and Vimeo embeds in special div when responsive design is enabled.
 
 Version 4.1.1 (03-28-12)
 -Updated missed Google Font library call for SSL support.
@@ -625,7 +628,7 @@ Version 4.1.1 (03-28-12)
 
 Version 4.1 (03-21-12)
 -Clear fix for posts for non logged-in users.
--Re-added PressTrends with new opt-in only option. 
+-Re-added PressTrends with new opt-in only option.
 -Fix for Google +1 button.
 -Updated core.pot
 -Added Croatian translation files.
@@ -635,7 +638,7 @@ Version 4.0.9 (03-14-12)
 -CSS fix for search widget.
 -zindex fix for fallback menu dropdowns.
 -IE8 fix for featured images.
--Minor style and copy tweaks. 
+-Minor style and copy tweaks.
 -Removed some old images.
 
 Version 4.0.8 (03-08-12)
@@ -646,23 +649,23 @@ Version 4.0.7 (03-07-12)
 -Fix for page titles.
 -Updated Google Font Library call to be SSL friendly.
 -Added browser specific HTML classes for IE CSS.
--Updated some theme copy. 
+-Updated some theme copy.
 -CSS tweak for HTML tables to fix calendar widget bug.
--Added next/previous image paginiation for attachments. 
+-Added next/previous image paginiation for attachments.
 
 Version 4.0.6 (03-01-12)
 -Additional margin fix for HTML tables.
 -Updated Foundation CSS.
--Adjusted doctype. 
+-Adjusted doctype.
 -Removed legacy icon margin option.
 -CSS tweaks.
--Removed HTML comment before doctype call, fixes IE quirks mode issue. 
+-Removed HTML comment before doctype call, fixes IE quirks mode issue.
 -Adjusted image upload preview style.
 
 Version 4.0.5 (02-23-12)
 -Fix for HTML tables.
 -Added align:none option for featured images.
--Added missing translation wrapper to Tags: text. 
+-Added missing translation wrapper to Tags: text.
 -Added a few IE related CSS fixes.
 -Responsive design tweaks.
 -Modified breadcrumb style, made them a page element and a templates option.
@@ -675,12 +678,12 @@ Version 4.0.4 (02-17-12)
 -Fixed IE8 post thumbnail bug.
 -IE7 styling fixes.
 -Fixed slider captions not displaying.
--Fixed page title option bug. 
+-Fixed page title option bug.
 -Extended featured image option to Archive and Single templates.
 -Theme options copy update.
 
 Version 4.0.3 (02-13-12)
--jQuery no-conflict fix for better plugin compatibility. 
+-jQuery no-conflict fix for better plugin compatibility.
 -Removed slider timer animation.
 -Adjustment to mobile menu js to fix conflict issue.
 -Adjustment to slider arrows.
@@ -693,12 +696,12 @@ Version 4.0.2 (02-06-12)
 -Fixed slider image filename.
 -Fixed postbar bug on single pages.
 -Removing slider from active blog elements now hides it.
--Fixed CSS bug with media embeds. 
+-Fixed CSS bug with media embeds.
 -Various responive design style fixes.
--Added old slider arrows back, added option to disable timer. 
+-Added old slider arrows back, added option to disable timer.
 
 Version 4.0.1 (02-04-12)
--License notification and theme URI fix. 
+-License notification and theme URI fix.
 
 Version 4.0 (02-03-12)
 -Added Foundation CSS grid, offering both responsive and static design.
@@ -713,8 +716,8 @@ Version 3.1.4 (01-25-12)
 Version 3.1.3 (01-16-12)
 -Fixed bug with featured thumb option.
 -Re-added link color option.
--Removed unnecessary option from post meta options. 
--Fixed bug with page SEO output. 
+-Removed unnecessary option from post meta options.
+-Fixed bug with page SEO output.
 
 Version 3.1.2 (01-06-12)
 -Fixed social icon bug.
@@ -728,32 +731,32 @@ Version 3.1 (01-04-12)
 -Changes to CyberChimps Core Framework.
 -Added new theme specific hooks in light of changes to Core Framework.
 -New metabox code/styling.
--Cleaned up functions file. 
+-Cleaned up functions file.
 -General HTML markup revisions.
 -Added Dutch and German translation files.
 
 Version 3.0.6 (12-22-11)
--Added Portuguese language support. 
+-Added Portuguese language support.
 -Added rel="me" attribute to social icon links.
--Removed unnecessary code from social icon function. 
+-Removed unnecessary code from social icon function.
 
 Version 3.0.5 (12-15-11)
 -Additional visual tweaks for WordPress 3.3.
--Minor tweak to comments hook. 
--Minor HTML markup tweak. 
--Removed 404 image. 
--General fixes and cleanup. 
+-Minor tweak to comments hook.
+-Minor HTML markup tweak.
+-Removed 404 image.
+-General fixes and cleanup.
 
 Version 3.0.4 (12-09-11)
--Removed cursor:pointer from iMenu css. 
--Removed call to missing stylesheet. 
+-Removed cursor:pointer from iMenu css.
+-Removed call to missing stylesheet.
 -Removed unecessary template file in Core directory.
--Fixed post formats icons not displaying without saving settings. 
+-Fixed post formats icons not displaying without saving settings.
 -jQuery no-conflict fix.
 -Now enqueing WP jQuery library.
--Changed old 'ifeature' textdomain to 'core' in comments.php. 
--Minor CSS tweak to meta link colors. 
--Centered theme options panel, added WordPress 3.3 fix. 
+-Changed old 'ifeature' textdomain to 'core' in comments.php.
+-Minor CSS tweak to meta link colors.
+-Centered theme options panel, added WordPress 3.3 fix.
 
 
 Version 3.0.3 (12-01-11)
@@ -763,85 +766,85 @@ Version 3.0.3 (12-01-11)
 -Adjustment to UL in comments.
 -Fixed bug where not keymaster admins in multisite installs could not access theme options.
 -Changed footer styling.
--Fixed visual issues with IE. 
--Added missing No Tile option to custom backgrounds. 
+-Fixed visual issues with IE.
+-Added missing No Tile option to custom backgrounds.
 -Disabling slider navigation also hides slider nav style.
 -Fixed some social icons not showing up by default.
 
 Version 3.0.2 (11-27-11)
 -Fixed Google Analytics code option.
 -Added missing Header Contact area option.
--Added missing defaults to image options. 
+-Added missing defaults to image options.
 
 Version 3.0.1 (11-26-11)
 -Removed .gitignore file.
 
 Version 3.0 (11-26-11)
--Introduction of CyberChimps Core WordPress Framework. 
+-Introduction of CyberChimps Core WordPress Framework.
 -New Theme Options panel using Classy Options Framework.
--Introduction of Drag and Drop page elements. 
+-Introduction of Drag and Drop page elements.
 -Introduction of custom CSS grid.
 -New theme design, includes bordered post and page containers, modified post layout.
--Removed SuperFish, using CSS menu. 
--Twitterbar added for use on a per-page basis. 
+-Removed SuperFish, using CSS menu.
+-Twitterbar added for use on a per-page basis.
 -Post formats support added.
 -New social icon set added.
 -Added post pagination links to single.php.
 
 
 Version 2.1.3 (11-16-11)
--Social icon z-index fix. 
+-Social icon z-index fix.
 
 Version 2.1.2 (11-02-11)
 -Added Romanian language po and mo files.
--Removed "default" label from Lucida Grande in font selection dropdown, added it to Arial instead. 
+-Removed "default" label from Lucida Grande in font selection dropdown, added it to Arial instead.
 -Added classes for category, tag and date archive titles and adjusted margin.
--Adjusted margin on breadcrumb div. 
+-Adjusted margin on breadcrumb div.
 
 Version 2.1.1 (10-25-11)
 -Fixed syntax error in search.php
 -Removed unecessary PHP closing tags from RSS icon code.
--Removed unecessary esc_url from email icon. 
+-Removed unecessary esc_url from email icon.
 -Fixed syntax error in archive.php.
 -Fixed missing text domain in comments.php.
 -Fixed breadcrumb syntax error on page.php
 -General HTML elements styling.
--Fixed broken jQuery call. 
--Fixed error in recent posts default widget where scheduled posts were displaying. 
+-Fixed broken jQuery call.
+-Fixed error in recent posts default widget where scheduled posts were displaying.
 
 Version 2.1 (10-18-11)
--Added localization support, includes ifeature.pot as well as Spanish and French .po/.mo files. 
--Changed default font family to Arial, Helvetica, serif. 
--URLs now sanitized using esc_url when necessary. 
--Removed outdated get_bloginfo('url') call from breadcrumb function. 
--Fixed several broken links in theme options page. 
--Updated theme description and tags in stylesheet. 
+-Added localization support, includes ifeature.pot as well as Spanish and French .po/.mo files.
+-Changed default font family to Arial, Helvetica, serif.
+-URLs now sanitized using esc_url when necessary.
+-Removed outdated get_bloginfo('url') call from breadcrumb function.
+-Fixed several broken links in theme options page.
+-Updated theme description and tags in stylesheet.
 
 Version 2.0.9 (10-11-11)
--jQuery call now placed within a function that hooks into wp_enqueue_scripts. 
--E_STRICT fix in options.php, theme options validation now within a function.  
--Modified disable breadcrumb option. 
--Added missing image alt tags. 
+-jQuery call now placed within a function that hooks into wp_enqueue_scripts.
+-E_STRICT fix in options.php, theme options validation now within a function.
+-Modified disable breadcrumb option.
+-Added missing image alt tags.
 
 Version 2.0.8 (10-1-11)
--Added breadcrumb links for single post, page, archive and search templates. 
--Added definition list title and text styles. 
--Added Flickr social icon. 
--Adjusted h tag styles. 
+-Added breadcrumb links for single post, page, archive and search templates.
+-Added definition list title and text styles.
+-Added Flickr social icon.
+-Adjusted h tag styles.
 
 Version 2.0.7 (9-23-11)
 -Added height:auto element to img.size-full class.
 -Removed unnecessary trailing slash in JS script file paths in functions.php.
 -Renamed sidebar_register function to ifeature_widgets_init.
--Removed various empty lines from template files. 
--Increased font size of site title. 
+-Removed various empty lines from template files.
+-Increased font size of site title.
 
 Version 2.0.6 (9-15-11)
--Register sidebars now placed in a function that hooks into widgets_init. 
--Added ID and description to the footer widgetized area. 
+-Register sidebars now placed in a function that hooks into widgets_init.
+-Added ID and description to the footer widgetized area.
 -Fixed post thumbnail alignment issue caused by clearing float fix from 2.0.4.
--Added post pagination links on main blog index. 
--Fixed img.size-full width. 
+-Added post pagination links on main blog index.
+-Fixed img.size-full width.
 
 Version 2.0.5 (09-08-11)
 -Stripping HTML from Google + and Google Maps social icon URL option.
@@ -853,35 +856,35 @@ Version 2.0.4 (8-31-11)
 -Fixed HTML code showing up in header contact area.
 -Added trailing slashes to default social icon URLs.
 -Added height and width element to social icons.
--Fixed floats not clearing on images. 
--Fixed paddings on site title/description. 
--Lightened link hover color in footer. 
--Adjusted padding, margins and font size of footer widget titles. 
--Adjusted margins/padding on post title, meta, and entry classes. 
--Added link hover on secondary footer menu. 
--Removed unnecessary text domain property from link to theme settings in admin menu. 
+-Fixed floats not clearing on images.
+-Fixed paddings on site title/description.
+-Lightened link hover color in footer.
+-Adjusted padding, margins and font size of footer widget titles.
+-Adjusted margins/padding on post title, meta, and entry classes.
+-Added link hover on secondary footer menu.
+-Removed unnecessary text domain property from link to theme settings in admin menu.
 
 Version 2.0.3 (8-23-11)
--Fixed issue related to Google Analytics code appearing in the footer. 
--Added link to iFeature theme options settings in the Admin bar. 
--Added Arial and serif secondary fonts to body font family. 
+-Fixed issue related to Google Analytics code appearing in the footer.
+-Added link to iFeature theme options settings in the Admin bar.
+-Added Arial and serif secondary fonts to body font family.
 -Updated NivoSlider script to 2.6.
--Now enqueueing WP jQuery library again in light of NivoSlider update. 
+-Now enqueueing WP jQuery library again in light of NivoSlider update.
 
 Version 2.0.2 (8-16-11)
 -Replaced Cantarell with web-safe Lucida Grande as default font for better browser readability.
--Replaced stripslashes() with esc_textarea() (Thanks to Chip for pointing that one out). 
+-Replaced stripslashes() with esc_textarea() (Thanks to Chip for pointing that one out).
 -Removed function_exists() conditional wrapper for add_theme_support() in functions.php.
 -Removed instances of localization calls. Localization support will be added in 2.1.
--Adjusted site name and description margins in header. 
+-Adjusted site name and description margins in header.
 
 Version 2.0.1 (8-05-11)
 -Fixed bugs with Google Plus, Email and RSS social icons.
--Changed all social icon/ credit links to open in new window. 
--Updated some theme options copy. 
+-Changed all social icon/ credit links to open in new window.
+-Updated some theme options copy.
 -Fixed title conditionals in header.php.
 -Removed wp_specialchars(), replaced with esc_html().
--Updated 404 page, added custom image. 
+-Updated 404 page, added custom image.
 
 Version 2.0 (8-01-11)
 -Added "Design", "Social", "Blog" theme options tabs, removed "Header", "Footer" and "SEO", moved footer copyright option to "General".
@@ -893,17 +896,17 @@ Version 2.0 (8-01-11)
 -Added support for post excerpts, featured images, and hiding various post meta elements.
 -Added Google +1 button option.
 -Added link to Author archives in post meta content.
--Added drop down menu option for picking blog post category for feature slider. 
--Restyled theme options page. 
--General bug fixes. 
+-Added drop down menu option for picking blog post category for feature slider.
+-Restyled theme options page.
+-General bug fixes.
 
 Version 1.2.1 (7-27-11)
--Added CyberChimps Themes page in preparation for iFeature Pro 2.0. 
+-Added CyberChimps Themes page in preparation for iFeature Pro 2.0.
 
 Version 1.2 (7-19-11)
 -Added search query to title on search results page.
 -Fixed featured images not clearing with short posts.
--Added "Allan" Google Font. 
+-Added "Allan" Google Font.
 
 Version 1.1.9 (7-13-11)
 -Added Google + social icon.
@@ -914,7 +917,7 @@ Version 1.1.8 (7-06-11)
 Version 1.1.7 (7-01-11)
 -Security fix in comments.php removing $_SERVER variable statement.
 -Cleaned up options.php, removed unnecessary functions.
--Now enqueueing WordPress jQuery library instead of Google's for offline functionality. 
+-Now enqueueing WordPress jQuery library instead of Google's for offline functionality.
 
 Version 1.1.6 (6-13-11)
 -jQuery noconflict patch to fix third-party plugin compatibility issues.
@@ -941,7 +944,7 @@ Version 1.1.2 (5-11-11)
 -Revised CSS for posts and pages to have a post container with a white background.
 -Searchbar CSS fixes for IE.
 -Implemented PIE for rounded corners in IE7-8.
--Removed alpha filter for social icons for IE7-8 due to rendering issue (hover no longer supported for IE7-8, IE9 and modern browsers are fine). 
+-Removed alpha filter for social icons for IE7-8 due to rendering issue (hover no longer supported for IE7-8, IE9 and modern browsers are fine).
 
 Version 1.1.1 (5-4-11)
 -CSS fixes (iMenu).
@@ -968,7 +971,7 @@ Version 1.0.6
 -Updated docs on credit.php.
 
 Version 1.0.5 (4-24-2011)
--Fixed search page pushdown issue, removed extra instance of pagination 
+-Fixed search page pushdown issue, removed extra instance of pagination
 -"Search" text in search field removes when user clicks within the search box
 -Reset button in theme settings properly redirects back to theme settings page
 -Replaced depreciated WordPress function in header.php with current version
@@ -981,7 +984,7 @@ Version 1.0.3 (4-21-2011)
 -Separated theme options code from general functions file, now called options.php
 -Modified theme options page to remove unidentified index errors and modified the UI
 -Fixed sidebar pushdown issue on comment-enabled pages
--Fixed all HTML related errors, now Valid XHTML 1.0 Transitional 
+-Fixed all HTML related errors, now Valid XHTML 1.0 Transitional
 -general bug fixes
 
 Version 1.0.2 (4-9-2011)
@@ -990,7 +993,7 @@ Version 1.0.2 (4-9-2011)
 -general bug fixes
 
 Version 1.0.1 (4-6-2011)
--Updated Theme URI in style.css 
+-Updated Theme URI in style.css
 
 Version 1.0 (4-5-2011)
 -Initial release

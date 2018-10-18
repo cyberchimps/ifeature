@@ -3,8 +3,8 @@ Theme Name: iFeature
 Theme URI: https://cyberchimps.com/ifeature-free/
 Author: CyberChimps
 Author URI: https://www.cyberchimps.com/
-Description: iFeature 6.8 is a fully-responsive, translation-ready, universal professional theme. Catering to e-commerce sites, blogging, personal profiles and more. iFeature's touch-friendly drag-and-drop elements allow you to set up a professional website in minutes. When it comes to responsive elements and drag-and-drop options, CyberChimps not only pioneered, but continues to innovate these elements for the greater WordPress community. iFeature 6.5 lets you create responsive websites that you can control on any touch-friendly device, including: iPad, iPhone and Android devices. With options on a per-page basis, this theme allows you to control the look and feel of every page. iFeature has sticky header menu. It has option available to exclude categories from blog page. You can also display author bio for each post. Includes a Testimonial section so you can highlight positive feedback from your customers and boost conversion. Includes a team section to display your team members details. Two types of footer widgets layout available. For Support - <a href="https://cyberchimps.com/forum/free/ifeature/"> Support forum</a> (https://cyberchimps.com/forum/free/ifeature/). View <a href="http://demos.cyberchimps.com/ifeature/">iFeature Demo</a> (http://demos.cyberchimps.com/ifeature/). CyberChimps - Themes You Can Trust
-Version: 6.8
+Description: iFeature 6.8 is a fully-responsive, Gutenberg compatible, translation-ready, universal professional theme. Catering to e-commerce sites, blogging, personal profiles and more. iFeature's touch-friendly drag-and-drop elements allow you to set up a professional website in minutes. When it comes to responsive elements and drag-and-drop options, CyberChimps not only pioneered, but continues to innovate these elements for the greater WordPress community. iFeature 6.5 lets you create responsive websites that you can control on any touch-friendly device, including: iPad, iPhone and Android devices. With options on a per-page basis, this theme allows you to control the look and feel of every page. iFeature has sticky header menu. It has option available to exclude categories from blog page. You can also display author bio for each post. Includes a Testimonial section so you can highlight positive feedback from your customers and boost conversion. Includes a team section to display your team members details. Two types of footer widgets layout available. For Support - <a href="https://cyberchimps.com/forum/free/ifeature/"> Support forum</a> (https://cyberchimps.com/forum/free/ifeature/). View <a href="http://demos.cyberchimps.com/ifeature/">iFeature Demo</a> (http://demos.cyberchimps.com/ifeature/). CyberChimps - Themes You Can Trust
+Version: 6.9
 Tags: blog, two-columns, right-sidebar, custom-background, custom-colors, custom-menu, featured-images, post-formats, theme-options, sticky-post, full-width-template, footer-widgets, threaded-comments, translation-ready, e-commerce, portfolio
 Text Domain: ifeature
 License: GNU General Public License version 3
@@ -1419,13 +1419,13 @@ h2.box-widget-title {
 @media all and (max-width: 480px) {
   #testimonial_section
   {
-       margin-top: 60px; 
-  }  	  
+       margin-top: 60px;
+  }
 }
 
 .flexslider .slides > li {
   display: none;
-  -webkit-backface-visibility: hidden;  
+  -webkit-backface-visibility: hidden;
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -1463,7 +1463,7 @@ h2.box-widget-title {
     font-size: 1.125em; }
   #testimonial_section .if_testimonial_abt_author {
     font-weight: 500;
-    margin-bottom: 12%; 
+    margin-bottom: 12%;
   }
   #testimonial_section .after_testimonial_text {
     margin: 25px auto;
@@ -1472,14 +1472,14 @@ h2.box-widget-title {
     border: 0;
     border-top: solid 2px #cd834a;
     text-align: center;
-    background: transparent; 
+    background: transparent;
   }
   #testimonial_section #carousel2.flexslider {
     position: absolute;
-    bottom: -20%; 
+    bottom: -20%;
   }
   #testimonial_section .flex-active-slide img {
-    border-color: #cd834a; 
+    border-color: #cd834a;
   }
   #testimonial_section .flex-active-slide .arrow-top {
     position: absolute;
@@ -1487,14 +1487,14 @@ h2.box-widget-title {
     border-bottom: 10px solid #e14c3d;
     border-left: 10px solid transparent;
     top: 12px;
-    left: 13%; 
+    left: 13%;
   }
   #testimonial_section .flex-viewport {
-    text-align: center; 
+    text-align: center;
   }
   testimonial_section .flexslider .slides {
-    padding-bottom: 30px; 
-  }  
+    padding-bottom: 30px;
+  }
   #testimonial_section{
       color: #fff;
       position: relative;
@@ -1517,7 +1517,7 @@ h2.box-widget-title {
   float: none;
     }
     #testimonial_section .if_testimonial_abt_author{
-       margin-bottom: 16%; 
+       margin-bottom: 16%;
     }
 
 }
@@ -1525,7 +1525,7 @@ h2.box-widget-title {
 .contactus_wrapper{
     padding: 6% 0 3% 0;
     color: #fff;
-   
+
 }
 .contactus_wrapper.span12
 {
@@ -1544,7 +1544,7 @@ h2.box-widget-title {
     border: none;
     border-radius: 2px;
     margin-bottom: 12px;
-   
+
 }
 .contact_left_sec{
     font-size: 16px;
@@ -1563,19 +1563,19 @@ h2.box-widget-title {
     font-size: 17.5px;
     border: none;
     border-radius: 3px;
-    padding: 15px 55px;   
+    padding: 15px 55px;
 }
 .contact_title{
     text-align: center;
     color: #fff;
-    padding-top: 20px;  
+    padding-top: 20px;
     font-size: 1.8em;
 }
 @media all and (max-width: 480px) {
   #testimonial_section
   {
-       margin-top: 60px; 
-  }  		  
+       margin-top: 60px;
+  }
 }
 
 @media all and (max-width: 767px) {
@@ -1600,22 +1600,59 @@ h2.box-widget-title {
     box-sizing: border-box;
 }
 @media (min-width: 1200px) {
-#footer-widget-container .row-fluid .span4  { 
+#footer-widget-container .row-fluid .span4  {
 	width: 31.623931623931625%;
 }
-#footer-widget-container .row-fluid .span6  { 
+#footer-widget-container .row-fluid .span6  {
 	width: 48.717948717948715%;
 }
 }
 @media (min-width: 768px) and (max-width: 979px)
 {
-#footer-widget-container .row-fluid .span4  { 
+#footer-widget-container .row-fluid .span4  {
 	width: 31.46%;
 }
-#footer-widget-container .row-fluid .span6  { 
+#footer-widget-container .row-fluid .span6  {
 	width: 48.6%;
 }
 }
 #footer-widgets #footer-widget-container select {
 	width:100%;
 }
+
+/*
+	changes according gutenberg plugin --START
+
+ */
+.entry-content ol,
+.entry-content ul,
+.entry-summary ol,
+.entry-summary ul{
+	margin-left: 2.9em;
+}
+
+.entry-content ol.wp-block-gallery,
+.entry-content ul.wp-block-gallery,
+.entry-summary ol.wp-block-gallery,
+.entry-summary ul.wp-block-gallery {
+	display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+audio, canvas, video {
+    display: inline-block;
+    width: 100%;
+}
+
+.wp-block-column p {
+    padding: 0 14px;
+}
+
+.wp-block-gallery .blocks-gallery-item figcaption {
+        padding: 40px 0;
+}
+/*
+	changes according gutenberg plugin --END
+
+ */
