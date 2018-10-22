@@ -1103,7 +1103,7 @@ add_filter( 'ifeature_menu_design', 'ifeature_menu_design_options', 1 );
  *  Enqueue block styles  in editor
  */
 function ifeature_block_styles() {
-	wp_enqueue_style( 'mytheme-blocks', get_stylesheet_directory_uri() . '/inc/css/blocks.css', array(), '1.0' );
+	wp_enqueue_style( 'ifeature-gutenberg-blocks', get_stylesheet_directory_uri() . '/inc/css/gutenberg-blocks.css', array(), '1.0' );
 }
 add_action( 'enqueue_block_editor_assets', 'ifeature_block_styles' );
 
