@@ -474,6 +474,13 @@ if( cyberchimps_theme_check() == 'free' ) {
 function ifeature_title_setup()
 {
 	add_theme_support( 'title-tag' );
+
+	// enabling theme support for title tag
+
+	// Add support for full and wide align images.
+	add_theme_support( 'align-wide' );
+
+
 }
 add_action( 'after_setup_theme', 'ifeature_title_setup' );
 
@@ -518,7 +525,7 @@ $wp_customize->add_setting( 'cyberchimps_options[menu_text_colorpicker]', array(
         'section' => 'cyberchimps_design_section',
         'settings' => 'cyberchimps_options[menu_text_colorpicker]',
     ) ) );
-    
+
         $wp_customize->add_setting( 'cyberchimps_options[flat_gradient_selector]', array(
         'type' => 'option',
         'sanitize_callback' => 'cyberchimps_sanitize_checkbox'
@@ -563,14 +570,14 @@ $wp_customize->add_setting( 'cyberchimps_options[menu_text_colorpicker]', array(
 	$imagefooterpath = get_template_directory_uri() . '/images/footer/';
 	$footer_layout = apply_filters( 'cyberchimps_footer_widget_layout', array(
 			'footer-4-col' => $imagefooterpath . 'footer-4-col.png',
-			'footer-3-col' => $imagefooterpath . 'footer-3-col.png',			
+			'footer-3-col' => $imagefooterpath . 'footer-3-col.png',
 	) );
 	$wp_customize->add_setting( 'cyberchimps_options[site_footer_option]', array(
 			'default' => 'footer-4-col',
 			'type' => 'option',
 			'sanitize_callback' => 'cyberchimps_text_sanitization'
 	) );
-	
+
 	$wp_customize->add_control( new Cyberchimps_skin_selector( $wp_customize, 'site_footer_option', array(
 			'label' => __( 'Choose Footer Widgets Layout', 'cyberchimps_core' ),
 			'section' => 'cyberchimps_footer_section',
@@ -588,7 +595,7 @@ function ifeaturepro_extra_sections($sections_list) {
 		'heading' => 'cyberchimps_design_heading',
 		'priority' => 40
 	);
-	
+
 return $sections_list;
 }
 
@@ -623,7 +630,7 @@ $fields_list[] = array(
 		'section' => 'cyberchimps_custom_colors_section',
 		'heading' => 'cyberchimps_design_heading'
 	);
-	
+
 		$fields_list[] = array(
 		'name'    => __( 'Gradient Design', 'cyberchimps_core' ),
 		'id'      => 'flat_gradient_selector',
@@ -654,7 +661,7 @@ $fields_list[] = array(
 			'type'    => 'images',
 			'options' => apply_filters( 'cyberchimps_footer_widget_layout', array(
 					'footer-4-col' => $imagefooterpath . 'footer-4-col.png',
-					'footer-3-col'  => $imagefooterpath . 'footer-3-col.png'					
+					'footer-3-col'  => $imagefooterpath . 'footer-3-col.png'
 			) ),
 			'section' => 'cyberchimps_footer_section',
 			'heading' => 'cyberchimps_footer_heading'
@@ -885,7 +892,7 @@ function my_admin_notice(){
 		<?php
 	}
 	}
-	
+
 
 	$plugin = 'elementor/elementor.php';
 	$slug = 'elementor';
@@ -900,7 +907,7 @@ function my_admin_notice(){
 				<a href="<?php echo admin_url( 'plugins.php' ); ?>">Activate the Elementor plugin</a>
 				</p>
 				</div>
-		<?php 		
+		<?php
 		}
 		}
 		else {
@@ -910,10 +917,10 @@ function my_admin_notice(){
 			<a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ); ?>">Install the Elementor plugin</a>
 			</p>
 			</div>
-	<?php 	
-		}	
+	<?php
+		}
 	}
-		
+
 	if( !class_exists('WP_Legal_Pages') )
 	{
 	$plugin = 'wplegalpages/legal-pages.php';
@@ -949,7 +956,7 @@ function my_admin_notice(){
 		</div>
 		<?php
 	}
-	
+
 }
 function ifeature_footer_widget_param( $params )
 {
@@ -979,14 +986,14 @@ function ifeature_footer_widget_param( $params )
 			// This is 4-col layout
 			$divider = 4;
 		}
-	
+
 		if ( $footer_widget_counter_ifeature % $divider == 0 ) {
 
 			echo '</div> <div class="row-fluid">';
 		}
 		$footer_widget_counter_ifeature++;
 	}
- 
+
 	return $params;
 }
 function ifeature_custom_category_widget( $arg ) {
@@ -1015,8 +1022,8 @@ function ifeature_exclude_post_cat_recentpost_widget($array){
 				$s .= ', ';
 		}
 	}
-	
-	$array['cat']=array($s);	
+
+	$array['cat']=array($s);
 	//$exclude = array( 'cat' => $s );
 
 	return $array;
@@ -1024,13 +1031,13 @@ function ifeature_exclude_post_cat_recentpost_widget($array){
 add_filter( "widget_posts_args", "ifeature_exclude_post_cat_recentpost_widget" );
 
 if( !function_exists('ifeature_exclude_post_cat') ) :
-function ifeature_exclude_post_cat( $query ){		
+function ifeature_exclude_post_cat( $query ){
 	$excludecat = get_theme_mod( 'cyberchimps_exclude_post_cat' );
 
 	if( $excludecat && ! is_admin() && $query->is_main_query() ){
 		$excludecat = array_diff( array_unique( $excludecat ), array('') );
 		if( $query->is_home() || $query->is_archive() ) {
-			$query->set( 'category__not_in', $excludecat );			
+			$query->set( 'category__not_in', $excludecat );
 		}
 	}
 }
@@ -1092,6 +1099,14 @@ function ifeature_menu_design_options( $options ) {
 add_filter( 'ifeature_menu_design', 'ifeature_menu_design_options', 1 );
 
 
+/**
+ *  Enqueue block styles  in editor
+ */
+function ifeature_block_styles() {
+	wp_enqueue_style( 'ifeature-gutenberg-blocks', get_stylesheet_directory_uri() . '/inc/css/gutenberg-blocks.css', array(), '1.0' );
+}
+add_action( 'enqueue_block_editor_assets', 'ifeature_block_styles' );
+
 // add styles for skin selection
 function ifeature_menu_design_styles() {
 	$skin = cyberchimps_get_option( 'ifeature_menu_design' );
@@ -1099,7 +1114,7 @@ function ifeature_menu_design_styles() {
 	if( isset($skin) && $skin!= '' && $skin != 'default' ) {
 		wp_enqueue_style( 'ifeature-menu-design', get_template_directory_uri() . '/inc/css/menu/' . $skin . '.css', array( 'style' ), '1.0' );
 	}
-	
+
 	$skin = cyberchimps_get_option( 'cyberchimps_skin_color' );
 	if(cyberchimps_get_option( 'flat_gradient_selector' )=='')
 	{
@@ -1169,7 +1184,7 @@ function ifeature_featured_image() {
 			"portfolio_lite" => __( 'Portfolio Lite', 'cyberchimps_core' ),
 			"page_section"   => __( 'Page', 'cyberchimps_core' ),
 			"slider_lite"    => __( 'Slider Lite', 'cyberchimps_core' )
-			
+
 	);
 
 	return $options;
@@ -1182,7 +1197,7 @@ function ifeature_cyberchimps_selected_page_elements() {
 			'boxes_lite'     => __( 'Boxes Lite', 'cyberchimps_core' ),
 			"portfolio_lite" => __( 'Portfolio Lite', 'cyberchimps_core' ),
 			"page_section"   => __( 'Page', 'cyberchimps_core' ),
-			"slider_lite"    => __( 'Slider Lite', 'cyberchimps_core' ),			
+			"slider_lite"    => __( 'Slider Lite', 'cyberchimps_core' ),
 	);
 
 	return $options;
