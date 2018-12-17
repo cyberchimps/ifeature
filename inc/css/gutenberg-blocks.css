@@ -2,58 +2,24 @@
  * Default styles
  * -----------------------------------------------------------
  */
-.editor-block-list__block,
-.editor-rich-text {
-	font-family: "Fira Sans", sans-serif !important;
-	font-size: 14px;
-	line-height: 1.5;
-	color: #777 !important;
-}
 
-.editor-rich-text__tinymce.mce-content-body,
-.editor-block-list__block,
+.wp-block-freeform.block-library-rich-text__tinymce.mce-content-body p,
+.wp-block-freeform.block-library-rich-text__tinymce p,
+.wp-block-paragraph.editor-rich-text__tinymce.mce-content-body,
+.wp-block-paragraph.editor-rich-text__tinymce,
+.editor-styles-wrapper p,
+.edit-post-visual-editor p.wp-block-subhead,
+.wp-block-subhead.editor-rich-text__tinymce.mce-content-body,
+.wp-block-subhead.editor-rich-text__tinymce,
 .editor-block-list__block p {
-	font-size: 1.1em ;
-}
-
-.wp-block-freeform, .wp-block-freeform.block-library-rich-text__tinymce p{
-	font-size: .96em ;
-}
-
-.wp-block-freeform.block-library-rich-text__tinymce a,
-a{
-	color: #0088cc;
-    text-decoration: none;
-}
-
-.wp-block-freeform.block-library-rich-text__tinymce a:hover,
-.wp-block-freeform.block-library-rich-text__tinymce a:focus,
-a:hover,
-a:focus{
-	color: #005580;
+	font-size: 1.1em;
+	color: inherit;
 }
 
 /**
  * Heading styles
  * -----------------------------------------------------------
  */
-.wp-block-freeform.block-library-rich-text__tinymce h1,
-.wp-block-freeform.block-library-rich-text__tinymce h2,
-.wp-block-freeform.block-library-rich-text__tinymce h3,
-.wp-block-freeform.block-library-rich-text__tinymce h4,
-.wp-block-freeform.block-library-rich-text__tinymce h5,
-.wp-block-freeform.block-library-rich-text__tinymce h6,
-.wp-block-heading h1.editor-rich-text__tinymce,
-.wp-block-heading h2.editor-rich-text__tinymce,
-.wp-block-heading h3.editor-rich-text__tinymce,
-.wp-block-heading h4.editor-rich-text__tinymce,
-.wp-block-heading h5.editor-rich-text__tinymce,
-.wp-block-heading h6.editor-rich-text__tinymce {
-  margin-bottom: 15px;
-  font-weight: 400;
-  color: #777;
-}
-
 .wp-block-freeform.block-library-rich-text__tinymce h1,
 .wp-block-heading h1.editor-rich-text__tinymce {
 	font-size: 2.75em;
@@ -89,7 +55,12 @@ a:focus{
 	font-size: 0.85em;
 	line-height: 1.68;
 }
-
+.editor-post-title__block .editor-post-title__input{
+	font-size: 2.25em !important;
+	font-weight: 400;
+	line-height: 1.69em;
+	color: inherit;
+}
 /**
  * HR styles
  * -----------------------------------------------------------
@@ -148,7 +119,6 @@ a:focus{
 .editor-block-list__block-edit ul li,
 .editor-block-list__block li{
 	line-height: 1.42;
-	color: #777;
 }
 .editor-block-list__block-edit ul li, .editor-block-list__block li{
 	margin-bottom: 0;
@@ -166,6 +136,10 @@ ul.wp-block-categories__list li ul li{
 ul.editor-rich-text__tinymce.mce-content-body li ul li ul li,
 ul.wp-block-categories__list li ul li ul li{
 	list-style: square;
+}
+
+.editor-block-list__block[data-align=center]{
+   text-align: unset;
 }
 
 /**
@@ -361,4 +335,31 @@ figcaption.editor-rich-text__tinymce.mce-content-body {
 	padding: 2px 4px;
 	color: #dd1144;
 	font-size: .86em;
+}
+/*
+		read-more
+*/
+.gutenberg .wp-block-more input[type=text]{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.4;
+    color: #337ab7;
+    font-weight: normal;
+	text-transform: none;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}
+
+.gutenberg .wp-block-more input[type=text]:hover,
+.gutenberg .wp-block-more input[type=text]:focus{
+	text-decoration: underline;
+}
+
+.gutenberg .wp-block-more{
+	text-align: left;
+	margin-left: 13%;
+}
+.block-editor .wp-block-more:before{
+	display: none;
 }

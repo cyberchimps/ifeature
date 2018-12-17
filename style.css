@@ -4,7 +4,7 @@ Theme URI: https://cyberchimps.com/ifeature-free/
 Author: CyberChimps
 Author URI: https://www.cyberchimps.com/
 Description: iFeature 6.9 is a fully-responsive, Gutenberg compatible, translation-ready, universal professional theme. Catering to e-commerce sites, blogging, personal profiles and more. iFeature's touch-friendly drag-and-drop elements allow you to set up a professional website in minutes. When it comes to responsive elements and drag-and-drop options, CyberChimps not only pioneered, but continues to innovate these elements for the greater WordPress community. iFeature 6.5 lets you create responsive websites that you can control on any touch-friendly device, including: iPad, iPhone and Android devices. With options on a per-page basis, this theme allows you to control the look and feel of every page. iFeature has sticky header menu. It has option available to exclude categories from blog page. You can also display author bio for each post. Includes a Testimonial section so you can highlight positive feedback from your customers and boost conversion. Includes a team section to display your team members details. Two types of footer widgets layout available. For Support - <a href="https://cyberchimps.com/forum/free/ifeature/"> Support forum</a> (https://cyberchimps.com/forum/free/ifeature/). View <a href="http://demos.cyberchimps.com/ifeature/">iFeature Demo</a> (http://demos.cyberchimps.com/ifeature/). CyberChimps - Themes You Can Trust
-Version: 6.9
+Version: 7.0
 Tags: blog, two-columns, right-sidebar, custom-background, custom-colors, custom-menu, featured-images, post-formats, theme-options, sticky-post, full-width-template, footer-widgets, threaded-comments, translation-ready, e-commerce, portfolio
 Text Domain: ifeature
 License: GNU General Public License version 3
@@ -1663,4 +1663,37 @@ div.aligncenter .wp-block-cover-image-text{
     left: 50%;
     transform: translate(-50%,-50%);
     width: 200%;
+}
+
+h1 {
+   font-size: 2.75em;
+   line-height: 1;
+}
+
+h2 {
+   font-size: 2.25em;
+   line-height: 1.2;
+}
+
+h3 {
+   font-size: 1.75em;
+   line-height: 1.6;
+}
+
+h4 {
+   font-size: 1.25em;
+   line-height: 1.14;
+}
+
+h5 {
+   font-size: 1em;
+   line-height: 1.43;
+}
+
+h6 {
+   font-size: 0.85em;
+   line-height: 1.68;
+}
+pre {
+	font-size: 0.85em;
 }
