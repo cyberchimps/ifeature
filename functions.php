@@ -1118,8 +1118,16 @@ function customizer_css() {
 	$link_hover_colorpicker     = cyberchimps_get_option( 'link_hover_colorpicker' ) ? cyberchimps_get_option( 'link_hover_colorpicker' ) : '#005580';
 	$if_font_family_headings = $font_family_headings['face'] ? $font_family_headings['face'] : 'Arial, Helvetica, sans-serif';
 
+	$get_background_color  = get_background_color() ? get_background_color() : 'fff';
+	$get_background_image1 = get_template_directory_uri() . '/cyberchimps/lib/images/backgrounds/' . get_theme_mod( 'cyberchimps_background' ) . '.jpg';
+	$get_background_image1 = $get_background_image1 ? $get_background_image1 : '';
+	$get_background_image2 = get_background_image() ? get_background_image() : '';
+	$get_background_image  = $get_background_image2 ? $get_background_image2 : $get_background_image1;
+
 	$custom_css = ".editor-writing-flow,
 	.editor-styles-wrapper{
+		background-color:#{$get_background_color};
+		background-image:url('{$get_background_image}');
 		font-family: {$font_family};
 		font-size: {$font_size};
 		font-weight: {$font_weight};
