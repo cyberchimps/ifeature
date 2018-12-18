@@ -1,6 +1,10 @@
 iFeature Changelog
 
 ****************************
+Version 7.0 (12/18/18)
+- Added customizer support for Gutenberg
+- Fixed cyberchimps page elements issue in wordpress 5.0
+
 Version 6.9 (10/22/18)
 - Added Gutenberg compatibility
 
