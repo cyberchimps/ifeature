@@ -160,7 +160,7 @@ function ifeature_options_documentation_url() {
 
 // Support Forum URL
 function ifeature_options_support_forum() {
-	$url = 'http://cyberchimps.com/forum/free/ifeature/';
+	$url = 'https://cyberchimps.com/help/forum/sub-forum/themes-support/free-themes/';
 
 	return $url;
 }
