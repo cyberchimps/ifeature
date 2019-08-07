@@ -42,6 +42,7 @@ add_filter( 'cyberchimps_current_theme_name', 'ifeature_options_theme_name', 1 )
 
 // Load Core
 require_once( get_template_directory() . '/cyberchimps/init.php' );
+require( get_template_directory() . '/inc/admin-about.php' );
 require_once( get_template_directory() . '/inc/testimonial_template.php' );
 
 // Set the content width based on the theme's design and stylesheet.
