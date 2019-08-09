@@ -150,7 +150,7 @@ module.exports = function(grunt) {
                         pattern: 'function cyberchimps_',
                         replacement: 'function ifeature_'
                     }, {
-                        pattern: 'cybrechimps_',
+                        pattern: 'cyberchimps_',
                         replacement: 'ifeature_'
                     }]
                 }
