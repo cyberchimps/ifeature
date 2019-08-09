@@ -1039,7 +1039,7 @@ $vat=array(
 return $vat;
 }
 
-function ifeature_featured_image() {
+function ifeature_featured_image_content() {
 	global $post;
 
 		$show = ( cyberchimps_get_option( 'post_featured_images', 1 ) ) ? cyberchimps_get_option( 'post_featured_images', 1 ) : false;
