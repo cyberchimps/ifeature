@@ -119,6 +119,41 @@ module.exports = function(grunt) {
             main: ['build/<%= pkg.name %>']
         },
 
+        'string-replace': {
+            dist: {
+                files: [{
+                    expand: true,
+                    src:  [
+                        '**',
+                        '!node_modules/**',
+                        '!**/node_modules/**',
+                        '!build/**',
+                        '!.git/**',
+                        '!**/.git/**',
+                        '!Gruntfile.js',
+                        '!package.json',
+                        '!.gitignore',
+                        '!.gitmodules',
+                        '!**/.gitignore',
+                        '!**/.gitmodules',
+                        '!.wti',
+                        '!**/Gruntfile.js',
+                        '!**/package.json',
+                        '!**/README.md',
+                        '!**/*~',
+                        '!.editorconfig'
+                    ],
+                    dest: ''
+                }],
+                options: {
+                    replacements: [{
+                        pattern: 'function cybrechimps',
+                        replacement: 'function ifeature'
+                    }]
+                }
+            }
+        },
+
         // Copy the theme into the build directory
         copy: {
             main: {
@@ -152,6 +187,9 @@ module.exports = function(grunt) {
             },
         },
     });
+
+    // These plugins provide necessary tasks.
+    grunt.loadNpmTasks('grunt-string-replace');
 
     // Default task(s).
     grunt.registerTask( 'default', [ 'clean', 'checktextdomain', 'copy', 'compress' ] );
