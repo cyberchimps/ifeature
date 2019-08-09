@@ -85,7 +85,7 @@ if( !function_exists( 'cyberchimps_comment' ) ) :
 			case 'trackback' :
 				?>
 				<li class="post pingback">
-				<p><?php _e( 'Pingback:', 'ifeature' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'ifeature' ), ' ' ); ?></p>
+				<p><?php esc_html_e( 'Pingback:', 'ifeature' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'ifeature' ), ' ' ); ?></p>
 				<?php
 				break;
 			default :
@@ -101,7 +101,7 @@ if( !function_exists( 'cyberchimps_comment' ) ) :
 							</div>
 							<!-- .comment-author .vcard -->
 							<?php if( $comment->comment_approved == '0' ) : ?>
-								<em><?php _e( 'Your comment is awaiting moderation.', 'ifeature' ); ?></em>
+								<em><?php esc_html_e( 'Your comment is awaiting moderation.', 'ifeature' ); ?></em>
 								<br/>
 							<?php endif; ?>
 
@@ -597,78 +597,6 @@ function ifeaturepro_extra_sections($sections_list) {
 	);
 
 return $sections_list;
-}
-
-add_filter( 'cyberchimps_field_list', 'ifeature_add_field' , 30 , 1 );
-function ifeature_add_field($fields_list){
-$fields_list[] = array(
-		'name'    => __( 'Menu Background Color', 'ifeature' ),
-		'desc'    => __( 'Select menu background color', 'ifeature' ),
-		'id'      => 'menu_background_colorpicker',
-		'std'     => '',
-		'type'    => 'color',
-		'section' => 'cyberchimps_custom_colors_section',
-		'heading' => 'cyberchimps_design_heading'
-	);
-
-$fields_list[] = array(
-		'name'    => __( 'Menu Hover Color', 'ifeature' ),
-		'desc'    => __( 'Select menu hover color', 'ifeature' ),
-		'id'      => 'menu_hover_colorpicker',
-		'std'     => '',
-		'type'    => 'color',
-		'section' => 'cyberchimps_custom_colors_section',
-		'heading' => 'cyberchimps_design_heading'
-	);
-
-$fields_list[] = array(
-		'name'    => __( 'Menu Text Color', 'ifeature' ),
-		'desc'    => __( 'Select color for menu text', 'ifeature' ),
-		'id'      => 'menu_text_colorpicker',
-		'std'     => '',
-		'type'    => 'color',
-		'section' => 'cyberchimps_custom_colors_section',
-		'heading' => 'cyberchimps_design_heading'
-	);
-
-		$fields_list[] = array(
-		'name'    => __( 'Gradient Design', 'cyberchimps_core' ),
-		'id'      => 'flat_gradient_selector',
-		'type'    => 'toggle',
-		'std'     => 'checked',
-		'section' => 'cyberchimps_custom_colors_section',
-		'heading' => 'cyberchimps_design_heading'
-	);
-
-		$fields_list[] = array(
-		'name'    => __( 'Choose a skin', 'ifeature' ),
-		'id'      => 'ifeature_menu_design',
-		'desc'	  => '<a href="https://cyberchimps.com/guide/ifeature-modern-skin/" target="_blank">Recommended font settings for the Modern skin</a>',
-		'std'     => 'default',
-		'type'    => 'images',
-		'options' => apply_filters( 'ifeature_menu_design', array(
-			'default' => get_template_directory_uri() . '/inc/css/skins/images/default.png'
-		) ),
-		'section' => 'cyberchimps_custom_skin_option_section',
-		'heading' => 'cyberchimps_design_heading'
-	);
-
-	$imagefooterpath = get_template_directory_uri() . '/images/footer/';
-	$fields_list[] = array(
-			'name'    => __( 'Choose Footer Widgets Layout', 'cyberchimps_core' ),
-			'id'      => 'site_footer_option',
-			'std'     => 'footer-4-col',
-			'type'    => 'images',
-			'options' => apply_filters( 'cyberchimps_footer_widget_layout', array(
-					'footer-4-col' => $imagefooterpath . 'footer-4-col.png',
-					'footer-3-col'  => $imagefooterpath . 'footer-3-col.png'
-			) ),
-			'section' => 'cyberchimps_footer_section',
-			'heading' => 'cyberchimps_footer_heading'
-	);
-
-return $fields_list;
-
 }
 
 add_action( 'wp_head', 'ifeature_css_styles', 50 );

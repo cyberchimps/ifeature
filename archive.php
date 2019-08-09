@@ -70,7 +70,7 @@ get_header(); ?>
 
 									}
 									else {
-										_e( 'Archives', 'ifeature' );
+                                        esc_html_e( 'Archives', 'ifeature' );
 
 									}
 									?>
