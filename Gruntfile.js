@@ -147,9 +147,6 @@ module.exports = function(grunt) {
                 }],
                 options: {
                     replacements: [{
-                        pattern: 'function cyberchimps_',
-                        replacement: 'function ifeature_'
-                    }, {
                         pattern: 'cyberchimps_',
                         replacement: 'ifeature_'
                     }]
