@@ -147,21 +147,10 @@ module.exports = function(grunt) {
                 }],
                 options: {
                     replacements: [{
-                        pattern: 'cyberchimps_',
+                        pattern: /cyberchimps_/g,
                         replacement: 'ifeature_'
                     }]
                 }
-            }
-        },
-
-        replace: {
-            example: {
-                src: ['**/*.php'],             // source files array (supports minimatch)
-                dest: 'replace/',             // destination directory or file
-                replacements: [{
-                    from: 'cyberchimps_',                   // string replacement
-                    to: 'ifeature_'
-                }]
             }
         },
 
@@ -203,7 +192,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-string-replace');
 
     // Default task(s).
-    grunt.registerTask( 'default', [ 'clean', 'checktextdomain', 'copy', 'compress' ] );
+    grunt.registerTask( 'default', [ 'clean', 'checktextdomain', 'string-replace', 'copy', 'compress' ] );
     grunt.registerTask( 'i18n', [ 'exec', 'po2mo' ] );
 
 };
