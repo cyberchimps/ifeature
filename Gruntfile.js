@@ -124,7 +124,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     src:  [
-                        '**',
+                        '**/*.php',
                         '!node_modules/**',
                         '!**/node_modules/**',
                         '!build/**',
@@ -147,8 +147,11 @@ module.exports = function(grunt) {
                 }],
                 options: {
                     replacements: [{
-                        pattern: 'function cybrechimps',
-                        replacement: 'function ifeature'
+                        pattern: 'function cyberchimps_',
+                        replacement: 'function ifeature_'
+                    }, {
+                        pattern: '\'cybrechimps_',
+                        replacement: '\'ifeature_'
                     }]
                 }
             }
