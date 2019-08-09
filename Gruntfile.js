@@ -154,6 +154,17 @@ module.exports = function(grunt) {
             }
         },
 
+        replace: {
+            example: {
+                src: ['**/*.php'],             // source files array (supports minimatch)
+                dest: 'replace/',             // destination directory or file
+                replacements: [{
+                    from: 'cyberchimps_',                   // string replacement
+                    to: 'ifeature_'
+                }]
+            }
+        },
+
         // Copy the theme into the build directory
         copy: {
             main: {
