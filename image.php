@@ -157,11 +157,11 @@ get_header(); ?>
 									<?php
 									elseif ( comments_open() && !pings_open() ) : // Only comments open
 										?>
-										<?php _e( 'Trackbacks are closed, but you can', 'ifeature' ) . ' <a class="comment-link" href="#respond" title="Post a comment">' . __( 'post a comment', 'ifeature' ) . '</a>.'; ?>
+										<?php esc_html_e( 'Trackbacks are closed, but you can', 'ifeature' ) . ' <a class="comment-link" href="#respond" title="Post a comment">' . __( 'post a comment', 'ifeature' ) . '</a>.'; ?>
 									<?php
 									elseif ( !comments_open() && !pings_open() ) : // Comments and trackbacks closed
 										?>
-										<?php _e( 'Both comments and trackbacks are currently closed.', 'ifeature' ); ?>
+										<?php esc_html_e( 'Both comments and trackbacks are currently closed.', 'ifeature' ); ?>
 									<?php endif; ?>
 									<?php edit_post_link( __( 'Edit', 'ifeature' ), ' <span class="edit-link">', '</span>' ); ?>
 								</footer>

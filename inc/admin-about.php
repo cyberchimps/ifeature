@@ -50,7 +50,7 @@ function cyberchimps_display_about() {
     <div class="about-container">
         <div>
             <h1 class="heading"><?php echo "iFeature - ".$theme['Version'] ?></h1>
-            <a href='https://wordpress.org/support/theme/ifeature/reviews/#new-post' target="_blank" style='margin-top: 22px' class="button button-primary"><?php _e('Leave a star rating','ifeature' );?></a>
+            <a href='https://wordpress.org/support/theme/ifeature/reviews/#new-post' target="_blank" style='margin-top: 22px' class="button button-primary"><?php esc_html_e('Leave a star rating','ifeature' );?></a>
         </div>
         <div class="about-info">
 

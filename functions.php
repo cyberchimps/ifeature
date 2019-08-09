@@ -85,7 +85,7 @@ if( !function_exists( 'cyberchimps_comment' ) ) :
 			case 'trackback' :
 				?>
 				<li class="post pingback">
-				<p><?php _e( 'Pingback:', 'ifeature' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'ifeature' ), ' ' ); ?></p>
+				<p><?php esc_html_e( 'Pingback:', 'ifeature' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'ifeature' ), ' ' ); ?></p>
 				<?php
 				break;
 			default :
@@ -101,7 +101,7 @@ if( !function_exists( 'cyberchimps_comment' ) ) :
 							</div>
 							<!-- .comment-author .vcard -->
 							<?php if( $comment->comment_approved == '0' ) : ?>
-								<em><?php _e( 'Your comment is awaiting moderation.', 'ifeature' ); ?></em>
+								<em><?php esc_html_e( 'Your comment is awaiting moderation.', 'ifeature' ); ?></em>
 								<br/>
 							<?php endif; ?>
 

@@ -16,7 +16,7 @@
 
 <article id="post-0" class="post no-results not-found">
 	<header class="entry-header">
-		<h1 class="entry-title"><?php _e( 'Nothing Found', 'ifeature' ); ?></h1>
+		<h1 class="entry-title"><?php esc_html_e( 'Nothing Found', 'ifeature' ); ?></h1>
 	</header>
 	<!-- .entry-header -->
 
@@ -31,13 +31,13 @@
 		<?php }
 		elseif( is_search() ) { ?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'ifeature' ); ?></p>
+			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'ifeature' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php }
 		else { ?>
 
-			<p><?php _e( 'It seems we cannot find what you are looking for. Perhaps searching can help.', 'ifeature' ); ?></p>
+			<p><?php esc_html_e( 'It seems we cannot find what you are looking for. Perhaps searching can help.', 'ifeature' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php } ?>

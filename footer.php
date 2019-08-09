@@ -40,21 +40,21 @@ if( cyberchimps_get_option( 'footer_show_toggle' ) == '1' ) : ?>
 						?>				
 								<div class="row-fluid">
 								<aside class="widget-container span4">
-									<h3 class="widget-title"><?php _e( 'Pages', 'ifeature' ); ?></h3>
+									<h3 class="widget-title"><?php esc_html_e( 'Pages', 'ifeature' ); ?></h3>
 									<ul>
 										<?php wp_list_pages( 'title_li=' ); ?>
 									</ul>
 								</aside>
 
 								<aside class="widget-container span4">
-									<h3 class="widget-title"><?php _e( 'Archives', 'ifeature' ); ?></h3>
+									<h3 class="widget-title"><?php esc_html_e( 'Archives', 'ifeature' ); ?></h3>
 									<ul>
 										<?php wp_get_archives( 'type=monthly' ); ?>
 									</ul>
 								</aside>
 
 								<aside class="widget-container span4">
-									<h3 class="widget-title"><?php _e( 'Categories', 'ifeature' ); ?></h3>
+									<h3 class="widget-title"><?php esc_html_e( 'Categories', 'ifeature' ); ?></h3>
 									<ul>
 										<?php wp_list_categories( 'show_count=1&title_li=' ); ?>
 									</ul>
@@ -62,12 +62,12 @@ if( cyberchimps_get_option( 'footer_show_toggle' ) == '1' ) : ?>
 								</div>
 								<div class="row-fluid">
 								<aside class="widget-container span4">
-									<h3 class="widget-title"><?php _e( 'WordPress', 'ifeature' ); ?></h3>
+									<h3 class="widget-title"><?php esc_html_e( 'WordPress', 'ifeature' ); ?></h3>
 									<ul>
 										<?php wp_register(); ?>
 										<li><?php wp_loginout(); ?></li>
 										<li><a href="<?php echo esc_url( 'http://wordpress.org/' ); ?>" target="_blank"
-										       title="<?php esc_attr_e( 'Powered by WordPress, state-of-the-art semantic personal publishing platform.', 'ifeature' ); ?>"> <?php _e( 'WordPress', 'ifeature' ); ?></a>
+										       title="<?php esc_attr_e( 'Powered by WordPress, state-of-the-art semantic personal publishing platform.', 'ifeature' ); ?>"> <?php esc_html_e( 'WordPress', 'ifeature' ); ?></a>
 										</li>
 										<?php wp_meta(); ?>
 									</ul>
@@ -80,32 +80,32 @@ if( cyberchimps_get_option( 'footer_show_toggle' ) == '1' ) : ?>
 							?>
 								<div class="row-fluid">
 								<aside class="widget-container span3">
-									<h3 class="widget-title"><?php _e( 'Pages', 'ifeature' ); ?></h3>
+									<h3 class="widget-title"><?php esc_html_e( 'Pages', 'ifeature' ); ?></h3>
 									<ul>
 										<?php wp_list_pages( 'title_li=' ); ?>
 									</ul>
 								</aside>
 
 								<aside class="widget-container span3">
-									<h3 class="widget-title"><?php _e( 'Archives', 'ifeature' ); ?></h3>
+									<h3 class="widget-title"><?php esc_html_e( 'Archives', 'ifeature' ); ?></h3>
 									<ul>
 										<?php wp_get_archives( 'type=monthly' ); ?>
 									</ul>
 								</aside>
 
 								<aside class="widget-container span3">
-									<h3 class="widget-title"><?php _e( 'Categories', 'ifeature' ); ?></h3>
+									<h3 class="widget-title"><?php esc_html_e( 'Categories', 'ifeature' ); ?></h3>
 									<ul>
 										<?php wp_list_categories( 'show_count=1&title_li=' ); ?>
 									</ul>
 								</aside>
 								<aside class="widget-container span3">
-										<h3 class="widget-title"><?php _e( 'WordPress', 'ifeature' ); ?></h3>
+										<h3 class="widget-title"><?php esc_html_e( 'WordPress', 'ifeature' ); ?></h3>
 										<ul>
 											<?php wp_register(); ?>
 											<li><?php wp_loginout(); ?></li>
 											<li><a href="<?php echo esc_url( 'http://wordpress.org/' ); ?>" target="_blank"
-											       title="<?php esc_attr_e( 'Powered by WordPress, state-of-the-art semantic personal publishing platform.', 'ifeature' ); ?>"> <?php _e( 'WordPress', 'ifeature' ); ?></a>
+											       title="<?php esc_attr_e( 'Powered by WordPress, state-of-the-art semantic personal publishing platform.', 'ifeature' ); ?>"> <?php esc_html_e( 'WordPress', 'ifeature' ); ?></a>
 											</li>
 											<?php wp_meta(); ?>
 										</ul>
