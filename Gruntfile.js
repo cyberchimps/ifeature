@@ -148,7 +148,7 @@ module.exports = function(grunt) {
                 options: {
                     replacements: [{
                         pattern: /cyberchimps_/g,
-                        replacement: 'ifeature_'
+                        replacement: 'ifeature_cc_'
                     }]
                 }
             }
