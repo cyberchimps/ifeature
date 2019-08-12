@@ -21,14 +21,14 @@
 
 	<?php	if(cyberchimps_get_option('sidebar_images')=="three-column")
 		{
-			ifeature_featured_image(); 
+			ifeature_featured_image_content();
 		}?>
 		<?php cyberchimps_post_format_icon();
 
 		echo ( 'post' == get_post_type() && !is_single() || is_search() ) ? '<h2 class="entry-title">' : '<h1 class="entry-title">';
 
 		if( 'page' == get_post_type() ) :
-
+    
 			// get the page title toggle option
 			$page_title = get_post_meta( get_the_ID(), 'cyberchimps_page_title_toggle', true );
 

@@ -119,6 +119,41 @@ module.exports = function(grunt) {
             main: ['build/<%= pkg.name %>']
         },
 
+        'string-replace': {
+            dist: {
+                files: [{
+                    expand: true,
+                    src:  [
+                        '**/*.php',
+                        '!node_modules/**',
+                        '!**/node_modules/**',
+                        '!build/**',
+                        '!.git/**',
+                        '!**/.git/**',
+                        '!Gruntfile.js',
+                        '!package.json',
+                        '!.gitignore',
+                        '!.gitmodules',
+                        '!**/.gitignore',
+                        '!**/.gitmodules',
+                        '!.wti',
+                        '!**/Gruntfile.js',
+                        '!**/package.json',
+                        '!**/README.md',
+                        '!**/*~',
+                        '!.editorconfig'
+                    ],
+                    dest: ''
+                }],
+                options: {
+                    replacements: [{
+                        pattern: /cyberchimps_/g,
+                        replacement: 'ifeature_cc_'
+                    }]
+                }
+            }
+        },
+
         // Copy the theme into the build directory
         copy: {
             main: {
@@ -153,8 +188,11 @@ module.exports = function(grunt) {
         },
     });
 
+    // These plugins provide necessary tasks.
+    grunt.loadNpmTasks('grunt-string-replace');
+
     // Default task(s).
-    grunt.registerTask( 'default', [ 'clean', 'checktextdomain', 'copy', 'compress' ] );
+    grunt.registerTask( 'default', [ 'clean', 'checktextdomain', 'string-replace', 'copy', 'compress' ] );
     grunt.registerTask( 'i18n', [ 'exec', 'po2mo' ] );
 
 };
