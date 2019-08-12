@@ -61,7 +61,7 @@ if( cyberchimps_get_option( 'top_header_bar', 1 ) ): ?>
 						</div>
 					</div>
 					<div class="top-head-social span6">
-						<?php cyberchimps_header_social_icons(); ?>
+						<?php Cyberchimps_Hooks::cyberchimps_header_social_icons(); ?>
 					</div>
 				</div>
 			</div>
