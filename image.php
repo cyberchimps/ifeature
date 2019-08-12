@@ -33,7 +33,10 @@ get_header(); ?>
 
 						<?php do_action( 'cyberchimps_before_content' ); ?>
 
-						<?php while ( have_posts() ) : the_post(); ?>
+						<?php
+						while ( have_posts() ) :
+							the_post();
+							?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 								<header class="entry-header">
@@ -42,14 +45,15 @@ get_header(); ?>
 									<div class="entry-meta">
 										<?php
 										$metadata = wp_get_attachment_metadata();
-										printf( __( 'Published', 'ifeature' ) . ' <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> - ' . __( 'size', 'ifeature' ) . ': <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> ' . __( 'in', 'ifeature' ) . ' <a href="%6$s" title="Return to %7$s" rel="gallery">%7$s</a>',
-												esc_attr( get_the_date( 'c' ) ),
-												esc_html( get_the_date() ),
-												wp_get_attachment_url(),
-												$metadata['width'],
-												$metadata['height'],
-												get_permalink( $post->post_parent ),
-												get_the_title( $post->post_parent )
+										printf(
+											esc_html( 'Published', 'ifeature' ) . ' <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> - ' . esc_html( 'size', 'ifeature' ) . ': <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> ' . esc_html( 'in', 'ifeature' ) . ' <a href="%6$s" title="Return to %7$s" rel="gallery">%7$s</a>',
+											esc_attr( get_the_date( 'c' ) ),
+											esc_html( get_the_date() ),
+											wp_get_attachment_url(),
+											$metadata['width'],
+											$metadata['height'],
+											get_permalink( $post->post_parent ),
+											get_the_title( $post->post_parent )
 										);
 										?>
 										<?php edit_post_link( __( 'Edit', 'ifeature' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
@@ -73,14 +77,16 @@ get_header(); ?>
 									<div class="entry-attachment">
 										<div class="attachment">
 
-											<a href="<?php wp_get_attachment_link( $post->ID, 'fullsize' ); ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="attachment"><?php
-												$attachment_size = apply_filters( 'cyberchimps_attachment_size', array( 1200, 1200 ) ); // Filterable image size.
-												echo wp_get_attachment_image( $post->ID, $attachment_size );
-												?></a>
+											<a href="<?php wp_get_attachment_link( $post->ID, 'fullsize' ); ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="attachment">
+																				   <?php
+																					$attachment_size = apply_filters( 'cyberchimps_attachment_size', array( 1200, 1200 ) ); // Filterable image size.
+																					echo wp_get_attachment_image( $post->ID, $attachment_size );
+																					?>
+												</a>
 										</div>
 										<!-- .attachment -->
 
-										<?php if ( !empty( $post->post_excerpt ) ) : ?>
+										<?php if ( ! empty( $post->post_excerpt ) ) : ?>
 											<div class="entry-caption">
 												<?php the_excerpt(); ?>
 											</div>
@@ -89,7 +95,14 @@ get_header(); ?>
 									<!-- .entry-attachment -->
 
 									<?php the_content(); ?>
-									<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'ifeature' ), 'after' => '</div>' ) ); ?>
+									<?php
+									wp_link_pages(
+										array(
+											'before' => '<div class="page-links">' . __( 'Pages:', 'ifeature' ),
+											'after'  => '</div>',
+										)
+									);
+									?>
 
 								</div>
 								<!-- .entry-content -->
@@ -99,12 +112,12 @@ get_header(); ?>
 								$attachments = array_values(
 									get_children(
 										array(
-											'post_parent'    => $post->post_parent,
-											'post_status'    => 'inherit',
-											'post_type'      => 'attachment',
+											'post_parent' => $post->post_parent,
+											'post_status' => 'inherit',
+											'post_type'   => 'attachment',
 											'post_mime_type' => 'image',
-											'order'          => 'DESC',
-											'orderby'        => 'menu_order ID'
+											'order'       => 'DESC',
+											'orderby'     => 'menu_order ID',
 										)
 									)
 								);
@@ -112,34 +125,34 @@ get_header(); ?>
 								foreach ( $attachments as $k => $attachment ) {
 									if ( $attachment->ID == $post->ID ) {
 
-										$previous_image = isset( $attachments[$k - 1] ) ? $attachments[$k - 1]->ID : false;
-										$next_image     = isset( $attachments[$k + 1] ) ? $attachments[$k + 1]->ID : false;
+										$previous_image = isset( $attachments[ $k - 1 ] ) ? $attachments[ $k - 1 ]->ID : false;
+										$next_image     = isset( $attachments[ $k + 1 ] ) ? $attachments[ $k + 1 ]->ID : false;
 
 										$first_image = isset( $attachments[0] ) ? $attachments[0]->ID : false;
-										$last_image  = isset( $attachments[$k + 1] ) ? end( $attachments )->ID : false;
+										$last_image  = isset( $attachments[ $k + 1 ] ) ? end( $attachments )->ID : false;
 
-										$previous_url = isset( $attachments[$k - 1] ) ? get_permalink( $attachments[$k - 1]->ID ) : get_permalink( $attachments[0]->ID );
-										$next_url     = isset( $attachments[$k + 1] ) ? get_permalink( $attachments[$k + 1]->ID ) : get_permalink( $attachments[0]->ID );
+										$previous_url = isset( $attachments[ $k - 1 ] ) ? get_permalink( $attachments[ $k - 1 ]->ID ) : get_permalink( $attachments[0]->ID );
+										$next_url     = isset( $attachments[ $k + 1 ] ) ? get_permalink( $attachments[ $k + 1 ]->ID ) : get_permalink( $attachments[0]->ID );
 
 										$first_url = isset( $attachments[0] ) ? get_permalink( $attachments[0] ) : false;
-										$last_url  = isset( $attachments[$k + 1] ) ? get_permalink( end( $attachments )->ID ) : get_permalink( $attachments[0]->ID );
+										$last_url  = isset( $attachments[ $k + 1 ] ) ? get_permalink( end( $attachments )->ID ) : get_permalink( $attachments[0]->ID );
 									}
 								}
 								?>
 								<div class="row-fluid gallery-pagination">
 									<div class="span6 previous-image">
-										<?php if ( $previous_image == false && count( $attachments ) > 1 ): ?>
+										<?php if ( $previous_image == false && count( $attachments ) > 1 ) : ?>
 											<a href="<?php echo $last_url; ?>"><?php echo wp_get_attachment_image( $last_image, 'thumbnail' ); ?></a>
-										<?php elseif ( $previous_image != $post->ID ): ?>
+										<?php elseif ( $previous_image != $post->ID ) : ?>
 											<a href="<?php echo $previous_url; ?>"><?php echo wp_get_attachment_image( $previous_image, 'thumbnail' ); ?></a>
 										<?php endif; ?>
 									</div>
 									<!-- span6 -->
 
 									<div class="span6 next-image">
-										<?php if ( $next_image == false && count( $attachments > 1 ) ): ?>
+										<?php if ( $next_image == false && count( $attachments > 1 ) ) : ?>
 											<a href="<?php echo $first_url; ?>"><?php echo wp_get_attachment_image( $first_image, 'thumbnail' ); ?></a>
-										<?php elseif ( $next_image != $post->ID ): ?>
+										<?php elseif ( $next_image != $post->ID ) : ?>
 											<a href="<?php echo $next_url; ?>"><?php echo wp_get_attachment_image( $next_image, 'thumbnail' ); ?></a>
 										<?php endif; ?>
 									</div>
@@ -151,15 +164,15 @@ get_header(); ?>
 
 								<footer class="entry-meta">
 									<?php if ( comments_open() && pings_open() ) : // Comments and trackbacks open ?>
-										<?php printf( '<a class="comment-link" href="#respond" title="Post a comment">' . __( 'Post a comment', 'ifeature' ) . '</a> ' . __( 'or leave a trackback', 'ifeature' ) . ': <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">' . __( 'Trackback URL', 'ifeature' ) . '</a>.', get_trackback_url() ); ?>
-									<?php elseif ( !comments_open() && pings_open() ) : // Only trackbacks open ?>
-										<?php printf( __( 'Comments are closed, but you can leave a trackback:', 'ifeature' ) . ' <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">' . __( 'Trackback URL', 'ifeature' ) . '</a>.', get_trackback_url() ); ?>
-									<?php
-									elseif ( comments_open() && !pings_open() ) : // Only comments open
+										<?php printf( '<a class="comment-link" href="#respond" title="Post a comment">' . esc_html( 'Post a comment', 'ifeature' ) . '</a> ' . esc_html( 'or leave a trackback', 'ifeature' ) . ': <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">' . esc_html( 'Trackback URL', 'ifeature' ) . '</a>.', get_trackback_url() ); ?>
+									<?php elseif ( ! comments_open() && pings_open() ) : // Only trackbacks open ?>
+										<?php printf( esc_html( 'Comments are closed, but you can leave a trackback:', 'ifeature' ) . ' <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">' . esc_html( 'Trackback URL', 'ifeature' ) . '</a>.', get_trackback_url() ); ?>
+										<?php
+									elseif ( comments_open() && ! pings_open() ) : // Only comments open
 										?>
 										<?php esc_html_e( 'Trackbacks are closed, but you can', 'ifeature' ) . ' <a class="comment-link" href="#respond" title="Post a comment">' . __( 'post a comment', 'ifeature' ) . '</a>.'; ?>
-									<?php
-									elseif ( !comments_open() && !pings_open() ) : // Comments and trackbacks closed
+										<?php
+									elseif ( ! comments_open() && ! pings_open() ) : // Comments and trackbacks closed
 										?>
 										<?php esc_html_e( 'Both comments and trackbacks are currently closed.', 'ifeature' ); ?>
 									<?php endif; ?>
