@@ -36,34 +36,34 @@ function ifeature_testimonial_render_display()
 	}
 	else
 	{
-		$if_testimonial_title = cyberchimps_get_option('ir_testimonial_title');
-		$testimonial_background = cyberchimps_get_option('testimonial_background');
+		$if_testimonial_title = Cyberchimps_Helper::cyberchimps_get_option('ir_testimonial_title');
+		$testimonial_background = Cyberchimps_Helper::cyberchimps_get_option('testimonial_background');
                 
                 // Get testimonial images
                 
-		$testimonials[0]['img'] = cyberchimps_get_option( 'cyberchimps_blog_testimonial_image_one', $directory_uri . apply_filters( 'cyberchimps_testimonial_img1', '/elements/lib/images/testimonial/client01.jpg' ) );
-                $testimonials[1]['img'] = cyberchimps_get_option( 'cyberchimps_blog_testimonial_image_two', $directory_uri . apply_filters( 'cyberchimps_testimonial_img2', '/elements/lib/images/testimonial/client01.jpg' ) );
-                $testimonials[2]['img'] = cyberchimps_get_option( 'cyberchimps_blog_testimonial_image_three', $directory_uri . apply_filters( 'cyberchimps_testimonial_img3', '/elements/lib/images/testimonial/client01.jpg' ) );
+		$testimonials[0]['img'] = Cyberchimps_Helper::cyberchimps_get_option( 'cyberchimps_blog_testimonial_image_one', $directory_uri . apply_filters( 'cyberchimps_testimonial_img1', '/elements/lib/images/testimonial/client01.jpg' ) );
+                $testimonials[1]['img'] = Cyberchimps_Helper::cyberchimps_get_option( 'cyberchimps_blog_testimonial_image_two', $directory_uri . apply_filters( 'cyberchimps_testimonial_img2', '/elements/lib/images/testimonial/client01.jpg' ) );
+                $testimonials[2]['img'] = Cyberchimps_Helper::cyberchimps_get_option( 'cyberchimps_blog_testimonial_image_three', $directory_uri . apply_filters( 'cyberchimps_testimonial_img3', '/elements/lib/images/testimonial/client01.jpg' ) );
                
                 // get testimonial clients
-                $testimonials[0]['client'] = cyberchimps_get_option( 'cyberchimps_blog_client_one', apply_filters( 'cyberchimps_testimonial_client1', 'Nancy Martin' ) );
-                $testimonials[1]['client'] = cyberchimps_get_option( 'cyberchimps_blog_client_two', apply_filters( 'cyberchimps_testimonial_client2', 'Nancy Martin' ) );
-                $testimonials[2]['client'] = cyberchimps_get_option( 'cyberchimps_blog_client_three', apply_filters( 'cyberchimps_testimonial_client3', 'Nancy Martin' ) );
+                $testimonials[0]['client'] = Cyberchimps_Helper::cyberchimps_get_option( 'cyberchimps_blog_client_one', apply_filters( 'cyberchimps_testimonial_client1', 'Nancy Martin' ) );
+                $testimonials[1]['client'] = Cyberchimps_Helper::cyberchimps_get_option( 'cyberchimps_blog_client_two', apply_filters( 'cyberchimps_testimonial_client2', 'Nancy Martin' ) );
+                $testimonials[2]['client'] = Cyberchimps_Helper::cyberchimps_get_option( 'cyberchimps_blog_client_three', apply_filters( 'cyberchimps_testimonial_client3', 'Nancy Martin' ) );
                 
                 // get testimonial  - about clients
                 
-                $testimonials[0]['client_abt'] = cyberchimps_get_option( 'cyberchimps_blog_client_abt_one', apply_filters( 'cyberchimps_testimonial_client_abt1', 'Developer' ) );
-                $testimonials[1]['client_abt'] = cyberchimps_get_option( 'cyberchimps_blog_client_abt_two', apply_filters( 'cyberchimps_testimonial_client_abt2', 'Designer' ) );
-                $testimonials[2]['client_abt'] = cyberchimps_get_option( 'cyberchimps_blog_client_abt_three', apply_filters( 'cyberchimps_testimonial_client_abt3', 'Developer' ) );
+                $testimonials[0]['client_abt'] = Cyberchimps_Helper::cyberchimps_get_option( 'cyberchimps_blog_client_abt_one', apply_filters( 'cyberchimps_testimonial_client_abt1', 'Developer' ) );
+                $testimonials[1]['client_abt'] = Cyberchimps_Helper::cyberchimps_get_option( 'cyberchimps_blog_client_abt_two', apply_filters( 'cyberchimps_testimonial_client_abt2', 'Designer' ) );
+                $testimonials[2]['client_abt'] = Cyberchimps_Helper::cyberchimps_get_option( 'cyberchimps_blog_client_abt_three', apply_filters( 'cyberchimps_testimonial_client_abt3', 'Developer' ) );
                 
                 // get testimonial description
                 
-                $testimonials[0]['text'] = cyberchimps_get_option( 'cyberchimps_testimonial_one_text', apply_filters( 'cyberchimps_testimonial_text1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec nisl ut est ultricies pellentesque id eu massa. Pellentesque fermentum posuere odio non accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris scelerisque auctor ligula sed aliquet' ) );
-                $testimonials[1]['text'] = cyberchimps_get_option( 'cyberchimps_testimonial_two_text', apply_filters( 'cyberchimps_testimonial_text2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec nisl ut est ultricies pellentesque id eu massa. Pellentesque fermentum posuere odio non accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris scelerisque auctor ligula sed aliquet' ) );
-                $testimonials[2]['text'] = cyberchimps_get_option( 'cyberchimps_testimonial_three_text', apply_filters( 'cyberchimps_testimonial_text3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec nisl ut est ultricies pellentesque id eu massa. Pellentesque fermentum posuere odio non accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris scelerisque auctor ligula sed aliquet' ) );
+                $testimonials[0]['text'] = Cyberchimps_Helper::cyberchimps_get_option( 'cyberchimps_testimonial_one_text', apply_filters( 'cyberchimps_testimonial_text1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec nisl ut est ultricies pellentesque id eu massa. Pellentesque fermentum posuere odio non accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris scelerisque auctor ligula sed aliquet' ) );
+                $testimonials[1]['text'] = Cyberchimps_Helper::cyberchimps_get_option( 'cyberchimps_testimonial_two_text', apply_filters( 'cyberchimps_testimonial_text2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec nisl ut est ultricies pellentesque id eu massa. Pellentesque fermentum posuere odio non accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris scelerisque auctor ligula sed aliquet' ) );
+                $testimonials[2]['text'] = Cyberchimps_Helper::cyberchimps_get_option( 'cyberchimps_testimonial_three_text', apply_filters( 'cyberchimps_testimonial_text3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec nisl ut est ultricies pellentesque id eu massa. Pellentesque fermentum posuere odio non accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris scelerisque auctor ligula sed aliquet' ) );
                
 	} 
-        $skin_color = cyberchimps_get_option('cyberchimps_skin_color');
+        $skin_color = Cyberchimps_Helper::cyberchimps_get_option('cyberchimps_skin_color');
         ?>
 	<?php 
         if($testimonial_background)
