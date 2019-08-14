@@ -410,7 +410,7 @@ add_filter( 'cyberchimps_field_filter', 'ifeature_fields_filter', 2 );
 function ifeature_add_home_menu( $menu, $args ) {
 
 	// check if the toggle is set. And if it is, then add the home button to the start of the primary menu.
-	$is_home = cyberchimps_get_option( 'menu_home_button', 1 );
+	$is_home = Cyberchimps_Helper::cyberchimps_get_option( 'menu_home_button', 1 );
 	if ( $is_home == 1 && $args->theme_location == 'primary' ) {
 		$home = '<li id="menu-item-ifeature-home"><a href="' . home_url() . '"><img src="' . get_template_directory_uri() . '/images/home.png" alt="Home" /></a></li>';
 		$menu = $home . $menu;
@@ -423,8 +423,8 @@ add_filter( 'wp_nav_menu_items', 'ifeature_add_home_menu', 10, 2 );
 
 /* fix full width container that disappears on horizontal scroll */
 function cyberchimps_full_width_fix() {
-	$responsive_design = cyberchimps_get_option( 'responsive_design' );
-	$min_width         = cyberchimps_get_option( 'max_width' );
+	$responsive_design = Cyberchimps_Helper::cyberchimps_get_option( 'responsive_design' );
+	$min_width         = Cyberchimps_Helper::cyberchimps_get_option( 'max_width' );
 	if ( ! $responsive_design ) {
 		$style  = '<style rel="stylesheet" type="text/css" media="all">';
 		$style .= '.container-full, #footer-widgets-wrapper, #footer-main-wrapper { min-width: ' . $min_width . 'px;}';
@@ -707,9 +707,9 @@ function ifeaturepro_extra_sections( $sections_list ) {
 
 add_action( 'wp_head', 'ifeature_css_styles', 50 );
 function ifeature_css_styles() {
-	$menu_background = cyberchimps_get_option( 'menu_background_colorpicker' );
-	$menu_text       = cyberchimps_get_option( 'menu_text_colorpicker' );
-	$menu_hover      = cyberchimps_get_option( 'menu_hover_colorpicker' );
+	$menu_background = Cyberchimps_Helper::cyberchimps_get_option( 'menu_background_colorpicker' );
+	$menu_text       = Cyberchimps_Helper::cyberchimps_get_option( 'menu_text_colorpicker' );
+	$menu_hover      = Cyberchimps_Helper::cyberchimps_get_option( 'menu_hover_colorpicker' );
 	?>
 	<style type="text/css" media="all">
 		<?php if ( ! empty( $menu_background ) ) : ?>
@@ -889,7 +889,7 @@ add_theme_support( 'customize-selective-refresh-widgets' );
 
 function ifeature_footer_widget_param( $params ) {
 	global $footer_widget_counter_ifeature;
-	$footer_widget_layout = cyberchimps_get_option( 'site_footer_option' );
+	$footer_widget_layout = Cyberchimps_Helper::cyberchimps_get_option( 'site_footer_option' );
 
 	if ( isset( $footer_widget_layout ) && $footer_widget_layout != '' ) {
 		$layout = $footer_widget_layout;
@@ -981,11 +981,11 @@ function ifeature_byline_author() {
 
 	// Get value of post byline author toggle option from theme option for different pages.
 	if ( is_single() ) {
-		$show_author = ( cyberchimps_get_option( 'single_post_byline_author', 1 ) ) ? cyberchimps_get_option( 'single_post_byline_author', 1 ) : false;
+		$show_author = ( Cyberchimps_Helper::cyberchimps_get_option( 'single_post_byline_author', 1 ) ) ? Cyberchimps_Helper::cyberchimps_get_option( 'single_post_byline_author', 1 ) : false;
 	} elseif ( is_archive() ) {
-		$show_author = ( cyberchimps_get_option( 'archive_post_byline_author', 1 ) ) ? cyberchimps_get_option( 'archive_post_byline_author', 1 ) : false;
+		$show_author = ( Cyberchimps_Helper::cyberchimps_get_option( 'archive_post_byline_author', 1 ) ) ? Cyberchimps_Helper::cyberchimps_get_option( 'archive_post_byline_author', 1 ) : false;
 	} else {
-		$show_author = ( cyberchimps_get_option( 'post_byline_author', 1 ) ) ? cyberchimps_get_option( 'post_byline_author', 1 ) : false;
+		$show_author = ( Cyberchimps_Helper::cyberchimps_get_option( 'post_byline_author', 1 ) ) ? Cyberchimps_Helper::cyberchimps_get_option( 'post_byline_author', 1 ) : false;
 	}
 
 	$posted_by = sprintf(
@@ -1029,15 +1029,15 @@ add_filter( 'ifeature_menu_design', 'ifeature_menu_design_options', 1 );
  */
 function customizer_css() {
 
-	$typography_options   = cyberchimps_get_option( 'typography_options' );
-	$font_family_headings = cyberchimps_get_option( 'font_family_headings' );
+	$typography_options   = Cyberchimps_Helper::cyberchimps_get_option( 'typography_options' );
+	$font_family_headings = Cyberchimps_Helper::cyberchimps_get_option( 'font_family_headings' );
 
 	$font_family             = $typography_options['face'] ? $typography_options['face'] : '"Fira Sans", sans-serif';
 	$font_size               = $typography_options['size'] ? $typography_options['size'] : '14px';
 	$font_weight             = $typography_options['style'] ? $typography_options['style'] : 'Normal';
-	$color                   = cyberchimps_get_option( 'text_colorpicker' ) ? cyberchimps_get_option( 'text_colorpicker' ) : '#777';
-	$link_colorpicker        = cyberchimps_get_option( 'link_colorpicker' ) ? cyberchimps_get_option( 'link_colorpicker' ) : '#0088cc';
-	$link_hover_colorpicker  = cyberchimps_get_option( 'link_hover_colorpicker' ) ? cyberchimps_get_option( 'link_hover_colorpicker' ) : '#005580';
+	$color                   = Cyberchimps_Helper::cyberchimps_get_option( 'text_colorpicker' ) ? Cyberchimps_Helper::cyberchimps_get_option( 'text_colorpicker' ) : '#777';
+	$link_colorpicker        = Cyberchimps_Helper::cyberchimps_get_option( 'link_colorpicker' ) ? Cyberchimps_Helper::cyberchimps_get_option( 'link_colorpicker' ) : '#0088cc';
+	$link_hover_colorpicker  = Cyberchimps_Helper::cyberchimps_get_option( 'link_hover_colorpicker' ) ? Cyberchimps_Helper::cyberchimps_get_option( 'link_hover_colorpicker' ) : '#005580';
 	$if_font_family_headings = $font_family_headings['face'] ? $font_family_headings['face'] : 'Arial, Helvetica, sans-serif';
 
 	$get_background_color  = get_background_color() ? get_background_color() : 'fff';
@@ -1107,14 +1107,14 @@ add_action( 'enqueue_block_editor_assets', 'ifeature_block_styles' );
 
 // add styles for skin selection
 function ifeature_menu_design_styles() {
-	$skin = cyberchimps_get_option( 'ifeature_menu_design' );
+	$skin = Cyberchimps_Helper::cyberchimps_get_option( 'ifeature_menu_design' );
 
 	if ( isset( $skin ) && $skin != '' && $skin != 'default' ) {
 		wp_enqueue_style( 'ifeature-menu-design', get_template_directory_uri() . '/inc/css/menu/' . $skin . '.css', array( 'style' ), '1.0' );
 	}
 
-	$skin = cyberchimps_get_option( 'cyberchimps_skin_color' );
-	if ( cyberchimps_get_option( 'flat_gradient_selector' ) == '' ) {
+	$skin = Cyberchimps_Helper::cyberchimps_get_option( 'cyberchimps_skin_color' );
+	if ( Cyberchimps_Helper::cyberchimps_get_option( 'flat_gradient_selector' ) == '' ) {
 		$skin = $skin . '-nongrad.css';
 		if ( $skin !== 'default-nongrad.css' ) {
 			wp_enqueue_style( 'ifeature-non-gradient-design', get_template_directory_uri() . '/inc/css/skins/' . $skin, array( 'style' ), '1.0' );
@@ -1136,7 +1136,7 @@ function ifeaturepro_modern_skin_css() {
 }
 
 function ifeature_blog_styles() {
-	if ( cyberchimps_get_option( 'sidebar_images' ) == 'three-column' ) {
+	if ( Cyberchimps_Helper::cyberchimps_get_option( 'sidebar_images' ) == 'three-column' ) {
 		wp_enqueue_style( 'three-column-blog', get_template_directory_uri() . '/inc/css/blog-layout/three-column.css', array( 'style' ), '1.0' );
 	}
 }
@@ -1158,7 +1158,7 @@ function ifeature_blog_templates() {
 function ifeature_featured_image_content() {
 	global $post;
 
-		$show = ( cyberchimps_get_option( 'post_featured_images', 1 ) ) ? cyberchimps_get_option( 'post_featured_images', 1 ) : false;
+		$show = ( Cyberchimps_Helper::cyberchimps_get_option( 'post_featured_images', 1 ) ) ? Cyberchimps_Helper::cyberchimps_get_option( 'post_featured_images', 1 ) : false;
 
 	if ( $show ) :
 		if ( has_post_thumbnail() ) :

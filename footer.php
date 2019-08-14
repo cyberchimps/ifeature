@@ -13,7 +13,7 @@
  * @link     https://www.cyberchimps.com/
  */
 
-if( cyberchimps_get_option( 'footer_show_toggle' ) == '1' ) : ?>
+if( Cyberchimps_Helper::cyberchimps_get_option( 'footer_show_toggle' ) == '1' ) : ?>
 
 	<div id="footer_widgets_wrapper" class="container-full-width">
 		<div id="footer_wrapper" class="container">
@@ -29,7 +29,7 @@ if( cyberchimps_get_option( 'footer_show_toggle' ) == '1' ) : ?>
 						</div>
 						
 						<?php else : 
-								$footer_widget_layout = cyberchimps_get_option('site_footer_option');
+								$footer_widget_layout = Cyberchimps_Helper::cyberchimps_get_option('site_footer_option');
 								if(isset($footer_widget_layout) && $footer_widget_layout != '')
 									$layout = $footer_widget_layout;
 								else

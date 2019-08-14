@@ -23,27 +23,27 @@ get_header(); ?>
 
 				<?php do_action( 'cyberchimps_before_container' ); ?>
 
-				<div id="container" <?php cyberchimps_filter_container_class(); ?>>
+				<div id="container" <?php Cyberchimps_Helper::cyberchimps_filter_container_class(); ?>>
 
 					<?php do_action( 'cyberchimps_before_content_container' ); ?>
 
-					<div id="content" <?php cyberchimps_filter_content_class(); ?>>
+					<div id="content" <?php Cyberchimps_Helper::cyberchimps_filter_content_class(); ?>>
 
 						<?php do_action( 'cyberchimps_before_content' ); ?>
 
 						<article id="post-0" class="post error404 not-found">
 							<header class="entry-header">
 								<h1 class="entry-title">
-									<?php if (cyberchimps_get_option( 'error_custom_title' ) != ''): ?>
-										<?php echo cyberchimps_get_option( 'error_custom_title' ); ?>
+									<?php if (Cyberchimps_Helper::cyberchimps_get_option( 'error_custom_title' ) != ''): ?>
+										<?php echo Cyberchimps_Helper::cyberchimps_get_option( 'error_custom_title' ); ?>
 									<?php else: ?>
 									<?php esc_html_e( 'Oops! That page cannot be found.', 'ifeature' ); ?></h1>
 								<?php endif; ?>
 							</header>
 
 							<div class="entry-content">
-								<?php if( cyberchimps_get_option( 'error_custom_content' ) != '' ): ?>
-									<p><?php echo cyberchimps_get_option( 'error_custom_content' ); ?></p>
+								<?php if( Cyberchimps_Helper::cyberchimps_get_option( 'error_custom_content' ) != '' ): ?>
+									<p><?php echo Cyberchimps_Helper::cyberchimps_get_option( 'error_custom_content' ); ?></p>
 								<?php else: ?>
 									<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try searching for it?', 'ifeature' ); ?></p>
 								<?php endif; ?>
