@@ -39,9 +39,6 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>"/>
 
 		<!-- IE6-8 support of HTML5 elements -->
-		<!--[if lt IE 9]>
-		<script src="<?php echo get_template_directory_uri(); ?>/inc/js/html5.js" type="text/javascript"></script>
-		<![endif]-->
 
 		<?php wp_head(); ?>
 	</head>

@@ -291,7 +291,7 @@ function ifeature_header_drag_and_drop_default() {
 	return $option;
 }
 
-add_filter( 'header_drag_and_drop_default', 'ifeature_header_drag_and_drop_default' );
+add_filter( 'cyberchimps_header_drag_and_drop_default', 'ifeature_header_drag_and_drop_default' );
 
 /**
  * Set searchbar by default.
@@ -1494,7 +1494,7 @@ function ifeature_blog_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'ifeature_blog_styles', 30 );
 
-add_action( 'blog_layout_options', 'ifeature_blog_templates' );
+add_action( 'cyberchimps_blog_layout_options', 'ifeature_blog_templates' );
 
 /**
  * Ifeature_blog_templates.
