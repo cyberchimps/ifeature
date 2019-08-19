@@ -54,7 +54,7 @@ if( post_password_required() ) {
 			 * define cyberchimps_comment() and that will be used instead.
 			 * See cyberchimps_comment() in functions.php for more.
 			 */
-			wp_list_comments( array( 'callback' => 'cyberchimps_comment' ) );
+			wp_list_comments( array( 'callback' => 'ifeature_comment' ) );
 			?>
 		</ol>
 
