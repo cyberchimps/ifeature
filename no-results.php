@@ -16,28 +16,36 @@
 
 <article id="post-0" class="post no-results not-found">
 	<header class="entry-header">
-		<h1 class="entry-title"><?php _e( 'Nothing Found', 'ifeature' ); ?></h1>
+		<h1 class="entry-title"><?php esc_html_e( 'Nothing Found', 'ifeature' ); ?></h1>
 	</header>
 	<!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php if( is_home() ) { ?>
+		<?php if ( is_home() ) { ?>
 
-			<p><?php printf( '%1$s <a href="%2$s">%3$s</a>.',
-			                 __( 'Ready to publish your first post?', 'ifeature' ),
-			                 admin_url( 'post-new.php' ),
-			                 __( 'Get started here', 'ifeature' ) ); ?></p>
+			<p>
+			<?php
+			printf(
+				'%1$s <a href="%2$s">%3$s</a>.',
+				esc_html( 'Ready to publish your first post?', 'ifeature' ),
+				admin_url( 'post-new.php' ),
+				esc_html( 'Get started here', 'ifeature' )
+			);
+			?>
+					</p>
 
-		<?php }
-		elseif( is_search() ) { ?>
+			<?php
+		} elseif ( is_search() ) {
+			?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'ifeature' ); ?></p>
+			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'ifeature' ); ?></p>
 			<?php get_search_form(); ?>
 
-		<?php }
-		else { ?>
+			<?php
+		} else {
+			?>
 
-			<p><?php _e( 'It seems we cannot find what you are looking for. Perhaps searching can help.', 'ifeature' ); ?></p>
+			<p><?php esc_html_e( 'It seems we cannot find what you are looking for. Perhaps searching can help.', 'ifeature' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php } ?>

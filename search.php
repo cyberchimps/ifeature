@@ -23,22 +23,25 @@ get_header(); ?>
 
 				<?php do_action( 'cyberchimps_before_container' ); ?>
 
-				<div id="container" <?php cyberchimps_filter_container_class(); ?>>
+				<div id="container" <?php Cyberchimps_Helper::cyberchimps_filter_container_class(); ?>>
 
 					<?php do_action( 'cyberchimps_before_content_container' ); ?>
 
-					<div id="content" <?php cyberchimps_filter_content_class(); ?>>
+					<div id="content" <?php Cyberchimps_Helper::cyberchimps_filter_content_class(); ?>>
 
 						<?php do_action( 'cyberchimps_before_content' ); ?>
 
-						<?php if( have_posts() ) : ?>
+						<?php if ( have_posts() ) : ?>
 
 							<header class="page-header">
-								<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'ifeature' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+								<h1 class="page-title"><?php printf( esc_html( 'Search Results for: %s', 'ifeature' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 							</header>
 
 							<?php /* Start the Loop */ ?>
-							<?php while( have_posts() ) : the_post(); ?>
+							<?php
+							while ( have_posts() ) :
+								the_post();
+								?>
 
 								<?php get_template_part( 'content', 'search' ); ?>
 

@@ -50,7 +50,8 @@
 
 <!-- ---------------- Top Header ------------------- -->
 <?php
-if( cyberchimps_get_option( 'top_header_bar', 1 ) ): ?>
+if ( Cyberchimps_Helper::cyberchimps_get_option( 'top_header_bar', 1 ) ) :
+	?>
 	<div class="container-full-width" id="top_header">
 		<div class="container">
 			<div class="container-fluid">
@@ -61,7 +62,7 @@ if( cyberchimps_get_option( 'top_header_bar', 1 ) ): ?>
 						</div>
 					</div>
 					<div class="top-head-social span6">
-						<?php cyberchimps_header_social_icons(); ?>
+						<?php Cyberchimps_Hooks::cyberchimps_header_social_icons(); ?>
 					</div>
 				</div>
 			</div>
@@ -101,20 +102,33 @@ if( cyberchimps_get_option( 'top_header_bar', 1 ) ): ?>
 				<div class="main-navigation navbar navbar-inverse">
 					<div class="navbar-inner">
 						<div class="container">
-							<?php /* hide collapsing menu if not responsive */
-							if (cyberchimps_get_option( 'responsive_design', 'checked' )): ?>
+							<?php
+							/* hide collapsing menu if not responsive */
+							if ( Cyberchimps_Helper::cyberchimps_get_option( 'responsive_design', 'checked' ) ) :
+								?>
 							<div class="nav-collapse collapse" aria-expanded="true">
 								<?php endif; ?>
-								<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav', 'walker' => new cyberchimps_walker(), 'fallback_cb' => 'cyberchimps_fallback_menu' ) ); ?>
+								<?php
+								wp_nav_menu(
+									array(
+										'theme_location' => 'primary',
+										'menu_class'     => 'nav',
+										'walker'         => new cyberchimps_walker(),
+										'fallback_cb'    => Cyberchimps_Helper::cyberchimps_fallback_menu(),
+									)
+								);
+								?>
 
-								<?php if( cyberchimps_get_option( 'searchbar', 1 ) == "1" ) : ?>
+								<?php if ( Cyberchimps_Helper::cyberchimps_get_option( 'searchbar', 1 ) == '1' ) : ?>
 
 									<?php get_search_form(); ?>
 
 								<?php endif; ?>
 
-								<?php /* hide collapsing menu if not responsive */
-								if (cyberchimps_get_option( 'responsive_design', 'checked' )): ?>
+								<?php
+								/* hide collapsing menu if not responsive */
+								if ( Cyberchimps_Helper::cyberchimps_get_option( 'responsive_design', 'checked' ) ) :
+									?>
 							</div>
 						<!-- collapse -->
 
