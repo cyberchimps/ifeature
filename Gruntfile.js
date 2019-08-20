@@ -147,9 +147,21 @@ module.exports = function(grunt) {
                 }],
                 options: {
                     replacements: [{
+                        pattern: /cyberchimps_core_/g,
+                        replacement: 'ifeature_cc_'
+                    },
+					{
                         pattern: /cyberchimps_/g,
                         replacement: 'ifeature_cc_'
-                    }]
+                    },
+					{
+						pattern: /Cyberchimps_/g,
+                        replacement: 'Ifeature_'
+					},
+					{
+						pattern: /CyberChimps_/g,
+						replacement: 'Ifeature_'
+					}]
                 }
             }
         },
@@ -192,6 +204,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-string-replace');
 
     // Default task(s).
+    grunt.registerTask( 'replacement', [ 'clean', 'string-replace' ] );
     grunt.registerTask( 'default', [ 'clean', 'checktextdomain', 'string-replace', 'copy', 'compress' ] );
     grunt.registerTask( 'i18n', [ 'exec', 'po2mo' ] );
 

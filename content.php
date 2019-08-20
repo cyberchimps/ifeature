@@ -28,9 +28,9 @@
 		echo ( 'post' == get_post_type() && !is_single() || is_search() ) ? '<h2 class="entry-title">' : '<h1 class="entry-title">';
 
 		if( 'page' == get_post_type() ) :
-    
+
 			// get the page title toggle option
-			$page_title = get_post_meta( get_the_ID(), 'cyberchimps_page_title_toggle', true );
+			$ifeature_page_title = get_post_meta( get_the_ID(), 'cyberchimps_page_title_toggle', true );
 
 			if( is_search() ):
 				?>
@@ -38,15 +38,15 @@
 					<?php ( get_the_title() ) ? the_title() : the_permalink(); ?>
 				</a>
 			<?php
-			elseif( $page_title == "1" || $page_title == "" ) :
+			elseif( $ifeature_page_title == "1" || $ifeature_page_title == "" ) :
 				( get_the_title() ) ? the_title() : the_permalink();
 			endif;
 		else :
 			if( 'post' == get_post_type() && is_single() ) :
 
 				// get the post title toggle option
-				$post_title = Cyberchimps_Helper::cyberchimps_get_option( 'single_post_title' );
-				if( $post_title == "1" ) : ?>
+				$ifeature_post_title = Cyberchimps_Helper::cyberchimps_get_option( 'single_post_title' );
+				if( $ifeature_post_title == "1" ) : ?>
 					<?php ( get_the_title() ) ? the_title() : the_permalink(); ?>
 				<?php    endif;
 			else : ?>
