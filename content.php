@@ -45,8 +45,8 @@
 			if( 'post' == get_post_type() && is_single() ) :
 
 				// get the post title toggle option
-				$post_title = Cyberchimps_Helper::cyberchimps_get_option( 'single_post_title' );
-				if( $post_title == "1" ) : ?>
+				$ifeature_post_title = Cyberchimps_Helper::cyberchimps_get_option( 'single_post_title' );
+				if( $ifeature_post_title == "1" ) : ?>
 					<?php ( get_the_title() ) ? the_title() : the_permalink(); ?>
 				<?php    endif;
 			else : ?>

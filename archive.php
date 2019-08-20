@@ -76,13 +76,13 @@ get_header(); ?>
 									// show an optional category description
 									$category_description = category_description();
 									if ( ! empty( $category_description ) ) {
-										echo apply_filters( 'category_archive_meta', '<div class="taxonomy-description">' . $category_description . '</div>' );
+										echo apply_filters( 'category_archive_meta', '<div class="taxonomy-description">' . $category_description . '</div>' );  // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 									}
 								} elseif ( is_tag() ) {
 									// show an optional tag description
 									$tag_description = tag_description();
 									if ( ! empty( $tag_description ) ) {
-										echo apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $tag_description . '</div>' );
+										echo apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $tag_description . '</div>' );  // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 									}
 								}
 								?>
@@ -98,7 +98,7 @@ get_header(); ?>
 
 								<?php
 								/*
-								 Include the Post-Format-specific template for the content.
+								 * Include the Post-Format-specific template for the content.
 								 * If you want to overload this in a child theme then include a file
 								 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 								 */
