@@ -13,18 +13,27 @@
  * @link     https://www.cyberchimps.com/
  */
 
-// Load text domain.
-function cyberchimps_text_domain() {
+/**
+ * Load text domain.
+ */
+function ifeature_text_domain() {
 	load_theme_textdomain( 'ifeature', get_template_directory() . '/inc/languages' );
 }
-add_action( 'after_setup_theme', 'cyberchimps_text_domain' );
+add_action( 'after_setup_theme', 'ifeature_text_domain' );
 
 if ( ! defined( 'ELEMENTOR_PARTNER_ID' ) ) {
 	define( 'ELEMENTOR_PARTNER_ID', 2126 );
 }
 
-// Theme check function to determine whether the them is free or pro.
+/**
+ * Theme check function to determine whether the them is free or pro.
+ */
 if ( ! function_exists( 'cyberchimps_theme_check' ) ) {
+	/**
+	 * Theme check function to determine whether the them is free or pro.
+	 *
+	 * @return string Free.
+	 */
 	function cyberchimps_theme_check() {
 		$level = 'free';
 
@@ -32,7 +41,11 @@ if ( ! function_exists( 'cyberchimps_theme_check' ) ) {
 	}
 }
 
-// Theme Name
+/**
+ * Theme Name.
+ *
+ * @return string Theme name.
+ */
 function ifeature_options_theme_name() {
 	$text = 'iFeature';
 
@@ -40,16 +53,23 @@ function ifeature_options_theme_name() {
 }
 add_filter( 'cyberchimps_current_theme_name', 'ifeature_options_theme_name', 1 );
 
-// Load Core
+// Load Core.
 require_once get_template_directory() . '/cyberchimps/init.php';
 require get_template_directory() . '/inc/admin-about.php';
 require_once get_template_directory() . '/inc/testimonial_template.php';
 
-// Set the content width based on the theme's design and stylesheet.
+/**
+ * Set the content width based on the theme's design and stylesheet.
+ *
+ * @var $content_width In pixel.
+ */
 if ( ! isset( $content_width ) ) {
-	$content_width = 640;
-} /* pixels */
+	$content_width = 640; // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
+}
 
+/**
+ * [ifeature_add_site_info description]
+ */
 function ifeature_add_site_info() {
 	?>
 	<p>&copy; Company Name</p>
@@ -58,13 +78,20 @@ function ifeature_add_site_info() {
 
 add_action( 'cyberchimps_site_info', 'ifeature_add_site_info' );
 
+/**
+ * Ifeature_enqueue description.
+ */
 function ifeature_enqueue() {
 	$directory_uri = get_template_directory_uri();
-	wp_enqueue_script( 'jquery-flexslider', $directory_uri . '/inc/js/jquery.flexslider.js', 'jquery', '', true );
+	wp_enqueue_script( 'jquery-flexslider', $directory_uri . '/inc/js/jquery.flexslider.js', 'jquery', '', true ); //phpcs:ignore
 }
 add_action( 'wp_enqueue_scripts', 'ifeature_enqueue' );
 
+/**
+ * Ifeature_set_defaults.
+ */
 function ifeature_set_defaults() {
+
 	remove_filter( 'dynamic_sidebar_params', 'cyberchimps_footer_widgets' );
 	add_filter( 'dynamic_sidebar_params', 'ifeature_footer_widget_param' );
 	remove_action( 'testimonial', array( CyberChimpsTestimonial::instance(), 'render_display' ) );
@@ -72,17 +99,23 @@ function ifeature_set_defaults() {
 }
 add_action( 'init', 'ifeature_set_defaults' );
 
-if ( ! function_exists( 'cyberchimps_comment' ) ) :
-	// Template for comments and pingbacks.
-	// Used as a callback by wp_list_comments() for displaying the comments.
-	function cyberchimps_comment( $comment, $args, $depth ) {
-		$GLOBALS['comment'] = $comment;
+if ( ! function_exists( 'ifeature_comment' ) ) :
+	/**
+	 * Template for comments and pingbacks.
+	 * Used as a callback by wp_list_comments() for displaying the comments.
+	 *
+	 * @param  object  $comment Comment.
+	 * @param  array   $args    Args.
+	 * @param  integer $depth  Depth.
+	 */
+	function ifeature_comment( $comment, $args, $depth ) {
+		$GLOBALS['comment'] = $comment; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 		switch ( $comment->comment_type ) :
 			case 'pingback':
 			case 'trackback':
 				?>
 				<li class="post pingback">
-				<p><?php esc_html_e( 'Pingback:', 'ifeature' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'ifeature' ), ' ' ); ?></p>
+				<p><?php _e( 'Pingback:', 'ifeature' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'ifeature' ), ' ' ); ?></p>
 				<?php
 				break;
 			default:
@@ -99,13 +132,13 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 										'<cite class="fn">%1$s</cite>',
 										get_comment_author_link()
 									),
-									esc_html( 'says', 'ifeature' )
+									esc_attr__( 'says', 'ifeature' )
 								);
 								?>
 							</div>
 							<!-- .comment-author .vcard -->
-							<?php if ( $comment->comment_approved == '0' ) : ?>
-								<em><?php esc_html_e( 'Your comment is awaiting moderation.', 'ifeature' ); ?></em>
+							<?php if ( '0' == $comment->comment_approved ) : ?>
+								<em><?php _e( 'Your comment is awaiting moderation.', 'ifeature' ); ?></em>
 								<br/>
 							<?php endif; ?>
 
@@ -114,12 +147,10 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 									<time pubdate datetime="<?php comment_time( 'c' ); ?>">
 										<?php
 										/* translators: 1: date, 2: time */
-										printf( esc_html( '%1$s at %2$s', 'ifeature' ), get_comment_date(), get_comment_time() );
-										?>
+										printf( __( '%1$s at %2$s', 'ifeature' ), get_comment_date(), get_comment_time() ); ?>
 									</time>
 								</a>
-								<?php
-								edit_comment_link( __( '(Edit)', 'ifeature' ), ' ' );
+								<?php edit_comment_link( __( '(Edit)', 'ifeature' ), ' ' );
 								?>
 							</div>
 							<!-- .comment-meta .commentmetadata -->
@@ -128,17 +159,7 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 						<div class="comment-content"><?php comment_text(); ?></div>
 
 						<div class="reply">
-							<?php
-							comment_reply_link(
-								array_merge(
-									$args,
-									array(
-										'depth'     => $depth,
-										'max_depth' => $args['max_depth'],
-									)
-								)
-							);
-							?>
+							<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 						</div>
 						<!-- .reply -->
 					</article><!-- #comment-## -->
@@ -147,12 +168,13 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 				break;
 		endswitch;
 	}
-endif; // ends check for cyberchimps_comment()
+endif; // Ends check for cyberchimps_comment().
 
-// set up next and previous post links for lite themes only
-function cyberchimps_next_previous_posts() {
-	if ( get_next_posts_link() || get_previous_posts_link() ) :
-		?>
+/**
+ * Set up next and previous post links for lite themes only.
+ */
+function ifeature_next_previous_posts() {
+	if( get_next_posts_link() || get_previous_posts_link() ): ?>
 		<div class="more-content">
 			<div class="row-fluid">
 				<div class="span6 previous-post">
@@ -163,22 +185,26 @@ function cyberchimps_next_previous_posts() {
 				</div>
 			</div>
 		</div>
-		<?php
+	<?php
 	endif;
 }
 
-add_action( 'cyberchimps_after_content', 'cyberchimps_next_previous_posts' );
+add_action( 'cyberchimps_after_content', 'ifeature_next_previous_posts' );
 
-// Doc's URL
+/**
+ * Doc's URL.
+ */
 function ifeature_options_documentation_url() {
 	$url = 'http://cyberchimps.com/guides/c-free/';
 
 	return $url;
 }
 
-// Support Forum URL
+/**
+ * Support Forum URL.
+ */
 function ifeature_options_support_forum() {
-	$url = 'https://cyberchimps.com/help/forum/sub-forum/themes-support/free-themes/';
+	$url = 'http://cyberchimps.com/forum/free/ifeature/';
 
 	return $url;
 }
@@ -186,46 +212,38 @@ function ifeature_options_support_forum() {
 add_filter( 'cyberchimps_documentation', 'ifeature_options_documentation_url' );
 add_filter( 'cyberchimps_support_forum', 'ifeature_options_support_forum' );
 
-// upgrade bar
-function cyberchimps_upgrade_bar_pro_title() {
+/**
+ * Upgrade bar.
+ */
+function ifeature_upgrade_bar_pro_title() {
 	$title = 'iFeature Pro 5';
 
 	return $title;
 }
 
+/**
+ * Ifeature_upgrade_link.
+ */
 function ifeature_upgrade_link() {
 	$link = 'http://cyberchimps.com/store/ifeaturepro5/';
 
 	return $link;
 }
 
-add_filter( 'cyberchimps_upgrade_pro_title', 'cyberchimps_upgrade_bar_pro_title' );
+add_filter( 'cyberchimps_upgrade_pro_title', 'ifeature_upgrade_bar_pro_title' );
 add_filter( 'cyberchimps_upgrade_link', 'ifeature_upgrade_link' );
-function cyberchimps_demodata() {
-	$link = 'https://cyberchimps.com/checkout/?add-to-cart=277283';
-	return $link . '';
-}
-add_filter( 'cyberchimps_demodata', 'cyberchimps_demodata' );
 
-function cyberchimps_gopro() {
-	$link = 'https://cyberchimps.com/store/ifeaturepro#whygopro';
-	return $link;
-}
-add_filter( 'cyberchimps_gopro', 'cyberchimps_gopro' );
-
-function cyberchimps_rating_link() {
-	$link = 'https://wordpress.org/support/theme/ifeature/reviews/#new-post/';
-	return $link . '';
-}
-add_filter( 'cyberchimps_rating_link', 'cyberchimps_rating_link' );
-
-// Help Section
+/**
+ * Help Section.
+ */
 function ifeature_options_help_header() {
 	$text = 'iFeature';
 
 	return $text;
 }
-
+/**
+ * Ifeature_options_help_sub_header.
+ */
 function ifeature_options_help_sub_header() {
 	$text = __( 'iFeature Responsive Drag and Drop WordPress Theme', 'ifeature' );
 
@@ -235,9 +253,10 @@ function ifeature_options_help_sub_header() {
 add_filter( 'cyberchimps_help_heading', 'ifeature_options_help_header' );
 add_filter( 'cyberchimps_help_sub_heading', 'ifeature_options_help_sub_header' );
 
-// Branding images and defaults
-
-// Banner default
+/**
+ * Branding images and defaults.
+ * Banner default.
+ */
 function ifeature_banner_default() {
 	$url = '/images/branding/banner.jpg';
 
@@ -246,26 +265,24 @@ function ifeature_banner_default() {
 
 add_filter( 'cyberchimps_banner_img', 'ifeature_banner_default' );
 
-// slider defaults
+/**
+ * Slider defaults.
+ */
 function ifeature_slider_image_1() {
 	$image = '/images/branding/ifp5slider.jpg';
 
 	return $image;
 }
 
-// add same image to all 3 slider image filters
+// Add same image to all 3 slider image filters.
 add_filter( 'cyberchimps_slide_pro_img1', 'ifeature_slider_image_1' );
 add_filter( 'cyberchimps_slide_pro_img2', 'ifeature_slider_image_1' );
 add_filter( 'cyberchimps_slide_pro_img3', 'ifeature_slider_image_1' );
 
-// Default for twitter bar handle
-function cyberchimps_twitter_handle_filter() {
-	return 'WordPress';
-}
 
-add_filter( 'cyberchimps_twitter_handle_filter', 'cyberchimps_twitter_handle_filter' );
-
-// default header option
+/**
+ * Default header option.
+ */
 function ifeature_header_drag_and_drop_default() {
 	$option = array(
 		'cyberchimps_logo' => __( 'Logo', 'ifeature' ),
@@ -274,9 +291,11 @@ function ifeature_header_drag_and_drop_default() {
 	return $option;
 }
 
-add_filter( 'header_drag_and_drop_default', 'ifeature_header_drag_and_drop_default' );
+add_filter( 'cyberchimps_header_drag_and_drop_default', 'ifeature_header_drag_and_drop_default' );
 
-// set searchbar by default
+/**
+ * Set searchbar by default.
+ */
 function ifeature_searchbar_default() {
 	$default = 'checked';
 
@@ -285,15 +304,20 @@ function ifeature_searchbar_default() {
 
 add_filter( 'searchbar_default', 'ifeature_searchbar_default' );
 
-// theme specific skin options in array. Must always include option default
+/**
+ * Theme specific skin options in array. Must always include option default.
+ *
+ * @param  array $options Options.
+ * @return array          Options.
+ */
 function ifeature_skin_color_options( $options ) {
-	// Get path of image
+	// Get path of image.
 	$imagepath = get_template_directory_uri() . '/inc/css/skins/images/';
 
 	$options = array(
 		'default' => $imagepath . 'default.png',
 		'green'   => $imagepath . 'green.png',
-		'legacy'  => $imagepath . 'legacy.png',
+		'legacy'   => $imagepath . 'legacy.png',
 	);
 
 	return $options;
@@ -301,13 +325,21 @@ function ifeature_skin_color_options( $options ) {
 
 add_filter( 'cyberchimps_skin_color', 'ifeature_skin_color_options', 1 );
 
-// theme specific typography options
+/**
+ * Theme specific typography options.
+ *
+ * @param  array $sizes Sizes.
+ */
 function ifeature_typography_sizes( $sizes ) {
 	$sizes = array( '8', '9', '10', '12', '14', '16', '20' );
 
 	return $sizes;
 }
-
+/**
+ * Ifeature_typography_faces.
+ *
+ * @param  array $faces Faces.
+ */
 function ifeature_typography_faces( $faces ) {
 	$faces = array(
 		'Arial, Helvetica, sans-serif'                     => 'Arial',
@@ -332,11 +364,15 @@ function ifeature_typography_faces( $faces ) {
 
 	return $faces;
 }
-
+/**
+ * Ifeature_typography_styles.
+ *
+ * @param  array $styles Styles.
+ */
 function ifeature_typography_styles( $styles ) {
 	$styles = array(
 		'normal' => 'Normal',
-		'bold'   => 'Bold',
+		'bold' => 'Bold',
 	);
 
 	return $styles;
@@ -345,7 +381,11 @@ function ifeature_typography_styles( $styles ) {
 add_filter( 'cyberchimps_typography_sizes', 'ifeature_typography_sizes' );
 add_filter( 'cyberchimps_typography_faces', 'ifeature_typography_faces' );
 add_filter( 'cyberchimps_typography_styles', 'ifeature_typography_styles' );
-
+/**
+ * Ifeature post tags
+ *
+ * @param  array $tags Tags.
+ */
 function ifeature_post_tags( $tags ) {
 	$tag = trim( $tags, 'Tags:' );
 	$tag = explode( ',', $tag );
@@ -356,7 +396,11 @@ function ifeature_post_tags( $tags ) {
 
 add_filter( 'cyberchimps_post_tags', 'ifeature_post_tags' );
 
-/* remove meta seperator */
+/**
+ * Remove meta seperator.
+ *
+ * @param  string $sep seperator.
+ */
 function ifeature_seperator( $sep ) {
 	$sep = ' ';
 
@@ -364,14 +408,18 @@ function ifeature_seperator( $sep ) {
 }
 
 add_filter( 'cyberchimps_entry_meta_sep', 'ifeature_seperator' );
-// add imenu section
+
+/**
+ * Add imenu section
+ * @param  array $sections Sections.
+ */
 function ifeature_sections_filter( $sections ) {
 	$new_sections = array(
 		array(
 			'id'      => 'cyberchimps_imenu_section',
 			'label'   => __( 'iMenu Options', 'ifeature' ),
 			'heading' => 'cyberchimps_header_heading',
-		),
+		)
 	);
 	$sections     = array_merge( $sections, $new_sections );
 
@@ -380,7 +428,11 @@ function ifeature_sections_filter( $sections ) {
 
 add_filter( 'cyberchimps_sections_filter', 'ifeature_sections_filter' );
 
-// add top bar option and add contact information
+/**
+ * Add top bar option and add contact information.
+ *
+ * @param  string $fields Fields.
+ */
 function ifeature_fields_filter( $fields ) {
 	$new_fields = array(
 		array(
@@ -395,8 +447,8 @@ function ifeature_fields_filter( $fields ) {
 	$fields     = array_merge( $fields, $new_fields );
 
 	foreach ( $fields as $key => $value ) :
-		// move the search bar to imenu section
-		if ( $value['id'] == 'searchbar' ) :
+		// move the search bar to imenu section.
+		if ( 'searchbar' === $value['id'] ) :
 			$fields[ $key ]['section'] = 'cyberchimps_imenu_section';
 		endif;
 	endforeach;
@@ -406,12 +458,17 @@ function ifeature_fields_filter( $fields ) {
 
 add_filter( 'cyberchimps_field_filter', 'ifeature_fields_filter', 2 );
 
-// add home button to menu
+/**
+ * Add home button to menu.
+ *
+ * @param array $menu Menu.
+ * @param array $args Args.
+ */
 function ifeature_add_home_menu( $menu, $args ) {
 
-	// check if the toggle is set. And if it is, then add the home button to the start of the primary menu.
+	// Check if the toggle is set. And if it is, then add the home button to the start of the primary menu.
 	$is_home = Cyberchimps_Helper::cyberchimps_get_option( 'menu_home_button', 1 );
-	if ( $is_home == 1 && $args->theme_location == 'primary' ) {
+	if ( $is_home == 1 && $args->theme_location == 'primary' ) { //phpcs:ignore
 		$home = '<li id="menu-item-ifeature-home"><a href="' . home_url() . '"><img src="' . get_template_directory_uri() . '/images/home.png" alt="Home" /></a></li>';
 		$menu = $home . $menu;
 	}
@@ -421,25 +478,32 @@ function ifeature_add_home_menu( $menu, $args ) {
 
 add_filter( 'wp_nav_menu_items', 'ifeature_add_home_menu', 10, 2 );
 
-/* fix full width container that disappears on horizontal scroll */
-function cyberchimps_full_width_fix() {
+/**
+ * Fix full width container that disappears on horizontal scroll.
+ */
+function ifeature_full_width_fix() {
 	$responsive_design = Cyberchimps_Helper::cyberchimps_get_option( 'responsive_design' );
 	$min_width         = Cyberchimps_Helper::cyberchimps_get_option( 'max_width' );
 	if ( ! $responsive_design ) {
-		$style  = '<style rel="stylesheet" type="text/css" media="all">';
+		$style  = '<style rel="stylesheet" type="text/css" media="all">'; //phpcs:ignore
 		$style .= '.container-full, #footer-widgets-wrapper, #footer-main-wrapper { min-width: ' . $min_width . 'px;}';
 		$style .= '</style>';
 
-		echo $style;
+		echo $style; //phpcs:ignore
 	}
 }
 
-add_action( 'wp_head', 'cyberchimps_full_width_fix' );
+add_action( 'wp_head', 'ifeature_full_width_fix' );
 
- /* Add iMenu Options in customizer and remove searchbar from header option */
+/* Add iMenu Options in customizer and remove searchbar from header option */
 
-	add_action( 'customize_register', 'ifeature_customize_register', 50 );
+add_action( 'customize_register', 'ifeature_customize_register', 50 );
 
+/**
+ * Ifeature_customize_register
+ *
+ * @param  object $wp_customize Customization options.
+ */
 function ifeature_customize_register( $wp_customize ) {
 	$wp_customize->remove_setting( 'cyberchimps_options[searchbar]' );
 	$wp_customize->remove_control( 'searchbar' );
@@ -449,7 +513,7 @@ function ifeature_customize_register( $wp_customize ) {
 			'priority'       => 20,
 			'capability'     => 'edit_theme_options',
 			'theme_supports' => '',
-			'title'          => __( 'iMenu Options', 'cyberchimps_core' ),
+			'title'          => __( 'iMenu Options', 'ifeature' ),
 			'panel'          => 'header_id',
 		)
 	);
@@ -465,7 +529,7 @@ function ifeature_customize_register( $wp_customize ) {
 			$wp_customize,
 			'menu_home_button',
 			array(
-				'label'    => __( 'Menu Home Icon', 'cyberchimps_core' ),
+				'label'    => __( 'Menu Home Icon', 'ifeature' ),
 				'section'  => 'cyberchimps_imenu',
 				'settings' => 'cyberchimps_options[menu_home_button]',
 				'type'     => 'checkbox',
@@ -484,7 +548,7 @@ function ifeature_customize_register( $wp_customize ) {
 			$wp_customize,
 			'searchbar',
 			array(
-				'label'    => __( 'Searchbar', 'cyberchimps_core' ),
+				'label'    => __( 'Searchbar', 'ifeature' ),
 				'section'  => 'cyberchimps_imenu',
 				'settings' => 'cyberchimps_options[searchbar]',
 				'type'     => 'checkbox',
@@ -493,39 +557,46 @@ function ifeature_customize_register( $wp_customize ) {
 	);
 }
 
-function cyberchimps_ifeature_upgrade_bar() {
+/**
+ * Ifeature_ifeature_upgrade_bar
+ */
+function ifeature_upgrade_bar() {
 	$upgrade_link = apply_filters( 'cyberchimps_upgrade_link', 'http://cyberchimps.com' );
 	$pro_title    = apply_filters( 'cyberchimps_upgrade_pro_title', 'CyberChimps Pro' );
 	?>
 	<br>
 	<div class="upgrade-callout">
-		<p><img src="<?php echo get_template_directory_uri(); ?>/cyberchimps/options/lib/images/chimp.png" alt="CyberChimps"/>
+		<p><img src="<?php echo get_template_directory_uri(); ?>/cyberchimps/options/lib/images/chimp.png" alt="CyberChimps"/> //phpcs:ignore
 			<?php
 			printf(
-				esc_html( 'Welcome to iFeature! Get 30%% off on %1$s using Coupon Code <span style="color:red">IFEATURE30</span>', 'cyberchimps_core' ),
-				'<a href="' . $upgrade_link . '" target="_blank" title="' . $pro_title . '">' . $pro_title . '</a> '
+				__( 'Welcome to iFeature! Get 30%% off on %1$s using Coupon Code <span style="color:red">IFEATURE30</span>', 'ifeature' ), //phpcs:ignore
+				'<a href="' . $upgrade_link . '" target="_blank" title="' . $pro_title . '">' . $pro_title . '</a> ' //phpcs:ignore
 			);
 			?>
 		</p>
 
 	</div>
-	<?php
+<?php
 }
 
-add_action( 'admin_init', 'remove_upgrade_bar' );
-function remove_upgrade_bar() {
+add_action( 'admin_init', 'ifeature_remove_upgrade_bar' );
+/**
+ * Remove upgrade bar.
+ */
+function ifeature_remove_upgrade_bar() {
 	remove_action( 'cyberchimps_options_before_container', 'cyberchimps_upgrade_bar' );
 }
-if ( cyberchimps_theme_check() == 'free' ) {
-	add_action( 'cyberchimps_options_before_container', 'cyberchimps_ifeature_upgrade_bar' );
+if ( 'free' === cyberchimps_theme_check() ) {
+	add_action( 'cyberchimps_options_before_container', 'ifeature_upgrade_bar' );
 }
 
-// enabling theme support for title tag
+/**
+ * Enabling theme support for title tag
+ */
 function ifeature_title_setup() {
 	add_theme_support( 'title-tag' );
 
-	// enabling theme support for title tag
-
+	// Enabling theme support for title tag.
 	// Add support for full and wide align images.
 	add_theme_support( 'align-wide' );
 
@@ -535,6 +606,12 @@ add_action( 'after_setup_theme', 'ifeature_title_setup' );
 /* BEGIN  Added by Swapnil - on 19-Oct 2016 for adding new feature for menu coloer change */
 
 add_action( 'customize_register', 'ifeature_add_custmozier_field', 20 );
+
+/**
+ * Ifeature_add_custmozier_field
+ *
+ * @param array $wp_customize Customizer options.
+ */
 function ifeature_add_custmozier_field( $wp_customize ) {
 
 	$wp_customize->add_setting(
@@ -600,13 +677,13 @@ function ifeature_add_custmozier_field( $wp_customize ) {
 		)
 	);
 
-		$wp_customize->add_setting(
-			'cyberchimps_options[flat_gradient_selector]',
-			array(
-				'type'              => 'option',
-				'sanitize_callback' => 'cyberchimps_sanitize_checkbox',
-			)
-		);
+	$wp_customize->add_setting(
+		'cyberchimps_options[flat_gradient_selector]',
+		array(
+			'type'              => 'option',
+			'sanitize_callback' => 'cyberchimps_sanitize_checkbox',
+		)
+	);
 
 	$wp_customize->add_control(
 		'cyberchimps_options[flat_gradient_selector]',
@@ -623,7 +700,9 @@ function ifeature_add_custmozier_field( $wp_customize ) {
 		$wp_customize->add_setting(
 			'cyberchimps_options[ifeature_menu_design]',
 			array(
-				'default'           => array( 'default' => get_template_directory_uri() . '/inc/css/menu/images/default.jpg' ),
+				'default'           => array(
+					'default' => get_template_directory_uri() . '/inc/css/menu/images/default.jpg',
+				),
 				'type'              => 'option',
 				'sanitize_callback' => 'cyberchimps_text_sanitization',
 			)
@@ -660,15 +739,15 @@ function ifeature_add_custmozier_field( $wp_customize ) {
 			'type'     => 'checkbox',
 		)
 	);
-	// Add footer widget layout option
+	// Add footer widget layout option.
 	$imagefooterpath = get_template_directory_uri() . '/images/footer/';
 	$footer_layout   = apply_filters(
-		'cyberchimps_footer_widget_layout',
+		'ifeature_footer_widget_layout',
 		array(
 			'footer-4-col' => $imagefooterpath . 'footer-4-col.png',
 			'footer-3-col' => $imagefooterpath . 'footer-3-col.png',
 		)
-	);
+	);// phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 	$wp_customize->add_setting(
 		'cyberchimps_options[site_footer_option]',
 		array(
@@ -683,7 +762,7 @@ function ifeature_add_custmozier_field( $wp_customize ) {
 			$wp_customize,
 			'site_footer_option',
 			array(
-				'label'    => __( 'Choose Footer Widgets Layout', 'cyberchimps_core' ),
+				'label'    => __( 'Choose Footer Widgets Layout', 'ifeature' ),
 				'section'  => 'cyberchimps_footer_section',
 				'settings' => 'cyberchimps_options[site_footer_option]',
 				'choices'  => $footer_layout,
@@ -694,10 +773,16 @@ function ifeature_add_custmozier_field( $wp_customize ) {
 
 
 add_filter( 'cyberchimps_sections_filter', 'ifeaturepro_extra_sections', 10 );
+/**
+ * Ifeaturepro_extra_sections.
+ *
+ * @param  array $sections_list Section list.
+ * @return array                [description]
+ */
 function ifeaturepro_extra_sections( $sections_list ) {
 	$sections_list[] = array(
 		'id'       => 'cyberchimps_custom_skin_option_section',
-		'label'    => __( 'Skin Options', 'cyberchimps_core' ),
+		'label'    => __( 'Skin Options', 'ifeature' ),
 		'heading'  => 'cyberchimps_design_heading',
 		'priority' => 40,
 	);
@@ -705,7 +790,94 @@ function ifeaturepro_extra_sections( $sections_list ) {
 	return $sections_list;
 }
 
+add_filter( 'cyberchimps_field_list', 'ifeature_add_field', 30, 1 );
+
+/**
+ * Add fields.
+ *
+ * @param array $fields_list Field list.
+ */
+function ifeature_add_field( $fields_list ) {
+	$fields_list[] = array(
+		'name'    => __( 'Menu Background Color', 'ifeature' ),
+		'desc'    => __( 'Select menu background color', 'ifeature' ),
+		'id'      => 'menu_background_colorpicker',
+		'std'     => '',
+		'type'    => 'color',
+		'section' => 'cyberchimps_custom_colors_section',
+		'heading' => 'cyberchimps_design_heading',
+	);
+
+	$fields_list[] = array(
+		'name'    => __( 'Menu Hover Color', 'ifeature' ),
+		'desc'    => __( 'Select menu hover color', 'ifeature' ),
+		'id'      => 'menu_hover_colorpicker',
+		'std'     => '',
+		'type'    => 'color',
+		'section' => 'cyberchimps_custom_colors_section',
+		'heading' => 'cyberchimps_design_heading',
+	);
+
+	$fields_list[] = array(
+		'name'    => __( 'Menu Text Color', 'ifeature' ),
+		'desc'    => __( 'Select color for menu text', 'ifeature' ),
+		'id'      => 'menu_text_colorpicker',
+		'std'     => '',
+		'type'    => 'color',
+		'section' => 'cyberchimps_custom_colors_section',
+		'heading' => 'cyberchimps_design_heading',
+	);
+
+	$fields_list[] = array(
+		'name'    => __( 'Gradient Design', 'ifeature' ),
+		'id'      => 'flat_gradient_selector',
+		'type'    => 'toggle',
+		'std'     => 'checked',
+		'section' => 'cyberchimps_custom_colors_section',
+		'heading' => 'cyberchimps_design_heading',
+	);
+
+	$fields_list[] = array(
+		'name'    => __( 'Choose a skin', 'ifeature' ),
+		'id'      => 'ifeature_menu_design',
+		'desc'    => '<a href="https://cyberchimps.com/guide/ifeature-modern-skin/" target="_blank">Recommended font settings for the Modern skin</a>',
+		'std'     => 'default',
+		'type'    => 'images',
+		'options' => apply_filters(
+			'ifeature_menu_design',
+			array(
+				'default' => get_template_directory_uri() . '/inc/css/skins/images/default.png',
+			)
+		),
+		'section' => 'cyberchimps_custom_skin_option_section',
+		'heading' => 'cyberchimps_design_heading',
+	);
+
+	$imagefooterpath = get_template_directory_uri() . '/images/footer/';
+	$fields_list[]   = array(
+		'name'    => __( 'Choose Footer Widgets Layout', 'ifeature' ),
+		'id'      => 'site_footer_option',
+		'std'     => 'footer-4-col',
+		'type'    => 'images',
+		'options' => apply_filters(
+			'ifeature_footer_widget_layout',
+			array(
+				'footer-4-col' => $imagefooterpath . 'footer-4-col.png',
+				'footer-3-col' => $imagefooterpath . 'footer-3-col.png',
+			)
+		),
+		'section' => 'cyberchimps_footer_section',
+		'heading' => 'cyberchimps_footer_heading',
+	);
+
+	return $fields_list;
+}
+
 add_action( 'wp_head', 'ifeature_css_styles', 50 );
+
+/**
+ * Css styles.
+ */
 function ifeature_css_styles() {
 	$menu_background = Cyberchimps_Helper::cyberchimps_get_option( 'menu_background_colorpicker' );
 	$menu_text       = Cyberchimps_Helper::cyberchimps_get_option( 'menu_text_colorpicker' );
@@ -751,8 +923,14 @@ function ifeature_css_styles() {
 
 /*=========================== Fonts =====================================================*/
 
-// Adding the default theme font Lobster in the list of fonts available in theme options
+// Adding the default theme font Lobster in the list of fonts available in theme options.
 add_filter( 'cyberchimps_typography_faces', 'ifeature_typography_faces_new' );
+/**
+ * Ifeature_typography_faces_new.
+ *
+ * @param  array $orig Array.
+ * @return array       New array.
+ */
 function ifeature_typography_faces_new( $orig ) {
 	$new = array(
 		'"Fira Sans", sans-serif'      => 'Fira Sans',
@@ -762,8 +940,11 @@ function ifeature_typography_faces_new( $orig ) {
 	return $new;
 }
 
-// Setting defaults - body
+// Setting defaults - body.
 add_filter( 'cyberchimps_typography_defaults', 'ifeature_typography_defaults' );
+/**
+ * Ifeature_typography_defaults
+ */
 function ifeature_typography_defaults() {
 	$default = array(
 		'size'  => '14px',
@@ -775,46 +956,60 @@ function ifeature_typography_defaults() {
 	return $default;
 }
 
-// Setting defaults - h1
+// Setting defaults - h1.
 add_filter( 'cyberchimps_heading1_typography_defaults', 'ifeature_typography_h1' );
+/**
+ * Ifeature_typography_h1
+ */
 function ifeature_typography_h1() {
-	 $default = array(
-		 'size'  => '26px',
-		 'face'  => '"Fira Sans", sans-serif',
-		 'style' => '',
-		 'color' => '',
-	 );
+	$default = array(
+		'size'  => '26px',
+		'face'  => '"Fira Sans", sans-serif',
+		'style' => '',
+		'color' => '',
+	);
 
-	 return $default;
+	return $default;
 }
-// Setting defaults - h2
+// Setting defaults - h2.
 add_filter( 'cyberchimps_heading2_typography_defaults', 'ifeature_typography_h2' );
+
+/**
+ * Ifeature_typography_h2.
+ */
 function ifeature_typography_h2() {
-	 $default = array(
-		 'size'  => '22px',
-		 'face'  => '"Fira Sans", sans-serif',
-		 'style' => '',
-		 'color' => '',
-	 );
+	$default = array(
+		'size'  => '22px',
+		'face'  => '"Fira Sans", sans-serif',
+		'style' => '',
+		'color' => '',
+	);
 
-	 return $default;
+	return $default;
 }
-// Setting defaults - h3
+// Setting defaults - h3.
 add_filter( 'cyberchimps_heading3_typography_defaults', 'ifeature_typography_h3' );
+
+/**
+ * Ifeature_typography_h3.
+ */
 function ifeature_typography_h3() {
-	 $default = array(
-		 'size'  => '18px',
-		 'face'  => '"Fira Sans", sans-serif',
-		 'style' => '',
-		 'color' => '',
-	 );
+	$default = array(
+		'size'  => '18px',
+		'face'  => '"Fira Sans", sans-serif',
+		'style' => '',
+		'color' => '',
+	);
 
-	 return $default;
+	return $default;
 }
-
+/**
+ * Ifeature_customize_edit_links
+ * @param  object $wp_customize Customizer options.
+ */
 function ifeature_customize_edit_links( $wp_customize ) {
 
-	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
+	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
 	$wp_customize->selective_refresh->add_partial(
@@ -876,10 +1071,15 @@ function ifeature_customize_edit_links( $wp_customize ) {
 	);
 
 }
+/**
+ * Ifeature_customize_partial_blogname.
+ */
 function ifeature_customize_partial_blogname() {
 	bloginfo( 'name' );
 }
-
+/**
+ * Ifeature_customize_partial_blogdescription.
+ */
 function ifeature_customize_partial_blogdescription() {
 	bloginfo( 'description' );
 }
@@ -887,33 +1087,148 @@ function ifeature_customize_partial_blogdescription() {
 add_action( 'customize_register', 'ifeature_customize_edit_links' );
 add_theme_support( 'customize-selective-refresh-widgets' );
 
+add_action( 'admin_notices', 'ifeature_admin_notice' );
+
+/**
+ * Admin_notices.
+ */
+function ifeature_admin_notice() {
+
+	$admin_check_screen = get_admin_page_title();
+
+	if ( ! class_exists( 'SlideDeckPlugin' ) ) {
+		$plugin            = 'slidedeck/slidedeck.php';
+		$slug              = 'slidedeck';
+		$installed_plugins = get_plugins();
+
+		?>
+		<div class="notice notice-info is-dismissible" style="margin-top:15px;">
+			<?php
+			if ( 'Manage Themes' === $admin_check_screen || 'Theme Options Page' === $admin_check_screen ) {
+				?>
+				<p>
+				<?php
+				if ( isset( $installed_plugins[ $plugin ] ) ) {
+					?>
+					<a href="<?php echo esc_url( admin_url( 'plugins.php' ) ); ?>">Activate the SlideDeck Lite plugin</a>
+					<?php
+				} else {
+					?>
+					<a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ) ); ?>">Install the SlideDeck Lite plugin</a>
+				<?php } ?>
+			</p>
+				<?php
+			}
+	}
+
+	if ( ! class_exists( 'WPForms' ) ) {
+		$plugin            = 'wpforms-lite/wpforms.php';
+		$slug              = 'wpforms-lite';
+		$installed_plugins = get_plugins();
+		if ( 'Manage Themes' === $admin_check_screen || 'Theme Options Page' === $admin_check_screen ) {
+			?>
+		<p>
+			<?php
+			if ( isset( $installed_plugins[ $plugin ] ) ) {
+				?>
+				<a href="<?php echo esc_url( admin_url( 'plugins.php' ) ); ?>">Activate the WPForms Lite plugin</a>
+				<?php
+			} else {
+				?>
+				<a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ) ); ?>">Install the WP Forms Lite plugin</a>
+			<?php } ?>
+		</p>
+			<?php
+		}
+	}
+
+
+	$plugin            = 'elementor/elementor.php';
+	$slug              = 'elementor';
+	$installed_plugins = get_plugins();
+	if ( 'Manage Themes' === $admin_check_screen || 'Theme Options Page' === $admin_check_screen ) {
+		if ( isset( $installed_plugins[ $plugin ] ) ) {
+			if ( ! is_plugin_active( $plugin ) ) {
+				?>
+				<p>
+				<a href="<?php echo esc_url( admin_url( 'plugins.php' ) ); ?>">Activate the Elementor plugin</a>
+				</p>
+				<?php
+			}
+		} else {
+			?>
+			<p>
+			<a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ) ); ?>">Install the Elementor plugin</a>
+			</p>
+
+			<?php
+		}
+	}
+
+	if ( ! class_exists( 'WP_Legal_Pages' ) ) {
+		$plugin            = 'wplegalpages/legal-pages.php';
+		$slug              = 'wplegalpages';
+		$installed_plugins = get_plugins();
+		if ( 'Manage Themes' === $admin_check_screen || 'Theme Options Page' === $admin_check_screen ) {
+			?>
+		<p>
+			<?php
+			if ( isset( $installed_plugins[ $plugin ] ) ) {
+				?>
+				<a href="<?php echo esc_url( admin_url( 'plugins.php' ) ); ?>">Activate the WP Legal Pages plugin</a>
+				<?php
+			} else {
+				?>
+				<a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ) ); ?>">Install the WP Legal Pages plugin</a>
+		<?php } ?>
+		</p>
+
+			<?php
+		}
+	}
+
+	if ( 'Manage Themes' === $admin_check_screen || 'Theme Options Page' === $admin_check_screen ) {
+		?>
+	<b><p>Liked this theme? <a href="https://wordpress.org/support/theme/ifeature/reviews/#new-post" target="_blank">Leave us</a> a ***** rating. Thank you! </p></b>
+		<?php
+	}
+	?>
+	</div>
+	<?php
+}
+/**
+ * Ifeature_footer_widget_param.
+ *
+ * @param  array $params Parameters.
+ */
 function ifeature_footer_widget_param( $params ) {
 	global $footer_widget_counter_ifeature;
 	$footer_widget_layout = Cyberchimps_Helper::cyberchimps_get_option( 'site_footer_option' );
 
-	if ( isset( $footer_widget_layout ) && $footer_widget_layout != '' ) {
+	if ( isset( $footer_widget_layout ) && '' != $footer_widget_layout ) { //phpcs:ignore
 		$layout = $footer_widget_layout;
 	} else {
 		$layout = '';
 	}
 	$divider = 4;
 
-	// Check if we are displaying "Footer Sidebar"
-	if ( $params[0]['id'] == 'cyberchimps-footer-widgets' ) {
+	// Check if we are displaying "Footer Sidebar".
+	if ( 'cyberchimps-footer-widgets' == $params[0]['id'] ) { //phpcs:ignore
 
-		// Check which footer layout is selcted
-		if ( $layout == 'footer-3-col' ) {
-			// This is 3-col layout
-			$class                      = 'class="span4 ';
-			$divider                    = 3;
+		// Check which footer layout is selcted.
+		if ( 'footer-3-col' == $layout ) { //phpcs:ignore
+			// This is 3-col layout.
+			$class   = 'class="span4 ';
+			$divider = 3;
+
 			$params[0]['before_widget'] = preg_replace( '/class="/', $class, $params[0]['before_widget'], 1 );
 
-		} elseif ( $layout == 'footer-4-col' ) {
-			// This is 4-col layout
+		} elseif ( 'footer-4-col' === $layout ) {
+			// This is 4-col layout.
 			$divider = 4;
 		}
 
-		if ( $footer_widget_counter_ifeature % $divider == 0 ) {
+		if ( $footer_widget_counter_ifeature % $divider == 0 ) { //phpcs:ignore
 
 			echo '</div> <div class="row-fluid">';
 		}
@@ -922,6 +1237,11 @@ function ifeature_footer_widget_param( $params ) {
 
 	return $params;
 }
+/**
+ * Ifeature_custom_category_widget.
+ *
+ * @param  array $arg Arg.
+ */
 function ifeature_custom_category_widget( $arg ) {
 	$excludecat = get_theme_mod( 'cyberchimps_exclude_post_cat' );
 
@@ -934,30 +1254,44 @@ function ifeature_custom_category_widget( $arg ) {
 add_filter( 'widget_categories_args', 'ifeature_custom_category_widget' );
 add_filter( 'widget_categories_dropdown_args', 'ifeature_custom_category_widget' );
 
+/**
+ * Ifeature_exclude_post_cat_recentpost_widget.
+ *
+ * @param  array $array Array.
+ */
 function ifeature_exclude_post_cat_recentpost_widget( $array ) {
-	$s          = '';
-	$i          = 1;
+
+	$s = '';
+	$i = 1;
+
 	$excludecat = get_theme_mod( 'cyberchimps_exclude_post_cat' );
 
 	if ( $excludecat ) {
 		$excludecat = array_diff( array_unique( $excludecat ), array( '' ) );
 		foreach ( $excludecat as $c ) {
 			$i++;
+
 			$s .= '-' . $c;
+
 			if ( count( $excludecat ) >= $i ) {
 				$s .= ', ';
 			}
 		}
 	}
 
-	$array['cat'] = array( $s );
-	// $exclude = array( 'cat' => $s );
+	$array['cat']=array($s);
+	//$exclude = array( 'cat' => $s );
 
 	return $array;
 }
-add_filter( 'widget_posts_args', 'ifeature_exclude_post_cat_recentpost_widget' );
+add_filter( "widget_posts_args", "ifeature_exclude_post_cat_recentpost_widget" );
 
 if ( ! function_exists( 'ifeature_exclude_post_cat' ) ) :
+	/**
+	 * Ifeature_exclude_post_cat.
+	 *
+	 * @param  object $query Query.
+	 */
 	function ifeature_exclude_post_cat( $query ) {
 		$excludecat = get_theme_mod( 'cyberchimps_exclude_post_cat' );
 
@@ -972,12 +1306,16 @@ endif;
 add_filter( 'pre_get_posts', 'ifeature_exclude_post_cat' );
 
 add_action( 'cyberchimps_posted_by', 'ifeature_byline_author' );
+
+/**
+ * Ifeature_byline_author.
+ */
 function ifeature_byline_author() {
-	 // Get url of all author archive( the page will contain all posts by the author).
+	// Get url of all author archive( the page will contain all posts by the author).
 	$auther_posts_url = esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) );
 
 	// Set author title text which will appear on hover over the author link.
-	$auther_link_title = esc_attr( sprintf( __( 'View all posts by %s', 'cyberchimps_core' ), get_the_author() ) );
+	$auther_link_title = esc_attr( sprintf( __( 'View all posts by %s', 'ifeature' ), get_the_author() ) );
 
 	// Get value of post byline author toggle option from theme option for different pages.
 	if ( is_single() ) {
@@ -989,27 +1327,32 @@ function ifeature_byline_author() {
 	}
 
 	$posted_by = sprintf(
-		'<span class="byline"> ' . __( 'by %s', 'cyberchimps_core' ),
+		'<span class="byline"> ' . __( 'by ', 'ifeature' ) . '%s',
 		'<span class="author vcard">
-									<a class="url fn n" href="' . $auther_posts_url . '" title="' . $auther_link_title . '" rel="author">' . esc_html( get_the_author() ) . '</a>
-								</span>
-								<span class="avatar">
-									<a href="' . $auther_posts_url . '" title="' . $auther_link_title . '" rel="avatar">' . get_avatar( get_the_author_meta( 'ID' ), 20 ) . '</a>
-								</span>
-							</span>'
+				<a class="url fn n" href="' . $auther_posts_url . '" title="' . $auther_link_title . '" rel="author">' . esc_html( get_the_author() ) . '</a>
+			</span>
+			<span class="avatar">
+				<a href="' . $auther_posts_url . '" title="' . $auther_link_title . '" rel="avatar">' . get_avatar( get_the_author_meta( 'ID' ), 20 ) . '</a>
+			</span>
+		</span>'
+
 	);
 
 	if ( $show_author ) {
 			return $posted_by;
 	}
-
 	return;
 }
 
-// theme specific menu design options in array.
+/**
+ * Theme specific menu design options in array.
+ *
+ * @param  array $options Options.
+ * @return array          Options.
+ */
 function ifeature_menu_design_options( $options ) {
 
-	// Get path of image
+	// Get path of image.
 	$imagepath = get_template_directory_uri() . '/inc/css/menu/images/';
 
 	$options = array(
@@ -1023,11 +1366,11 @@ add_filter( 'ifeature_menu_design', 'ifeature_menu_design_options', 1 );
 
 
 /**
- * [customizer_css description].
+ *  Ifeature customize css.
  *
  * @return string.
  */
-function customizer_css() {
+function ifeature_customizer_css() {
 
 	$typography_options   = Cyberchimps_Helper::cyberchimps_get_option( 'typography_options' );
 	$font_family_headings = Cyberchimps_Helper::cyberchimps_get_option( 'font_family_headings' );
@@ -1099,24 +1442,26 @@ function customizer_css() {
 function ifeature_block_styles() {
 	wp_enqueue_style( 'ifeature-google-font', 'https://fonts.googleapis.com/css?family=Open+Sans|Titillium+Web|Lobster', array(), '1.0' );
 
-	wp_add_inline_style( 'ifeature-google-font', customizer_css() );
+	wp_add_inline_style( 'ifeature-google-font', ifeature_customizer_css() );
 
 	wp_enqueue_style( 'ifeature-gutenberg-blocks', get_stylesheet_directory_uri() . '/inc/css/gutenberg-blocks.css', array(), '1.0' );
 }
 add_action( 'enqueue_block_editor_assets', 'ifeature_block_styles' );
 
-// add styles for skin selection
+/**
+ * Add styles for skin selection.
+ */
 function ifeature_menu_design_styles() {
 	$skin = Cyberchimps_Helper::cyberchimps_get_option( 'ifeature_menu_design' );
-
-	if ( isset( $skin ) && $skin != '' && $skin != 'default' ) {
+	if ( ! is_array( $skin ) ) {
 		wp_enqueue_style( 'ifeature-menu-design', get_template_directory_uri() . '/inc/css/menu/' . $skin . '.css', array( 'style' ), '1.0' );
 	}
 
 	$skin = Cyberchimps_Helper::cyberchimps_get_option( 'cyberchimps_skin_color' );
-	if ( Cyberchimps_Helper::cyberchimps_get_option( 'flat_gradient_selector' ) == '' ) {
-		$skin = $skin . '-nongrad.css';
-		if ( $skin !== 'default-nongrad.css' ) {
+
+	if ( '' == Cyberchimps_Helper::cyberchimps_get_option( 'flat_gradient_selector' ) ) { //phpcs:ignore
+		if ( ! is_array( $skin ) ) {
+			$skin = $skin . '-nongrad.css';
 			wp_enqueue_style( 'ifeature-non-gradient-design', get_template_directory_uri() . '/inc/css/skins/' . $skin, array( 'style' ), '1.0' );
 		}
 	}
@@ -1124,6 +1469,10 @@ function ifeature_menu_design_styles() {
 add_action( 'wp_enqueue_scripts', 'ifeature_menu_design_styles', 55 );
 
 add_action( 'admin_head', 'ifeaturepro_modern_skin_css' );
+
+/**
+ * Ifeaturepro_modern_skin_css.
+ */
 function ifeaturepro_modern_skin_css() {
 	?>
 <style>
@@ -1135,51 +1484,57 @@ function ifeaturepro_modern_skin_css() {
 	<?php
 }
 
+/**
+ * Ifeature_blog_styles.
+ */
 function ifeature_blog_styles() {
-	if ( Cyberchimps_Helper::cyberchimps_get_option( 'sidebar_images' ) == 'three-column' ) {
+	if( 'three-column' == Cyberchimps_Helper::cyberchimps_get_option( 'sidebar_images' ) ) { //phpcs:ignore
 		wp_enqueue_style( 'three-column-blog', get_template_directory_uri() . '/inc/css/blog-layout/three-column.css', array( 'style' ), '1.0' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'ifeature_blog_styles', 30 );
 
-add_action( 'blog_layout_options', 'ifeature_blog_templates' );
+add_action( 'cyberchimps_blog_layout_options', 'ifeature_blog_templates' );
+
+/**
+ * Ifeature_blog_templates.
+ */
 function ifeature_blog_templates() {
 	$imagepath = get_template_directory_uri() . '/cyberchimps/lib/images/';
 
 	$vat = array(
 		'full_width'    => $imagepath . '1col.png',
 		'right_sidebar' => $imagepath . '2cr.png',
-		'three-column'  => get_template_directory_uri() . '/images/3col.png',
+		'three-column'  => get_template_directory_uri() . '/images/3col.png'
 	);
-
 	return $vat;
 }
-
-function ifeature_featured_image_content() {
+/**
+ * Ifeature_featured_image.
+ */
+function ifeature_featured_image() {
 	global $post;
 
 		$show = ( Cyberchimps_Helper::cyberchimps_get_option( 'post_featured_images', 1 ) ) ? Cyberchimps_Helper::cyberchimps_get_option( 'post_featured_images', 1 ) : false;
 
-	if ( $show ) :
-		if ( has_post_thumbnail() ) :
-			?>
+
+	if( $show ):
+		if( has_post_thumbnail() ): ?>
 			<div class="featured-image">
-				<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'cyberchimps_core' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
-					<?php the_post_thumbnail( apply_filters( 'cyberchimps_post_thumbnail_size', 'full' ) ); ?>
+				<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'ifeature' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
+					<?php the_post_thumbnail( apply_filters( 'cyberchimps_post_thumbnail_size', 'full' ) ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound ?>
 				</a>
 			</div>
-			<?php
-		   endif;
+		<?php    endif;
 	endif;
 }
 
-/*
-function ifeature_cyberchimps_selected_blog_elements() {
+/*function ifeature_cyberchimps_selected_blog_elements() {
 	$options = array(
-			'boxes_lite'     => __( 'Boxes Lite', 'cyberchimps_core' ),
-			"portfolio_lite" => __( 'Portfolio Lite', 'cyberchimps_core' ),
-			"page_section"   => __( 'Page', 'cyberchimps_core' ),
-			"slider_lite"    => __( 'Slider Lite', 'cyberchimps_core' )
+			'boxes_lite'     => __( 'Boxes Lite', 'ifeature' ),
+			"portfolio_lite" => __( 'Portfolio Lite', 'ifeature' ),
+			"page_section"   => __( 'Page', 'ifeature' ),
+			"slider_lite"    => __( 'Slider Lite', 'ifeature' )
 
 	);
 
@@ -1190,10 +1545,10 @@ add_filter( 'cyberchimps_elements_draganddrop_options', 'ifeature_cyberchimps_se
 
 function ifeature_cyberchimps_selected_page_elements() {
 	$options = array(
-			'boxes_lite'     => __( 'Boxes Lite', 'cyberchimps_core' ),
-			"portfolio_lite" => __( 'Portfolio Lite', 'cyberchimps_core' ),
-			"page_section"   => __( 'Page', 'cyberchimps_core' ),
-			"slider_lite"    => __( 'Slider Lite', 'cyberchimps_core' ),
+			'boxes_lite'     => __( 'Boxes Lite', 'ifeature' ),
+			"portfolio_lite" => __( 'Portfolio Lite', 'ifeature' ),
+			"page_section"   => __( 'Page', 'ifeature' ),
+			"slider_lite"    => __( 'Slider Lite', 'ifeature' ),
 	);
 
 	return $options;
