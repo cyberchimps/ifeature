@@ -1453,15 +1453,15 @@ add_action( 'enqueue_block_editor_assets', 'ifeature_block_styles' );
  */
 function ifeature_menu_design_styles() {
 	$skin = Cyberchimps_Helper::cyberchimps_get_option( 'ifeature_menu_design' );
-
-	if ( isset( $skin ) && $skin != '' && $skin != 'default' ) { //phpcs:ignore
+	if ( ! is_array( $skin ) ) {
 		wp_enqueue_style( 'ifeature-menu-design', get_template_directory_uri() . '/inc/css/menu/' . $skin . '.css', array( 'style' ), '1.0' );
 	}
 
 	$skin = Cyberchimps_Helper::cyberchimps_get_option( 'cyberchimps_skin_color' );
+
 	if ( '' == Cyberchimps_Helper::cyberchimps_get_option( 'flat_gradient_selector' ) ) { //phpcs:ignore
-		$skin = $skin . '-nongrad.css';
-		if ( 'default-nongrad.css' !== $skin ) {
+		if ( ! is_array( $skin ) ) {
+			$skin = $skin . '-nongrad.css';
 			wp_enqueue_style( 'ifeature-non-gradient-design', get_template_directory_uri() . '/inc/css/skins/' . $skin, array( 'style' ), '1.0' );
 		}
 	}
